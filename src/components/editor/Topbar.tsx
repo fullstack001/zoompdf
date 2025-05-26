@@ -9,6 +9,7 @@ import {
   ArrowDown,
 } from "lucide-react";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const formats = [
   { label: "PDF", icon: "/assets/images/pdf.png" },
@@ -48,16 +49,29 @@ export default function Topbar() {
     }
   }, [showProgress]);
 
+  //I want to redirect to '/plan' page when click download button in showEmailModal. how to do this?
+  const handleDownload = () => {
+    // Simulate download action
+    setTimeout(() => {
+      setShowEmailModal(false);
+      // Redirect to plan page
+      window.location.href = "/plan";
+    }, 500);
+  };
+
   return (
     <>
       <header className="bg-white border-b px-6 py-3 flex justify-between items-center">
         <div className="flex items-center gap-3">
-          <Image
-            src="/assets/images/logo.png"
-            alt="ZoomPDF"
-            width={128}
-            height={28}
-          />
+          <Link href="/">
+            <Image
+              src="/assets/images/logo.png"
+              alt="ZoomPDF"
+              width={128}
+              height={28}
+            />
+          </Link>
+
           <input
             type="text"
             defaultValue="Filename.pdf"
@@ -157,6 +171,7 @@ export default function Topbar() {
               </button>
               <button
                 onClick={() => {
+                  setShowModal(false);
                   setShowProgress(true);
                   setProgress(0);
                 }}
@@ -220,7 +235,10 @@ export default function Topbar() {
                 className="w-full mt-1 px-4 py-3 rounded-md bg-gray-100 text-sm"
               />
             </div>
-            <button className="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold mt-4 flex justify-center items-center gap-2">
+            <button
+              className="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold mt-4 flex justify-center items-center gap-2"
+              onClick={handleDownload}
+            >
               Download <ArrowDown size={16} />
             </button>
             <p className="text-xs text-gray-500 mt-4">
