@@ -1,0 +1,23 @@
+const tools = [
+    { icon: '/assets/images/ai-icon.png', label: 'Edit PDF' },
+    { icon: '/assets/images/pdf-word.png', label: 'PDF to Word' },
+    { icon: '/assets/images/pdf-png.png', label: 'PDF to PNG' },
+    { icon: '/assets/images/pdf-png.png', label: 'PDF to JPG' },
+    { icon: '/assets/images/pdf-epub.png', label: 'PDF to EPUB' },    
+    { icon: '/assets/images/pdf-excel.png', label: 'PDF to Excel' },
+    { icon: '/assets/images/pdf-merge.png', label: 'Merge PDF' },
+    { icon: '/assets/images/pdf-merge.png', label: 'Merge Images' },
+    { icon: '/assets/images/pdf-split.png', label: 'Split PDF' },
+    { icon: '/assets/images/compress-pdf.png', label: 'Compress PDF' },
+    { icon: '/assets/images/pdf-ppdx.png', label: 'PDF to PPDX' },
+    { icon: '/assets/images/word-pdf.png', label: 'Word to PDF' },
+    { icon: '/assets/images/png-pdf.png', label: 'PNG to PDF' },
+    { icon: '/assets/images/pdf-png.png', label: 'JPG to PDF' },
+    { icon: '/assets/images/epub-pdf.png', label: 'EPUB to PDF' },
+    { icon: '/assets/images/excel-pdf.png', label: 'Excel to PDF' },
+    { icon: '/assets/images/ppt-pdf.png', label: 'PPTX to PDF' },
+    { icon: '/assets/images/sign-pdf.png', label: 'Sign PDF' },
+    { icon: '/assets/images/pdf-ocr.png', label: 'PDF OCR' },
+    { icon: '/assets/images/image-text.png', label: 'Image to Text' },
+  ];
+  export default tools;
