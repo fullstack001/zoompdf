@@ -12,11 +12,10 @@ import PlanFeatures from "@/components/plan/PlanFeatures";
 import "../../app/globals.css"; // Ensure global styles are imported
 
 export default function PlanPage() {
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-      dispatch(login());
-    }, [dispatch]);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(login());
+  }, [dispatch]);
 
   return (
     <div className="bg-primary-50-1 min-h-screen">
