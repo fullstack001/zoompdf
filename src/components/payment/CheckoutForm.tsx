@@ -10,8 +10,6 @@ import { useSelector } from "react-redux";
 import axios from "axios";
 import { RootState } from "../../store/store"; // Import RootState type
 
-const baseUrl = process.env.REACT_APP_API_PORT;
-
 const cardElementOptions = {
   style: {
     base: {

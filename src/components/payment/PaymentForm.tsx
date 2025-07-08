@@ -1,11 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import { useDispatch, useSelector } from "react-redux"; // Import useSelector
-import { jwtDecode } from "jwt-decode";
-import { useRouter } from "next/navigation";
 import { setUser } from "../../store/slices/userSlice";
 import { login } from "../../store/slices/authSlice";
 import { RootState } from "../../store/store"; // Import RootState
@@ -37,11 +36,11 @@ export default function PaymentForm({
   email: string;
 }) {
   const dispatch = useDispatch();
+  const router = useRouter();
 
   // Retrieve fileName and action from Redux store
   const fileName = useSelector((state: RootState) => state.flow.fileName);
   const action = useSelector((state: RootState) => state.flow.action);
-  const router = useRouter();
   const handlePurchaseSubscription = (
     subscriptionType: string,
     subscriptionId: string
@@ -89,7 +88,7 @@ export default function PaymentForm({
 
         // Use downloadFile utility function
         if (fileName && action) {
-          downloadFile(fileName, action, token, router);
+          downloadFile(fileName, action, token, router.push);
         } else {
           console.error("fileName or action is null");
         }

@@ -1,5 +1,3 @@
-import { Check } from "lucide-react";
-
 const features = [
   "Unlimited downloads",
   "Convert and export PDFs",

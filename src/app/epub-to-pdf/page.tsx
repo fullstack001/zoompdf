@@ -16,7 +16,6 @@ import ProgressModal from "@/components/common/ProgressModal";
 import EmailModal from "@/components/common/EmailModal";
 import { useDispatch, useSelector } from "react-redux";
 import { setAction, setFileName } from "@/store/slices/flowSlice";
-import { login } from "@/store/slices/authSlice";
 import { RootState } from "@/store/store"; // Import RootState for type safety
 import { downloadFile } from "@/utils/apiUtils";
 
@@ -31,7 +30,6 @@ export default function PDfToWord() {
   const subscription = useSelector(
     (state: RootState) => state.user.subscription
   );
-  const fileName = useSelector((state: RootState) => state.flow.fileName);
   const auth = useSelector((state: RootState) => state.auth.isLoggedIn); // Use RootState for type safety
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -69,14 +67,15 @@ export default function PDfToWord() {
         {
           timeout: 600000, // Set timeout to 60 seconds
           onUploadProgress: (progressEvent) => {
-            const percentCompleted = Math.round(
-              (progressEvent.loaded * 100) / (progressEvent.total || 1)
+            console.log(
+              `Upload progress: ${Math.round(
+                (progressEvent.loaded * 100) / (progressEvent.total || 1)
+              )}%`
             );
           },
         }
       );
       fileName = response.data; // Save the file name from response
-      console.log(fileName);
       dispatch(setFileName(fileName)); // Save file name in global store
       dispatch(setAction("epub_to_pdf")); // Save action in global store
       setUploading(false);
@@ -92,7 +91,7 @@ export default function PDfToWord() {
           token
         ) {
           try {
-            await downloadFile(fileName, "epub_to_pdf", token, router);
+            await downloadFile(fileName, "epub_to_pdf", token, router.push);
           } catch (err) {
             console.error("Error downloading file:", err);
             window.alert("Failed to download file.");
@@ -108,10 +107,6 @@ export default function PDfToWord() {
     }
   };
 
-  const onDownload = async () => {
-    router.push(`/plan`); // Redirect to register page
-  };
-
   return (
     <main className="bg-gray-50">
       <Navbar />
@@ -119,7 +114,8 @@ export default function PDfToWord() {
       <section className="bg-blue-50 text-center py-16 px-4">
         <h1 className="text-4xl font-bold mb-4">EPUB to PDF Converter</h1>
         <p className="mb-6">
-          We've already converted 775,000 files — now let us help with yours
+          We&apos;ve already converted 775,000 files — now let us help with
+          yours
         </p>
         <FileUploadSection
           acceptType=".epub"

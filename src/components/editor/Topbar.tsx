@@ -49,12 +49,12 @@ export default function Topbar() {
     }
   }, [showProgress]);
 
-  const handleDownload = () => {
-    setTimeout(() => {
-      setShowEmailModal(false);
-      window.location.href = "/plan";
-    }, 500);
-  };
+  // const handleDownload = () => {
+  //   setTimeout(() => {
+  //     setShowEmailModal(false);
+  //     window.location.href = "/plan";
+  //   }, 500);
+  // };
 
   return (
     <>
@@ -213,7 +213,6 @@ export default function Topbar() {
         email={email}
         onEmailChange={setEmail}
         onClose={() => setShowEmailModal(false)}
-        onDownload={handleDownload}
       />
     </>
   );
