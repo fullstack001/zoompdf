@@ -1,5 +1,4 @@
 import { X, ArrowDown } from "lucide-react";
-import Image from "next/image";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import { useDispatch } from "react-redux";
@@ -8,7 +7,6 @@ import { useState } from "react";
 
 import { login } from "../../store/slices/authSlice"; // Import login action
 import { setUser } from "../../store/slices/userSlice"; // Import setUser action
-import { downloadFile } from "@/utils/apiUtils"; // Import downloadFile utility
 
 interface EmailModalProps {
   isVisible: boolean;
@@ -72,8 +70,10 @@ export default function EmailModal({
         router.push(`/plan`); // Redirect to register page
         // Use downloadFile utility if needed in future logic
         onClose();
-      } catch (error: any) {
+      } catch (error: unknown) {
+        // Replace `any` with `unknown`
         if (
+          axios.isAxiosError(error) && // Check if error is an Axios error
           error.response?.status === 400 &&
           error.response?.data?.msg === "Email is already registered"
         ) {
@@ -130,7 +130,7 @@ export default function EmailModal({
           )}
         </button>
         <p className="text-xs text-gray-500 mt-4">
-          By clicking 'Download File,' you agree to our{" "}
+          By clicking &apos;Download File,&apos; you agree to our{" "}
           <a href="#" className="underline">
             Terms and conditions
           </a>{" "}

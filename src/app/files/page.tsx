@@ -32,6 +32,7 @@ export default function FileListPage() {
     }
     fetchFiles();
   }, []);
+  console.log(originalFiles);
 
   return (
     <div className="bg-gray-50 min-h-screen">

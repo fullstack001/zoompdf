@@ -1,6 +1,5 @@
 "use client";
 import "./globals.css";
-import type { Metadata } from "next";
 import { Providers } from "./providers"; // Import client wrapper
 import { Provider } from "react-redux"; // Import Redux Provider
 import { store } from "../store/store"; // Import the Redux store

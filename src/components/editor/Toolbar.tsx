@@ -19,7 +19,7 @@ import {
   BookOpen,
   Layout,
   FileCog,
-  MoreHorizontal,
+  // MoreHorizontal,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -124,7 +124,7 @@ function ToolButton({
   disabled = false,
 }: {
   label: string;
-  Icon: any;
+  Icon: React.ElementType; // Replace `any` with `React.ElementType`
   active?: boolean;
   disabled?: boolean;
 }) {

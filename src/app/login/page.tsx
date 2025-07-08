@@ -1,7 +1,8 @@
 "use client";
-import { use, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import axios from "axios";
+import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
 import { setUser } from "../../store/slices/userSlice";
@@ -56,7 +57,12 @@ export default function Login() {
         if (subscription && new Date(subscription.expiryDate) > new Date()) {
           if (flow.fileName && flow.action) {
             try {
-              await downloadFile(flow.fileName, flow.action, token, router);
+              await downloadFile(
+                flow.fileName,
+                flow.action,
+                token,
+                router.push
+              );
             } catch (err) {
               console.error("Error downloading file:", err);
               window.alert("Failed to download file.");
@@ -80,10 +86,12 @@ export default function Login() {
       <div className="flex-grow flex flex-col items-center justify-center">
         <div className="max-w-md w-full bg-white p-8 rounded-lg shadow-lg">
           <div className="flex justify-center mb-6">
-            <img
+            <Image
               src="/assets/images/logo.png"
               alt="PDF Guru Logo"
               className="w-32"
+              width={128}
+              height={128}
             />
           </div>
 

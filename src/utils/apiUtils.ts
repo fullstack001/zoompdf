@@ -1,10 +1,8 @@
-import axios from "axios";
-
 export const downloadFile = async (
   fileName: string,
   action: string,
   token: string,
-  router: any
+  navigate: (path: string) => void // Pass a navigation callback
 ) => {
   try {
     const response = await fetch(`https://api.pdfezy.com/api/pdf/download`, {
@@ -32,7 +30,7 @@ export const downloadFile = async (
     document.body.appendChild(a);
     a.click();
     a.remove();
-    router.push("/files"); // Redirect to files page after download
+    navigate("/files"); // Use the navigation callback instead of window.location.href
   } catch (err) {
     console.error("Error downloading file:", err);
     window.alert("Failed to download file.");

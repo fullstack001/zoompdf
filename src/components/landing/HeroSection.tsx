@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import axios from "axios";
-import { useRouter } from "next/navigation";
 import FeatureItems from "@/components/common/FeatureItems";
 import FileUploadSection from "@/components/common/FileUploadSection";
 import ProgressModal from "@/components/common/ProgressModal";
@@ -18,7 +17,6 @@ export default function HeroSection({
   const [uploading, setUploading] = useState(false);
   const [progress, setProgress] = useState(0);
   const [status, setStatus] = useState<string[]>([]);
-  const router = useRouter();
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -37,6 +35,7 @@ export default function HeroSection({
           const percentCompleted = Math.round(
             (progressEvent.loaded * 100) / (progressEvent.total || 1)
           );
+          console.log(`Upload progress: ${percentCompleted}%`);
         },
       });
 

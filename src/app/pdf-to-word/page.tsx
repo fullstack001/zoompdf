@@ -16,7 +16,6 @@ import ProgressModal from "@/components/common/ProgressModal";
 import EmailModal from "@/components/common/EmailModal";
 import { useDispatch, useSelector } from "react-redux";
 import { setAction, setFileName } from "@/store/slices/flowSlice";
-import { login } from "@/store/slices/authSlice";
 import { RootState } from "@/store/store"; // Import RootState for type safety
 import { downloadFile } from "@/utils/apiUtils";
 
@@ -31,7 +30,6 @@ export default function PDfToWord() {
   const subscription = useSelector(
     (state: RootState) => state.user.subscription
   );
-  const fileName = useSelector((state: RootState) => state.flow.fileName);
   const auth = useSelector((state: RootState) => state.auth.isLoggedIn); // Use RootState for type safety
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -72,6 +70,7 @@ export default function PDfToWord() {
             const percentCompleted = Math.round(
               (progressEvent.loaded * 100) / (progressEvent.total || 1)
             );
+            console.log(percentCompleted);
           },
         }
       );
@@ -92,7 +91,7 @@ export default function PDfToWord() {
           token
         ) {
           try {
-            await downloadFile(fileName, "pdf_to_word", token, router);
+            await downloadFile(fileName, "pdf_to_word", token, router.push);
           } catch (err) {
             console.error("Error downloading file:", err);
             window.alert("Failed to download file.");
@@ -108,10 +107,6 @@ export default function PDfToWord() {
     }
   };
 
-  const onDownload = async () => {
-    router.push(`/plan`); // Redirect to register page
-  };
-
   return (
     <main className="bg-gray-50">
       <Navbar />
@@ -119,7 +114,7 @@ export default function PDfToWord() {
       <section className="bg-blue-50 text-center py-16 px-4">
         <h1 className="text-4xl font-bold mb-4">PDF to Word Converter</h1>
         <p className="mb-6">
-          775K converted files and counting — let's keep it going!
+          775K converted files and counting — let&apos;s keep it going!
         </p>
         <FileUploadSection handleFileChange={handleFileChange} />
 
