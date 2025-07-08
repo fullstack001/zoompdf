@@ -18,8 +18,12 @@ const authSlice = createSlice({
     logout(state) {
       state.isLoggedIn = false;
     },
+    initializeAuth(state) {
+      const authToken = localStorage.getItem("authToken");
+      state.isLoggedIn = !!authToken;
+    },
   },
 });
 
-export const { login, logout } = authSlice.actions;
+export const { login, logout, initializeAuth } = authSlice.actions;
 export default authSlice.reducer;

@@ -1,18 +1,37 @@
 "use client";
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { login } from "@/store/slices/authSlice";
 
+import { useEffect, useState } from "react";
+import axios from "axios";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FileSidebar from "@/components/files/FileSidebar";
 import FileListTable from "@/components/files/FileListTable";
 
 export default function FileListPage() {
-  const dispatch = useDispatch();
+  const [originalFiles, setOriginalFiles] = useState([]);
+  const [files, setFiles] = useState([]);
+
   useEffect(() => {
-    dispatch(login());
-  }, [dispatch]);
+    async function fetchFiles() {
+      try {
+        const token = localStorage.getItem("authToken");
+        const response = await axios.get(
+          "https://api.pdfezy.com/api/pdf/files",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+        console.log("Fetched files:", response.data);
+        setOriginalFiles(response.data);
+        setFiles(response.data);
+      } catch (error) {
+        console.error("Error fetching files:", error);
+      }
+    }
+    fetchFiles();
+  }, []);
 
   return (
     <div className="bg-gray-50 min-h-screen">
@@ -20,7 +39,7 @@ export default function FileListPage() {
       <div className="flex max-w-7xl mx-auto mt-8 gap-6 px-4">
         <FileSidebar />
         <main className="flex-1">
-          <FileListTable />
+          <FileListTable files={files} />
         </main>
       </div>
       <Footer />

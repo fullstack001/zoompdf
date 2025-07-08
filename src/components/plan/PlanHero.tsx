@@ -1,9 +1,10 @@
 import "../../app/globals.css";
 
-export default function PlanHero() {
-  const handleGoPayment = () => {
-    window.location.href = "/payment";
-  };
+export default function PlanHero({
+  handleGoPayment,
+}: {
+  handleGoPayment: () => void;
+}) {
   return (
     <div className="flex items-center justify-center gap-20">
       <div className="text-2xl md:text-3xl font-bold mb-4">
