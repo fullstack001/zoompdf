@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import EmailModal from "../common/EmailModal";
 
 const formats = [
   { label: "PDF", icon: "/assets/images/pdf.png" },
@@ -36,7 +37,6 @@ export default function Topbar() {
           if (prev >= 100) {
             clearInterval(interval);
             setShowProgress(false);
-            // setShowModal(false);
             setTimeout(() => {
               setShowProgress(false);
               setShowEmailModal(true);
@@ -49,12 +49,9 @@ export default function Topbar() {
     }
   }, [showProgress]);
 
-  //I want to redirect to '/plan' page when click download button in showEmailModal. how to do this?
   const handleDownload = () => {
-    // Simulate download action
     setTimeout(() => {
       setShowEmailModal(false);
-      // Redirect to plan page
       window.location.href = "/plan";
     }, 500);
   };
@@ -187,7 +184,6 @@ export default function Topbar() {
         </div>
       )}
 
-      {/* Processing modal */}
       {showProgress && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white rounded-xl w-full max-w-md p-8 text-center shadow-xl">
@@ -212,49 +208,13 @@ export default function Topbar() {
         </div>
       )}
 
-      {showEmailModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white rounded-xl w-full max-w-md p-8 text-center shadow-xl relative">
-            <button
-              onClick={() => setShowEmailModal(false)}
-              className="absolute top-4 right-4 text-gray-500 hover:text-black"
-            >
-              <X size={20} />
-            </button>
-            <h3 className="text-xl font-bold mb-4">Enter your Email address</h3>
-            <div className="text-left w-full mb-2">
-              <label htmlFor="email" className="text-sm font-medium">
-                Email
-              </label>
-              <input
-                id="email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter Your Email Address"
-                className="w-full mt-1 px-4 py-3 rounded-md bg-gray-100 text-sm"
-              />
-            </div>
-            <button
-              className="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold mt-4 flex justify-center items-center gap-2"
-              onClick={handleDownload}
-            >
-              Download <ArrowDown size={16} />
-            </button>
-            <p className="text-xs text-gray-500 mt-4">
-              By clicking 'Download File,' you agree to our{" "}
-              <a href="#" className="underline">
-                Terms and conditions
-              </a>{" "}
-              and{" "}
-              <a href="#" className="underline">
-                Privacy policy
-              </a>
-              .
-            </p>
-          </div>
-        </div>
-      )}
+      <EmailModal
+        isVisible={showEmailModal}
+        email={email}
+        onEmailChange={setEmail}
+        onClose={() => setShowEmailModal(false)}
+        onDownload={handleDownload}
+      />
     </>
   );
 }
