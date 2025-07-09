@@ -2,15 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Poppins';
-  src: url('/assets/fonts/Poppins-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
+/* Optional reset */
+body {
+  @apply font-sans;
 }
 
-:root{
-  font-family: 'Poppins', sans-serif;
+:root {
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
 
@@ -19,15 +17,14 @@
 }
 
 .bg-primary-900 {
-  background-color: #3758F9;
+  background-color: #3758f9;
 }
 
-
-.bg-primary-50{
-  background-color: #EDF0FF;
-  color: #4B68FF;
+.bg-primary-50 {
+  background-color: #edf0ff;
+  color: #4b68ff;
 }
 
-.bg-primary-50-1{
-  background-color: #EDF0FF;
+.bg-primary-50-1 {
+  background-color: #edf0ff;
 }

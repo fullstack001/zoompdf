@@ -10,17 +10,21 @@ function FeatureItem({
   description: string;
 }) {
   return (
-    <div className="flex items-center space-x-2 gap-3">
+    <div className="flex flex-col sm:flex-row items-center sm:space-x-2 gap-3">
       <Image
         src={icon}
         alt={text}
-        width={25}
-        height={25}
-        className="mx-auto mb-2"
+        width={54}
+        height={54}
+        className="mx-auto mb-2 sm:mb-0 sm:w-[54px] sm:h-[54px]"
       />
-      <div className="text-left">
-        <div className="text-gray-700 text-xl font-bold">{text}</div>
-        <div>{description}</div>
+      <div className="text-center sm:text-left">
+        <div className="text-gray-700 sm:text-[18px] lg:text-[24px] font-semibold">
+          {text}
+        </div>
+        <div className="text-gray-700 sm:text-[14px] lg:text-[18px] font-semibold">
+          {description}
+        </div>
       </div>
     </div>
   );
@@ -28,7 +32,7 @@ function FeatureItem({
 
 export default function FeatureItems() {
   return (
-    <div className="mt-8 flex justify-center flex-wrap gap-6">
+    <div className="mt-8 sm:mt-16 flex flex-col sm:flex-row justify-center flex-wrap gap-6">
       <FeatureItem
         icon="/assets/images/activity.png"
         text="Comprehensive Suite"

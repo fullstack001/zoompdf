@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FileSidebar from "@/components/files/FileSidebar";
 import FileListTable from "@/components/files/FileListTable";
+// import FileListCards from "@/components/FileListCards"; // Updated path to match the correct location
 
 export default function FileListPage() {
   const [originalFiles, setOriginalFiles] = useState([]);
@@ -37,10 +38,10 @@ export default function FileListPage() {
   return (
     <div className="bg-gray-50 min-h-screen">
       <Navbar />
-      <div className="flex max-w-7xl mx-auto mt-8 gap-6 px-4">
+      <div className="flex flex-col lg:flex-row mx-auto mt-8 gap-6 px-4">
         <FileSidebar />
         <main className="flex-1">
-          <FileListTable files={files} />
+          <FileListTable files={files} /> {/* Updated component */}
         </main>
       </div>
       <Footer />

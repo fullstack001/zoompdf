@@ -32,9 +32,9 @@ export default function PlanPage() {
   return (
     <div className="bg-primary-50-1 min-h-screen">
       <Navbar />
-      <main className="max-w-6xl mx-auto px-4 py-12 space-y-12">
+      <main className="mx-auto px-4 md:px-20 lg:px-60 py-12 space-y-12">
         <PlanHero handleGoPayment={confirmPlan} />
-        <div className="flex flex-col lg:flex-row gap-10">
+        <div className="flex flex-col lg:flex-row justify-between gap-10">
           <PlanPreview />
           <div>
             <PlanOptions
