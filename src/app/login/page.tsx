@@ -87,7 +87,7 @@ export default function Login() {
         <div className="max-w-md w-full bg-white p-8 rounded-lg shadow-lg">
           <div className="flex justify-center mb-6">
             <Image
-              src="/assets/images/logo.png"
+              src="/assets/images/logo.svg"
               alt="PDF Guru Logo"
               className="w-32"
               width={128}

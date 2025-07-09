@@ -9,7 +9,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="bg-white p-8 md:p-24">
+    <section className="bg-white p-6 md:p-24">
       <h2 className="text-[28px] md:text-[40px] text-[#212121] font-medium text-center mb-8 md:mb-12">
         How to compress PDF
       </h2>
@@ -17,7 +17,7 @@ export default function HowItWorks() {
         {steps.map((step, i) => (
           <div
             key={i}
-            className="p-4 md:p-6 w-full flex flex-col md:flex-row gap-4"
+            className="p-4 md:p-6 w-full flex flew-row md:flex-col  gap-4"
           >
             <div className="bg-primary-900 text-white rounded-full px-6 md:px-8 py-2 font-bold text-[24px] md:text-[32px] w-[60px] md:w-[78px] h-[60px] md:h-[78px] flex items-center justify-center">
               {i + 1}

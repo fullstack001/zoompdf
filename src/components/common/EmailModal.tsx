@@ -42,14 +42,20 @@ export default function EmailModal({
         );
         const { token } = response.data;
         interface DecodedToken {
-          email?: string;
+          user?: {
+            email?: string;
+            avatar?: string;
+            id?: string;
+            isAdmin?: boolean;
+          };
           subscription?: string;
         }
 
         const userData: DecodedToken = jwtDecode(token);
+        console.log("Decoded user data:", userData);
 
         const mappedUserData = {
-          email: userData.email || "",
+          email: userData.user?.email ?? "",
           subscription: {
             subscriptionId: userData.subscription || "",
             plan: "", // Default to an empty string
@@ -57,8 +63,8 @@ export default function EmailModal({
             subscribedDate: "", // Default to an empty string
             expiryDate: "", // Default to an empty string
           },
-          id: "", // Default to an empty string
-          avatar: "", // Default to an empty string
+          id: userData.user?.id ?? "", // Default to an empty string
+          avatar: userData.user?.avatar ?? "", // Default to an empty string
           isAdmin: false, // Default to false
           name: "", // Default to an empty string
         };

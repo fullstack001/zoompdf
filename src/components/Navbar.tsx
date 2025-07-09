@@ -41,7 +41,7 @@ export default function Navbar() {
           className="flex items-center gap-2 cursor-pointer"
         >
           <Image
-            src="/assets/images/logo.png"
+            src="/assets/images/logo.svg"
             alt="ZoomPDF"
             width={170}
             height={56}

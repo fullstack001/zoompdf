@@ -62,7 +62,7 @@ export default function Topbar() {
         <div className="flex items-center gap-3">
           <Link href="/">
             <Image
-              src="/assets/images/logo.png"
+              src="/assets/images/logo.svg"
               alt="ZoomPDF"
               width={128}
               height={28}
