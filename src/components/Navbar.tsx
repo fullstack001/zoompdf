@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { useRouter } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 import {
@@ -8,12 +9,15 @@ import {
   UserIcon,
   XIcon,
   InfoIcon,
+  ArrowRightSquare,
+  SquarePen,
+  SlidersHorizontal,
   SettingsIcon,
 } from "lucide-react";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store/store";
-import { login, logout } from "../store/slices/authSlice";
+import { logout } from "../store/slices/authSlice";
 
 export default function Navbar() {
   const router = useRouter();
@@ -30,8 +34,8 @@ export default function Navbar() {
     setOpenDropdown(openDropdown === label ? null : label);
 
   return (
-    <header className="bg-blue-50 sticky top-0 z-50 p-4">
-      <div className="mx-auto flex bg-gray-50 items-center justify-between px-8 py-3">
+    <header className="bg-[#edf0ff] sticky rounded-xl  top-0 z-50 p-4">
+      <div className="mx-auto flex bg-gray-50 sticky rounded-xl items-center justify-between px-8 py-3">
         <div
           onClick={() => router.push("/")}
           className="flex items-center gap-2 cursor-pointer"
@@ -39,14 +43,17 @@ export default function Navbar() {
           <Image
             src="/assets/images/logo.png"
             alt="ZoomPDF"
-            width={120}
-            height={60}
+            width={170}
+            height={56}
           />
         </div>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-6 text-sm font-medium">
-          <Dropdown label="PDF CONVERTER">
+          <Dropdown
+            label="PDF CONVERTER"
+            icon={<ArrowRightSquare size={24} className="mr-2" />}
+          >
             <MenuCategory
               title="Convert from PDF"
               items={[
@@ -69,7 +76,10 @@ export default function Navbar() {
             />
           </Dropdown>
 
-          <Dropdown label="PDF EDITOR">
+          <Dropdown
+            label="PDF EDITOR"
+            icon={<SquarePen size={24} className="mr-2" />}
+          >
             <MenuCategory
               title="Editing Tools"
               items={[
@@ -81,7 +91,10 @@ export default function Navbar() {
             />
           </Dropdown>
 
-          <Dropdown label="FORMS">
+          <Dropdown
+            label="FORMS"
+            icon={<SlidersHorizontal size={24} className="mr-2" />}
+          >
             <MenuCategory
               title="Form Tools"
               items={[
@@ -176,11 +189,11 @@ export default function Navbar() {
             </>
           ) : (
             <button
-              onClick={() => dispatch(login())}
-              className="px-3 py-2 bg-white border text-[#3758F9] border-[#3758F9] rounded-lg flex items-center"
+              onClick={() => router.push("/login")}
+              className="px-4 py-3 text-2xl bg-white border-2 text-[#3758F9] border-[#3758F9] rounded-xl flex items-center"
             >
               <LockIcon size={14} />
-              <span className="ml-1 text-sm font-medium">Log in</span>
+              <span className="ml-1  font-medium">Log in</span>
             </button>
           )}
         </div>
@@ -305,8 +318,10 @@ export default function Navbar() {
 // Dropdown component
 function Dropdown({
   label,
+  icon,
   children,
 }: {
+  icon?: React.ReactNode;
   label: string;
   children: React.ReactNode;
 }) {
@@ -334,15 +349,22 @@ function Dropdown({
   }, [open]);
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div className="relative mr-6" ref={dropdownRef}>
       <button
-        className="flex items-center gap-1 hover:text-blue-600"
+        className="flex items-center text-2xl font-semibold gap-1 hover:text-blue-600"
         onClick={handleToggle}
       >
+        {icon}
         {label} <ChevronDownIcon size={14} />
       </button>
       {open && (
-        <div className="absolute top-full mt-2 w-72 bg-white shadow-lg rounded-lg p-4 grid grid-cols-2 gap-4">
+        <div
+          className={`absolute top-full mt-2 ${
+            React.Children.count(children) === 2
+              ? "min-w-[430px] -left-20"
+              : "min-w-[200px]"
+          } bg-white shadow-lg rounded-xl p-8 grid grid-cols-2 gap-8`}
+        >
           {children}
         </div>
       )}
@@ -360,14 +382,14 @@ function MenuCategory({
 }) {
   const router = useRouter();
   return (
-    <div>
-      <p className="font-semibold mb-2 text-gray-700">{title}</p>
+    <div className="gap-8 w-max">
+      <p className="font-medium text-[20px] mb-4 text-gray-700">{title}</p>
       <ul className="space-y-1">
         {items.map((item) => (
           <li
             key={item.route}
             onClick={() => router.push(item.route)}
-            className="text-sm text-gray-600 hover:text-blue-600 cursor-pointer"
+            className="text-[16px] text-gray-600 pb-4 hover:text-blue-600 cursor-pointer"
           >
             {item.label}
           </li>

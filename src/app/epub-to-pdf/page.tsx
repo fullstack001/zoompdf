@@ -111,9 +111,11 @@ export default function PDfToWord() {
     <main className="bg-gray-50">
       <Navbar />
 
-      <section className="bg-blue-50 text-center py-16 px-4">
-        <h1 className="text-4xl font-bold mb-4">EPUB to PDF Converter</h1>
-        <p className="mb-6">
+      <section className="bg-[#edf0ff] text-center py-8 px-6 sm:py-12 sm:px-12 lg:px-24">
+        <h1 className="text-4xl lg:text-5xl font-medium mb-6 pt-8 sm:pt-12 ">
+          EPUB to PDF Converter
+        </h1>
+        <p className="mb-8 text-2xl lg:text-3xl font-medium">
           We&apos;ve already converted 775,000 files — now let us help with
           yours
         </p>

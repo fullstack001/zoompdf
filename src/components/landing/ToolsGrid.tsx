@@ -7,25 +7,27 @@ export default function ToolsGrid() {
   const router = useRouter();
 
   return (
-    <section className="py-16 px-4 text-center">
-      <h2 className="text-2xl font-bold mb-10">
+    <section className=" p-8 md:p-24 text-center">
+      <h2 className="text-[28px] md:text-[40px] text-[#212121] font-medium text-center mb-8 md:mb-12">
         Choose the best tool for your business needs
       </h2>
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mx-auto px-16 md:px-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-12 mx-auto px-16 md:px-4">
         {tools.map((tool) => (
           <div
             key={tool.label}
             onClick={() => router.push(tool.href)}
-            className="p-6 bg-white rounded-lg shadow-lg hover:shadow-lg cursor-pointer"
+            className="p-8 bg-white rounded-2xl shadow-xl hover:shadow-2xl cursor-pointer"
           >
             <Image
               src={tool.icon}
               alt={tool.label}
-              width={40}
-              height={40}
-              className="mx-auto mb-2"
+              width={56}
+              height={65}
+              className="mx-auto mb-4"
             />
-            <p className="text-sm font-medium">{tool.label}</p>
+            <p className="text-[20px] font-semibold text-[#212121]">
+              {tool.label}
+            </p>
           </div>
         ))}
       </div>

@@ -8,6 +8,13 @@ import { useDispatch } from "react-redux";
 import { setUser } from "@/store/slices/userSlice"; // Import your Redux action
 import { login } from "@/store/slices/authSlice";
 import axios from "axios"; // Import axios for HTTP requests
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
+});
 
 // export const metadata: Metadata = {
 //   title: "ZoomPDF | Online PDF Tools",
@@ -20,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={poppins.variable}>
       <body>
         <Provider store={store}>
           <Providers>

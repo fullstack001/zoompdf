@@ -26,9 +26,11 @@ export default function HomePage() {
   return (
     <main className="bg-gray-50">
       <Navbar />
-      <section className="bg-blue-50 text-center py-16 px-4">
-        <h1 className="text-4xl font-bold mb-4">PDF to Word Converter</h1>
-        <p className="mb-6">
+      <section className="bg-[#edf0ff] text-center py-8 px-6 sm:py-12 sm:px-12 lg:px-24">
+        <h1 className="text-4xl lg:text-5xl font-medium mb-6 pt-8 sm:pt-12 ">
+          PDF to Word Converter
+        </h1>
+        <p className="mb-8 text-2xl lg:text-3xl font-medium">
           775K converted files and counting — let&apos;s keep it going!
         </p>
         <FileUploadSection handleFileChange={handleFileChange} />

@@ -20,16 +20,20 @@ const values = [
 
 export default function CoreValues() {
   return (
-    <section className="bg-gray-100 py-16 px-4 text-center">
-      <h2 className="text-2xl font-bold mb-8">Core values behind TheBestPDF</h2>
-      <div className="flex flex-wrap justify-center gap-12">
+    <section className="bg-gray-100 py-12 md:py-16 lg:py-24 px-6 md:px-12 lg:px-36 text-center">
+      <h2 className="text-[24px] md:text-[28px] lg:text-[40px] font-medium text-gray-900 mb-6 md:mb-8">
+        Core values behind TheBestPDF
+      </h2>
+      <div className="flex flex-wrap justify-center md:justify-between gap-4 md:gap-6 lg:gap-8">
         {values.map((val) => (
           <div
             key={val.title}
-            className="bg-white shadow-md px-6 py-4 rounded w-60 text-left"
+            className="bg-white shadow-md rounded-2xl p-6 md:p-8 gap-4 md:gap-6 w-full sm:w-[300px] md:w-[348px] text-left"
           >
-            <p className="font-medium text-xl mb-4">{val.title}</p>
-            <p>
+            <p className="font-semibold text-[20px] md:text-[24px] mb-4">
+              {val.title}
+            </p>
+            <p className="text-[14px] md:text-[16px] text-gray-600">
               {val.desc}
             </p>
           </div>
