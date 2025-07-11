@@ -49,7 +49,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-6 text-sm font-medium">
+        <nav className="hidden xl:flex gap-6 text-sm font-medium">
           <Dropdown
             label="PDF CONVERTER"
             icon={<ArrowRightSquare size={24} className="mr-2" />}
@@ -107,7 +107,7 @@ export default function Navbar() {
         </nav>
 
         {/* Desktop Log in */}
-        <div className="relative hidden md:flex items-center">
+        <div className="relative hidden xl:flex items-center">
           {isLoggedIn ? (
             <>
               <button
@@ -199,118 +199,127 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Toggle */}
-        <button onClick={toggleMobile} className="md:hidden">
-          {mobileOpen ? <XIcon size={20} /> : <MenuIcon size={20} />}
-        </button>
-      </div>
+        <div className="md:block xl:hidden ">
+          <button onClick={toggleMobile} className="xl:hidden">
+            {mobileOpen ? <XIcon size={20} /> : <MenuIcon size={20} />}
+          </button>
+          {mobileOpen && (
+            <div className="bg-white px-6 py-4 shadow-inner absolute top-20 left-0 w-full">
+              <MobileMenuItem
+                label="PDF EDITOR"
+                items={[
+                  { label: "Edit PDF", route: "/edit-pdf" },
+                  { label: "Sign PDF", route: "/sign-pdf" },
+                  { label: "Add watermark", route: "/add-watermark" },
+                  { label: "Rotate PDF", route: "/rotate-pdf" },
+                  { label: "Merge PDF", route: "/merge-pdf" },
+                  { label: "Split PDF", route: "/split-pdf" },
+                  { label: "Delete pages", route: "/delete-pages" },
+                  { label: "Compress PDF", route: "/compress-pdf" },
+                  { label: "Crop PDF", route: "/crop-pdf" },
+                ]}
+                open={openDropdown === "PDF EDITOR"}
+                onToggle={() => toggleDropdown("PDF EDITOR")}
+              />
+              <MobileMenuItem
+                label="PDF CONVERTER"
+                items={[
+                  { label: "PDF to Word", route: "/pdf-to-word" },
+                  { label: "Word to PDF", route: "/word-to-pdf" },
+                ]}
+                open={openDropdown === "PDF CONVERTER"}
+                onToggle={() => toggleDropdown("PDF CONVERTER")}
+              />
+              <MobileMenuItem
+                label="FORMS"
+                items={[
+                  { label: "Sign PDF", route: "/sign-pdf" },
+                  { label: "Fill Form", route: "/fill-form" },
+                ]}
+                open={openDropdown === "FORMS"}
+                onToggle={() => toggleDropdown("FORMS")}
+              />
+              <hr className="my-4" />
+              {isLoggedIn ? (
+                <div className="space-y-3 text-sm text-gray-700">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Image
+                      src={user.avatar || "/assets/images/profile.jpg"}
+                      alt="User"
+                      width={40}
+                      height={40}
+                      className="rounded-full"
+                    />
+                    <div>
+                      <p className="text-sm font-semibold text-gray-800">
+                        {user.email || "Profile Details"}
+                      </p>
+                      <p className="text-xs text-gray-500">
+                        {user.subscription?.plan || "No subscription"}
+                      </p>
+                    </div>
+                  </div>
 
-      {/* Mobile Menu */}
-      {mobileOpen && (
-        <div className="md:hidden bg-white px-6 py-4 shadow-inner">
-          <MobileMenuItem
-            label="PDF EDITOR"
-            items={[
-              { label: "Edit PDF", route: "/edit-pdf" },
-              { label: "Sign PDF", route: "/sign-pdf" },
-              { label: "Add watermark", route: "/add-watermark" },
-              { label: "Rotate PDF", route: "/rotate-pdf" },
-              { label: "Merge PDF", route: "/merge-pdf" },
-              { label: "Split PDF", route: "/split-pdf" },
-              { label: "Delete pages", route: "/delete-pages" },
-              { label: "Compress PDF", route: "/compress-pdf" },
-              { label: "Crop PDF", route: "/crop-pdf" },
-            ]}
-            open={openDropdown === "PDF EDITOR"}
-            onToggle={() => toggleDropdown("PDF EDITOR")}
-          />
-          <MobileMenuItem
-            label="PDF CONVERTER"
-            items={[
-              { label: "PDF to Word", route: "/pdf-to-word" },
-              { label: "Word to PDF", route: "/word-to-pdf" },
-            ]}
-            open={openDropdown === "PDF CONVERTER"}
-            onToggle={() => toggleDropdown("PDF CONVERTER")}
-          />
-          <MobileMenuItem
-            label="FORMS"
-            items={[
-              { label: "Sign PDF", route: "/sign-pdf" },
-              { label: "Fill Form", route: "/fill-form" },
-            ]}
-            open={openDropdown === "FORMS"}
-            onToggle={() => toggleDropdown("FORMS")}
-          />
-          <hr className="my-4" />
-          {isLoggedIn && (
-            <div className="space-y-3 text-sm text-gray-700">
-              <div className="flex items-center gap-3 mb-4">
-                <Image
-                  src={user.avatar || "/assets/images/profile.jpg"}
-                  alt="User"
-                  width={40}
-                  height={40}
-                  className="rounded-full"
-                />
-                <div>
-                  <p className="text-sm font-semibold text-gray-800">
-                    {user.email || "Profile Details"}
-                  </p>
-                  <p className="text-xs text-gray-500">
-                    {user.subscription?.plan || "No subscription"}
-                  </p>
+                  <button
+                    onClick={() => router.push("/upgrade-plan")}
+                    className="w-full bg-blue-600 text-white rounded-lg py-2 text-sm font-semibold"
+                  >
+                    Upgrade Plan
+                  </button>
+
+                  <ul className="space-y-3 mt-3">
+                    <li
+                      onClick={() => router.push("/files")}
+                      className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
+                    >
+                      <MenuIcon size={16} /> My Documents
+                    </li>
+                    <li
+                      onClick={() => router.push("/my-account")}
+                      className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
+                    >
+                      <UserIcon size={16} /> My Account
+                    </li>
+                    <li
+                      onClick={() => router.push("/help")}
+                      className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
+                    >
+                      <LockIcon size={16} /> Help
+                    </li>
+                    <li
+                      onClick={() => router.push("/terms")}
+                      className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
+                    >
+                      <InfoIcon size={16} /> Terms & Conditions
+                    </li>
+                    <li
+                      onClick={() => router.push("/settings")}
+                      className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
+                    >
+                      <SettingsIcon size={16} /> Settings
+                    </li>
+                    <li
+                      onClick={() => dispatch(logout())}
+                      className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
+                    >
+                      <XIcon size={16} /> Log Out
+                    </li>
+                  </ul>
                 </div>
-              </div>
-
-              <button
-                onClick={() => router.push("/upgrade-plan")}
-                className="w-full bg-blue-600 text-white rounded-lg py-2 text-sm font-semibold"
-              >
-                Upgrade Plan
-              </button>
-
-              <ul className="space-y-3 mt-3">
-                <li
-                  onClick={() => router.push("/files")}
-                  className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
+              ):
+               (
+                <button
+                  onClick={() => router.push("/login")}
+                  className="px-4 py-2 text-md bg-white border-2 text-[#3758F9] border-[#3758F9] rounded-xl flex items-center"
                 >
-                  <MenuIcon size={16} /> My Documents
-                </li>
-                <li
-                  onClick={() => router.push("/my-account")}
-                  className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
-                >
-                  <UserIcon size={16} /> My Account
-                </li>
-                <li
-                  onClick={() => router.push("/help")}
-                  className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
-                >
-                  <LockIcon size={16} /> Help
-                </li>
-                <li
-                  onClick={() => router.push("/terms")}
-                  className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
-                >
-                  <InfoIcon size={16} /> Terms & Conditions
-                </li>
-                <li
-                  onClick={() => router.push("/settings")}
-                  className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
-                >
-                  <SettingsIcon size={16} /> Settings
-                </li>
-                <li
-                  onClick={() => dispatch(logout())}
-                  className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
-                >
-                  <XIcon size={16} /> Log Out
-                </li>
-              </ul>
+                  <LockIcon size={14} />
+                  <span className="ml-1  font-medium">Log in</span>
+                </button>
+              )}
             </div>
           )}
         </div>
-      )}
+      </div>
     </header>
   );
 }
@@ -378,7 +387,7 @@ function MenuCategory({
   items,
 }: {
   title: string;
-  items: { label: string; route: string }[];
+  items: { label: string; route: string }[]; 
 }) {
   const router = useRouter();
   return (

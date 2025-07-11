@@ -32,7 +32,7 @@ function FeatureItem({
 
 export default function FeatureItems() {
   return (
-    <div className="mt-8 sm:mt-16 flex flex-col sm:flex-row justify-center flex-wrap gap-6">
+    <div className="mt-8 sm:mt-16 flex flex-col sm:flex-row justify-center sm:justify-start xl:justify-center flex-wrap gap-6">
       <FeatureItem
         icon="/assets/images/activity.png"
         text="Comprehensive Suite"

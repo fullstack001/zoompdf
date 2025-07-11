@@ -44,9 +44,9 @@ export default function Footer() {
   return (
     <footer className="bg-gray-50 text-gray-800 px-6 md:px-12 lg:px-24 pb-6 text-sm">
       <div className="mx-auto px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 text-left mb-10">
+        <div className="grid grid-cols-2 sm:grid-cols-2  md:grid-cols-4 gap-4 md:gap-6 text-left mb-10">
           {footerLinks.map((section, i) => (
-            <div key={i} className="pt-4 md:pt-8 px-4 md:px-6 lg:px-12">
+            <div key={i} className="pt-4 md:pt-8 px-2 md:px-4 lg:px-6">
               <h4 className="text-[16px] md:text-[20px] font-medium pb-2 md:pb-4 text-gray-700">
                 {section.title}
               </h4>

@@ -36,7 +36,7 @@ export default function PlanPage() {
         <PlanHero handleGoPayment={confirmPlan} />
         <div className="flex flex-col lg:flex-row justify-between gap-10">
           <PlanPreview />
-          <div>
+          <div className="max-w-[50%]">
             <PlanOptions
               selectedOption={selectedOption}
               setSelectedOption={setSelectedOption}

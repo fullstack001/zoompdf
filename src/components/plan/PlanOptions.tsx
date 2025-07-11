@@ -38,7 +38,7 @@ export default function PlanOptions({
               <Star size={14} className="fill-white mt-1" />
             </div>
           )}
-          <div className="flex flex-col md:flex-row justify-between items-center m-4 md:m-8">
+          <div className="flex flex-col md:flex-row justify-between items-center m-4 md:m-4">
             <div>
               <p className="font-semibold text-[20px] md:text-[24px] ">
                 {plan.title}

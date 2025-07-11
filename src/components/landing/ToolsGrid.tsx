@@ -11,7 +11,7 @@ export default function ToolsGrid() {
       <h2 className="text-[28px] md:text-[40px] text-[#212121] font-medium text-center mb-8 md:mb-12">
         Choose the best tool for your business needs
       </h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 mx-auto px-2 md:px-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-12 mx-auto px-2 md:px-4">
         {tools.map((tool) => (
           <div
             key={tool.label}

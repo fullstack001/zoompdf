@@ -84,7 +84,7 @@ export default function Login() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       <div className="flex-grow flex flex-col items-center justify-center">
-        <div className="max-w-md w-full bg-white p-8 rounded-lg shadow-lg">
+        <div className="max-w-xl w-full  p-8 rounded-lg ">
           <div className="flex justify-center mb-6">
             <Image
               src="/assets/images/logo.svg"
@@ -95,13 +95,11 @@ export default function Login() {
             />
           </div>
 
-          <h2 className="text-xl font-semibold text-center text-gray-800">
+          <h2 className="text-sm font-semibold text-center text-gray-800">
             If you are logging in for the first time, please set your password.
           </h2>
-          <p className="text-sm text-center text-gray-500 mb-6">
-            Please enter your details below to log in
-          </p>
-          <form className="space-y-4" onSubmit={handleSubmit}>
+         
+          <form className="space-y-4 mt-4 px-12" onSubmit={handleSubmit}>
             <div>
               <label
                 htmlFor="email"
@@ -180,6 +178,16 @@ export default function Login() {
             >
               Log in
             </button>
+            <div className="mt-4 text-center font-light text-sm">
+              <span>
+                New to ZoomPDF? 
+              </span>
+              <Link
+                href="/"
+                className="text-purple-500  ml-1">
+                  Create an account
+                </Link>
+            </div>
           </form>
         </div>
       </div>

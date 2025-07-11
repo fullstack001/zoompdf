@@ -112,10 +112,10 @@ export default function PDfToWord() {
       <Navbar />
 
       <section className="bg-[#edf0ff] text-center py-8 px-6 sm:py-12 sm:px-12 lg:px-24">
-        <h1 className="text-4xl lg:text-5xl font-medium mb-6 pt-8 sm:pt-12 ">
+        <h1 className="text-4xl lg:text-5xl font-medium mb-6 pt-4 sm:pt-4 ">
           PDF to PowerPoint Converter
         </h1>
-        <p className="mb-8 text-2xl lg:text-3xl font-medium">
+        <p className="mb-8 text-2xl lg:text-3xl font-light">
           We&apos;ve helped convert 775,000 files — let us help with yours
         </p>
         <FileUploadSection handleFileChange={handleFileChange} />

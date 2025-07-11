@@ -24,7 +24,7 @@ export default function CoreValues() {
       <h2 className="text-[24px] md:text-[28px] lg:text-[40px] font-medium text-gray-900 mb-6 md:mb-8">
         Core values behind TheBestPDF
       </h2>
-      <div className="flex flex-wrap justify-center md:justify-between gap-4 md:gap-6 lg:gap-8">
+      <div className="flex flex-wrap justify-center xl:justify-between gap-4 md:gap-6 xl:gap-8">
         {values.map((val) => (
           <div
             key={val.title}

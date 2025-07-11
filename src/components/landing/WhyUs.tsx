@@ -28,7 +28,7 @@ const features = [
 export default function WhyUs() {
   return (
     <section className="py-12 px-6 md:px-12 lg:px-24 bg-primary-50">
-      <div className="mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-24">
+      <div className="mx-auto flex flex-col xl:flex-row items-center justify-between gap-12 lg:gap-24">
         <div className="flex-1 p-6 md:p-12 max-w-full lg:max-w-[816px] gap-8">
           <h2 className="text-[28px] md:text-[32px] lg:text-[40px] font-middle text-gray-900 mb-6 md:mb-8">
             Why TheBestPDF is the top choice for your team

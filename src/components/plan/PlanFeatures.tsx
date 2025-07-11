@@ -1,33 +1,87 @@
 import { Check } from "lucide-react";
+import Image from "next/image";
 
-const features = [
-  "Unlimited downloads",
-  "Unlimited downloads",
-  "Merge, split, and compress PDFs",
-  "Merge, split, and compress PDFs",
-  "24/7 customer support",
-  "24/7 customer support",
+const featureLeft = [
+  {
+    label: "Fill in, edit & Dave your PDFs",
+    icon: "/assets/images/fill-in-edit-save-pdfs.png",
+  },
+  {
+    label: "Comment, highlight & underline text",
+    icon: "/assets/images/comment-highlight-underline-text.png",
+  },
+  {
+    label: "Access your documents from any device",
+    icon: "/assets/images/document-from-any-device.png",
+  },
+];
+
+const featureRight = [
+  {
+    label: "Sign your docs online",
+    icon: "/assets/images/sign-docs-online.png",
+  },
+  {
+    label: "Use form templates",
+    icon: "/assets/images/use-form-templates.png",
+  },
+  {
+    label: "Add new fillable fields",
+    icon: "/assets/images/add-new-fillable-fields.png",
+  },
+  {
+    label: "Create your own forms",
+    icon: "/assets/images/create-your-own-forms.png",
+  },
 ];
 
 export default function PlanFeatures() {
   return (
     <div className="text-[18px] text-gray-700 space-y-6 my-8">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {features.map((feature, i) => (
-          <label
-            key={i}
-            className="flex items-center gap-2 py-4 cursor-pointer"
-          >
-            <Check className="text-blue-600 w-6 h-6" />
-            <span className="font-semibold">{feature}</span>
-          </label>
-        ))}
+      <div className="grid grid-cols-2 sm:grid-cols-2 gap-6">
+        <div className="flex flex-col justify-start ">
+          {featureLeft.map((feature, i) => (
+            <div key={i} className="flex justify-start py-4 cursor-pointer">
+              <div>
+                <Image
+                  src={feature.icon}
+                  alt={feature.label}
+                  width={50}
+                  height={50}
+                  className="mx-auto mb-4"
+                />
+              </div>
+
+              <div className="font-light text-[18px]">{feature.label}</div>
+            </div>
+          ))}
+        </div>
+        <div className="flex flex-col justify-start">
+          {featureRight.map((feature, i) => (
+            <div
+              key={i}
+              className="flex justify-start gap-2 py-2 cursor-pointer"
+            >
+              <div>
+                <Image
+                  src={feature.icon}
+                  alt={feature.label}
+                  width={40}
+                  height={30}
+                  className="mx-auto mb-4"
+                />
+              </div>
+
+              <div className="font-light text-[18px]">{feature.label}</div>
+            </div>
+          ))}
+        </div>
       </div>
 
-      <p className="text-[18px] font-semibold text-center text-gray-700 mt-8">
+      <p className="text-[16px] font-light text-center text-gray-700 mt-8">
         After 7 days, the price is $39 with auto-renewal. Billed every 4 weeks.
         <br />
-        Cancel anytime. 30-day money-back guarantee.
+        Cancel anytime. <span className="font-semibold"> 30-day money-back guarantee. </span>
       </p>
     </div>
   );
