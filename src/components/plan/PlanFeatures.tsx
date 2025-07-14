@@ -35,13 +35,20 @@ const featureRight = [
   },
 ];
 
-export default function PlanFeatures() {
+interface PlanFeaturesProps {
+  selectedPlan: string | null;
+}
+
+export default function PlanFeatures({ selectedPlan }: PlanFeaturesProps) {
   return (
     <div className="text-[18px] text-gray-700 space-y-6 my-8">
       <div className="grid grid-cols-2 sm:grid-cols-2 gap-6">
         <div className="flex flex-col justify-start ">
           {featureLeft.map((feature, i) => (
-            <div key={i} className="flex justify-start py-4 cursor-pointer">
+            <div
+              key={i}
+              className="flex justify-start items-center py-4 cursor-pointer"
+            >
               <div>
                 <Image
                   src={feature.icon}
@@ -60,7 +67,7 @@ export default function PlanFeatures() {
           {featureRight.map((feature, i) => (
             <div
               key={i}
-              className="flex justify-start gap-2 py-2 cursor-pointer"
+              className={`flex justify-start items-center gap-2 py-2 cursor-pointer`}
             >
               <div>
                 <Image
@@ -68,11 +75,19 @@ export default function PlanFeatures() {
                   alt={feature.label}
                   width={40}
                   height={30}
-                  className="mx-auto mb-4"
+                  className={`mx-auto mb-4 ${
+                    selectedPlan === "7_free" ? "opacity-30" : ""
+                  }`}
                 />
               </div>
 
-              <div className="font-light text-[18px]">{feature.label}</div>
+              <div
+                className={`font-light text-[18px] ${
+                  selectedPlan === "7_free" ? "opacity-30 line-through" : ""
+                }`}
+              >
+                {feature.label}
+              </div>
             </div>
           ))}
         </div>
@@ -81,7 +96,8 @@ export default function PlanFeatures() {
       <p className="text-[16px] font-light text-center text-gray-700 mt-8">
         After 7 days, the price is $39 with auto-renewal. Billed every 4 weeks.
         <br />
-        Cancel anytime. <span className="font-semibold"> 30-day money-back guarantee. </span>
+        Cancel anytime.{" "}
+        <span className="font-semibold"> 30-day money-back guarantee. </span>
       </p>
     </div>
   );

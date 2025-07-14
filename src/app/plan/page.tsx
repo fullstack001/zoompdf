@@ -1,10 +1,9 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { login } from "@/store/slices/authSlice";
+import Image from "next/image";
 import { setPlan } from "@/store/slices/flowSlice"; // Import the setPlan action
 import { useRouter } from "next/navigation"; // Import useRouter for navigation
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PlanHero from "@/components/plan/PlanHero";
@@ -17,10 +16,6 @@ export default function PlanPage() {
   const dispatch = useDispatch();
   const router = useRouter(); // Initialize router
   const [selectedOption, setSelectedOption] = useState<string | null>("7_full");
-
-  useEffect(() => {
-    dispatch(login());
-  }, [dispatch]);
 
   const confirmPlan = () => {
     if (selectedOption) {
@@ -36,12 +31,12 @@ export default function PlanPage() {
         <PlanHero handleGoPayment={confirmPlan} />
         <div className="flex flex-col lg:flex-row justify-between gap-10">
           <PlanPreview />
-          <div className="max-w-[50%]">
+          <div className=" max-w-full  md:max-w-[50%]">
             <PlanOptions
               selectedOption={selectedOption}
               setSelectedOption={setSelectedOption}
             />
-            <PlanFeatures />
+            <PlanFeatures selectedPlan={selectedOption} />
           </div>
         </div>
       </main>

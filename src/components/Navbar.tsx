@@ -299,15 +299,17 @@ export default function Navbar() {
                       <SettingsIcon size={16} /> Settings
                     </li>
                     <li
-                      onClick={() => dispatch(logout())}
+                      onClick={() => {
+                        dispatch(logout());
+                        router.push("/login");
+                      }}
                       className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
                     >
                       <XIcon size={16} /> Log Out
                     </li>
                   </ul>
                 </div>
-              ):
-               (
+              ) : (
                 <button
                   onClick={() => router.push("/login")}
                   className="px-4 py-2 text-md bg-white border-2 text-[#3758F9] border-[#3758F9] rounded-xl flex items-center"
@@ -387,7 +389,7 @@ function MenuCategory({
   items,
 }: {
   title: string;
-  items: { label: string; route: string }[]; 
+  items: { label: string; route: string }[];
 }) {
   const router = useRouter();
   return (

@@ -3,9 +3,8 @@ import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react"; // Import useEffect
 
-import { login } from "../../store/slices/authSlice"; // Import login action
 import { setUser } from "../../store/slices/userSlice"; // Import setUser action
 
 interface EmailModalProps {
@@ -24,6 +23,20 @@ export default function EmailModal({
   const dispatch = useDispatch();
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false); // Add loading state
+  const [emailExists, setEmailExists] = useState(false); // State to track if email exists
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Enter" && isEmailValid(email)) {
+        register();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [email]); // Add dependency on email
 
   if (!isVisible) return null;
 
@@ -68,24 +81,33 @@ export default function EmailModal({
           isAdmin: false, // Default to false
           name: "", // Default to an empty string
         };
-
-        localStorage.setItem("authToken", token);
         dispatch(setUser(mappedUserData));
-        dispatch(login());
-
         router.push(`/plan`); // Redirect to register page
-        // Use downloadFile utility if needed in future logic
         onClose();
       } catch (error: unknown) {
-        // Replace `any` with `unknown`
-        if (
-          axios.isAxiosError(error) && // Check if error is an Axios error
-          error.response?.status === 400 &&
-          error.response?.data?.msg === "Email is already registered"
-        ) {
-          router.push(`/login`);
-        } else {
-          alert("Registration failed. Please try again.");
+        if (axios.isAxiosError(error)) {
+          if (
+            error.response?.status === 409 &&
+            error.response?.data?.msg ===
+              "Email is already registered with a subscription"
+          ) {
+            setEmailExists(true);
+          } else if (error.response?.status === 400) {
+            const userData = error.response.data.user;
+            console.log(error.response.data);
+            const mappedUserData = {
+              email: userData?.email ?? "",
+              subscription: null,
+              id: userData?.id ?? "",
+              avatar: userData?.avatar ?? "",
+              isAdmin: false,
+              name: "",
+            };
+            dispatch(setUser(mappedUserData));
+            router.push(`/plan`);
+          } else {
+            alert("Registration failed. Please try again.");
+          }
         }
       } finally {
         setIsLoading(false); // Reset loading state
@@ -104,6 +126,20 @@ export default function EmailModal({
         >
           <X size={20} />
         </button>
+        {emailExists && (
+          <div className="bg-red-100 text-sm text-red-800 p-4 rounded mb-4">
+            This email is already registered. Please{" "}
+            <div
+              className="text-blue-600 cursor-pointer inline text-base"
+              onClick={() => {
+                router.push("login");
+              }}
+            >
+              log in
+            </div>
+            .
+          </div>
+        )}
         <h3 className="text-xl font-bold mb-4">Enter your Email address</h3>
         <div className="text-left w-full mb-2">
           <label htmlFor="email" className="text-sm font-medium">

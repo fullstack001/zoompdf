@@ -136,6 +136,19 @@ function CheckoutForm({
     }
   };
 
+  React.useEffect(() => {
+    const handleKeyPress = (event: KeyboardEvent) => {
+      if (event.key === "Enter" && !isProcessing && stripe) {
+        createSubscription();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyPress);
+    return () => {
+      window.removeEventListener("keydown", handleKeyPress);
+    };
+  }, [isProcessing, stripe]);
+
   return (
     <div className="grid gap-4 m-auto">
       <div className="mb-4">

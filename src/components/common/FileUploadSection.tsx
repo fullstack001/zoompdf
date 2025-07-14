@@ -23,7 +23,7 @@ export default function FileUploadSection({
             className="inline-block h-full align-top fill-current"
             viewBox="0 0 154 105"
           >
-            <g clip-path="url(#a)">
+            <g clipPath="url(#a)">
               <circle
                 cx="20"
                 cy="57"
@@ -51,7 +51,7 @@ export default function FileUploadSection({
                   height="86.498"
                   rx="8"
                   stroke="rgba(203, 209, 250, 0.3)"
-                  stroke-width="1"
+                  strokeWidth="1"
                   className="transition-transform duration-300"
                   style={{
                     transform: "rotate(-11.133deg) translate(0, 0)",
@@ -73,7 +73,7 @@ export default function FileUploadSection({
                   height="85.498"
                   rx="7.5"
                   stroke="rgba(203, 209, 250, 0.3)"
-                  stroke-width="1"
+                  strokeWidth="1"
                   style={{
                     transition: "transform 0.3s ease",
                     transform: "rotate(-11.133deg) translate(0, 0)",
@@ -91,7 +91,7 @@ export default function FileUploadSection({
                   }}
                 ></rect>
               </g>
-              <g clip-path="url(#c)">
+              <g clipPath="url(#c)">
                 <path
                   d="M60.632 16.299h48.733c3.499 0 6.336 2.821 6.336 6.301v5.265H48.832l3.135-6.239a9.694 9.694 0 0 1 8.665-5.327Z"
                   fill="#fff"
@@ -126,7 +126,7 @@ export default function FileUploadSection({
                 <path d="M27 16h89v72H27z" fill="#fff"></path>
               </clipPath>
               <filter
-                color-interpolation-filters="sRGB"
+                colorInterpolationFilters="sRGB"
                 filterUnits="userSpaceOnUse"
                 height="134.167"
                 id="b"
@@ -134,10 +134,7 @@ export default function FileUploadSection({
                 x="-2.607"
                 y="-14.607"
               >
-                <feFlood
-                  flood-opacity="0"
-                  result="BackgroundImageFix"
-                ></feFlood>
+                <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
                 <feGaussianBlur
                   in="BackgroundImageFix"
                   stdDeviation="8"
@@ -156,7 +153,14 @@ export default function FileUploadSection({
             </defs>
           </svg>
         </div>
-        <div className="mt-8 sm:mt-4 md:mt-8 text-sm sm:text-base md:text-lg mx-auto text-center bg-primary-900 text-white w-fit py-3 px-8 rounded-lg cursor-pointer hover:bg-primary-800 transition-colors duration-300 uppercase">
+        <div
+          className="mt-8 sm:mt-4 md:mt-8 text-sm sm:text-base md:text-lg mx-auto text-center bg-primary-900 text-white w-fit py-3 px-8 rounded-lg cursor-pointer hover:bg-primary-800 transition-colors duration-300 uppercase"
+          onClick={() =>
+            (
+              document.querySelector('input[type="file"]') as HTMLInputElement
+            )?.click()
+          }
+        >
           <div className="flex items-center justify-center">
             <CirclePlus className="mr-4" size={14} />
             <div>Upload Your File</div>
