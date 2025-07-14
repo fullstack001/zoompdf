@@ -1,9 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 
-const ResetPasswordPage = () => {
+const ResetPasswordPageContent = () => {
   const router = useRouter();
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -13,6 +13,7 @@ const ResetPasswordPage = () => {
   const searchParams = useSearchParams();
   const token = searchParams.get("token"); // Extract token from URL query
   console.log("Reset Password Token:", token);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
@@ -120,5 +121,11 @@ const ResetPasswordPage = () => {
     </div>
   );
 };
+
+const ResetPasswordPage = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <ResetPasswordPageContent />
+  </Suspense>
+);
 
 export default ResetPasswordPage;
