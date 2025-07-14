@@ -5,7 +5,7 @@ import {
   CardCvcElement,
   CardExpiryElement,
 } from "@stripe/react-stripe-js";
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { RootState } from "../../store/store"; // Import RootState type
@@ -42,7 +42,7 @@ function CheckoutForm({
   const [isProcessing, setIsProcessing] = useState(false);
   const [name, setName] = useState("");
 
-  const createSubscription = async () => {
+  const createSubscription = useCallback(async () => {
     if (!stripe || !elements) {
       alert("Stripe is not loaded correctly.");
       return;
@@ -134,7 +134,7 @@ function CheckoutForm({
     } finally {
       setIsProcessing(false);
     }
-  };
+  }, [stripe, elements, name, user.email, subscription, priceId, callBack]);
 
   React.useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {

@@ -3,7 +3,7 @@ import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
-import { useState, useEffect } from "react"; // Import useEffect
+import { useState, useEffect, useCallback } from "react"; // Import useEffect and useCallback
 
 import { setUser } from "../../store/slices/userSlice"; // Import setUser action
 
@@ -32,7 +32,7 @@ export default function EmailModal({
     return emailRegex.test(email);
   };
 
-  const register = async () => {
+  const register = useCallback(async () => {
     if (isEmailValid(email)) {
       setIsLoading(true); // Set loading state to true
       try {
@@ -102,7 +102,7 @@ export default function EmailModal({
     } else {
       alert("Please enter a valid email address.");
     }
-  };
+  }, [email, dispatch, router, onClose]); // Add dependencies
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -115,7 +115,7 @@ export default function EmailModal({
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [email, register]); // Add dependency on email
+  }, [email, register]); // Ensure dependencies are stable
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
