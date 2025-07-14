@@ -1,13 +1,5 @@
 import Image from "next/image";
 
-const features = [
-  "Unlimited downloads",
-  "Convert and export PDFs",
-  "Merge, split, and compress PDFs",
-  "Unlimited cloud storage",
-  "24/7 customer support",
-];
-
 const featureLeft = [
   {
     label: "Fill in, edit & Dave your PDFs",
@@ -49,26 +41,26 @@ export default function PaymentFeatures({
 }) {
   return (
     <div className="bg-white rounded-xl p-4 shadow text-sm">
-      <div className="flex flex-col justify-start ">
-        {featureLeft.map((feature, i) => (
-          <div
-            key={i}
-            className="flex justify-start items-center  cursor-pointer"
-          >
-            <div>
-              <Image
-                src={feature.icon}
-                alt={feature.label}
-                width={50}
-                height={50}
-                className="mx-auto "
-              />
-            </div>
-
-            <div className="font-light text-[18px]">{feature.label}</div>
+      {featureLeft.map((feature, i) => (
+        <div key={i} className="flex justify-start gap-2 cursor-pointer mb-4">
+          <div className="w-[40px]">
+            <Image
+              src={feature.icon}
+              alt={feature.label}
+              width={40}
+              height={30}
+              className="mx-auto "
+            />
           </div>
-        ))}
-      </div>
+
+          <div
+            style={{ width: "calc(100% - 40px)" }}
+            className="font-thin text-[16px] flex items-center"
+          >
+            {feature.label}
+          </div>
+        </div>
+      ))}
       {selectedPlan !== "7_free" && (
         <div className="flex flex-col justify-start">
           {featureRight.map((feature, i) => (
