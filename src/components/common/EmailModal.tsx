@@ -3,9 +3,9 @@ import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
-import { useState, useEffect, useCallback } from "react"; // Import useEffect and useCallback
+import { useState, useEffect, useCallback } from "react";
 
-import { setUser } from "../../store/slices/userSlice"; // Import setUser action
+import { setUser } from "../../store/slices/userSlice";
 
 interface EmailModalProps {
   isVisible: boolean;
@@ -22,19 +22,17 @@ export default function EmailModal({
 }: EmailModalProps) {
   const dispatch = useDispatch();
   const router = useRouter();
-  const [isLoading, setIsLoading] = useState(false); // Add loading state
-  const [emailExists, setEmailExists] = useState(false); // State to track if email exists
+  const [isLoading, setIsLoading] = useState(false);
+  const [emailExists, setEmailExists] = useState(false);
 
-  if (!isVisible) return null;
-
-  const isEmailValid = (email: string) => {
+  const isEmailValid = useCallback((email: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
-  };
+  }, []);
 
   const register = useCallback(async () => {
     if (isEmailValid(email)) {
-      setIsLoading(true); // Set loading state to true
+      setIsLoading(true);
       try {
         const response = await axios.post(
           "https://api.pdfezy.com/api/auth/register-email",
@@ -58,18 +56,18 @@ export default function EmailModal({
           email: userData.user?.email ?? "",
           subscription: {
             subscriptionId: userData.subscription || "",
-            plan: "", // Default to an empty string
-            subscriptionType: "", // Default to an empty string
-            subscribedDate: "", // Default to an empty string
-            expiryDate: "", // Default to an empty string
+            plan: "",
+            subscriptionType: "",
+            subscribedDate: "",
+            expiryDate: "",
           },
-          id: userData.user?.id ?? "", // Default to an empty string
-          avatar: userData.user?.avatar ?? "", // Default to an empty string
-          isAdmin: false, // Default to false
-          name: "", // Default to an empty string
+          id: userData.user?.id ?? "",
+          avatar: userData.user?.avatar ?? "",
+          isAdmin: false,
+          name: "",
         };
         dispatch(setUser(mappedUserData));
-        router.push(`/plan`); // Redirect to register page
+        router.push(`/plan`);
         onClose();
       } catch (error: unknown) {
         if (axios.isAxiosError(error)) {
@@ -97,12 +95,12 @@ export default function EmailModal({
           }
         }
       } finally {
-        setIsLoading(false); // Reset loading state
+        setIsLoading(false);
       }
     } else {
       alert("Please enter a valid email address.");
     }
-  }, [email, dispatch, router, onClose]); // Add dependencies
+  }, [email, dispatch, router, onClose, isEmailValid]);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -115,7 +113,9 @@ export default function EmailModal({
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [email, register]); // Ensure dependencies are stable
+  }, [email, register, isEmailValid]);
+
+  if (!isVisible) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
@@ -161,10 +161,10 @@ export default function EmailModal({
               register();
             }
           }}
-          disabled={isLoading} // Disable button while loading
+          disabled={isLoading}
         >
           {isLoading ? (
-            <span>Loading...</span> // Show loading text
+            <span>Loading...</span>
           ) : (
             <>
               Download <ArrowDown size={16} />
