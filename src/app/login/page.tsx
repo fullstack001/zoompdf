@@ -214,10 +214,6 @@ export default function Login() {
       <ForgotPasswordModal
         show={showForgotPasswordModal}
         handleClose={() => setShowForgotPasswordModal(false)}
-        handleSuccessSend={() => {
-          setShowForgotPasswordModal(false);
-          window.alert("Password reset email sent successfully.");
-        }}
       />
     </>
   );

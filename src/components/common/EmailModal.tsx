@@ -25,19 +25,6 @@ export default function EmailModal({
   const [isLoading, setIsLoading] = useState(false); // Add loading state
   const [emailExists, setEmailExists] = useState(false); // State to track if email exists
 
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Enter" && isEmailValid(email)) {
-        register();
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [email]); // Add dependency on email
-
   if (!isVisible) return null;
 
   const isEmailValid = (email: string) => {
@@ -116,6 +103,19 @@ export default function EmailModal({
       alert("Please enter a valid email address.");
     }
   };
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Enter" && isEmailValid(email)) {
+        register();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [email, register]); // Add dependency on email
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">

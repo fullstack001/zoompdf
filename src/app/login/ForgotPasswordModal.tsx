@@ -4,13 +4,11 @@ import axios from "axios";
 interface ForgotPasswordModalProps {
   show: boolean;
   handleClose: () => void;
-  handleSuccessSend: () => void;
 }
 
 const ForgotPasswordModal = ({
   show,
   handleClose,
-  handleSuccessSend,
 }: ForgotPasswordModalProps) => {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -84,7 +82,7 @@ const ForgotPasswordModal = ({
                   className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 />
                 <small id="emailHelp" className="text-gray-500">
-                  We'll send a password reset link to this email.
+                  We&apos;ll send a password reset link to this email.
                 </small>
               </div>
               {message && (

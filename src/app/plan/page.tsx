@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import Image from "next/image";
 import { setPlan } from "@/store/slices/flowSlice"; // Import the setPlan action
 import { useRouter } from "next/navigation"; // Import useRouter for navigation
 import Navbar from "@/components/Navbar";

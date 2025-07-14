@@ -147,7 +147,7 @@ function CheckoutForm({
     return () => {
       window.removeEventListener("keydown", handleKeyPress);
     };
-  }, [isProcessing, stripe]);
+  }, [isProcessing, stripe, createSubscription]);
 
   return (
     <div className="grid gap-4 m-auto">
