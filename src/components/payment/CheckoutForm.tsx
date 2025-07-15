@@ -7,7 +7,7 @@ import {
 } from "@stripe/react-stripe-js";
 import React, { useState, useCallback } from "react";
 import { useSelector } from "react-redux";
-import axios from "axios";
+import { cancelSubscription } from "@/utils/apiUtils";
 import { RootState } from "../../store/store"; // Import RootState type
 
 const cardElementOptions = {
@@ -87,13 +87,7 @@ function CheckoutForm({
       }
 
       if (subscription && subscription.subscriptionId) {
-        await axios.post(
-          `https://api.pdfezy.com/api/subscription/cancel-subscription`,
-          {
-            subscriptionId: subscription.subscriptionId,
-            email: user.email,
-          }
-        );
+        await cancelSubscription(subscription.subscriptionId, user.email);
       }
 
       // Call backend to create subscription

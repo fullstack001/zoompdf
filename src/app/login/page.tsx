@@ -1,14 +1,13 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import axios from "axios";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
 import { setUser } from "../../store/slices/userSlice";
 import { login } from "../../store/slices/authSlice";
 import { RootState } from "@/store/store";
-import { downloadFile } from "@/utils/apiUtils";
+import { downloadFile, loginUser, downloadSavedPdf } from "@/utils/apiUtils";
 import ForgotPasswordModal from "./ForgotPasswordModal";
 
 export default function Login() {
@@ -22,61 +21,65 @@ export default function Login() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        "https://api.pdfezy.com/api/auth/login",
-        {
-          email,
-          password,
-        }
+            const { token, user, subscription } = await loginUser(email, password);
+
+      // Dispatch actions to set user data and login state
+      dispatch(
+        setUser({
+          email: user.email,
+          name: user.name || "", // Ensure name is set, default to empty string if not provided
+          subscription: subscription
+            ? {
+                subscriptionId: subscription.subscriptionId,
+                plan: subscription.plan,
+                subscriptionType: subscription.subscriptionType,
+                subscribedDate: subscription.subscribedDate,
+                expiryDate: subscription.expiryDate,
+              }
+            : null,
+          id: user.id || "",
+          avatar: user.avatar || "", // Add default empty string for avatar
+          isAdmin: user.isAdmin,
+        })
       );
+      dispatch(login());
 
-      if (response.status === 200) {
-        const { token, user, subscription } = response.data;
-
-        // Dispatch actions to set user data and login state
-        dispatch(
-          setUser({
-            email: user.email,
-            name: user.name || "", // Ensure name is set, default to empty string if not provided
-            subscription: subscription
-              ? {
-                  subscriptionId: subscription.subscriptionId,
-                  plan: subscription.plan,
-                  subscriptionType: subscription.subscriptionType,
-                  subscribedDate: subscription.subscribedDate,
-                  expiryDate: subscription.expiryDate,
-                }
-              : null,
-            id: user.id,
-            avatar: user.avatar,
-            isAdmin: user.isAdmin,
-          })
-        );
-        dispatch(login());
-
-        // Optionally, store the token in localStorage or cookies
-        localStorage.setItem("authToken", token);
-        if (subscription && new Date(subscription.expiryDate) > new Date()) {
-          if (flow.fileName && flow.action) {
-            try {
-              await downloadFile(
-                flow.fileName,
-                flow.action,
-                token,
-                router.push
-              );
-            } catch (err) {
-              console.error("Error downloading file:", err);
-              window.alert("Failed to download file.");
+      // Optionally, store the token in localStorage or cookies
+      localStorage.setItem("authToken", token);
+      if (subscription && new Date(subscription.expiryDate) > new Date()) {
+        // Check for edited PDF data first
+        if (flow.editedPdfData && flow.editedPdfFileName && flow.editedPdfConverter) {
+          try {
+            if (flow.editedPdfConverter.toLowerCase() === "pdf" && flow.editedPdfData) {
+              // For PDF format, use the saved PDF download function
+              downloadSavedPdf(flow.editedPdfData, flow.editedPdfFileName);
+            } else {
+              // For other formats, use the API download function
+              const action = `pdf_to_${flow.editedPdfConverter.toLowerCase()}`;
+              await downloadFile(flow.editedPdfFileName, action, token, router.push);
             }
-          } else {
-            router.push(`/files`); // Redirect to files page if flow data is invalid
+          } catch (err) {
+            console.error("Error downloading edited PDF:", err);
+            window.alert("Failed to download edited PDF.");
+          }
+        } else if (flow.fileName && flow.action) {
+          // Fallback to regular conversion flow
+          try {
+            await downloadFile(
+              flow.fileName,
+              flow.action,
+              token,
+              router.push
+            );
+          } catch (err) {
+            console.error("Error downloading file:", err);
+            window.alert("Failed to download file.");
           }
         } else {
-          router.push(`/plan`); // Redirect to register page if subscription is not valid
+          router.push(`/files`); // Redirect to files page if no flow data
         }
       } else {
-        console.error("Login failed");
+        router.push(`/plan`); // Redirect to register page if subscription is not valid
       }
     } catch (error) {
       console.error("Error:", error);

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import { forgotPassword } from "@/utils/apiUtils";
 
 interface ForgotPasswordModalProps {
   show: boolean;
@@ -23,22 +23,14 @@ const ForgotPasswordModal = ({
     }
     setIsLoading(true);
     try {
-      const res = await axios.post(
-        "https://api.pdfezy.com/api/auth/forgot-password",
-        { email }
+      await forgotPassword(email);
+      setMessage(
+        "Reset password request sent successfully. Please check your email."
       );
-      if (res.status === 200) {
-        setMessage(
-          "Reset password request sent successfully. Please check your email."
-        );
-        setMessageType("success");
-        setTimeout(() => {
-          handleClose();
-        }, 3000);
-      } else {
-        setMessage(res.data.msg || "An error occurred.");
-        setMessageType("error");
-      }
+      setMessageType("success");
+      setTimeout(() => {
+        handleClose();
+      }, 3000);
     } catch (error) {
       setMessage("An error occurred. Please try again later.");
       setMessageType("error");

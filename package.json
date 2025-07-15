@@ -12,15 +12,18 @@
     "@reduxjs/toolkit": "^2.8.2",
     "@stripe/react-stripe-js": "^3.7.0",
     "@stripe/stripe-js": "^7.4.0",
+    "@types/uuid": "^10.0.0",
     "axios": "^1.10.0",
     "contentful": "^11.7.6",
     "jwt-decode": "^4.0.0",
     "lucide-react": "^0.511.0",
     "next": "15.1.8",
+    "pspdfkit": "^2024.8.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-redux": "^9.2.0",
-    "redux-thunk": "^3.1.0"
+    "redux-thunk": "^3.1.0",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

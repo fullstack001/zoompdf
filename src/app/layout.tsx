@@ -1,6 +1,5 @@
 "use client";
 import "./globals.css";
-import { Providers } from "./providers"; // Import client wrapper
 import { Provider } from "react-redux"; // Import Redux Provider
 import { store } from "../store/store"; // Import the Redux store
 import { useEffect } from "react";
@@ -9,6 +8,7 @@ import { setUser } from "@/store/slices/userSlice"; // Import your Redux action
 import { login } from "@/store/slices/authSlice";
 import axios from "axios"; // Import axios for HTTP requests
 import { Poppins } from "next/font/google";
+import { FileProvider } from "@/contexts/FileContext";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -30,10 +30,10 @@ export default function RootLayout({
     <html lang="en" className={poppins.variable}>
       <body>
         <Provider store={store}>
-          <Providers>
+          <FileProvider>
             <PersistLogin />
             {children}
-          </Providers>
+          </FileProvider>
         </Provider>
       </body>
     </html>

@@ -1,32 +1,24 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import axios from "axios";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FileSidebar from "@/components/files/FileSidebar";
 import FileListTable from "@/components/files/FileListTable";
+import { getFiles } from "@/utils/apiUtils";
 // import FileListCards from "@/components/FileListCards"; // Updated path to match the correct location
 
 export default function FileListPage() {
-  const [originalFiles, setOriginalFiles] = useState([]);
-  const [files, setFiles] = useState([]);
+  const [originalFiles, setOriginalFiles] = useState<any[]>([]);
+  const [files, setFiles] = useState<any[]>([]);
 
   useEffect(() => {
     async function fetchFiles() {
       try {
-        const token = localStorage.getItem("authToken");
-        const response = await axios.get(
-          "https://api.pdfezy.com/api/pdf/files",
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
-        console.log("Fetched files:", response.data);
-        setOriginalFiles(response.data);
-        setFiles(response.data);
+        const files = await getFiles();
+        console.log("Fetched files:", files);
+        setOriginalFiles(files);
+        setFiles(files);
       } catch (error) {
         console.error("Error fetching files:", error);
       }

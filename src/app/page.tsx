@@ -1,5 +1,9 @@
 "use client";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Navbar from "@/components/Navbar";
+import Image from "next/image";
+import {useDispatch} from "react-redux";
 import FileUploadSection from "@/components/common/FileUploadSection";
 import FeatureItems from "@/components/common/FeatureItems";
 // import ProgressModal from "@/components/common/ProgressModal";
@@ -11,15 +15,33 @@ import CoreValues from "@/components/landing/CoreValues";
 import FAQ from "@/components/landing/FAQ";
 import Footer from "@/components/Footer";
 
-export default function HomePage() {
-  // const [file, setFile] = useState<File | null>(null);
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+import { setAction} from "../store/slices/flowSlice";
+import { useFileContext } from "@/contexts/FileContext";
+import LoadingSpinner from "@/components/common/LoadingSpinner";
+
+export default function HomePage() {
+  const dispatch = useDispatch();
+
+  const { uploadFile, isLoading, progress } = useFileContext();
+  const router = useRouter();
+  const [uploadError, setUploadError] = useState<string | null>(null);
+
+  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFile = e.target.files?.[0] || null;
     if (selectedFile) {
-      window.alert(`File selected: ${selectedFile.name}`);
-    } else {
-      window.alert("No file selected.");
+      try {
+        setUploadError(null);
+        console.log("Starting file upload:", selectedFile.name);
+        await uploadFile(selectedFile);
+        console.log("File uploaded successfully, navigating to editor");
+        dispatch(setAction("edit_pdf"));
+
+        router.push('/editor');
+      } catch (error) {
+        console.error('Upload failed:', error);
+        setUploadError('Failed to upload file. Please try again.');
+      }
     }
   };
 
@@ -34,6 +56,11 @@ export default function HomePage() {
           1M+ files processed monthly. Upload a file to get started!
         </p>
         <FileUploadSection handleFileChange={handleFileChange} />
+        {uploadError && (
+          <div className="mt-4 text-red-500 text-center bg-red-50 p-3 rounded-lg">
+            {uploadError}
+          </div>
+        )}        
         <FeatureItems />
         {/* {uploading && <ProgressModal progress={progress} status={status} />} */}
       </section>
@@ -44,6 +71,29 @@ export default function HomePage() {
       <CoreValues />
       <FAQ />
       <Footer />
+      {isLoading && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white rounded-xl w-full max-w-md p-8 text-center shadow-xl">
+            <h3 className="text-xl font-bold mb-6">
+              We are processing your file
+            </h3>
+            <Image
+              src="/assets/images/processing.png"
+              alt="Processing"
+              width={160}
+              height={160}
+              className="mx-auto mb-4"
+            />
+            <div className="text-gray-700 font-semibold mb-2">{progress}%</div>
+            <div className="w-full h-2 rounded-full bg-gray-200">
+              <div
+                className="h-2 bg-blue-500 rounded-full transition-all duration-300 ease-out"
+                style={{ width: `${progress}%` }}
+              ></div>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }

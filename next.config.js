@@ -9,6 +9,13 @@ module.exports = {
     ];
   },
   images: {
-    domains: ["gravatar.com"], // Add gravatar.com to the list of allowed domains
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'gravatar.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
 };

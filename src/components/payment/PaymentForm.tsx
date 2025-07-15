@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "../../store/slices/userSlice";
 import { login } from "../../store/slices/authSlice";
 import { RootState } from "../../store/store";
-import { downloadFile } from "../../utils/apiUtils";
+import { downloadFile, downloadSavedPdf } from "../../utils/apiUtils";
 
 import CheckoutForm from "./CheckoutForm";
 
@@ -41,6 +41,7 @@ export default function PaymentForm({
 
   const fileName = useSelector((state: RootState) => state.flow.fileName);
   const action = useSelector((state: RootState) => state.flow.action);
+  const flow = useSelector((state: RootState) => state.flow);
 
   const handlePurchaseSubscription = (
     subscriptionType: string,
@@ -92,10 +93,31 @@ export default function PaymentForm({
         dispatch(login());
         localStorage.setItem("authToken", token as string);
 
-        if (fileName && action) {
-          downloadFile(fileName, action, token, router.push);
+        // Check for edited PDF data first
+        if (flow.editedPdfData && flow.editedPdfFileName && flow.editedPdfConverter) {
+          try {
+            if (flow.editedPdfConverter.toLowerCase() === "pdf" && flow.editedPdfData) {
+              // For PDF format, use the saved PDF download function
+              downloadSavedPdf(flow.editedPdfData, flow.editedPdfFileName);
+            } else {
+              // For other formats, use the API download function
+              const action = `pdf_to_${flow.editedPdfConverter.toLowerCase()}`;
+              await downloadFile(flow.editedPdfFileName, action, token, router.push);
+            }
+          } catch (err) {
+            console.error("Error downloading edited PDF:", err);
+            window.alert("Failed to download edited PDF.");
+          }
+        } else if (fileName && action) {
+          // Fallback to regular conversion flow
+          try {
+            await downloadFile(fileName, action, token, router.push);
+          } catch (err) {
+            console.error("Error downloading file:", err);
+            window.alert("Failed to download file.");
+          }
         } else {
-          console.error("fileName or action is null");
+          router.push(`/files`); // Redirect to files page if no flow data
         }
       })
       .catch(() => {
@@ -156,7 +178,7 @@ export default function PaymentForm({
           <div className="flex justify-between items-center text-green-600 text-sm gap-2 my-3">
             <span>🔒 This is a secure 128-bit encrypted payment</span>
             <svg className="w-16 h-auto" viewBox="0 0 70 27">
-              <g clip-path="url(#a1)">
+              <g clipPath="url(#a1)">
                 <path
                   clipRule="evenodd"
                   d="M26.98 6.256c.832 0 1.659.003 2.484.008l3.317 6.298V6.256h1.989v9.982l-2.187.003L28.97 9.15v7.09H26.98V6.255ZM57.204 8.682c.77 0 1.524.225 2.164.647.64.421 1.14 1.02 1.434 1.721.294.7.371 1.472.22 2.216a3.817 3.817 0 0 1-1.066 1.963 3.914 3.914 0 0 1-1.995 1.048 3.951 3.951 0 0 1-2.25-.219 3.882 3.882 0 0 1-1.747-1.413 3.793 3.793 0 0 1 .486-4.842 3.897 3.897 0 0 1 1.264-.83c.473-.193.979-.292 1.49-.291Zm0 1.93c.383 0 .757.112 1.075.322.317.21.565.507.711.855a1.877 1.877 0 0 1-.42 2.075 1.962 1.962 0 0 1-2.108.411 1.927 1.927 0 0 1-.868-.702 1.882 1.882 0 0 1 .243-2.404 1.935 1.935 0 0 1 1.367-.557ZM39.28 8.682c.77 0 1.523.226 2.163.647a3.848 3.848 0 0 1 1.434 1.722c.294.701.37 1.472.22 2.216a3.817 3.817 0 0 1-1.067 1.962c-.545.536-1.24.901-1.995 1.049a3.95 3.95 0 0 1-2.25-.22 3.882 3.882 0 0 1-1.747-1.413 3.793 3.793 0 0 1 .486-4.842 3.897 3.897 0 0 1 1.264-.83c.473-.193.98-.292 1.49-.291h.002Zm0 1.93c.383 0 .757.112 1.075.322.318.21.565.507.711.855a1.876 1.876 0 0 1-.42 2.075 1.962 1.962 0 0 1-2.108.411 1.927 1.927 0 0 1-.868-.702 1.882 1.882 0 0 1 .242-2.404 1.935 1.935 0 0 1 1.368-.557Z"

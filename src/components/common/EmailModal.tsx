@@ -1,9 +1,9 @@
 import { X, ArrowDown } from "lucide-react";
-import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
 import { useState, useEffect, useCallback } from "react";
+import { registerEmail } from "@/utils/apiUtils";
 
 import { setUser } from "../../store/slices/userSlice";
 
@@ -34,57 +34,30 @@ export default function EmailModal({
     if (isEmailValid(email)) {
       setIsLoading(true);
       try {
-        const response = await axios.post(
-          "https://api.pdfezy.com/api/auth/register-email",
-          { email }
-        );
-        const { token } = response.data;
-        interface DecodedToken {
-          user?: {
-            email?: string;
-            avatar?: string;
-            id?: string;
-            isAdmin?: boolean;
-          };
-          subscription?: string;
-        }
-
-        const userData: DecodedToken = jwtDecode(token);
-        console.log("Decoded user data:", userData);
-
+        const {  user } = await registerEmail(email);
+        
         const mappedUserData = {
-          email: userData.user?.email ?? "",
-          subscription: {
-            subscriptionId: userData.subscription || "",
-            plan: "",
-            subscriptionType: "",
-            subscribedDate: "",
-            expiryDate: "",
-          },
-          id: userData.user?.id ?? "",
-          avatar: userData.user?.avatar ?? "",
-          isAdmin: false,
-          name: "",
+          email: user.email,
+          subscription: null,
+          id: user.id,
+          avatar: user.avatar || "",
+          isAdmin: user.isAdmin,
+          name: user.name || "",
         };
         dispatch(setUser(mappedUserData));
         router.push(`/plan`);
         onClose();
       } catch (error: unknown) {
-        if (axios.isAxiosError(error)) {
-          if (
-            error.response?.status === 409 &&
-            error.response?.data?.msg ===
-              "Email is already registered with a subscription"
-          ) {
+        console.log(error);
+        if (error instanceof Error) {
+          if (error.message.includes("Email is already registered with a subscription")) {
             setEmailExists(true);
-          } else if (error.response?.status === 400) {
-            const userData = error.response.data.user;
-            console.log(error.response.data);
+          } else if (error.message.includes("Email is already registered")) {
             const mappedUserData = {
-              email: userData?.email ?? "",
+              email: email,
               subscription: null,
-              id: userData?.id ?? "",
-              avatar: userData?.avatar ?? "",
+              id: "",
+              avatar: "",
               isAdmin: false,
               name: "",
             };
@@ -93,6 +66,8 @@ export default function EmailModal({
           } else {
             alert("Registration failed. Please try again.");
           }
+        } else {
+          alert("Registration failed. Please try again.");
         }
       } finally {
         setIsLoading(false);
