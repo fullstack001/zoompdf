@@ -8,17 +8,17 @@ import { useState, useEffect, RefObject } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
-import { setEditedPdf, setFileName } from "../../store/slices/flowSlice";
+import { setFileName } from "../../store/slices/flowSlice";
 import EmailModal from "../common/EmailModal";
 import type { PDFViewerRef } from "../pdfviewer/PDFViewer";
 import { useFileContext } from "@/contexts/FileContext";
-import { 
-  uploadEditedPDF, 
-  convertPdfToPng, 
-  convertPdfToWord, 
-  convertPdfToJpg, 
-  convertPdfToExcel, 
-  convertPdfToPptx 
+import {
+  uploadEditedPDF,
+  convertPdfToPng,
+  convertPdfToWord,
+  convertPdfToJpg,
+  convertPdfToExcel,
+  convertPdfToPptx,
 } from "../../utils/apiUtils";
 import SelectFormatModal from "./SelectFormatModal";
 import ProgressModal from "./ProgressModal";
@@ -36,11 +36,11 @@ export default function Topbar({ pdfViewerRef }: TopbarProps) {
   const [showEmailModal, setShowEmailModal] = useState(false);
   const [progress, setProgress] = useState(0);
   const [selected, setSelected] = useState("PDF");
-  const [filename, setFilename] = useState(uploadedFile?.originalName || "document");
+  const [filename, setFilename] = useState(
+    uploadedFile?.originalName?.split(".")[0] || "document"
+  );
   const [email, setEmail] = useState("");
   const [saving, setSaving] = useState(false);
-
-
 
   useEffect(() => {
     if (showProgress) {
@@ -80,20 +80,21 @@ export default function Topbar({ pdfViewerRef }: TopbarProps) {
 
       // Export the PDF from PSPDFKit
       const pdfBuffer = await pdfViewerRef.current.exportPDF();
-      
+
       // Convert ArrayBuffer to Blob
       const pdfBlob = new Blob([pdfBuffer], { type: "application/pdf" });
-      
+
       if (selected === "PDF") {
         // For PDF type: Upload to server
         try {
-          const response = await uploadEditedPDF(pdfBlob, `${filename}_${Date.now()}.pdf`);
+          const pdfFile = new File([pdfBlob], `${filename}_${Date.now()}.pdf`, {
+            type: "application/pdf",
+          });
+          const response = await uploadEditedPDF(pdfFile);
           console.log("PDF uploaded successfully:", response);
-          
+
           // Save filename to global state
-          dispatch(setFileName(`${filename}_${Date.now()}.pdf`));
-      
-          
+          dispatch(setFileName(response));
         } catch (uploadError) {
           console.error("Error uploading PDF:", uploadError);
           alert("Failed to upload PDF to server. Please try again.");
@@ -103,10 +104,12 @@ export default function Topbar({ pdfViewerRef }: TopbarProps) {
         // For other types: Convert the file
         try {
           // Create a File object from the blob
-          const pdfFile = new File([pdfBlob], `${filename}.pdf`, { type: "application/pdf" });
-          
+          const pdfFile = new File([pdfBlob], `${filename}.pdf`, {
+            type: "application/pdf",
+          });
+
           let convertedFileName = "";
-          
+
           // Convert based on selected type
           switch (selected) {
             case "PNG":
@@ -127,26 +130,23 @@ export default function Topbar({ pdfViewerRef }: TopbarProps) {
             default:
               throw new Error(`Unsupported conversion type: ${selected}`);
           }
-          
+
           // Save filename to global state
           dispatch(setFileName(convertedFileName));
-          
+
           // Also save to edited PDF state for consistency
           const reader = new FileReader();
-        
-          
         } catch (conversionError) {
           console.error("Error converting file:", conversionError);
           alert(`Failed to convert PDF to ${selected}. Please try again.`);
           return;
         }
       }
-      
+
       // Close modal and show email modal
       setShowModal(false);
       setShowProgress(true);
       setProgress(0);
-
     } catch (error) {
       console.error("Error downloading PDF:", error);
       alert("Failed to download PDF. Please try again.");
@@ -167,19 +167,15 @@ export default function Topbar({ pdfViewerRef }: TopbarProps) {
               height={28}
             />
           </Link>
-          
-          
         </div>
 
         <div className="flex items-center gap-6 text-sm text-gray-700">
-          
-
           <button
             onClick={handleDoneClick}
             disabled={saving}
             className="flex items-center gap-2 border border-blue-600 text-blue-600 px-4 py-1.5 rounded-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            <CheckSquare size={16} /> 
+            <CheckSquare size={16} />
             {saving ? "Saving..." : "Done"}
           </button>
         </div>
@@ -199,10 +195,7 @@ export default function Topbar({ pdfViewerRef }: TopbarProps) {
       )}
 
       {showProgress && (
-        <ProgressModal
-          isVisible={showProgress}
-          progress={progress}
-        />
+        <ProgressModal isVisible={showProgress} progress={progress} />
       )}
 
       <EmailModal

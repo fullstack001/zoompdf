@@ -46,7 +46,7 @@ export default function PlanFeatures({ selectedPlan }: PlanFeaturesProps) {
           {featureLeft.map((feature, i) => (
             <div
               key={i}
-              className="flex justify-start items-center py-4 cursor-pointer"
+              className="flex justify-start items-center py-2 cursor-pointer"
             >
               <div>
                 <Image
@@ -66,7 +66,7 @@ export default function PlanFeatures({ selectedPlan }: PlanFeaturesProps) {
           {featureRight.map((feature, i) => (
             <div
               key={i}
-              className={`flex justify-start items-center gap-2 py-2 cursor-pointer`}
+              className={`flex justify-start items-center gap-2 py-1 cursor-pointer`}
             >
               <div>
                 <Image

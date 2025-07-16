@@ -80,25 +80,38 @@ export const loginUser = async (email: string, password: string): Promise<AuthRe
 
 export const registerEmail = async (email: string): Promise<AuthResponse> => {
   try {
-    const response: AxiosResponse<AuthResponse> = await api.post('/auth/register-email', {
-      email,
-    });
+    const response: AxiosResponse<AuthResponse> = await api.post(
+      "/auth/register-email",
+      {
+        email,
+      }
+    );
+    console.log(response.data);
     return response.data;
   } catch (error) {
     const axiosError = error as AxiosError<{ msg?: string; message?: string }>;
     const status = axiosError.response?.status;
-    
+
     if (status === 409) {
       // Email already exists with subscription
-      const errorMessage = axiosError.response?.data?.msg || axiosError.response?.data?.message || 'Email is already registered with a subscription';
+      const errorMessage =
+        axiosError.response?.data?.msg ||
+        axiosError.response?.data?.message ||
+        "Email is already registered with a subscription";
       throw new Error(errorMessage);
     } else if (status === 400) {
       // Bad request - email already exists without subscription
-      const errorMessage = axiosError.response?.data?.msg || axiosError.response?.data?.message || 'Email is already registered';
+      const errorMessage =
+        axiosError.response?.data?.msg ||
+        axiosError.response?.data?.message ||
+        "Email is already registered";
       throw new Error(errorMessage);
     } else {
       // Other errors
-      const errorMessage = axiosError.response?.data?.msg || axiosError.response?.data?.message || 'Registration failed';
+      const errorMessage =
+        axiosError.response?.data?.msg ||
+        axiosError.response?.data?.message ||
+        "Registration failed";
       throw new Error(errorMessage);
     }
   }
@@ -106,20 +119,25 @@ export const registerEmail = async (email: string): Promise<AuthResponse> => {
 
 export const forgotPassword = async (email: string): Promise<void> => {
   try {
-    await api.post('/auth/forgot-password', { email });
+    await api.post("/auth/forgot-password", { email });
   } catch (error) {
     const axiosError = error as AxiosError<{ message?: string }>;
-    const errorMessage = axiosError.response?.data?.message || 'Failed to send reset email';
+    const errorMessage =
+      axiosError.response?.data?.message || "Failed to send reset email";
     throw new Error(errorMessage);
   }
 };
 
-export const resetPassword = async (token: string, password: string): Promise<void> => {
+export const resetPassword = async (
+  token: string,
+  password: string
+): Promise<void> => {
   try {
-    await api.post('/auth/reset-password', { token, password });
+    await api.post("/auth/reset-password", { token, password });
   } catch (error) {
     const axiosError = error as AxiosError<{ message?: string }>;
-    const errorMessage = axiosError.response?.data?.message || 'Failed to reset password';
+    const errorMessage =
+      axiosError.response?.data?.message || "Failed to reset password";
     throw new Error(errorMessage);
   }
 };
@@ -128,14 +146,14 @@ export const resetPassword = async (token: string, password: string): Promise<vo
 export const getFiles = async (): Promise<any[]> => {
   try {
     const token = getAuthToken();
-    const response: AxiosResponse<any[]> = await api.get('/pdf/files', {
+    const response: AxiosResponse<any[]> = await api.get("/pdf/files", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     });
     return response.data;
   } catch (error) {
-    throw new Error('Failed to fetch files');
+    throw new Error("Failed to fetch files");
   }
 };
 
@@ -159,49 +177,54 @@ export const downloadFile = async (
       throw new Error("Failed to download file");
     }
 
+    navigate("/files"); // Use the navigation callback instead of window.location.href
     const blob = await response.blob();
     const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
+    const a = document.createElement("a");
     a.href = url;
 
     // Remove _time from the filename
-    const sanitizedFileName = fileName.replace(/_\d+/, '');
+    const sanitizedFileName = fileName.replace(/_\d+/, "");
     a.download = sanitizedFileName;
 
     document.body.appendChild(a);
     a.click();
     a.remove();
-    navigate('/files'); // Use the navigation callback instead of window.location.href
   } catch (err) {
-    console.error('Error downloading file:', err);
-    window.alert('Failed to download file.');
+    console.error("Error downloading file:", err);
+    window.alert("Failed to download file.");
   }
 };
 
 export const uploadEditedPDF = async (
-  pdfBlob: Blob,
-  filename: string,
+  pdfFile: File,
   onProgress?: (progress: number) => void
 ): Promise<any> => {
   try {
     const formData = new FormData();
-    formData.append('files', pdfBlob, `${filename}.pdf`);
+    formData.append("pdf", pdfFile);
 
-    const response: AxiosResponse<any> = await api.post('/pdf/pdf_upload', formData, {
-      headers: {
-        'Content-Type': 'multipart/form-data',
-      },
-      onUploadProgress: (progressEvent) => {
-        if (onProgress && progressEvent.total) {
-          const progress = Math.round((progressEvent.loaded * 100) / progressEvent.total);
-          onProgress(progress);
-        }
-      },
-    });
+    const response: AxiosResponse<any> = await api.post(
+      "/pdf/pdf_upload",
+      formData,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+        onUploadProgress: (progressEvent) => {
+          if (onProgress && progressEvent.total) {
+            const progress = Math.round(
+              (progressEvent.loaded * 100) / progressEvent.total
+            );
+            onProgress(progress);
+          }
+        },
+      }
+    );
 
     return response.data;
   } catch (error) {
-    console.error('Error uploading edited PDF:', error);
+    console.error("Error uploading edited PDF:", error);
     throw error;
   }
 };

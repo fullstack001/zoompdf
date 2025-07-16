@@ -8,26 +8,24 @@ export default function PaymentPreview() {
       {/* Banner */}
       <div className="bg-[#FFE3BB] flex items-center justify-center text-sm  py-2">
         <div className="mr-2 rounded-full bg-red-600 text-white p-1">
-        <Check size={12}  /> 
+          <Check size={12} />
         </div>
         Your document is ready!
       </div>
 
-    <div className="bg-[#DBE1FF] px-6 py-6 relative">
-      <div className="absolute top-8 left-8 z-10 bg-red-600 text-white text-lg px-5 py-1 rounded font-bold shadow">
-        PDF
+      <div className="bg-[#DBE1FF] px-24 py-6 relative">
+        <div className="absolute top-8 left-8 z-10 bg-red-600 text-white text-lg px-5 py-1 rounded font-bold shadow">
+          PDF
+        </div>
+        <Image
+          src="/assets/images/sample-pdf.png"
+          alt="Document Preview"
+          layout="responsive"
+          width={100}
+          height={100}
+          className="mx-auto w-[40%] rounded-lg shadow-sm"
+        />
       </div>
-      <Image
-        src="/assets/images/sample-pdf.png"
-        alt="Document Preview"
-        layout="responsive"
-        width={20}
-        height={20}
-        className="mx-auto rounded-lg shadow-sm"
-      />
-    </div>
-
-     
     </div>
   );
 }

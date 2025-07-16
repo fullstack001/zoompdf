@@ -145,10 +145,10 @@ function CheckoutForm({
 
   return (
     <div className="grid gap-4 m-auto">
-      <div className="mb-4">
-        <label className="block mb-2 text-sm font-semibold text-gray-800">
+      <div className="mb-2">
+        {/* <label className="block mb-2 text-sm font-semibold text-gray-800">
           Card number
-        </label>
+        </label> */}
         <div className="w-full p-3 border border-gray-300 rounded-md text-lg">
           <CardNumberElement options={cardElementOptions} />
         </div>
@@ -156,31 +156,31 @@ function CheckoutForm({
           <div className="text-red-500 mt-1 text-sm">{cardError}</div>
         )}
       </div>
-      <div className="flex justify-between gap-4 mb-4">
+      <div className="flex justify-between gap-4 mb-2">
         <div className="flex-1">
-          <label className="block mb-2 text-sm font-semibold text-gray-800">
+          {/* <label className="block mb-2 text-sm font-semibold text-gray-800">
             Expiration date
-          </label>
+          </label> */}
           <div className="w-full p-3 border border-gray-300 rounded-md text-lg">
             <CardExpiryElement options={cardElementOptions} />
           </div>
         </div>
         <div className="flex-1">
-          <label className="block mb-2 text-sm font-semibold text-gray-800">
+          {/* <label className="block mb-2 text-sm font-semibold text-gray-800">
             CVC
-          </label>
+          </label> */}
           <div className="w-full p-3 border border-gray-300 rounded-md text-lg">
             <CardCvcElement options={cardElementOptions} />
           </div>
         </div>
       </div>
-      <div className="mb-4">
-        <label
+      <div className="mb-2">
+        {/* <label
           className="block mb-2 text-sm font-semibold text-gray-800"
           htmlFor="name"
         >
           Card Holder Name
-        </label>
+        </label> */}
         <input
           type="text"
           placeholder="Name"

@@ -178,7 +178,10 @@ export default function Navbar() {
                       <SettingsIcon size={16} /> Settings
                     </li>
                     <li
-                      onClick={() => dispatch(logout())}
+                      onClick={() => {
+                        dispatch(logout());
+                        router.push("/");
+                      }}
                       className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
                     >
                       <XIcon size={16} /> Log Out

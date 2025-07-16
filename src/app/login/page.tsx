@@ -48,29 +48,11 @@ export default function Login() {
       localStorage.setItem("authToken", token);
       if (subscription && new Date(subscription.expiryDate) > new Date()) {
         // Check for edited PDF data first
-        if (flow.editedPdfData && flow.editedPdfFileName && flow.editedPdfConverter) {
-          try {
-            if (flow.editedPdfConverter.toLowerCase() === "pdf" && flow.editedPdfData) {
-              // For PDF format, use the saved PDF download function
-              downloadSavedPdf(flow.editedPdfData, flow.editedPdfFileName);
-            } else {
-              // For other formats, use the API download function
-              const action = `pdf_to_${flow.editedPdfConverter.toLowerCase()}`;
-              await downloadFile(flow.editedPdfFileName, action, token, router.push);
-            }
-          } catch (err) {
-            console.error("Error downloading edited PDF:", err);
-            window.alert("Failed to download edited PDF.");
-          }
-        } else if (flow.fileName && flow.action) {
+        if (flow.fileName && flow.action) {
           // Fallback to regular conversion flow
           try {
-            await downloadFile(
-              flow.fileName,
-              flow.action,
-              token,
-              router.push
-            );
+            downloadFile(flow.fileName, flow.action, token, router.push);
+            router.push(`/files`);
           } catch (err) {
             console.error("Error downloading file:", err);
             window.alert("Failed to download file.");

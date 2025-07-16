@@ -42,7 +42,7 @@ export default function PaymentFeatures({
   return (
     <div className="bg-white rounded-xl p-4 shadow text-sm">
       {featureLeft.map((feature, i) => (
-        <div key={i} className="flex justify-start gap-2 cursor-pointer mb-4">
+        <div key={i} className="flex justify-start gap-2 cursor-pointer ">
           <div className="w-[40px]">
             <Image
               src={feature.icon}
@@ -81,7 +81,7 @@ export default function PaymentFeatures({
               </div>
 
               <div
-                className={`font-light text-[18px] ${
+                className={`font-light text-[16px] ${
                   selectedPlan === "7_free" ? "opacity-30 line-through" : ""
                 }`}
               >

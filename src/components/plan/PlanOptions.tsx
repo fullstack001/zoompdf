@@ -21,7 +21,7 @@ export default function PlanOptions({
   setSelectedOption,
 }: PlanOptionsProps) {
   return (
-    <div className="flex-1 space-y-4 max-w-full  md:max-w-[780px] mb-8">
+    <div className="flex-1 space-y-4 w-full mb-6 md:mb-8">
       {plans.map((plan) => (
         <div
           key={plan.title}
@@ -33,21 +33,21 @@ export default function PlanOptions({
           }`}
         >
           {plan.popular && (
-            <div className="bg-primary-900 text-white text-[14px] md:text-[16px] px-4 py-2 font-semibold flex justify-center gap-4 z-10 text-center">
-              <Star size={14} className="fill-white mt-1" /> MOST POPULAR{" "}
-              <Star size={14} className="fill-white mt-1" />
+            <div className="bg-primary-900 text-white text-sm md:text-base px-3 md:px-4 py-2 font-semibold flex justify-center gap-2 md:gap-4 z-10 text-center">
+              <Star size={12} className="fill-white mt-1" /> MOST POPULAR{" "}
+              <Star size={12} className="fill-white mt-1" />
             </div>
           )}
-          <div className="flex flex-col md:flex-row justify-between items-center m-4 md:m-4">
-            <div>
-              <p className="font-semibold text-[20px] md:text-[24px] ">
+          <div className="flex sm:flex-row justify-between items-start sm:items-center p-3 md:p-4 gap-3 sm:gap-0">
+            <div className="flex-1">
+              <p className="font-semibold text-lg md:text-xl lg:text-2xl mb-1  text-gray-800">
                 {plan.title}
               </p>
-              <p className="text-xs md:text-sm text-gray-800 font-semibold">
+              {/* <p className="text-xs md:text-sm text-gray-800 font-semibold">
                 For occasional users
-              </p>
+              </p> */}
             </div>
-            <p className="font-bold text-[28px] md:text-[32px] text-gray-800">
+            <p className="font-semibold text-lg md:text-xl lg:text-2xl text-gray-800">
               {plan.price}
             </p>
           </div>

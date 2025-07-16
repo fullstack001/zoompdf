@@ -28,8 +28,8 @@ export default function PaymentPage() {
     <div className="bg-[#EDF0FF] min-h-screen">
       <Navbar />
 
-      <main className="max-w-6xl mx-auto px-4 py-12 space-y-10">
-        <h1 className="text-2xl md:text-2xl font-semibold mb-4">
+      <main className="max-w-6xl mx-auto px-4 py-6 space-y-6">
+        <h1 className="text-2xl md:text-4xl font-semibold mb-2 text-gray-800">
           Payment details
         </h1>
         <div className="flex flex-col lg:flex-row gap-10">
