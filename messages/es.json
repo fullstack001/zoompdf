@@ -125,6 +125,10 @@
       "title": "Compresor de PDF",
       "subtitle": "Ya hemos comprimido 775,000 archivos — déjanos ayudarte con el tuyo"
     },
+    "mergePdf": {
+      "title": "Combinar Archivos PDF",
+      "subtitle": "Combina múltiples archivos PDF en uno. ¡Sube tus archivos para comenzar!"
+    },
     "pdfToWord": {
       "title": "Convertidor de PDF a Word",
       "subtitle": "Hemos ayudado a convertir 775,000 archivos — déjanos ayudarte con el tuyo"
@@ -190,8 +194,20 @@
     "createPdfForm": "Crear formulario PDF",
     "disclaimer": "Descargo de responsabilidad",
     "privacyPolicy": "Política de privacidad",
+    "termsOfService": "Términos de servicio",
     "sitemap": "Mapa del sitio",
-    "allRightsReserved": "© 2025 PDFDEN Todos los derechos reservados."
+    "allRightsReserved": "© 2025 PDFDEN Todos los derechos reservados.",
+    "companyDescription": "Tu solución todo en uno para PDFs: convertir, editar y gestionar documentos con facilidad y seguridad.",
+    "stayUpdated": "Mantente Actualizado",
+    "newsletterDescription": "Recibe las últimas actualizaciones y consejos sobre PDF en tu bandeja de entrada.",
+    "emailPlaceholder": "Ingresa tu email",
+    "subscribe": "Suscribirse",
+    "followUs": "Síguenos",
+    "language": "Idioma",
+    "selectLanguage": "Selecciona tu idioma",
+    "email": "Email",
+    "phone": "Teléfono",
+    "address": "Dirección"
   },
   "auth": {
     "email": "Correo electrónico",
@@ -367,5 +383,13 @@
     "passwordsDoNotMatch": "Las contraseñas no coinciden",
     "resetSuccessful": "¡Contraseña restablecida exitosamente!",
     "resetFailed": "Error al restablecer la contraseña. Por favor, inténtalo de nuevo."
+  },
+  "mergePdf": {
+    "actionButton": "COMBINAR ARCHIVOS",
+    "minFilesError": "Por favor selecciona al menos 2 archivos para combinar",
+    "dropText": "Suelta archivos PDF aquí",
+    "uploadText": "Sube Tus Archivos",
+    "processingFiles": "Procesando Archivos...",
+    "mergingFiles": "Combinando PDFs..."
   }
 }

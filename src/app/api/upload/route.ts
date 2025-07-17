@@ -20,7 +20,16 @@ export async function POST(request: NextRequest) {
     // Ensure uploads directory exists
     const uploadsDir = join(process.cwd(), 'public', 'uploads');
     if (!existsSync(uploadsDir)) {
-      mkdirSync(uploadsDir, { recursive: true });
+      try {
+        mkdirSync(uploadsDir, { recursive: true });
+        console.log("Created uploads directory:", uploadsDir);
+      } catch (dirError) {
+        console.error("Failed to create uploads directory:", dirError);
+        return NextResponse.json(
+          { error: "Failed to create uploads directory" },
+          { status: 500 }
+        );
+      }
     }
 
     // Convert file to buffer
@@ -29,9 +38,22 @@ export async function POST(request: NextRequest) {
 
     // Save file to uploads directory
     const filePath = join(uploadsDir, fileName);
-    await writeFile(filePath, buffer);
 
-    console.log(`File uploaded successfully: ${fileName} to ${filePath}`);
+    try {
+      await writeFile(filePath, buffer);
+      console.log(`File uploaded successfully: ${fileName} to ${filePath}`);
+
+      // Verify file was written successfully
+      if (!existsSync(filePath)) {
+        throw new Error("File was not written to disk");
+      }
+    } catch (writeError) {
+      console.error("Failed to write file:", writeError);
+      return NextResponse.json(
+        { error: "Failed to save file to disk" },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json({
       success: true,

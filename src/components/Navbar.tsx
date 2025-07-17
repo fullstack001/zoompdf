@@ -13,7 +13,6 @@ import {
   SquarePen,
   SlidersHorizontal,
   SettingsIcon,
-  Globe,
 } from "lucide-react";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
@@ -21,20 +20,18 @@ import { RootState } from "../store/store";
 import { logout } from "../store/slices/authSlice";
 import { useTranslations } from "next-intl";
 import { useLocalizedNavigation } from "../utils/navigation";
-import { locales } from "../i18n/config";
 
 export default function Navbar() {
   const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [userDropdownOpen, setUserDropdownOpen] = useState(false);
-  const [languageDropdownOpen, setLanguageDropdownOpen] = useState(false);
 
   const dispatch = useDispatch();
   const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
   const user = useSelector((state: RootState) => state.user);
   const t = useTranslations();
-  const { navigate, switchLocale, currentLocale } = useLocalizedNavigation();
+  const { navigate } = useLocalizedNavigation();
 
   const toggleMobile = () => setMobileOpen(!mobileOpen);
   const toggleDropdown = (label: string) =>
@@ -114,43 +111,8 @@ export default function Navbar() {
           </Dropdown>
         </nav>
 
-        {/* Desktop Log in and Language Switcher */}
+        {/* Desktop Log in */}
         <div className="relative hidden xl:flex items-center gap-4">
-          {/* Language Switcher */}
-          <div className="relative">
-            <button
-              onClick={() => setLanguageDropdownOpen(!languageDropdownOpen)}
-              className="flex items-center gap-2 px-3 py-2 text-sm text-gray-700 hover:text-blue-600 rounded-lg hover:bg-gray-100"
-            >
-              <Globe size={16} />
-              <span className="uppercase">{currentLocale}</span>
-              <ChevronDownIcon size={14} />
-            </button>
-            {languageDropdownOpen && (
-              <div
-                className="absolute top-full right-0 mt-2 w-32 bg-white shadow-xl rounded-xl p-2 z-50"
-                onMouseLeave={() => setLanguageDropdownOpen(false)}
-              >
-                {locales.map((locale) => (
-                  <button
-                    key={locale}
-                    onClick={() => {
-                      switchLocale(locale);
-                      setLanguageDropdownOpen(false);
-                    }}
-                    className={`w-full text-left px-3 py-2 text-sm rounded-lg hover:bg-gray-100 ${
-                      locale === currentLocale
-                        ? "bg-blue-50 text-blue-600"
-                        : "text-gray-700"
-                    }`}
-                  >
-                    {t(`languages.${locale}`)}
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-
           {isLoggedIn ? (
             <>
               <button
@@ -285,30 +247,6 @@ export default function Navbar() {
                 open={openDropdown === t("navigation.forms")}
                 onToggle={() => toggleDropdown(t("navigation.forms"))}
               />
-              {/* Language Switcher for Mobile */}
-              <div className="mb-4">
-                <p className="text-sm font-semibold text-gray-800 mb-2">
-                  {t("navigation.language")}
-                </p>
-                <div className="grid grid-cols-2 gap-2">
-                  {locales.map((locale) => (
-                    <button
-                      key={locale}
-                      onClick={() => {
-                        switchLocale(locale);
-                        setMobileOpen(false);
-                      }}
-                      className={`px-3 py-2 text-sm rounded-lg border ${
-                        locale === currentLocale
-                          ? "bg-blue-50 text-blue-600 border-blue-200"
-                          : "bg-white text-gray-700 border-gray-200 hover:bg-gray-50"
-                      }`}
-                    >
-                      {t(`languages.${locale}`)}
-                    </button>
-                  ))}
-                </div>
-              </div>
 
               <hr className="my-4" />
               {isLoggedIn ? (

@@ -55,13 +55,13 @@ const getAuthToken = (): string | null => {
 };
 
 // Helper function to get auth headers
-const getAuthHeaders = (): Record<string, string> => {
-  const token = getAuthToken();
-  return {
-    'Content-Type': 'application/json',
-    ...(token && { Authorization: `Bearer ${token}` }),
-  };
-};
+// const getAuthHeaders = (): Record<string, string> => {
+//   const token = getAuthToken();
+//   return {
+//     'Content-Type': 'application/json',
+//     ...(token && { Authorization: `Bearer ${token}` }),
+//   };
+// };
 
 // Authentication API functions
 export const loginUser = async (email: string, password: string): Promise<AuthResponse> => {
@@ -147,7 +147,7 @@ export const getFiles = async (): Promise<any[]> => {
     });
     return response.data;
   } catch (error) {
-    throw new Error("Failed to fetch files");
+    throw new Error("Failed to fetch files", { cause: error });
   }
 };
 
@@ -255,7 +255,7 @@ export const convertFile = async (
 
     return response.data;
   } catch (error) {
-    throw new Error("File conversion failed");
+    throw new Error("File conversion failed", { cause: error });
   }
 };
 
@@ -317,7 +317,7 @@ export const addSubscription = async (subscriptionData: SubscriptionData): Promi
     const response: AxiosResponse<AuthResponse> = await api.post('/subscription/add-subscription', subscriptionData);
     return response.data;
   } catch (error) {
-    throw new Error('Failed to add subscription');
+    throw new Error('Failed to add subscription', { cause: error });
   }
 };
 
@@ -326,7 +326,7 @@ export const createCheckoutSession = async (priceId: string): Promise<{ url: str
     const response: AxiosResponse<{ url: string }> = await api.post('/create-checkout-session', { priceId });
     return response.data;
   } catch (error) {
-    throw new Error('Failed to create checkout session');
+    throw new Error('Failed to create checkout session', { cause: error });
   }
 };
 
@@ -334,7 +334,7 @@ export const cancelSubscription = async (subscriptionId: string, email: string):
   try {
     await api.post('/subscription/cancel-subscription', { subscriptionId, email });
   } catch (error) {
-    throw new Error('Failed to cancel subscription');
+    throw new Error('Failed to cancel subscription', { cause: error });
   }
 };
 
@@ -356,7 +356,7 @@ export const createStripeSubscription = async (
     );
     return response.data;
   } catch (error) {
-    throw new Error('Failed to create stripe subscription');
+    throw new Error('Failed to create stripe subscription', { cause: error });
   }
 };
 

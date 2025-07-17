@@ -30,6 +30,12 @@ export const toolPages: Record<string, ToolPageConfig> = {
     action: "compress_pdf",
     route: "/compress-pdf",
   },
+  "merge-pdf": {
+    titleKey: "toolPages.mergePdf.title",
+    subtitleKey: "toolPages.mergePdf.subtitle",
+    action: "merge_pdf",
+    route: "/merge-pdf",
+  },
 };
 
 export const getToolPageConfig = (toolKey: string): ToolPageConfig | null => {

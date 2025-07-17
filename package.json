@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev -p 3066",
     "build": "next build",
+    "postbuild": "node scripts/create-uploads-dir.js",
     "start": "next start -p 3065",
     "lint": "next lint"
   },
@@ -19,6 +20,7 @@
     "lucide-react": "^0.511.0",
     "next": "15.1.8",
     "next-intl": "^4.3.4",
+    "pdf-lib": "^1.17.1",
     "pspdfkit": "^2024.8.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

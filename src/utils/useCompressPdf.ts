@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { setAction, setFileName } from "../store/slices/flowSlice";
 import { RootState } from "../store/store";
@@ -9,7 +8,6 @@ import { useLocalizedNavigation } from "./navigation";
 
 export const useCompressPdf = () => {
   const dispatch = useDispatch();
-  const router = useRouter();
   const { navigate } = useLocalizedNavigation();
   const [uploading, setUploading] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -76,7 +74,8 @@ export const useCompressPdf = () => {
           token
         ) {
           try {
-            await downloadFile(fileName, "compress_pdf", token, router.push);
+            navigate(`/files`);
+            await downloadFile(fileName, "compress_pdf", token);
           } catch (err) {
             console.error("Error downloading file:", err);
             window.alert("Failed to download file.");

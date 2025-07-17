@@ -125,6 +125,10 @@
       "title": "PDF Komprimerare",
       "subtitle": "Vi har redan komprimerat 775 000 filer — låt oss hjälpa dig med din"
     },
+    "mergePdf": {
+      "title": "Slå samman PDF-filer",
+      "subtitle": "Kombinera flera PDF-filer till en. Ladda upp dina filer för att komma igång!"
+    },
     "pdfToWord": {
       "title": "PDF till Word Konverterare",
       "subtitle": "Vi har hjälpt till att konvertera 775 000 filer — låt oss hjälpa dig med din"
@@ -190,8 +194,20 @@
     "createPdfForm": "Skapa PDF-formulär",
     "disclaimer": "Ansvarsfriskrivning",
     "privacyPolicy": "Integritetspolicy",
+    "termsOfService": "Användarvillkor",
     "sitemap": "Webbplatskarta",
-    "allRightsReserved": "© 2025 PDFDEN Alla rättigheter förbehållna."
+    "allRightsReserved": "© 2025 PDFDEN Alla rättigheter förbehållna.",
+    "companyDescription": "Din allt-i-ett PDF-lösning för att konvertera, redigera och hantera dokument med lätthet och säkerhet.",
+    "stayUpdated": "Håll dig Uppdaterad",
+    "newsletterDescription": "Få de senaste uppdateringarna och PDF-tipsen levererade till din inkorg.",
+    "emailPlaceholder": "Ange din e-post",
+    "subscribe": "Prenumerera",
+    "followUs": "Följ oss",
+    "language": "Språk",
+    "selectLanguage": "Välj ditt språk",
+    "email": "E-post",
+    "phone": "Telefon",
+    "address": "Adress"
   },
   "auth": {
     "email": "E-post",
@@ -367,5 +383,13 @@
     "passwordsDoNotMatch": "Lösenorden matchar inte",
     "resetSuccessful": "Lösenord återställt framgångsrikt!",
     "resetFailed": "Lösenordsåterställning misslyckades. Vänligen försök igen."
+  },
+  "mergePdf": {
+    "actionButton": "SLÅS SAMMAN FILER",
+    "minFilesError": "Välj minst 2 filer att slås samman",
+    "dropText": "Släpp PDF-filer här",
+    "uploadText": "Ladda upp dina filer",
+    "processingFiles": "Bearbetar filer...",
+    "mergingFiles": "Slår samman PDFs..."
   }
 }

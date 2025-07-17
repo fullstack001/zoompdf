@@ -45,6 +45,12 @@ class FileUploadManager {
             const responseData = JSON.parse(xhr.responseText);
             console.log('Upload response:', responseData);
 
+            if (!responseData.success) {
+              console.error('Server reported upload failure:', responseData);
+              reject(new Error(responseData.error || 'Upload failed on server'));
+              return;
+            }
+
             const uploadedFile: UploadedFile = {
               id: fileId,
               originalName: file.name,
@@ -59,12 +65,16 @@ class FileUploadManager {
             console.log('File uploaded successfully:', uploadedFile);
             resolve(uploadedFile);
           } catch (error) {
-            console.error('Error parsing response:', error);
+            console.error('Error parsing response:', error, 'Response text:', xhr.responseText);
             reject(new Error('Failed to parse upload response'));
           }
         } else {
           console.error('Upload response not ok:', xhr.status, xhr.responseText);
-          reject(new Error(`Failed to upload file: ${xhr.status}`));
+          reject(
+            new Error(
+              `Failed to upload file: ${xhr.status} - ${xhr.responseText}`
+            )
+          );
         }
       });
 

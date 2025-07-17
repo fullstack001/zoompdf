@@ -12,11 +12,12 @@ export interface PDFViewerRef {
 }
 
 interface PDFViewerProps {
-  document: string;
+  document?: string;
+  documents?: string[];
 }
 
 const PDFViewer = forwardRef<PDFViewerRef, PDFViewerProps>(
-  ({ document }, ref) => {
+  ({ document, documents }, ref) => {
     const containerRef = useRef<HTMLDivElement | null>(null);
     const instanceRef = useRef<Instance | null>(null);
 
@@ -42,13 +43,28 @@ const PDFViewer = forwardRef<PDFViewerRef, PDFViewerProps>(
           PSPDFKit.unload(containerRef.current);
         }
 
+        // Determine which document(s) to load
+        const primaryDocument = document || (documents && documents[0]);
+        if (!primaryDocument) {
+          console.error("No document provided to PDFViewer");
+          return;
+        }
+
         await PSPDFKit.load({
           container: containerRef.current as HTMLDivElement,
-          document: document,
+          document: primaryDocument,
           baseUrl: `${window.location.origin}/pspdfkit-lib/`,
         }).then((inst) => {
           instance = inst;
           instanceRef.current = inst;
+
+          // Log info about multiple documents for future merge functionality
+          if (documents && documents.length > 1) {
+            console.log(
+              `Loaded ${documents.length} documents for merging:`,
+              documents
+            );
+          }
         });
       })();
 
@@ -63,7 +79,7 @@ const PDFViewer = forwardRef<PDFViewerRef, PDFViewerProps>(
           }
         })();
       };
-    }, [document]);
+    }, [document, documents]);
 
     return (
       <div className="w-full h-full">

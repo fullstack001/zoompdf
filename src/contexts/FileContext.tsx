@@ -12,6 +12,11 @@ interface FileContextType {
   isLoading: boolean;
   progress: number;
   setNavigatingToEditor: (navigating: boolean) => void;
+  // Multiple files support for merge operations
+  uploadedFiles: UploadedFile[];
+  setUploadedFiles: (files: UploadedFile[]) => void;
+  uploadMultipleFiles: (files: File[]) => Promise<UploadedFile[]>;
+  clearFiles: () => void;
 }
 
 const FileContext = createContext<FileContextType | undefined>(undefined);
@@ -30,6 +35,7 @@ interface FileProviderProps {
 
 export const FileProvider: React.FC<FileProviderProps> = ({ children }) => {
   const [uploadedFile, setUploadedFile] = useState<UploadedFile | null>(null);
+  const [uploadedFiles, setUploadedFiles] = useState<UploadedFile[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [progress, setProgress] = useState(0);
   const [isNavigatingToEditor, setIsNavigatingToEditor] = useState(false);
@@ -65,6 +71,42 @@ export const FileProvider: React.FC<FileProviderProps> = ({ children }) => {
     }
   };
 
+  const uploadMultipleFiles = async (
+    files: File[]
+  ): Promise<UploadedFile[]> => {
+    setIsLoading(true);
+    setProgress(0);
+
+    try {
+      const uploadPromises = files.map((file, index) =>
+        fileUploadManager.uploadFile(file, (progressPercent) => {
+          // Calculate overall progress across all files
+          const overallProgress =
+            (index * 100 + progressPercent) / files.length;
+          setProgress(overallProgress);
+        })
+      );
+
+      const uploadedFiles = await Promise.all(uploadPromises);
+      setUploadedFiles(uploadedFiles);
+      setProgress(100);
+      return uploadedFiles;
+    } catch (error) {
+      console.error("Multiple files upload error:", error);
+      setProgress(0);
+      throw error;
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const clearFiles = () => {
+    uploadedFiles.forEach((file) => {
+      fileUploadManager.deleteFile(file.id);
+    });
+    setUploadedFiles([]);
+  };
+
   // Cleanup files when navigating away from editor - only if we're not going to editor
   useEffect(() => {
     // Don't cleanup if we're on editor page or if we just uploaded a file and are about to go to editor
@@ -93,6 +135,10 @@ export const FileProvider: React.FC<FileProviderProps> = ({ children }) => {
     isLoading,
     progress,
     setNavigatingToEditor: setIsNavigatingToEditor,
+    uploadedFiles,
+    setUploadedFiles,
+    uploadMultipleFiles,
+    clearFiles,
   };
 
   return <FileContext.Provider value={value}>{children}</FileContext.Provider>;

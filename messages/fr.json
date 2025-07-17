@@ -125,6 +125,10 @@
       "title": "Compresseur PDF",
       "subtitle": "Nous avons déjà compressé 775 000 fichiers — laissez-nous vous aider avec le vôtre"
     },
+    "mergePdf": {
+      "title": "Fusionner des Fichiers PDF",
+      "subtitle": "Combinez plusieurs fichiers PDF en un seul. Téléchargez vos fichiers pour commencer !"
+    },
     "pdfToWord": {
       "title": "Convertisseur PDF vers Word",
       "subtitle": "Nous avons aidé à convertir 775 000 fichiers — laissez-nous vous aider avec le vôtre"
@@ -190,8 +194,20 @@
     "createPdfForm": "Créer un formulaire PDF",
     "disclaimer": "Avertissement",
     "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions d'utilisation",
     "sitemap": "Plan du site",
-    "allRightsReserved": "© 2025 PDFDEN Tous droits réservés."
+    "allRightsReserved": "© 2025 PDFDEN Tous droits réservés.",
+    "companyDescription": "Votre solution PDF tout-en-un pour convertir, modifier et gérer des documents en toute simplicité et sécurité.",
+    "stayUpdated": "Restez Informé",
+    "newsletterDescription": "Recevez les dernières mises à jour et conseils PDF dans votre boîte de réception.",
+    "emailPlaceholder": "Entrez votre email",
+    "subscribe": "S'abonner",
+    "followUs": "Suivez-nous",
+    "language": "Langue",
+    "selectLanguage": "Sélectionnez votre langue",
+    "email": "Email",
+    "phone": "Téléphone",
+    "address": "Adresse"
   },
   "auth": {
     "email": "Email",
@@ -367,5 +383,13 @@
     "passwordsDoNotMatch": "Les mots de passe ne correspondent pas",
     "resetSuccessful": "Mot de passe réinitialisé avec succès !",
     "resetFailed": "Échec de la réinitialisation du mot de passe. Veuillez réessayer."
+  },
+  "mergePdf": {
+    "actionButton": "FUSIONNER LES FICHIERS",
+    "minFilesError": "Veuillez sélectionner au moins 2 fichiers à fusionner",
+    "dropText": "Déposer les fichiers PDF ici",
+    "uploadText": "Téléchargez Vos Fichiers",
+    "processingFiles": "Traitement des Fichiers...",
+    "mergingFiles": "Fusion des PDFs..."
   }
 }

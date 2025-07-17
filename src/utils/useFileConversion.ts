@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { setAction, setFileName } from "../store/slices/flowSlice";
 import { RootState } from "../store/store";
@@ -14,7 +13,6 @@ interface ConversionConfig {
 
 export const useFileConversion = (config: ConversionConfig) => {
   const dispatch = useDispatch();
-  const router = useRouter();
   const { navigate } = useLocalizedNavigation();
   const [uploading, setUploading] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -98,4 +96,4 @@ export const useFileConversion = (config: ConversionConfig) => {
     handleFileChange,
     acceptType: config.acceptType,
   };
-}; 
+};

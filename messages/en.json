@@ -125,6 +125,10 @@
       "title": "PDF Compressor",
       "subtitle": "We've already compressed 775,000 files — let us help with yours"
     },
+    "mergePdf": {
+      "title": "Merge PDF Files",
+      "subtitle": "Combine multiple PDF files into one. Upload your files to get started!"
+    },
     "pdfToWord": {
       "title": "PDF to Word Converter",
       "subtitle": "We've helped convert 775,000 files — let us help with yours"
@@ -190,8 +194,20 @@
     "createPdfForm": "Create PDF Form",
     "disclaimer": "Disclaimer",
     "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
     "sitemap": "Sitemap",
-    "allRightsReserved": "© 2025 PDFDEN All rights reserved."
+    "allRightsReserved": "© 2025 PDFDEN All rights reserved.",
+    "companyDescription": "Your all-in-one PDF solution for converting, editing, and managing documents with ease and security.",
+    "stayUpdated": "Stay Updated",
+    "newsletterDescription": "Get the latest updates and PDF tips delivered to your inbox.",
+    "emailPlaceholder": "Enter your email",
+    "subscribe": "Subscribe",
+    "followUs": "Follow Us",
+    "language": "Language",
+    "selectLanguage": "Select your language",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address"
   },
   "auth": {
     "email": "Email",
@@ -367,5 +383,13 @@
     "passwordsDoNotMatch": "Passwords do not match",
     "resetSuccessful": "Password reset successfully!",
     "resetFailed": "Password reset failed. Please try again."
+  },
+  "mergePdf": {
+    "actionButton": "MERGE FILES",
+    "minFilesError": "Please select at least 2 files to merge",
+    "dropText": "Drop PDF files here",
+    "uploadText": "Upload Your Files",
+    "processingFiles": "Processing Files...",
+    "mergingFiles": "Merging PDFs..."
   }
 }
