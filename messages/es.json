@@ -60,7 +60,12 @@
     "processingFile": "Estamos procesando tu archivo",
     "configNotFound": "Configuración no encontrada para la página de inicio.",
     "uploadFailed": "Error al subir el archivo. Por favor, inténtalo de nuevo.",
-    "chooseBestTool": "Elige la mejor herramienta para las necesidades de tu negocio"
+    "chooseBestTool": "Elige la mejor herramienta para las necesidades de tu negocio",
+    "done": "Hecho",
+    "split": "Dividir",
+    "saving": "Guardando...",
+    "signing": "Firmando...",
+    "splitting": "Dividiendo..."
   },
   "errors": {
     "oops": "¡Vaya!",
@@ -197,6 +202,170 @@
     "signIn": "Iniciar sesión",
     "signUp": "Registrarse",
     "alreadyHaveAccount": "¿Ya tienes una cuenta?",
-    "dontHaveAccount": "¿No tienes una cuenta?"
+    "dontHaveAccount": "¿No tienes una cuenta?",
+    "login": "Iniciar sesión",
+    "emailAddress": "Dirección de correo electrónico",
+    "enterEmailAddress": "Ingresa tu dirección de correo electrónico",
+    "emailAlreadyRegistered": "Este correo electrónico ya está registrado. Por favor",
+    "logIn": "inicia sesión"
+  },
+  "account": {
+    "membership": "Membresía",
+    "noSubscription": "No tienes una suscripción.",
+    "unlockAllTools": "¡Desbloquea todas las herramientas PDF!",
+    "fullAccess": "Obtén acceso completo a nuestras funciones avanzadas de edición y conversión.",
+    "subscribeNow": "Suscríbete ahora para optimizar tus tareas de documentos",
+    "subscribe": "Suscribirse",
+    "account": "Cuenta",
+    "betterExperience": "Ten una mejor experiencia en PDF House manteniendo tu información actualizada.",
+    "importantUpdates": "Recibirás actualizaciones importantes del producto y notificaciones esenciales de la cuenta, incluyendo recibos de pago.",
+    "paymentMethod": "Método de pago",
+    "saveTime": "Ahorra tiempo manteniendo una tarjeta de crédito actual en archivo.",
+    "cardNumber": "Número de tarjeta",
+    "notSpecified": "No especificado"
+  },
+  "plan": {
+    "choosePlan": "Elige un plan para descargar tu archivo",
+    "continue": "Continuar",
+    "annualPlan": "Plan anual",
+    "getStarted": "Comenzar",
+    "mostPopular": "Más popular"
+  },
+  "whyUs": {
+    "title": "Por qué TheBestPDF es la mejor opción para tu equipo",
+    "openness": "Apertura",
+    "opennessDesc": "Buscando asociaciones a largo plazo, aseguramos disponibilidad 24/7 para soporte al cliente.",
+    "expertise": "Experiencia",
+    "expertiseDesc": "Unimos mentes creativas para ofrecer soluciones integradas que cubren tus desafíos comerciales.",
+    "growth": "Crecimiento",
+    "growthDesc": "Empoderamos organizaciones manteniéndonos al día con los últimos avances tecnológicos, buscando la excelencia en nuestro campo.",
+    "diversity": "Diversidad",
+    "diversityDesc": "Salud, Legal, Finanzas, Educación — cualquiera que sea tu industria, nuestra herramienta puede optimizar tus flujos de trabajo."
+  },
+  "coreValues": {
+    "title": "Valores fundamentales detrás de TheBestPDF"
+  },
+  "compression": {
+    "compressFile": "Comprimir archivo",
+    "high": "ALTO",
+    "highDesc": "Calidad estándar, tamaño más pequeño",
+    "highReduction": "~40% más pequeño",
+    "basic": "BÁSICO",
+    "basicDesc": "Mejor calidad, tamaño medio",
+    "basicReduction": "~20% más pequeño",
+    "low": "BAJO",
+    "lowDesc": "Calidad más alta, tamaño más grande",
+    "lowReduction": "~10% más pequeño",
+    "compressionLevel": "Nivel de compresión",
+    "selectLevel": "Selecciona tu nivel de compresión y comprime el archivo.",
+    "compress": "Comprimir"
+  },
+  "email": {
+    "enterEmail": "Ingresa tu dirección de correo electrónico",
+    "downloadLink": "El enlace de descarga será enviado a tu correo electrónico",
+    "getStarted": "Comenzar"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "multipleUsers": "¿Pueden múltiples usuarios de nuestra empresa usar el servicio simultáneamente?",
+    "multipleUsersAnswer": "¡Fácil! Crea una cuenta y todo el equipo podrá usar nuestra herramienta. Para comenzar con una suscripción, simplemente regístrate, haz algunos ajustes de archivo, haz clic en \"Descargar\" y luego elige el plan que mejor te convenga.",
+    "customerSupport": "¿Ofrecen soporte al cliente para problemas técnicos?",
+    "customerSupportAnswer": "Sí, nuestro equipo de soporte está disponible 24/7 para ayudar con cualquier problema técnico que encuentres.",
+    "processingSpeed": "¿Qué tan rápido se procesan los documentos en su plataforma?",
+    "processingSpeedAnswer": "Los documentos se procesan típicamente en segundos, incluso para archivos grandes.",
+    "moneyBack": "¿Tienen garantía de devolución de dinero?",
+    "moneyBackAnswer": "Sí, ofrecemos una garantía de devolución de dinero de 14 días si no estás satisfecho con nuestro servicio.",
+    "ctaTitle": "¿Quieres elevar las operaciones de tu negocio?",
+    "ctaDescription": "Contáctanos en sales@thebestpdf.com y exploremos cómo nuestro producto puede revolucionar tu papeleo corporativo. ¡Únete a la creciente comunidad de empresas exitosas que aprovechan TheBestPDF para mantenerse a la vanguardia!",
+    "ctaButton": "Comenzar"
+  },
+  "howItWorks": {
+    "title": "Cómo comprimir PDF",
+    "step1": "Inicia sesión en TheBestPDF y ve a la herramienta Comprimir PDF",
+    "step2": "Sube o arrastra y suelta tu PDF en la interfaz",
+    "step3": "¡Eso es todo! Tu archivo recién comprimido está listo para descargar y se puede encontrar en la cuenta de tu equipo"
+  },
+  "featureCTA": {
+    "title": "PDFDen ofrece soluciones de gestión de archivos de primer nivel para equipos de todos los tamaños.",
+    "subtitle": "Bienvenido a nuestra plataforma SaaS de vanguardia para edición y conversión de documentos en línea. Diseñada para satisfacer las necesidades de empresas y emprendedores."
+  },
+  "files": {
+    "searchFiles": "Buscar archivos",
+    "forms": "Formularios",
+    "pdfConverter": "Convertidor PDF",
+    "editPdf": "Editar PDF",
+    "signPdf": "Firmar PDF",
+    "ocrPdf": "OCR PDF",
+    "mergePdf": "Fusionar PDF",
+    "compressPdf": "Comprimir PDF",
+    "splitPdf": "Dividir PDF",
+    "aiSummarizer": "Resumidor IA",
+    "fillPdf": "Rellenar PDF",
+    "createForm": "Crear formulario",
+    "editForm": "Editar formulario",
+    "summarizePdf": "Resumir PDF",
+    "extractHighlights": "Extraer destacados",
+    "taxForms": "Formularios fiscales",
+    "legalForms": "Formularios legales",
+    "healthcareForms": "Formularios de salud",
+    "militaryForms": "Formularios militares",
+    "educationForms": "Formularios de educación",
+    "businessForms": "Formularios comerciales",
+    "financialForms": "Formularios financieros",
+    "realEstate": "Bienes raíces",
+    "insuranceForms": "Formularios de seguros",
+    "travelForms": "Formularios de viaje",
+    "techForms": "Formularios técnicos",
+    "otherForms": "Otros formularios"
+  },
+  "features": {
+    "comprehensiveSuite": "Suite integral",
+    "unlimitedDocuments": "Documentos ilimitados"
+  },
+  "payment": {
+    "paymentDetails": "Detalles de pago",
+    "documentPreview": "Vista previa del documento",
+    "termsAndService": "Términos de uso y servicio",
+    "privacyPolicy": "Política de privacidad",
+    "billingEmail": "billing@pdfhouse.com",
+    "agreementText": "Al marcar esta casilla, aceptas los Términos de uso y servicio, la Política de privacidad, y confirmas que si no cancelas al menos 24 horas antes del final del período de prueba de 7 días por CAD$1.95, se te cobrará CAD$49 por 28 días hasta que canceles tu suscripción contactando a nuestro equipo de soporte al cliente por correo electrónico a billing@pdfhouse.com. Los pagos se cargarán de la tarjeta que especificaste arriba."
+  },
+  "pdfViewer": {
+    "thumbnails": "Miniaturas",
+    "outline": "Esquema",
+    "annotations": "Anotaciones",
+    "zoomOut": "Alejar",
+    "zoomIn": "Acercar",
+    "pan": "Desplazar",
+    "highlight": "Resaltar",
+    "draw": "Dibujar",
+    "line": "Línea",
+    "arrow": "Flecha",
+    "rectangle": "Rectángulo",
+    "ellipse": "Elipse",
+    "polygon": "Polígono",
+    "sign": "Firmar",
+    "stamp": "Sello",
+    "text": "Texto",
+    "note": "Nota",
+    "comment": "Comentario",
+    "eraser": "Borrador",
+    "undo": "Deshacer",
+    "redo": "Rehacer",
+    "search": "Buscar",
+    "print": "Imprimir",
+    "export": "Exportar",
+    "edit": "Editar"
+  },
+  "reset": {
+    "invalidResetLink": "Enlace de restablecimiento inválido",
+    "resetLinkInvalid": "El enlace de restablecimiento de contraseña es inválido o ha expirado.",
+    "backToLogin": "Volver al inicio de sesión",
+    "resetPassword": "Restablecer contraseña",
+    "newPassword": "Nueva contraseña",
+    "confirmNewPassword": "Confirmar nueva contraseña",
+    "passwordsDoNotMatch": "Las contraseñas no coinciden",
+    "resetSuccessful": "¡Contraseña restablecida exitosamente!",
+    "resetFailed": "Error al restablecer la contraseña. Por favor, inténtalo de nuevo."
   }
 }

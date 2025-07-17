@@ -1,12 +1,11 @@
-import { X, ArrowDown } from "lucide-react";
-import { jwtDecode } from "jwt-decode";
+"use client";
+import React, { useCallback, useEffect, useState } from "react";
+import { X } from "lucide-react";
 import { useDispatch } from "react-redux";
-import { useRouter } from "next/navigation";
-import { useState, useEffect, useCallback } from "react";
-import { registerEmail } from "@/utils/apiUtils";
 import { useLocalizedNavigation } from "@/utils/navigation";
-
-import { setUser } from "../../store/slices/userSlice";
+import { setUser } from "@/store/slices/userSlice";
+import { registerEmail } from "@/utils/apiUtils";
+import { useTranslations } from "next-intl";
 
 interface EmailModalProps {
   isVisible: boolean;
@@ -22,66 +21,49 @@ export default function EmailModal({
   onClose,
 }: EmailModalProps) {
   const dispatch = useDispatch();
-  const router = useRouter();
   const { navigate } = useLocalizedNavigation();
-  const [isLoading, setIsLoading] = useState(false);
   const [emailExists, setEmailExists] = useState(false);
+  const t = useTranslations();
 
-  const isEmailValid = useCallback((email: string) => {
+  const isEmailValid = (email: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
-  }, []);
+  };
 
   const register = useCallback(async () => {
-    if (isEmailValid(email)) {
-      setIsLoading(true);
-      try {
-        const { user } = await registerEmail(email);
-
-        const mappedUserData = {
-          email: user.email,
-          subscription: null,
-          id: user.id,
-          avatar: user.avatar || "",
-          isAdmin: user.isAdmin,
-          name: user.name || "",
-        };
-        dispatch(setUser(mappedUserData));
-        navigate(`/plan`);
-        onClose();
-      } catch (error: unknown) {
-        console.log(error);
-        if (error instanceof Error) {
-          if (
-            error.message.includes(
-              "Email is already registered with a subscription"
-            )
-          ) {
-            setEmailExists(true);
-          } else if (error.message.includes("Email is already registered")) {
-            const mappedUserData = {
-              email: email,
-              subscription: null,
-              id: "",
-              avatar: "",
-              isAdmin: false,
-              name: "",
-            };
-            dispatch(setUser(mappedUserData));
-            navigate(`/plan`);
-          } else {
-            alert("Registration failed. Please try again.");
-          }
-        } else {
-          alert("Registration failed. Please try again.");
-        }
-      } finally {
-        setIsLoading(false);
-      }
-    } else {
-      alert("Please enter a valid email address.");
+    if (!email || !isEmailValid(email)) {
+      console.log("Invalid email");
+      return;
     }
-  }, [email, dispatch, router, onClose, isEmailValid]);
+
+    try {
+      const response = await registerEmail(email);
+      console.log("Registration successful:", response);
+
+      // Set user in Redux store with all required fields
+      dispatch(
+        setUser({
+          email,
+          id: response.user.id,
+          name: response.user.name || "",
+          avatar: response.user.avatar || "",
+          isAdmin: response.user.isAdmin,
+          subscription: null,
+        })
+      );
+
+      // Close modal
+      onClose();
+      navigate("/plan");
+    } catch (error: any) {
+      console.error("Registration failed:", error);
+      if (error.message.includes("409")) {
+        setEmailExists(true);
+      } else if (error.message.includes("400")) {
+        navigate("/plan");
+      }
+    }
+  }, [email, dispatch, navigate, onClose, isEmailValid]);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -109,60 +91,44 @@ export default function EmailModal({
         </button>
         {emailExists && (
           <div className="bg-red-100 text-sm text-red-800 p-4 rounded mb-4">
-            This email is already registered. Please{" "}
+            {t("auth.emailAlreadyRegistered")}{" "}
             <div
               className="text-blue-600 cursor-pointer inline text-base"
               onClick={() => {
                 navigate("/login");
               }}
             >
-              log in
+              {t("auth.logIn")}
             </div>
             .
           </div>
         )}
-        <h3 className="text-xl font-bold mb-4">Enter your Email address</h3>
+        <h3 className="text-xl font-bold mb-4">{t("email.enterEmail")}</h3>
         <div className="text-left w-full mb-2">
           <label htmlFor="email" className="text-sm font-medium">
-            Email
+            {t("auth.email")}
           </label>
           <input
             id="email"
             type="email"
             value={email}
             onChange={(e) => onEmailChange(e.target.value)}
-            placeholder="Enter Your Email Address"
+            placeholder={t("auth.enterEmailAddress")}
             className="w-full mt-1 px-4 py-3 rounded-md bg-gray-100 text-sm"
           />
         </div>
+        <p className="text-xs text-gray-500 mb-6">{t("email.downloadLink")}</p>
         <button
-          className="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold mt-4 flex justify-center items-center gap-2"
-          onClick={() => {
-            if (isEmailValid(email)) {
-              register();
-            }
-          }}
-          disabled={isLoading}
+          onClick={register}
+          disabled={!isEmailValid(email)}
+          className={`w-full py-3 rounded-md font-medium transition ${
+            isEmailValid(email)
+              ? "bg-blue-600 text-white hover:bg-blue-700"
+              : "bg-gray-300 text-gray-500 cursor-not-allowed"
+          }`}
         >
-          {isLoading ? (
-            <span>Loading...</span>
-          ) : (
-            <>
-              Download <ArrowDown size={16} />
-            </>
-          )}
+          {t("email.getStarted")}
         </button>
-        <p className="text-xs text-gray-500 mt-4">
-          By clicking &apos;Download File,&apos; you agree to our{" "}
-          <a href="#" className="underline">
-            Terms and conditions
-          </a>{" "}
-          and{" "}
-          <a href="#" className="underline">
-            Privacy policy
-          </a>
-          .
-        </p>
       </div>
     </div>
   );

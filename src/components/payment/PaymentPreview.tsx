@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Check } from "lucide-react";
 
-
 export default function PaymentPreview() {
   return (
     <div className="flex-1 bg-white p-0 rounded-xl shadow-md overflow-hidden">
@@ -20,9 +19,9 @@ export default function PaymentPreview() {
         <Image
           src="/assets/images/sample-pdf.png"
           alt="Document Preview"
-          layout="responsive"
-          width={100}
-          height={100}
+          width={400}
+          height={0}
+          style={{ height: "auto" }}
           className="mx-auto w-[40%] rounded-lg shadow-sm"
         />
       </div>

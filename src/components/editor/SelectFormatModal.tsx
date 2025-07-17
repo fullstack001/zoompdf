@@ -60,7 +60,13 @@ export default function SelectFormatModal({
               }`}
             >
               <div className="border border-md border-blue-500 p-2 rounded-lg">
-                <Image src={icon} alt={label} width={20} height={20} />
+                <Image
+                  src={icon}
+                  alt={label}
+                  width={20}
+                  height={0}
+                  style={{ height: "auto" }}
+                />
               </div>
 
               <input type="radio" checked={selected === label} readOnly />

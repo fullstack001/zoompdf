@@ -19,7 +19,8 @@ export default function FormGrid() {
             src={form.thumbnail}
             alt={form.title}
             width={200}
-            height={360}
+            height={0}
+            style={{ height: "auto" }}
             className="mx-auto rounded"
           />
           <p className="mt-2 mb-4 text-xs">{form.title}</p>

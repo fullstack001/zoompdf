@@ -5,7 +5,6 @@ import {
   X,
 } from "lucide-react";
 import { useState, useEffect, RefObject } from "react";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { setFileName } from "../../store/slices/flowSlice";
@@ -23,6 +22,8 @@ import {
 } from "../../utils/apiUtils";
 import SelectFormatModal from "./SelectFormatModal";
 import ProgressModal from "./ProgressModal";
+import { useTranslations } from "next-intl";
+import { useLocalizedNavigation } from "@/utils/navigation";
 
 interface TopbarProps {
   pdfViewerRef: RefObject<PDFViewerRef | null>;
@@ -41,19 +42,19 @@ export default function Topbar({ pdfViewerRef }: TopbarProps) {
   const [filename, setFilename] = useState(
     uploadedFile?.originalName?.split(".")[0] || "document"
   );
-  console.log(action);
   const [email, setEmail] = useState("");
   const [saving, setSaving] = useState(false);
+  const t = useTranslations();
+  const { navigate } = useLocalizedNavigation();
 
   const getButtonText = () => {
-    console.log(action);
     switch (action) {
       case "sign_pdf":
-        return saving ? "Signing..." : "Sign";
+        return saving ? t("common.signing") : t("pdfViewer.sign");
       case "split_pdf":
-        return saving ? "Splitting..." : "Split";
+        return saving ? t("common.splitting") : t("common.split");
       default:
-        return saving ? "Saving..." : "Done";
+        return saving ? t("common.saving") : t("common.done");
     }
   };
 
@@ -174,14 +175,14 @@ export default function Topbar({ pdfViewerRef }: TopbarProps) {
     <>
       <header className="bg-white border-b px-6 py-3 flex justify-between items-center">
         <div className="flex items-center gap-3">
-          <Link href="/">
+          <button onClick={() => navigate("/")}>
             <Image
               src="/assets/images/logo.svg"
               alt="ZoomPDF"
               width={128}
               height={28}
             />
-          </Link>
+          </button>
         </div>
 
         <div className="flex items-center gap-6 text-sm text-gray-700">

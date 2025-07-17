@@ -5,7 +5,23 @@ import { locales, defaultLocale } from "@/i18n/config";
 export function useLocalizedNavigation() {
   const router = useRouter();
   const pathname = usePathname();
-  const locale = useLocale();
+  const nextIntlLocale = useLocale();
+
+  // Extract locale from pathname directly
+  const getLocaleFromPath = (path: string): string => {
+    const segments = path.split("/").filter(Boolean);
+    const firstSegment = segments[0];
+
+    // Check if the first segment is a valid locale
+    if (firstSegment && locales.includes(firstSegment as any)) {
+      return firstSegment;
+    }
+
+    // Fall back to next-intl locale or default locale
+    return nextIntlLocale || defaultLocale;
+  };
+
+  const locale = getLocaleFromPath(pathname);
 
   const navigate = (path: string) => {
     // Always add locale prefix since we're using "always" prefix

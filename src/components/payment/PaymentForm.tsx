@@ -99,7 +99,8 @@ export default function PaymentForm({
         if (fileName && action) {
           // Fallback to regular conversion flow
           try {
-            await downloadFile(fileName, action, token, router.push);
+            await downloadFile(fileName, action, token);
+            navigate("/files");
           } catch (err) {
             console.error("Error downloading file:", err);
             window.alert("Failed to download file.");

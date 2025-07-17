@@ -12,14 +12,13 @@ export default function ProgressModal({ isVisible, progress }: ProgressModalProp
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
       <div className="bg-white rounded-xl w-full max-w-md p-8 text-center shadow-xl">
-        <h3 className="text-xl font-bold mb-6">
-          We are processing your file
-        </h3>
+        <h3 className="text-xl font-bold mb-6">We are processing your file</h3>
         <Image
           src="/assets/images/processing.png"
           alt="Processing"
           width={160}
-          height={160}
+          height={0}
+          style={{ height: "auto" }}
           className="mx-auto mb-4"
         />
         <div className="text-gray-700 font-semibold mb-2">{progress}%</div>

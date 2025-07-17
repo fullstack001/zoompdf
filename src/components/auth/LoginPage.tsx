@@ -1,19 +1,23 @@
 'use client';
 import { useState } from 'react';
+import { useTranslations } from "next-intl";
 
 export default function LoginPage() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const t = useTranslations();
 
   const handleLogin = () => {
     // Placeholder for login logic
-    console.log('Logging in with:', { email, password });
+    console.log("Logging in with:", { email, password });
   };
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="w-full max-w-md bg-white rounded-lg shadow p-6">
-        <h1 className="text-xl font-semibold text-gray-800 mb-4">Login</h1>
+        <h1 className="text-xl font-semibold text-gray-800 mb-4">
+          {t("auth.login")}
+        </h1>
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -22,8 +26,11 @@ export default function LoginPage() {
           className="space-y-4"
         >
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-              Email
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700"
+            >
+              {t("auth.email")}
             </label>
             <input
               id="email"
@@ -35,8 +42,11 @@ export default function LoginPage() {
             />
           </div>
           <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-              Password
+            <label
+              htmlFor="password"
+              className="block text-sm font-medium text-gray-700"
+            >
+              {t("auth.password")}
             </label>
             <input
               id="password"
@@ -51,7 +61,7 @@ export default function LoginPage() {
             type="submit"
             className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition"
           >
-            Login
+            {t("auth.login")}
           </button>
         </form>
       </div>

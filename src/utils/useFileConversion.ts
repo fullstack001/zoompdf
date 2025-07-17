@@ -55,7 +55,6 @@ export const useFileConversion = (config: ConversionConfig) => {
       }, 300);
 
       fileName = await config.convertFunction(file);
-      console.log(fileName);
       dispatch(setFileName(fileName));
       dispatch(setAction(config.action));
       setUploading(false);
@@ -71,7 +70,8 @@ export const useFileConversion = (config: ConversionConfig) => {
           token
         ) {
           try {
-            await downloadFile(fileName, config.action, token, router.push);
+            await downloadFile(fileName, config.action, token);
+            navigate("/files");
           } catch (err) {
             console.error("Error downloading file:", err);
             window.alert("Failed to download file.");

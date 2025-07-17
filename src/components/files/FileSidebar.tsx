@@ -69,7 +69,7 @@ export default function FileSidebar({
 
   return (
     <aside
-      className={`bg-white p-6 w-80 rounded-lg shadow-md ${
+      className={`bg-white p-6 w-full lg:w-80 rounded-lg shadow-md ${
         isSidebarOpen ? "block" : "hidden lg:block"
       }`}
     >

@@ -47,14 +47,7 @@ export default function Login() {
         if (flow.fileName && flow.action) {
           // Fallback to regular conversion flow
           try {
-            await downloadFile(
-              flow.fileName,
-              flow.action,
-              token,
-              (url: string) => {
-                window.location.href = url;
-              }
-            );
+            await downloadFile(flow.fileName, flow.action, token);
             navigate("/files");
           } catch (err) {
             console.error("Error downloading file:", err);

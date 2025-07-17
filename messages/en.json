@@ -60,7 +60,12 @@
     "processingFile": "We are processing your file",
     "configNotFound": "Configuration not found for home page.",
     "uploadFailed": "Failed to upload file. Please try again.",
-    "chooseBestTool": "Choose the best tool for your business needs"
+    "chooseBestTool": "Choose the best tool for your business needs",
+    "done": "Done",
+    "split": "Split",
+    "saving": "Saving...",
+    "signing": "Signing...",
+    "splitting": "Splitting..."
   },
   "errors": {
     "oops": "Oops!",
@@ -197,6 +202,170 @@
     "signIn": "Sign In",
     "signUp": "Sign Up",
     "alreadyHaveAccount": "Already have an account?",
-    "dontHaveAccount": "Don't have an account?"
+    "dontHaveAccount": "Don't have an account?",
+    "login": "Login",
+    "emailAddress": "Email address",
+    "enterEmailAddress": "Enter Your Email Address",
+    "emailAlreadyRegistered": "This email is already registered. Please",
+    "logIn": "log in"
+  },
+  "account": {
+    "membership": "Membership",
+    "noSubscription": "You do not have a subscription.",
+    "unlockAllTools": "Unlock all PDF tools!",
+    "fullAccess": "Get full access to our advanced editing and converting features.",
+    "subscribeNow": "Subscribe now to streamline your document tasks",
+    "subscribe": "Subscribe",
+    "account": "Account",
+    "betterExperience": "Have a better experience on PDF House by keeping your information up-to-date.",
+    "importantUpdates": "You will receive important product updates and essential account notifications, including payment receipts.",
+    "paymentMethod": "Payment Method",
+    "saveTime": "Save time by keeping a current credit card on file.",
+    "cardNumber": "Card number",
+    "notSpecified": "Not Specified"
+  },
+  "plan": {
+    "choosePlan": "Choose a plan to download your file",
+    "continue": "Continue",
+    "annualPlan": "Annual Plan",
+    "getStarted": "Get Started",
+    "mostPopular": "Most Popular"
+  },
+  "whyUs": {
+    "title": "Why TheBestPDF is the top choice for your team",
+    "openness": "Openness",
+    "opennessDesc": "Striving for long-term partnerships, we ensure 24/7 availability for customer support.",
+    "expertise": "Expertise",
+    "expertiseDesc": "We unite creative minds to deliver integrated solutions that cover your business challenges.",
+    "growth": "Growth",
+    "growthDesc": "We empower organizations by keeping abreast of the latest tech advancements, aiming for excellence in our field.",
+    "diversity": "Diversity",
+    "diversityDesc": "Healthcare, Legal, Finance, Education — whatever your industry is, our tool can streamline your workflows."
+  },
+  "coreValues": {
+    "title": "Core values behind TheBestPDF"
+  },
+  "compression": {
+    "compressFile": "Compress file",
+    "high": "HIGH",
+    "highDesc": "Standard quality, smaller size",
+    "highReduction": "~40% smaller",
+    "basic": "BASIC",
+    "basicDesc": "Better quality, medium size",
+    "basicReduction": "~20% smaller",
+    "low": "LOW",
+    "lowDesc": "Highest quality, larger size",
+    "lowReduction": "~10% smaller",
+    "compressionLevel": "Compression level",
+    "selectLevel": "Select your compression level and compress the file.",
+    "compress": "Compress"
+  },
+  "email": {
+    "enterEmail": "Enter your Email address",
+    "downloadLink": "Download link will be sent to your email",
+    "getStarted": "Get Started"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "multipleUsers": "Can multiple users from our company use the service simultaneously?",
+    "multipleUsersAnswer": "Easy! Create one account and the whole team will be able to use our tool. To get started with a subscription, simply register, make some file adjustments, click \"Download,\" and then pick the plan that suits you best.",
+    "customerSupport": "Do you offer customer support for technical issues?",
+    "customerSupportAnswer": "Yes, our support team is available 24/7 to assist with any technical issues you encounter.",
+    "processingSpeed": "How quickly are documents processed on your platform?",
+    "processingSpeedAnswer": "Documents are typically processed within seconds, even for large files.",
+    "moneyBack": "Do you have a money-back guarantee?",
+    "moneyBackAnswer": "Yes, we offer a 14-day money-back guarantee if you are not satisfied with our service.",
+    "ctaTitle": "Looking to elevate your business operations?",
+    "ctaDescription": "Reach out to us at sales@thebestpdf.com, and let's explore how our product can revolutionize your corporate paperwork. Join the growing community of successful businesses leveraging TheBestPDF to stay ahead!",
+    "ctaButton": "Get Started"
+  },
+  "howItWorks": {
+    "title": "How to compress PDF",
+    "step1": "Log into TheBestPDF and go to the Compress PDF tool",
+    "step2": "Upload or drag & drop your PDF into the interface",
+    "step3": "That's it! Your newly compressed file is ready for download and can be found in your team's account"
+  },
+  "featureCTA": {
+    "title": "PDFDen delivers top‑tier file management solutions for teams of all sizes.",
+    "subtitle": "Welcome to our cutting-edge SaaS platform for online document editing and conversion. Designed to meet the needs of businesses and entrepreneurs."
+  },
+  "files": {
+    "searchFiles": "Search Files",
+    "forms": "Forms",
+    "pdfConverter": "PDF Converter",
+    "editPdf": "Edit PDF",
+    "signPdf": "Sign PDF",
+    "ocrPdf": "OCR PDF",
+    "mergePdf": "Merge PDF",
+    "compressPdf": "Compress PDF",
+    "splitPdf": "Split PDF",
+    "aiSummarizer": "AI Summarizer",
+    "fillPdf": "Fill PDF",
+    "createForm": "Create Form",
+    "editForm": "Edit Form",
+    "summarizePdf": "Summarize PDF",
+    "extractHighlights": "Extract Highlights",
+    "taxForms": "Tax Forms",
+    "legalForms": "Legal Forms",
+    "healthcareForms": "Healthcare Forms",
+    "militaryForms": "Military Forms",
+    "educationForms": "Education Forms",
+    "businessForms": "Business Forms",
+    "financialForms": "Financial Forms",
+    "realEstate": "Real Estate",
+    "insuranceForms": "Insurance Forms",
+    "travelForms": "Travel Forms",
+    "techForms": "Tech Forms",
+    "otherForms": "Other Forms"
+  },
+  "features": {
+    "comprehensiveSuite": "Comprehensive Suite",
+    "unlimitedDocuments": "Unlimited documents"
+  },
+  "payment": {
+    "paymentDetails": "Payment details",
+    "documentPreview": "Document Preview",
+    "termsAndService": "Terms of Use & Service",
+    "privacyPolicy": "Privacy Policy",
+    "billingEmail": "billing@pdfhouse.com",
+    "agreementText": "By checking this box, you agree to the Terms of Use & Service, Privacy Policy, and confirm that if you do not cancel at least 24 hours before the end of the 7-day trial for CAD$1.95, you will be charged CAD$49 per 28 days until you cancel your subscription by contacting our customer support team via email at billing@pdfhouse.com. Payments will be charged from the card you specified above."
+  },
+  "pdfViewer": {
+    "thumbnails": "Thumbnails",
+    "outline": "Outline",
+    "annotations": "Annotations",
+    "zoomOut": "Zoom Out",
+    "zoomIn": "Zoom In",
+    "pan": "Pan",
+    "highlight": "Highlight",
+    "draw": "Draw",
+    "line": "Line",
+    "arrow": "Arrow",
+    "rectangle": "Rectangle",
+    "ellipse": "Ellipse",
+    "polygon": "Polygon",
+    "sign": "Sign",
+    "stamp": "Stamp",
+    "text": "Text",
+    "note": "Note",
+    "comment": "Comment",
+    "eraser": "Eraser",
+    "undo": "Undo",
+    "redo": "Redo",
+    "search": "Search",
+    "print": "Print",
+    "export": "Export",
+    "edit": "Edit"
+  },
+  "reset": {
+    "invalidResetLink": "Invalid Reset Link",
+    "resetLinkInvalid": "The password reset link is invalid or has expired.",
+    "backToLogin": "Back to Login",
+    "resetPassword": "Reset Password",
+    "newPassword": "New Password",
+    "confirmNewPassword": "Confirm New Password",
+    "passwordsDoNotMatch": "Passwords do not match",
+    "resetSuccessful": "Password reset successfully!",
+    "resetFailed": "Password reset failed. Please try again."
   }
 }

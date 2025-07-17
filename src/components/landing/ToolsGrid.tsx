@@ -24,7 +24,8 @@ export default function ToolsGrid() {
               src={tool.icon}
               alt={t(tool.labelKey)}
               width={56}
-              height={65}
+              height={0}
+              style={{ height: "auto" }}
               className="mx-auto mb-4"
             />
             <p className="text-[14px] md:text-[20px] font-semibold text-[#212121]">

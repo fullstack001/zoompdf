@@ -60,7 +60,12 @@
     "processingFile": "Vi bearbetar din fil",
     "configNotFound": "Konfiguration hittades inte för startsidan.",
     "uploadFailed": "Misslyckades med att ladda upp filen. Försök igen.",
-    "chooseBestTool": "Välj det bästa verktyget för dina affärsbehov"
+    "chooseBestTool": "Välj det bästa verktyget för dina affärsbehov",
+    "done": "Klar",
+    "split": "Dela",
+    "saving": "Sparar...",
+    "signing": "Signerar...",
+    "splitting": "Delar..."
   },
   "errors": {
     "oops": "Hoppsan!",
@@ -197,6 +202,170 @@
     "signIn": "Logga in",
     "signUp": "Registrera dig",
     "alreadyHaveAccount": "Har du redan ett konto?",
-    "dontHaveAccount": "Har du inget konto?"
+    "dontHaveAccount": "Har du inget konto?",
+    "login": "Logga in",
+    "emailAddress": "E-postadress",
+    "enterEmailAddress": "Ange din e-postadress",
+    "emailAlreadyRegistered": "Denna e-post är redan registrerad. Vänligen",
+    "logIn": "logga in"
+  },
+  "account": {
+    "membership": "Medlemskap",
+    "noSubscription": "Du har ingen prenumeration.",
+    "unlockAllTools": "Lås upp alla PDF-verktyg!",
+    "fullAccess": "Få full tillgång till våra avancerade redigerings- och konverteringsfunktioner.",
+    "subscribeNow": "Prenumerera nu för att effektivisera dina dokumentuppgifter",
+    "subscribe": "Prenumerera",
+    "account": "Konto",
+    "betterExperience": "Ha en bättre upplevelse på PDF House genom att hålla din information uppdaterad.",
+    "importantUpdates": "Du kommer att få viktiga produktuppdateringar och viktiga kontomeddelanden, inklusive betalningskvitton.",
+    "paymentMethod": "Betalningsmetod",
+    "saveTime": "Spara tid genom att ha ett aktuellt kreditkort i filen.",
+    "cardNumber": "Kortnummer",
+    "notSpecified": "Inte specificerat"
+  },
+  "plan": {
+    "choosePlan": "Välj en plan för att ladda ner din fil",
+    "continue": "Fortsätt",
+    "annualPlan": "Årsplan",
+    "getStarted": "Kom igång",
+    "mostPopular": "Mest populär"
+  },
+  "whyUs": {
+    "title": "Varför TheBestPDF är det bästa valet för ditt team",
+    "openness": "Öppenhet",
+    "opennessDesc": "Vi strävar efter långsiktiga partnerskap och säkerställer 24/7 tillgänglighet för kundsupport.",
+    "expertise": "Expertis",
+    "expertiseDesc": "Vi förenar kreativa sinnen för att leverera integrerade lösningar som täcker dina affärsutmaningar.",
+    "growth": "Tillväxt",
+    "growthDesc": "Vi stärker organisationer genom att hålla oss uppdaterade med de senaste tekniska framstegen, strävar efter excellens inom vårt område.",
+    "diversity": "Mångfald",
+    "diversityDesc": "Hälsovård, Juridik, Finans, Utbildning — oavsett vilken bransch du är i, vårt verktyg kan effektivisera dina arbetsflöden."
+  },
+  "coreValues": {
+    "title": "Grundvärden bakom TheBestPDF"
+  },
+  "compression": {
+    "compressFile": "Komprimera fil",
+    "high": "HÖG",
+    "highDesc": "Standardkvalitet, mindre storlek",
+    "highReduction": "~40% mindre",
+    "basic": "GRUNDLÄGGANDE",
+    "basicDesc": "Bättre kvalitet, mediumstorlek",
+    "basicReduction": "~20% mindre",
+    "low": "LÅG",
+    "lowDesc": "Högsta kvalitet, större storlek",
+    "lowReduction": "~10% mindre",
+    "compressionLevel": "Komprimeringsnivå",
+    "selectLevel": "Välj din komprimeringsnivå och komprimera filen.",
+    "compress": "Komprimera"
+  },
+  "email": {
+    "enterEmail": "Ange din e-postadress",
+    "downloadLink": "Nedladdningslänk kommer att skickas till din e-post",
+    "getStarted": "Kom igång"
+  },
+  "faq": {
+    "title": "Vanliga frågor",
+    "multipleUsers": "Kan flera användare från vårt företag använda tjänsten samtidigt?",
+    "multipleUsersAnswer": "Enkelt! Skapa ett konto så kommer hela teamet att kunna använda vårt verktyg. För att komma igång med en prenumeration, registrera dig helt enkelt, gör några filjusteringar, klicka på \"Ladda ner\" och välj sedan den plan som passar dig bäst.",
+    "customerSupport": "Erbjuder ni kundsupport för tekniska problem?",
+    "customerSupportAnswer": "Ja, vårt supportteam är tillgängligt 24/7 för att hjälpa till med alla tekniska problem du stöter på.",
+    "processingSpeed": "Hur snabbt bearbetas dokument på er plattform?",
+    "processingSpeedAnswer": "Dokument bearbetas vanligtvis inom sekunder, även för stora filer.",
+    "moneyBack": "Har ni pengarna-tillbaka-garanti?",
+    "moneyBackAnswer": "Ja, vi erbjuder en 14-dagars pengarna-tillbaka-garanti om du inte är nöjd med vår tjänst.",
+    "ctaTitle": "Vill du höja dina affärsoperationer?",
+    "ctaDescription": "Kontakta oss på sales@thebestpdf.com så utforskar vi hur vår produkt kan revolutionera ditt företagspappersarbete. Gå med i den växande gemenskapen av framgångsrika företag som utnyttjar TheBestPDF för att ligga steget före!",
+    "ctaButton": "Kom igång"
+  },
+  "howItWorks": {
+    "title": "Hur man komprimerar PDF",
+    "step1": "Logga in på TheBestPDF och gå till verktyget Komprimera PDF",
+    "step2": "Ladda upp eller dra och släpp din PDF i gränssnittet",
+    "step3": "Det var allt! Din nyligen komprimerade fil är redo för nedladdning och kan hittas i ditt teams konto"
+  },
+  "featureCTA": {
+    "title": "PDFDen levererar förstklassiga filhanteringslösningar för team av alla storlekar.",
+    "subtitle": "Välkommen till vår banbrytande SaaS-plattform för online dokumentredigering och konvertering. Utformad för att möta behoven hos företag och entreprenörer."
+  },
+  "files": {
+    "searchFiles": "Sök filer",
+    "forms": "Formulär",
+    "pdfConverter": "PDF-konverterare",
+    "editPdf": "Redigera PDF",
+    "signPdf": "Signera PDF",
+    "ocrPdf": "OCR PDF",
+    "mergePdf": "Slå samman PDF",
+    "compressPdf": "Komprimera PDF",
+    "splitPdf": "Dela PDF",
+    "aiSummarizer": "AI-sammanfattare",
+    "fillPdf": "Fyll PDF",
+    "createForm": "Skapa formulär",
+    "editForm": "Redigera formulär",
+    "summarizePdf": "Sammanfatta PDF",
+    "extractHighlights": "Extrahera höjdpunkter",
+    "taxForms": "Skatteformulär",
+    "legalForms": "Juridiska formulär",
+    "healthcareForms": "Hälsovårdsformulär",
+    "militaryForms": "Militära formulär",
+    "educationForms": "Utbildningsformulär",
+    "businessForms": "Företagsformulär",
+    "financialForms": "Finansiella formulär",
+    "realEstate": "Fastigheter",
+    "insuranceForms": "Försäkringsformulär",
+    "travelForms": "Reseformulär",
+    "techForms": "Tekniska formulär",
+    "otherForms": "Andra formulär"
+  },
+  "features": {
+    "comprehensiveSuite": "Omfattande svit",
+    "unlimitedDocuments": "Obegränsade dokument"
+  },
+  "payment": {
+    "paymentDetails": "Betalningsdetaljer",
+    "documentPreview": "Dokumentförhandsvisning",
+    "termsAndService": "Användarvillkor och service",
+    "privacyPolicy": "Integritetspolicy",
+    "billingEmail": "billing@pdfhouse.com",
+    "agreementText": "Genom att markera denna ruta godkänner du användarvillkoren och servicen, integritetspolicyn, och bekräftar att om du inte avbryter minst 24 timmar före slutet av den 7-dagars testperioden för 1,95 CAD, kommer du att debiteras 49 CAD per 28 dagar tills du avbryter din prenumeration genom att kontakta vårt kundsupportteam via e-post på billing@pdfhouse.com. Betalningar kommer att debiteras från kortet du angav ovan."
+  },
+  "pdfViewer": {
+    "thumbnails": "Miniatyrer",
+    "outline": "Översikt",
+    "annotations": "Anteckningar",
+    "zoomOut": "Zooma ut",
+    "zoomIn": "Zooma in",
+    "pan": "Panorera",
+    "highlight": "Markera",
+    "draw": "Rita",
+    "line": "Linje",
+    "arrow": "Pil",
+    "rectangle": "Rektangel",
+    "ellipse": "Ellips",
+    "polygon": "Polygon",
+    "sign": "Signera",
+    "stamp": "Stämpel",
+    "text": "Text",
+    "note": "Anteckning",
+    "comment": "Kommentar",
+    "eraser": "Suddgummi",
+    "undo": "Ångra",
+    "redo": "Gör om",
+    "search": "Sök",
+    "print": "Skriv ut",
+    "export": "Exportera",
+    "edit": "Redigera"
+  },
+  "reset": {
+    "invalidResetLink": "Ogiltig återställningslänk",
+    "resetLinkInvalid": "Länken för lösenordsåterställning är ogiltig eller har upphört att gälla.",
+    "backToLogin": "Tillbaka till inloggning",
+    "resetPassword": "Återställ lösenord",
+    "newPassword": "Nytt lösenord",
+    "confirmNewPassword": "Bekräfta nytt lösenord",
+    "passwordsDoNotMatch": "Lösenorden matchar inte",
+    "resetSuccessful": "Lösenord återställt framgångsrikt!",
+    "resetFailed": "Lösenordsåterställning misslyckades. Vänligen försök igen."
   }
 }

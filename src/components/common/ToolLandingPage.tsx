@@ -89,7 +89,8 @@ export default function ToolLandingPage({
               src="/assets/images/processing.png"
               alt={t("common.processing")}
               width={160}
-              height={160}
+              height={0}
+              style={{ height: "auto" }}
               className="mx-auto mb-4"
             />
             <div className="text-gray-700 font-semibold mb-2">{progress}%</div>

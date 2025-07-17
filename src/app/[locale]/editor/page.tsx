@@ -2,10 +2,11 @@
 
 import dynamic from "next/dynamic";
 import { useRef, useEffect } from "react";
-import { useLocalizedNavigation } from "@/utils/navigation";
-import Topbar from "@/components/editor/Topbar";
-import { useFileContext } from "@/contexts/FileContext";
 import { useTranslations } from "next-intl";
+import Topbar from "@/components/editor/Topbar";
+import type { PDFViewerRef } from "@/components/pdfviewer/PDFViewer";
+import { useFileContext } from "@/contexts/FileContext";
+import { useLocalizedNavigation } from "@/utils/navigation";
 
 // Dynamically import with SSR disabled
 const PDFViewer = dynamic(
@@ -16,20 +17,29 @@ const PDFViewer = dynamic(
 );
 
 const Home: React.FC = () => {
-  const pdfViewerRef = useRef(null);
+  const pdfViewerRef = useRef<PDFViewerRef>(null);
   const { uploadedFile } = useFileContext();
   const { navigate } = useLocalizedNavigation();
   const t = useTranslations();
+  const isMountedRef = useRef(true);
 
   console.log(uploadedFile);
 
   // Redirect to home if no file is uploaded
   useEffect(() => {
-    if (!uploadedFile) {
+    if (!uploadedFile && isMountedRef.current) {
       console.log("No file uploaded, redirecting to home");
       navigate("/");
     }
   }, [uploadedFile, navigate]);
+
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      // Mark component as unmounted
+      isMountedRef.current = false;
+    };
+  }, []);
 
   // Show loading or redirect if no file
   if (!uploadedFile) {
@@ -48,7 +58,7 @@ const Home: React.FC = () => {
       <Topbar pdfViewerRef={pdfViewerRef} />
       <div className="flex flex-1 overflow-hidden">
         <div className="flex-1">
-          <PDFViewer />
+          <PDFViewer ref={pdfViewerRef} document={uploadedFile.filePath} />
         </div>
       </div>
     </main>

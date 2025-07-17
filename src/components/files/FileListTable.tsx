@@ -1,6 +1,15 @@
-import { Eye, Pencil, Download, ArrowUpDown, MoreVertical } from "lucide-react";
+import {
+  Eye,
+  Pencil,
+  Download,
+  ArrowUpDown,
+  MoreVertical,
+  Search,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { useState } from "react";
 
 export default function FileListTable({
   files,
@@ -12,6 +21,9 @@ export default function FileListTable({
     action: string;
   }>;
 }) {
+  const [searchTerm, setSearchTerm] = useState("");
+  const t = useTranslations();
+
   const fileImage = (action: string) => {
     if (action === "pdf_to_pptx") {
       return "/assets/images/pptx-example.png";
@@ -32,29 +44,43 @@ export default function FileListTable({
       return "/assets/images/png-example.jpg";
     }
   };
+
+  const filteredFiles = files.filter((file) =>
+    file.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="bg-white rounded-xl shadow overflow-hidden mb-8">
       <div className="flex items-center justify-between p-4 border-b">
-        <h2 className="text-lg font-semibold">My Files</h2>
-        <input
-          placeholder="Search Files"
-          className="border rounded-md px-3 py-1 w-72"
-        />
+        <h2 className="text-lg font-semibold md:text-[32px]">My Files</h2>
+        <div className="relative">
+          <Search
+            className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+            size={20}
+          />
+          <input
+            type="text"
+            placeholder="Search Files"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="border rounded-md pl-10 pr-3 py-1 w-72"
+          />
+        </div>
       </div>
-      <table className="w-full text-sm">
-        <thead>
-          <tr className="text-left text-gray-500 border-b">
-            <th className="p-4">
+      <table className="w-full">
+        <thead className="bg-gray-50">
+          <tr>
+            <th className="p-4 text-left">
               <input type="checkbox" />
             </th>
-            <th>Name</th>
-            <th>Date</th>
-            <th>File Size</th>
-            <th className="text-right p-4">Actions</th>
+            <th className="p-4 text-left">Name</th>
+            <th className="p-4 text-left">Date</th>
+            <th className="p-4 text-left">File Size</th>
+            <th className="p-4 text-right">Actions</th>
           </tr>
         </thead>
         <tbody>
-          {files.map((file, idx) => (
+          {filteredFiles.map((file, idx) => (
             <tr key={idx} className="border-b hover:bg-gray-50">
               <td className="p-4">
                 <input type="checkbox" />
@@ -66,7 +92,8 @@ export default function FileListTable({
                   }
                   alt="File Icon"
                   width={20}
-                  height={20}
+                  height={0}
+                  style={{ height: "auto" }}
                 />
                 {file.name.replace(/_\d+/, "")}
               </td>

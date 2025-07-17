@@ -51,7 +51,8 @@ export default function Navbar() {
             src="/assets/images/logo.svg"
             alt="ZoomPDF"
             width={170}
-            height={56}
+            height={0}
+            style={{ height: "auto" }}
           />
         </div>
 

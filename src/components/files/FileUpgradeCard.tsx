@@ -18,7 +18,8 @@ export default function FileUpgradeCard() {
         <Image
           src="/assets/images/feature-cta.png"
           width={160}
-          height={160}
+          height={0}
+          style={{ height: "auto" }}
           alt="Upgrade"
         />
       </div>

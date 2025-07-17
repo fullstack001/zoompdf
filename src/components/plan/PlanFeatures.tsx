@@ -53,7 +53,8 @@ export default function PlanFeatures({ selectedPlan }: PlanFeaturesProps) {
                   src={feature.icon}
                   alt={feature.label}
                   width={50}
-                  height={50}
+                  height={0}
+                  style={{ height: "auto" }}
                   className="mx-auto mb-4"
                 />
               </div>
@@ -73,7 +74,8 @@ export default function PlanFeatures({ selectedPlan }: PlanFeaturesProps) {
                   src={feature.icon}
                   alt={feature.label}
                   width={40}
-                  height={30}
+                  height={0}
+                  style={{ height: "auto" }}
                   className={`mx-auto mb-4 ${
                     selectedPlan === "7_free" ? "opacity-30" : ""
                   }`}

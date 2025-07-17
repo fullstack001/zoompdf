@@ -19,9 +19,9 @@ export default function PlanPreview() {
         <Image
           src="/assets/images/sample-pdf.png"
           alt="Document Preview"
-          layout="responsive"
-          width={60}
-          height={80}
+          width={360}
+          height={0}
+          style={{ height: "auto" }}
           className="mx-auto rounded-lg shadow-sm"
         />
       </div>

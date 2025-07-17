@@ -94,17 +94,11 @@ export const registerEmail = async (email: string): Promise<AuthResponse> => {
 
     if (status === 409) {
       // Email already exists with subscription
-      const errorMessage =
-        axiosError.response?.data?.msg ||
-        axiosError.response?.data?.message ||
-        "Email is already registered with a subscription";
+      const errorMessage = "409";
       throw new Error(errorMessage);
     } else if (status === 400) {
       // Bad request - email already exists without subscription
-      const errorMessage =
-        axiosError.response?.data?.msg ||
-        axiosError.response?.data?.message ||
-        "Email is already registered";
+      const errorMessage = "400";
       throw new Error(errorMessage);
     } else {
       // Other errors
@@ -160,8 +154,7 @@ export const getFiles = async (): Promise<any[]> => {
 export const downloadFile = async (
   fileName: string,
   action: string,
-  token: string,
-  navigate: (path: string) => void // Pass a navigation callback
+  token: string
 ) => {
   try {
     const response = await fetch(`https://api.pdfezy.com/api/pdf/download`, {
@@ -177,7 +170,6 @@ export const downloadFile = async (
       throw new Error("Failed to download file");
     }
 
-    navigate("/files"); // Use the navigation callback instead of window.location.href
     const blob = await response.blob();
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement("a");

@@ -60,7 +60,8 @@ export default function FileListCards({
                 src={fileImage(file.action) || "/assets/images/pdf-example.png"}
                 alt="File Icon"
                 width={40}
-                height={40}
+                height={0}
+                style={{ height: "auto" }}
               />
               <div>
                 <h3 className="text-base font-semibold">
@@ -72,7 +73,7 @@ export default function FileListCards({
               {file.uploadTime.split("T")[0]}
             </div>
             <p className="text-sm text-gray-700"> {file.size}</p>
-            <div className="flex justify-end gap-2">
+            <div className="flex justify-start md:justify-end gap-2">
               <button className="bg-gray-100 px-2 py-1 rounded flex items-center gap-1 text-sm">
                 <Download size={14} /> Download
               </button>
