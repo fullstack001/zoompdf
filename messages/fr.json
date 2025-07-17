@@ -1,0 +1,202 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "convert": "Convertir",
+    "edit": "Modifier",
+    "compress": "Compresser",
+    "sign": "Signer",
+    "merge": "Fusionner",
+    "split": "Diviser",
+    "forms": "Formulaires",
+    "files": "Fichiers",
+    "account": "Compte",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "pdfConverter": "CONVERTISSEUR PDF",
+    "pdfEditor": "ÉDITEUR PDF",
+    "language": "Langue"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "ko": "한국어",
+    "se": "Svenska"
+  },
+  "pages": {
+    "home": "Accueil",
+    "convertPdf": "Convertir PDF",
+    "editPdf": "Modifier PDF",
+    "compressPdf": "Compresser PDF",
+    "signPdf": "Signer PDF",
+    "mergePdf": "Fusionner PDF",
+    "splitPdf": "Diviser PDF",
+    "forms": "Formulaires",
+    "files": "Fichiers",
+    "account": "Mon Compte",
+    "login": "Connexion",
+    "payment": "Paiement",
+    "plan": "Plans"
+  },
+  "common": {
+    "upload": "Télécharger",
+    "download": "Télécharger",
+    "convert": "Convertir",
+    "edit": "Modifier",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "chooseFile": "Choisir un fichier",
+    "dragAndDrop": "Glissez et déposez votre fichier ici",
+    "or": "ou",
+    "browse": "Parcourir",
+    "processing": "Traitement...",
+    "processingFile": "Nous traitons votre fichier",
+    "configNotFound": "Configuration introuvable pour la page d'accueil.",
+    "uploadFailed": "Échec du téléchargement du fichier. Veuillez réessayer.",
+    "chooseBestTool": "Choisissez le meilleur outil pour vos besoins professionnels"
+  },
+  "errors": {
+    "oops": "Oups !",
+    "somethingWentWrong": "Une erreur s'est produite",
+    "pageNotFound": "Page non trouvée",
+    "pageNotExist": "La page que vous recherchez n'existe pas.",
+    "errorLoadingPage": "Nous avons rencontré une erreur lors du chargement de cette page. Veuillez réessayer.",
+    "errorLoadingApp": "Nous avons rencontré une erreur lors du chargement de l'application. Veuillez réessayer.",
+    "tryAgain": "Réessayer",
+    "goHome": "Accueil",
+    "goToHomePage": "Aller à la page d'accueil",
+    "errorDetails": "Détails de l'erreur (développement uniquement)"
+  },
+  "tools": {
+    "pdfToWord": "PDF vers Word",
+    "pdfToExcel": "PDF vers Excel",
+    "pdfToPptx": "PDF vers PowerPoint",
+    "pdfToPng": "PDF vers PNG",
+    "pdfToJpg": "PDF vers JPG",
+    "pdfToEpub": "PDF vers EPUB",
+    "wordToPdf": "Word vers PDF",
+    "excelToPdf": "Excel vers PDF",
+    "pptxToPdf": "PPTX vers PDF",
+    "pngToPdf": "PNG vers PDF",
+    "jpgToPdf": "JPG vers PDF",
+    "epubToPdf": "EPUB vers PDF",
+    "editPdf": "Modifier PDF",
+    "signPdf": "Signer PDF",
+    "addWatermark": "Ajouter un filigrane",
+    "rotatePdf": "Faire pivoter PDF",
+    "mergePdf": "Fusionner PDF",
+    "splitPdf": "Diviser PDF",
+    "deletePages": "Supprimer des pages",
+    "compressPdf": "Compresser PDF",
+    "cropPdf": "Recadrer PDF",
+    "fillForm": "Remplir le formulaire",
+    "fillPdf": "Remplir PDF",
+    "createForm": "Créer un formulaire",
+    "imageToText": "Image vers texte",
+    "mergeImages": "Fusionner les images",
+    "pdfOcr": "PDF OCR"
+  },
+  "toolPages": {
+    "home": {
+      "title": "Convertisseur PDF vers Word",
+      "subtitle": "Plus d'1M de fichiers traités mensuellement. Téléchargez un fichier pour commencer !"
+    },
+    "signPdf": {
+      "title": "Signer PDF en ligne",
+      "subtitle": "Signez vos documents en ligne en toute sécurité. Téléchargez un fichier pour commencer !"
+    },
+    "splitPdf": {
+      "title": "Diviser PDF en ligne",
+      "subtitle": "Divisez votre PDF en plusieurs fichiers facilement. Téléchargez un fichier pour commencer !"
+    },
+    "compressPdf": {
+      "title": "Compresseur PDF",
+      "subtitle": "Nous avons déjà compressé 775 000 fichiers — laissez-nous vous aider avec le vôtre"
+    },
+    "pdfToWord": {
+      "title": "Convertisseur PDF vers Word",
+      "subtitle": "Nous avons aidé à convertir 775 000 fichiers — laissez-nous vous aider avec le vôtre"
+    },
+    "pdfToPng": {
+      "title": "Convertisseur PDF vers PNG",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — le vôtre pourrait être le prochain"
+    },
+    "pdfToJpg": {
+      "title": "Convertisseur PDF vers JPG",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — le vôtre pourrait être le prochain"
+    },
+    "pdfToEpub": {
+      "title": "Convertisseur PDF vers EPUB",
+      "subtitle": "Nous avons aidé à convertir 775 000 fichiers — laissez-nous vous aider avec le vôtre"
+    },
+    "pdfToExcel": {
+      "title": "Convertisseur PDF vers Excel",
+      "subtitle": "Nous avons converti 775K PDFs — pourquoi ne pas faire le vôtre le prochain ?"
+    },
+    "pdfToPptx": {
+      "title": "Convertisseur PDF vers PPTX",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — le vôtre pourrait être le prochain"
+    },
+    "wordToPdf": {
+      "title": "Convertisseur Word vers PDF",
+      "subtitle": "Nous avons aidé à convertir 775 000 fichiers — laissez-nous vous aider avec le vôtre"
+    },
+    "jpgToPdf": {
+      "title": "Convertisseur JPG vers PDF",
+      "subtitle": "Nous avons traité 75 000 JPGs jusqu'à présent. Faisons du vôtre le prochain."
+    },
+    "pngToPdf": {
+      "title": "Convertisseur PNG vers PDF",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — le vôtre pourrait être le prochain"
+    },
+    "epubToPdf": {
+      "title": "Convertisseur EPUB vers PDF",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — maintenant laissez-nous vous aider avec le vôtre"
+    }
+  },
+  "navbar": {
+    "convertFromPdf": "Convertir depuis PDF",
+    "convertToPdf": "Convertir vers PDF",
+    "editingTools": "Outils d'édition",
+    "formTools": "Outils de formulaire",
+    "myDocuments": "Mes documents",
+    "myAccount": "Mon compte",
+    "help": "Aide",
+    "termsConditions": "Termes et conditions",
+    "settings": "Paramètres",
+    "logOut": "Se déconnecter",
+    "upgradePlan": "Mettre à niveau le plan",
+    "noSubscription": "Aucun abonnement",
+    "profileDetails": "Détails du profil"
+  },
+  "footer": {
+    "editPdf": "Modifier PDF",
+    "convertFromPdf": "Convertir depuis PDF",
+    "convertToPdf": "Convertir vers PDF",
+    "forms": "Formulaires",
+    "fillPdfForm": "Remplir le formulaire PDF",
+    "createPdfForm": "Créer un formulaire PDF",
+    "disclaimer": "Avertissement",
+    "privacyPolicy": "Politique de confidentialité",
+    "sitemap": "Plan du site",
+    "allRightsReserved": "© 2025 PDFDEN Tous droits réservés."
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "forgotPassword": "Mot de passe oublié?",
+    "resetPassword": "Réinitialiser le mot de passe",
+    "signIn": "Se connecter",
+    "signUp": "S'inscrire",
+    "alreadyHaveAccount": "Vous avez déjà un compte?",
+    "dontHaveAccount": "Vous n'avez pas de compte?"
+  }
+}

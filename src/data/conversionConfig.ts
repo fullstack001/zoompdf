@@ -12,8 +12,8 @@ import {
 } from "@/utils/apiUtils";
 
 export interface ConversionToolConfig {
-  title: string;
-  subtitle: string;
+  titleKey: string;
+  subtitleKey: string;
   convertFunction: (file: File) => Promise<string>;
   action: string;
   acceptType?: string;
@@ -21,65 +21,65 @@ export interface ConversionToolConfig {
 
 export const conversionTools: Record<string, ConversionToolConfig> = {
   "pdf-to-word": {
-    title: "PDF to Word Converter",
-    subtitle: "We've helped convert 775,000 files — let us help with yours",
+    titleKey: "toolPages.pdfToWord.title",
+    subtitleKey: "toolPages.pdfToWord.subtitle",
     convertFunction: convertPdfToWord,
     action: "pdf_to_word",
   },
   "pdf-to-png": {
-    title: "PDF to PNG Converter",
-    subtitle: "We've already converted 775,000 files — yours could be next",
+    titleKey: "toolPages.pdfToPng.title",
+    subtitleKey: "toolPages.pdfToPng.subtitle",
     convertFunction: convertPdfToPng,
     action: "pdf_to_png",
   },
   "pdf-to-jpg": {
-    title: "PDF to JPG Converter",
-    subtitle: "We've already converted 775,000 files — yours could be next",
+    titleKey: "toolPages.pdfToJpg.title",
+    subtitleKey: "toolPages.pdfToJpg.subtitle",
     convertFunction: convertPdfToJpg,
     action: "pdf_to_jpg",
   },
   "pdf-to-epub": {
-    title: "PDF to EPUB Converter",
-    subtitle: "We've helped convert 775,000 files — let us help with yours",
+    titleKey: "toolPages.pdfToEpub.title",
+    subtitleKey: "toolPages.pdfToEpub.subtitle",
     convertFunction: convertPdfToEpub,
     action: "pdf_to_epub",
   },
   "pdf-to-excel": {
-    title: "PDF to Excel Converter",
-    subtitle: "We've converted 775K PDFs — why not make yours the next one?",
+    titleKey: "toolPages.pdfToExcel.title",
+    subtitleKey: "toolPages.pdfToExcel.subtitle",
     convertFunction: convertPdfToExcel,
     action: "pdf_to_excel",
   },
   "pdf-to-pptx": {
-    title: "PDF to PPTX Converter",
-    subtitle: "We've already converted 775,000 files — yours could be next",
+    titleKey: "toolPages.pdfToPptx.title",
+    subtitleKey: "toolPages.pdfToPptx.subtitle",
     convertFunction: convertPdfToPptx,
     action: "pdf_to_pptx",
   },
   "word-to-pdf": {
-    title: "Word to PDF Converter",
-    subtitle: "We've helped convert 775,000 files — let us help with yours",
+    titleKey: "toolPages.wordToPdf.title",
+    subtitleKey: "toolPages.wordToPdf.subtitle",
     convertFunction: convertWordToPdf,
     action: "word_to_pdf",
     acceptType: ".docx, .doc",
   },
   "jpg-to-pdf": {
-    title: "JPG to PDF Converter",
-    subtitle: "We've processed 75,000 JPGs so far. Let's make yours next.",
+    titleKey: "toolPages.jpgToPdf.title",
+    subtitleKey: "toolPages.jpgToPdf.subtitle",
     convertFunction: convertJpgToPdf,
     action: "jpg_to_pdf",
     acceptType: ".jpg, .jpeg",
   },
   "png-to-pdf": {
-    title: "PNG to PDF Converter",
-    subtitle: "We've already converted 775,000 files — yours could be next",
+    titleKey: "toolPages.pngToPdf.title",
+    subtitleKey: "toolPages.pngToPdf.subtitle",
     convertFunction: convertPngToPdf,
     action: "png_to_pdf",
     acceptType: ".png",
   },
   "epub-to-pdf": {
-    title: "EPUB to PDF Converter",
-    subtitle: "We've already converted 775,000 files — now let us help with yours",
+    titleKey: "toolPages.epubToPdf.title",
+    subtitleKey: "toolPages.epubToPdf.subtitle",
     convertFunction: convertEpubToPdf,
     action: "epub_to_pdf",
     acceptType: ".epub",

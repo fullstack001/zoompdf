@@ -1,21 +1,14 @@
-module.exports = {
-  async redirects() {
-    return [
-      {
-        source: "/auth/login",
-        destination: "/components/auth/LoginPage",
-        permanent: false,
-      },
-    ];
-  },
+const withNextIntl = require("next-intl/plugin")("./src/i18n/request.ts");
+
+module.exports = withNextIntl({
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'gravatar.com',
-        port: '',
-        pathname: '/**',
+        protocol: "https",
+        hostname: "gravatar.com",
+        port: "",
+        pathname: "/**",
       },
     ],
   },
-};
+});

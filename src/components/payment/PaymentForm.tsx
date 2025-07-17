@@ -8,7 +8,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { setUser } from "../../store/slices/userSlice";
 import { login } from "../../store/slices/authSlice";
 import { RootState } from "../../store/store";
-import { downloadFile, downloadSavedPdf } from "../../utils/apiUtils";
+import { downloadFile } from "../../utils/apiUtils";
+import { useLocalizedNavigation } from "../../utils/navigation";
 
 import CheckoutForm from "./CheckoutForm";
 
@@ -37,6 +38,7 @@ export default function PaymentForm({
 }) {
   const dispatch = useDispatch();
   const router = useRouter();
+  const { navigate } = useLocalizedNavigation();
   const [agreed, setAgreed] = useState(false); // State for checkbox
 
   const fileName = useSelector((state: RootState) => state.flow.fileName);
@@ -94,21 +96,7 @@ export default function PaymentForm({
         localStorage.setItem("authToken", token as string);
 
         // Check for edited PDF data first
-        if (flow.editedPdfData && flow.editedPdfFileName && flow.editedPdfConverter) {
-          try {
-            if (flow.editedPdfConverter.toLowerCase() === "pdf" && flow.editedPdfData) {
-              // For PDF format, use the saved PDF download function
-              downloadSavedPdf(flow.editedPdfData, flow.editedPdfFileName);
-            } else {
-              // For other formats, use the API download function
-              const action = `pdf_to_${flow.editedPdfConverter.toLowerCase()}`;
-              await downloadFile(flow.editedPdfFileName, action, token, router.push);
-            }
-          } catch (err) {
-            console.error("Error downloading edited PDF:", err);
-            window.alert("Failed to download edited PDF.");
-          }
-        } else if (fileName && action) {
+        if (fileName && action) {
           // Fallback to regular conversion flow
           try {
             await downloadFile(fileName, action, token, router.push);
@@ -117,7 +105,7 @@ export default function PaymentForm({
             window.alert("Failed to download file.");
           }
         } else {
-          router.push(`/files`); // Redirect to files page if no flow data
+          navigate(`/files`); // Redirect to files page if no flow data
         }
       })
       .catch(() => {

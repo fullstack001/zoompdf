@@ -13,18 +13,19 @@ import FileUploadSection from "@/components/common/FileUploadSection";
 import ProgressModal from "@/components/common/ProgressModal";
 import EmailModal from "@/components/common/EmailModal";
 import { useFileConversion } from "@/utils/useFileConversion";
+import { useTranslations } from "next-intl";
 
 interface ConvertPageProps {
-  title: string;
-  subtitle: string;
+  titleKey: string;
+  subtitleKey: string;
   convertFunction: (file: File) => Promise<string>;
   action: string;
   acceptType?: string;
 }
 
 export default function ConvertPage({
-  title,
-  subtitle,
+  titleKey,
+  subtitleKey,
   convertFunction,
   action,
   acceptType,
@@ -44,15 +45,17 @@ export default function ConvertPage({
     acceptType,
   });
 
+  const t = useTranslations();
+
   return (
     <main className="bg-gray-50">
       <Navbar />
 
       <section className="bg-[#edf0ff] text-center py-8 px-6 sm:py-12 sm:px-12 lg:px-24">
         <h1 className="text-4xl lg:text-5xl font-medium mb-6 pt-4 sm:pt-4">
-          {title}
+          {t(titleKey)}
         </h1>
-        <p className="mb-8 text-2xl lg:text-3xl font-light">{subtitle}</p>
+        <p className="mb-8 text-2xl lg:text-3xl font-light">{t(subtitleKey)}</p>
         <FileUploadSection
           acceptType={acceptType}
           handleFileChange={handleFileChange}

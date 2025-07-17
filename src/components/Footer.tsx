@@ -1,45 +1,52 @@
 "use client";
-import { useRouter } from "next/navigation";
-
-const footerLinks = [
-  {
-    title: "Edit PDF",
-    links: ["Edit PDF", "Sign PDF", "Split PDF", "Image to Text"],
-  },
-  {
-    title: "Convert from PDF",
-    links: [
-      "PDF to Word",
-      "PDF to Excel",
-      "PDF to Pptx",
-      "PDF to PNG",
-      "PDF to JPG",
-      "PDF to Epub",
-    ],
-  },
-  {
-    title: "Convert to PDF",
-    links: [
-      "Word to PDF",
-      "Excel to PDF",
-      "Pptx to PDF",
-      "PNG to PDF",
-      "JPG to PDF",
-      "Epub to PDF",
-    ],
-  },
-  {
-    title: "Forms",
-    links: ["Sign PDF", "Fill PDF Form", "Create PDF Form"],
-  },
-];
+import { useTranslations } from "next-intl";
+import { useLocalizedNavigation } from "@/utils/navigation";
 
 export default function Footer() {
-  const router = useRouter();
+  const t = useTranslations();
+  const { navigate } = useLocalizedNavigation();
 
-  const handleNavigation = (path: string) => {
-    router.push(path);
-  };
+  const footerLinks = [
+    {
+      titleKey: "footer.editPdf",
+      links: [
+        { labelKey: "tools.editPdf", route: "/edit-pdf" },
+        { labelKey: "tools.signPdf", route: "/sign-pdf" },
+        { labelKey: "tools.splitPdf", route: "/split-pdf" },
+        { labelKey: "tools.imageToText", route: "/image-to-text" },
+      ],
+    },
+    {
+      titleKey: "footer.convertFromPdf",
+      links: [
+        { labelKey: "tools.pdfToWord", route: "/pdf-to-word" },
+        { labelKey: "tools.pdfToExcel", route: "/pdf-to-excel" },
+        { labelKey: "tools.pdfToPptx", route: "/pdf-to-pptx" },
+        { labelKey: "tools.pdfToPng", route: "/pdf-to-png" },
+        { labelKey: "tools.pdfToJpg", route: "/pdf-to-jpg" },
+        { labelKey: "tools.pdfToEpub", route: "/pdf-to-epub" },
+      ],
+    },
+    {
+      titleKey: "footer.convertToPdf",
+      links: [
+        { labelKey: "tools.wordToPdf", route: "/word-to-pdf" },
+        { labelKey: "tools.excelToPdf", route: "/excel-to-pdf" },
+        { labelKey: "tools.pptxToPdf", route: "/pptx-to-pdf" },
+        { labelKey: "tools.pngToPdf", route: "/png-to-pdf" },
+        { labelKey: "tools.jpgToPdf", route: "/jpg-to-pdf" },
+        { labelKey: "tools.epubToPdf", route: "/epub-to-pdf" },
+      ],
+    },
+    {
+      titleKey: "footer.forms",
+      links: [
+        { labelKey: "tools.signPdf", route: "/sign-pdf" },
+        { labelKey: "footer.fillPdfForm", route: "/fill-pdf-form" },
+        { labelKey: "footer.createPdfForm", route: "/create-pdf-form" },
+      ],
+    },
+  ];
 
   return (
     <footer className="bg-gray-50 text-gray-800 px-6 md:px-12 lg:px-24 pb-6 text-sm">
@@ -48,20 +55,16 @@ export default function Footer() {
           {footerLinks.map((section, i) => (
             <div key={i} className="pt-4 md:pt-8 px-2 md:px-4 lg:px-6">
               <h4 className="text-[16px] md:text-[20px] font-medium pb-2 md:pb-4 text-gray-700">
-                {section.title}
+                {t(section.titleKey)}
               </h4>
               <ul className="space-y-1 mb-4">
                 {section.links.map((link, j) => (
                   <li
                     key={j}
                     className="text-gray-600 text-[14px] md:text-[16px] pb-2 md:pb-4 hover:text-blue-600 cursor-pointer"
-                    onClick={() =>
-                      handleNavigation(
-                        `/${link.toLowerCase().replace(/\s+/g, "-")}`
-                      )
-                    }
+                    onClick={() => navigate(link.route)}
                   >
-                    {link}
+                    {t(link.labelKey)}
                   </li>
                 ))}
               </ul>
@@ -75,25 +78,25 @@ export default function Footer() {
           <div className="space-x-2 md:space-x-4 mb-2">
             <span
               className="hover:underline text-[12px] md:text-[14px] cursor-pointer"
-              onClick={() => handleNavigation("/disclaimer")}
+              onClick={() => navigate("/disclaimer")}
             >
-              Disclaimer
+              {t("footer.disclaimer")}
             </span>
             <span
               className="hover:underline text-[12px] md:text-[14px] cursor-pointer"
-              onClick={() => handleNavigation("/privacy-policy")}
+              onClick={() => navigate("/privacy-policy")}
             >
-              Privacy Policy
+              {t("footer.privacyPolicy")}
             </span>
             <span
               className="hover:underline text-[12px] md:text-[14px] cursor-pointer"
-              onClick={() => handleNavigation("/sitemap")}
+              onClick={() => navigate("/sitemap")}
             >
-              Sitemap
+              {t("footer.sitemap")}
             </span>
           </div>
           <div className="text-[12px] md:text-[14px]">
-            &copy; 2025 PDFDEN All rights reserved.
+            {t("footer.allRightsReserved")}
           </div>
         </div>
       </div>

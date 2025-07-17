@@ -1,0 +1,202 @@
+{
+  "navigation": {
+    "home": "Hem",
+    "convert": "Konvertera",
+    "edit": "Redigera",
+    "compress": "Komprimera",
+    "sign": "Signera",
+    "merge": "Slå samman",
+    "split": "Dela",
+    "forms": "Formulär",
+    "files": "Filer",
+    "account": "Konto",
+    "login": "Logga in",
+    "logout": "Logga ut",
+    "pdfConverter": "PDF KONVERTERARE",
+    "pdfEditor": "PDF REDIGERARE",
+    "language": "Språk"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "ko": "한국어",
+    "se": "Svenska"
+  },
+  "pages": {
+    "home": "Hem",
+    "convertPdf": "Konvertera PDF",
+    "editPdf": "Redigera PDF",
+    "compressPdf": "Komprimera PDF",
+    "signPdf": "Signera PDF",
+    "mergePdf": "Slå samman PDF",
+    "splitPdf": "Dela PDF",
+    "forms": "Formulär",
+    "files": "Filer",
+    "account": "Mitt Konto",
+    "login": "Logga in",
+    "payment": "Betalning",
+    "plan": "Planer"
+  },
+  "common": {
+    "upload": "Ladda upp",
+    "download": "Ladda ner",
+    "convert": "Konvertera",
+    "edit": "Redigera",
+    "save": "Spara",
+    "cancel": "Avbryt",
+    "delete": "Radera",
+    "back": "Tillbaka",
+    "next": "Nästa",
+    "previous": "Föregående",
+    "loading": "Laddar...",
+    "error": "Fel",
+    "success": "Framgång",
+    "chooseFile": "Välj fil",
+    "dragAndDrop": "Dra och släpp din fil här",
+    "or": "eller",
+    "browse": "Bläddra",
+    "processing": "Bearbetar...",
+    "processingFile": "Vi bearbetar din fil",
+    "configNotFound": "Konfiguration hittades inte för startsidan.",
+    "uploadFailed": "Misslyckades med att ladda upp filen. Försök igen.",
+    "chooseBestTool": "Välj det bästa verktyget för dina affärsbehov"
+  },
+  "errors": {
+    "oops": "Hoppsan!",
+    "somethingWentWrong": "Något gick fel",
+    "pageNotFound": "Sidan hittades inte",
+    "pageNotExist": "Sidan du letar efter finns inte.",
+    "errorLoadingPage": "Vi stötte på ett fel när vi laddade den här sidan. Försök igen.",
+    "errorLoadingApp": "Vi stötte på ett fel när vi laddade applikationen. Försök igen.",
+    "tryAgain": "Försök igen",
+    "goHome": "Hem",
+    "goToHomePage": "Gå till startsidan",
+    "errorDetails": "Feldetaljer (endast utveckling)"
+  },
+  "tools": {
+    "pdfToWord": "PDF till Word",
+    "pdfToExcel": "PDF till Excel",
+    "pdfToPptx": "PDF till PowerPoint",
+    "pdfToPng": "PDF till PNG",
+    "pdfToJpg": "PDF till JPG",
+    "pdfToEpub": "PDF till EPUB",
+    "wordToPdf": "Word till PDF",
+    "excelToPdf": "Excel till PDF",
+    "pptxToPdf": "PPTX till PDF",
+    "pngToPdf": "PNG till PDF",
+    "jpgToPdf": "JPG till PDF",
+    "epubToPdf": "EPUB till PDF",
+    "editPdf": "Redigera PDF",
+    "signPdf": "Signera PDF",
+    "addWatermark": "Lägg till vattenstämpel",
+    "rotatePdf": "Rotera PDF",
+    "mergePdf": "Slå samman PDF",
+    "splitPdf": "Dela PDF",
+    "deletePages": "Radera sidor",
+    "compressPdf": "Komprimera PDF",
+    "cropPdf": "Beskär PDF",
+    "fillForm": "Fyll i formulär",
+    "fillPdf": "Fyll i PDF",
+    "createForm": "Skapa formulär",
+    "imageToText": "Bild till text",
+    "mergeImages": "Slå samman bilder",
+    "pdfOcr": "PDF OCR"
+  },
+  "toolPages": {
+    "home": {
+      "title": "PDF till Word Konverterare",
+      "subtitle": "1M+ filer bearbetade månadsvis. Ladda upp en fil för att komma igång!"
+    },
+    "signPdf": {
+      "title": "Signera PDF Online",
+      "subtitle": "Signera dina dokument online säkert. Ladda upp en fil för att komma igång!"
+    },
+    "splitPdf": {
+      "title": "Dela PDF Online",
+      "subtitle": "Dela din PDF i flera filer enkelt. Ladda upp en fil för att komma igång!"
+    },
+    "compressPdf": {
+      "title": "PDF Komprimerare",
+      "subtitle": "Vi har redan komprimerat 775 000 filer — låt oss hjälpa dig med din"
+    },
+    "pdfToWord": {
+      "title": "PDF till Word Konverterare",
+      "subtitle": "Vi har hjälpt till att konvertera 775 000 filer — låt oss hjälpa dig med din"
+    },
+    "pdfToPng": {
+      "title": "PDF till PNG Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — din kan bli nästa"
+    },
+    "pdfToJpg": {
+      "title": "PDF till JPG Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — din kan bli nästa"
+    },
+    "pdfToEpub": {
+      "title": "PDF till EPUB Konverterare",
+      "subtitle": "Vi har hjälpt till att konvertera 775 000 filer — låt oss hjälpa dig med din"
+    },
+    "pdfToExcel": {
+      "title": "PDF till Excel Konverterare",
+      "subtitle": "Vi har konverterat 775K PDFer — varför inte göra din till nästa?"
+    },
+    "pdfToPptx": {
+      "title": "PDF till PPTX Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — din kan bli nästa"
+    },
+    "wordToPdf": {
+      "title": "Word till PDF Konverterare",
+      "subtitle": "Vi har hjälpt till att konvertera 775 000 filer — låt oss hjälpa dig med din"
+    },
+    "jpgToPdf": {
+      "title": "JPG till PDF Konverterare",
+      "subtitle": "Vi har bearbetat 75 000 JPGer hittills. Låt oss göra din nästa."
+    },
+    "pngToPdf": {
+      "title": "PNG till PDF Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — din kan bli nästa"
+    },
+    "epubToPdf": {
+      "title": "EPUB till PDF Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — nu låt oss hjälpa dig med din"
+    }
+  },
+  "navbar": {
+    "convertFromPdf": "Konvertera från PDF",
+    "convertToPdf": "Konvertera till PDF",
+    "editingTools": "Redigeringsverktyg",
+    "formTools": "Formulärverktyg",
+    "myDocuments": "Mina dokument",
+    "myAccount": "Mitt konto",
+    "help": "Hjälp",
+    "termsConditions": "Villkor",
+    "settings": "Inställningar",
+    "logOut": "Logga ut",
+    "upgradePlan": "Uppgradera plan",
+    "noSubscription": "Ingen prenumeration",
+    "profileDetails": "Profildetaljer"
+  },
+  "footer": {
+    "editPdf": "Redigera PDF",
+    "convertFromPdf": "Konvertera från PDF",
+    "convertToPdf": "Konvertera till PDF",
+    "forms": "Formulär",
+    "fillPdfForm": "Fyll i PDF-formulär",
+    "createPdfForm": "Skapa PDF-formulär",
+    "disclaimer": "Ansvarsfriskrivning",
+    "privacyPolicy": "Integritetspolicy",
+    "sitemap": "Webbplatskarta",
+    "allRightsReserved": "© 2025 PDFDEN Alla rättigheter förbehållna."
+  },
+  "auth": {
+    "email": "E-post",
+    "password": "Lösenord",
+    "confirmPassword": "Bekräfta lösenord",
+    "forgotPassword": "Glömt lösenord?",
+    "resetPassword": "Återställ lösenord",
+    "signIn": "Logga in",
+    "signUp": "Registrera dig",
+    "alreadyHaveAccount": "Har du redan ett konto?",
+    "dontHaveAccount": "Har du inget konto?"
+  }
+}

@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
 import { useState, useEffect, useCallback } from "react";
 import { registerEmail } from "@/utils/apiUtils";
+import { useLocalizedNavigation } from "@/utils/navigation";
 
 import { setUser } from "../../store/slices/userSlice";
 
@@ -22,6 +23,7 @@ export default function EmailModal({
 }: EmailModalProps) {
   const dispatch = useDispatch();
   const router = useRouter();
+  const { navigate } = useLocalizedNavigation();
   const [isLoading, setIsLoading] = useState(false);
   const [emailExists, setEmailExists] = useState(false);
 
@@ -34,8 +36,8 @@ export default function EmailModal({
     if (isEmailValid(email)) {
       setIsLoading(true);
       try {
-        const {  user } = await registerEmail(email);
-        
+        const { user } = await registerEmail(email);
+
         const mappedUserData = {
           email: user.email,
           subscription: null,
@@ -45,12 +47,16 @@ export default function EmailModal({
           name: user.name || "",
         };
         dispatch(setUser(mappedUserData));
-        router.push(`/plan`);
+        navigate(`/plan`);
         onClose();
       } catch (error: unknown) {
         console.log(error);
         if (error instanceof Error) {
-          if (error.message.includes("Email is already registered with a subscription")) {
+          if (
+            error.message.includes(
+              "Email is already registered with a subscription"
+            )
+          ) {
             setEmailExists(true);
           } else if (error.message.includes("Email is already registered")) {
             const mappedUserData = {
@@ -62,7 +68,7 @@ export default function EmailModal({
               name: "",
             };
             dispatch(setUser(mappedUserData));
-            router.push(`/plan`);
+            navigate(`/plan`);
           } else {
             alert("Registration failed. Please try again.");
           }
@@ -107,7 +113,7 @@ export default function EmailModal({
             <div
               className="text-blue-600 cursor-pointer inline text-base"
               onClick={() => {
-                router.push("login");
+                navigate("/login");
               }}
             >
               log in

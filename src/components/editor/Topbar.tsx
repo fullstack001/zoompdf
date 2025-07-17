@@ -7,8 +7,9 @@ import {
 import { useState, useEffect, RefObject } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setFileName } from "../../store/slices/flowSlice";
+import { RootState } from "../../store/store";
 import EmailModal from "../common/EmailModal";
 import type { PDFViewerRef } from "../pdfviewer/PDFViewer";
 import { useFileContext } from "@/contexts/FileContext";
@@ -31,6 +32,7 @@ export default function Topbar({ pdfViewerRef }: TopbarProps) {
   const dispatch = useDispatch();
   const router = useRouter();
   const { uploadedFile, clearFile } = useFileContext();
+  const action = useSelector((state: RootState) => state.flow.action);
   const [showModal, setShowModal] = useState(false);
   const [showProgress, setShowProgress] = useState(false);
   const [showEmailModal, setShowEmailModal] = useState(false);
@@ -39,8 +41,21 @@ export default function Topbar({ pdfViewerRef }: TopbarProps) {
   const [filename, setFilename] = useState(
     uploadedFile?.originalName?.split(".")[0] || "document"
   );
+  console.log(action);
   const [email, setEmail] = useState("");
   const [saving, setSaving] = useState(false);
+
+  const getButtonText = () => {
+    console.log(action);
+    switch (action) {
+      case "sign_pdf":
+        return saving ? "Signing..." : "Sign";
+      case "split_pdf":
+        return saving ? "Splitting..." : "Split";
+      default:
+        return saving ? "Saving..." : "Done";
+    }
+  };
 
   useEffect(() => {
     if (showProgress) {
@@ -176,7 +191,7 @@ export default function Topbar({ pdfViewerRef }: TopbarProps) {
             className="flex items-center gap-2 border border-blue-600 text-blue-600 px-4 py-1.5 rounded-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <CheckSquare size={16} />
-            {saving ? "Saving..." : "Done"}
+            {getButtonText()}
           </button>
         </div>
       </header>

@@ -13,21 +13,28 @@ import {
   SquarePen,
   SlidersHorizontal,
   SettingsIcon,
+  Globe,
 } from "lucide-react";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../store/store";
 import { logout } from "../store/slices/authSlice";
+import { useTranslations } from "next-intl";
+import { useLocalizedNavigation } from "../utils/navigation";
+import { locales } from "../i18n/config";
 
 export default function Navbar() {
   const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [userDropdownOpen, setUserDropdownOpen] = useState(false);
+  const [languageDropdownOpen, setLanguageDropdownOpen] = useState(false);
 
   const dispatch = useDispatch();
   const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
   const user = useSelector((state: RootState) => state.user);
+  const t = useTranslations();
+  const { navigate, switchLocale, currentLocale } = useLocalizedNavigation();
 
   const toggleMobile = () => setMobileOpen(!mobileOpen);
   const toggleDropdown = (label: string) =>
@@ -37,7 +44,7 @@ export default function Navbar() {
     <header className="bg-[#edf0ff] sticky rounded-xl  top-0 z-50 p-4">
       <div className="mx-auto flex bg-gray-50 sticky rounded-xl items-center justify-between px-8 py-3">
         <div
-          onClick={() => router.push("/")}
+          onClick={() => navigate("/")}
           className="flex items-center gap-2 cursor-pointer"
         >
           <Image
@@ -51,63 +58,98 @@ export default function Navbar() {
         {/* Desktop Nav */}
         <nav className="hidden xl:flex gap-6 text-sm font-medium">
           <Dropdown
-            label="PDF CONVERTER"
+            label={t("navigation.pdfConverter")}
             icon={<ArrowRightSquare size={24} className="mr-2" />}
           >
             <MenuCategory
-              title="Convert from PDF"
+              title={t("navbar.convertFromPdf")}
               items={[
-                { label: "PDF to Word", route: "/pdf-to-word" },
-                { label: "PDF to PPTX", route: "/pdf-to-pptx" },
-                { label: "PDF to Excel", route: "/pdf-to-excel" },
-                { label: "PDF to JPG", route: "/pdf-to-jpg" },
-                { label: "PDF to PNG", route: "/pdf-to-png" },
+                { label: t("tools.pdfToWord"), route: "/pdf-to-word" },
+                { label: t("tools.pdfToPptx"), route: "/pdf-to-pptx" },
+                { label: t("tools.pdfToExcel"), route: "/pdf-to-excel" },
+                { label: t("tools.pdfToJpg"), route: "/pdf-to-jpg" },
+                { label: t("tools.pdfToPng"), route: "/pdf-to-png" },
               ]}
             />
             <MenuCategory
-              title="Convert to PDF"
+              title={t("navbar.convertToPdf")}
               items={[
-                { label: "Word to PDF", route: "/word-to-pdf" },
-                { label: "PPTX to PDF", route: "/pptx-to-pdf" },
-                { label: "Excel to PDF", route: "/excel-to-pdf" },
-                { label: "JPG to PDF", route: "/jpg-to-pdf" },
-                { label: "PNG to PDF", route: "/png-to-pdf" },
+                { label: t("tools.wordToPdf"), route: "/word-to-pdf" },
+                { label: t("tools.pptxToPdf"), route: "/pptx-to-pdf" },
+                { label: t("tools.excelToPdf"), route: "/excel-to-pdf" },
+                { label: t("tools.jpgToPdf"), route: "/jpg-to-pdf" },
+                { label: t("tools.pngToPdf"), route: "/png-to-pdf" },
               ]}
             />
           </Dropdown>
 
           <Dropdown
-            label="PDF EDITOR"
+            label={t("navigation.pdfEditor")}
             icon={<SquarePen size={24} className="mr-2" />}
           >
             <MenuCategory
-              title="Editing Tools"
+              title={t("navbar.editingTools")}
               items={[
-                { label: "Edit PDF", route: "/edit-pdf" },
-                { label: "Merge PDF", route: "/merge-pdf" },
-                { label: "Split PDF", route: "/split-pdf" },
-                { label: "Compress PDF", route: "/compress-pdf" },
+                { label: t("tools.editPdf"), route: "/edit-pdf" },
+                { label: t("tools.mergePdf"), route: "/merge-pdf" },
+                { label: t("tools.splitPdf"), route: "/split-pdf" },
+                { label: t("tools.compressPdf"), route: "/compress-pdf" },
               ]}
             />
           </Dropdown>
 
           <Dropdown
-            label="FORMS"
+            label={t("navigation.forms")}
             icon={<SlidersHorizontal size={24} className="mr-2" />}
           >
             <MenuCategory
-              title="Form Tools"
+              title={t("navbar.formTools")}
               items={[
-                { label: "Sign PDF", route: "/sign-pdf" },
-                { label: "Fill PDF", route: "/fill-pdf" },
-                { label: "Create Form", route: "/create-form" },
+                { label: t("tools.signPdf"), route: "/sign-pdf" },
+                { label: t("tools.fillPdf"), route: "/fill-pdf" },
+                { label: t("tools.createForm"), route: "/create-form" },
               ]}
             />
           </Dropdown>
         </nav>
 
-        {/* Desktop Log in */}
-        <div className="relative hidden xl:flex items-center">
+        {/* Desktop Log in and Language Switcher */}
+        <div className="relative hidden xl:flex items-center gap-4">
+          {/* Language Switcher */}
+          <div className="relative">
+            <button
+              onClick={() => setLanguageDropdownOpen(!languageDropdownOpen)}
+              className="flex items-center gap-2 px-3 py-2 text-sm text-gray-700 hover:text-blue-600 rounded-lg hover:bg-gray-100"
+            >
+              <Globe size={16} />
+              <span className="uppercase">{currentLocale}</span>
+              <ChevronDownIcon size={14} />
+            </button>
+            {languageDropdownOpen && (
+              <div
+                className="absolute top-full right-0 mt-2 w-32 bg-white shadow-xl rounded-xl p-2 z-50"
+                onMouseLeave={() => setLanguageDropdownOpen(false)}
+              >
+                {locales.map((locale) => (
+                  <button
+                    key={locale}
+                    onClick={() => {
+                      switchLocale(locale);
+                      setLanguageDropdownOpen(false);
+                    }}
+                    className={`w-full text-left px-3 py-2 text-sm rounded-lg hover:bg-gray-100 ${
+                      locale === currentLocale
+                        ? "bg-blue-50 text-blue-600"
+                        : "text-gray-700"
+                    }`}
+                  >
+                    {t(`languages.${locale}`)}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
           {isLoggedIn ? (
             <>
               <button
@@ -131,60 +173,60 @@ export default function Navbar() {
                     />
                     <div>
                       <p className="text-sm font-semibold text-gray-800">
-                        {user.email || "Profile Details"}
+                        {user.email || t("navbar.profileDetails")}
                       </p>
                       <p className="text-xs text-gray-500">
-                        {user.subscription?.plan || "No subscription"}
+                        {user.subscription?.plan || t("navbar.noSubscription")}
                       </p>
                     </div>
                   </div>
 
                   <button
-                    onClick={() => router.push("/upgrade-plan")}
+                    onClick={() => navigate("/upgrade-plan")}
                     className="w-full bg-blue-600 text-white rounded-lg py-2 text-sm font-semibold mb-4"
                   >
-                    Upgrade Plan
+                    {t("navbar.upgradePlan")}
                   </button>
 
                   <ul className="space-y-3 text-sm text-gray-700">
                     <li
-                      onClick={() => router.push("/files")}
+                      onClick={() => navigate("/files")}
                       className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
                     >
-                      <MenuIcon size={16} /> My Documents
+                      <MenuIcon size={16} /> {t("navbar.myDocuments")}
                     </li>
                     <li
-                      onClick={() => router.push("/my-account")}
+                      onClick={() => navigate("/my-account")}
                       className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
                     >
-                      <UserIcon size={16} /> My Account
+                      <UserIcon size={16} /> {t("navbar.myAccount")}
                     </li>
                     <li
-                      onClick={() => router.push("/help")}
+                      onClick={() => navigate("/help")}
                       className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
                     >
-                      <LockIcon size={16} /> Help
+                      <LockIcon size={16} /> {t("navbar.help")}
                     </li>
                     <li
-                      onClick={() => router.push("/terms")}
+                      onClick={() => navigate("/terms")}
                       className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
                     >
-                      <InfoIcon size={16} /> Terms & Conditions
+                      <InfoIcon size={16} /> {t("navbar.termsConditions")}
                     </li>
                     <li
-                      onClick={() => router.push("/settings")}
+                      onClick={() => navigate("/settings")}
                       className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
                     >
-                      <SettingsIcon size={16} /> Settings
+                      <SettingsIcon size={16} /> {t("navbar.settings")}
                     </li>
                     <li
                       onClick={() => {
                         dispatch(logout());
-                        router.push("/");
+                        navigate("/");
                       }}
                       className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
                     >
-                      <XIcon size={16} /> Log Out
+                      <XIcon size={16} /> {t("navbar.logOut")}
                     </li>
                   </ul>
                 </div>
@@ -192,11 +234,11 @@ export default function Navbar() {
             </>
           ) : (
             <button
-              onClick={() => router.push("/login")}
+              onClick={() => navigate("/login")}
               className="px-4 py-3 text-2xl bg-white border-2 text-[#3758F9] border-[#3758F9] rounded-xl flex items-center"
             >
               <LockIcon size={14} />
-              <span className="ml-1  font-medium">Log in</span>
+              <span className="ml-1  font-medium">{t("auth.signIn")}</span>
             </button>
           )}
         </div>
@@ -209,39 +251,64 @@ export default function Navbar() {
           {mobileOpen && (
             <div className="bg-white px-6 py-4 shadow-inner absolute top-20 left-0 w-full">
               <MobileMenuItem
-                label="PDF EDITOR"
+                label={t("navigation.pdfEditor")}
                 items={[
-                  { label: "Edit PDF", route: "/edit-pdf" },
-                  { label: "Sign PDF", route: "/sign-pdf" },
-                  { label: "Add watermark", route: "/add-watermark" },
-                  { label: "Rotate PDF", route: "/rotate-pdf" },
-                  { label: "Merge PDF", route: "/merge-pdf" },
-                  { label: "Split PDF", route: "/split-pdf" },
-                  { label: "Delete pages", route: "/delete-pages" },
-                  { label: "Compress PDF", route: "/compress-pdf" },
-                  { label: "Crop PDF", route: "/crop-pdf" },
+                  { label: t("tools.editPdf"), route: "/edit-pdf" },
+                  { label: t("tools.signPdf"), route: "/sign-pdf" },
+                  { label: t("tools.addWatermark"), route: "/add-watermark" },
+                  { label: t("tools.rotatePdf"), route: "/rotate-pdf" },
+                  { label: t("tools.mergePdf"), route: "/merge-pdf" },
+                  { label: t("tools.splitPdf"), route: "/split-pdf" },
+                  { label: t("tools.deletePages"), route: "/delete-pages" },
+                  { label: t("tools.compressPdf"), route: "/compress-pdf" },
+                  { label: t("tools.cropPdf"), route: "/crop-pdf" },
                 ]}
-                open={openDropdown === "PDF EDITOR"}
-                onToggle={() => toggleDropdown("PDF EDITOR")}
+                open={openDropdown === t("navigation.pdfEditor")}
+                onToggle={() => toggleDropdown(t("navigation.pdfEditor"))}
               />
               <MobileMenuItem
-                label="PDF CONVERTER"
+                label={t("navigation.pdfConverter")}
                 items={[
-                  { label: "PDF to Word", route: "/pdf-to-word" },
-                  { label: "Word to PDF", route: "/word-to-pdf" },
+                  { label: t("tools.pdfToWord"), route: "/pdf-to-word" },
+                  { label: t("tools.wordToPdf"), route: "/word-to-pdf" },
                 ]}
-                open={openDropdown === "PDF CONVERTER"}
-                onToggle={() => toggleDropdown("PDF CONVERTER")}
+                open={openDropdown === t("navigation.pdfConverter")}
+                onToggle={() => toggleDropdown(t("navigation.pdfConverter"))}
               />
               <MobileMenuItem
-                label="FORMS"
+                label={t("navigation.forms")}
                 items={[
-                  { label: "Sign PDF", route: "/sign-pdf" },
-                  { label: "Fill Form", route: "/fill-form" },
+                  { label: t("tools.signPdf"), route: "/sign-pdf" },
+                  { label: t("tools.fillForm"), route: "/fill-form" },
                 ]}
-                open={openDropdown === "FORMS"}
-                onToggle={() => toggleDropdown("FORMS")}
+                open={openDropdown === t("navigation.forms")}
+                onToggle={() => toggleDropdown(t("navigation.forms"))}
               />
+              {/* Language Switcher for Mobile */}
+              <div className="mb-4">
+                <p className="text-sm font-semibold text-gray-800 mb-2">
+                  {t("navigation.language")}
+                </p>
+                <div className="grid grid-cols-2 gap-2">
+                  {locales.map((locale) => (
+                    <button
+                      key={locale}
+                      onClick={() => {
+                        switchLocale(locale);
+                        setMobileOpen(false);
+                      }}
+                      className={`px-3 py-2 text-sm rounded-lg border ${
+                        locale === currentLocale
+                          ? "bg-blue-50 text-blue-600 border-blue-200"
+                          : "bg-white text-gray-700 border-gray-200 hover:bg-gray-50"
+                      }`}
+                    >
+                      {t(`languages.${locale}`)}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
               <hr className="my-4" />
               {isLoggedIn ? (
                 <div className="space-y-3 text-sm text-gray-700">
@@ -255,70 +322,70 @@ export default function Navbar() {
                     />
                     <div>
                       <p className="text-sm font-semibold text-gray-800">
-                        {user.email || "Profile Details"}
+                        {user.email || t("navbar.profileDetails")}
                       </p>
                       <p className="text-xs text-gray-500">
-                        {user.subscription?.plan || "No subscription"}
+                        {user.subscription?.plan || t("navbar.noSubscription")}
                       </p>
                     </div>
                   </div>
 
                   <button
-                    onClick={() => router.push("/upgrade-plan")}
+                    onClick={() => navigate("/upgrade-plan")}
                     className="w-full bg-blue-600 text-white rounded-lg py-2 text-sm font-semibold"
                   >
-                    Upgrade Plan
+                    {t("navbar.upgradePlan")}
                   </button>
 
                   <ul className="space-y-3 mt-3">
                     <li
-                      onClick={() => router.push("/files")}
+                      onClick={() => navigate("/files")}
                       className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
                     >
-                      <MenuIcon size={16} /> My Documents
+                      <MenuIcon size={16} /> {t("navbar.myDocuments")}
                     </li>
                     <li
-                      onClick={() => router.push("/my-account")}
+                      onClick={() => navigate("/my-account")}
                       className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
                     >
-                      <UserIcon size={16} /> My Account
+                      <UserIcon size={16} /> {t("navbar.myAccount")}
                     </li>
                     <li
-                      onClick={() => router.push("/help")}
+                      onClick={() => navigate("/help")}
                       className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
                     >
-                      <LockIcon size={16} /> Help
+                      <LockIcon size={16} /> {t("navbar.help")}
                     </li>
                     <li
-                      onClick={() => router.push("/terms")}
+                      onClick={() => navigate("/terms")}
                       className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
                     >
-                      <InfoIcon size={16} /> Terms & Conditions
+                      <InfoIcon size={16} /> {t("navbar.termsConditions")}
                     </li>
                     <li
-                      onClick={() => router.push("/settings")}
+                      onClick={() => navigate("/settings")}
                       className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
                     >
-                      <SettingsIcon size={16} /> Settings
+                      <SettingsIcon size={16} /> {t("navbar.settings")}
                     </li>
                     <li
                       onClick={() => {
                         dispatch(logout());
-                        router.push("/login");
+                        navigate("/");
                       }}
                       className="flex items-center gap-2 hover:text-blue-600 cursor-pointer"
                     >
-                      <XIcon size={16} /> Log Out
+                      <XIcon size={16} /> {t("navbar.logOut")}
                     </li>
                   </ul>
                 </div>
               ) : (
                 <button
-                  onClick={() => router.push("/login")}
+                  onClick={() => navigate("/login")}
                   className="px-4 py-2 text-md bg-white border-2 text-[#3758F9] border-[#3758F9] rounded-xl flex items-center"
                 >
                   <LockIcon size={14} />
-                  <span className="ml-1  font-medium">Log in</span>
+                  <span className="ml-1  font-medium">{t("auth.signIn")}</span>
                 </button>
               )}
             </div>
@@ -394,7 +461,7 @@ function MenuCategory({
   title: string;
   items: { label: string; route: string }[];
 }) {
-  const router = useRouter();
+  const { navigate } = useLocalizedNavigation();
   return (
     <div className="gap-8 w-max">
       <p className="font-medium text-[20px] mb-4 text-gray-700">{title}</p>
@@ -402,7 +469,7 @@ function MenuCategory({
         {items.map((item) => (
           <li
             key={item.route}
-            onClick={() => router.push(item.route)}
+            onClick={() => navigate(item.route)}
             className="text-[16px] text-gray-600 pb-4 hover:text-blue-600 cursor-pointer"
           >
             {item.label}
@@ -425,7 +492,7 @@ function MobileMenuItem({
   open: boolean;
   onToggle: () => void;
 }) {
-  const router = useRouter();
+  const { navigate } = useLocalizedNavigation();
   return (
     <div className="mb-3">
       <button
@@ -445,7 +512,7 @@ function MobileMenuItem({
           {items.map((item) => (
             <li
               key={item.route}
-              onClick={() => router.push(item.route)}
+              onClick={() => navigate(item.route)}
               className="text-sm text-gray-600 hover:text-blue-600 cursor-pointer"
             >
               {item.label}

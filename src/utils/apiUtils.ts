@@ -233,19 +233,29 @@ export const uploadEditedPDF = async (
 export const convertFile = async (
   endpoint: string,
   file: File,
-  onUploadProgress?: (progress: number) => void
+  onUploadProgress?: (progress: number) => void,
+  additionalData?: Record<string, any>
 ): Promise<string> => {
   try {
     const formData = new FormData();
-    formData.append('files', file);
+    formData.append("files", file);
+
+    // Add additional data if provided
+    if (additionalData) {
+      Object.entries(additionalData).forEach(([key, value]) => {
+        formData.append(key, value);
+      });
+    }
 
     const response: AxiosResponse<string> = await api.post(endpoint, formData, {
       headers: {
-        'Content-Type': 'multipart/form-data',
+        "Content-Type": "multipart/form-data",
       },
       onUploadProgress: (progressEvent) => {
         if (onUploadProgress && progressEvent.total) {
-          const progress = Math.round((progressEvent.loaded * 100) / progressEvent.total);
+          const progress = Math.round(
+            (progressEvent.loaded * 100) / progressEvent.total
+          );
           onUploadProgress(progress);
         }
       },
@@ -253,49 +263,60 @@ export const convertFile = async (
 
     return response.data;
   } catch (error) {
-    throw new Error('File conversion failed');
+    throw new Error("File conversion failed");
   }
 };
 
 // Specific conversion functions
 export const convertJpgToPdf = async (file: File): Promise<string> => {
-  return convertFile('/pdf/jpg_to_pdf', file);
+  return convertFile("/pdf/jpg_to_pdf", file);
 };
 
 export const convertWordToPdf = async (file: File): Promise<string> => {
-  return convertFile('/pdf/word_to_pdf', file);
+  return convertFile("/pdf/word_to_pdf", file);
 };
 
 export const convertPdfToWord = async (file: File): Promise<string> => {
-  return convertFile('/pdf/pdf_to_word', file);
+  return convertFile("/pdf/pdf_to_word", file);
 };
 
 export const convertPdfToPng = async (file: File): Promise<string> => {
-  return convertFile('/pdf/pdf_to_png', file);
+  return convertFile("/pdf/pdf_to_png", file);
 };
 
 export const convertPngToPdf = async (file: File): Promise<string> => {
-  return convertFile('/pdf/png_to_pdf', file);
+  return convertFile("/pdf/png_to_pdf", file);
 };
 
 export const convertPdfToPptx = async (file: File): Promise<string> => {
-  return convertFile('/pdf/pdf_to_pptx', file);
+  return convertFile("/pdf/pdf_to_pptx", file);
 };
 
 export const convertPdfToJpg = async (file: File): Promise<string> => {
-  return convertFile('/pdf/pdf_to_jpg', file);
+  return convertFile("/pdf/pdf_to_jpg", file);
 };
 
 export const convertPdfToExcel = async (file: File): Promise<string> => {
-  return convertFile('/pdf/pdf_to_excel', file);
+  return convertFile("/pdf/pdf_to_excel", file);
 };
 
 export const convertPdfToEpub = async (file: File): Promise<string> => {
-  return convertFile('/pdf/pdf_to_epub', file);
+  return convertFile("/pdf/pdf_to_epub", file);
 };
 
 export const convertEpubToPdf = async (file: File): Promise<string> => {
-  return convertFile('/pdf/epub_to_pdf', file);
+  return convertFile("/pdf/epub_to_pdf", file);
+};
+
+export const compressPdf = async (
+  file: File,
+  compressionLevel: number
+): Promise<string> => {
+  const response = await convertFile("/pdf/compress_pdf", file, undefined, {
+    level: compressionLevel,
+  });
+  // Extract just the filename from the response object
+  return (response as any).file;
 };
 
 // Subscription API functions
@@ -347,27 +368,6 @@ export const createStripeSubscription = async (
   }
 };
 
-// Utility functions for working with saved PDF data
-export const downloadSavedPdf = (base64Data: string, fileName: string): void => {
-  // Convert base64 to Blob
-  const byteCharacters = atob(base64Data.split(',')[1]);
-  const byteNumbers = new Array(byteCharacters.length);
-  for (let i = 0; i < byteCharacters.length; i++) {
-    byteNumbers[i] = byteCharacters.charCodeAt(i);
-  }
-  const byteArray = new Uint8Array(byteNumbers);
-  const blob = new Blob([byteArray], { type: 'application/pdf' });
-  
-  const url = window.URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = fileName;
-  
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  window.URL.revokeObjectURL(url);
-};
 
 export const getSavedPdfUrl = (base64Data: string): string => {
   return base64Data; // base64 data can be used directly as URL

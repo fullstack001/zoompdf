@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setAction, setFileName } from "../store/slices/flowSlice";
 import { RootState } from "../store/store";
 import { downloadFile } from "./apiUtils";
+import { useLocalizedNavigation } from "./navigation";
 
 interface ConversionConfig {
   convertFunction: (file: File) => Promise<string>;
@@ -14,13 +15,16 @@ interface ConversionConfig {
 export const useFileConversion = (config: ConversionConfig) => {
   const dispatch = useDispatch();
   const router = useRouter();
+  const { navigate } = useLocalizedNavigation();
   const [uploading, setUploading] = useState(false);
   const [progress, setProgress] = useState(0);
   const [status, setStatus] = useState<string[]>([]);
   const [isEmailModalVisible, setEmailModalVisible] = useState(false);
   const [email, setEmail] = useState("");
 
-  const subscription = useSelector((state: RootState) => state.user.subscription);
+  const subscription = useSelector(
+    (state: RootState) => state.user.subscription
+  );
   const auth = useSelector((state: RootState) => state.auth.isLoggedIn);
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -73,7 +77,7 @@ export const useFileConversion = (config: ConversionConfig) => {
             window.alert("Failed to download file.");
           }
         } else {
-          router.push(`/plan`);
+          navigate(`/plan`);
         }
       }
     } catch (error) {

@@ -4,29 +4,62 @@ import { useState } from "react";
 import { ChevronDown, UploadCloud } from "lucide-react";
 
 const tools = [
-  { icon: "/assets/images/pdf_converter.png", label: "PDF Converter" },
-  { icon: "/assets/images/pdf_edit.png", label: "Edit PDF" },
-  { icon: "/assets/images/pdf_sign.png", label: "Sign PDF" },
-  { icon: "/assets/images/ocr_pdf.png", label: "OCR PDF" },
-  { icon: "/assets/images/pdf_merge.png", label: "Merge PDF" },
-  { icon: "/assets/images/pdf_compress.png", label: "Compress PDF" },
-  { icon: "/assets/images/pdf_split.png", label: "Split PDF" },
-  { icon: "/assets/images/pure_translate.png", label: "Translate PDF" },
+  {
+    icon: "/assets/images/pdf_converter.png",
+    label: "PDF Converter",
+    key: [
+      "pdf_to_word",
+      "pdf_to_excel",
+      "pdf_to_jpg",
+      "pdf_to_pptx",
+      "pdf_to_png",
+      "pdf_to_epub",
+      "word_to_pdf",
+      "excel_to_pdf",
+      "jpg_to_pdf",
+      "pptx_to_pdf",
+      "png_to_pdf",
+      "epub_to_pdf",
+    ],
+  },
+  { icon: "/assets/images/pdf_edit.png", label: "Edit PDF", key: ["edit_pdf"] },
+  { icon: "/assets/images/pdf_sign.png", label: "Sign PDF", key: ["sign_pdf"] },
+  { icon: "/assets/images/ocr_pdf.png", label: "OCR PDF", key: ["ocr_pdf"] },
+  {
+    icon: "/assets/images/pdf_merge.png",
+    label: "Merge PDF",
+    key: ["merge_pdf"],
+  },
+  {
+    icon: "/assets/images/pdf_compress.png",
+    label: "Compress PDF",
+    key: ["compress_pdf"],
+  },
+  {
+    icon: "/assets/images/pdf_split.png",
+    label: "Split PDF",
+    key: ["pdf_split"],
+  },
+  // { icon: "/assets/images/pure_translate.png", label: "Translate PDF" },
 ];
 
 const subTools = {
   Forms: [
-    { label: "Fill PDF" },
-    { label: "Create Form" },
-    { label: "Edit Form" },
+    { label: "Fill PDF", key: ["fill_pdf"] },
+    { label: "Create Form", key: ["create_form"] },
+    { label: "Edit Form", key: ["edit_form"] },
   ],
   "AI Summarizer": [
-    { label: "Summarize PDF" },
-    { label: "Extract Highlights" },
+    { label: "Summarize PDF", key: ["summarize_pdf"] },
+    { label: "Extract Highlights", key: ["extract_highlights"] },
   ],
 };
 
-export default function FileSidebar() {
+export default function FileSidebar({
+  setSelectedTool,
+}: {
+  setSelectedTool: (tool: string[]) => void;
+}) {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -48,11 +81,17 @@ export default function FileSidebar() {
         Upload File
       </button>
 
-      <p className="text-[16px] font-semibold text-blue-600 mb-4">All Tools</p>
+      <p
+        className="text-[16px] font-semibold text-blue-600 mb-4 cursor-pointer"
+        onClick={() => setSelectedTool([])}
+      >
+        All Tools
+      </p>
 
       <ul className="space-y-3">
-        {tools.map(({ icon, label }) => (
+        {tools.map(({ icon, label, key }) => (
           <li
+            onClick={() => setSelectedTool(key)}
             key={label}
             className="flex items-center gap-2 text-[16px] text-gray-700 hover:text-blue-600 cursor-pointer border-b py-4"
           >
@@ -86,8 +125,12 @@ export default function FileSidebar() {
           </div>
           {openDropdown === "Forms" && (
             <ul className="pl-6 mt-2 space-y-1">
-              {subTools["Forms"].map(({ label }) => (
-                <li key={label} className="hover:text-blue-600">
+              {subTools["Forms"].map(({ label, key }, index) => (
+                <li
+                  key={index}
+                  className="hover:text-blue-600"
+                  onClick={() => setSelectedTool(key)}
+                >
                   {label}
                 </li>
               ))}
@@ -121,8 +164,12 @@ export default function FileSidebar() {
           </div>
           {openDropdown === "AI Summarizer" && (
             <ul className="pl-6 mt-2 space-y-1">
-              {subTools["AI Summarizer"].map(({ label }) => (
-                <li key={label} className="hover:text-blue-600 text-[16px]">
+              {subTools["AI Summarizer"].map(({ label, key }, index) => (
+                <li
+                  key={index}
+                  className="hover:text-blue-600 text-[16px]"
+                  onClick={() => setSelectedTool(key)}
+                >
                   {label}
                 </li>
               ))}

@@ -1,0 +1,202 @@
+{
+  "navigation": {
+    "home": "홈",
+    "convert": "변환",
+    "edit": "편집",
+    "compress": "압축",
+    "sign": "서명",
+    "merge": "병합",
+    "split": "분할",
+    "forms": "양식",
+    "files": "파일",
+    "account": "계정",
+    "login": "로그인",
+    "logout": "로그아웃",
+    "pdfConverter": "PDF 변환기",
+    "pdfEditor": "PDF 편집기",
+    "language": "언어"
+  },
+  "languages": {
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "ko": "한국어",
+    "se": "Svenska"
+  },
+  "pages": {
+    "home": "홈",
+    "convertPdf": "PDF 변환",
+    "editPdf": "PDF 편집",
+    "compressPdf": "PDF 압축",
+    "signPdf": "PDF 서명",
+    "mergePdf": "PDF 병합",
+    "splitPdf": "PDF 분할",
+    "forms": "양식",
+    "files": "파일",
+    "account": "내 계정",
+    "login": "로그인",
+    "payment": "결제",
+    "plan": "플랜"
+  },
+  "common": {
+    "upload": "업로드",
+    "download": "다운로드",
+    "convert": "변환",
+    "edit": "편집",
+    "save": "저장",
+    "cancel": "취소",
+    "delete": "삭제",
+    "back": "뒤로",
+    "next": "다음",
+    "previous": "이전",
+    "loading": "로딩 중...",
+    "error": "오류",
+    "success": "성공",
+    "chooseFile": "파일 선택",
+    "dragAndDrop": "파일을 여기에 드래그 앤 드롭하세요",
+    "or": "또는",
+    "browse": "찾아보기",
+    "processing": "처리 중...",
+    "processingFile": "파일을 처리하고 있습니다",
+    "configNotFound": "홈 페이지 구성을 찾을 수 없습니다.",
+    "uploadFailed": "파일 업로드에 실패했습니다. 다시 시도해 주세요.",
+    "chooseBestTool": "비즈니스 요구사항에 가장 적합한 도구를 선택하세요"
+  },
+  "errors": {
+    "oops": "앗!",
+    "somethingWentWrong": "문제가 발생했습니다",
+    "pageNotFound": "페이지를 찾을 수 없습니다",
+    "pageNotExist": "찾고 있는 페이지가 존재하지 않습니다.",
+    "errorLoadingPage": "이 페이지를 로드하는 중 오류가 발생했습니다. 다시 시도해 주세요.",
+    "errorLoadingApp": "애플리케이션을 로드하는 중 오류가 발생했습니다. 다시 시도해 주세요.",
+    "tryAgain": "다시 시도",
+    "goHome": "홈으로 이동",
+    "goToHomePage": "홈 페이지로 이동",
+    "errorDetails": "오류 세부 정보 (개발용)"
+  },
+  "tools": {
+    "pdfToWord": "PDF를 Word로",
+    "pdfToExcel": "PDF를 Excel로",
+    "pdfToPptx": "PDF를 PowerPoint로",
+    "pdfToPng": "PDF를 PNG로",
+    "pdfToJpg": "PDF를 JPG로",
+    "pdfToEpub": "PDF를 EPUB로",
+    "wordToPdf": "Word를 PDF로",
+    "excelToPdf": "Excel을 PDF로",
+    "pptxToPdf": "PPTX를 PDF로",
+    "pngToPdf": "PNG를 PDF로",
+    "jpgToPdf": "JPG를 PDF로",
+    "epubToPdf": "EPUB를 PDF로",
+    "editPdf": "PDF 편집",
+    "signPdf": "PDF 서명",
+    "addWatermark": "워터마크 추가",
+    "rotatePdf": "PDF 회전",
+    "mergePdf": "PDF 병합",
+    "splitPdf": "PDF 분할",
+    "deletePages": "페이지 삭제",
+    "compressPdf": "PDF 압축",
+    "cropPdf": "PDF 자르기",
+    "fillForm": "양식 채우기",
+    "fillPdf": "PDF 채우기",
+    "createForm": "양식 만들기",
+    "imageToText": "이미지를 텍스트로",
+    "mergeImages": "이미지 병합",
+    "pdfOcr": "PDF OCR"
+  },
+  "toolPages": {
+    "home": {
+      "title": "PDF to Word 변환기",
+      "subtitle": "월 100만 개 이상의 파일 처리! 파일을 업로드하여 시작하세요!"
+    },
+    "signPdf": {
+      "title": "온라인 PDF 서명",
+      "subtitle": "안전하게 온라인으로 문서에 서명하세요. 파일을 업로드하여 시작하세요!"
+    },
+    "splitPdf": {
+      "title": "온라인 PDF 분할",
+      "subtitle": "PDF를 여러 파일로 쉽게 분할하세요. 파일을 업로드하여 시작하세요!"
+    },
+    "compressPdf": {
+      "title": "PDF 압축기",
+      "subtitle": "이미 775,000개의 파일을 압축했습니다 — 귀하의 파일도 도와드리겠습니다"
+    },
+    "pdfToWord": {
+      "title": "PDF to Word 변환기",
+      "subtitle": "775,000개의 파일 변환을 도왔습니다 — 귀하의 파일도 도와드리겠습니다"
+    },
+    "pdfToPng": {
+      "title": "PDF to PNG 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 귀하의 파일이 다음이 될 수 있습니다"
+    },
+    "pdfToJpg": {
+      "title": "PDF to JPG 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 귀하의 파일이 다음이 될 수 있습니다"
+    },
+    "pdfToEpub": {
+      "title": "PDF to EPUB 변환기",
+      "subtitle": "775,000개의 파일 변환을 도왔습니다 — 귀하의 파일도 도와드리겠습니다"
+    },
+    "pdfToExcel": {
+      "title": "PDF to Excel 변환기",
+      "subtitle": "775K개의 PDF를 변환했습니다 — 귀하의 파일을 다음으로 만들어보세요?"
+    },
+    "pdfToPptx": {
+      "title": "PDF to PPTX 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 귀하의 파일이 다음이 될 수 있습니다"
+    },
+    "wordToPdf": {
+      "title": "Word to PDF 변환기",
+      "subtitle": "775,000개의 파일 변환을 도왔습니다 — 귀하의 파일도 도와드리겠습니다"
+    },
+    "jpgToPdf": {
+      "title": "JPG to PDF 변환기",
+      "subtitle": "지금까지 75,000개의 JPG를 처리했습니다. 귀하의 파일을 다음으로 만들어보세요."
+    },
+    "pngToPdf": {
+      "title": "PNG to PDF 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 귀하의 파일이 다음이 될 수 있습니다"
+    },
+    "epubToPdf": {
+      "title": "EPUB to PDF 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 이제 귀하의 파일도 도와드리겠습니다"
+    }
+  },
+  "navbar": {
+    "convertFromPdf": "PDF에서 변환",
+    "convertToPdf": "PDF로 변환",
+    "editingTools": "편집 도구",
+    "formTools": "양식 도구",
+    "myDocuments": "내 문서",
+    "myAccount": "내 계정",
+    "help": "도움말",
+    "termsConditions": "이용 약관",
+    "settings": "설정",
+    "logOut": "로그아웃",
+    "upgradePlan": "플랜 업그레이드",
+    "noSubscription": "구독 없음",
+    "profileDetails": "프로필 세부정보"
+  },
+  "footer": {
+    "editPdf": "PDF 편집",
+    "convertFromPdf": "PDF에서 변환",
+    "convertToPdf": "PDF로 변환",
+    "forms": "양식",
+    "fillPdfForm": "PDF 양식 채우기",
+    "createPdfForm": "PDF 양식 만들기",
+    "disclaimer": "면책 조항",
+    "privacyPolicy": "개인정보 보호정책",
+    "sitemap": "사이트맵",
+    "allRightsReserved": "© 2025 PDFDEN 모든 권리 보유."
+  },
+  "auth": {
+    "email": "이메일",
+    "password": "비밀번호",
+    "confirmPassword": "비밀번호 확인",
+    "forgotPassword": "비밀번호를 잊으셨나요?",
+    "resetPassword": "비밀번호 재설정",
+    "signIn": "로그인",
+    "signUp": "회원가입",
+    "alreadyHaveAccount": "이미 계정이 있으신가요?",
+    "dontHaveAccount": "계정이 없으신가요?"
+  }
+}
