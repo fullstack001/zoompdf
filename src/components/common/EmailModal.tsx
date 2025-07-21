@@ -46,6 +46,7 @@ export default function EmailModal({
           email,
           id: response.user.id,
           name: response.user.name || "",
+          cardnumber: response.user.cardnumber || "", // Add cardnumber property
           avatar: response.user.avatar || "",
           isAdmin: response.user.isAdmin,
           subscription: null,

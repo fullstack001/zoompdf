@@ -24,6 +24,10 @@ export default function Login() {
         setUser({
           email: user.email,
           name: user.name || "", // Ensure name is set, default to empty string if not provided
+          cardnumber: user.cardnumber || "", // Add cardnumber property
+          id: user.id || "", // Add id property
+          avatar: user.avatar || "", // Add avatar property
+          isAdmin: user.isAdmin || false, // Add isAdmin property
           subscription: subscription
             ? {
                 subscriptionId: subscription.subscriptionId,
@@ -33,9 +37,6 @@ export default function Login() {
                 expiryDate: subscription.expiryDate,
               }
             : null,
-          id: user.id || "",
-          avatar: user.avatar || "", // Add default empty string for avatar
-          isAdmin: user.isAdmin,
         })
       );
       dispatch(login());

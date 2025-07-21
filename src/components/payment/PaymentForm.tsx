@@ -78,6 +78,10 @@ export default function PaymentForm({
           setUser({
             name: user.name as string,
             email: user.email as string,
+            cardnumber: (user.cardnumber as string) || "", // Add cardnumber property
+            id: user.id as string,
+            avatar: (user.avatar as string) || "", // Add avatar property
+            isAdmin: (user.isAdmin as boolean) || false, // Add isAdmin property
             subscription: subscription
               ? {
                   subscriptionId: subscription.subscriptionId as string,
@@ -87,9 +91,6 @@ export default function PaymentForm({
                   expiryDate: subscription.expiryDate as string,
                 }
               : null,
-            id: user.id as string,
-            avatar: user.avatar as string,
-            isAdmin: user.isAdmin as boolean,
           })
         );
         dispatch(login());

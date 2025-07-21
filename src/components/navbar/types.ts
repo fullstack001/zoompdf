@@ -12,6 +12,7 @@ export interface MenuCategory {
 
 export interface User {
   email?: string;
+  cardnumber?: string; // Add cardnumber property
   avatar?: string;
   subscription?: {
     plan?: string;

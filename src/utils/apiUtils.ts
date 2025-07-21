@@ -5,6 +5,7 @@ export interface User {
   email: string;
   name?: string;
   id: string;
+  cardnumber?: string; // Add cardnumber property
   avatar?: string;
   isAdmin: boolean;
 }

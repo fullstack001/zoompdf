@@ -26,7 +26,13 @@ export default function PersistLogin() {
 
           const { token, user, subscription } = response.data;
           localStorage.setItem("authToken", token);
-          dispatch(setUser({ ...user, subscription }));
+          dispatch(
+            setUser({
+              ...user,
+              cardnumber: user.cardnumber || "", // Ensure cardnumber is included
+              subscription,
+            })
+          );
           dispatch(login());
         }
       } catch (error) {
