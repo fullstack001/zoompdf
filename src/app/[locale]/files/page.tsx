@@ -44,7 +44,7 @@ export default function FileListPage() {
   return (
     <div className="bg-gray-50 min-h-screen">
       <Navbar />
-      <div className="flex flex-col lg:flex-row mx-auto mt-8 gap-6 px-4">
+      <div className="flex flex-col lg:flex-row mx-auto  gap-6 px-4">
         <FileSidebar setSelectedTool={setSelectedTool} />
         <main className="flex-1">
           <FileListTable files={files} /> {/* Updated component */}

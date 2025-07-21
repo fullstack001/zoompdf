@@ -12,7 +12,7 @@ export default function FeatureCTA() {
       <div className="mx-auto flex flex-col xl:flex-row justify-between items-center gap-6 md:gap-12 lg:gap-24">
         <Image
           src="/assets/images/feature-cta.png"
-          alt="PDFDen illustration"
+          alt="PDFEZY illustration"
           width={408}
           height={0}
           style={{ height: "auto" }}

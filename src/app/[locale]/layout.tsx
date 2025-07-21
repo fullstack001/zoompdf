@@ -1,7 +1,6 @@
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Providers } from "../providers";
-import { FileProvider } from "../../contexts/FileContext";
 import LanguageSetter from "./LanguageSetter";
 
 export default async function LocaleLayout({
@@ -17,10 +16,8 @@ export default async function LocaleLayout({
   return (
     <NextIntlClientProvider messages={messages}>
       <Providers>
-        <FileProvider>
-          <LanguageSetter locale={locale} />
-          {children}
-        </FileProvider>
+        <LanguageSetter locale={locale} />
+        {children}
       </Providers>
     </NextIntlClientProvider>
   );

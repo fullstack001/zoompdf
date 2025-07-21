@@ -14,9 +14,9 @@ import CoreValues from "@/components/landing/CoreValues";
 import FAQ from "@/components/landing/FAQ";
 import Footer from "@/components/Footer";
 import { useTranslations } from "next-intl";
+import { uploadEditedPDF } from "@/utils/apiUtils";
 
-import { setAction } from "../../store/slices/flowSlice";
-import { useFileContext } from "@/contexts/FileContext";
+import { setAction, setFileName } from "../../store/slices/flowSlice";
 
 interface ToolLandingPageProps {
   titleKey: string;
@@ -30,10 +30,10 @@ export default function ToolLandingPage({
   action,
 }: ToolLandingPageProps) {
   const dispatch = useDispatch();
-  const { uploadFile, isLoading, progress, setNavigatingToEditor } =
-    useFileContext();
   const { navigate } = useLocalizedNavigation();
   const [uploadError, setUploadError] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [progress, setProgress] = useState(0);
   const t = useTranslations();
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -41,17 +41,31 @@ export default function ToolLandingPage({
     if (selectedFile) {
       try {
         setUploadError(null);
-        console.log("Starting file upload:", selectedFile.name);
-        await uploadFile(selectedFile);
-        console.log("File uploaded successfully, navigating to editor");
-        dispatch(setAction(action));
+        setIsLoading(true);
+        setProgress(0);
 
-        // Set flag to prevent file cleanup during navigation
-        setNavigatingToEditor(true);
+        console.log("Starting file upload:", selectedFile.name);
+
+        // Upload the file using uploadEditedPDF
+        const response = await uploadEditedPDF(
+          selectedFile,
+          (progressPercent) => {
+            setProgress(progressPercent);
+          }
+        );
+
+        console.log("File uploaded successfully:", response);
+        dispatch(setAction(action));
+        dispatch(setFileName(response));
+
+        // Navigate to editor
         navigate("/editor");
       } catch (error) {
         console.error("Upload failed:", error);
         setUploadError(t("common.uploadFailed"));
+      } finally {
+        setIsLoading(false);
+        setProgress(0);
       }
     }
   };

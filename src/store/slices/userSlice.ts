@@ -4,6 +4,7 @@ interface UserState {
   id: string;
   name: string; // Add name to UserState
   email: string;
+  cardnumber: string; // Add cardnumber to UserState
   avatar: string;
   isAdmin: boolean;
   subscription: {
@@ -19,6 +20,7 @@ const initialState: UserState = {
   id: "",
   name: "", // Initialize name
   email: "",
+  cardnumber: "", // Initialize cardnumber
   avatar: "",
   isAdmin: false,
   subscription: null,
@@ -32,6 +34,7 @@ const userSlice = createSlice({
       state.id = action.payload.id;
       state.name = action.payload.name; // Set name
       state.email = action.payload.email;
+      state.cardnumber = action.payload.cardnumber; // Set cardnumber
       state.avatar = action.payload.avatar;
       state.isAdmin = action.payload.isAdmin;
       state.subscription = action.payload.subscription;
@@ -40,6 +43,7 @@ const userSlice = createSlice({
       state.id = "";
       state.name = ""; // Clear name
       state.email = "";
+      state.cardnumber = ""; // Clear cardnumber
       state.avatar = "";
       state.isAdmin = false;
       state.subscription = null;

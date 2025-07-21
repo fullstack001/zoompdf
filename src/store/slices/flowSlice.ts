@@ -31,9 +31,14 @@ const flowSlice = createSlice({
     setAction(state, action: PayloadAction<string>) {
       state.action = action.payload;
     },
-    setEditedPdf(state, action: PayloadAction<{
-      [x: string]: string | null; data: string; fileName: string 
-}>) {
+    setEditedPdf(
+      state,
+      action: PayloadAction<{
+        [x: string]: string | null;
+        data: string;
+        fileName: string;
+      }>
+    ) {
       state.editedPdfData = action.payload.data;
       state.editedPdfFileName = action.payload.fileName;
       state.editedPdfConverter = action.payload.converter;
@@ -43,8 +48,23 @@ const flowSlice = createSlice({
       state.editedPdfFileName = "";
       state.editedPdfConverter = null;
     },
+    clearFlow(state) {
+      state.fileName = "";
+      state.plan = null;
+      state.action = null;
+      state.editedPdfData = null;
+      state.editedPdfFileName = "";
+      state.editedPdfConverter = null;
+    },
   },
 });
 
-export const { setFileName, setPlan, setAction, setEditedPdf, clearEditedPdf } = flowSlice.actions;
+export const {
+  setFileName,
+  setPlan,
+  setAction,
+  setEditedPdf,
+  clearEditedPdf,
+  clearFlow,
+} = flowSlice.actions;
 export default flowSlice.reducer;

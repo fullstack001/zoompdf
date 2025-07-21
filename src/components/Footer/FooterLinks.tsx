@@ -90,7 +90,7 @@ export default function FooterLinks() {
   }, []);
 
   return (
-    <div className="lg:col-span-4">
+    <div>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-8">
         {footerLinksData.map((section, i) => (
           <div

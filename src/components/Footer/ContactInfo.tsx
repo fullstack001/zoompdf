@@ -25,7 +25,7 @@ export default function ContactInfo() {
           </div>
           <div className="text-center sm:text-left">
             <p className="font-medium text-gray-900">{t("footer.email")}</p>
-            <p className="text-gray-600">support@pdfden.com</p>
+            <p className="text-gray-600">support@pdfezy.com</p>
           </div>
         </div>
         <div className="flex items-center justify-center sm:justify-start space-x-3">

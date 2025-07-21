@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useLocalizedNavigation } from "@/utils/navigation";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import MultiFileUploadSection from "@/components/common/MultiFileUploadSection";
 import { UploadedFile } from "@/components/common/types";
 import FeatureItems from "@/components/common/FeatureItems";
@@ -18,16 +18,18 @@ import { useTranslations } from "next-intl";
 import { PDFDocument } from "pdf-lib";
 
 import { setAction } from "../../../store/slices/flowSlice";
-import { useFileContext } from "@/contexts/FileContext";
+import { RootState } from "@/store/store";
+import { uploadEditedPDF } from "@/utils/apiUtils";
+import { setFileName } from "@/store/slices/flowSlice";
 
 export default function MergePDFPage() {
   const dispatch = useDispatch();
-  const { uploadFile, isLoading, progress, setNavigatingToEditor } =
-    useFileContext();
+  const [progress, setProgress] = useState(0);
   const { navigate } = useLocalizedNavigation();
   const [selectedFiles, setSelectedFiles] = useState<UploadedFile[]>([]);
   const [uploadError, setUploadError] = useState<string | null>(null);
   const [isMerging, setIsMerging] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const t = useTranslations();
 
   const handleFilesChange = (files: UploadedFile[]) => {
@@ -51,6 +53,7 @@ export default function MergePDFPage() {
   };
 
   const handleMergeFiles = async () => {
+    setIsLoading(true);
     if (selectedFiles.length < 2) {
       setUploadError(t("mergePdf.minFilesError"));
       return;
@@ -71,20 +74,22 @@ export default function MergePDFPage() {
 
       console.log("PDFs merged successfully, uploading merged file");
 
-      // Upload the single merged file
-      await uploadFile(mergedFile);
+      const response = await uploadEditedPDF(mergedFile, (progressPercent) => {
+        setProgress(progressPercent);
+      });
+
+      dispatch(setFileName(response));
 
       console.log("Merged file uploaded successfully, navigating to editor");
       dispatch(setAction("edit_pdf"));
 
-      // Set flag to prevent file cleanup during navigation
-      setNavigatingToEditor(true);
       navigate("/editor");
     } catch (error) {
       console.error("Merge or upload failed:", error);
       setUploadError(t("common.uploadFailed"));
     } finally {
       setIsMerging(false);
+      setIsLoading(false);
     }
   };
 
@@ -125,13 +130,11 @@ export default function MergePDFPage() {
       <CoreValues />
       <FAQ />
       <Footer />
-      {(isLoading || isMerging) && (
+      {isLoading && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white rounded-xl w-full max-w-md p-8 text-center shadow-xl">
             <h3 className="text-xl font-bold mb-6">
-              {isMerging
-                ? t("mergePdf.mergingFiles")
-                : t("mergePdf.processingFiles")}
+              {t("mergePdf.processingFiles")}
             </h3>
             <Image
               src="/assets/images/processing.png"
@@ -141,19 +144,13 @@ export default function MergePDFPage() {
               style={{ height: "auto" }}
               className="mx-auto mb-4"
             />
-            {!isMerging && (
-              <>
-                <div className="text-gray-700 font-semibold mb-2">
-                  {progress}%
-                </div>
-                <div className="w-full h-2 rounded-full bg-gray-200">
-                  <div
-                    className="h-2 bg-blue-500 rounded-full transition-all duration-300 ease-out"
-                    style={{ width: `${progress}%` }}
-                  ></div>
-                </div>
-              </>
-            )}
+            <div className="text-gray-700 font-semibold mb-2">{progress}%</div>
+            <div className="w-full h-2 rounded-full bg-gray-200">
+              <div
+                className="h-2 bg-blue-500 rounded-full transition-all duration-300 ease-out"
+                style={{ width: `${progress}%` }}
+              ></div>
+            </div>
           </div>
         </div>
       )}

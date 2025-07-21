@@ -65,9 +65,6 @@ export default function LanguageSelector() {
     <>
       {/* Language Selector Button */}
       <div className="space-y-3">
-        <h4 className="text-lg font-semibold text-gray-900">
-          {t("footer.language")}
-        </h4>
         <button
           onClick={() => setIsLanguageModalOpen(true)}
           className="flex items-center justify-center sm:justify-start lg:justify-start space-x-2 px-4 py-3 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:border-gray-400 transition-colors duration-200 text-sm font-medium text-gray-700"

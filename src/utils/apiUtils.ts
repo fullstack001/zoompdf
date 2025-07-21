@@ -221,6 +221,17 @@ export const uploadEditedPDF = async (
   }
 };
 
+export const deletePdfByFileName = async (fileName: string): Promise<void> => {
+  try {
+    const response: AxiosResponse<void> = await api.delete(
+      `/pdf/delete-by-filename/${fileName}`
+    );
+    return response.data;
+  } catch (error) {
+    throw new Error("Failed to delete PDF", { cause: error });
+  }
+};
+
 // File conversion API functions
 export const convertFile = async (
   endpoint: string,

@@ -11,7 +11,6 @@ import { setFileName } from "../../store/slices/flowSlice";
 import { RootState } from "../../store/store";
 import EmailModal from "../common/EmailModal";
 import type { PDFViewerRef } from "../pdfviewer/PDFViewer";
-import { useFileContext } from "@/contexts/FileContext";
 import {
   uploadEditedPDF,
   convertPdfToPng,
@@ -19,6 +18,7 @@ import {
   convertPdfToJpg,
   convertPdfToExcel,
   convertPdfToPptx,
+  deletePdfByFileName
 } from "../../utils/apiUtils";
 import SelectFormatModal from "./SelectFormatModal";
 import ProgressModal from "./ProgressModal";
@@ -32,7 +32,7 @@ interface TopbarProps {
 export default function Topbar({ pdfViewerRef }: TopbarProps) {
   const dispatch = useDispatch();
   const router = useRouter();
-  const { uploadedFile, clearFile } = useFileContext();
+  const originalFileName = useSelector((state: RootState) => state.flow.fileName);
   const action = useSelector((state: RootState) => state.flow.action);
   const [showModal, setShowModal] = useState(false);
   const [showProgress, setShowProgress] = useState(false);
@@ -40,7 +40,7 @@ export default function Topbar({ pdfViewerRef }: TopbarProps) {
   const [progress, setProgress] = useState(0);
   const [selected, setSelected] = useState("PDF");
   const [filename, setFilename] = useState(
-    uploadedFile?.originalName?.split(".")[0] || "document"
+    originalFileName?.split(".")[0] || "document"
   );
   const [email, setEmail] = useState("");
   const [saving, setSaving] = useState(false);
@@ -93,6 +93,7 @@ export default function Topbar({ pdfViewerRef }: TopbarProps) {
       }
 
       setSaving(true);
+      deletePdfByFileName(originalFileName);
 
       // Export the PDF from PSPDFKit
       const pdfBuffer = await pdfViewerRef.current.exportPDF();
