@@ -93,11 +93,7 @@ export default function ToolLandingPage({
             localStorage.setItem("tempAuthToken", authToken);
           }
 
-          // Redirect to edit.pdfezy.com with the uploaded file and return URL
-          const returnUrl = encodeURIComponent(
-            `${window.location.origin}/${currentLocale}/success-edit`
-          );
-          const editUrl = `https://edit.pdfezy.com?file=${result.processingId}&return_url=${returnUrl}`;
+          const editUrl = `https://edit.pdfezy.com?file=${result.processingId}`;
           window.location.href = editUrl;
         } else {
           // Show error for non-PDF files

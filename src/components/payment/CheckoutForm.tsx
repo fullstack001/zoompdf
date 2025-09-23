@@ -197,7 +197,10 @@ function CheckoutForm({
         />
       </div>
       <button
-        onClick={createSubscription}
+        onClick={() => {
+          console.log("Button clicked, agreed state:", agreed);
+          createSubscription();
+        }}
         disabled={!stripe || isProcessing}
         className="bg-[#4B68FF] text-white w-full py-2 rounded-lg font-semibold mt-6"
       >
@@ -261,7 +264,10 @@ function CheckoutForm({
             id="agree"
             className="mt-1"
             checked={agreed}
-            onChange={() => setAgreed(!agreed)}
+            onChange={(e) => {
+              console.log("Checkbox changed:", e.target.checked);
+              setAgreed(e.target.checked);
+            }}
           />
           <label htmlFor="agree">
             By checking this box, you agree to the{" "}
