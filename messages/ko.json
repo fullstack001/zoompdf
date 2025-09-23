@@ -86,12 +86,31 @@
     "pdfToPng": "PDF를 PNG로",
     "pdfToJpg": "PDF를 JPG로",
     "pdfToEpub": "PDF를 EPUB로",
+    "pdfToMobi": "PDF를 MOBI로",
+    "pdfToTxt": "PDF를 TXT로",
+    "pdfToHtml": "PDF를 HTML로",
+    "pdfToSvg": "PDF를 SVG로",
+    "pdfToTiff": "PDF를 TIFF로",
+    "pdfToWebp": "PDF를 WebP로",
+    "pdfToAvif": "PDF를 AVIF로",
+    "pdfToEps": "PDF를 EPS로",
+    "pdfToDxf": "PDF를 DXF로",
+    "pdfToAzw3": "PDF를 AZW3로",
     "wordToPdf": "Word를 PDF로",
     "excelToPdf": "Excel을 PDF로",
     "pptxToPdf": "PPTX를 PDF로",
     "pngToPdf": "PNG를 PDF로",
     "jpgToPdf": "JPG를 PDF로",
     "epubToPdf": "EPUB를 PDF로",
+    "mobiToPdf": "MOBI를 PDF로",
+    "avifToPdf": "AVIF를 PDF로",
+    "avifToPdfJpg": "AVIF를 PDF로",
+    "pngToAvif": "PNG를 AVIF로",
+    "jpgToAvif": "JPG를 AVIF로",
+    "avifToPng": "AVIF를 PNG로",
+    "avifToJpg": "AVIF를 JPG로",
+    "epubToMobi": "EPUB를 MOBI로",
+    "mobiToEpub": "MOBI를 EPUB로",
     "editPdf": "PDF 편집",
     "signPdf": "PDF 서명",
     "addWatermark": "워터마크 추가",
@@ -106,7 +125,21 @@
     "createForm": "양식 만들기",
     "imageToText": "이미지를 텍스트로",
     "mergeImages": "이미지 병합",
-    "pdfOcr": "PDF OCR"
+    "pdfOcr": "PDF OCR",
+    "pdfToImage": "PDF를 이미지로",
+    "imageToPdf": "이미지를 PDF로",
+    "pdfToDoc": "PDF를 DOC로"
+  },
+  "toolsSection": {
+    "allPdfTools": "모든 PDF 도구",
+    "subtitle": "PDF 작업에 필요한 모든 것을 한 곳에서",
+    "splitAndMerge": "분할 및 병합",
+    "w9": "W-9",
+    "ds11": "DS-11",
+    "1099misc": "1099-MISC",
+    "viewAllForms": "모든 양식 보기",
+    "ctaText": "다른 것이 필요하신가요? 50개 이상의 PDF 도구를 사용할 수 있습니다.",
+    "viewAllTools": "모든 도구 보기"
   },
   "toolPages": {
     "home": {
@@ -173,6 +206,8 @@
   "navbar": {
     "convertFromPdf": "PDF에서 변환",
     "convertToPdf": "PDF로 변환",
+    "convertImage": "이미지 변환",
+    "convertEbook": "전자책 변환",
     "editingTools": "편집 도구",
     "formTools": "양식 도구",
     "myDocuments": "내 문서",
@@ -257,6 +292,16 @@
     "growthDesc": "우리는 최신 기술 발전을 따라가며 우리 분야에서 우수성을 목표로 조직을 강화합니다.",
     "diversity": "다양성",
     "diversityDesc": "의료, 법률, 금융, 교육 — 업계가 무엇이든 우리 도구는 워크플로를 간소화할 수 있습니다."
+  },
+  "securityPriority": {
+    "title": "보안 우선순위",
+    "description": "데이터 보안이 우리의 최우선 과제입니다. 엔터프라이즈급 암호화 및 보안 조치를 구현하여 문서를 보호하고 완전한 개인정보 보호를 보장합니다."
+  },
+  "formTemplates": {
+    "title": "양식을 선택하고 작성하세요 — 300+ 템플릿",
+    "subtitle": "세금, 계약, 협정 등을 위한 맞춤형 양식으로 시간을 절약하세요 — 작성하고 보낼 준비가 완료되었습니다.",
+    "viewForm": "양식 보기",
+    "viewAllForms": "모든 양식 보기"
   },
   "coreValues": {
     "title": "TheBestPDF의 핵심 가치"

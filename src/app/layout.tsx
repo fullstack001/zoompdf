@@ -9,11 +9,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "ZoomPDF - PDF Tools",
+  title: "PDFEzy - PDF Tools",
   description: "Convert, edit, compress, and manage your PDF files online",
 };
-
-
 
 export default function RootLayout({
   children,

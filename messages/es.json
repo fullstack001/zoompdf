@@ -65,7 +65,11 @@
     "split": "Dividir",
     "saving": "Guardando...",
     "signing": "Firmando...",
-    "splitting": "Dividiendo..."
+    "splitting": "Dividiendo...",
+    "convertFromPdf": "Convertir desde PDF",
+    "convertToPdf": "Convertir a PDF",
+    "convertImage": "Convertir Imagen",
+    "otherFormats": "Otros Formatos"
   },
   "errors": {
     "oops": "¡Vaya!",
@@ -86,12 +90,31 @@
     "pdfToPng": "PDF a PNG",
     "pdfToJpg": "PDF a JPG",
     "pdfToEpub": "PDF a EPUB",
+    "pdfToMobi": "PDF a MOBI",
+    "pdfToTxt": "PDF a TXT",
+    "pdfToHtml": "PDF a HTML",
+    "pdfToSvg": "PDF a SVG",
+    "pdfToTiff": "PDF a TIFF",
+    "pdfToWebp": "PDF a WebP",
+    "pdfToAvif": "PDF a AVIF",
+    "pdfToEps": "PDF a EPS",
+    "pdfToDxf": "PDF a DXF",
+    "pdfToAzw3": "PDF a AZW3",
     "wordToPdf": "Word a PDF",
     "excelToPdf": "Excel a PDF",
     "pptxToPdf": "PPTX a PDF",
     "pngToPdf": "PNG a PDF",
     "jpgToPdf": "JPG a PDF",
     "epubToPdf": "EPUB a PDF",
+    "mobiToPdf": "MOBI a PDF",
+    "avifToPdf": "AVIF a PDF",
+    "avifToPdfJpg": "AVIF a PDF",
+    "pngToAvif": "PNG a AVIF",
+    "jpgToAvif": "JPG a AVIF",
+    "avifToPng": "AVIF a PNG",
+    "avifToJpg": "AVIF a JPG",
+    "epubToMobi": "EPUB a MOBI",
+    "mobiToEpub": "MOBI a EPUB",
     "editPdf": "Editar PDF",
     "signPdf": "Firmar PDF",
     "addWatermark": "Añadir marca de agua",
@@ -106,7 +129,21 @@
     "createForm": "Crear formulario",
     "imageToText": "Imagen a texto",
     "mergeImages": "Combinar imágenes",
-    "pdfOcr": "PDF OCR"
+    "pdfOcr": "PDF OCR",
+    "pdfToImage": "PDF a Imagen",
+    "imageToPdf": "Imagen a PDF",
+    "pdfToDoc": "PDF a DOC"
+  },
+  "toolsSection": {
+    "allPdfTools": "Todas las Herramientas PDF",
+    "subtitle": "Todo lo que necesitas para trabajar con PDFs en un solo lugar",
+    "splitAndMerge": "Dividir y Combinar",
+    "w9": "W-9",
+    "ds11": "DS-11",
+    "1099misc": "1099-MISC",
+    "viewAllForms": "Ver Todos los Formularios",
+    "ctaText": "¿Necesitas algo más? Tenemos más de 50+ herramientas PDF disponibles.",
+    "viewAllTools": "Ver Todas las Herramientas"
   },
   "toolPages": {
     "home": {
@@ -173,6 +210,8 @@
   "navbar": {
     "convertFromPdf": "Convertir desde PDF",
     "convertToPdf": "Convertir a PDF",
+    "convertImage": "Convertir Imagen",
+    "convertEbook": "Convertir E-book",
     "editingTools": "Herramientas de edición",
     "formTools": "Herramientas de formularios",
     "myDocuments": "Mis documentos",
@@ -257,6 +296,16 @@
     "growthDesc": "Empoderamos organizaciones manteniéndonos al día con los últimos avances tecnológicos, buscando la excelencia en nuestro campo.",
     "diversity": "Diversidad",
     "diversityDesc": "Salud, Legal, Finanzas, Educación — cualquiera que sea tu industria, nuestra herramienta puede optimizar tus flujos de trabajo."
+  },
+  "securityPriority": {
+    "title": "Prioridad de Seguridad",
+    "description": "La seguridad de tus datos es nuestra máxima prioridad. Implementamos encriptación de nivel empresarial y medidas de seguridad para proteger tus documentos y garantizar privacidad completa."
+  },
+  "formTemplates": {
+    "title": "Elige un formulario y complétalo — 300+ plantillas",
+    "subtitle": "Ahorra tiempo con formularios personalizados para impuestos, contratos, acuerdos y más — listos para completar y enviar.",
+    "viewForm": "Ver Formulario",
+    "viewAllForms": "VER TODOS LOS FORMULARIOS"
   },
   "coreValues": {
     "title": "Valores fundamentales detrás de TheBestPDF"

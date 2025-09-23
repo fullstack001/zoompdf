@@ -1,22 +1,25 @@
 "use client";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store/store";
 import { useLocalizedNavigation } from "@/utils/navigation";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import { useDispatch } from "react-redux";
 import FileUploadSection from "@/components/common/FileUploadSection";
 import FeatureItems from "@/components/common/FeatureItems";
 import ToolsGrid from "@/components/landing/ToolsGrid";
 import HowItWorks from "@/components/landing/HowItWorks";
 import FeatureCTA from "@/components/landing/FeatureCTA";
 import WhyUs from "@/components/landing/WhyUs";
+import SecurityPriority from "@/components/landing/SecurityPriority";
+import FormTemplates from "@/components/landing/FormTemplates";
+import CustomerTestimonials from "@/components/landing/CustomerTestimonials";
+
 import CoreValues from "@/components/landing/CoreValues";
 import FAQ from "@/components/landing/FAQ";
+import ToolsSection from "@/components/landing/ToolsSection";
 import Footer from "@/components/Footer";
 import { useTranslations } from "next-intl";
-import { uploadEditedPDF } from "@/utils/apiUtils";
-
-import { setAction, setFileName } from "../../store/slices/flowSlice";
 
 interface ToolLandingPageProps {
   titleKey: string;
@@ -29,11 +32,11 @@ export default function ToolLandingPage({
   subtitleKey,
   action,
 }: ToolLandingPageProps) {
-  const dispatch = useDispatch();
-  const { navigate } = useLocalizedNavigation();
+  const { navigate, currentLocale } = useLocalizedNavigation();
   const [uploadError, setUploadError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [progress, setProgress] = useState(0);
+  const user = useSelector((state: RootState) => state.user);
+  const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
   const t = useTranslations();
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -42,30 +45,69 @@ export default function ToolLandingPage({
       try {
         setUploadError(null);
         setIsLoading(true);
-        setProgress(0);
 
-        console.log("Starting file upload:", selectedFile.name);
+        console.log("Processing file:", selectedFile.name);
 
-        // Upload the file using uploadEditedPDF
-        const response = await uploadEditedPDF(
-          selectedFile,
-          (progressPercent) => {
-            setProgress(progressPercent);
+        // Check if it's a PDF file
+        if (selectedFile.type === "application/pdf") {
+          // Upload file to backend
+          const formData = new FormData();
+          formData.append("file", selectedFile);
+          formData.append("action", action);
+          formData.append("email", user.email);
+          formData.append("isSign", isLoggedIn.toString());
+
+          const response = await fetch(
+            "https://api.pdfezy.com/api/pdf/edit-sign-upload",
+            {
+              method: "POST",
+              body: formData,
+            }
+          );
+
+          if (!response.ok) {
+            throw new Error("Failed to upload file");
           }
-        );
 
-        console.log("File uploaded successfully:", response);
-        dispatch(setAction(action));
-        dispatch(setFileName(response));
+          const result = await response.json();
+          console.log("File uploaded successfully:", result);
 
-        // Navigate to editor
-        navigate("/editor");
+          // Store user state in localStorage before redirecting
+          const userData = {
+            id: user.id,
+            name: user.name,
+            email: user.email,
+            cardnumber: user.cardnumber,
+            avatar: user.avatar,
+            isAdmin: user.isAdmin,
+            subscription: user.subscription,
+          };
+
+          // Store current user state temporarily
+          localStorage.setItem("tempUserData", JSON.stringify(userData));
+          localStorage.setItem("tempAuthState", isLoggedIn.toString());
+
+          // Store auth token if user is logged in
+          const authToken = localStorage.getItem("authToken");
+          if (authToken) {
+            localStorage.setItem("tempAuthToken", authToken);
+          }
+
+          // Redirect to edit.pdfezy.com with the uploaded file and return URL
+          const returnUrl = encodeURIComponent(
+            `${window.location.origin}/${currentLocale}/success-edit`
+          );
+          const editUrl = `https://edit.pdfezy.com?file=${result.processingId}&return_url=${returnUrl}`;
+          window.location.href = editUrl;
+        } else {
+          // Show error for non-PDF files
+          setUploadError("Please select a PDF file");
+        }
       } catch (error) {
-        console.error("Upload failed:", error);
+        console.error("File upload failed:", error);
         setUploadError(t("common.uploadFailed"));
       } finally {
         setIsLoading(false);
-        setProgress(0);
       }
     }
   };
@@ -90,9 +132,14 @@ export default function ToolLandingPage({
       <ToolsGrid />
       <FeatureCTA />
       <WhyUs />
+      <SecurityPriority />
+      <FormTemplates />
       <CoreValues />
       <FAQ />
+      <CustomerTestimonials />
+      <ToolsSection />
       <Footer />
+      {/* Loading Modal */}
       {isLoading && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white rounded-xl w-full max-w-md p-8 text-center shadow-xl">
@@ -107,12 +154,11 @@ export default function ToolLandingPage({
               style={{ height: "auto" }}
               className="mx-auto mb-4"
             />
-            <div className="text-gray-700 font-semibold mb-2">{progress}%</div>
+            <div className="text-gray-700 font-semibold mb-2">
+              Uploading your PDF...
+            </div>
             <div className="w-full h-2 rounded-full bg-gray-200">
-              <div
-                className="h-2 bg-blue-500 rounded-full transition-all duration-300 ease-out"
-                style={{ width: `${progress}%` }}
-              ></div>
+              <div className="h-2 bg-blue-500 rounded-full animate-pulse"></div>
             </div>
           </div>
         </div>

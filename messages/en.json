@@ -65,7 +65,18 @@
     "split": "Split",
     "saving": "Saving...",
     "signing": "Signing...",
-    "splitting": "Splitting..."
+    "splitting": "Splitting...",
+    "convertFromPdf": "Convert from PDF",
+    "convertToPdf": "Convert to PDF",
+    "convertImage": "Convert Image",
+    "otherFormats": "Other Formats",
+    "editSuccess": "Edit Successful!",
+    "editSuccessMessage": "Your PDF has been successfully edited and is ready for download.",
+    "whatsNext": "What's Next?",
+    "downloadEditedFile": "Download your edited file",
+    "editAnotherFile": "Edit another file",
+    "startNew": "Start New",
+    "fileId": "File ID"
   },
   "errors": {
     "oops": "Oops!",
@@ -86,12 +97,31 @@
     "pdfToPng": "PDF to PNG",
     "pdfToJpg": "PDF to JPG",
     "pdfToEpub": "PDF to EPUB",
+    "pdfToMobi": "PDF to MOBI",
+    "pdfToTxt": "PDF to TXT",
+    "pdfToHtml": "PDF to HTML",
+    "pdfToSvg": "PDF to SVG",
+    "pdfToTiff": "PDF to TIFF",
+    "pdfToWebp": "PDF to WebP",
+    "pdfToAvif": "PDF to AVIF",
+    "pdfToEps": "PDF to EPS",
+    "pdfToDxf": "PDF to DXF",
+    "pdfToAzw3": "PDF to AZW3",
     "wordToPdf": "Word to PDF",
     "excelToPdf": "Excel to PDF",
     "pptxToPdf": "PPTX to PDF",
     "pngToPdf": "PNG to PDF",
     "jpgToPdf": "JPG to PDF",
     "epubToPdf": "EPUB to PDF",
+    "mobiToPdf": "MOBI to PDF",
+    "avifToPdf": "AVIF to PDF",
+    "avifToPdfJpg": "AVIF to PDF",
+    "pngToAvif": "PNG to AVIF",
+    "jpgToAvif": "JPG to AVIF",
+    "avifToPng": "AVIF to PNG",
+    "avifToJpg": "AVIF to JPG",
+    "epubToMobi": "EPUB to MOBI",
+    "mobiToEpub": "MOBI to EPUB",
     "editPdf": "Edit PDF",
     "signPdf": "Sign PDF",
     "addWatermark": "Add watermark",
@@ -106,7 +136,21 @@
     "createForm": "Create Form",
     "imageToText": "Image to Text",
     "mergeImages": "Merge Images",
-    "pdfOcr": "PDF OCR"
+    "pdfOcr": "PDF OCR",
+    "pdfToImage": "PDF to Image",
+    "imageToPdf": "Image to PDF",
+    "pdfToDoc": "PDF to DOC"
+  },
+  "toolsSection": {
+    "allPdfTools": "All PDF Tools",
+    "subtitle": "Everything you need to work with PDFs in one place",
+    "splitAndMerge": "Split and Merge",
+    "w9": "W-9",
+    "ds11": "DS-11",
+    "1099misc": "1099-MISC",
+    "viewAllForms": "View All Forms",
+    "ctaText": "Need something else? We have over 50+ PDF tools available.",
+    "viewAllTools": "View All Tools"
   },
   "toolPages": {
     "home": {
@@ -173,6 +217,8 @@
   "navbar": {
     "convertFromPdf": "Convert from PDF",
     "convertToPdf": "Convert to PDF",
+    "convertImage": "Convert Image",
+    "convertEbook": "Convert E-book",
     "editingTools": "Editing Tools",
     "formTools": "Form Tools",
     "myDocuments": "My Documents",
@@ -257,6 +303,16 @@
     "growthDesc": "We empower organizations by keeping abreast of the latest tech advancements, aiming for excellence in our field.",
     "diversity": "Diversity",
     "diversityDesc": "Healthcare, Legal, Finance, Education — whatever your industry is, our tool can streamline your workflows."
+  },
+  "securityPriority": {
+    "title": "Security Priority",
+    "description": "Your data security is our top priority. We implement enterprise-grade encryption and security measures to protect your documents and ensure complete privacy."
+  },
+  "formTemplates": {
+    "title": "Pick a form and fill it out — 300+ templates",
+    "subtitle": "Save time with custom forms for taxes, contracts, agreements, and more — ready to fill and send.",
+    "viewForm": "View Form",
+    "viewAllForms": "VIEW ALL FORMS"
   },
   "coreValues": {
     "title": "Core values behind TheBestPDF"

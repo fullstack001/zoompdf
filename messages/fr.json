@@ -65,7 +65,11 @@
     "split": "Diviser",
     "saving": "Enregistrement...",
     "signing": "Signature...",
-    "splitting": "Division..."
+    "splitting": "Division...",
+    "convertFromPdf": "Convertir depuis PDF",
+    "convertToPdf": "Convertir vers PDF",
+    "convertImage": "Convertir Image",
+    "otherFormats": "Autres Formats"
   },
   "errors": {
     "oops": "Oups !",
@@ -86,12 +90,31 @@
     "pdfToPng": "PDF vers PNG",
     "pdfToJpg": "PDF vers JPG",
     "pdfToEpub": "PDF vers EPUB",
+    "pdfToMobi": "PDF vers MOBI",
+    "pdfToTxt": "PDF vers TXT",
+    "pdfToHtml": "PDF vers HTML",
+    "pdfToSvg": "PDF vers SVG",
+    "pdfToTiff": "PDF vers TIFF",
+    "pdfToWebp": "PDF vers WebP",
+    "pdfToAvif": "PDF vers AVIF",
+    "pdfToEps": "PDF vers EPS",
+    "pdfToDxf": "PDF vers DXF",
+    "pdfToAzw3": "PDF vers AZW3",
     "wordToPdf": "Word vers PDF",
     "excelToPdf": "Excel vers PDF",
     "pptxToPdf": "PPTX vers PDF",
     "pngToPdf": "PNG vers PDF",
     "jpgToPdf": "JPG vers PDF",
     "epubToPdf": "EPUB vers PDF",
+    "mobiToPdf": "MOBI vers PDF",
+    "avifToPdf": "AVIF vers PDF",
+    "avifToPdfJpg": "AVIF vers PDF",
+    "pngToAvif": "PNG vers AVIF",
+    "jpgToAvif": "JPG vers AVIF",
+    "avifToPng": "AVIF vers PNG",
+    "avifToJpg": "AVIF vers JPG",
+    "epubToMobi": "EPUB vers MOBI",
+    "mobiToEpub": "MOBI vers EPUB",
     "editPdf": "Modifier PDF",
     "signPdf": "Signer PDF",
     "addWatermark": "Ajouter un filigrane",
@@ -106,7 +129,21 @@
     "createForm": "Créer un formulaire",
     "imageToText": "Image vers texte",
     "mergeImages": "Fusionner les images",
-    "pdfOcr": "PDF OCR"
+    "pdfOcr": "PDF OCR",
+    "pdfToImage": "PDF vers Image",
+    "imageToPdf": "Image vers PDF",
+    "pdfToDoc": "PDF vers DOC"
+  },
+  "toolsSection": {
+    "allPdfTools": "Tous les Outils PDF",
+    "subtitle": "Tout ce dont vous avez besoin pour travailler avec les PDF en un seul endroit",
+    "splitAndMerge": "Diviser et Fusionner",
+    "w9": "W-9",
+    "ds11": "DS-11",
+    "1099misc": "1099-MISC",
+    "viewAllForms": "Voir Tous les Formulaires",
+    "ctaText": "Besoin d'autre chose ? Nous avons plus de 50+ outils PDF disponibles.",
+    "viewAllTools": "Voir Tous les Outils"
   },
   "toolPages": {
     "home": {
@@ -173,6 +210,8 @@
   "navbar": {
     "convertFromPdf": "Convertir depuis PDF",
     "convertToPdf": "Convertir vers PDF",
+    "convertImage": "Convertir Image",
+    "convertEbook": "Convertir E-book",
     "editingTools": "Outils d'édition",
     "formTools": "Outils de formulaire",
     "myDocuments": "Mes documents",
@@ -257,6 +296,16 @@
     "growthDesc": "Nous responsabilisons les organisations en nous tenant au courant des dernières avancées technologiques, visant l'excellence dans notre domaine.",
     "diversity": "Diversité",
     "diversityDesc": "Soins de santé, Juridique, Finance, Éducation — quel que soit votre secteur, notre outil peut rationaliser vos flux de travail."
+  },
+  "securityPriority": {
+    "title": "Priorité de Sécurité",
+    "description": "La sécurité de vos données est notre priorité absolue. Nous mettons en œuvre un chiffrement de niveau entreprise et des mesures de sécurité pour protéger vos documents et assurer une confidentialité complète."
+  },
+  "formTemplates": {
+    "title": "Choisissez un formulaire et remplissez-le — 300+ modèles",
+    "subtitle": "Gagnez du temps avec des formulaires personnalisés pour les impôts, contrats, accords et plus — prêts à remplir et envoyer.",
+    "viewForm": "Voir le Formulaire",
+    "viewAllForms": "VOIR TOUS LES FORMULAIRES"
   },
   "coreValues": {
     "title": "Valeurs fondamentales derrière TheBestPDF"

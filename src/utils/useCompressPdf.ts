@@ -22,6 +22,7 @@ export const useCompressPdf = () => {
     (state: RootState) => state.user.subscription
   );
   const auth = useSelector((state: RootState) => state.auth.isLoggedIn);
+  const user = useSelector((state: RootState) => state.user);
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -75,7 +76,7 @@ export const useCompressPdf = () => {
         ) {
           try {
             navigate(`/files`);
-            await downloadFile(fileName, "compress_pdf", token);
+            await downloadFile(fileName, "compress_pdf", token, user.id);
           } catch (err) {
             console.error("Error downloading file:", err);
             window.alert("Failed to download file.");

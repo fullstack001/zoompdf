@@ -38,13 +38,38 @@ export default function EmailModal({
 
     try {
       const response = await registerEmail(email);
-      console.log("Registration successful:", response);
 
+      // Check if this is a 409 status (email already exists with subscription)
+      if (response.statusCode === 409) {
+        setEmailExists(true);
+        return;
+      }
+
+      // Check if this is a 400 status (email already exists without subscription)
+      if (response.statusCode === 400) {
+        // Set user in Redux store and navigate to plan
+        dispatch(
+          setUser({
+            email,
+            id: response.user._id,
+            name: response.user.name || "",
+            cardnumber: response.user.cardnumber || "",
+            avatar: response.user.avatar || "",
+            isAdmin: response.user.isAdmin,
+            subscription: null,
+          })
+        );
+        onClose();
+        navigate("/plan");
+        return;
+      }
+
+      // Normal successful registration
       // Set user in Redux store with all required fields
       dispatch(
         setUser({
           email,
-          id: response.user.id,
+          id: response.user._id,
           name: response.user.name || "",
           cardnumber: response.user.cardnumber || "", // Add cardnumber property
           avatar: response.user.avatar || "",
@@ -57,12 +82,8 @@ export default function EmailModal({
       onClose();
       navigate("/plan");
     } catch (error: any) {
+      // Only log errors that are not expected 409/400 status codes
       console.error("Registration failed:", error);
-      if (error.message.includes("409")) {
-        setEmailExists(true);
-      } else if (error.message.includes("400")) {
-        navigate("/plan");
-      }
     }
   }, [email, dispatch, navigate, onClose, isEmailValid]);
 

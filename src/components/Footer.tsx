@@ -1,73 +1,39 @@
 "use client";
 import {
-  CompanyInfo,
-  Newsletter,
-  SocialMedia,
+  PaymentIcons,
+  PolicyLinks,
   LanguageSelector,
-  FooterLinks,
-  ContactInfo,
-  FooterBottom,
+  Copyright,
 } from "./Footer/";
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-gray-50 to-gray-100 text-gray-800 border-t border-gray-200">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Footer Content */}
-        <div className="py-8 sm:py-12 lg:py-16">
-          {/* Mobile Layout - Stacked vertically */}
-          <div className="lg:hidden space-y-8">
-            {/* Company Info & Newsletter on mobile */}
-            <div className="text-center space-y-6">
-              <CompanyInfo />
-              <Newsletter />
-              <SocialMedia />
-              <LanguageSelector />
-            </div>
-
-            {/* Footer Links on mobile */}
-            <div>
-              <FooterLinks />
-            </div>
-          </div>
-
-          {/* Desktop Layout - FooterLinks first, then inline components */}
-          <div className="hidden lg:block">
-            {/* Footer Links - Full width on desktop */}
-            <div className="mb-12">
-              <FooterLinks />
-            </div>
-
-            {/* Inline components below FooterLinks on desktop */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {/* Company Info */}
-              <div className="space-y-4">
-                <CompanyInfo />
-              </div>
-
-              {/* Newsletter */}
-              <div className="space-y-4">
-                <Newsletter />
-              </div>
-
-              {/* Social Media */}
-              <div className="space-y-4">
-                <SocialMedia />
-              </div>
-
-              {/* Language Selector */}
-              <div className="space-y-4">
-                <LanguageSelector />
-              </div>
-            </div>
+    <footer className="bg-[#241F47] text-white">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        {/* Mobile Layout */}
+        <div className="lg:hidden space-y-4">
+          <div className="text-center space-y-3">
+            <PolicyLinks />
+            <LanguageSelector />
+            <PaymentIcons />
+            <Copyright />
           </div>
         </div>
 
-        {/* Contact Information */}
-        <ContactInfo />
+        {/* Desktop/Tablet Layout */}
+        <div className="hidden md:block items-center">
+          <div className="flex items-center justify-between space-x-4">
+            <Copyright />
+            <PolicyLinks />
+          </div>
 
-        {/* Bottom Section */}
-        <FooterBottom />
+          <div className="flex items-center justify-between space-x-6 mt-4">
+            <PaymentIcons />
+            <LanguageSelector />
+          </div>
+        </div>
+
+       
       </div>
     </footer>
   );

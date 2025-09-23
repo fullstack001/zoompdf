@@ -39,7 +39,6 @@ export default function PaymentForm({
   const dispatch = useDispatch();
   const router = useRouter();
   const { navigate } = useLocalizedNavigation();
-  const [agreed, setAgreed] = useState(false); // State for checkbox
 
   const fileName = useSelector((state: RootState) => state.flow.fileName);
   const action = useSelector((state: RootState) => state.flow.action);
@@ -49,11 +48,6 @@ export default function PaymentForm({
     subscriptionType: string,
     subscriptionId: string
   ): void => {
-    if (!agreed) {
-      alert("You must agree to the terms before proceeding.");
-      return;
-    }
-
     const subscriptionData: SubscriptionData = {
       email: email,
       plan: plan.id,
@@ -100,7 +94,12 @@ export default function PaymentForm({
         if (fileName && action) {
           // Fallback to regular conversion flow
           try {
-            await downloadFile(fileName, action, token);
+            await downloadFile(
+              fileName,
+              action as string,
+              token as string,
+              user._id as string
+            );
             navigate("/files");
           } catch (err) {
             console.error("Error downloading file:", err);
@@ -164,7 +163,7 @@ export default function PaymentForm({
         </Elements>
 
         {/* Secure Notice + Terms Agreement */}
-        <div className="mt-6">
+        {/* <div className="mt-6">
           <div className="flex justify-between items-center text-green-600 text-sm gap-2 my-3">
             <span>🔒 This is a secure 128-bit encrypted payment</span>
             <svg className="w-16 h-auto" viewBox="0 0 70 27">
@@ -258,7 +257,7 @@ export default function PaymentForm({
               . Payments will be charged from the card you specified above.
             </label>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

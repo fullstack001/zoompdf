@@ -25,7 +25,7 @@ export default function Login() {
           email: user.email,
           name: user.name || "", // Ensure name is set, default to empty string if not provided
           cardnumber: user.cardnumber || "", // Add cardnumber property
-          id: user.id || "", // Add id property
+          id: user._id || "", // Add id property
           avatar: user.avatar || "", // Add avatar property
           isAdmin: user.isAdmin || false, // Add isAdmin property
           subscription: subscription
@@ -40,6 +40,7 @@ export default function Login() {
         })
       );
       dispatch(login());
+      console.log(user);
 
       // Optionally, store the token in localStorage or cookies
       localStorage.setItem("authToken", token);
@@ -48,7 +49,7 @@ export default function Login() {
         if (flow.fileName && flow.action) {
           // Fallback to regular conversion flow
           try {
-            await downloadFile(flow.fileName, flow.action, token);
+            await downloadFile(flow.fileName, flow.action, token, user._id);
             navigate("/files");
           } catch (err) {
             console.error("Error downloading file:", err);

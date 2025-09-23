@@ -24,6 +24,7 @@ export const useFileConversion = (config: ConversionConfig) => {
     (state: RootState) => state.user.subscription
   );
   const auth = useSelector((state: RootState) => state.auth.isLoggedIn);
+  const user = useSelector((state: RootState) => state.user);
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -68,7 +69,7 @@ export const useFileConversion = (config: ConversionConfig) => {
           token
         ) {
           try {
-            await downloadFile(fileName, config.action, token);
+            await downloadFile(fileName, config.action, token, user.id);
             navigate("/files");
           } catch (err) {
             console.error("Error downloading file:", err);

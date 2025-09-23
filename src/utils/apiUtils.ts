@@ -1,10 +1,10 @@
-import axios, { AxiosResponse, AxiosError } from 'axios';
+import axios, { AxiosResponse, AxiosError } from "axios";
 
 // Types and interfaces
 export interface User {
   email: string;
   name?: string;
-  id: string;
+  _id: string;
   cardnumber?: string; // Add cardnumber property
   avatar?: string;
   isAdmin: boolean;
@@ -37,20 +37,20 @@ export interface SubscriptionData {
 }
 
 // Base API configuration
-const API_BASE_URL = 'https://api.pdfezy.com/api';
+const API_BASE_URL = "https://api.pdfezy.com/api";
 
 // Create axios instance with base configuration
 const api = axios.create({
   baseURL: API_BASE_URL,
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
 });
 
 // Helper function to get auth token
 const getAuthToken = (): string | null => {
-  if (typeof window !== 'undefined') {
-    return localStorage.getItem('authToken');
+  if (typeof window !== "undefined") {
+    return localStorage.getItem("authToken");
   }
   return null;
 };
@@ -65,21 +65,29 @@ const getAuthToken = (): string | null => {
 // };
 
 // Authentication API functions
-export const loginUser = async (email: string, password: string): Promise<AuthResponse> => {
+export const loginUser = async (
+  email: string,
+  password: string
+): Promise<AuthResponse> => {
   try {
-    const response: AxiosResponse<AuthResponse> = await api.post('/auth/login', {
-      email,
-      password,
-    });
+    const response: AxiosResponse<AuthResponse> = await api.post(
+      "/auth/login",
+      {
+        email,
+        password,
+      }
+    );
     return response.data;
   } catch (error) {
     const axiosError = error as AxiosError<{ message?: string }>;
-    const errorMessage = axiosError.response?.data?.message || 'Login failed';
+    const errorMessage = axiosError.response?.data?.message || "Login failed";
     throw new Error(errorMessage);
   }
 };
 
-export const registerEmail = async (email: string): Promise<AuthResponse> => {
+export const registerEmail = async (
+  email: string
+): Promise<AuthResponse & { statusCode?: number }> => {
   try {
     const response: AxiosResponse<AuthResponse> = await api.post(
       "/auth/register-email",
@@ -87,18 +95,38 @@ export const registerEmail = async (email: string): Promise<AuthResponse> => {
         email,
       }
     );
-    console.log(response.data);
     return response.data;
   } catch (error) {
-    const axiosError = error as AxiosError<{ msg?: string; message?: string }>;
+    const axiosError = error as AxiosError<{
+      msg?: string;
+      message?: string;
+      user?: User;
+    }>;
     const status = axiosError.response?.status;
 
     if (status === 409) {
-      // Email already exists with subscription
-      const errorMessage = "409";
-      throw new Error(errorMessage);
+      // Email already exists with subscription - return user data
+      return {
+        token: "",
+        user: {
+          email,
+          _id: "",
+          name: "",
+          cardnumber: "",
+          avatar: "",
+          isAdmin: false,
+        },
+        statusCode: 409,
+      };
     } else if (status === 400) {
-      // Bad request - email already exists without subscription
+      // Bad request - email already exists without subscription - return user data
+      if (axiosError.response?.data?.user) {
+        return {
+          token: "", // No token for existing users
+          user: axiosError.response.data.user,
+          statusCode: 400,
+        };
+      }
       const errorMessage = "400";
       throw new Error(errorMessage);
     } else {
@@ -155,7 +183,8 @@ export const getFiles = async (): Promise<any[]> => {
 export const downloadFile = async (
   fileName: string,
   action: string,
-  token: string
+  token: string,
+  user: string
 ) => {
   try {
     const response = await fetch(`https://api.pdfezy.com/api/pdf/download`, {
@@ -164,7 +193,7 @@ export const downloadFile = async (
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify({ fileName, action }),
+      body: JSON.stringify({ fileName, action, user }),
     });
 
     if (!response.ok) {
@@ -324,29 +353,45 @@ export const compressPdf = async (
 };
 
 // Subscription API functions
-export const addSubscription = async (subscriptionData: SubscriptionData): Promise<AuthResponse> => {
+export const addSubscription = async (
+  subscriptionData: SubscriptionData
+): Promise<AuthResponse> => {
   try {
-    const response: AxiosResponse<AuthResponse> = await api.post('/subscription/add-subscription', subscriptionData);
+    const response: AxiosResponse<AuthResponse> = await api.post(
+      "/subscription/add-subscription",
+      subscriptionData
+    );
     return response.data;
   } catch (error) {
-    throw new Error('Failed to add subscription', { cause: error });
+    throw new Error("Failed to add subscription", { cause: error });
   }
 };
 
-export const createCheckoutSession = async (priceId: string): Promise<{ url: string }> => {
+export const createCheckoutSession = async (
+  priceId: string
+): Promise<{ url: string }> => {
   try {
-    const response: AxiosResponse<{ url: string }> = await api.post('/create-checkout-session', { priceId });
+    const response: AxiosResponse<{ url: string }> = await api.post(
+      "/create-checkout-session",
+      { priceId }
+    );
     return response.data;
   } catch (error) {
-    throw new Error('Failed to create checkout session', { cause: error });
+    throw new Error("Failed to create checkout session", { cause: error });
   }
 };
 
-export const cancelSubscription = async (subscriptionId: string, email: string): Promise<void> => {
+export const cancelSubscription = async (
+  subscriptionId: string,
+  email: string
+): Promise<void> => {
   try {
-    await api.post('/subscription/cancel-subscription', { subscriptionId, email });
+    await api.post("/subscription/cancel-subscription", {
+      subscriptionId,
+      email,
+    });
   } catch (error) {
-    throw new Error('Failed to cancel subscription', { cause: error });
+    throw new Error("Failed to cancel subscription", { cause: error });
   }
 };
 
@@ -357,32 +402,29 @@ export const createStripeSubscription = async (
   priceId: string
 ): Promise<{ subscriptionId: string; error?: any }> => {
   try {
-    const response: AxiosResponse<{ subscriptionId: string; error?: any }> = await api.post(
-      '/subscription/create-stripe-subscription',
-      {
+    const response: AxiosResponse<{ subscriptionId: string; error?: any }> =
+      await api.post("/subscription/create-stripe-subscription", {
         paymentMethodId,
         name,
         email,
         priceId,
-      }
-    );
+      });
     return response.data;
   } catch (error) {
-    throw new Error('Failed to create stripe subscription', { cause: error });
+    throw new Error("Failed to create stripe subscription", { cause: error });
   }
 };
-
 
 export const getSavedPdfUrl = (base64Data: string): string => {
   return base64Data; // base64 data can be used directly as URL
 };
 
 export const base64ToBlob = (base64Data: string): Blob => {
-  const byteCharacters = atob(base64Data.split(',')[1]);
+  const byteCharacters = atob(base64Data.split(",")[1]);
   const byteNumbers = new Array(byteCharacters.length);
   for (let i = 0; i < byteCharacters.length; i++) {
     byteNumbers[i] = byteCharacters.charCodeAt(i);
   }
   const byteArray = new Uint8Array(byteNumbers);
-  return new Blob([byteArray], { type: 'application/pdf' });
+  return new Blob([byteArray], { type: "application/pdf" });
 };

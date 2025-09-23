@@ -86,12 +86,31 @@
     "pdfToPng": "PDF till PNG",
     "pdfToJpg": "PDF till JPG",
     "pdfToEpub": "PDF till EPUB",
+    "pdfToMobi": "PDF till MOBI",
+    "pdfToTxt": "PDF till TXT",
+    "pdfToHtml": "PDF till HTML",
+    "pdfToSvg": "PDF till SVG",
+    "pdfToTiff": "PDF till TIFF",
+    "pdfToWebp": "PDF till WebP",
+    "pdfToAvif": "PDF till AVIF",
+    "pdfToEps": "PDF till EPS",
+    "pdfToDxf": "PDF till DXF",
+    "pdfToAzw3": "PDF till AZW3",
     "wordToPdf": "Word till PDF",
     "excelToPdf": "Excel till PDF",
     "pptxToPdf": "PPTX till PDF",
     "pngToPdf": "PNG till PDF",
     "jpgToPdf": "JPG till PDF",
     "epubToPdf": "EPUB till PDF",
+    "mobiToPdf": "MOBI till PDF",
+    "avifToPdf": "AVIF till PDF",
+    "avifToPdfJpg": "AVIF till PDF",
+    "pngToAvif": "PNG till AVIF",
+    "jpgToAvif": "JPG till AVIF",
+    "avifToPng": "AVIF till PNG",
+    "avifToJpg": "AVIF till JPG",
+    "epubToMobi": "EPUB till MOBI",
+    "mobiToEpub": "MOBI till EPUB",
     "editPdf": "Redigera PDF",
     "signPdf": "Signera PDF",
     "addWatermark": "Lägg till vattenstämpel",
@@ -106,7 +125,21 @@
     "createForm": "Skapa formulär",
     "imageToText": "Bild till text",
     "mergeImages": "Slå samman bilder",
-    "pdfOcr": "PDF OCR"
+    "pdfOcr": "PDF OCR",
+    "pdfToImage": "PDF till Bild",
+    "imageToPdf": "Bild till PDF",
+    "pdfToDoc": "PDF till DOC"
+  },
+  "toolsSection": {
+    "allPdfTools": "Alla PDF-verktyg",
+    "subtitle": "Allt du behöver för att arbeta med PDF-filer på ett ställe",
+    "splitAndMerge": "Dela och Sammanfoga",
+    "w9": "W-9",
+    "ds11": "DS-11",
+    "1099misc": "1099-MISC",
+    "viewAllForms": "Visa Alla Formulär",
+    "ctaText": "Behöver du något annat? Vi har över 50+ PDF-verktyg tillgängliga.",
+    "viewAllTools": "Visa Alla Verktyg"
   },
   "toolPages": {
     "home": {
@@ -173,6 +206,8 @@
   "navbar": {
     "convertFromPdf": "Konvertera från PDF",
     "convertToPdf": "Konvertera till PDF",
+    "convertImage": "Konvertera Bild",
+    "convertEbook": "Konvertera E-bok",
     "editingTools": "Redigeringsverktyg",
     "formTools": "Formulärverktyg",
     "myDocuments": "Mina dokument",
@@ -257,6 +292,16 @@
     "growthDesc": "Vi stärker organisationer genom att hålla oss uppdaterade med de senaste tekniska framstegen, strävar efter excellens inom vårt område.",
     "diversity": "Mångfald",
     "diversityDesc": "Hälsovård, Juridik, Finans, Utbildning — oavsett vilken bransch du är i, vårt verktyg kan effektivisera dina arbetsflöden."
+  },
+  "securityPriority": {
+    "title": "Säkerhetsprioritet",
+    "description": "Din datasäkerhet är vår högsta prioritet. Vi implementerar företagsgrad kryptering och säkerhetsåtgärder för att skydda dina dokument och säkerställa fullständig sekretess."
+  },
+  "formTemplates": {
+    "title": "Välj ett formulär och fyll i det — 300+ mallar",
+    "subtitle": "Spara tid med anpassade formulär för skatter, kontrakt, avtal och mer — redo att fylla i och skicka.",
+    "viewForm": "Visa Formulär",
+    "viewAllForms": "VISA ALLA FORMULÄR"
   },
   "coreValues": {
     "title": "Grundvärden bakom TheBestPDF"

@@ -5,3 +5,6 @@ export { default as LanguageSelector } from "./LanguageSelector";
 export { default as FooterLinks } from "./FooterLinks";
 export { default as ContactInfo } from "./ContactInfo";
 export { default as FooterBottom } from "./FooterBottom";
+export { default as PaymentIcons } from './PaymentIcons';
+export { default as PolicyLinks } from './PolicyLinks';
+export { default as Copyright } from './Copyright';
