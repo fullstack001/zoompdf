@@ -35,9 +35,61 @@ export default function ToolLandingPage({
   const { navigate, currentLocale } = useLocalizedNavigation();
   const [uploadError, setUploadError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [uploadProgress, setUploadProgress] = useState(0);
+  const [uploadStatus, setUploadStatus] = useState<string>("");
   const user = useSelector((state: RootState) => state.user);
   const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
   const t = useTranslations();
+
+  // Custom upload function with progress tracking
+  const uploadWithProgress = async (
+    url: string,
+    formData: FormData
+  ): Promise<{ responseText: string; status: number; ok: boolean }> => {
+    return new Promise((resolve, reject) => {
+      const xhr = new XMLHttpRequest();
+
+      // Track upload progress
+      xhr.upload.addEventListener("progress", (event) => {
+        if (event.lengthComputable) {
+          const percentComplete = Math.round(
+            (event.loaded / event.total) * 100
+          );
+          setUploadProgress(percentComplete);
+          setUploadStatus(`Uploading... ${percentComplete}%`);
+        }
+      });
+
+      // Handle successful upload
+      xhr.addEventListener("load", () => {
+        if (xhr.status >= 200 && xhr.status < 300) {
+          setUploadProgress(100);
+          setUploadStatus("Upload completed!");
+          resolve({
+            responseText: xhr.responseText,
+            status: xhr.status,
+            ok: xhr.status >= 200 && xhr.status < 300,
+          });
+        } else {
+          reject(new Error(`Upload failed with status: ${xhr.status}`));
+        }
+      });
+
+      // Handle upload errors
+      xhr.addEventListener("error", () => {
+        reject(new Error("Upload failed"));
+      });
+
+      // Handle upload abort
+      xhr.addEventListener("abort", () => {
+        reject(new Error("Upload aborted"));
+      });
+
+      // Start the upload
+      xhr.open("POST", url);
+      xhr.send(formData);
+    });
+  };
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFile = e.target.files?.[0] || null;
@@ -45,32 +97,33 @@ export default function ToolLandingPage({
       try {
         setUploadError(null);
         setIsLoading(true);
+        setUploadProgress(0);
+        setUploadStatus("Preparing file for upload...");
 
         console.log("Processing file:", selectedFile.name);
 
         // Check if it's a PDF file
         if (selectedFile.type === "application/pdf") {
-          // Upload file to backend
+          // Upload file to backend with progress tracking
           const formData = new FormData();
           formData.append("file", selectedFile);
           formData.append("action", action);
           formData.append("email", user.email);
           formData.append("isSign", isLoggedIn.toString());
 
-          const response = await fetch(
+          setUploadStatus("Uploading file...");
+
+          const response = await uploadWithProgress(
             "https://api.pdfezy.com/api/pdf/edit-sign-upload",
-            {
-              method: "POST",
-              body: formData,
-            }
+            formData
           );
 
-          if (!response.ok) {
-            throw new Error("Failed to upload file");
-          }
-
-          const result = await response.json();
+          // Parse the response
+          const result = JSON.parse(response.responseText);
           console.log("File uploaded successfully:", result);
+
+          // Small delay to show 100% completion
+          await new Promise((resolve) => setTimeout(resolve, 500));
 
           // Store user state in localStorage before redirecting
           const userData = {
@@ -151,10 +204,21 @@ export default function ToolLandingPage({
               className="mx-auto mb-4"
             />
             <div className="text-gray-700 font-semibold mb-2">
-              Uploading your PDF...
+              {uploadStatus}
             </div>
-            <div className="w-full h-2 rounded-full bg-gray-200">
-              <div className="h-2 bg-blue-500 rounded-full animate-pulse"></div>
+            <div className="text-2xl font-bold text-blue-600 mb-4">
+              {uploadProgress}%
+            </div>
+            <div className="w-full h-3 rounded-full bg-gray-200 mb-2">
+              <div
+                className="h-3 bg-blue-500 rounded-full transition-all duration-300 ease-out"
+                style={{ width: `${uploadProgress}%` }}
+              ></div>
+            </div>
+            <div className="text-sm text-gray-500">
+              {uploadProgress < 100
+                ? "Please wait..."
+                : "Redirecting to editor..."}
             </div>
           </div>
         </div>
