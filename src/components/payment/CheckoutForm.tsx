@@ -46,10 +46,10 @@ function CheckoutForm({
 
   const createSubscription = useCallback(async () => {
     console.log(agreed);
-    if (!agreed) {
-      alert("You must agree to the terms before proceeding.");
-      return;
-    }
+    // if (!agreed) {
+    //   alert("You must agree to the terms before proceeding.");
+    //   return;
+    // }
 
     if (!stripe || !elements) {
       alert("Stripe is not loaded correctly.");
