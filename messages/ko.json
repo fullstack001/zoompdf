@@ -255,6 +255,7 @@
     "alreadyHaveAccount": "이미 계정이 있으신가요?",
     "dontHaveAccount": "계정이 없으신가요?",
     "login": "로그인",
+    "loggingIn": "로그인 중...",
     "emailAddress": "이메일 주소",
     "enterEmailAddress": "이메일 주소를 입력하세요",
     "emailAlreadyRegistered": "이 이메일은 이미 등록되어 있습니다. 다음을 수행하세요",
@@ -319,7 +320,8 @@
     "lowReduction": "~10% 더 작음",
     "compressionLevel": "압축 수준",
     "selectLevel": "압축 수준을 선택하고 파일을 압축하세요.",
-    "compress": "압축"
+    "compress": "압축",
+    "compressing": "압축 중..."
   },
   "email": {
     "enterEmail": "이메일 주소를 입력하세요",
@@ -338,7 +340,8 @@
     "moneyBackAnswer": "네, 우리 서비스에 만족하지 않으시면 14일 환불 보장을 제공합니다.",
     "ctaTitle": "비즈니스 운영을 향상시키고 싶으신가요?",
     "ctaDescription": "sales@thebestpdf.com으로 연락주시면 우리 제품이 어떻게 기업 서류 작업을 혁신할 수 있는지 탐구해보겠습니다. TheBestPDF를 활용하여 앞서 나가는 성공적인 비즈니스 커뮤니티에 합류하세요!",
-    "ctaButton": "시작하기"
+    "ctaButton": "시작하기",
+    "loading": "로딩 중..."
   },
   "howItWorks": {
     "title": "PDF 압축 방법",

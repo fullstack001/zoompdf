@@ -1,15 +1,24 @@
-'use client';
-import { useState } from 'react';
+"use client";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { Loader2 } from "lucide-react";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const t = useTranslations();
 
-  const handleLogin = () => {
-    // Placeholder for login logic
-    console.log("Logging in with:", { email, password });
+  const handleLogin = async () => {
+    setIsLoading(true);
+    try {
+      // Placeholder for login logic
+      console.log("Logging in with:", { email, password });
+      // Simulate API call
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -59,9 +68,17 @@ export default function LoginPage() {
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition"
+            disabled={isLoading}
+            className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center"
           >
-            {t("auth.login")}
+            {isLoading ? (
+              <>
+                <Loader2 className="animate-spin mr-2" size={18} />
+                {t("auth.loggingIn")}
+              </>
+            ) : (
+              t("auth.login")
+            )}
           </button>
         </form>
       </div>

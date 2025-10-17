@@ -1,13 +1,13 @@
 "use client";
 import { useState } from "react";
-import { ChevronDownIcon } from "lucide-react";
-import { ChevronRight } from "lucide-react";
+import { ChevronDownIcon, ChevronRight, Loader2 } from "lucide-react";
 import { useTranslations } from "next-intl";
 import "../../app/globals.css";
 
 export default function FAQ() {
   const t = useTranslations("faq");
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
+  const [isLoading, setIsLoading] = useState(false);
 
   const faqData = [
     {
@@ -30,6 +30,16 @@ export default function FAQ() {
 
   const toggle = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  const handleCTAClick = async () => {
+    setIsLoading(true);
+    try {
+      // Add your navigation or action logic here
+      await new Promise((resolve) => setTimeout(resolve, 500));
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -76,9 +86,22 @@ export default function FAQ() {
           </p>
         </div>
         <div className="mt-4 sm:mt-6">
-          <button className="bg-[#4B68FF] px-4 py-3 rounded-2xl text-[16px] sm:text-[18px] md:text-[24px] font-bold shadow-md flex items-center">
-            {t("ctaButton")}
-            <ChevronRight className="inline w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6 ml-1 mb-1" />
+          <button
+            onClick={handleCTAClick}
+            disabled={isLoading}
+            className="bg-[#4B68FF] px-4 py-3 rounded-2xl text-[16px] sm:text-[18px] md:text-[24px] font-bold shadow-md flex items-center disabled:opacity-60 disabled:cursor-not-allowed"
+          >
+            {isLoading ? (
+              <>
+                <Loader2 className="animate-spin mr-2 w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6" />
+                {t("loading")}
+              </>
+            ) : (
+              <>
+                {t("ctaButton")}
+                <ChevronRight className="inline w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6 ml-1 mb-1" />
+              </>
+            )}
           </button>
         </div>
       </div>

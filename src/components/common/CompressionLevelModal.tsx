@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { useTranslations } from "next-intl";
+import { Loader2 } from "lucide-react";
 
 export type CompressionLevel = 100 | 200 | 300;
 
@@ -21,6 +22,7 @@ export default function CompressionLevelModal({
 }: CompressionLevelModalProps) {
   const [selectedLevel, setSelectedLevel] =
     React.useState<CompressionLevel>(200);
+  const [isLoading, setIsLoading] = React.useState(false);
   const t = useTranslations();
 
   const compressionOptions = [
@@ -46,8 +48,13 @@ export default function CompressionLevelModal({
 
   if (!isVisible) return null;
 
-  const handleCompress = () => {
-    onCompress(selectedLevel);
+  const handleCompress = async () => {
+    setIsLoading(true);
+    try {
+      await onCompress(selectedLevel);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -136,18 +143,27 @@ export default function CompressionLevelModal({
         <div className="flex gap-3">
           <button
             onClick={onClose}
-            className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors"
+            disabled={isLoading}
+            className="flex-1 px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {t("common.cancel")}
           </button>
           <button
             onClick={handleCompress}
-            className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+            disabled={isLoading}
+            className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center"
           >
-            {t("compression.compress")}
+            {isLoading ? (
+              <>
+                <Loader2 className="animate-spin mr-2" size={18} />
+                {t("compression.compressing")}
+              </>
+            ) : (
+              t("compression.compress")
+            )}
           </button>
         </div>
       </div>
     </div>
   );
-} 
+}

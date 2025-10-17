@@ -1,17 +1,26 @@
 "use client";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
+import { Loader2 } from "lucide-react";
 
 export default function Newsletter() {
   const t = useTranslations();
   const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Newsletter subscription logic would go here
-    console.log("Newsletter signup:", email);
-    setEmail("");
-    // Add success message or toast notification
+    setIsLoading(true);
+    try {
+      // Newsletter subscription logic would go here
+      console.log("Newsletter signup:", email);
+      // Simulate API call
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      setEmail("");
+      // Add success message or toast notification
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -37,9 +46,17 @@ export default function Newsletter() {
           />
           <button
             type="submit"
-            className="w-full lg:w-auto px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 text-sm font-medium lg:whitespace-nowrap"
+            disabled={isLoading}
+            className="w-full lg:w-auto px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 text-sm font-medium lg:whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center"
           >
-            {t("footer.subscribe")}
+            {isLoading ? (
+              <>
+                <Loader2 className="animate-spin mr-2" size={18} />
+                {t("common.loading")}
+              </>
+            ) : (
+              t("footer.subscribe")
+            )}
           </button>
         </div>
       </form>

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { ChevronLeft, ChevronRight, Eye, Plus } from "lucide-react";
+import { ChevronLeft, ChevronRight, Eye, Plus, Loader2 } from "lucide-react";
 
 // Sample form templates data
 const formTemplates = [
@@ -58,6 +58,8 @@ const formTemplates = [
 export default function FormTemplates() {
   const t = useTranslations();
   const [currentPage, setCurrentPage] = useState(0);
+  const [loadingFormId, setLoadingFormId] = useState<number | null>(null);
+  const [isViewingAll, setIsViewingAll] = useState(false);
   const formsPerPage = 8;
   const totalPages = Math.ceil(formTemplates.length / formsPerPage);
 
@@ -72,6 +74,26 @@ export default function FormTemplates() {
 
   const prevPage = () => {
     setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
+  };
+
+  const handleViewForm = async (formId: number) => {
+    setLoadingFormId(formId);
+    try {
+      // Add your form viewing logic here
+      await new Promise((resolve) => setTimeout(resolve, 500));
+    } finally {
+      setLoadingFormId(null);
+    }
+  };
+
+  const handleViewAllForms = async () => {
+    setIsViewingAll(true);
+    try {
+      // Add your view all forms logic here
+      await new Promise((resolve) => setTimeout(resolve, 500));
+    } finally {
+      setIsViewingAll(false);
+    }
   };
 
   return (
@@ -110,9 +132,22 @@ export default function FormTemplates() {
                   <p className="text-sm text-gray-600 mb-3">
                     {form.description}
                   </p>
-                  <button className="flex items-center text-blue-600 hover:text-blue-700 text-sm font-medium">
-                    <Eye className="w-4 h-4 mr-1" />
-                    {t("formTemplates.viewForm")}
+                  <button
+                    onClick={() => handleViewForm(form.id)}
+                    disabled={loadingFormId === form.id}
+                    className="flex items-center text-blue-600 hover:text-blue-700 text-sm font-medium disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    {loadingFormId === form.id ? (
+                      <>
+                        <Loader2 className="w-4 h-4 mr-1 animate-spin" />
+                        Loading...
+                      </>
+                    ) : (
+                      <>
+                        <Eye className="w-4 h-4 mr-1" />
+                        {t("formTemplates.viewForm")}
+                      </>
+                    )}
                   </button>
                 </div>
               </div>
@@ -137,10 +172,24 @@ export default function FormTemplates() {
 
           {/* CTA Button */}
           <div className="text-center">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg flex items-center mx-auto transition-colors">
-              <Plus className="w-5 h-5 mr-2" />
-              {t("formTemplates.viewAllForms")}
-              <Plus className="w-5 h-5 ml-2" />
+            <button
+              onClick={handleViewAllForms}
+              disabled={isViewingAll}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg flex items-center mx-auto transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+            >
+              {isViewingAll ? (
+                <>
+                  <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                  Loading...
+                  <Loader2 className="w-5 h-5 ml-2 animate-spin" />
+                </>
+              ) : (
+                <>
+                  <Plus className="w-5 h-5 mr-2" />
+                  {t("formTemplates.viewAllForms")}
+                  <Plus className="w-5 h-5 ml-2" />
+                </>
+              )}
             </button>
           </div>
         </div>

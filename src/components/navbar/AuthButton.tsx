@@ -1,5 +1,5 @@
 import React from "react";
-import { LockIcon } from "lucide-react";
+import { LockIcon, Loader2 } from "lucide-react";
 import type { AuthButtonProps } from "./types";
 
 /**
@@ -9,15 +9,27 @@ export const AuthButton: React.FC<AuthButtonProps> = ({
   onClick,
   label,
   className = "",
+  isLoading = false,
+  loadingText,
 }) => {
   return (
     <button
       onClick={onClick}
-      className={`px-4 py-3 text-2xl bg-white border-2 text-[#3758F9] border-[#3758F9] rounded-xl flex items-center hover:bg-blue-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${className}`}
+      disabled={isLoading}
+      className={`px-4 py-3 text-2xl bg-white border-2 text-[#3758F9] border-[#3758F9] rounded-xl flex items-center hover:bg-blue-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed ${className}`}
       aria-label={label}
     >
-      <LockIcon size={14} />
-      <span className="ml-1 font-medium">{label}</span>
+      {isLoading ? (
+        <>
+          <Loader2 className="animate-spin" size={14} />
+          <span className="ml-1 font-medium">{loadingText || label}</span>
+        </>
+      ) : (
+        <>
+          <LockIcon size={14} />
+          <span className="ml-1 font-medium">{label}</span>
+        </>
+      )}
     </button>
   );
 };

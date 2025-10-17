@@ -1,12 +1,24 @@
 import "../../app/globals.css";
 import { useTranslations } from "next-intl";
+import { useState } from "react";
+import { Loader2 } from "lucide-react";
 
 export default function PlanHero({
   handleGoPayment,
 }: {
   handleGoPayment: () => void;
 }) {
+  const [isLoading, setIsLoading] = useState(false);
   const t = useTranslations();
+
+  const handleClick = async () => {
+    setIsLoading(true);
+    try {
+      await handleGoPayment();
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-20">
@@ -15,10 +27,18 @@ export default function PlanHero({
       </div>
       <div>
         <button
-          className="bg-primary-900 text-[16px] md:text-[20px] text-white font-semibold px-8 md:px-16 py-2 md:py-3 rounded-2xl"
-          onClick={handleGoPayment}
+          className="bg-primary-900 text-[16px] md:text-[20px] text-white font-semibold px-8 md:px-16 py-2 md:py-3 rounded-2xl disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center"
+          onClick={handleClick}
+          disabled={isLoading}
         >
-          {t("plan.continue")} →
+          {isLoading ? (
+            <>
+              <Loader2 className="animate-spin mr-2" size={18} />
+              {t("common.loading")}
+            </>
+          ) : (
+            <>{t("plan.continue")} →</>
+          )}
         </button>
       </div>
     </div>

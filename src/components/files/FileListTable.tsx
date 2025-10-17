@@ -6,6 +6,7 @@ import {
   MoreVertical,
   Search,
   Trash2,
+  Loader2,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -24,6 +25,7 @@ export default function FileListTable({
 }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
+  const [isUpgrading, setIsUpgrading] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const t = useTranslations();
 
@@ -204,9 +206,19 @@ export default function FileListTable({
             <h3 className="text-lg font-semibold mb-2">
               Experience the best of PDF Guru — go premium!
             </h3>
-            <Link href="/plan">
-              <button className="bg-blue-600 text-white px-5 py-2 rounded-lg mt-2 font-semibold text-sm">
-                Upgrade Plan
+            <Link href="/plan" onClick={() => setIsUpgrading(true)}>
+              <button
+                disabled={isUpgrading}
+                className="bg-blue-600 text-white px-5 py-2 rounded-lg mt-2 font-semibold text-sm disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center"
+              >
+                {isUpgrading ? (
+                  <>
+                    <Loader2 className="animate-spin mr-2" size={16} />
+                    Loading...
+                  </>
+                ) : (
+                  "Upgrade Plan"
+                )}
               </button>
             </Link>
           </div>

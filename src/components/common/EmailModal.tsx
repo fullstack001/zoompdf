@@ -1,6 +1,6 @@
 "use client";
 import React, { useCallback, useEffect, useState } from "react";
-import { X } from "lucide-react";
+import { X, Loader2 } from "lucide-react";
 import { useDispatch } from "react-redux";
 import { useLocalizedNavigation } from "@/utils/navigation";
 import { setUser } from "@/store/slices/userSlice";
@@ -23,6 +23,7 @@ export default function EmailModal({
   const dispatch = useDispatch();
   const { navigate } = useLocalizedNavigation();
   const [emailExists, setEmailExists] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const t = useTranslations();
 
   const isEmailValid = (email: string) => {
@@ -36,6 +37,7 @@ export default function EmailModal({
       return;
     }
 
+    setIsLoading(true);
     try {
       const response = await registerEmail(email);
 
@@ -84,6 +86,8 @@ export default function EmailModal({
     } catch (error: any) {
       // Only log errors that are not expected 409/400 status codes
       console.error("Registration failed:", error);
+    } finally {
+      setIsLoading(false);
     }
   }, [email, dispatch, navigate, onClose, isEmailValid]);
 
@@ -142,14 +146,21 @@ export default function EmailModal({
         <p className="text-xs text-gray-500 mb-6">{t("email.downloadLink")}</p>
         <button
           onClick={register}
-          disabled={!isEmailValid(email)}
-          className={`w-full py-3 rounded-md font-medium transition ${
-            isEmailValid(email)
+          disabled={!isEmailValid(email) || isLoading}
+          className={`w-full py-3 rounded-md font-medium transition flex items-center justify-center ${
+            isEmailValid(email) && !isLoading
               ? "bg-blue-600 text-white hover:bg-blue-700"
               : "bg-gray-300 text-gray-500 cursor-not-allowed"
           }`}
         >
-          {t("email.getStarted")}
+          {isLoading ? (
+            <>
+              <Loader2 className="animate-spin mr-2" size={18} />
+              {t("common.loading")}
+            </>
+          ) : (
+            t("email.getStarted")
+          )}
         </button>
       </div>
     </div>

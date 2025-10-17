@@ -1,14 +1,16 @@
 "use client";
-import React from "react";
-import { CirclePlus } from "lucide-react";
+import React, { useState } from "react";
+import { CirclePlus, Loader2 } from "lucide-react";
 import UploadAnimationSVG from "./UploadAnimationSVG";
 
 export default function FileUploadSection({
   acceptType,
   handleFileChange,
+  isLoading,
 }: {
   acceptType?: string;
   handleFileChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  isLoading?: boolean;
 }) {
   return (
     <div className="bg-white shadow-lg rounded-2xl p-4 sm:p-6 md:p-6 w-full max-w-[90%] sm:max-w-[1142px] aspect-[1142/348] mx-auto hover:shadow-2xl transition-shadow duration-300">
@@ -23,17 +25,31 @@ export default function FileUploadSection({
           <UploadAnimationSVG />
         </div>
         <div
-          className="mt-8 sm:mt-4 md:mt-8 text-sm sm:text-base md:text-lg mx-auto text-center bg-primary-900 text-white w-fit py-3 px-8 rounded-lg cursor-pointer hover:bg-primary-800 transition-colors duration-300 uppercase"
-          onClick={() =>
-            (
-              document.querySelector('input[type="file"]') as HTMLInputElement
-            )?.click()
-          }
+          className={`mt-8 sm:mt-4 md:mt-8 text-sm sm:text-base md:text-lg mx-auto text-center bg-primary-900 text-white w-fit py-3 px-8 rounded-lg cursor-pointer hover:bg-primary-800 transition-colors duration-300 uppercase ${
+            isLoading ? "opacity-60 cursor-not-allowed" : ""
+          }`}
+          onClick={() => {
+            if (!isLoading) {
+              (
+                document.querySelector('input[type="file"]') as HTMLInputElement
+              )?.click();
+            }
+          }}
         >
           <div className="flex items-center justify-center">
-            <CirclePlus className="mr-4" size={14} />
-            <div>Upload Your File</div>
-            <CirclePlus className="ml-4" size={14} />
+            {isLoading ? (
+              <>
+                <Loader2 className="mr-4 animate-spin" size={14} />
+                <div>Uploading...</div>
+                <Loader2 className="ml-4 animate-spin" size={14} />
+              </>
+            ) : (
+              <>
+                <CirclePlus className="mr-4" size={14} />
+                <div>Upload Your File</div>
+                <CirclePlus className="ml-4" size={14} />
+              </>
+            )}
           </div>
         </div>
         <p className="text-sm sm:text-sm md:text-base text-gray-500 mt-4 sm:mt-4 md:mt-4">

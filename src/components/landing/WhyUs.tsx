@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Loader2 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { useState } from "react";
 import "../../app/globals.css";
 
 const features = [
@@ -29,6 +30,17 @@ const features = [
 
 export default function WhyUs() {
   const t = useTranslations();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleGetStarted = async () => {
+    setIsLoading(true);
+    try {
+      // Add your navigation or action logic here
+      await new Promise((resolve) => setTimeout(resolve, 500));
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <section className="py-12 px-6 md:px-12 lg:px-24 bg-primary-50">
@@ -62,9 +74,22 @@ export default function WhyUs() {
               </div>
             </div>
           ))}
-          <button className="bg-primary-900 text-white px-4 py-3 md:px-6 md:py-4 rounded-xl text-[18px] md:text-[24px] font-bold">
-            {t("plan.getStarted")}
-            <ChevronRight className="inline w-4 md:w-5 lg:w-6 h-4 md:h-5 lg:h-6 ml-1 mb-1" />
+          <button
+            onClick={handleGetStarted}
+            disabled={isLoading}
+            className="bg-primary-900 text-white px-4 py-3 md:px-6 md:py-4 rounded-xl text-[18px] md:text-[24px] font-bold disabled:opacity-60 disabled:cursor-not-allowed flex items-center"
+          >
+            {isLoading ? (
+              <>
+                <Loader2 className="animate-spin mr-2 w-4 md:w-5 lg:w-6 h-4 md:h-5 lg:h-6" />
+                {t("common.loading")}
+              </>
+            ) : (
+              <>
+                {t("plan.getStarted")}
+                <ChevronRight className="inline w-4 md:w-5 lg:w-6 h-4 md:h-5 lg:h-6 ml-1 mb-1" />
+              </>
+            )}
           </button>
         </div>
         <Image

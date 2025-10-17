@@ -219,9 +219,16 @@ export default function MultiFileUploadSection({
           <button
             onClick={onActionButtonClick}
             disabled={actionButtonDisabled || files.length === 0}
-            className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-indigo-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors duration-200 uppercase"
+            className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-indigo-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors duration-200 uppercase flex items-center justify-center"
           >
-            {actionButtonText}
+            {actionButtonDisabled && files.length > 0 ? (
+              <>
+                <span className="inline-block animate-spin mr-2">⌛</span>
+                Processing...
+              </>
+            ) : (
+              actionButtonText
+            )}
           </button>
         </div>
 

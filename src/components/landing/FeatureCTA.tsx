@@ -1,11 +1,23 @@
 "use client";
 import Image from "next/image";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Loader2 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { useState } from "react";
 import "../../app/globals.css";
 
 export default function FeatureCTA() {
   const t = useTranslations();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleGetStarted = async () => {
+    setIsLoading(true);
+    try {
+      // Add your navigation or action logic here
+      await new Promise((resolve) => setTimeout(resolve, 500));
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <section className="py-6 md:py-12 bg-primary-900 px-6 md:px-24 text-center">
@@ -25,9 +37,22 @@ export default function FeatureCTA() {
           <p className="mb-6 md:mb-8 text-lg md:text-xl lg:text-2xl font-medium">
             {t("featureCTA.subtitle")}
           </p>
-          <button className="bg-primary-50 text-primary-900 px-4 md:px-6 py-3 md:py-5 text-lg md:text-xl lg:text-[24px] rounded-xl md:rounded-2xl font-bold">
-            {t("plan.getStarted")}
-            <ChevronRight className="inline w-5 md:w-6 h-5 md:h-6 ml-1 mb-1" />
+          <button
+            onClick={handleGetStarted}
+            disabled={isLoading}
+            className="bg-primary-50 text-primary-900 px-4 md:px-6 py-3 md:py-5 text-lg md:text-xl lg:text-[24px] rounded-xl md:rounded-2xl font-bold disabled:opacity-60 disabled:cursor-not-allowed flex items-center"
+          >
+            {isLoading ? (
+              <>
+                <Loader2 className="animate-spin mr-2 w-5 md:w-6 h-5 md:h-6" />
+                {t("common.loading")}
+              </>
+            ) : (
+              <>
+                {t("plan.getStarted")}
+                <ChevronRight className="inline w-5 md:w-6 h-5 md:h-6 ml-1 mb-1" />
+              </>
+            )}
           </button>
         </div>
       </div>

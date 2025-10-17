@@ -202,9 +202,16 @@ function CheckoutForm({
           createSubscription();
         }}
         disabled={!stripe || isProcessing}
-        className="bg-[#4B68FF] text-white w-full py-2 rounded-lg font-semibold mt-6"
+        className="bg-[#4B68FF] text-white w-full py-2 rounded-lg font-semibold mt-6 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center"
       >
-        {isProcessing ? "Processing..." : "Pay and Download The File"}
+        {isProcessing ? (
+          <>
+            <span className="inline-block animate-spin mr-2">⌛</span>
+            Processing...
+          </>
+        ) : (
+          "Pay and Download The File"
+        )}
       </button>
       {/* Secure Notice + Terms Agreement */}
       <div className="mt-6">

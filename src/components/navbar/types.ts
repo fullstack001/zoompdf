@@ -44,6 +44,8 @@ export interface AuthButtonProps {
   onClick: () => void;
   label: string;
   className?: string;
+  isLoading?: boolean;
+  loadingText?: string;
 }
 
 export interface LogoProps {

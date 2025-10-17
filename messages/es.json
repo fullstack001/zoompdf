@@ -259,6 +259,7 @@
     "alreadyHaveAccount": "¿Ya tienes una cuenta?",
     "dontHaveAccount": "¿No tienes una cuenta?",
     "login": "Iniciar sesión",
+    "loggingIn": "Iniciando sesión...",
     "emailAddress": "Dirección de correo electrónico",
     "enterEmailAddress": "Ingresa tu dirección de correo electrónico",
     "emailAlreadyRegistered": "Este correo electrónico ya está registrado. Por favor",
@@ -323,7 +324,8 @@
     "lowReduction": "~10% más pequeño",
     "compressionLevel": "Nivel de compresión",
     "selectLevel": "Selecciona tu nivel de compresión y comprime el archivo.",
-    "compress": "Comprimir"
+    "compress": "Comprimir",
+    "compressing": "Comprimiendo..."
   },
   "email": {
     "enterEmail": "Ingresa tu dirección de correo electrónico",
@@ -342,7 +344,8 @@
     "moneyBackAnswer": "Sí, ofrecemos una garantía de devolución de dinero de 14 días si no estás satisfecho con nuestro servicio.",
     "ctaTitle": "¿Quieres elevar las operaciones de tu negocio?",
     "ctaDescription": "Contáctanos en sales@thebestpdf.com y exploremos cómo nuestro producto puede revolucionar tu papeleo corporativo. ¡Únete a la creciente comunidad de empresas exitosas que aprovechan TheBestPDF para mantenerse a la vanguardia!",
-    "ctaButton": "Comenzar"
+    "ctaButton": "Comenzar",
+    "loading": "Cargando..."
   },
   "howItWorks": {
     "title": "Cómo comprimir PDF",

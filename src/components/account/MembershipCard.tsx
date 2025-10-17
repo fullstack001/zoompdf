@@ -1,8 +1,21 @@
 "use client";
 import { useTranslations } from "next-intl";
+import { useState } from "react";
+import { Loader2 } from "lucide-react";
 
 export default function MembershipCard() {
   const t = useTranslations();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSubscribe = async () => {
+    setIsLoading(true);
+    try {
+      // Add your subscription logic here
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <div className="bg-white rounded-xl p-4 sm:p-6 lg:p-8 shadow-lg border border-gray-200">
@@ -23,8 +36,19 @@ export default function MembershipCard() {
             {t("account.subscribeNow")}
           </span>
         </p>
-        <button className="w-full sm:w-auto bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 shadow-md hover:shadow-lg">
-          {t("account.subscribe")}
+        <button
+          onClick={handleSubscribe}
+          disabled={isLoading}
+          className="w-full sm:w-auto bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 shadow-md hover:shadow-lg disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center"
+        >
+          {isLoading ? (
+            <>
+              <Loader2 className="animate-spin mr-2" size={18} />
+              {t("common.loading")}
+            </>
+          ) : (
+            t("account.subscribe")
+          )}
         </button>
       </div>
     </div>

@@ -255,6 +255,7 @@
     "alreadyHaveAccount": "Har du redan ett konto?",
     "dontHaveAccount": "Har du inget konto?",
     "login": "Logga in",
+    "loggingIn": "Loggar in...",
     "emailAddress": "E-postadress",
     "enterEmailAddress": "Ange din e-postadress",
     "emailAlreadyRegistered": "Denna e-post är redan registrerad. Vänligen",
@@ -319,7 +320,8 @@
     "lowReduction": "~10% mindre",
     "compressionLevel": "Komprimeringsnivå",
     "selectLevel": "Välj din komprimeringsnivå och komprimera filen.",
-    "compress": "Komprimera"
+    "compress": "Komprimera",
+    "compressing": "Komprimerar..."
   },
   "email": {
     "enterEmail": "Ange din e-postadress",
@@ -338,7 +340,8 @@
     "moneyBackAnswer": "Ja, vi erbjuder en 14-dagars pengarna-tillbaka-garanti om du inte är nöjd med vår tjänst.",
     "ctaTitle": "Vill du höja dina affärsoperationer?",
     "ctaDescription": "Kontakta oss på sales@thebestpdf.com så utforskar vi hur vår produkt kan revolutionera ditt företagspappersarbete. Gå med i den växande gemenskapen av framgångsrika företag som utnyttjar TheBestPDF för att ligga steget före!",
-    "ctaButton": "Kom igång"
+    "ctaButton": "Kom igång",
+    "loading": "Laddar..."
   },
   "howItWorks": {
     "title": "Hur man komprimerar PDF",
