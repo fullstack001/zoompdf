@@ -45,6 +45,9 @@ const api = axios.create({
   headers: {
     "Content-Type": "application/json",
   },
+  // Support large file uploads (500MB)
+  maxContentLength: 500 * 1024 * 1024, // 500MB in bytes
+  maxBodyLength: 500 * 1024 * 1024, // 500MB in bytes
 });
 
 // Helper function to get auth token
@@ -222,9 +225,36 @@ export const uploadEditedPDF = async (
   pdfFile: File,
   onProgress?: (progress: number) => void
 ): Promise<any> => {
+  const uploadStartTime = Date.now();
+
   try {
+    console.log(
+      "╔═══════════════════════════════════════════════════════════════╗"
+    );
+    console.log(
+      "║              STARTING PDF UPLOAD (Edit Mode)                 ║"
+    );
+    console.log(
+      "╚═══════════════════════════════════════════════════════════════╝"
+    );
+    console.log("[API UPLOAD] Upload initiated at:", new Date().toISOString());
+    console.log("[API UPLOAD] File details:");
+    console.log(`  ├─ Name: ${pdfFile.name}`);
+    console.log(
+      `  ├─ Size: ${(pdfFile.size / 1024 / 1024).toFixed(2)} MB (${
+        pdfFile.size
+      } bytes)`
+    );
+    console.log(`  ├─ Type: ${pdfFile.type}`);
+    console.log(`  └─ Endpoint: /pdf/pdf_upload`);
+
     const formData = new FormData();
     formData.append("pdf", pdfFile);
+
+    let lastProgressLog = 0;
+    let lastLoaded = 0;
+    let lastTime = Date.now();
+    let uploadSpeed = 0;
 
     const response: AxiosResponse<any> = await api.post(
       "/pdf/pdf_upload",
@@ -234,19 +264,93 @@ export const uploadEditedPDF = async (
           "Content-Type": "multipart/form-data",
         },
         onUploadProgress: (progressEvent) => {
-          if (onProgress && progressEvent.total) {
+          if (progressEvent.total) {
             const progress = Math.round(
               (progressEvent.loaded * 100) / progressEvent.total
             );
-            onProgress(progress);
+            const currentTime = Date.now();
+            const timeDiff = currentTime - lastTime;
+
+            // Calculate upload speed (bytes per second)
+            if (timeDiff > 0) {
+              uploadSpeed =
+                ((progressEvent.loaded - lastLoaded) / timeDiff) * 1000;
+              lastLoaded = progressEvent.loaded;
+              lastTime = currentTime;
+            }
+
+            // Call progress callback
+            if (onProgress) {
+              onProgress(progress);
+            }
+
+            // Log progress every 1% or at completion
+            if (progress >= lastProgressLog + 1 || progress === 100) {
+              const uploadedMB = (progressEvent.loaded / 1024 / 1024).toFixed(
+                2
+              );
+              const totalMB = (progressEvent.total / 1024 / 1024).toFixed(2);
+              const speedMBps = (uploadSpeed / 1024 / 1024).toFixed(2);
+              const elapsedTime = (
+                (Date.now() - uploadStartTime) /
+                1000
+              ).toFixed(1);
+
+              console.log(`[API UPLOAD] Upload progress: ${progress}%`);
+              console.log(`  ├─ Uploaded: ${uploadedMB} MB / ${totalMB} MB`);
+              console.log(`  ├─ Speed: ${speedMBps} MB/s`);
+              console.log(`  └─ Elapsed: ${elapsedTime}s`);
+
+              lastProgressLog = progress;
+            }
           }
         },
       }
     );
 
+    const totalTime = Date.now() - uploadStartTime;
+    console.log(
+      "╔═══════════════════════════════════════════════════════════════╗"
+    );
+    console.log(
+      "║              PDF UPLOAD SUCCESSFUL (Edit Mode)               ║"
+    );
+    console.log(
+      "╚═══════════════════════════════════════════════════════════════╝"
+    );
+    console.log("[API UPLOAD] Upload statistics:");
+    console.log(`  ├─ Total time: ${(totalTime / 1000).toFixed(2)}s`);
+    console.log(
+      `  ├─ Average speed: ${(pdfFile.size / totalTime / 1024).toFixed(
+        2
+      )} KB/ms`
+    );
+    console.log(`  └─ Response:`, response.data);
+    console.log(
+      "═══════════════════════════════════════════════════════════════"
+    );
+
     return response.data;
   } catch (error) {
-    console.error("Error uploading edited PDF:", error);
+    const totalTime = Date.now() - uploadStartTime;
+    console.error(
+      "╔═══════════════════════════════════════════════════════════════╗"
+    );
+    console.error(
+      "║              PDF UPLOAD FAILED (Edit Mode)                   ║"
+    );
+    console.error(
+      "╚═══════════════════════════════════════════════════════════════╝"
+    );
+    console.error(
+      "[API UPLOAD ERROR] Time elapsed:",
+      (totalTime / 1000).toFixed(2),
+      "s"
+    );
+    console.error("[API UPLOAD ERROR] Details:", error);
+    console.error(
+      "═══════════════════════════════════════════════════════════════"
+    );
     throw error;
   }
 };
@@ -269,7 +373,35 @@ export const convertFile = async (
   onUploadProgress?: (progress: number) => void,
   additionalData?: Record<string, any>
 ): Promise<string> => {
+  const uploadStartTime = Date.now();
+
   try {
+    console.log(
+      "╔═══════════════════════════════════════════════════════════════╗"
+    );
+    console.log(
+      "║              STARTING FILE CONVERSION UPLOAD                  ║"
+    );
+    console.log(
+      "╚═══════════════════════════════════════════════════════════════╝"
+    );
+    console.log("[CONVERSION] Upload initiated at:", new Date().toISOString());
+    console.log("[CONVERSION] File details:");
+    console.log(`  ├─ Name: ${file.name}`);
+    console.log(
+      `  ├─ Size: ${(file.size / 1024 / 1024).toFixed(2)} MB (${
+        file.size
+      } bytes)`
+    );
+    console.log(`  ├─ Type: ${file.type}`);
+    console.log(`  ├─ Endpoint: ${endpoint}`);
+
+    if (additionalData) {
+      console.log(`  └─ Additional data:`, additionalData);
+    } else {
+      console.log(`  └─ No additional data`);
+    }
+
     const formData = new FormData();
     formData.append("files", file);
 
@@ -280,22 +412,98 @@ export const convertFile = async (
       });
     }
 
+    let lastProgressLog = 0;
+    let lastLoaded = 0;
+    let lastTime = Date.now();
+    let uploadSpeed = 0;
+
     const response: AxiosResponse<string> = await api.post(endpoint, formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
       onUploadProgress: (progressEvent) => {
-        if (onUploadProgress && progressEvent.total) {
+        if (progressEvent.total) {
           const progress = Math.round(
             (progressEvent.loaded * 100) / progressEvent.total
           );
-          onUploadProgress(progress);
+          const currentTime = Date.now();
+          const timeDiff = currentTime - lastTime;
+
+          // Calculate upload speed (bytes per second)
+          if (timeDiff > 0) {
+            uploadSpeed =
+              ((progressEvent.loaded - lastLoaded) / timeDiff) * 1000;
+            lastLoaded = progressEvent.loaded;
+            lastTime = currentTime;
+          }
+
+          // Call progress callback
+          if (onUploadProgress) {
+            onUploadProgress(progress);
+          }
+
+          // Log progress every 1% or at completion
+          if (progress >= lastProgressLog + 1 || progress === 100) {
+            const uploadedMB = (progressEvent.loaded / 1024 / 1024).toFixed(2);
+            const totalMB = (progressEvent.total / 1024 / 1024).toFixed(2);
+            const speedMBps = (uploadSpeed / 1024 / 1024).toFixed(2);
+            const elapsedTime = ((Date.now() - uploadStartTime) / 1000).toFixed(
+              1
+            );
+
+            console.log(`[CONVERSION] Upload progress: ${progress}%`);
+            console.log(`  ├─ Uploaded: ${uploadedMB} MB / ${totalMB} MB`);
+            console.log(`  ├─ Speed: ${speedMBps} MB/s`);
+            console.log(`  └─ Elapsed: ${elapsedTime}s`);
+
+            lastProgressLog = progress;
+          }
         }
       },
     });
 
+    const totalTime = Date.now() - uploadStartTime;
+    console.log(
+      "╔═══════════════════════════════════════════════════════════════╗"
+    );
+    console.log(
+      "║          FILE CONVERSION UPLOAD SUCCESSFUL                    ║"
+    );
+    console.log(
+      "╚═══════════════════════════════════════════════════════════════╝"
+    );
+    console.log("[CONVERSION] Upload statistics:");
+    console.log(`  ├─ Total time: ${(totalTime / 1000).toFixed(2)}s`);
+    console.log(
+      `  ├─ Average speed: ${(file.size / totalTime / 1024).toFixed(2)} KB/ms`
+    );
+    console.log(`  └─ Response data:`, response.data);
+    console.log(
+      "═══════════════════════════════════════════════════════════════"
+    );
+
     return response.data;
   } catch (error) {
+    const totalTime = Date.now() - uploadStartTime;
+    console.error(
+      "╔═══════════════════════════════════════════════════════════════╗"
+    );
+    console.error(
+      "║          FILE CONVERSION UPLOAD FAILED                        ║"
+    );
+    console.error(
+      "╚═══════════════════════════════════════════════════════════════╝"
+    );
+    console.error("[CONVERSION ERROR] Endpoint:", endpoint);
+    console.error(
+      "[CONVERSION ERROR] Time elapsed:",
+      (totalTime / 1000).toFixed(2),
+      "s"
+    );
+    console.error("[CONVERSION ERROR] Details:", error);
+    console.error(
+      "═══════════════════════════════════════════════════════════════"
+    );
     throw new Error("File conversion failed", { cause: error });
   }
 };

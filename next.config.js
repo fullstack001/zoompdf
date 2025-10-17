@@ -20,4 +20,8 @@ module.exports = withNextIntl({
   webpack: (config) => {
     return config;
   },
+  // Enable large file uploads (up to 500MB)
+  experimental: {
+    bodySizeLimit: "500mb",
+  },
 });
