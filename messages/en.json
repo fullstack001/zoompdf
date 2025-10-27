@@ -154,8 +154,8 @@
   },
   "toolPages": {
     "home": {
-      "title": "PDF to Word Converter",
-      "subtitle": "1M+ files processed monthly. Upload a file to get started!"
+      "title": "PDF Converter & Editor",
+      "subtitle": "Convert, edit, and manage your PDFs with ease. 1M+ files processed monthly!"
     },
     "signPdf": {
       "title": "Sign PDF Online",
@@ -212,6 +212,102 @@
     "epubToPdf": {
       "title": "EPUB to PDF Converter",
       "subtitle": "We've already converted 775,000 files — now let us help with yours"
+    },
+    "pdfToTxt": {
+      "title": "PDF to TXT Converter",
+      "subtitle": "We've already converted 775,000 files — yours could be next"
+    },
+    "pdfToHtml": {
+      "title": "PDF to HTML Converter",
+      "subtitle": "We've already converted 775,000 files — yours could be next"
+    },
+    "pdfToSvg": {
+      "title": "PDF to SVG Converter",
+      "subtitle": "We've already converted 775,000 files — yours could be next"
+    },
+    "pdfToTiff": {
+      "title": "PDF to TIFF Converter",
+      "subtitle": "We've already converted 775,000 files — yours could be next"
+    },
+    "pdfToWebp": {
+      "title": "PDF to WebP Converter",
+      "subtitle": "We've already converted 775,000 files — yours could be next"
+    },
+    "pdfToAvif": {
+      "title": "PDF to AVIF Converter",
+      "subtitle": "We've already converted 775,000 files — yours could be next"
+    },
+    "pdfToEps": {
+      "title": "PDF to EPS Converter",
+      "subtitle": "We've already converted 775,000 files — yours could be next"
+    },
+    "pdfToDxf": {
+      "title": "PDF to DXF Converter",
+      "subtitle": "We've already converted 775,000 files — yours could be next"
+    },
+    "pdfToAzw3": {
+      "title": "PDF to AZW3 Converter",
+      "subtitle": "We've already converted 775,000 files — yours could be next"
+    },
+    "pdfToMobi": {
+      "title": "PDF to MOBI Converter",
+      "subtitle": "We've already converted 775,000 files — yours could be next"
+    },
+    "pdfToDoc": {
+      "title": "PDF to DOC Converter",
+      "subtitle": "We've already converted 775,000 files — yours could be next"
+    },
+    "excelToPdf": {
+      "title": "Excel to PDF Converter",
+      "subtitle": "We've already converted 775,000 files — yours could be next"
+    },
+    "pptxToPdf": {
+      "title": "PPTX to PDF Converter",
+      "subtitle": "We've already converted 775,000 files — yours could be next"
+    },
+    "mobiToPdf": {
+      "title": "MOBI to PDF Converter",
+      "subtitle": "We've already converted 775,000 files — yours could be next"
+    },
+    "avifToPdf": {
+      "title": "AVIF to PDF Converter",
+      "subtitle": "We've already converted 775,000 files — yours could be next"
+    },
+    "pngToAvif": {
+      "title": "PNG to AVIF Converter",
+      "subtitle": "We've already converted 775,000 files — yours could be next"
+    },
+    "jpgToAvif": {
+      "title": "JPG to AVIF Converter",
+      "subtitle": "We've already converted 775,000 files — yours could be next"
+    },
+    "avifToPng": {
+      "title": "AVIF to PNG Converter",
+      "subtitle": "We've already converted 775,000 files — yours could be next"
+    },
+    "avifToJpg": {
+      "title": "AVIF to JPG Converter",
+      "subtitle": "We've already converted 775,000 files — yours could be next"
+    },
+    "epubToMobi": {
+      "title": "EPUB to MOBI Converter",
+      "subtitle": "We've already converted 775,000 files — yours could be next"
+    },
+    "mobiToEpub": {
+      "title": "MOBI to EPUB Converter",
+      "subtitle": "We've already converted 775,000 files — yours could be next"
+    },
+    "pdfOcr": {
+      "title": "PDF OCR Tool",
+      "subtitle": "Extract text from PDFs with OCR technology. Upload a file to get started!"
+    },
+    "pdfToImage": {
+      "title": "PDF to Image Converter",
+      "subtitle": "Convert PDF pages to images. Upload a file to get started!"
+    },
+    "imageToPdf": {
+      "title": "Image to PDF Converter",
+      "subtitle": "Convert images to PDF. Upload your files to get started!"
     }
   },
   "navbar": {

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useLocalizedNavigation } from "@/utils/navigation";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import MultiFileUploadSection from "@/components/common/MultiFileUploadSection";
 import { UploadedFile } from "@/components/common/types";
 import FeatureItems from "@/components/common/FeatureItems";
@@ -17,12 +17,11 @@ import Footer from "@/components/Footer";
 import { useTranslations } from "next-intl";
 import { PDFDocument } from "pdf-lib";
 
-import { setAction } from "../../../store/slices/flowSlice";
-import { RootState } from "@/store/store";
+import { setAction } from "../../../../store/slices/flowSlice";
 import { uploadEditedPDF } from "@/utils/apiUtils";
 import { setFileName } from "@/store/slices/flowSlice";
 
-export default function MergePDFPage() {
+export default function MergePdfPage() {
   const dispatch = useDispatch();
   const [progress, setProgress] = useState(0);
   const { navigate } = useLocalizedNavigation();
@@ -49,7 +48,9 @@ export default function MergePDFPage() {
     const pdfBytes = await mergedPdf.save();
     const mergedFileName = `merged-${Date.now()}.pdf`;
 
-    return new File([pdfBytes], mergedFileName, { type: "application/pdf" });
+    return new File([new Uint8Array(pdfBytes)], mergedFileName, {
+      type: "application/pdf",
+    });
   };
 
   const handleMergeFiles = async () => {

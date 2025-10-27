@@ -17,7 +17,7 @@ import CompressionLevelModal from "@/components/common/CompressionLevelModal";
 import { useCompressPdf } from "@/utils/useCompressPdf";
 import { useTranslations } from "next-intl";
 
-export default function CompressPdf() {
+export default function CompressPdfPage() {
   const {
     uploading,
     progress,

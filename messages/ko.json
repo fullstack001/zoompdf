@@ -143,8 +143,8 @@
   },
   "toolPages": {
     "home": {
-      "title": "PDF to Word 변환기",
-      "subtitle": "월 100만 개 이상의 파일 처리! 파일을 업로드하여 시작하세요!"
+      "title": "PDF 변환기 및 편집기",
+      "subtitle": "PDF를 쉽게 변환, 편집 및 관리하세요. 월 100만 개 이상의 파일 처리!"
     },
     "signPdf": {
       "title": "온라인 PDF 서명",
@@ -201,6 +201,102 @@
     "epubToPdf": {
       "title": "EPUB to PDF 변환기",
       "subtitle": "이미 775,000개의 파일을 변환했습니다 — 이제 귀하의 파일도 도와드리겠습니다"
+    },
+    "pdfToTxt": {
+      "title": "PDF to TXT 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 귀하의 파일이 다음이 될 수 있습니다"
+    },
+    "pdfToHtml": {
+      "title": "PDF to HTML 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 귀하의 파일이 다음이 될 수 있습니다"
+    },
+    "pdfToSvg": {
+      "title": "PDF to SVG 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 귀하의 파일이 다음이 될 수 있습니다"
+    },
+    "pdfToTiff": {
+      "title": "PDF to TIFF 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 귀하의 파일이 다음이 될 수 있습니다"
+    },
+    "pdfToWebp": {
+      "title": "PDF to WebP 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 귀하의 파일이 다음이 될 수 있습니다"
+    },
+    "pdfToAvif": {
+      "title": "PDF to AVIF 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 귀하의 파일이 다음이 될 수 있습니다"
+    },
+    "pdfToEps": {
+      "title": "PDF to EPS 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 귀하의 파일이 다음이 될 수 있습니다"
+    },
+    "pdfToDxf": {
+      "title": "PDF to DXF 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 귀하의 파일이 다음이 될 수 있습니다"
+    },
+    "pdfToAzw3": {
+      "title": "PDF to AZW3 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 귀하의 파일이 다음이 될 수 있습니다"
+    },
+    "pdfToMobi": {
+      "title": "PDF to MOBI 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 귀하의 파일이 다음이 될 수 있습니다"
+    },
+    "pdfToDoc": {
+      "title": "PDF to DOC 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 귀하의 파일이 다음이 될 수 있습니다"
+    },
+    "excelToPdf": {
+      "title": "Excel to PDF 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 귀하의 파일이 다음이 될 수 있습니다"
+    },
+    "pptxToPdf": {
+      "title": "PPTX to PDF 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 귀하의 파일이 다음이 될 수 있습니다"
+    },
+    "mobiToPdf": {
+      "title": "MOBI to PDF 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 귀하의 파일이 다음이 될 수 있습니다"
+    },
+    "avifToPdf": {
+      "title": "AVIF to PDF 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 귀하의 파일이 다음이 될 수 있습니다"
+    },
+    "pngToAvif": {
+      "title": "PNG to AVIF 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 귀하의 파일이 다음이 될 수 있습니다"
+    },
+    "jpgToAvif": {
+      "title": "JPG to AVIF 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 귀하의 파일이 다음이 될 수 있습니다"
+    },
+    "avifToPng": {
+      "title": "AVIF to PNG 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 귀하의 파일이 다음이 될 수 있습니다"
+    },
+    "avifToJpg": {
+      "title": "AVIF to JPG 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 귀하의 파일이 다음이 될 수 있습니다"
+    },
+    "epubToMobi": {
+      "title": "EPUB to MOBI 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 귀하의 파일이 다음이 될 수 있습니다"
+    },
+    "mobiToEpub": {
+      "title": "MOBI to EPUB 변환기",
+      "subtitle": "이미 775,000개의 파일을 변환했습니다 — 귀하의 파일이 다음이 될 수 있습니다"
+    },
+    "pdfOcr": {
+      "title": "PDF OCR 도구",
+      "subtitle": "OCR 기술로 PDF에서 텍스트를 추출하세요. 파일을 업로드하여 시작하세요!"
+    },
+    "pdfToImage": {
+      "title": "PDF to Image 변환기",
+      "subtitle": "PDF 페이지를 이미지로 변환하세요. 파일을 업로드하여 시작하세요!"
+    },
+    "imageToPdf": {
+      "title": "Image to PDF 변환기",
+      "subtitle": "이미지를 PDF로 변환하세요. 파일을 업로드하여 시작하세요!"
     }
   },
   "navbar": {

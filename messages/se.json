@@ -143,8 +143,8 @@
   },
   "toolPages": {
     "home": {
-      "title": "PDF till Word Konverterare",
-      "subtitle": "1M+ filer bearbetade månadsvis. Ladda upp en fil för att komma igång!"
+      "title": "PDF Konverterare och Redigerare",
+      "subtitle": "Konvertera, redigera och hantera dina PDFs med lätthet. 1M+ filer bearbetade månadsvis!"
     },
     "signPdf": {
       "title": "Signera PDF Online",
@@ -201,6 +201,102 @@
     "epubToPdf": {
       "title": "EPUB till PDF Konverterare",
       "subtitle": "Vi har redan konverterat 775 000 filer — nu låt oss hjälpa dig med din"
+    },
+    "pdfToTxt": {
+      "title": "PDF till TXT Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+    },
+    "pdfToHtml": {
+      "title": "PDF till HTML Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+    },
+    "pdfToSvg": {
+      "title": "PDF till SVG Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+    },
+    "pdfToTiff": {
+      "title": "PDF till TIFF Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+    },
+    "pdfToWebp": {
+      "title": "PDF till WebP Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+    },
+    "pdfToAvif": {
+      "title": "PDF till AVIF Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+    },
+    "pdfToEps": {
+      "title": "PDF till EPS Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+    },
+    "pdfToDxf": {
+      "title": "PDF till DXF Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+    },
+    "pdfToAzw3": {
+      "title": "PDF till AZW3 Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+    },
+    "pdfToMobi": {
+      "title": "PDF till MOBI Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+    },
+    "pdfToDoc": {
+      "title": "PDF till DOC Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+    },
+    "excelToPdf": {
+      "title": "Excel till PDF Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+    },
+    "pptxToPdf": {
+      "title": "PPTX till PDF Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+    },
+    "mobiToPdf": {
+      "title": "MOBI till PDF Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+    },
+    "avifToPdf": {
+      "title": "AVIF till PDF Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+    },
+    "pngToAvif": {
+      "title": "PNG till AVIF Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+    },
+    "jpgToAvif": {
+      "title": "JPG till AVIF Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+    },
+    "avifToPng": {
+      "title": "AVIF till PNG Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+    },
+    "avifToJpg": {
+      "title": "AVIF till JPG Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+    },
+    "epubToMobi": {
+      "title": "EPUB till MOBI Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+    },
+    "mobiToEpub": {
+      "title": "MOBI till EPUB Konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+    },
+    "pdfOcr": {
+      "title": "PDF OCR Verktyg",
+      "subtitle": "Extrahera text från PDFs med OCR-teknik. Ladda upp en fil för att komma igång!"
+    },
+    "pdfToImage": {
+      "title": "PDF till Bild Konverterare",
+      "subtitle": "Konvertera PDF-sidor till bilder. Ladda upp en fil för att komma igång!"
+    },
+    "imageToPdf": {
+      "title": "Bild till PDF Konverterare",
+      "subtitle": "Konvertera bilder till PDF. Ladda upp dina filer för att komma igång!"
     }
   },
   "navbar": {

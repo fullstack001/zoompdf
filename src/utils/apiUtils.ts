@@ -549,6 +549,107 @@ export const convertEpubToPdf = async (file: File): Promise<string> => {
   return convertFile("/pdf/epub_to_pdf", file);
 };
 
+// Additional PDF conversion functions
+export const convertPdfToTxt = async (file: File): Promise<string> => {
+  return convertFile("/pdf/pdf_to_txt", file);
+};
+
+export const convertPdfToHtml = async (file: File): Promise<string> => {
+  return convertFile("/pdf/pdf_to_html", file);
+};
+
+export const convertPdfToSvg = async (file: File): Promise<string> => {
+  return convertFile("/pdf/pdf_to_svg", file);
+};
+
+export const convertPdfToTiff = async (file: File): Promise<string> => {
+  return convertFile("/pdf/pdf_to_tiff", file);
+};
+
+export const convertPdfToWebp = async (file: File): Promise<string> => {
+  return convertFile("/pdf/pdf_to_webp", file);
+};
+
+export const convertPdfToAvif = async (file: File): Promise<string> => {
+  return convertFile("/pdf/pdf_to_avif", file);
+};
+
+export const convertPdfToEps = async (file: File): Promise<string> => {
+  return convertFile("/pdf/pdf_to_eps", file);
+};
+
+export const convertPdfToDxf = async (file: File): Promise<string> => {
+  return convertFile("/pdf/pdf_to_dxf", file);
+};
+
+export const convertPdfToAzw3 = async (file: File): Promise<string> => {
+  return convertFile("/pdf/pdf_to_azw3", file);
+};
+
+export const convertPdfToMobi = async (file: File): Promise<string> => {
+  return convertFile("/pdf/pdf_to_mobi", file);
+};
+
+export const convertPdfToDoc = async (file: File): Promise<string> => {
+  return convertFile("/pdf/pdf_to_doc", file);
+};
+
+// Additional file to PDF conversion functions
+export const convertExcelToPdf = async (file: File): Promise<string> => {
+  return convertFile("/pdf/excel_to_pdf", file);
+};
+
+export const convertPptxToPdf = async (file: File): Promise<string> => {
+  return convertFile("/pdf/pptx_to_pdf", file);
+};
+
+export const convertMobiToPdf = async (file: File): Promise<string> => {
+  return convertFile("/pdf/mobi_to_pdf", file);
+};
+
+export const convertAvifToPdf = async (file: File): Promise<string> => {
+  return convertFile("/pdf/avif_to_pdf", file);
+};
+
+// Image conversion functions
+export const convertPngToAvif = async (file: File): Promise<string> => {
+  return convertFile("/pdf/png_to_avif", file);
+};
+
+export const convertJpgToAvif = async (file: File): Promise<string> => {
+  return convertFile("/pdf/jpg_to_avif", file);
+};
+
+export const convertAvifToPng = async (file: File): Promise<string> => {
+  return convertFile("/pdf/avif_to_png", file);
+};
+
+export const convertAvifToJpg = async (file: File): Promise<string> => {
+  return convertFile("/pdf/avif_to_jpg", file);
+};
+
+// E-book conversion functions
+export const convertEpubToMobi = async (file: File): Promise<string> => {
+  return convertFile("/pdf/epub_to_mobi", file);
+};
+
+export const convertMobiToEpub = async (file: File): Promise<string> => {
+  return convertFile("/pdf/mobi_to_epub", file);
+};
+
+// PDF tools functions
+export const convertPdfOcr = async (file: File): Promise<string> => {
+  return convertFile("/pdf/pdf_ocr", file);
+};
+
+export const convertPdfToImage = async (file: File): Promise<string> => {
+  return convertFile("/pdf/pdf_to_image", file);
+};
+
+export const convertImageToPdf = async (file: File): Promise<string> => {
+  return convertFile("/pdf/image_to_pdf", file);
+};
+
 export const compressPdf = async (
   file: File,
   compressionLevel: number

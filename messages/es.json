@@ -147,8 +147,8 @@
   },
   "toolPages": {
     "home": {
-      "title": "Convertidor de PDF a Word",
-      "subtitle": "¡Más de 1M de archivos procesados mensualmente. ¡Sube un archivo para comenzar!"
+      "title": "Convertidor y Editor de PDF",
+      "subtitle": "Convierte, edita y gestiona tus PDFs con facilidad. ¡1M+ archivos procesados mensualmente!"
     },
     "signPdf": {
       "title": "Firmar PDF en línea",
@@ -205,6 +205,102 @@
     "epubToPdf": {
       "title": "Convertidor de EPUB a PDF",
       "subtitle": "Ya hemos convertido 775,000 archivos — ahora déjanos ayudarte con el tuyo"
+    },
+    "pdfToTxt": {
+      "title": "Convertidor de PDF a TXT",
+      "subtitle": "Ya hemos convertido 775,000 archivos — el tuyo podría ser el siguiente"
+    },
+    "pdfToHtml": {
+      "title": "Convertidor de PDF a HTML",
+      "subtitle": "Ya hemos convertido 775,000 archivos — el tuyo podría ser el siguiente"
+    },
+    "pdfToSvg": {
+      "title": "Convertidor de PDF a SVG",
+      "subtitle": "Ya hemos convertido 775,000 archivos — el tuyo podría ser el siguiente"
+    },
+    "pdfToTiff": {
+      "title": "Convertidor de PDF a TIFF",
+      "subtitle": "Ya hemos convertido 775,000 archivos — el tuyo podría ser el siguiente"
+    },
+    "pdfToWebp": {
+      "title": "Convertidor de PDF a WebP",
+      "subtitle": "Ya hemos convertido 775,000 archivos — el tuyo podría ser el siguiente"
+    },
+    "pdfToAvif": {
+      "title": "Convertidor de PDF a AVIF",
+      "subtitle": "Ya hemos convertido 775,000 archivos — el tuyo podría ser el siguiente"
+    },
+    "pdfToEps": {
+      "title": "Convertidor de PDF a EPS",
+      "subtitle": "Ya hemos convertido 775,000 archivos — el tuyo podría ser el siguiente"
+    },
+    "pdfToDxf": {
+      "title": "Convertidor de PDF a DXF",
+      "subtitle": "Ya hemos convertido 775,000 archivos — el tuyo podría ser el siguiente"
+    },
+    "pdfToAzw3": {
+      "title": "Convertidor de PDF a AZW3",
+      "subtitle": "Ya hemos convertido 775,000 archivos — el tuyo podría ser el siguiente"
+    },
+    "pdfToMobi": {
+      "title": "Convertidor de PDF a MOBI",
+      "subtitle": "Ya hemos convertido 775,000 archivos — el tuyo podría ser el siguiente"
+    },
+    "pdfToDoc": {
+      "title": "Convertidor de PDF a DOC",
+      "subtitle": "Ya hemos convertido 775,000 archivos — el tuyo podría ser el siguiente"
+    },
+    "excelToPdf": {
+      "title": "Convertidor de Excel a PDF",
+      "subtitle": "Ya hemos convertido 775,000 archivos — el tuyo podría ser el siguiente"
+    },
+    "pptxToPdf": {
+      "title": "Convertidor de PPTX a PDF",
+      "subtitle": "Ya hemos convertido 775,000 archivos — el tuyo podría ser el siguiente"
+    },
+    "mobiToPdf": {
+      "title": "Convertidor de MOBI a PDF",
+      "subtitle": "Ya hemos convertido 775,000 archivos — el tuyo podría ser el siguiente"
+    },
+    "avifToPdf": {
+      "title": "Convertidor de AVIF a PDF",
+      "subtitle": "Ya hemos convertido 775,000 archivos — el tuyo podría ser el siguiente"
+    },
+    "pngToAvif": {
+      "title": "Convertidor de PNG a AVIF",
+      "subtitle": "Ya hemos convertido 775,000 archivos — el tuyo podría ser el siguiente"
+    },
+    "jpgToAvif": {
+      "title": "Convertidor de JPG a AVIF",
+      "subtitle": "Ya hemos convertido 775,000 archivos — el tuyo podría ser el siguiente"
+    },
+    "avifToPng": {
+      "title": "Convertidor de AVIF a PNG",
+      "subtitle": "Ya hemos convertido 775,000 archivos — el tuyo podría ser el siguiente"
+    },
+    "avifToJpg": {
+      "title": "Convertidor de AVIF a JPG",
+      "subtitle": "Ya hemos convertido 775,000 archivos — el tuyo podría ser el siguiente"
+    },
+    "epubToMobi": {
+      "title": "Convertidor de EPUB a MOBI",
+      "subtitle": "Ya hemos convertido 775,000 archivos — el tuyo podría ser el siguiente"
+    },
+    "mobiToEpub": {
+      "title": "Convertidor de MOBI a EPUB",
+      "subtitle": "Ya hemos convertido 775,000 archivos — el tuyo podría ser el siguiente"
+    },
+    "pdfOcr": {
+      "title": "Herramienta OCR de PDF",
+      "subtitle": "Extrae texto de PDFs con tecnología OCR. ¡Sube un archivo para comenzar!"
+    },
+    "pdfToImage": {
+      "title": "Convertidor de PDF a Imagen",
+      "subtitle": "Convierte páginas de PDF a imágenes. ¡Sube un archivo para comenzar!"
+    },
+    "imageToPdf": {
+      "title": "Convertidor de Imagen a PDF",
+      "subtitle": "Convierte imágenes a PDF. ¡Sube tus archivos para comenzar!"
     }
   },
   "navbar": {

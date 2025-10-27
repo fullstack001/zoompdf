@@ -147,8 +147,8 @@
   },
   "toolPages": {
     "home": {
-      "title": "Convertisseur PDF vers Word",
-      "subtitle": "Plus d'1M de fichiers traités mensuellement. Téléchargez un fichier pour commencer !"
+      "title": "Convertisseur et Éditeur PDF",
+      "subtitle": "Convertissez, éditez et gérez vos PDFs en toute simplicité. Plus d'1M de fichiers traités mensuellement !"
     },
     "signPdf": {
       "title": "Signer PDF en ligne",
@@ -205,6 +205,102 @@
     "epubToPdf": {
       "title": "Convertisseur EPUB vers PDF",
       "subtitle": "Nous avons déjà converti 775 000 fichiers — maintenant laissez-nous vous aider avec le vôtre"
+    },
+    "pdfToTxt": {
+      "title": "Convertisseur PDF vers TXT",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — le vôtre pourrait être le prochain"
+    },
+    "pdfToHtml": {
+      "title": "Convertisseur PDF vers HTML",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — le vôtre pourrait être le prochain"
+    },
+    "pdfToSvg": {
+      "title": "Convertisseur PDF vers SVG",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — le vôtre pourrait être le prochain"
+    },
+    "pdfToTiff": {
+      "title": "Convertisseur PDF vers TIFF",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — le vôtre pourrait être le prochain"
+    },
+    "pdfToWebp": {
+      "title": "Convertisseur PDF vers WebP",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — le vôtre pourrait être le prochain"
+    },
+    "pdfToAvif": {
+      "title": "Convertisseur PDF vers AVIF",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — le vôtre pourrait être le prochain"
+    },
+    "pdfToEps": {
+      "title": "Convertisseur PDF vers EPS",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — le vôtre pourrait être le prochain"
+    },
+    "pdfToDxf": {
+      "title": "Convertisseur PDF vers DXF",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — le vôtre pourrait être le prochain"
+    },
+    "pdfToAzw3": {
+      "title": "Convertisseur PDF vers AZW3",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — le vôtre pourrait être le prochain"
+    },
+    "pdfToMobi": {
+      "title": "Convertisseur PDF vers MOBI",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — le vôtre pourrait être le prochain"
+    },
+    "pdfToDoc": {
+      "title": "Convertisseur PDF vers DOC",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — le vôtre pourrait être le prochain"
+    },
+    "excelToPdf": {
+      "title": "Convertisseur Excel vers PDF",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — le vôtre pourrait être le prochain"
+    },
+    "pptxToPdf": {
+      "title": "Convertisseur PPTX vers PDF",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — le vôtre pourrait être le prochain"
+    },
+    "mobiToPdf": {
+      "title": "Convertisseur MOBI vers PDF",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — le vôtre pourrait être le prochain"
+    },
+    "avifToPdf": {
+      "title": "Convertisseur AVIF vers PDF",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — le vôtre pourrait être le prochain"
+    },
+    "pngToAvif": {
+      "title": "Convertisseur PNG vers AVIF",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — le vôtre pourrait être le prochain"
+    },
+    "jpgToAvif": {
+      "title": "Convertisseur JPG vers AVIF",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — le vôtre pourrait être le prochain"
+    },
+    "avifToPng": {
+      "title": "Convertisseur AVIF vers PNG",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — le vôtre pourrait être le prochain"
+    },
+    "avifToJpg": {
+      "title": "Convertisseur AVIF vers JPG",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — le vôtre pourrait être le prochain"
+    },
+    "epubToMobi": {
+      "title": "Convertisseur EPUB vers MOBI",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — le vôtre pourrait être le prochain"
+    },
+    "mobiToEpub": {
+      "title": "Convertisseur MOBI vers EPUB",
+      "subtitle": "Nous avons déjà converti 775 000 fichiers — le vôtre pourrait être le prochain"
+    },
+    "pdfOcr": {
+      "title": "Outil OCR PDF",
+      "subtitle": "Extrayez du texte des PDF avec la technologie OCR. Téléchargez un fichier pour commencer !"
+    },
+    "pdfToImage": {
+      "title": "Convertisseur PDF vers Image",
+      "subtitle": "Convertissez les pages PDF en images. Téléchargez un fichier pour commencer !"
+    },
+    "imageToPdf": {
+      "title": "Convertisseur Image vers PDF",
+      "subtitle": "Convertissez les images en PDF. Téléchargez vos fichiers pour commencer !"
     }
   },
   "navbar": {
