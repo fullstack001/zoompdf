@@ -17,7 +17,6 @@ export interface TranslationMessages {
     sign: string;
     merge: string;
     split: string;
-    forms: string;
     files: string;
     account: string;
     login: string;
@@ -31,7 +30,6 @@ export interface TranslationMessages {
     signPdf: string;
     mergePdf: string;
     splitPdf: string;
-    forms: string;
     files: string;
     account: string;
     login: string;

@@ -5,7 +5,6 @@ import ToolsGrid from "@/components/landing/ToolsGrid";
 import HowItWorks from "@/components/landing/HowItWorks";
 import FeatureCTA from "@/components/landing/FeatureCTA";
 import WhyUs from "@/components/landing/WhyUs";
-import FormTemplates from "@/components/landing/FormTemplates";
 import CoreValues from "@/components/landing/CoreValues";
 import FAQ from "@/components/landing/FAQ";
 import Footer from "@/components/Footer";
@@ -24,7 +23,7 @@ import { PDFDocument } from "pdf-lib";
 export default function SplitPdfPage() {
   const [uploading, setUploading] = useState(false);
   const [progress, setProgress] = useState(0);
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState<string[]>([]);
   const [isEmailModalVisible, setIsEmailModalVisible] = useState(false);
   const [email, setEmail] = useState("");
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -36,7 +35,8 @@ export default function SplitPdfPage() {
   const { navigate } = useLocalizedNavigation();
   const t = useTranslations();
 
-  const handleFileChange = (file: File | null) => {
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0] || null;
     setSelectedFile(file);
     setSplitError(null);
   };
@@ -101,7 +101,7 @@ export default function SplitPdfPage() {
     setIsLoading(true);
     setUploading(true);
     setProgress(0);
-    setStatus(t("common.processing"));
+    setStatus([t("common.processing")]);
 
     try {
       setSplitError(null);
@@ -211,7 +211,6 @@ export default function SplitPdfPage() {
       <ToolsGrid />
       <FeatureCTA />
       <WhyUs />
-      <FormTemplates />
       <CoreValues />
       <FAQ />
       <Footer />

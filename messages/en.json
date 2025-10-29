@@ -7,7 +7,6 @@
     "sign": "Sign",
     "merge": "Merge",
     "split": "Split",
-    "forms": "Forms",
     "files": "Files",
     "account": "Account",
     "login": "Login",
@@ -31,7 +30,6 @@
     "signPdf": "Sign PDF",
     "mergePdf": "Merge PDF",
     "splitPdf": "Split PDF",
-    "forms": "Forms",
     "files": "Files",
     "account": "My Account",
     "login": "Login",
@@ -316,7 +314,6 @@
     "convertImage": "Convert Image",
     "convertEbook": "Convert E-book",
     "editingTools": "Editing Tools",
-    "formTools": "Form Tools",
     "myDocuments": "My Documents",
     "myAccount": "My Account",
     "help": "Help",
@@ -331,9 +328,6 @@
     "editPdf": "Edit PDF",
     "convertFromPdf": "Convert from PDF",
     "convertToPdf": "Convert to PDF",
-    "forms": "Forms",
-    "fillPdfForm": "Fill PDF Form",
-    "createPdfForm": "Create PDF Form",
     "disclaimer": "Disclaimer",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
@@ -405,12 +399,6 @@
     "title": "Security Priority",
     "description": "Your data security is our top priority. We implement enterprise-grade encryption and security measures to protect your documents and ensure complete privacy."
   },
-  "formTemplates": {
-    "title": "Pick a form and fill it out — 300+ templates",
-    "subtitle": "Save time with custom forms for taxes, contracts, agreements, and more — ready to fill and send.",
-    "viewForm": "View Form",
-    "viewAllForms": "VIEW ALL FORMS"
-  },
   "coreValues": {
     "title": "Core values behind TheBestPDF"
   },
@@ -462,7 +450,6 @@
   },
   "files": {
     "searchFiles": "Search Files",
-    "forms": "Forms",
     "pdfConverter": "PDF Converter",
     "editPdf": "Edit PDF",
     "signPdf": "Sign PDF",
@@ -475,19 +462,7 @@
     "createForm": "Create Form",
     "editForm": "Edit Form",
     "summarizePdf": "Summarize PDF",
-    "extractHighlights": "Extract Highlights",
-    "taxForms": "Tax Forms",
-    "legalForms": "Legal Forms",
-    "healthcareForms": "Healthcare Forms",
-    "militaryForms": "Military Forms",
-    "educationForms": "Education Forms",
-    "businessForms": "Business Forms",
-    "financialForms": "Financial Forms",
-    "realEstate": "Real Estate",
-    "insuranceForms": "Insurance Forms",
-    "travelForms": "Travel Forms",
-    "techForms": "Tech Forms",
-    "otherForms": "Other Forms"
+    "extractHighlights": "Extract Highlights"
   },
   "features": {
     "comprehensiveSuite": "Comprehensive Suite",

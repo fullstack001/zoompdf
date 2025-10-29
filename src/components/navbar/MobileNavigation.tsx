@@ -88,17 +88,6 @@ export const MobileNavigation: React.FC<NavbarProps> = ({
             onNavigate={handleNavigate}
           />
 
-          <MobileMenuItem
-            label={t("navigation.forms")}
-            items={[
-              { label: t("tools.signPdf"), route: "/sign-pdf" },
-              { label: t("tools.fillForm"), route: "/fill-form" },
-            ]}
-            open={openDropdown === t("navigation.forms")}
-            onToggle={() => toggleDropdown(t("navigation.forms"))}
-            onNavigate={handleNavigate}
-          />
-
           <hr className="my-4" />
 
           {/* User Section */}

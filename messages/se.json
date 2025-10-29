@@ -7,7 +7,6 @@
     "sign": "Signera",
     "merge": "Slå samman",
     "split": "Dela",
-    "forms": "Formulär",
     "files": "Filer",
     "account": "Konto",
     "login": "Logga in",
@@ -31,7 +30,6 @@
     "signPdf": "Signera PDF",
     "mergePdf": "Slå samman PDF",
     "splitPdf": "Dela PDF",
-    "forms": "Formulär",
     "files": "Filer",
     "account": "Mitt Konto",
     "login": "Logga in",
@@ -305,7 +303,6 @@
     "convertImage": "Konvertera Bild",
     "convertEbook": "Konvertera E-bok",
     "editingTools": "Redigeringsverktyg",
-    "formTools": "Formulärverktyg",
     "myDocuments": "Mina dokument",
     "myAccount": "Mitt konto",
     "help": "Hjälp",
@@ -320,9 +317,6 @@
     "editPdf": "Redigera PDF",
     "convertFromPdf": "Konvertera från PDF",
     "convertToPdf": "Konvertera till PDF",
-    "forms": "Formulär",
-    "fillPdfForm": "Fyll i PDF-formulär",
-    "createPdfForm": "Skapa PDF-formulär",
     "disclaimer": "Ansvarsfriskrivning",
     "privacyPolicy": "Integritetspolicy",
     "termsOfService": "Användarvillkor",
@@ -394,12 +388,6 @@
     "title": "Säkerhetsprioritet",
     "description": "Din datasäkerhet är vår högsta prioritet. Vi implementerar företagsgrad kryptering och säkerhetsåtgärder för att skydda dina dokument och säkerställa fullständig sekretess."
   },
-  "formTemplates": {
-    "title": "Välj ett formulär och fyll i det — 300+ mallar",
-    "subtitle": "Spara tid med anpassade formulär för skatter, kontrakt, avtal och mer — redo att fylla i och skicka.",
-    "viewForm": "Visa Formulär",
-    "viewAllForms": "VISA ALLA FORMULÄR"
-  },
   "coreValues": {
     "title": "Grundvärden bakom TheBestPDF"
   },
@@ -451,7 +439,6 @@
   },
   "files": {
     "searchFiles": "Sök filer",
-    "forms": "Formulär",
     "pdfConverter": "PDF-konverterare",
     "editPdf": "Redigera PDF",
     "signPdf": "Signera PDF",
@@ -464,19 +451,7 @@
     "createForm": "Skapa formulär",
     "editForm": "Redigera formulär",
     "summarizePdf": "Sammanfatta PDF",
-    "extractHighlights": "Extrahera höjdpunkter",
-    "taxForms": "Skatteformulär",
-    "legalForms": "Juridiska formulär",
-    "healthcareForms": "Hälsovårdsformulär",
-    "militaryForms": "Militära formulär",
-    "educationForms": "Utbildningsformulär",
-    "businessForms": "Företagsformulär",
-    "financialForms": "Finansiella formulär",
-    "realEstate": "Fastigheter",
-    "insuranceForms": "Försäkringsformulär",
-    "travelForms": "Reseformulär",
-    "techForms": "Tekniska formulär",
-    "otherForms": "Andra formulär"
+    "extractHighlights": "Extrahera höjdpunkter"
   },
   "features": {
     "comprehensiveSuite": "Omfattande svit",

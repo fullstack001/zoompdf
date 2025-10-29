@@ -36,14 +36,6 @@ const footerLinksData = [
       { labelKey: "tools.epubToPdf", route: "/epub-to-pdf" },
     ],
   },
-  {
-    titleKey: "footer.forms",
-    links: [
-      { labelKey: "tools.signPdf", route: "/sign-pdf" },
-      { labelKey: "footer.fillPdfForm", route: "/fill-pdf-form" },
-      { labelKey: "footer.createPdfForm", route: "/create-pdf-form" },
-    ],
-  },
 ];
 
 export default function FooterLinks() {

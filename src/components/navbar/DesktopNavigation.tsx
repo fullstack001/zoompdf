@@ -53,21 +53,6 @@ export const DesktopNavigation: React.FC<NavbarProps> = ({ t, navigate }) => {
           onNavigate={navigate}
         />
       </Dropdown>
-
-      <Dropdown
-        label={t("navigation.forms")}
-        icon={<SlidersHorizontal size={24} className="mr-2" />}
-      >
-        <MenuCategory
-          title={t("navbar.formTools")}
-          items={[
-            { label: t("tools.signPdf"), route: "/sign-pdf" },
-            { label: t("tools.fillPdf"), route: "/fill-pdf" },
-            { label: t("tools.createForm"), route: "/create-form" },
-          ]}
-          onNavigate={navigate}
-        />
-      </Dropdown>
     </nav>
   );
 };

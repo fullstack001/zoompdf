@@ -5,7 +5,6 @@ import ToolsGrid from "@/components/landing/ToolsGrid";
 import HowItWorks from "@/components/landing/HowItWorks";
 import FeatureCTA from "@/components/landing/FeatureCTA";
 import WhyUs from "@/components/landing/WhyUs";
-import FormTemplates from "@/components/landing/FormTemplates";
 import CoreValues from "@/components/landing/CoreValues";
 import FAQ from "@/components/landing/FAQ";
 import Footer from "@/components/Footer";
@@ -78,10 +77,9 @@ export default function ConvertPage({
       <ToolsGrid />
       <FeatureCTA />
       <WhyUs />
-      <FormTemplates />
       <CoreValues />
       <FAQ />
       <Footer />
     </main>
   );
-} 
+}

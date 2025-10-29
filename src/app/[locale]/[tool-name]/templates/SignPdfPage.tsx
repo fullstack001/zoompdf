@@ -5,7 +5,6 @@ import ToolsGrid from "@/components/landing/ToolsGrid";
 import HowItWorks from "@/components/landing/HowItWorks";
 import FeatureCTA from "@/components/landing/FeatureCTA";
 import WhyUs from "@/components/landing/WhyUs";
-import FormTemplates from "@/components/landing/FormTemplates";
 import CoreValues from "@/components/landing/CoreValues";
 import FAQ from "@/components/landing/FAQ";
 import Footer from "@/components/Footer";
@@ -23,7 +22,7 @@ import { setFileName } from "@/store/slices/flowSlice";
 export default function SignPdfPage() {
   const [uploading, setUploading] = useState(false);
   const [progress, setProgress] = useState(0);
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState<string[]>([]);
   const [isEmailModalVisible, setIsEmailModalVisible] = useState(false);
   const [email, setEmail] = useState("");
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -35,7 +34,8 @@ export default function SignPdfPage() {
   const { navigate } = useLocalizedNavigation();
   const t = useTranslations();
 
-  const handleFileChange = (file: File | null) => {
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0] || null;
     setSelectedFile(file);
     setSignError(null);
   };
@@ -65,7 +65,7 @@ export default function SignPdfPage() {
     setIsLoading(true);
     setUploading(true);
     setProgress(0);
-    setStatus(t("common.signing"));
+    setStatus([t("common.signing")]);
 
     try {
       setSignError(null);
@@ -159,7 +159,6 @@ export default function SignPdfPage() {
       <ToolsGrid />
       <FeatureCTA />
       <WhyUs />
-      <FormTemplates />
       <CoreValues />
       <FAQ />
       <Footer />

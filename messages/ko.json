@@ -7,7 +7,6 @@
     "sign": "서명",
     "merge": "병합",
     "split": "분할",
-    "forms": "양식",
     "files": "파일",
     "account": "계정",
     "login": "로그인",
@@ -31,7 +30,6 @@
     "signPdf": "PDF 서명",
     "mergePdf": "PDF 병합",
     "splitPdf": "PDF 분할",
-    "forms": "양식",
     "files": "파일",
     "account": "내 계정",
     "login": "로그인",
@@ -305,7 +303,6 @@
     "convertImage": "이미지 변환",
     "convertEbook": "전자책 변환",
     "editingTools": "편집 도구",
-    "formTools": "양식 도구",
     "myDocuments": "내 문서",
     "myAccount": "내 계정",
     "help": "도움말",
@@ -320,9 +317,6 @@
     "editPdf": "PDF 편집",
     "convertFromPdf": "PDF에서 변환",
     "convertToPdf": "PDF로 변환",
-    "forms": "양식",
-    "fillPdfForm": "PDF 양식 채우기",
-    "createPdfForm": "PDF 양식 만들기",
     "disclaimer": "면책 조항",
     "privacyPolicy": "개인정보 보호정책",
     "termsOfService": "서비스 이용약관",
@@ -394,12 +388,6 @@
     "title": "보안 우선순위",
     "description": "데이터 보안이 우리의 최우선 과제입니다. 엔터프라이즈급 암호화 및 보안 조치를 구현하여 문서를 보호하고 완전한 개인정보 보호를 보장합니다."
   },
-  "formTemplates": {
-    "title": "양식을 선택하고 작성하세요 — 300+ 템플릿",
-    "subtitle": "세금, 계약, 협정 등을 위한 맞춤형 양식으로 시간을 절약하세요 — 작성하고 보낼 준비가 완료되었습니다.",
-    "viewForm": "양식 보기",
-    "viewAllForms": "모든 양식 보기"
-  },
   "coreValues": {
     "title": "TheBestPDF의 핵심 가치"
   },
@@ -451,7 +439,6 @@
   },
   "files": {
     "searchFiles": "파일 검색",
-    "forms": "양식",
     "pdfConverter": "PDF 변환기",
     "editPdf": "PDF 편집",
     "signPdf": "PDF 서명",
@@ -464,19 +451,7 @@
     "createForm": "양식 만들기",
     "editForm": "양식 편집",
     "summarizePdf": "PDF 요약",
-    "extractHighlights": "하이라이트 추출",
-    "taxForms": "세금 양식",
-    "legalForms": "법률 양식",
-    "healthcareForms": "의료 양식",
-    "militaryForms": "군사 양식",
-    "educationForms": "교육 양식",
-    "businessForms": "비즈니스 양식",
-    "financialForms": "금융 양식",
-    "realEstate": "부동산",
-    "insuranceForms": "보험 양식",
-    "travelForms": "여행 양식",
-    "techForms": "기술 양식",
-    "otherForms": "기타 양식"
+    "extractHighlights": "하이라이트 추출"
   },
   "features": {
     "comprehensiveSuite": "포괄적인 도구 모음",

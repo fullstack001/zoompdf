@@ -7,7 +7,6 @@
     "sign": "Firmar",
     "merge": "Combinar",
     "split": "Dividir",
-    "forms": "Formularios",
     "files": "Archivos",
     "account": "Cuenta",
     "login": "Iniciar sesión",
@@ -31,7 +30,6 @@
     "signPdf": "Firmar PDF",
     "mergePdf": "Combinar PDF",
     "splitPdf": "Dividir PDF",
-    "forms": "Formularios",
     "files": "Archivos",
     "account": "Mi Cuenta",
     "login": "Iniciar sesión",
@@ -309,7 +307,6 @@
     "convertImage": "Convertir Imagen",
     "convertEbook": "Convertir E-book",
     "editingTools": "Herramientas de edición",
-    "formTools": "Herramientas de formularios",
     "myDocuments": "Mis documentos",
     "myAccount": "Mi cuenta",
     "help": "Ayuda",
@@ -324,9 +321,6 @@
     "editPdf": "Editar PDF",
     "convertFromPdf": "Convertir desde PDF",
     "convertToPdf": "Convertir a PDF",
-    "forms": "Formularios",
-    "fillPdfForm": "Rellenar formulario PDF",
-    "createPdfForm": "Crear formulario PDF",
     "disclaimer": "Descargo de responsabilidad",
     "privacyPolicy": "Política de privacidad",
     "termsOfService": "Términos de servicio",
@@ -398,12 +392,6 @@
     "title": "Prioridad de Seguridad",
     "description": "La seguridad de tus datos es nuestra máxima prioridad. Implementamos encriptación de nivel empresarial y medidas de seguridad para proteger tus documentos y garantizar privacidad completa."
   },
-  "formTemplates": {
-    "title": "Elige un formulario y complétalo — 300+ plantillas",
-    "subtitle": "Ahorra tiempo con formularios personalizados para impuestos, contratos, acuerdos y más — listos para completar y enviar.",
-    "viewForm": "Ver Formulario",
-    "viewAllForms": "VER TODOS LOS FORMULARIOS"
-  },
   "coreValues": {
     "title": "Valores fundamentales detrás de TheBestPDF"
   },
@@ -455,7 +443,6 @@
   },
   "files": {
     "searchFiles": "Buscar archivos",
-    "forms": "Formularios",
     "pdfConverter": "Convertidor PDF",
     "editPdf": "Editar PDF",
     "signPdf": "Firmar PDF",
@@ -468,19 +455,7 @@
     "createForm": "Crear formulario",
     "editForm": "Editar formulario",
     "summarizePdf": "Resumir PDF",
-    "extractHighlights": "Extraer destacados",
-    "taxForms": "Formularios fiscales",
-    "legalForms": "Formularios legales",
-    "healthcareForms": "Formularios de salud",
-    "militaryForms": "Formularios militares",
-    "educationForms": "Formularios de educación",
-    "businessForms": "Formularios comerciales",
-    "financialForms": "Formularios financieros",
-    "realEstate": "Bienes raíces",
-    "insuranceForms": "Formularios de seguros",
-    "travelForms": "Formularios de viaje",
-    "techForms": "Formularios técnicos",
-    "otherForms": "Otros formularios"
+    "extractHighlights": "Extraer destacados"
   },
   "features": {
     "comprehensiveSuite": "Suite integral",

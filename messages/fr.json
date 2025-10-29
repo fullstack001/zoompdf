@@ -7,7 +7,6 @@
     "sign": "Signer",
     "merge": "Fusionner",
     "split": "Diviser",
-    "forms": "Formulaires",
     "files": "Fichiers",
     "account": "Compte",
     "login": "Connexion",
@@ -31,7 +30,6 @@
     "signPdf": "Signer PDF",
     "mergePdf": "Fusionner PDF",
     "splitPdf": "Diviser PDF",
-    "forms": "Formulaires",
     "files": "Fichiers",
     "account": "Mon Compte",
     "login": "Connexion",
@@ -309,7 +307,6 @@
     "convertImage": "Convertir Image",
     "convertEbook": "Convertir E-book",
     "editingTools": "Outils d'édition",
-    "formTools": "Outils de formulaire",
     "myDocuments": "Mes documents",
     "myAccount": "Mon compte",
     "help": "Aide",
@@ -324,9 +321,6 @@
     "editPdf": "Modifier PDF",
     "convertFromPdf": "Convertir depuis PDF",
     "convertToPdf": "Convertir vers PDF",
-    "forms": "Formulaires",
-    "fillPdfForm": "Remplir le formulaire PDF",
-    "createPdfForm": "Créer un formulaire PDF",
     "disclaimer": "Avertissement",
     "privacyPolicy": "Politique de confidentialité",
     "termsOfService": "Conditions d'utilisation",
@@ -398,12 +392,6 @@
     "title": "Priorité de Sécurité",
     "description": "La sécurité de vos données est notre priorité absolue. Nous mettons en œuvre un chiffrement de niveau entreprise et des mesures de sécurité pour protéger vos documents et assurer une confidentialité complète."
   },
-  "formTemplates": {
-    "title": "Choisissez un formulaire et remplissez-le — 300+ modèles",
-    "subtitle": "Gagnez du temps avec des formulaires personnalisés pour les impôts, contrats, accords et plus — prêts à remplir et envoyer.",
-    "viewForm": "Voir le Formulaire",
-    "viewAllForms": "VOIR TOUS LES FORMULAIRES"
-  },
   "coreValues": {
     "title": "Valeurs fondamentales derrière TheBestPDF"
   },
@@ -455,7 +443,6 @@
   },
   "files": {
     "searchFiles": "Rechercher des fichiers",
-    "forms": "Formulaires",
     "pdfConverter": "Convertisseur PDF",
     "editPdf": "Modifier PDF",
     "signPdf": "Signer PDF",
@@ -468,19 +455,7 @@
     "createForm": "Créer un formulaire",
     "editForm": "Modifier le formulaire",
     "summarizePdf": "Résumer PDF",
-    "extractHighlights": "Extraire les points forts",
-    "taxForms": "Formulaires fiscaux",
-    "legalForms": "Formulaires juridiques",
-    "healthcareForms": "Formulaires de santé",
-    "militaryForms": "Formulaires militaires",
-    "educationForms": "Formulaires d'éducation",
-    "businessForms": "Formulaires commerciaux",
-    "financialForms": "Formulaires financiers",
-    "realEstate": "Immobilier",
-    "insuranceForms": "Formulaires d'assurance",
-    "travelForms": "Formulaires de voyage",
-    "techForms": "Formulaires techniques",
-    "otherForms": "Autres formulaires"
+    "extractHighlights": "Extraire les points forts"
   },
   "features": {
     "comprehensiveSuite": "Suite complète",

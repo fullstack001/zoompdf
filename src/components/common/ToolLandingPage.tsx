@@ -12,7 +12,6 @@ import HowItWorks from "@/components/landing/HowItWorks";
 import FeatureCTA from "@/components/landing/FeatureCTA";
 import WhyUs from "@/components/landing/WhyUs";
 import SecurityPriority from "@/components/landing/SecurityPriority";
-import FormTemplates from "@/components/landing/FormTemplates";
 import CustomerTestimonials from "@/components/landing/CustomerTestimonials";
 
 import CoreValues from "@/components/landing/CoreValues";
@@ -182,7 +181,6 @@ export default function ToolLandingPage({
       <FeatureCTA />
       <WhyUs />
       <SecurityPriority />
-      <FormTemplates />
       <CoreValues />
       <FAQ />
       <CustomerTestimonials />

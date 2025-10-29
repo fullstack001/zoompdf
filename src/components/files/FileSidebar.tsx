@@ -44,11 +44,6 @@ const tools = [
 ];
 
 const subTools = {
-  Forms: [
-    { label: "Fill PDF", key: ["fill_pdf"] },
-    { label: "Create Form", key: ["create_form"] },
-    { label: "Edit Form", key: ["edit_form"] },
-  ],
   "AI Summarizer": [
     { label: "Summarize PDF", key: ["summarize_pdf"] },
     { label: "Extract Highlights", key: ["extract_highlights"] },
@@ -98,45 +93,6 @@ export default function FileSidebar({
             <Image src={icon} width={16} height={16} alt={label} /> {label}
           </li>
         ))}
-
-        {/* Expandable: Forms */}
-        <li className="text-sm text-gray-700 cursor-pointer">
-          <div
-            className="flex items-center justify-between border-b py-4"
-            onClick={() => toggleDropdown("Forms")}
-          >
-            <div className="flex gap-2 items-center hover:text-blue-600">
-              <Image
-                src="/assets/images/pdf_forms.png"
-                width={16}
-                height={16}
-                alt="Forms"
-              />
-              Forms
-            </div>
-            <ChevronDown
-              size={16}
-              className={
-                openDropdown === "Forms"
-                  ? "rotate-180 transition"
-                  : "transition"
-              }
-            />
-          </div>
-          {openDropdown === "Forms" && (
-            <ul className="pl-6 mt-2 space-y-1">
-              {subTools["Forms"].map(({ label, key }, index) => (
-                <li
-                  key={index}
-                  className="hover:text-blue-600"
-                  onClick={() => setSelectedTool(key)}
-                >
-                  {label}
-                </li>
-              ))}
-            </ul>
-          )}
-        </li>
 
         {/* Expandable: AI Summarizer */}
         <li className="text-sm text-gray-700 cursor-pointer">
