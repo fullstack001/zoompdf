@@ -508,6 +508,51 @@ export const convertFile = async (
   }
 };
 
+// Multi-file conversion upload (for merge, etc.)
+export const convertMultipleFiles = async (
+  endpoint: string,
+  files: File[],
+  onUploadProgress?: (progress: number) => void,
+  additionalData?: Record<string, any>
+): Promise<string> => {
+  const uploadStartTime = Date.now();
+
+  try {
+    const formData = new FormData();
+    files.forEach((file) => formData.append("files", file));
+
+    if (additionalData) {
+      Object.entries(additionalData).forEach(([key, value]) => {
+        formData.append(key, value);
+      });
+    }
+
+    const response: AxiosResponse<string> = await api.post(endpoint, formData, {
+      headers: { "Content-Type": "multipart/form-data" },
+      onUploadProgress: (progressEvent) => {
+        if (onUploadProgress && progressEvent.total) {
+          const progress = Math.round(
+            (progressEvent.loaded * 100) / progressEvent.total
+          );
+          onUploadProgress(progress);
+        }
+      },
+    });
+
+    return response.data as unknown as string;
+  } catch (error) {
+    const totalTime = Date.now() - uploadStartTime;
+    console.error("[CONVERSION ERROR] Multi-file endpoint:", endpoint);
+    console.error(
+      "[CONVERSION ERROR] Time elapsed:",
+      (totalTime / 1000).toFixed(2),
+      "s"
+    );
+    console.error("[CONVERSION ERROR] Details:", error);
+    throw new Error("Multi-file conversion failed", { cause: error });
+  }
+};
+
 // Specific conversion functions
 export const convertJpgToPdf = async (file: File): Promise<string> => {
   return convertFile("/pdf/jpg_to_pdf", file);
@@ -659,6 +704,40 @@ export const compressPdf = async (
   });
   // Extract just the filename from the response object
   return (response as any).file;
+};
+
+// Merge PDFs (multi-file) via backend
+export const mergePdfFiles = async (files: File[]): Promise<string> => {
+  return convertMultipleFiles("/pdf/merge_pdf", files);
+};
+
+// Split PDF via backend with page ranges
+export const splitPdfWithRanges = async (
+  file: File,
+  pageRanges: string
+): Promise<string> => {
+  // Build items payload expected by backend: { merge_flag, pages: [[start,end], ...] }
+  const ranges = pageRanges
+    .split(",")
+    .map((r) => r.trim())
+    .filter(Boolean);
+
+  const pages: Array<[number, number]> = [];
+  for (const r of ranges) {
+    if (r.includes("-")) {
+      const [s, e] = r.split("-").map((p) => parseInt(p.trim(), 10));
+      const start = Math.max(1, isNaN(s) ? 1 : s);
+      const end = Math.max(start, isNaN(e) ? start : e);
+      pages.push([start, end]);
+    } else {
+      const n = parseInt(r, 10);
+      const v = Math.max(1, isNaN(n) ? 1 : n);
+      pages.push([v, v]);
+    }
+  }
+
+  const items = JSON.stringify({ merge_flag: false, pages });
+  return convertFile("/pdf/pdf_split", file, undefined, { items });
 };
 
 // Subscription API functions

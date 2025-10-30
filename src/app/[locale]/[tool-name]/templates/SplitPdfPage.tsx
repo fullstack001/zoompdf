@@ -14,11 +14,11 @@ import ProgressModal from "@/components/common/ProgressModal";
 import EmailModal from "@/components/common/EmailModal";
 import { useTranslations } from "next-intl";
 import { useLocalizedNavigation } from "@/utils/navigation";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setAction } from "@/store/slices/flowSlice";
-import { uploadEditedPDF } from "@/utils/apiUtils";
+import { downloadFile, splitPdfWithRanges } from "@/utils/apiUtils";
 import { setFileName } from "@/store/slices/flowSlice";
-import { PDFDocument } from "pdf-lib";
+import { RootState } from "@/store/store";
 
 export default function SplitPdfPage() {
   const [uploading, setUploading] = useState(false);
@@ -34,57 +34,14 @@ export default function SplitPdfPage() {
   const dispatch = useDispatch();
   const { navigate } = useLocalizedNavigation();
   const t = useTranslations();
+  const auth = useSelector((state: RootState) => state.auth.isLoggedIn);
+  const subscription = useSelector((state: RootState) => state.user.subscription);
+  const user = useSelector((state: RootState) => state.user);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0] || null;
     setSelectedFile(file);
     setSplitError(null);
-  };
-
-  const splitPDF = async (file: File, pageRanges: string): Promise<File[]> => {
-    const arrayBuffer = await file.arrayBuffer();
-    const pdfDoc = await PDFDocument.load(arrayBuffer);
-    const totalPages = pdfDoc.getPageCount();
-
-    const ranges = pageRanges.split(",").map((range) => range.trim());
-    const splitFiles: File[] = [];
-
-    for (let i = 0; i < ranges.length; i++) {
-      const range = ranges[i];
-      let startPage: number, endPage: number;
-
-      if (range.includes("-")) {
-        const [start, end] = range.split("-").map((p) => parseInt(p.trim()));
-        startPage = Math.max(1, start) - 1; // Convert to 0-based index
-        endPage = Math.min(totalPages, end || totalPages) - 1; // Convert to 0-based index
-      } else {
-        const page = parseInt(range);
-        startPage = Math.max(1, page) - 1; // Convert to 0-based index
-        endPage = startPage;
-      }
-
-      if (startPage < 0 || startPage >= totalPages || endPage < startPage) {
-        throw new Error(`Invalid page range: ${range}`);
-      }
-
-      const newPdf = await PDFDocument.create();
-      const pages = await newPdf.copyPages(
-        pdfDoc,
-        Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i)
-      );
-      pages.forEach((page) => newPdf.addPage(page));
-
-      const pdfBytes = await newPdf.save();
-      const fileName = `split_${i + 1}_${file.name.replace(".pdf", "")}.pdf`;
-
-      splitFiles.push(
-        new File([new Uint8Array(pdfBytes)], fileName, {
-          type: "application/pdf",
-        })
-      );
-    }
-
-    return splitFiles;
   };
 
   const handleSplit = async () => {
@@ -106,23 +63,31 @@ export default function SplitPdfPage() {
     try {
       setSplitError(null);
 
-      const splitFiles = await splitPDF(selectedFile, splitPages);
-
-      if (splitFiles.length === 0) {
-        throw new Error("No files were created");
+      const response = await splitPdfWithRanges(selectedFile, splitPages);
+      const fileName =
+        typeof response === "string" ? response : (response as any).file;
+      if (!fileName) {
+        throw new Error("Failed to get split file name");
       }
 
-      // Upload the first split file and navigate to editor
-      const response = await uploadEditedPDF(
-        splitFiles[0],
-        (progressPercent) => {
-          setProgress(progressPercent);
-        }
-      );
+      dispatch(setFileName(fileName));
+      dispatch(setAction("split_pdf"));
 
-      dispatch(setFileName(response));
-      dispatch(setAction("edit_pdf"));
-      navigate("/editor");
+      if (!auth) {
+        navigate(`/plan`);
+      } else {
+        const token = localStorage.getItem("authToken");
+        if (
+          subscription &&
+          new Date(subscription.expiryDate) > new Date() &&
+          token
+        ) {
+          await downloadFile(fileName, "split_pdf", token, user.id);
+          navigate("/files");
+        } else {
+          navigate(`/plan`);
+        }
+      }
     } catch (error) {
       console.error("Split failed:", error);
       setSplitError(

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useLocalizedNavigation } from "@/utils/navigation";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import MultiFileUploadSection from "@/components/common/MultiFileUploadSection";
 import { UploadedFile } from "@/components/common/types";
 import FeatureItems from "@/components/common/FeatureItems";
@@ -15,10 +15,10 @@ import CoreValues from "@/components/landing/CoreValues";
 import FAQ from "@/components/landing/FAQ";
 import Footer from "@/components/Footer";
 import { useTranslations } from "next-intl";
-import { PDFDocument } from "pdf-lib";
+import { RootState } from "@/store/store";
 
 import { setAction } from "../../../../store/slices/flowSlice";
-import { uploadEditedPDF } from "@/utils/apiUtils";
+import { downloadFile, mergePdfFiles } from "@/utils/apiUtils";
 import { setFileName } from "@/store/slices/flowSlice";
 
 export default function MergePdfPage() {
@@ -30,27 +30,12 @@ export default function MergePdfPage() {
   const [isMerging, setIsMerging] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const t = useTranslations();
+  const auth = useSelector((state: RootState) => state.auth.isLoggedIn);
+  const subscription = useSelector((state: RootState) => state.user.subscription);
+  const user = useSelector((state: RootState) => state.user);
 
   const handleFilesChange = (files: UploadedFile[]) => {
     setSelectedFiles(files);
-  };
-
-  const mergePDFs = async (files: File[]): Promise<File> => {
-    const mergedPdf = await PDFDocument.create();
-
-    for (const file of files) {
-      const arrayBuffer = await file.arrayBuffer();
-      const pdf = await PDFDocument.load(arrayBuffer);
-      const copiedPages = await mergedPdf.copyPages(pdf, pdf.getPageIndices());
-      copiedPages.forEach((page) => mergedPdf.addPage(page));
-    }
-
-    const pdfBytes = await mergedPdf.save();
-    const mergedFileName = `merged-${Date.now()}.pdf`;
-
-    return new File([new Uint8Array(pdfBytes)], mergedFileName, {
-      type: "application/pdf",
-    });
   };
 
   const handleMergeFiles = async () => {
@@ -63,28 +48,34 @@ export default function MergePdfPage() {
     try {
       setUploadError(null);
       setIsMerging(true);
-
-      console.log(
-        "Starting PDF merging:",
-        selectedFiles.map((f) => f.name)
-      );
-
-      // Convert UploadedFile[] to File[] and merge PDFs
       const files = selectedFiles.map((uf) => uf.file);
-      const mergedFile = await mergePDFs(files);
+      const response = await mergePdfFiles(files);
 
-      console.log("PDFs merged successfully, uploading merged file");
+      const fileName =
+        typeof response === "string" ? response : (response as any).file;
+      if (!fileName) {
+        throw new Error("Failed to get merged file name");
+      }
 
-      const response = await uploadEditedPDF(mergedFile, (progressPercent) => {
-        setProgress(progressPercent);
-      });
+      dispatch(setFileName(fileName));
+      dispatch(setAction("merge_pdf"));
 
-      dispatch(setFileName(response));
-
-      console.log("Merged file uploaded successfully, navigating to editor");
-      dispatch(setAction("edit_pdf"));
-
-      navigate("/editor");
+      // Post-conversion flow consistent with other conversion pages
+      if (!auth) {
+        navigate(`/plan`);
+      } else {
+        const token = localStorage.getItem("authToken");
+        if (
+          subscription &&
+          new Date(subscription.expiryDate) > new Date() &&
+          token
+        ) {
+          await downloadFile(fileName, "merge_pdf", token, user.id);
+          navigate("/files");
+        } else {
+          navigate(`/plan`);
+        }
+      }
     } catch (error) {
       console.error("Merge or upload failed:", error);
       setUploadError(t("common.uploadFailed"));
