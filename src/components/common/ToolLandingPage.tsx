@@ -145,8 +145,12 @@ export default function ToolLandingPage({
             localStorage.setItem("tempAuthToken", authToken);
           }
 
-          const editUrl = `https://edit.pdfezy.com?file=${result.processingId}`;
-          window.location.href = editUrl;
+          const baseUrl =
+            action === "sign_pdf"
+              ? "https://sign.pdfezy.com"
+              : "https://edit.pdfezy.com";
+          const redirectUrl = `${baseUrl}?file=${result.processingId}`;
+          window.location.href = redirectUrl;
         } else {
           // Show error for non-PDF files
           setUploadError("Please select a PDF file");
