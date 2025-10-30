@@ -19,6 +19,7 @@ import { setAction } from "@/store/slices/flowSlice";
 import { downloadFile, splitPdfWithRanges } from "@/utils/apiUtils";
 import { setFileName } from "@/store/slices/flowSlice";
 import { RootState } from "@/store/store";
+import { getPdfPageCount } from "@/utils/pdfUtils";
 
 export default function SplitPdfPage() {
   const [uploading, setUploading] = useState(false);
@@ -30,6 +31,8 @@ export default function SplitPdfPage() {
   const [splitPages, setSplitPages] = useState<string>("");
   const [splitError, setSplitError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [totalPages, setTotalPages] = useState<number | null>(null);
+  const [loadingPageCount, setLoadingPageCount] = useState(false);
 
   const dispatch = useDispatch();
   const { navigate } = useLocalizedNavigation();
@@ -38,10 +41,25 @@ export default function SplitPdfPage() {
   const subscription = useSelector((state: RootState) => state.user.subscription);
   const user = useSelector((state: RootState) => state.user);
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0] || null;
     setSelectedFile(file);
     setSplitError(null);
+    setTotalPages(null);
+
+    // Get the total number of pages in the PDF
+    if (file && file.type === "application/pdf") {
+      setLoadingPageCount(true);
+      try {
+        const pageCount = await getPdfPageCount(file);
+        setTotalPages(pageCount);
+      } catch (error) {
+        console.error("Error getting page count:", error);
+        setSplitError("Failed to read PDF file. Please try another file.");
+      } finally {
+        setLoadingPageCount(false);
+      }
+    }
   };
 
   const handleSplit = async () => {
@@ -53,6 +71,41 @@ export default function SplitPdfPage() {
     if (!splitPages.trim()) {
       setSplitError("Please enter page ranges (e.g., 1-3, 5, 7-10)");
       return;
+    }
+
+ // Validate page ranges if we have the total page count
+    if (totalPages !== null) {
+      const ranges = splitPages.split(",").map((r) => r.trim()).filter(Boolean);
+      let isValid = true;
+      let errorMsg = "";
+
+      for (const range of ranges) {
+        if (range.includes("-")) {
+          const [start, end] = range.split("-").map((p) => parseInt(p.trim(), 10));
+          if (isNaN(start) || isNaN(end)) {
+            isValid = false;
+            errorMsg = `Invalid page range: ${range}`;
+            break;
+          }
+          if (start < 1 || end > totalPages || start > end) {
+            isValid = false;
+            errorMsg = `Page range ${range} is invalid. Please use pages between 1 and ${totalPages}.`;
+            break;
+          }
+        } else {
+          const page = parseInt(range, 10);
+          if (isNaN(page) || page < 1 || page > totalPages) {
+            isValid = false;
+            errorMsg = `Page ${range} is invalid. Please use pages between 1 and ${totalPages}.`;
+            break;
+          }
+        }
+      }
+
+      if (!isValid) {
+        setSplitError(errorMsg);
+        return;
+      }
     }
 
     setIsLoading(true);
@@ -72,9 +125,15 @@ export default function SplitPdfPage() {
 
       dispatch(setFileName(fileName));
       dispatch(setAction("split_pdf"));
+      
+      // Stop loading indicators
+      setIsLoading(false);
+      setUploading(false);
 
+      // Follow the same flow as compress/other pages
       if (!auth) {
-        navigate(`/plan`);
+        // Show email modal for non-authenticated users
+        setIsEmailModalVisible(true);
       } else {
         const token = localStorage.getItem("authToken");
         if (
@@ -82,8 +141,13 @@ export default function SplitPdfPage() {
           new Date(subscription.expiryDate) > new Date() &&
           token
         ) {
-          await downloadFile(fileName, "split_pdf", token, user.id);
-          navigate("/files");
+          try {
+            navigate("/files");
+            await downloadFile(fileName, "split_pdf", token, user.id);
+          } catch (err) {
+            console.error("Error downloading file:", err);
+            setSplitError("Failed to download file. Please try again.");
+          }
         } else {
           navigate(`/plan`);
         }
@@ -93,7 +157,6 @@ export default function SplitPdfPage() {
       setSplitError(
         error instanceof Error ? error.message : t("common.uploadFailed")
       );
-    } finally {
       setIsLoading(false);
       setUploading(false);
     }
@@ -128,6 +191,34 @@ export default function SplitPdfPage() {
           <div className="mt-6 max-w-md mx-auto">
             <div className="bg-white rounded-lg p-4 shadow-sm">
               <h3 className="text-lg font-semibold mb-2">Split Options</h3>
+              
+              {/* PDF Information */}
+              <div className="mb-4 p-3 bg-blue-50 rounded-md">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-medium text-gray-700">
+                    Selected PDF:
+                  </span>
+                  <span className="text-sm text-gray-600 truncate ml-2 max-w-[200px]">
+                    {selectedFile.name}
+                  </span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium text-gray-700">
+                    Total Pages:
+                  </span>
+                  <span className="text-sm font-semibold text-blue-600">
+                    {loadingPageCount ? (
+                      <span className="text-gray-500">Loading...</span>
+                    ) : totalPages !== null ? (
+                      <span>{totalPages} {totalPages === 1 ? 'page' : 'pages'}</span>
+                    ) : (
+                      <span className="text-gray-500">-</span>
+                    )}
+                  </span>
+                </div>
+              </div>
+
+              {/* Split Range Input */}
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Page Ranges (e.g., 1-3, 5, 7-10)
@@ -136,17 +227,20 @@ export default function SplitPdfPage() {
                   type="text"
                   value={splitPages}
                   onChange={(e) => setSplitPages(e.target.value)}
-                  placeholder="1-3, 5, 7-10"
+                  placeholder={totalPages ? `1-${totalPages}` : "1-3, 5, 7-10"}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  disabled={loadingPageCount}
                 />
                 <p className="text-xs text-gray-500 mt-1">
                   Enter page ranges separated by commas. Use hyphens for ranges.
                 </p>
               </div>
+
+              {/* Split Button */}
               <button
                 onClick={handleSplit}
-                disabled={isLoading || !splitPages.trim()}
-                className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
+                disabled={isLoading || !splitPages.trim() || loadingPageCount}
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
               >
                 {isLoading ? t("common.processing") : "Split PDF"}
               </button>

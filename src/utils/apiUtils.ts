@@ -376,30 +376,20 @@ export const convertFile = async (
   const uploadStartTime = Date.now();
 
   try {
-    console.log(
-      "╔═══════════════════════════════════════════════════════════════╗"
-    );
-    console.log(
-      "║              STARTING FILE CONVERSION UPLOAD                  ║"
-    );
-    console.log(
-      "╚═══════════════════════════════════════════════════════════════╝"
-    );
+    console.log("=== STARTING FILE CONVERSION UPLOAD ===");
     console.log("[CONVERSION] Upload initiated at:", new Date().toISOString());
     console.log("[CONVERSION] File details:");
-    console.log(`  ├─ Name: ${file.name}`);
+    console.log(`  - Name: ${file.name}`);
     console.log(
-      `  ├─ Size: ${(file.size / 1024 / 1024).toFixed(2)} MB (${
+      `  - Size: ${(file.size / 1024 / 1024).toFixed(2)} MB (${
         file.size
       } bytes)`
     );
-    console.log(`  ├─ Type: ${file.type}`);
-    console.log(`  ├─ Endpoint: ${endpoint}`);
+    console.log(`  - Type: ${file.type}`);
+    console.log(`  - Endpoint: ${endpoint}`);
 
     if (additionalData) {
-      console.log(`  └─ Additional data:`, additionalData);
-    } else {
-      console.log(`  └─ No additional data`);
+      console.log(`  - Additional data:`, additionalData);
     }
 
     const formData = new FormData();
@@ -463,37 +453,19 @@ export const convertFile = async (
     });
 
     const totalTime = Date.now() - uploadStartTime;
-    console.log(
-      "╔═══════════════════════════════════════════════════════════════╗"
-    );
-    console.log(
-      "║          FILE CONVERSION UPLOAD SUCCESSFUL                    ║"
-    );
-    console.log(
-      "╚═══════════════════════════════════════════════════════════════╝"
-    );
+    console.log("=== FILE CONVERSION UPLOAD SUCCESSFUL ===");
     console.log("[CONVERSION] Upload statistics:");
-    console.log(`  ├─ Total time: ${(totalTime / 1000).toFixed(2)}s`);
+    console.log(`  - Total time: ${(totalTime / 1000).toFixed(2)}s`);
     console.log(
-      `  ├─ Average speed: ${(file.size / totalTime / 1024).toFixed(2)} KB/ms`
+      `  - Average speed: ${(file.size / totalTime / 1024).toFixed(2)} KB/ms`
     );
-    console.log(`  └─ Response data:`, response.data);
-    console.log(
-      "═══════════════════════════════════════════════════════════════"
-    );
+    console.log(`  - Response data:`, response.data);
+    console.log("==========================================");
 
     return response.data;
   } catch (error) {
     const totalTime = Date.now() - uploadStartTime;
-    console.error(
-      "╔═══════════════════════════════════════════════════════════════╗"
-    );
-    console.error(
-      "║          FILE CONVERSION UPLOAD FAILED                        ║"
-    );
-    console.error(
-      "╚═══════════════════════════════════════════════════════════════╝"
-    );
+    console.error("FILE CONVERSION UPLOAD FAILED");
     console.error("[CONVERSION ERROR] Endpoint:", endpoint);
     console.error(
       "[CONVERSION ERROR] Time elapsed:",
@@ -501,10 +473,23 @@ export const convertFile = async (
       "s"
     );
     console.error("[CONVERSION ERROR] Details:", error);
-    console.error(
-      "═══════════════════════════════════════════════════════════════"
-    );
-    throw new Error("File conversion failed", { cause: error });
+    
+    // Extract meaningful error message
+    const axiosError = error as any;
+    let errorMessage = "File conversion failed";
+    
+    if (axiosError.response) {
+      // Server responded with error status
+      errorMessage = `Server error: ${axiosError.response.status} - ${axiosError.response.data?.error || axiosError.response.statusText}`;
+    } else if (axiosError.request) {
+      // Request was made but no response received
+      errorMessage = "No response from server. Please check your connection.";
+    } else if (axiosError.message) {
+      // Error setting up request
+      errorMessage = axiosError.message;
+    }
+    
+    throw new Error(errorMessage, { cause: error });
   }
 };
 
