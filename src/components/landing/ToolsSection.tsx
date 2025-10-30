@@ -41,15 +41,6 @@ export default function ToolsSection() {
         { nameKey: "tools.pngToPdf", href: "/png-to-pdf" },
       ],
     },
-    {
-      titleKey: "navigation.forms",
-      tools: [
-        { nameKey: "toolsSection.w9", href: "/forms/w-9" },
-        { nameKey: "toolsSection.ds11", href: "/forms/ds-11" },
-        { nameKey: "toolsSection.1099misc", href: "/forms/1099-misc" },
-        { nameKey: "toolsSection.viewAllForms", href: "/forms", isLink: true },
-      ],
-    },
   ];
 
   return (
@@ -81,21 +72,12 @@ export default function ToolsSection() {
               <ul className="space-y-3">
                 {category.tools.map((tool, toolIndex) => (
                   <li key={toolIndex}>
-                    {tool.isLink ? (
-                      <button
-                        onClick={() => navigate(tool.href)}
-                        className="text-blue-600 hover:text-blue-800 underline text-sm font-medium transition-colors duration-200"
-                      >
-                        {t(tool.nameKey)}
-                      </button>
-                    ) : (
-                      <button
-                        onClick={() => navigate(tool.href)}
-                        className="text-gray-700 hover:text-gray-900 text-sm font-medium transition-colors duration-200 block hover:bg-gray-50 -mx-2 px-2 py-1 rounded w-full text-left"
-                      >
-                        {t(tool.nameKey)}
-                      </button>
-                    )}
+                    <button
+                      onClick={() => navigate(tool.href)}
+                      className="text-gray-700 hover:text-gray-900 text-sm font-medium transition-colors duration-200 block hover:bg-gray-50 -mx-2 px-2 py-1 rounded w-full text-left"
+                    >
+                      {t(tool.nameKey)}
+                    </button>
                   </li>
                 ))}
               </ul>
