@@ -26,6 +26,7 @@ export default function FileListTable({
   const [searchTerm, setSearchTerm] = useState("");
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
   const [isUpgrading, setIsUpgrading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const t = useTranslations();
 
@@ -47,24 +48,53 @@ export default function FileListTable({
   }, []);
 
   const fileImage = (action: string) => {
-    if (action === "pdf_to_pptx") {
-      return "/assets/images/pptx-example.png";
-    }
-    if (action === "pdf_to_word") {
+    // Normalize action for safety
+    const a = (action || "").toLowerCase();
+
+    // Conversions FROM PDF
+    if (a === "pdf_to_word" || a === "pdf_to_doc")
       return "/assets/images/doc-example.png";
-    }
-    if (action === "pdf_to_excel") {
-      return "/assets/images/excel-example.png";
-    }
-    if (action === "pdf_to_epub") {
-      return "/assets/images/epub-example.png";
-    }
-    if (action === "pdf_to_jpg") {
-      return "/assets/images/jpg-example.jpg";
-    }
-    if (action === "pdf_to_png") {
-      return "/assets/images/png-example.jpg";
-    }
+    if (a === "pdf_to_pptx") return "/assets/images/pptx-example.png";
+    if (a === "pdf_to_excel") return "/assets/images/excel-example.png";
+    if (a === "pdf_to_epub") return "/assets/images/epub-example.png";
+    if (a === "pdf_to_jpg") return "/assets/images/jpg-example.jpg";
+    if (a === "pdf_to_png") return "/assets/images/png-example.jpg";
+    if (a === "pdf_to_svg") return "/assets/icnos/pdf_svg.svg";
+    if (a === "pdf_to_txt") return "/assets/icnos/pdf_txt.svg";
+    if (a === "pdf_to_html") return "/assets/icnos/pdf_html.svg";
+    if (a === "pdf_to_tiff") return "/assets/icnos/pdf_tiff.svg";
+    if (a === "pdf_to_webp") return "/assets/icnos/pdf_webp.svg";
+    if (a === "pdf_to_avif") return "/assets/icnos/pdf_Avif.svg";
+    if (a === "pdf_to_eps") return "/assets/icnos/pdf_eps.svg";
+    if (a === "pdf_to_dxf") return "/assets/icnos/pdf_dxf.svg";
+    if (a === "pdf_to_azw3") return "/assets/icnos/pdf_azw3.svg";
+    if (a === "pdf_to_mobi") return "/assets/icnos/pdf_mobi.svg";
+    if (a === "pdf_to_jpg") return "/assets/icnos/pdf_jpg.svg";
+    if (a === "pdf_to_png") return "/assets/icnos/pdf_png.svg";
+
+    // Conversions TO PDF
+    if (a === "word_to_pdf" || a === "doc_to_pdf")
+      return "/assets/images/word-pdf.png";
+    if (a === "excel_to_pdf") return "/assets/images/excel-pdf.png";
+    if (a === "pptx_to_pdf") return "/assets/images/ppt.png";
+    if (a === "png_to_pdf") return "/assets/images/png.png";
+    if (a === "jpg_to_pdf") return "/assets/icnos/image_pdf.svg";
+    if (a === "epub_to_pdf") return "/assets/images/epub-pdf.png";
+    if (a === "mobi_to_pdf") return "/assets/icnos/mobi_epub.svg";
+    if (a === "avif_to_pdf") return "/assets/icnos/avif_png.svg";
+
+    // Tool actions
+    if (a === "compress_pdf") return "/assets/images/pdf_compress.png";
+    if (a === "merge_pdf") return "/assets/images/pdf_merge.png";
+    if (a === "split_pdf") return "/assets/images/pdf_split.png";
+    if (a === "edit_pdf") return "/assets/images/pdf_edit.png";
+    if (a === "sign_pdf") return "/assets/images/pdf_sign.png";
+    if (a === "pdf_ocr") return "/assets/images/ocr_pdf.png";
+    if (a === "pdf_to_image") return "/assets/icnos/pdf_image.svg";
+    if (a === "image_to_pdf") return "/assets/icnos/image_pdf.svg";
+
+    // Fallback generic PDF
+    return "/assets/images/pdf.png";
   };
 
   const handleDownload = (file: any) => {
@@ -92,6 +122,20 @@ export default function FileListTable({
   const filteredFiles = files.filter((file) =>
     file.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  const ITEMS_PER_PAGE = 10;
+  const totalPages = Math.max(
+    1,
+    Math.ceil(filteredFiles.length / ITEMS_PER_PAGE)
+  );
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIndex = startIndex + ITEMS_PER_PAGE;
+  const paginatedFiles = filteredFiles.slice(startIndex, endIndex);
+
+  // Reset to first page when search changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchTerm]);
 
   return (
     <div className="bg-white rounded-xl shadow overflow-hidden mb-8">
@@ -122,17 +166,15 @@ export default function FileListTable({
 
       {/* File List */}
       <div className="divide-y divide-gray-100">
-        {filteredFiles.map((file, idx) => (
+        {paginatedFiles.map((file, idx) => (
           <div
-            key={idx}
+            key={startIndex + idx}
             className="grid grid-cols-12 gap-4 p-4 hover:bg-gray-50 transition-colors duration-150 items-center"
           >
             <div className="col-span-5 flex items-center gap-3">
               <div className="flex-shrink-0">
                 <Image
-                  src={
-                    fileImage(file.action) || "/assets/images/pdf-example.png"
-                  }
+                  src={fileImage(file.action)}
                   alt="File Icon"
                   width={40}
                   height={40}
@@ -199,6 +241,39 @@ export default function FileListTable({
           </div>
         ))}
       </div>
+
+      {/* Pagination */}
+      {totalPages > 1 && (
+        <div className="flex items-center justify-center gap-2 p-4">
+          <button
+            onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+            disabled={currentPage === 1}
+            className="px-3 py-1 rounded border text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            Prev
+          </button>
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+            <button
+              key={page}
+              onClick={() => setCurrentPage(page)}
+              className={`w-8 h-8 text-sm rounded border ${
+                currentPage === page
+                  ? "bg-blue-600 text-white border-blue-600"
+                  : "bg-white text-black border-gray-300"
+              }`}
+            >
+              {page}
+            </button>
+          ))}
+          <button
+            onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+            disabled={currentPage === totalPages}
+            className="px-3 py-1 rounded border text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            Next
+          </button>
+        </div>
+      )}
 
       <div className="bg-white rounded-xl p-6  shadow mt-6">
         <div className="border-[#757575] border-[1px] border-dashed flex justify-between items-center p-6 rounded-xl ">

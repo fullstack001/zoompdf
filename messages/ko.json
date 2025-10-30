@@ -63,7 +63,8 @@
     "split": "분할",
     "saving": "저장 중...",
     "signing": "서명 중...",
-    "splitting": "분할 중..."
+    "splitting": "분할 중...",
+    "toolNotFound": "도구를 찾을 수 없습니다"
   },
   "errors": {
     "oops": "앗!",

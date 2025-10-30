@@ -67,7 +67,8 @@
     "convertFromPdf": "Convertir desde PDF",
     "convertToPdf": "Convertir a PDF",
     "convertImage": "Convertir Imagen",
-    "otherFormats": "Otros Formatos"
+    "otherFormats": "Otros Formatos",
+    "toolNotFound": "Herramienta no encontrada"
   },
   "errors": {
     "oops": "¡Vaya!",

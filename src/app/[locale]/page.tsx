@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 export default function HomePage() {
   const config = getToolPageConfig("home");
   const t = useTranslations();
+  console.log("This is test for home page");
 
   if (!config) {
     return (

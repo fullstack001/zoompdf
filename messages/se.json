@@ -63,7 +63,8 @@
     "split": "Dela",
     "saving": "Sparar...",
     "signing": "Signerar...",
-    "splitting": "Delar..."
+    "splitting": "Delar...",
+    "toolNotFound": "Verktyg hittades inte"
   },
   "errors": {
     "oops": "Hoppsan!",

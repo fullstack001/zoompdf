@@ -34,6 +34,7 @@ export default function CompressPdfPage() {
   } = useCompressPdf();
 
   const t = useTranslations();
+  console.log("This is test for compress pdf page");
 
   return (
     <main className="bg-gray-50">

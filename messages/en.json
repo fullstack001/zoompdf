@@ -74,7 +74,8 @@
     "downloadEditedFile": "Download your edited file",
     "editAnotherFile": "Edit another file",
     "startNew": "Start New",
-    "fileId": "File ID"
+    "fileId": "File ID",
+    "toolNotFound": "Tool not found"
   },
   "errors": {
     "oops": "Oops!",

@@ -29,17 +29,18 @@ export default function DynamicToolPage() {
     );
   }
 
-  // Check if it's a tool landing page
-  const toolPageConfig = getToolPageConfig(toolName);
-  if (toolPageConfig) {
-    return (
-      <ToolLandingPage
-        titleKey={toolPageConfig.titleKey}
-        subtitleKey={toolPageConfig.subtitleKey}
-        action={toolPageConfig.action}
-      />
-    );
-  }
+  // // Check if it's a tool landing page
+  // const toolPageConfig = getToolPageConfig(toolName);
+  // console.log(toolPageConfig);
+  // if (toolPageConfig) {
+  //   return (
+  //     <ToolLandingPage
+  //       titleKey={toolPageConfig.titleKey}
+  //       subtitleKey={toolPageConfig.subtitleKey}
+  //       action={toolPageConfig.action}
+  //     />
+  //   );
+  // }
 
   // Handle special custom pages
   switch (toolName) {
