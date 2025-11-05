@@ -32,9 +32,11 @@ const stripePromise = stripeKey ? loadStripe(stripeKey) : null;
 export default function PaymentForm({
   plan,
   email,
+  couponCode,
 }: {
   plan: { id: string; price: number; priceId: string };
   email: string;
+  couponCode: string | null;
 }) {
   const dispatch = useDispatch();
   const router = useRouter();
@@ -159,6 +161,7 @@ export default function PaymentForm({
           <CheckoutForm
             priceId={plan.priceId}
             callBack={handlePurchaseSubscription}
+            couponCode={couponCode}
           />
         </Elements>
 

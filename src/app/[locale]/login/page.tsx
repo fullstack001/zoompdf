@@ -44,6 +44,14 @@ export default function Login() {
 
       // Optionally, store the token in localStorage or cookies
       localStorage.setItem("authToken", token);
+      localStorage.setItem("token", token); // Also store as 'token' for admin panel compatibility
+      
+      // Check if user is admin and redirect to admin panel
+      if (user.isAdmin) {
+        navigate("/admin");
+        return;
+      }
+      
       if (subscription && new Date(subscription.expiryDate) > new Date()) {
         // Check for edited PDF data first
         if (flow.fileName && flow.action) {

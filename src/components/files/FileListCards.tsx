@@ -97,7 +97,7 @@ export default function FileListCards({
         <div className="border-[#757575] border-[1px] border-dashed flex justify-between items-center p-6 rounded-xl">
           <div>
             <h3 className="text-lg font-semibold mb-2">
-              Experience the best of PDF Guru — go premium!
+              Experience the best of PDFEZY — go premium!
             </h3>
             <Link href="/plan">
               <button className="bg-blue-600 text-white px-5 py-2 rounded-lg mt-2 font-semibold text-sm">

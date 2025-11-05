@@ -29,9 +29,11 @@ const cardElementOptions = {
 function CheckoutForm({
   priceId,
   callBack,
+  couponCode,
 }: {
   priceId: string;
   callBack: (method: string, subscriptionId: string) => void;
+  couponCode: string | null;
 }) {
   const user = useSelector((state: RootState) => state.user); // Use RootState for type safety
   const subscription = user?.subscription;
@@ -112,6 +114,7 @@ function CheckoutForm({
             name,
             email: user.email,
             priceId,
+            couponCode: couponCode || undefined,
           }),
         }
       );
