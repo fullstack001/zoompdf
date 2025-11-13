@@ -138,17 +138,22 @@ export default function CustomerTestimonials() {
         <div className="flex justify-center items-center gap-4">
           <button
             onClick={prevTestimonials}
-            aria-label="Previous testimonials"
+            aria-label="Show previous testimonials"
             className="w-10 h-10 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition-colors"
           >
-            <ChevronLeft className="w-5 h-5 text-gray-600" />
+            <span className="sr-only">Previous testimonials</span>
+            <ChevronLeft className="w-5 h-5 text-gray-600" aria-hidden="true" />
           </button>
           <button
             onClick={nextTestimonials}
-            aria-label="Next testimonials"
+            aria-label="Show next testimonials"
             className="w-10 h-10 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition-colors"
           >
-            <ChevronRight className="w-5 h-5 text-gray-600" />
+            <span className="sr-only">Next testimonials</span>
+            <ChevronRight
+              className="w-5 h-5 text-gray-600"
+              aria-hidden="true"
+            />
           </button>
         </div>
       </div>

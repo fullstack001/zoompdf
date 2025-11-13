@@ -15,10 +15,11 @@ export default function FileUploadSection({
   return (
     <div className="bg-white shadow-lg rounded-2xl p-4 sm:p-6 md:p-6 w-full max-w-[90%] sm:max-w-[1142px] aspect-[1142/348] mx-auto hover:shadow-2xl transition-shadow duration-300">
       <div className="bg-white border-dashed border-2 border-gray-300 rounded-lg p-8 sm:p-8 md:p-8 w-full h-auto mx-auto group hover:border-gray-400 ">
-        <div className="w-[154px] h-[105px] mx-auto cursor-pointer relative">
-          <label htmlFor="file-upload" className="sr-only">
-            Upload PDF file
-          </label>
+        <label
+          htmlFor="file-upload"
+          className="w-[154px] h-[105px] mx-auto cursor-pointer relative block"
+        >
+          <span className="sr-only">Upload PDF file</span>
           <input
             id="file-upload"
             type="file"
@@ -28,7 +29,7 @@ export default function FileUploadSection({
             aria-label="Upload PDF file"
           />
           <UploadAnimationSVG />
-        </div>
+        </label>
         <div
           className={`mt-8 sm:mt-4 md:mt-8 text-sm sm:text-base md:text-lg mx-auto text-center bg-primary-900 text-white w-fit py-3 px-8 rounded-lg cursor-pointer hover:bg-primary-800 transition-colors duration-300 uppercase ${
             isLoading ? "opacity-60 cursor-not-allowed" : ""
