@@ -12,9 +12,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { useState, useRef, useEffect } from "react";
+import { downloadFile, deletePdfByFileName } from "@/utils/apiUtils";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store/store";
 
 export default function FileListTable({
   files,
+  onFileDeleted,
 }: {
   files: Array<{
     name: string;
@@ -22,30 +26,46 @@ export default function FileListTable({
     size: string;
     action: string;
   }>;
+  onFileDeleted?: () => void;
 }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
   const [isUpgrading, setIsUpgrading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [downloadingFile, setDownloadingFile] = useState<string | null>(null);
+  const [deletingFile, setDeletingFile] = useState<string | null>(null);
+  const dropdownRefs = useRef<{ [key: number]: HTMLDivElement | null }>({});
   const t = useTranslations();
+
+  const user = useSelector((state: RootState) => state.user);
+  const token =
+    typeof window !== "undefined" ? localStorage.getItem("authToken") : null;
 
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
+      const target = event.target as Node;
+      const isOutside = Object.values(dropdownRefs.current).every(
+        (ref) => ref && !ref.contains(target)
+      );
+
+      // Also check if clicking on the button itself
+      const isDropdownButton = (target as HTMLElement).closest(
+        'button[aria-label="More actions"]'
+      );
+
+      if (isOutside && !isDropdownButton) {
         setOpenDropdown(null);
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+    if (openDropdown !== null) {
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }
+  }, [openDropdown]);
 
   const fileImage = (action: string) => {
     // Normalize action for safety
@@ -97,22 +117,85 @@ export default function FileListTable({
     return "/assets/images/pdf.png";
   };
 
-  const handleDownload = (file: any) => {
-    // Add your download logic here
-    console.log("Downloading file:", file.name);
-    setOpenDropdown(null);
+  const handleDownload = async (file: any) => {
+    if (!token || !user.id) {
+      alert("Please log in to download files");
+      setOpenDropdown(null);
+      return;
+    }
+
+    try {
+      setDownloadingFile(file.name);
+      setOpenDropdown(null);
+      await downloadFile(file.name, file.action, token, user.id);
+    } catch (error) {
+      console.error("Error downloading file:", error);
+      alert("Failed to download file. Please try again.");
+    } finally {
+      setDownloadingFile(null);
+    }
   };
 
-  const handleView = (file: any) => {
-    // Add your view logic here
-    console.log("Viewing file:", file.name);
-    setOpenDropdown(null);
+  const handleView = async (file: any) => {
+    // Open file in new tab for viewing
+    if (!token || !user.id) {
+      alert("Please log in to view files");
+      setOpenDropdown(null);
+      return;
+    }
+
+    try {
+      setOpenDropdown(null);
+      const viewUrl = `https://api.pdfezy.com/api/pdf/download`;
+      const response = await fetch(viewUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          fileName: file.name,
+          action: file.action,
+          user: user.id,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch file");
+      }
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      window.open(url, "_blank");
+    } catch (error) {
+      console.error("Error viewing file:", error);
+      alert("Failed to view file. Please try again.");
+    }
   };
 
-  const handleDelete = (file: any) => {
-    // Add your delete logic here
-    console.log("Deleting file:", file.name);
-    setOpenDropdown(null);
+  const handleDelete = async (file: any) => {
+    if (!confirm("Are you sure you want to delete this file?")) {
+      setOpenDropdown(null);
+      return;
+    }
+
+    try {
+      setDeletingFile(file.name);
+      setOpenDropdown(null);
+      await deletePdfByFileName(file.name);
+      // Refresh the file list by calling the callback
+      if (onFileDeleted) {
+        onFileDeleted();
+      } else {
+        // Fallback: reload the page if no callback provided
+        window.location.reload();
+      }
+    } catch (error) {
+      console.error("Error deleting file:", error);
+      alert("Failed to delete file. Please try again.");
+    } finally {
+      setDeletingFile(null);
+    }
   };
 
   const toggleDropdown = (index: number) => {
@@ -201,38 +284,90 @@ export default function FileListTable({
             <div className="col-span-1 flex justify-end">
               <div
                 className="relative"
-                ref={openDropdown === idx ? dropdownRef : null}
+                ref={(el) => {
+                  dropdownRefs.current[idx] = el;
+                }}
               >
                 <button
-                  onClick={() => toggleDropdown(idx)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleDropdown(idx);
+                  }}
                   className="p-2 rounded hover:bg-gray-100 transition-colors duration-200"
                   aria-label="More actions"
+                  disabled={
+                    deletingFile === file.name || downloadingFile === file.name
+                  }
                 >
-                  <MoreVertical size={18} />
+                  {deletingFile === file.name ||
+                  downloadingFile === file.name ? (
+                    <Loader2 className="animate-spin" size={18} />
+                  ) : (
+                    <MoreVertical size={18} />
+                  )}
                 </button>
 
                 {openDropdown === idx && (
-                  <div className="absolute right-0 mt-1 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-10 py-1">
+                  <div className="absolute right-0 mt-1 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-50 py-1">
                     <button
-                      onClick={() => handleView(file)}
-                      className="flex items-center gap-3 w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors duration-150"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleView(file);
+                      }}
+                      disabled={
+                        downloadingFile === file.name ||
+                        deletingFile === file.name
+                      }
+                      className="flex items-center gap-3 w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       <Eye size={16} />
                       View
                     </button>
                     <button
-                      onClick={() => handleDownload(file)}
-                      className="flex items-center gap-3 w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors duration-150"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleDownload(file);
+                      }}
+                      disabled={
+                        downloadingFile === file.name ||
+                        deletingFile === file.name
+                      }
+                      className="flex items-center gap-3 w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      <Download size={16} />
-                      Download
+                      {downloadingFile === file.name ? (
+                        <>
+                          <Loader2 className="animate-spin" size={16} />
+                          Downloading...
+                        </>
+                      ) : (
+                        <>
+                          <Download size={16} />
+                          Download
+                        </>
+                      )}
                     </button>
                     <button
-                      onClick={() => handleDelete(file)}
-                      className="flex items-center gap-3 w-full px-4 py-2 text-sm text-red-600 hover:bg-red-50 transition-colors duration-150"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleDelete(file);
+                      }}
+                      disabled={
+                        downloadingFile === file.name ||
+                        deletingFile === file.name
+                      }
+                      className="flex items-center gap-3 w-full px-4 py-2 text-sm text-red-600 hover:bg-red-50 transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      <Trash2 size={16} />
-                      Delete
+                      {deletingFile === file.name ? (
+                        <>
+                          <Loader2 className="animate-spin" size={16} />
+                          Deleting...
+                        </>
+                      ) : (
+                        <>
+                          <Trash2 size={16} />
+                          Delete
+                        </>
+                      )}
                     </button>
                   </div>
                 )}

@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setAction, setFileName } from "../store/slices/flowSlice";
+import {
+  setAction,
+  setFileName,
+  setPendingFile,
+} from "../store/slices/flowSlice";
 import { RootState } from "../store/store";
 import { downloadFile, compressPdf } from "./apiUtils";
 import { CompressionLevel } from "@/components/common/CompressionLevelModal";
@@ -36,7 +40,37 @@ export const useCompressPdf = () => {
   const handleCompress = async (compressionLevel: CompressionLevel) => {
     if (!selectedFile) return;
 
+    // Store the file in Redux global state with compression level
+    dispatch(
+      setPendingFile({
+        file: selectedFile,
+        action: "compress_pdf",
+        compressionLevel: compressionLevel,
+      })
+    );
+    dispatch(setAction("compress_pdf"));
+
     setIsCompressionModalVisible(false);
+
+    // Check authentication first
+    if (!auth) {
+      // Show email modal - file is already stored in Redux
+      setEmailModalVisible(true);
+      return;
+    }
+
+    // Check subscription status
+    const token = localStorage.getItem("authToken");
+    const hasValidSubscription =
+      subscription && new Date(subscription.expiryDate) > new Date() && token;
+
+    if (!hasValidSubscription) {
+      // Navigate to plan page, but keep pending file in Redux for when they come back
+      navigate("/plan");
+      return;
+    }
+
+    // User is authenticated and has valid subscription - proceed with compression
     setUploading(true);
     setStatus(["Uploading file..."]);
 
@@ -61,28 +95,17 @@ export const useCompressPdf = () => {
       }, 300);
       fileName = await compressPdf(selectedFile, compressionLevel);
       dispatch(setFileName(fileName));
-      dispatch(setAction("compress_pdf"));
       setUploading(false);
+      clearInterval(interval);
+      setProgress(100);
 
-      if (!auth) {
-        setEmailModalVisible(true);
-      } else {
-        const token = localStorage.getItem("authToken");
-
-        if (
-          subscription &&
-          new Date(subscription.expiryDate) > new Date() &&
-          token
-        ) {
-          try {
-            navigate(`/files`);
-            await downloadFile(fileName, "compress_pdf", token, user.id);
-          } catch (err) {
-            console.error("Error downloading file:", err);
-            window.alert("Failed to download file.");
-          }
-        } else {
-          navigate(`/plan`);
+      if (token) {
+        try {
+          await downloadFile(fileName, "compress_pdf", token, user.id);
+          navigate("/files");
+        } catch (err) {
+          console.error("Error downloading file:", err);
+          window.alert("Failed to download file.");
         }
       }
     } catch (error) {

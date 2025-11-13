@@ -357,8 +357,18 @@ export const uploadEditedPDF = async (
 
 export const deletePdfByFileName = async (fileName: string): Promise<void> => {
   try {
+    const token = getAuthToken();
+    if (!token) {
+      throw new Error("Authentication token not found");
+    }
+
     const response: AxiosResponse<void> = await api.delete(
-      `/pdf/delete-by-filename/${fileName}`
+      `/pdf/delete-by-filename/${fileName}`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
     );
     return response.data;
   } catch (error) {
@@ -473,14 +483,16 @@ export const convertFile = async (
       "s"
     );
     console.error("[CONVERSION ERROR] Details:", error);
-    
+
     // Extract meaningful error message
     const axiosError = error as any;
     let errorMessage = "File conversion failed";
-    
+
     if (axiosError.response) {
       // Server responded with error status
-      errorMessage = `Server error: ${axiosError.response.status} - ${axiosError.response.data?.error || axiosError.response.statusText}`;
+      errorMessage = `Server error: ${axiosError.response.status} - ${
+        axiosError.response.data?.error || axiosError.response.statusText
+      }`;
     } else if (axiosError.request) {
       // Request was made but no response received
       errorMessage = "No response from server. Please check your connection.";
@@ -488,7 +500,7 @@ export const convertFile = async (
       // Error setting up request
       errorMessage = axiosError.message;
     }
-    
+
     throw new Error(errorMessage, { cause: error });
   }
 };
@@ -547,8 +559,11 @@ export const convertWordToPdf = async (file: File): Promise<string> => {
   return convertFile("/pdf/word_to_pdf", file);
 };
 
-export const convertPdfToWord = async (file: File): Promise<string> => {
-  return convertFile("/pdf/pdf_to_word", file);
+export const convertPdfToWord = async (
+  file: File,
+  onUploadProgress?: (progress: number) => void
+): Promise<string> => {
+  return convertFile("/pdf/pdf_to_word", file, onUploadProgress);
 };
 
 export const convertPdfToPng = async (file: File): Promise<string> => {

@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import MultiFileUploadSection from "@/components/common/MultiFileUploadSection";
 import { UploadedFile } from "@/components/common/types";
 import FeatureItems from "@/components/common/FeatureItems";
+import EmailModal from "@/components/common/EmailModal";
 import ToolsGrid from "@/components/landing/ToolsGrid";
 import HowItWorks from "@/components/landing/HowItWorks";
 import FeatureCTA from "@/components/landing/FeatureCTA";
@@ -17,7 +18,7 @@ import Footer from "@/components/Footer";
 import { useTranslations } from "next-intl";
 import { RootState } from "@/store/store";
 
-import { setAction } from "../../../../store/slices/flowSlice";
+import { setAction, setPendingFile } from "../../../../store/slices/flowSlice";
 import { downloadFile, mergePdfFiles } from "@/utils/apiUtils";
 import { setFileName } from "@/store/slices/flowSlice";
 
@@ -29,9 +30,13 @@ export default function MergePdfPage() {
   const [uploadError, setUploadError] = useState<string | null>(null);
   const [isMerging, setIsMerging] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isEmailModalVisible, setIsEmailModalVisible] = useState(false);
+  const [email, setEmail] = useState("");
   const t = useTranslations();
   const auth = useSelector((state: RootState) => state.auth.isLoggedIn);
-  const subscription = useSelector((state: RootState) => state.user.subscription);
+  const subscription = useSelector(
+    (state: RootState) => state.user.subscription
+  );
   const user = useSelector((state: RootState) => state.user);
 
   const handleFilesChange = (files: UploadedFile[]) => {
@@ -39,18 +44,47 @@ export default function MergePdfPage() {
   };
 
   const handleMergeFiles = async () => {
-    setIsLoading(true);
     if (selectedFiles.length < 2) {
       setUploadError(t("mergePdf.minFilesError"));
       return;
     }
 
-    try {
-      setUploadError(null);
-      setIsMerging(true);
-      const files = selectedFiles.map((uf) => uf.file);
-      const response = await mergePdfFiles(files);
+    const files = selectedFiles.map((uf) => uf.file);
 
+    // Store files in Redux global state
+    dispatch(
+      setPendingFile({
+        files,
+        action: "merge_pdf",
+      })
+    );
+    dispatch(setAction("merge_pdf"));
+
+    // Check authentication first
+    if (!auth) {
+      // Show email modal for non-authenticated users
+      setIsEmailModalVisible(true);
+      return;
+    }
+
+    // Check subscription status
+    const token = localStorage.getItem("authToken");
+    const hasValidSubscription =
+      subscription && new Date(subscription.expiryDate) > new Date() && token;
+
+    if (!hasValidSubscription) {
+      // Navigate to plan page, but keep pending files in Redux for when they come back
+      navigate("/plan");
+      return;
+    }
+
+    // User is authenticated and has valid subscription - proceed with merge
+    setIsLoading(true);
+    setIsMerging(true);
+    setUploadError(null);
+
+    try {
+      const response = await mergePdfFiles(files);
       const fileName =
         typeof response === "string" ? response : (response as any).file;
       if (!fileName) {
@@ -58,26 +92,18 @@ export default function MergePdfPage() {
       }
 
       dispatch(setFileName(fileName));
-      dispatch(setAction("merge_pdf"));
 
-      // Post-conversion flow consistent with other conversion pages
-      if (!auth) {
-        navigate(`/plan`);
-      } else {
-        const token = localStorage.getItem("authToken");
-        if (
-          subscription &&
-          new Date(subscription.expiryDate) > new Date() &&
-          token
-        ) {
+      if (token) {
+        try {
           await downloadFile(fileName, "merge_pdf", token, user.id);
           navigate("/files");
-        } else {
-          navigate(`/plan`);
+        } catch (err) {
+          console.error("Error downloading file:", err);
+          setUploadError("Failed to download file. Please try again.");
         }
       }
     } catch (error) {
-      console.error("Merge or upload failed:", error);
+      console.error("Merge failed:", error);
       setUploadError(t("common.uploadFailed"));
     } finally {
       setIsMerging(false);
@@ -122,6 +148,13 @@ export default function MergePdfPage() {
       <CoreValues />
       <FAQ />
       <Footer />
+      {/* Email Modal */}
+      <EmailModal
+        isVisible={isEmailModalVisible}
+        email={email}
+        onEmailChange={setEmail}
+        onClose={() => setIsEmailModalVisible(false)}
+      />
       {isLoading && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white rounded-xl w-full max-w-md p-8 text-center shadow-xl">

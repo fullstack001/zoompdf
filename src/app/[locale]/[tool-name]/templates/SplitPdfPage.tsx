@@ -15,7 +15,7 @@ import EmailModal from "@/components/common/EmailModal";
 import { useTranslations } from "next-intl";
 import { useLocalizedNavigation } from "@/utils/navigation";
 import { useDispatch, useSelector } from "react-redux";
-import { setAction } from "@/store/slices/flowSlice";
+import { setAction, setPendingFile } from "@/store/slices/flowSlice";
 import { downloadFile, splitPdfWithRanges } from "@/utils/apiUtils";
 import { setFileName } from "@/store/slices/flowSlice";
 import { RootState } from "@/store/store";
@@ -38,7 +38,9 @@ export default function SplitPdfPage() {
   const { navigate } = useLocalizedNavigation();
   const t = useTranslations();
   const auth = useSelector((state: RootState) => state.auth.isLoggedIn);
-  const subscription = useSelector((state: RootState) => state.user.subscription);
+  const subscription = useSelector(
+    (state: RootState) => state.user.subscription
+  );
   const user = useSelector((state: RootState) => state.user);
 
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -73,15 +75,20 @@ export default function SplitPdfPage() {
       return;
     }
 
- // Validate page ranges if we have the total page count
+    // Validate page ranges if we have the total page count
     if (totalPages !== null) {
-      const ranges = splitPages.split(",").map((r) => r.trim()).filter(Boolean);
+      const ranges = splitPages
+        .split(",")
+        .map((r) => r.trim())
+        .filter(Boolean);
       let isValid = true;
       let errorMsg = "";
 
       for (const range of ranges) {
         if (range.includes("-")) {
-          const [start, end] = range.split("-").map((p) => parseInt(p.trim(), 10));
+          const [start, end] = range
+            .split("-")
+            .map((p) => parseInt(p.trim(), 10));
           if (isNaN(start) || isNaN(end)) {
             isValid = false;
             errorMsg = `Invalid page range: ${range}`;
@@ -108,14 +115,42 @@ export default function SplitPdfPage() {
       }
     }
 
+    // Store file and page ranges in Redux global state
+    dispatch(
+      setPendingFile({
+        file: selectedFile,
+        action: "split_pdf",
+        splitPageRanges: splitPages,
+      })
+    );
+    dispatch(setAction("split_pdf"));
+
+    // Check authentication first
+    if (!auth) {
+      // Show email modal for non-authenticated users
+      setIsEmailModalVisible(true);
+      return;
+    }
+
+    // Check subscription status
+    const token = localStorage.getItem("authToken");
+    const hasValidSubscription =
+      subscription && new Date(subscription.expiryDate) > new Date() && token;
+
+    if (!hasValidSubscription) {
+      // Navigate to plan page, but keep pending file in Redux for when they come back
+      navigate("/plan");
+      return;
+    }
+
+    // User is authenticated and has valid subscription - proceed with split
     setIsLoading(true);
     setUploading(true);
     setProgress(0);
     setStatus([t("common.processing")]);
+    setSplitError(null);
 
     try {
-      setSplitError(null);
-
       const response = await splitPdfWithRanges(selectedFile, splitPages);
       const fileName =
         typeof response === "string" ? response : (response as any).file;
@@ -124,32 +159,17 @@ export default function SplitPdfPage() {
       }
 
       dispatch(setFileName(fileName));
-      dispatch(setAction("split_pdf"));
-      
-      // Stop loading indicators
       setIsLoading(false);
       setUploading(false);
+      setProgress(100);
 
-      // Follow the same flow as compress/other pages
-      if (!auth) {
-        // Show email modal for non-authenticated users
-        setIsEmailModalVisible(true);
-      } else {
-        const token = localStorage.getItem("authToken");
-        if (
-          subscription &&
-          new Date(subscription.expiryDate) > new Date() &&
-          token
-        ) {
-          try {
-            navigate("/files");
-            await downloadFile(fileName, "split_pdf", token, user.id);
-          } catch (err) {
-            console.error("Error downloading file:", err);
-            setSplitError("Failed to download file. Please try again.");
-          }
-        } else {
-          navigate(`/plan`);
+      if (token) {
+        try {
+          await downloadFile(fileName, "split_pdf", token, user.id);
+          navigate("/files");
+        } catch (err) {
+          console.error("Error downloading file:", err);
+          setSplitError("Failed to download file. Please try again.");
         }
       }
     } catch (error) {
@@ -191,7 +211,7 @@ export default function SplitPdfPage() {
           <div className="mt-6 max-w-md mx-auto">
             <div className="bg-white rounded-lg p-4 shadow-sm">
               <h3 className="text-lg font-semibold mb-2">Split Options</h3>
-              
+
               {/* PDF Information */}
               <div className="mb-4 p-3 bg-blue-50 rounded-md">
                 <div className="flex items-center justify-between mb-2">
@@ -210,7 +230,9 @@ export default function SplitPdfPage() {
                     {loadingPageCount ? (
                       <span className="text-gray-500">Loading...</span>
                     ) : totalPages !== null ? (
-                      <span>{totalPages} {totalPages === 1 ? 'page' : 'pages'}</span>
+                      <span>
+                        {totalPages} {totalPages === 1 ? "page" : "pages"}
+                      </span>
                     ) : (
                       <span className="text-gray-500">-</span>
                     )}

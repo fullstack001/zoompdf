@@ -10,6 +10,11 @@ import { login } from "../../store/slices/authSlice";
 import { RootState } from "../../store/store";
 import { downloadFile } from "../../utils/apiUtils";
 import { useLocalizedNavigation } from "../../utils/navigation";
+import { processPendingFile } from "../../utils/processPendingFile";
+import { clearPendingFile } from "../../store/slices/flowSlice";
+import ProgressModal from "../common/ProgressModal";
+import LoadingModal from "../common/LoadingModal";
+import DownloadModal from "../common/DownloadModal";
 
 import CheckoutForm from "./CheckoutForm";
 
@@ -45,6 +50,12 @@ export default function PaymentForm({
   const fileName = useSelector((state: RootState) => state.flow.fileName);
   const action = useSelector((state: RootState) => state.flow.action);
   const flow = useSelector((state: RootState) => state.flow);
+  const [uploadProgress, setUploadProgress] = useState(0);
+  const [uploadStatus, setUploadStatus] = useState<string[]>([]);
+  const [isUploading, setIsUploading] = useState(false);
+  const [isConverting, setIsConverting] = useState(false);
+  const [isDownloading, setIsDownloading] = useState(false);
+  const [downloadProgress, setDownloadProgress] = useState(0);
 
   const handlePurchaseSubscription = (
     subscriptionType: string,
@@ -92,9 +103,115 @@ export default function PaymentForm({
         dispatch(login());
         localStorage.setItem("authToken", token as string);
 
-        // Check for edited PDF data first
+        // Check for pending files first (merge/conversion/compression/split)
+        if (flow.action) {
+          if (flow.pendingFiles && flow.action === "merge_pdf") {
+            // Handle merge with multiple files
+            try {
+              setIsUploading(true);
+              setUploadStatus(["Uploading files..."]);
+              setUploadProgress(0);
+
+              await processPendingFile(
+                null,
+                flow.action,
+                token as string,
+                user.id as string,
+                null,
+                flow.pendingFiles,
+                null,
+                {
+                  onUploadProgress: (progress) => {
+                    setUploadProgress(progress);
+                    if (progress >= 90) {
+                      setUploadStatus([
+                        "Uploading files...",
+                        "Merging PDFs...",
+                      ]);
+                    }
+                    if (progress >= 100) {
+                      setUploadStatus([
+                        "Uploading files...",
+                        "Merging PDFs...",
+                        "File processing...",
+                      ]);
+                    }
+                  },
+                  onConverting: () => {
+                    setIsUploading(false);
+                    setIsConverting(true);
+                  },
+                  onDownloadProgress: (progress) => {
+                    setIsConverting(false);
+                    setIsDownloading(true);
+                    setDownloadProgress(progress);
+                  },
+                }
+              );
+              setIsDownloading(false);
+              dispatch(clearPendingFile());
+              navigate("/files");
+              return;
+            } catch (err) {
+              console.error("Error processing pending files:", err);
+              setIsUploading(false);
+              setIsConverting(false);
+              setIsDownloading(false);
+              window.alert("Failed to process files. Please try again.");
+              dispatch(clearPendingFile());
+            }
+          } else if (flow.pendingFile && flow.action) {
+            // Handle single file operations (conversion/compression/split)
+            try {
+              setIsUploading(true);
+              setUploadStatus(["Uploading file..."]);
+              setUploadProgress(0);
+
+              await processPendingFile(
+                flow.pendingFile,
+                flow.action,
+                token as string,
+                user.id as string,
+                flow.compressionLevel,
+                null,
+                flow.splitPageRanges,
+                {
+                  onUploadProgress: (progress) => {
+                    setUploadProgress(progress);
+
+                    setUploadStatus([
+                      "Uploading file...",
+                      "Converting the document...",
+                    ]);
+                  },
+                  onConverting: () => {
+                    setIsUploading(false);
+                    setIsConverting(true);
+                  },
+                  onDownloadProgress: (progress) => {
+                    setIsConverting(false);
+                    setIsDownloading(true);
+                    setDownloadProgress(progress);
+                  },
+                }
+              );
+              setIsDownloading(false);
+              dispatch(clearPendingFile());
+              navigate("/files");
+              return;
+            } catch (err) {
+              console.error("Error processing pending file:", err);
+              setIsUploading(false);
+              setIsConverting(false);
+              setIsDownloading(false);
+              window.alert("Failed to process file. Please try again.");
+              dispatch(clearPendingFile());
+            }
+          }
+        }
+
+        // Check for edited PDF data (already converted)
         if (fileName && action) {
-          // Fallback to regular conversion flow
           try {
             await downloadFile(
               fileName,
@@ -164,6 +281,18 @@ export default function PaymentForm({
             couponCode={couponCode}
           />
         </Elements>
+
+        {/* Upload/Convert/Download Modals */}
+        {isUploading && (
+          <ProgressModal progress={uploadProgress} status={uploadStatus} />
+        )}
+        {isConverting && (
+          <LoadingModal
+            title="Converting your file..."
+            message="Please wait while we process your document"
+          />
+        )}
+        <DownloadModal isVisible={isDownloading} progress={downloadProgress} />
 
         {/* Secure Notice + Terms Agreement */}
         {/* <div className="mt-6">

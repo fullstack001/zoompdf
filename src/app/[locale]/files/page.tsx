@@ -13,17 +13,18 @@ export default function FileListPage() {
   const [files, setFiles] = useState<any[]>([]);
   const [selectedTool, setSelectedTool] = useState<string[] | null>([]);
 
-  useEffect(() => {
-    async function fetchFiles() {
-      try {
-        const files = await getFiles();
-        console.log("Fetched files:", files);
-        setOriginalFiles(files);
-        setFiles(files);
-      } catch (error) {
-        console.error("Error fetching files:", error);
-      }
+  const fetchFiles = async () => {
+    try {
+      const fetchedFiles = await getFiles();
+      console.log("Fetched files:", fetchedFiles);
+      setOriginalFiles(fetchedFiles);
+      setFiles(fetchedFiles);
+    } catch (error) {
+      console.error("Error fetching files:", error);
     }
+  };
+
+  useEffect(() => {
     fetchFiles();
   }, []);
 
@@ -47,7 +48,7 @@ export default function FileListPage() {
       <div className="flex flex-col lg:flex-row mx-auto  gap-6 px-4">
         <FileSidebar setSelectedTool={setSelectedTool} />
         <main className="flex-1">
-          <FileListTable files={files} /> {/* Updated component */}
+          <FileListTable files={files} onFileDeleted={fetchFiles} />
         </main>
       </div>
       <Footer />

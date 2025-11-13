@@ -11,6 +11,8 @@ import Footer from "@/components/Footer";
 import FeatureItems from "@/components/common/FeatureItems";
 import FileUploadSection from "@/components/common/FileUploadSection";
 import ProgressModal from "@/components/common/ProgressModal";
+import LoadingModal from "@/components/common/LoadingModal";
+import DownloadModal from "@/components/common/DownloadModal";
 import EmailModal from "@/components/common/EmailModal";
 import { useFileConversion } from "@/utils/useFileConversion";
 import { useTranslations } from "next-intl";
@@ -32,7 +34,10 @@ export default function ConvertPage({
 }: ConvertPageProps) {
   const {
     uploading,
+    isConverting,
+    isDownloading,
     progress,
+    downloadProgress,
     status,
     isEmailModalVisible,
     email,
@@ -62,8 +67,17 @@ export default function ConvertPage({
         />
 
         <FeatureItems />
-        {uploading && <ProgressModal progress={progress} status={status} />}
       </section>
+
+      {/* Upload/Convert/Download Modals */}
+      {uploading && <ProgressModal progress={progress} status={status} />}
+      {isConverting && (
+        <LoadingModal
+          title="Converting your file..."
+          message="Please wait while we process your document"
+        />
+      )}
+      <DownloadModal isVisible={isDownloading} progress={downloadProgress} />
 
       {/* Email Modal */}
       <EmailModal
