@@ -369,7 +369,12 @@
     "paymentMethod": "Méthode de paiement",
     "saveTime": "Gagnez du temps en gardant une carte de crédit actuelle en dossier.",
     "cardNumber": "Numéro de carte",
-    "notSpecified": "Non spécifié"
+    "notSpecified": "Non spécifié",
+    "activeSubscription": "Abonnement Actif",
+    "subscriptionActive": "Votre abonnement est actuellement actif et vous avez un accès complet à toutes les fonctionnalités.",
+    "plan": "Plan",
+    "expiryDate": "Date d'Expiration",
+    "subscriptionType": "Type d'Abonnement"
   },
   "plan": {
     "choosePlan": "Choisissez un plan pour télécharger votre fichier",
@@ -467,8 +472,8 @@
     "documentPreview": "Aperçu du document",
     "termsAndService": "Conditions d'utilisation et de service",
     "privacyPolicy": "Politique de confidentialité",
-    "billingEmail": "billing@pdfhouse.com",
-    "agreementText": "En cochant cette case, vous acceptez les Conditions d'utilisation et de service, la Politique de confidentialité, et confirmez que si vous n'annulez pas au moins 24 heures avant la fin de l'essai de 7 jours pour 1,95 $ CAD, vous serez facturé 49 $ CAD par 28 jours jusqu'à ce que vous annuliez votre abonnement en contactant notre équipe de support client par e-mail à billing@pdfhouse.com. Les paiements seront débités de la carte que vous avez spécifiée ci-dessus."
+    "billingEmail": "billing@pdfezy.com",
+    "agreementText": "En cochant cette case, vous acceptez les Conditions d'utilisation et de service, la Politique de confidentialité, et confirmez que si vous n'annulez pas au moins 24 heures avant la fin de l'essai de 7 jours pour 1,95 $ CAD, vous serez facturé 49 $ CAD par 28 jours jusqu'à ce que vous annuliez votre abonnement en contactant notre équipe de support client par e-mail à billing@pdfezy.com. Les paiements seront débités de la carte que vous avez spécifiée ci-dessus."
   },
   "pdfViewer": {
     "thumbnails": "Miniatures",

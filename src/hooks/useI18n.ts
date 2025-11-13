@@ -10,10 +10,29 @@ export function useI18n() {
   const getLocaleName = (loc: string) => {
     const names: Record<string, string> = {
       en: 'English',
-      es: 'Español',
+      zh: '中文',
+      cs: 'Čeština',
+      nl: 'Nederlands',
       fr: 'Français',
+      de: 'Deutsch',
+      el: 'Ελληνικά',
+      hu: 'Magyar',
+      id: 'Bahasa Indonesia',
+      it: 'Italiano',
+      ja: '日本語',
       ko: '한국어',
-      se: 'Svenska'
+      ms: 'Bahasa Melayu',
+      pl: 'Polski',
+      pt: 'Português',
+      ro: 'Română',
+      sr: 'Srpski',
+      es: 'Español',
+      se: 'Svenska',
+      th: 'แบบไทย',
+      tr: 'Türkçe',
+      uk: 'Українська',
+      vi: 'Tiếng Việt',
+      fi: 'Suomi'
     };
     return names[loc] || loc;
   };

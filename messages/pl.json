@@ -1,0 +1,550 @@
+{
+  "navigation": {
+    "home": "Strona główna",
+    "convert": "Konwertuj",
+    "edit": "Edytuj",
+    "compress": "Kompresuj",
+    "sign": "Podpisz",
+    "merge": "Połącz",
+    "split": "Podziel",
+    "files": "Pliki",
+    "account": "Konto",
+    "login": "Zaloguj się",
+    "logout": "Wyloguj się",
+    "pdfConverter": "KONWERTER PDF",
+    "pdfEditor": "EDYTOR PDF",
+    "language": "Język"
+  },
+  "languages": {
+    "en": "English",
+    "zh": "中文",
+    "cs": "Čeština",
+    "nl": "Nederlands",
+    "fr": "Français",
+    "de": "Deutsch",
+    "el": "Ελληνικά",
+    "hu": "Magyar",
+    "id": "Bahasa Indonesia",
+    "it": "Italiano",
+    "ja": "日本語",
+    "ko": "한국어",
+    "ms": "Bahasa Melayu",
+    "pl": "Polski",
+    "pt": "Português",
+    "ro": "Română",
+    "sr": "Srpski",
+    "es": "Español",
+    "se": "Svenska",
+    "th": "แบบไทย",
+    "tr": "Türkçe",
+    "uk": "Українська",
+    "vi": "Tiếng Việt",
+    "fi": "Suomi"
+  },
+  "pages": {
+    "home": "Strona główna",
+    "convertPdf": "Konwertuj PDF",
+    "editPdf": "Edytuj PDF",
+    "compressPdf": "Kompresuj PDF",
+    "signPdf": "Podpisz PDF",
+    "mergePdf": "Połącz PDF",
+    "splitPdf": "Podziel PDF",
+    "files": "Pliki",
+    "account": "Moje Konto",
+    "login": "Zaloguj się",
+    "payment": "Płatność",
+    "plan": "Plany"
+  },
+  "common": {
+    "upload": "Prześlij",
+    "download": "Pobierz",
+    "convert": "Konwertuj",
+    "edit": "Edytuj",
+    "save": "Zapisz",
+    "cancel": "Anuluj",
+    "delete": "Usuń",
+    "back": "Wstecz",
+    "next": "Dalej",
+    "previous": "Poprzedni",
+    "loading": "Ładowanie...",
+    "error": "Błąd",
+    "success": "Sukces",
+    "chooseFile": "Wybierz Plik",
+    "dragAndDrop": "Przeciągnij i upuść swój plik tutaj",
+    "or": "lub",
+    "browse": "Przeglądaj",
+    "processing": "Przetwarzanie...",
+    "processingFile": "Przetwarzamy Twój plik",
+    "configNotFound": "Nie znaleziono konfiguracji dla strony głównej.",
+    "uploadFailed": "Nie udało się przesłać pliku. Spróbuj ponownie.",
+    "chooseBestTool": "Wybierz najlepsze narzędzie dla potrzeb Twojej firmy",
+    "done": "Gotowe",
+    "split": "Podziel",
+    "saving": "Zapisywanie...",
+    "signing": "Podpisywanie...",
+    "splitting": "Dzielenie...",
+    "convertFromPdf": "Konwertuj z PDF",
+    "convertToPdf": "Konwertuj na PDF",
+    "convertImage": "Konwertuj Obraz",
+    "otherFormats": "Inne Formaty",
+    "editSuccess": "Edycja Powiodła Się!",
+    "editSuccessMessage": "Twój PDF został pomyślnie edytowany i jest gotowy do pobrania.",
+    "whatsNext": "Co Dalej?",
+    "downloadEditedFile": "Pobierz edytowany plik",
+    "editAnotherFile": "Edytuj inny plik",
+    "startNew": "Rozpocznij Nowy",
+    "fileId": "ID Pliku",
+    "toolNotFound": "Nie znaleziono narzędzia"
+  },
+  "errors": {
+    "oops": "Ups!",
+    "somethingWentWrong": "Coś poszło nie tak",
+    "pageNotFound": "Strona Nie Znaleziona",
+    "pageNotExist": "Strona, której szukasz, nie istnieje.",
+    "errorLoadingPage": "Wystąpił błąd podczas ładowania tej strony. Spróbuj ponownie.",
+    "errorLoadingApp": "Wystąpił błąd podczas ładowania aplikacji. Spróbuj ponownie.",
+    "tryAgain": "Spróbuj ponownie",
+    "goHome": "Przejdź do Strony Głównej",
+    "goToHomePage": "Przejdź do strony głównej",
+    "errorDetails": "Szczegóły błędu (tylko rozwój)"
+  },
+  "tools": {
+    "pdfToWord": "PDF do Word",
+    "pdfToExcel": "PDF do Excel",
+    "pdfToPptx": "PDF do PowerPoint",
+    "pdfToPng": "PDF do PNG",
+    "pdfToJpg": "PDF do JPG",
+    "pdfToEpub": "PDF do EPUB",
+    "pdfToMobi": "PDF do MOBI",
+    "pdfToTxt": "PDF do TXT",
+    "pdfToHtml": "PDF do HTML",
+    "pdfToSvg": "PDF do SVG",
+    "pdfToTiff": "PDF do TIFF",
+    "pdfToWebp": "PDF do WebP",
+    "pdfToAvif": "PDF do AVIF",
+    "pdfToEps": "PDF do EPS",
+    "pdfToDxf": "PDF do DXF",
+    "pdfToAzw3": "PDF do AZW3",
+    "wordToPdf": "Word do PDF",
+    "excelToPdf": "Excel do PDF",
+    "pptxToPdf": "PPTX do PDF",
+    "pngToPdf": "PNG do PDF",
+    "jpgToPdf": "JPG do PDF",
+    "epubToPdf": "EPUB do PDF",
+    "mobiToPdf": "MOBI do PDF",
+    "avifToPdf": "AVIF do PDF",
+    "avifToPdfJpg": "AVIF do PDF",
+    "pngToAvif": "PNG do AVIF",
+    "jpgToAvif": "JPG do AVIF",
+    "avifToPng": "AVIF do PNG",
+    "avifToJpg": "AVIF do JPG",
+    "epubToMobi": "EPUB do MOBI",
+    "mobiToEpub": "MOBI do EPUB",
+    "editPdf": "Edytuj PDF",
+    "signPdf": "Podpisz PDF",
+    "addWatermark": "Dodaj znak wodny",
+    "rotatePdf": "Obróć PDF",
+    "mergePdf": "Połącz PDF",
+    "splitPdf": "Podziel PDF",
+    "deletePages": "Usuń strony",
+    "compressPdf": "Kompresuj PDF",
+    "cropPdf": "Przytnij PDF",
+    "fillForm": "Wypełnij Formularz",
+    "fillPdf": "Wypełnij PDF",
+    "createForm": "Utwórz Formularz",
+    "imageToText": "Obraz do Tekstu",
+    "mergeImages": "Połącz Obrazy",
+    "pdfOcr": "PDF OCR",
+    "pdfToImage": "PDF do Obrazu",
+    "imageToPdf": "Obraz do PDF",
+    "pdfToDoc": "PDF do DOC"
+  },
+  "toolsSection": {
+    "allPdfTools": "Wszystkie Narzędzia PDF",
+    "subtitle": "Wszystko, czego potrzebujesz do pracy z PDF w jednym miejscu",
+    "splitAndMerge": "Podziel i Połącz",
+    "w9": "W-9",
+    "ds11": "DS-11",
+    "1099misc": "1099-MISC",
+    "viewAllForms": "Zobacz Wszystkie Formularze",
+    "ctaText": "Potrzebujesz czegoś innego? Mamy dostępnych ponad 50+ narzędzi PDF.",
+    "viewAllTools": "Zobacz Wszystkie Narzędzia"
+  },
+  "toolPages": {
+    "home": {
+      "title": "Konwerter i Edytor PDF",
+      "subtitle": "Konwertuj, edytuj i zarządzaj swoimi PDF z łatwością. Ponad 1M plików przetwarzanych miesięcznie!"
+    },
+    "signPdf": {
+      "title": "Podpisz PDF Online",
+      "subtitle": "Podpisz swoje dokumenty bezpiecznie online. Prześlij plik, aby rozpocząć!"
+    },
+    "splitPdf": {
+      "title": "Podziel PDF Online",
+      "subtitle": "Podziel swój PDF na wiele plików z łatwością. Prześlij plik, aby rozpocząć!"
+    },
+    "compressPdf": {
+      "title": "Kompresor PDF",
+      "subtitle": "Już skompresowaliśmy 775 000 plików — pozwól nam pomóc z Twoimi"
+    },
+    "mergePdf": {
+      "title": "Połącz Pliki PDF",
+      "subtitle": "Połącz wiele plików PDF w jeden. Prześlij swoje pliki, aby rozpocząć!"
+    },
+    "pdfToWord": {
+      "title": "Konwerter PDF do Word",
+      "subtitle": "Pomogliśmy przekonwertować 775 000 plików — pozwól nam pomóc z Twoimi"
+    },
+    "pdfToPng": {
+      "title": "Konwerter PDF do PNG",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — Twój może być następny"
+    },
+    "pdfToJpg": {
+      "title": "Konwerter PDF do JPG",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — Twój może być następny"
+    },
+    "pdfToEpub": {
+      "title": "Konwerter PDF do EPUB",
+      "subtitle": "Pomogliśmy przekonwertować 775 000 plików — pozwól nam pomóc z Twoimi"
+    },
+    "pdfToExcel": {
+      "title": "Konwerter PDF do Excel",
+      "subtitle": "Przekonwertowaliśmy 775K PDF — dlaczego nie zrobić Twojego następnym?"
+    },
+    "pdfToPptx": {
+      "title": "Konwerter PDF do PPTX",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — Twój może być następny"
+    },
+    "wordToPdf": {
+      "title": "Konwerter Word do PDF",
+      "subtitle": "Pomogliśmy przekonwertować 775 000 plików — pozwól nam pomóc z Twoimi"
+    },
+    "jpgToPdf": {
+      "title": "Konwerter JPG do PDF",
+      "subtitle": "Przetworzyliśmy dotychczas 75 000 JPG. Zróbmy Twój następnym."
+    },
+    "pngToPdf": {
+      "title": "Konwerter PNG do PDF",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — Twój może być następny"
+    },
+    "epubToPdf": {
+      "title": "Konwerter EPUB do PDF",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — teraz pozwól nam pomóc z Twoimi"
+    },
+    "pdfToTxt": {
+      "title": "Konwerter PDF do TXT",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — Twój może być następny"
+    },
+    "pdfToHtml": {
+      "title": "Konwerter PDF do HTML",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — Twój może być następny"
+    },
+    "pdfToSvg": {
+      "title": "Konwerter PDF do SVG",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — Twój może być następny"
+    },
+    "pdfToTiff": {
+      "title": "Konwerter PDF do TIFF",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — Twój może być następny"
+    },
+    "pdfToWebp": {
+      "title": "Konwerter PDF do WebP",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — Twój może być następny"
+    },
+    "pdfToAvif": {
+      "title": "Konwerter PDF do AVIF",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — Twój może być następny"
+    },
+    "pdfToEps": {
+      "title": "Konwerter PDF do EPS",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — Twój może być następny"
+    },
+    "pdfToDxf": {
+      "title": "Konwerter PDF do DXF",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — Twój może być następny"
+    },
+    "pdfToAzw3": {
+      "title": "Konwerter PDF do AZW3",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — Twój może być następny"
+    },
+    "pdfToMobi": {
+      "title": "Konwerter PDF do MOBI",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — Twój może być następny"
+    },
+    "pdfToDoc": {
+      "title": "Konwerter PDF do DOC",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — Twój może być następny"
+    },
+    "excelToPdf": {
+      "title": "Konwerter Excel do PDF",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — Twój może być następny"
+    },
+    "pptxToPdf": {
+      "title": "Konwerter PPTX do PDF",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — Twój może być następny"
+    },
+    "mobiToPdf": {
+      "title": "Konwerter MOBI do PDF",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — Twój może być następny"
+    },
+    "avifToPdf": {
+      "title": "Konwerter AVIF do PDF",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — Twój może być następny"
+    },
+    "pngToAvif": {
+      "title": "Konwerter PNG do AVIF",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — Twój może być następny"
+    },
+    "jpgToAvif": {
+      "title": "Konwerter JPG do AVIF",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — Twój może być następny"
+    },
+    "avifToPng": {
+      "title": "Konwerter AVIF do PNG",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — Twój może być następny"
+    },
+    "avifToJpg": {
+      "title": "Konwerter AVIF do JPG",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — Twój może być następny"
+    },
+    "epubToMobi": {
+      "title": "Konwerter EPUB do MOBI",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — Twój może być następny"
+    },
+    "mobiToEpub": {
+      "title": "Konwerter MOBI do EPUB",
+      "subtitle": "Już przekonwertowaliśmy 775 000 plików — Twój może być następny"
+    },
+    "pdfOcr": {
+      "title": "Narzędzie PDF OCR",
+      "subtitle": "Wyodrębnij tekst z PDF za pomocą technologii OCR. Prześlij plik, aby rozpocząć!"
+    },
+    "pdfToImage": {
+      "title": "Konwerter PDF do Obrazu",
+      "subtitle": "Konwertuj strony PDF na obrazy. Prześlij plik, aby rozpocząć!"
+    },
+    "imageToPdf": {
+      "title": "Konwerter Obrazu do PDF",
+      "subtitle": "Konwertuj obrazy na PDF. Prześlij swoje pliki, aby rozpocząć!"
+    }
+  },
+  "navbar": {
+    "convertFromPdf": "Konwertuj z PDF",
+    "convertToPdf": "Konwertuj na PDF",
+    "convertImage": "Konwertuj Obraz",
+    "convertEbook": "Konwertuj E-book",
+    "editingTools": "Narzędzia Edycji",
+    "myDocuments": "Moje Dokumenty",
+    "myAccount": "Moje Konto",
+    "help": "Pomoc",
+    "termsConditions": "Warunki i Zasady",
+    "settings": "Ustawienia",
+    "logOut": "Wyloguj się",
+    "upgradePlan": "Ulepsz Plan",
+    "noSubscription": "Brak subskrypcji",
+    "profileDetails": "Szczegóły Profilu"
+  },
+  "footer": {
+    "editPdf": "Edytuj PDF",
+    "convertFromPdf": "Konwertuj z PDF",
+    "convertToPdf": "Konwertuj na PDF",
+    "disclaimer": "Zastrzeżenie",
+    "privacyPolicy": "Polityka Prywatności",
+    "termsOfService": "Warunki Usługi",
+    "sitemap": "Mapa Strony",
+    "allRightsReserved": "© 2025 PDFEZY Wszelkie prawa zastrzeżone.",
+    "companyDescription": "Twoje kompleksowe rozwiązanie PDF do konwertowania, edytowania i zarządzania dokumentami z łatwością i bezpieczeństwem.",
+    "stayUpdated": "Bądź na Bieżąco",
+    "newsletterDescription": "Otrzymuj najnowsze aktualizacje i porady dotyczące PDF bezpośrednio na swoją skrzynkę.",
+    "emailPlaceholder": "Wprowadź swój email",
+    "subscribe": "Subskrybuj",
+    "followUs": "Śledź Nas",
+    "language": "Język",
+    "selectLanguage": "Wybierz swój język",
+    "email": "Email",
+    "phone": "Telefon",
+    "address": "Adres"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Hasło",
+    "confirmPassword": "Potwierdź Hasło",
+    "forgotPassword": "Zapomniałeś Hasła?",
+    "resetPassword": "Resetuj Hasło",
+    "signIn": "Zaloguj się",
+    "signUp": "Zarejestruj się",
+    "alreadyHaveAccount": "Masz już konto?",
+    "dontHaveAccount": "Nie masz konta?",
+    "login": "Zaloguj się",
+    "loggingIn": "Logowanie...",
+    "emailAddress": "Adres email",
+    "enterEmailAddress": "Wprowadź Swój Adres Email",
+    "emailAlreadyRegistered": "Ten email jest już zarejestrowany. Proszę",
+    "logIn": "zaloguj się"
+  },
+  "account": {
+    "membership": "Członkostwo",
+    "noSubscription": "Nie masz subskrypcji.",
+    "unlockAllTools": "Odblokuj wszystkie narzędzia PDF!",
+    "fullAccess": "Uzyskaj pełny dostęp do naszych zaawansowanych funkcji edycji i konwersji.",
+    "subscribeNow": "Subskrybuj teraz, aby usprawnić swoje zadania związane z dokumentami",
+    "subscribe": "Subskrybuj",
+    "account": "Konto",
+    "betterExperience": "Miej lepsze doświadczenie w PDF House, utrzymując swoje informacje na bieżąco.",
+    "importantUpdates": "Otrzymasz ważne aktualizacje produktu i niezbędne powiadomienia konta, w tym paragony płatności.",
+    "paymentMethod": "Metoda Płatności",
+    "saveTime": "Oszczędzaj czas, przechowując aktualną kartę kredytową w pliku.",
+    "cardNumber": "Numer karty",
+    "notSpecified": "Nie Określono",
+    "activeSubscription": "Aktywna Subskrypcja",
+    "subscriptionActive": "Twoja subskrypcja jest obecnie aktywna i masz pełny dostęp do wszystkich funkcji.",
+    "plan": "Plan",
+    "expiryDate": "Data Wygasania",
+    "subscriptionType": "Typ Subskrypcji"
+  },
+  "plan": {
+    "choosePlan": "Wybierz plan, aby pobrać swój plik",
+    "continue": "Kontynuuj",
+    "annualPlan": "Plan Roczny",
+    "getStarted": "Rozpocznij",
+    "mostPopular": "Najpopularniejszy"
+  },
+  "whyUs": {
+    "title": "Dlaczego TheBestPDF jest najlepszym wyborem dla Twojego zespołu",
+    "openness": "Otwartość",
+    "opennessDesc": "Dążąc do długoterminowych partnerstw, zapewniamy dostępność wsparcia klienta 24/7.",
+    "expertise": "Ekspertyza",
+    "expertiseDesc": "Łączymy kreatywne umysły, aby dostarczać zintegrowane rozwiązania pokrywające Twoje wyzwania biznesowe.",
+    "growth": "Wzrost",
+    "growthDesc": "Wzmacniamy organizacje, pozostając na bieżąco z najnowszymi postępami technologicznymi, dążąc do doskonałości w naszej dziedzinie.",
+    "diversity": "Różnorodność",
+    "diversityDesc": "Opieka zdrowotna, Prawo, Finanse, Edukacja — niezależnie od branży, nasze narzędzie może usprawnić Twoje przepływy pracy."
+  },
+  "securityPriority": {
+    "title": "Priorytet Bezpieczeństwa",
+    "description": "Bezpieczeństwo Twoich danych jest naszym najwyższym priorytetem. Wdrażamy szyfrowanie na poziomie przedsiębiorstwa i środki bezpieczeństwa, aby chronić Twoje dokumenty i zapewnić pełną prywatność."
+  },
+  "coreValues": {
+    "title": "Wartości podstawowe stojące za TheBestPDF"
+  },
+  "compression": {
+    "compressFile": "Kompresuj plik",
+    "high": "WYSOKI",
+    "highDesc": "Standardowa jakość, mniejszy rozmiar",
+    "highReduction": "~40% mniejszy",
+    "basic": "PODSTAWOWY",
+    "basicDesc": "Lepsza jakość, średni rozmiar",
+    "basicReduction": "~20% mniejszy",
+    "low": "NISKI",
+    "lowDesc": "Najwyższa jakość, większy rozmiar",
+    "lowReduction": "~10% mniejszy",
+    "compressionLevel": "Poziom kompresji",
+    "selectLevel": "Wybierz poziom kompresji i skompresuj plik.",
+    "compress": "Kompresuj",
+    "compressing": "Kompresowanie..."
+  },
+  "email": {
+    "enterEmail": "Wprowadź swój adres Email",
+    "downloadLink": "Link do pobrania zostanie wysłany na Twój email",
+    "getStarted": "Rozpocznij"
+  },
+  "faq": {
+    "title": "Często Zadawane Pytania",
+    "multipleUsers": "Czy wielu użytkowników z naszej firmy może jednocześnie korzystać z usługi?",
+    "multipleUsersAnswer": "Łatwe! Utwórz jedno konto, a cały zespół będzie mógł korzystać z naszego narzędzia. Aby rozpocząć subskrypcję, po prostu zarejestruj się, wprowadź kilka zmian w plikach, kliknij \"Pobierz\", a następnie wybierz plan, który najlepiej Ci odpowiada.",
+    "customerSupport": "Czy oferujecie wsparcie klienta w przypadku problemów technicznych?",
+    "customerSupportAnswer": "Tak, nasz zespół wsparcia jest dostępny 24/7, aby pomóc w każdych problemach technicznych, które napotkasz.",
+    "processingSpeed": "Jak szybko dokumenty są przetwarzane na Waszej platformie?",
+    "processingSpeedAnswer": "Dokumenty są zazwyczaj przetwarzane w ciągu sekund, nawet dla dużych plików.",
+    "moneyBack": "Czy macie gwarancję zwrotu pieniędzy?",
+    "moneyBackAnswer": "Tak, oferujemy 14-dniową gwarancję zwrotu pieniędzy, jeśli nie jesteś zadowolony z naszej usługi.",
+    "ctaTitle": "Chcesz podnieść poziom operacji biznesowych?",
+    "ctaDescription": "Skontaktuj się z nami pod adresem sales@thebestpdf.com i zbadajmy, jak nasz produkt może zrewolucjonizować Twoją dokumentację korporacyjną. Dołącz do rosnącej społeczności udanych firm wykorzystujących TheBestPDF, aby pozostać na czele!",
+    "ctaButton": "Rozpocznij",
+    "loading": "Ładowanie..."
+  },
+  "howItWorks": {
+    "title": "Jak skompresować PDF",
+    "step1": "Zaloguj się do TheBestPDF i przejdź do narzędzia Kompresuj PDF",
+    "step2": "Prześlij lub przeciągnij i upuść swój PDF do interfejsu",
+    "step3": "To wszystko! Twój nowo skompresowany plik jest gotowy do pobrania i można go znaleźć na koncie Twojego zespołu"
+  },
+  "featureCTA": {
+    "title": "PDFEZY dostarcza rozwiązania zarządzania plikami najwyższej klasy dla zespołów wszystkich rozmiarów.",
+    "subtitle": "Witamy na naszej zaawansowanej platformie SaaS do edycji i konwersji dokumentów online. Zaprojektowana, aby sprostać potrzebom firm i przedsiębiorców."
+  },
+  "files": {
+    "searchFiles": "Szukaj Plików",
+    "pdfConverter": "Konwerter PDF",
+    "editPdf": "Edytuj PDF",
+    "signPdf": "Podpisz PDF",
+    "ocrPdf": "OCR PDF",
+    "mergePdf": "Połącz PDF",
+    "compressPdf": "Kompresuj PDF",
+    "splitPdf": "Podziel PDF",
+    "aiSummarizer": "Podsumowanie AI",
+    "fillPdf": "Wypełnij PDF",
+    "createForm": "Utwórz Formularz",
+    "editForm": "Edytuj Formularz",
+    "summarizePdf": "Podsumuj PDF",
+    "extractHighlights": "Wyodrębnij Podświetlenia"
+  },
+  "features": {
+    "comprehensiveSuite": "Kompleksowy Pakiet",
+    "unlimitedDocuments": "Nieograniczone dokumenty"
+  },
+  "payment": {
+    "paymentDetails": "Szczegóły płatności",
+    "documentPreview": "Podgląd Dokumentu",
+    "termsAndService": "Warunki Użytkowania i Usługi",
+    "privacyPolicy": "Polityka Prywatności",
+    "billingEmail": "billing@pdfezy.com",
+    "agreementText": "Zaznaczając to pole, akceptujesz Warunki Użytkowania i Usługi, Politykę Prywatności i potwierdzasz, że jeśli nie anulujesz co najmniej 24 godziny przed końcem 7-dniowego okresu próbnego za CAD$1,95, będziesz obciążany CAD$49 co 28 dni, dopóki nie anulujesz subskrypcji kontaktując się z naszym zespołem wsparcia klienta e-mailem pod adresem billing@pdfezy.com. Płatności będą pobierane z karty, którą określiłeś powyżej."
+  },
+  "pdfViewer": {
+    "thumbnails": "Miniatury",
+    "outline": "Konspekt",
+    "annotations": "Adnotacje",
+    "zoomOut": "Pomniejsz",
+    "zoomIn": "Powiększ",
+    "pan": "Przesuń",
+    "highlight": "Podświetl",
+    "draw": "Rysuj",
+    "line": "Linia",
+    "arrow": "Strzałka",
+    "rectangle": "Prostokąt",
+    "ellipse": "Elipsa",
+    "polygon": "Wielokąt",
+    "sign": "Podpisz",
+    "stamp": "Pieczęć",
+    "text": "Tekst",
+    "note": "Notatka",
+    "comment": "Komentarz",
+    "eraser": "Gumka",
+    "undo": "Cofnij",
+    "redo": "Ponów",
+    "search": "Szukaj",
+    "print": "Drukuj",
+    "export": "Eksportuj",
+    "edit": "Edytuj"
+  },
+  "reset": {
+    "invalidResetLink": "Nieprawidłowy Link Resetowania",
+    "resetLinkInvalid": "Link resetowania hasła jest nieprawidłowy lub wygasł.",
+    "backToLogin": "Powrót do Logowania",
+    "resetPassword": "Resetuj Hasło",
+    "newPassword": "Nowe Hasło",
+    "confirmNewPassword": "Potwierdź Nowe Hasło",
+    "passwordsDoNotMatch": "Hasła nie pasują",
+    "resetSuccessful": "Hasło zostało pomyślnie zresetowane!",
+    "resetFailed": "Resetowanie hasła nie powiodło się. Spróbuj ponownie."
+  },
+  "mergePdf": {
+    "actionButton": "POŁĄCZ PLIKI",
+    "minFilesError": "Wybierz co najmniej 2 pliki do połączenia",
+    "dropText": "Upuść pliki PDF tutaj",
+    "uploadText": "Prześlij Swoje Pliki",
+    "processingFiles": "Przetwarzanie Plików...",
+    "mergingFiles": "Łączenie PDF..."
+  }
+}

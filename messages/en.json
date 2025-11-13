@@ -17,10 +17,29 @@
   },
   "languages": {
     "en": "English",
-    "es": "Español",
+    "zh": "中文",
+    "cs": "Čeština",
+    "nl": "Nederlands",
     "fr": "Français",
+    "de": "Deutsch",
+    "el": "Ελληνικά",
+    "hu": "Magyar",
+    "id": "Bahasa Indonesia",
+    "it": "Italiano",
+    "ja": "日本語",
     "ko": "한국어",
-    "se": "Svenska"
+    "ms": "Bahasa Melayu",
+    "pl": "Polski",
+    "pt": "Português",
+    "ro": "Română",
+    "sr": "Srpski",
+    "es": "Español",
+    "se": "Svenska",
+    "th": "แบบไทย",
+    "tr": "Türkçe",
+    "uk": "Українська",
+    "vi": "Tiếng Việt",
+    "fi": "Suomi"
   },
   "pages": {
     "home": "Home",
@@ -376,7 +395,12 @@
     "paymentMethod": "Payment Method",
     "saveTime": "Save time by keeping a current credit card on file.",
     "cardNumber": "Card number",
-    "notSpecified": "Not Specified"
+    "notSpecified": "Not Specified",
+    "activeSubscription": "Active Subscription",
+    "subscriptionActive": "Your subscription is currently active and you have full access to all features.",
+    "plan": "Plan",
+    "expiryDate": "Expiry Date",
+    "subscriptionType": "Subscription Type"
   },
   "plan": {
     "choosePlan": "Choose a plan to download your file",
@@ -474,8 +498,8 @@
     "documentPreview": "Document Preview",
     "termsAndService": "Terms of Use & Service",
     "privacyPolicy": "Privacy Policy",
-    "billingEmail": "billing@pdfhouse.com",
-    "agreementText": "By checking this box, you agree to the Terms of Use & Service, Privacy Policy, and confirm that if you do not cancel at least 24 hours before the end of the 7-day trial for CAD$1.95, you will be charged CAD$49 per 28 days until you cancel your subscription by contacting our customer support team via email at billing@pdfhouse.com. Payments will be charged from the card you specified above."
+    "billingEmail": "billing@pdfezy.com",
+    "agreementText": "By checking this box, you agree to the Terms of Use & Service, Privacy Policy, and confirm that if you do not cancel at least 24 hours before the end of the 7-day trial for CAD$1.95, you will be charged CAD$49 per 28 days until you cancel your subscription by contacting our customer support team via email at billing@pdfezy.com. Payments will be charged from the card you specified above."
   },
   "pdfViewer": {
     "thumbnails": "Thumbnails",

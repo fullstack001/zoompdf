@@ -1,0 +1,550 @@
+{
+  "navigation": {
+    "home": "Beranda",
+    "convert": "Konversi",
+    "edit": "Edit",
+    "compress": "Kompres",
+    "sign": "Tandatangani",
+    "merge": "Gabungkan",
+    "split": "Pisahkan",
+    "files": "File",
+    "account": "Akun",
+    "login": "Masuk",
+    "logout": "Keluar",
+    "pdfConverter": "KONVERTER PDF",
+    "pdfEditor": "EDITOR PDF",
+    "language": "Bahasa"
+  },
+  "languages": {
+    "en": "English",
+    "zh": "中文",
+    "cs": "Čeština",
+    "nl": "Nederlands",
+    "fr": "Français",
+    "de": "Deutsch",
+    "el": "Ελληνικά",
+    "hu": "Magyar",
+    "id": "Bahasa Indonesia",
+    "it": "Italiano",
+    "ja": "日本語",
+    "ko": "한국어",
+    "ms": "Bahasa Melayu",
+    "pl": "Polski",
+    "pt": "Português",
+    "ro": "Română",
+    "sr": "Srpski",
+    "es": "Español",
+    "se": "Svenska",
+    "th": "แบบไทย",
+    "tr": "Türkçe",
+    "uk": "Українська",
+    "vi": "Tiếng Việt",
+    "fi": "Suomi"
+  },
+  "pages": {
+    "home": "Beranda",
+    "convertPdf": "Konversi PDF",
+    "editPdf": "Edit PDF",
+    "compressPdf": "Kompres PDF",
+    "signPdf": "Tandatangani PDF",
+    "mergePdf": "Gabungkan PDF",
+    "splitPdf": "Pisahkan PDF",
+    "files": "File",
+    "account": "Akun Saya",
+    "login": "Masuk",
+    "payment": "Pembayaran",
+    "plan": "Paket"
+  },
+  "common": {
+    "upload": "Unggah",
+    "download": "Unduh",
+    "convert": "Konversi",
+    "edit": "Edit",
+    "save": "Simpan",
+    "cancel": "Batal",
+    "delete": "Hapus",
+    "back": "Kembali",
+    "next": "Berikutnya",
+    "previous": "Sebelumnya",
+    "loading": "Memuat...",
+    "error": "Kesalahan",
+    "success": "Berhasil",
+    "chooseFile": "Pilih File",
+    "dragAndDrop": "Seret dan lepas file Anda di sini",
+    "or": "atau",
+    "browse": "Jelajahi",
+    "processing": "Memproses...",
+    "processingFile": "Kami sedang memproses file Anda",
+    "configNotFound": "Konfigurasi tidak ditemukan untuk halaman beranda.",
+    "uploadFailed": "Gagal mengunggah file. Silakan coba lagi.",
+    "chooseBestTool": "Pilih alat terbaik untuk kebutuhan bisnis Anda",
+    "done": "Selesai",
+    "split": "Pisahkan",
+    "saving": "Menyimpan...",
+    "signing": "Menandatangani...",
+    "splitting": "Memisahkan...",
+    "convertFromPdf": "Konversi dari PDF",
+    "convertToPdf": "Konversi ke PDF",
+    "convertImage": "Konversi Gambar",
+    "otherFormats": "Format Lain",
+    "editSuccess": "Edit Berhasil!",
+    "editSuccessMessage": "PDF Anda telah berhasil diedit dan siap untuk diunduh.",
+    "whatsNext": "Apa Selanjutnya?",
+    "downloadEditedFile": "Unduh file yang telah diedit",
+    "editAnotherFile": "Edit file lain",
+    "startNew": "Mulai Baru",
+    "fileId": "ID File",
+    "toolNotFound": "Alat tidak ditemukan"
+  },
+  "errors": {
+    "oops": "Ups!",
+    "somethingWentWrong": "Ada yang salah",
+    "pageNotFound": "Halaman Tidak Ditemukan",
+    "pageNotExist": "Halaman yang Anda cari tidak ada.",
+    "errorLoadingPage": "Kami mengalami kesalahan saat memuat halaman ini. Silakan coba lagi.",
+    "errorLoadingApp": "Kami mengalami kesalahan saat memuat aplikasi. Silakan coba lagi.",
+    "tryAgain": "Coba lagi",
+    "goHome": "Kembali ke Beranda",
+    "goToHomePage": "Kembali ke halaman beranda",
+    "errorDetails": "Detail kesalahan (hanya untuk pengembangan)"
+  },
+  "tools": {
+    "pdfToWord": "PDF ke Word",
+    "pdfToExcel": "PDF ke Excel",
+    "pdfToPptx": "PDF ke PowerPoint",
+    "pdfToPng": "PDF ke PNG",
+    "pdfToJpg": "PDF ke JPG",
+    "pdfToEpub": "PDF ke EPUB",
+    "pdfToMobi": "PDF ke MOBI",
+    "pdfToTxt": "PDF ke TXT",
+    "pdfToHtml": "PDF ke HTML",
+    "pdfToSvg": "PDF ke SVG",
+    "pdfToTiff": "PDF ke TIFF",
+    "pdfToWebp": "PDF ke WebP",
+    "pdfToAvif": "PDF ke AVIF",
+    "pdfToEps": "PDF ke EPS",
+    "pdfToDxf": "PDF ke DXF",
+    "pdfToAzw3": "PDF ke AZW3",
+    "wordToPdf": "Word ke PDF",
+    "excelToPdf": "Excel ke PDF",
+    "pptxToPdf": "PPTX ke PDF",
+    "pngToPdf": "PNG ke PDF",
+    "jpgToPdf": "JPG ke PDF",
+    "epubToPdf": "EPUB ke PDF",
+    "mobiToPdf": "MOBI ke PDF",
+    "avifToPdf": "AVIF ke PDF",
+    "avifToPdfJpg": "AVIF ke PDF",
+    "pngToAvif": "PNG ke AVIF",
+    "jpgToAvif": "JPG ke AVIF",
+    "avifToPng": "AVIF ke PNG",
+    "avifToJpg": "AVIF ke JPG",
+    "epubToMobi": "EPUB ke MOBI",
+    "mobiToEpub": "MOBI ke EPUB",
+    "editPdf": "Edit PDF",
+    "signPdf": "Tandatangani PDF",
+    "addWatermark": "Tambahkan watermark",
+    "rotatePdf": "Putar PDF",
+    "mergePdf": "Gabungkan PDF",
+    "splitPdf": "Pisahkan PDF",
+    "deletePages": "Hapus halaman",
+    "compressPdf": "Kompres PDF",
+    "cropPdf": "Potong PDF",
+    "fillForm": "Isi Formulir",
+    "fillPdf": "Isi PDF",
+    "createForm": "Buat Formulir",
+    "imageToText": "Gambar ke Teks",
+    "mergeImages": "Gabungkan Gambar",
+    "pdfOcr": "PDF OCR",
+    "pdfToImage": "PDF ke Gambar",
+    "imageToPdf": "Gambar ke PDF",
+    "pdfToDoc": "PDF ke DOC"
+  },
+  "toolsSection": {
+    "allPdfTools": "Semua Alat PDF",
+    "subtitle": "Semua yang Anda butuhkan untuk bekerja dengan PDF di satu tempat",
+    "splitAndMerge": "Pisahkan dan Gabungkan",
+    "w9": "W-9",
+    "ds11": "DS-11",
+    "1099misc": "1099-MISC",
+    "viewAllForms": "Lihat Semua Formulir",
+    "ctaText": "Perlu yang lain? Kami memiliki lebih dari 50+ alat PDF tersedia.",
+    "viewAllTools": "Lihat Semua Alat"
+  },
+  "toolPages": {
+    "home": {
+      "title": "Konverter & Editor PDF",
+      "subtitle": "Konversi, edit, dan kelola PDF Anda dengan mudah. Lebih dari 1M file diproses setiap bulan!"
+    },
+    "signPdf": {
+      "title": "Tandatangani PDF Online",
+      "subtitle": "Tandatangani dokumen Anda secara online dengan aman. Unggah file untuk memulai!"
+    },
+    "splitPdf": {
+      "title": "Pisahkan PDF Online",
+      "subtitle": "Pisahkan PDF Anda menjadi beberapa file dengan mudah. Unggah file untuk memulai!"
+    },
+    "compressPdf": {
+      "title": "Kompresor PDF",
+      "subtitle": "Kami telah mengompres 775.000 file — biarkan kami membantu dengan file Anda"
+    },
+    "mergePdf": {
+      "title": "Gabungkan File PDF",
+      "subtitle": "Gabungkan beberapa file PDF menjadi satu. Unggah file Anda untuk memulai!"
+    },
+    "pdfToWord": {
+      "title": "Konverter PDF ke Word",
+      "subtitle": "Kami telah membantu mengonversi 775.000 file — biarkan kami membantu dengan file Anda"
+    },
+    "pdfToPng": {
+      "title": "Konverter PDF ke PNG",
+      "subtitle": "Kami telah mengonversi 775.000 file — file Anda bisa menjadi yang berikutnya"
+    },
+    "pdfToJpg": {
+      "title": "Konverter PDF ke JPG",
+      "subtitle": "Kami telah mengonversi 775.000 file — file Anda bisa menjadi yang berikutnya"
+    },
+    "pdfToEpub": {
+      "title": "Konverter PDF ke EPUB",
+      "subtitle": "Kami telah membantu mengonversi 775.000 file — biarkan kami membantu dengan file Anda"
+    },
+    "pdfToExcel": {
+      "title": "Konverter PDF ke Excel",
+      "subtitle": "Kami telah mengonversi 775K PDF — mengapa tidak membuat file Anda menjadi yang berikutnya?"
+    },
+    "pdfToPptx": {
+      "title": "Konverter PDF ke PPTX",
+      "subtitle": "Kami telah mengonversi 775.000 file — file Anda bisa menjadi yang berikutnya"
+    },
+    "wordToPdf": {
+      "title": "Konverter Word ke PDF",
+      "subtitle": "Kami telah membantu mengonversi 775.000 file — biarkan kami membantu dengan file Anda"
+    },
+    "jpgToPdf": {
+      "title": "Konverter JPG ke PDF",
+      "subtitle": "Kami telah memproses 75.000 JPG sejauh ini. Mari buat file Anda menjadi yang berikutnya."
+    },
+    "pngToPdf": {
+      "title": "Konverter PNG ke PDF",
+      "subtitle": "Kami telah mengonversi 775.000 file — file Anda bisa menjadi yang berikutnya"
+    },
+    "epubToPdf": {
+      "title": "Konverter EPUB ke PDF",
+      "subtitle": "Kami telah mengonversi 775.000 file — sekarang biarkan kami membantu dengan file Anda"
+    },
+    "pdfToTxt": {
+      "title": "Konverter PDF ke TXT",
+      "subtitle": "Kami telah mengonversi 775.000 file — file Anda bisa menjadi yang berikutnya"
+    },
+    "pdfToHtml": {
+      "title": "Konverter PDF ke HTML",
+      "subtitle": "Kami telah mengonversi 775.000 file — file Anda bisa menjadi yang berikutnya"
+    },
+    "pdfToSvg": {
+      "title": "Konverter PDF ke SVG",
+      "subtitle": "Kami telah mengonversi 775.000 file — file Anda bisa menjadi yang berikutnya"
+    },
+    "pdfToTiff": {
+      "title": "Konverter PDF ke TIFF",
+      "subtitle": "Kami telah mengonversi 775.000 file — file Anda bisa menjadi yang berikutnya"
+    },
+    "pdfToWebp": {
+      "title": "Konverter PDF ke WebP",
+      "subtitle": "Kami telah mengonversi 775.000 file — file Anda bisa menjadi yang berikutnya"
+    },
+    "pdfToAvif": {
+      "title": "Konverter PDF ke AVIF",
+      "subtitle": "Kami telah mengonversi 775.000 file — file Anda bisa menjadi yang berikutnya"
+    },
+    "pdfToEps": {
+      "title": "Konverter PDF ke EPS",
+      "subtitle": "Kami telah mengonversi 775.000 file — file Anda bisa menjadi yang berikutnya"
+    },
+    "pdfToDxf": {
+      "title": "Konverter PDF ke DXF",
+      "subtitle": "Kami telah mengonversi 775.000 file — file Anda bisa menjadi yang berikutnya"
+    },
+    "pdfToAzw3": {
+      "title": "Konverter PDF ke AZW3",
+      "subtitle": "Kami telah mengonversi 775.000 file — file Anda bisa menjadi yang berikutnya"
+    },
+    "pdfToMobi": {
+      "title": "Konverter PDF ke MOBI",
+      "subtitle": "Kami telah mengonversi 775.000 file — file Anda bisa menjadi yang berikutnya"
+    },
+    "pdfToDoc": {
+      "title": "Konverter PDF ke DOC",
+      "subtitle": "Kami telah mengonversi 775.000 file — file Anda bisa menjadi yang berikutnya"
+    },
+    "excelToPdf": {
+      "title": "Konverter Excel ke PDF",
+      "subtitle": "Kami telah mengonversi 775.000 file — file Anda bisa menjadi yang berikutnya"
+    },
+    "pptxToPdf": {
+      "title": "Konverter PPTX ke PDF",
+      "subtitle": "Kami telah mengonversi 775.000 file — file Anda bisa menjadi yang berikutnya"
+    },
+    "mobiToPdf": {
+      "title": "Konverter MOBI ke PDF",
+      "subtitle": "Kami telah mengonversi 775.000 file — file Anda bisa menjadi yang berikutnya"
+    },
+    "avifToPdf": {
+      "title": "Konverter AVIF ke PDF",
+      "subtitle": "Kami telah mengonversi 775.000 file — file Anda bisa menjadi yang berikutnya"
+    },
+    "pngToAvif": {
+      "title": "Konverter PNG ke AVIF",
+      "subtitle": "Kami telah mengonversi 775.000 file — file Anda bisa menjadi yang berikutnya"
+    },
+    "jpgToAvif": {
+      "title": "Konverter JPG ke AVIF",
+      "subtitle": "Kami telah mengonversi 775.000 file — file Anda bisa menjadi yang berikutnya"
+    },
+    "avifToPng": {
+      "title": "Konverter AVIF ke PNG",
+      "subtitle": "Kami telah mengonversi 775.000 file — file Anda bisa menjadi yang berikutnya"
+    },
+    "avifToJpg": {
+      "title": "Konverter AVIF ke JPG",
+      "subtitle": "Kami telah mengonversi 775.000 file — file Anda bisa menjadi yang berikutnya"
+    },
+    "epubToMobi": {
+      "title": "Konverter EPUB ke MOBI",
+      "subtitle": "Kami telah mengonversi 775.000 file — file Anda bisa menjadi yang berikutnya"
+    },
+    "mobiToEpub": {
+      "title": "Konverter MOBI ke EPUB",
+      "subtitle": "Kami telah mengonversi 775.000 file — file Anda bisa menjadi yang berikutnya"
+    },
+    "pdfOcr": {
+      "title": "Alat PDF OCR",
+      "subtitle": "Ekstrak teks dari PDF dengan teknologi OCR. Unggah file untuk memulai!"
+    },
+    "pdfToImage": {
+      "title": "Konverter PDF ke Gambar",
+      "subtitle": "Konversi halaman PDF ke gambar. Unggah file untuk memulai!"
+    },
+    "imageToPdf": {
+      "title": "Konverter Gambar ke PDF",
+      "subtitle": "Konversi gambar ke PDF. Unggah file Anda untuk memulai!"
+    }
+  },
+  "navbar": {
+    "convertFromPdf": "Konversi dari PDF",
+    "convertToPdf": "Konversi ke PDF",
+    "convertImage": "Konversi Gambar",
+    "convertEbook": "Konversi E-book",
+    "editingTools": "Alat Edit",
+    "myDocuments": "Dokumen Saya",
+    "myAccount": "Akun Saya",
+    "help": "Bantuan",
+    "termsConditions": "Syarat & Ketentuan",
+    "settings": "Pengaturan",
+    "logOut": "Keluar",
+    "upgradePlan": "Tingkatkan Paket",
+    "noSubscription": "Tidak ada langganan",
+    "profileDetails": "Detail Profil"
+  },
+  "footer": {
+    "editPdf": "Edit PDF",
+    "convertFromPdf": "Konversi dari PDF",
+    "convertToPdf": "Konversi ke PDF",
+    "disclaimer": "Penafian",
+    "privacyPolicy": "Kebijakan Privasi",
+    "termsOfService": "Ketentuan Layanan",
+    "sitemap": "Peta Situs",
+    "allRightsReserved": "© 2025 PDFEZY Hak cipta dilindungi.",
+    "companyDescription": "Solusi PDF all-in-one Anda untuk mengonversi, mengedit, dan mengelola dokumen dengan mudah dan aman.",
+    "stayUpdated": "Tetap Terbarui",
+    "newsletterDescription": "Dapatkan pembaruan terbaru dan tips PDF langsung ke kotak masuk Anda.",
+    "emailPlaceholder": "Masukkan email Anda",
+    "subscribe": "Berlangganan",
+    "followUs": "Ikuti Kami",
+    "language": "Bahasa",
+    "selectLanguage": "Pilih bahasa Anda",
+    "email": "Email",
+    "phone": "Telepon",
+    "address": "Alamat"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Kata Sandi",
+    "confirmPassword": "Konfirmasi Kata Sandi",
+    "forgotPassword": "Lupa Kata Sandi?",
+    "resetPassword": "Reset Kata Sandi",
+    "signIn": "Masuk",
+    "signUp": "Daftar",
+    "alreadyHaveAccount": "Sudah punya akun?",
+    "dontHaveAccount": "Tidak punya akun?",
+    "login": "Masuk",
+    "loggingIn": "Masuk...",
+    "emailAddress": "Alamat email",
+    "enterEmailAddress": "Masukkan Alamat Email Anda",
+    "emailAlreadyRegistered": "Email ini sudah terdaftar. Silakan",
+    "logIn": "masuk"
+  },
+  "account": {
+    "membership": "Keanggotaan",
+    "noSubscription": "Anda tidak memiliki langganan.",
+    "unlockAllTools": "Buka kunci semua alat PDF!",
+    "fullAccess": "Dapatkan akses penuh ke fitur editing dan konversi lanjutan kami.",
+    "subscribeNow": "Berlangganan sekarang untuk merampingkan tugas dokumen Anda",
+    "subscribe": "Berlangganan",
+    "account": "Akun",
+    "betterExperience": "Dapatkan pengalaman yang lebih baik di PDF House dengan menjaga informasi Anda tetap terbarui.",
+    "importantUpdates": "Anda akan menerima pembaruan produk penting dan notifikasi akun penting, termasuk tanda terima pembayaran.",
+    "paymentMethod": "Metode Pembayaran",
+    "saveTime": "Hemat waktu dengan menyimpan kartu kredit saat ini di file.",
+    "cardNumber": "Nomor kartu",
+    "notSpecified": "Tidak Ditetapkan",
+    "activeSubscription": "Langganan Aktif",
+    "subscriptionActive": "Langganan Anda saat ini aktif dan Anda memiliki akses penuh ke semua fitur.",
+    "plan": "Paket",
+    "expiryDate": "Tanggal Kedaluwarsa",
+    "subscriptionType": "Jenis Langganan"
+  },
+  "plan": {
+    "choosePlan": "Pilih paket untuk mengunduh file Anda",
+    "continue": "Lanjutkan",
+    "annualPlan": "Paket Tahunan",
+    "getStarted": "Mulai",
+    "mostPopular": "Paling Populer"
+  },
+  "whyUs": {
+    "title": "Mengapa TheBestPDF adalah pilihan teratas untuk tim Anda",
+    "openness": "Keterbukaan",
+    "opennessDesc": "Berusaha untuk kemitraan jangka panjang, kami memastikan ketersediaan dukungan pelanggan 24/7.",
+    "expertise": "Keahlian",
+    "expertiseDesc": "Kami menyatukan pikiran kreatif untuk memberikan solusi terintegrasi yang mencakup tantangan bisnis Anda.",
+    "growth": "Pertumbuhan",
+    "growthDesc": "Kami memberdayakan organisasi dengan mengikuti perkembangan teknologi terbaru, bertujuan untuk keunggulan di bidang kami.",
+    "diversity": "Keberagaman",
+    "diversityDesc": "Kesehatan, Hukum, Keuangan, Pendidikan — apa pun industrinya, alat kami dapat merampingkan alur kerja Anda."
+  },
+  "securityPriority": {
+    "title": "Prioritas Keamanan",
+    "description": "Keamanan data Anda adalah prioritas utama kami. Kami menerapkan enkripsi tingkat perusahaan dan langkah-langkah keamanan untuk melindungi dokumen Anda dan memastikan privasi lengkap."
+  },
+  "coreValues": {
+    "title": "Nilai-nilai inti di balik TheBestPDF"
+  },
+  "compression": {
+    "compressFile": "Kompres file",
+    "high": "TINGGI",
+    "highDesc": "Kualitas standar, ukuran lebih kecil",
+    "highReduction": "~40% lebih kecil",
+    "basic": "DASAR",
+    "basicDesc": "Kualitas lebih baik, ukuran sedang",
+    "basicReduction": "~20% lebih kecil",
+    "low": "RENDAH",
+    "lowDesc": "Kualitas tertinggi, ukuran lebih besar",
+    "lowReduction": "~10% lebih kecil",
+    "compressionLevel": "Tingkat kompresi",
+    "selectLevel": "Pilih tingkat kompresi Anda dan kompres file.",
+    "compress": "Kompres",
+    "compressing": "Mengompres..."
+  },
+  "email": {
+    "enterEmail": "Masukkan alamat Email Anda",
+    "downloadLink": "Tautan unduhan akan dikirim ke email Anda",
+    "getStarted": "Mulai"
+  },
+  "faq": {
+    "title": "Pertanyaan yang Sering Diajukan",
+    "multipleUsers": "Bisakah beberapa pengguna dari perusahaan kami menggunakan layanan secara bersamaan?",
+    "multipleUsersAnswer": "Mudah! Buat satu akun dan seluruh tim akan dapat menggunakan alat kami. Untuk memulai dengan langganan, cukup daftar, lakukan beberapa penyesuaian file, klik \"Unduh,\" lalu pilih paket yang paling sesuai untuk Anda.",
+    "customerSupport": "Apakah Anda menawarkan dukungan pelanggan untuk masalah teknis?",
+    "customerSupportAnswer": "Ya, tim dukungan kami tersedia 24/7 untuk membantu dengan masalah teknis apa pun yang Anda temui.",
+    "processingSpeed": "Seberapa cepat dokumen diproses di platform Anda?",
+    "processingSpeedAnswer": "Dokumen biasanya diproses dalam hitungan detik, bahkan untuk file besar.",
+    "moneyBack": "Apakah Anda memiliki jaminan uang kembali?",
+    "moneyBackAnswer": "Ya, kami menawarkan jaminan uang kembali 14 hari jika Anda tidak puas dengan layanan kami.",
+    "ctaTitle": "Ingin meningkatkan operasi bisnis Anda?",
+    "ctaDescription": "Hubungi kami di sales@thebestpdf.com, dan mari kita jelajahi bagaimana produk kami dapat merevolusi dokumen perusahaan Anda. Bergabunglah dengan komunitas bisnis sukses yang berkembang yang memanfaatkan TheBestPDF untuk tetap unggul!",
+    "ctaButton": "Mulai",
+    "loading": "Memuat..."
+  },
+  "howItWorks": {
+    "title": "Cara mengompres PDF",
+    "step1": "Masuk ke TheBestPDF dan buka alat Kompres PDF",
+    "step2": "Unggah atau seret & lepas PDF Anda ke antarmuka",
+    "step3": "Itu saja! File terkompresi baru Anda siap untuk diunduh dan dapat ditemukan di akun tim Anda"
+  },
+  "featureCTA": {
+    "title": "PDFEZY menyediakan solusi manajemen file tingkat atas untuk tim dari semua ukuran.",
+    "subtitle": "Selamat datang di platform SaaS canggih kami untuk editing dan konversi dokumen online. Dirancang untuk memenuhi kebutuhan bisnis dan pengusaha."
+  },
+  "files": {
+    "searchFiles": "Cari File",
+    "pdfConverter": "Konverter PDF",
+    "editPdf": "Edit PDF",
+    "signPdf": "Tandatangani PDF",
+    "ocrPdf": "OCR PDF",
+    "mergePdf": "Gabungkan PDF",
+    "compressPdf": "Kompres PDF",
+    "splitPdf": "Pisahkan PDF",
+    "aiSummarizer": "AI Ringkasan",
+    "fillPdf": "Isi PDF",
+    "createForm": "Buat Formulir",
+    "editForm": "Edit Formulir",
+    "summarizePdf": "Ringkas PDF",
+    "extractHighlights": "Ekstrak Sorotan"
+  },
+  "features": {
+    "comprehensiveSuite": "Paket Komprehensif",
+    "unlimitedDocuments": "Dokumen tidak terbatas"
+  },
+  "payment": {
+    "paymentDetails": "Detail pembayaran",
+    "documentPreview": "Pratinjau Dokumen",
+    "termsAndService": "Ketentuan Penggunaan & Layanan",
+    "privacyPolicy": "Kebijakan Privasi",
+    "billingEmail": "billing@pdfezy.com",
+    "agreementText": "Dengan mencentang kotak ini, Anda menyetujui Ketentuan Penggunaan & Layanan, Kebijakan Privasi, dan mengonfirmasi bahwa jika Anda tidak membatalkan setidaknya 24 jam sebelum akhir uji coba 7 hari untuk CAD$1,95, Anda akan dikenakan biaya CAD$49 per 28 hari sampai Anda membatalkan langganan dengan menghubungi tim dukungan pelanggan kami melalui email di billing@pdfezy.com. Pembayaran akan dibebankan dari kartu yang Anda tentukan di atas."
+  },
+  "pdfViewer": {
+    "thumbnails": "Thumbnail",
+    "outline": "Garis Besar",
+    "annotations": "Anotasi",
+    "zoomOut": "Perkecil",
+    "zoomIn": "Perbesar",
+    "pan": "Geser",
+    "highlight": "Sorot",
+    "draw": "Gambar",
+    "line": "Garis",
+    "arrow": "Panah",
+    "rectangle": "Persegi Panjang",
+    "ellipse": "Elips",
+    "polygon": "Poligon",
+    "sign": "Tandatangani",
+    "stamp": "Stempel",
+    "text": "Teks",
+    "note": "Catatan",
+    "comment": "Komentar",
+    "eraser": "Penghapus",
+    "undo": "Batalkan",
+    "redo": "Ulangi",
+    "search": "Cari",
+    "print": "Cetak",
+    "export": "Ekspor",
+    "edit": "Edit"
+  },
+  "reset": {
+    "invalidResetLink": "Tautan Reset Tidak Valid",
+    "resetLinkInvalid": "Tautan reset kata sandi tidak valid atau telah kedaluwarsa.",
+    "backToLogin": "Kembali ke Masuk",
+    "resetPassword": "Reset Kata Sandi",
+    "newPassword": "Kata Sandi Baru",
+    "confirmNewPassword": "Konfirmasi Kata Sandi Baru",
+    "passwordsDoNotMatch": "Kata sandi tidak cocok",
+    "resetSuccessful": "Reset kata sandi berhasil!",
+    "resetFailed": "Reset kata sandi gagal. Silakan coba lagi."
+  },
+  "mergePdf": {
+    "actionButton": "GABUNGKAN FILE",
+    "minFilesError": "Silakan pilih setidaknya 2 file untuk digabungkan",
+    "dropText": "Letakkan file PDF di sini",
+    "uploadText": "Unggah File Anda",
+    "processingFiles": "Memproses File...",
+    "mergingFiles": "Menggabungkan PDF..."
+  }
+}

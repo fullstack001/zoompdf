@@ -1,0 +1,550 @@
+{
+  "navigation": {
+    "home": "Home",
+    "convert": "Converteren",
+    "edit": "Bewerken",
+    "compress": "Comprimeren",
+    "sign": "Ondertekenen",
+    "merge": "Samenvoegen",
+    "split": "Splitsen",
+    "files": "Bestanden",
+    "account": "Account",
+    "login": "Inloggen",
+    "logout": "Uitloggen",
+    "pdfConverter": "PDF CONVERTER",
+    "pdfEditor": "PDF EDITOR",
+    "language": "Taal"
+  },
+  "languages": {
+    "en": "English",
+    "zh": "中文",
+    "cs": "Čeština",
+    "nl": "Nederlands",
+    "fr": "Français",
+    "de": "Deutsch",
+    "el": "Ελληνικά",
+    "hu": "Magyar",
+    "id": "Bahasa Indonesia",
+    "it": "Italiano",
+    "ja": "日本語",
+    "ko": "한국어",
+    "ms": "Bahasa Melayu",
+    "pl": "Polski",
+    "pt": "Português",
+    "ro": "Română",
+    "sr": "Srpski",
+    "es": "Español",
+    "se": "Svenska",
+    "th": "แบบไทย",
+    "tr": "Türkçe",
+    "uk": "Українська",
+    "vi": "Tiếng Việt",
+    "fi": "Suomi"
+  },
+  "pages": {
+    "home": "Home",
+    "convertPdf": "PDF converteren",
+    "editPdf": "PDF bewerken",
+    "compressPdf": "PDF comprimeren",
+    "signPdf": "PDF ondertekenen",
+    "mergePdf": "PDF samenvoegen",
+    "splitPdf": "PDF splitsen",
+    "files": "Bestanden",
+    "account": "Mijn account",
+    "login": "Inloggen",
+    "payment": "Betaling",
+    "plan": "Plannen"
+  },
+  "common": {
+    "upload": "Uploaden",
+    "download": "Downloaden",
+    "convert": "Converteren",
+    "edit": "Bewerken",
+    "save": "Opslaan",
+    "cancel": "Annuleren",
+    "delete": "Verwijderen",
+    "back": "Terug",
+    "next": "Volgende",
+    "previous": "Vorige",
+    "loading": "Laden...",
+    "error": "Fout",
+    "success": "Succes",
+    "chooseFile": "Kies bestand",
+    "dragAndDrop": "Sleep uw bestand hierheen",
+    "or": "of",
+    "browse": "Bladeren",
+    "processing": "Verwerken...",
+    "processingFile": "We verwerken uw bestand",
+    "configNotFound": "Configuratie niet gevonden voor startpagina.",
+    "uploadFailed": "Uploaden van bestand mislukt. Probeer het opnieuw.",
+    "chooseBestTool": "Kies het beste gereedschap voor uw zakelijke behoeften",
+    "done": "Klaar",
+    "split": "Splitsen",
+    "saving": "Opslaan...",
+    "signing": "Ondertekenen...",
+    "splitting": "Splitsen...",
+    "convertFromPdf": "Converteren van PDF",
+    "convertToPdf": "Converteren naar PDF",
+    "convertImage": "Afbeelding converteren",
+    "otherFormats": "Andere formaten",
+    "editSuccess": "Bewerking succesvol!",
+    "editSuccessMessage": "Uw PDF is succesvol bewerkt en klaar voor download.",
+    "whatsNext": "Wat nu?",
+    "downloadEditedFile": "Download uw bewerkte bestand",
+    "editAnotherFile": "Bewerk een ander bestand",
+    "startNew": "Nieuw beginnen",
+    "fileId": "Bestands-ID",
+    "toolNotFound": "Gereedschap niet gevonden"
+  },
+  "errors": {
+    "oops": "Oeps!",
+    "somethingWentWrong": "Er is iets misgegaan",
+    "pageNotFound": "Pagina niet gevonden",
+    "pageNotExist": "De pagina die u zoekt bestaat niet.",
+    "errorLoadingPage": "Er is een fout opgetreden bij het laden van deze pagina. Probeer het opnieuw.",
+    "errorLoadingApp": "Er is een fout opgetreden bij het laden van de applicatie. Probeer het opnieuw.",
+    "tryAgain": "Probeer opnieuw",
+    "goHome": "Ga naar home",
+    "goToHomePage": "Ga naar de startpagina",
+    "errorDetails": "Foutdetails (alleen voor ontwikkeling)"
+  },
+  "tools": {
+    "pdfToWord": "PDF naar Word",
+    "pdfToExcel": "PDF naar Excel",
+    "pdfToPptx": "PDF naar PowerPoint",
+    "pdfToPng": "PDF naar PNG",
+    "pdfToJpg": "PDF naar JPG",
+    "pdfToEpub": "PDF naar EPUB",
+    "pdfToMobi": "PDF naar MOBI",
+    "pdfToTxt": "PDF naar TXT",
+    "pdfToHtml": "PDF naar HTML",
+    "pdfToSvg": "PDF naar SVG",
+    "pdfToTiff": "PDF naar TIFF",
+    "pdfToWebp": "PDF naar WebP",
+    "pdfToAvif": "PDF naar AVIF",
+    "pdfToEps": "PDF naar EPS",
+    "pdfToDxf": "PDF naar DXF",
+    "pdfToAzw3": "PDF naar AZW3",
+    "wordToPdf": "Word naar PDF",
+    "excelToPdf": "Excel naar PDF",
+    "pptxToPdf": "PPTX naar PDF",
+    "pngToPdf": "PNG naar PDF",
+    "jpgToPdf": "JPG naar PDF",
+    "epubToPdf": "EPUB naar PDF",
+    "mobiToPdf": "MOBI naar PDF",
+    "avifToPdf": "AVIF naar PDF",
+    "avifToPdfJpg": "AVIF naar PDF",
+    "pngToAvif": "PNG naar AVIF",
+    "jpgToAvif": "JPG naar AVIF",
+    "avifToPng": "AVIF naar PNG",
+    "avifToJpg": "AVIF naar JPG",
+    "epubToMobi": "EPUB naar MOBI",
+    "mobiToEpub": "MOBI naar EPUB",
+    "editPdf": "PDF bewerken",
+    "signPdf": "PDF ondertekenen",
+    "addWatermark": "Watermerk toevoegen",
+    "rotatePdf": "PDF roteren",
+    "mergePdf": "PDF samenvoegen",
+    "splitPdf": "PDF splitsen",
+    "deletePages": "Pagina's verwijderen",
+    "compressPdf": "PDF comprimeren",
+    "cropPdf": "PDF bijsnijden",
+    "fillForm": "Formulier invullen",
+    "fillPdf": "PDF invullen",
+    "createForm": "Formulier maken",
+    "imageToText": "Afbeelding naar tekst",
+    "mergeImages": "Afbeeldingen samenvoegen",
+    "pdfOcr": "PDF OCR",
+    "pdfToImage": "PDF naar afbeelding",
+    "imageToPdf": "Afbeelding naar PDF",
+    "pdfToDoc": "PDF naar DOC"
+  },
+  "toolsSection": {
+    "allPdfTools": "Alle PDF-gereedschappen",
+    "subtitle": "Alles wat u nodig heeft om met PDF's te werken op één plek",
+    "splitAndMerge": "Splitsen en samenvoegen",
+    "w9": "W-9",
+    "ds11": "DS-11",
+    "1099misc": "1099-MISC",
+    "viewAllForms": "Alle formulieren bekijken",
+    "ctaText": "Heeft u iets anders nodig? We hebben meer dan 50+ PDF-gereedschappen beschikbaar.",
+    "viewAllTools": "Alle gereedschappen bekijken"
+  },
+  "toolPages": {
+    "home": {
+      "title": "PDF Converter & Editor",
+      "subtitle": "Converteer, bewerk en beheer uw PDF's met gemak. Maandelijks meer dan 1M bestanden verwerkt!"
+    },
+    "signPdf": {
+      "title": "PDF online ondertekenen",
+      "subtitle": "Onderteken uw documenten veilig online. Upload een bestand om te beginnen!"
+    },
+    "splitPdf": {
+      "title": "PDF online splitsen",
+      "subtitle": "Splits uw PDF eenvoudig in meerdere bestanden. Upload een bestand om te beginnen!"
+    },
+    "compressPdf": {
+      "title": "PDF-compressor",
+      "subtitle": "We hebben al 775.000 bestanden gecomprimeerd — laat ons u helpen met de uwe"
+    },
+    "mergePdf": {
+      "title": "PDF-bestanden samenvoegen",
+      "subtitle": "Combineer meerdere PDF-bestanden tot één. Upload uw bestanden om te beginnen!"
+    },
+    "pdfToWord": {
+      "title": "PDF naar Word-converter",
+      "subtitle": "We hebben geholpen bij het converteren van 775.000 bestanden — laat ons u helpen met de uwe"
+    },
+    "pdfToPng": {
+      "title": "PDF naar PNG-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — de uwe kan de volgende zijn"
+    },
+    "pdfToJpg": {
+      "title": "PDF naar JPG-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — de uwe kan de volgende zijn"
+    },
+    "pdfToEpub": {
+      "title": "PDF naar EPUB-converter",
+      "subtitle": "We hebben geholpen bij het converteren van 775.000 bestanden — laat ons u helpen met de uwe"
+    },
+    "pdfToExcel": {
+      "title": "PDF naar Excel-converter",
+      "subtitle": "We hebben 775K PDF's geconverteerd — waarom zou u de uwe niet de volgende maken?"
+    },
+    "pdfToPptx": {
+      "title": "PDF naar PPTX-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — de uwe kan de volgende zijn"
+    },
+    "wordToPdf": {
+      "title": "Word naar PDF-converter",
+      "subtitle": "We hebben geholpen bij het converteren van 775.000 bestanden — laat ons u helpen met de uwe"
+    },
+    "jpgToPdf": {
+      "title": "JPG naar PDF-converter",
+      "subtitle": "We hebben tot nu toe 75.000 JPG's verwerkt. Laten we de uwe de volgende maken."
+    },
+    "pngToPdf": {
+      "title": "PNG naar PDF-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — de uwe kan de volgende zijn"
+    },
+    "epubToPdf": {
+      "title": "EPUB naar PDF-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — laat ons nu u helpen met de uwe"
+    },
+    "pdfToTxt": {
+      "title": "PDF naar TXT-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — de uwe kan de volgende zijn"
+    },
+    "pdfToHtml": {
+      "title": "PDF naar HTML-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — de uwe kan de volgende zijn"
+    },
+    "pdfToSvg": {
+      "title": "PDF naar SVG-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — de uwe kan de volgende zijn"
+    },
+    "pdfToTiff": {
+      "title": "PDF naar TIFF-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — de uwe kan de volgende zijn"
+    },
+    "pdfToWebp": {
+      "title": "PDF naar WebP-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — de uwe kan de volgende zijn"
+    },
+    "pdfToAvif": {
+      "title": "PDF naar AVIF-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — de uwe kan de volgende zijn"
+    },
+    "pdfToEps": {
+      "title": "PDF naar EPS-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — de uwe kan de volgende zijn"
+    },
+    "pdfToDxf": {
+      "title": "PDF naar DXF-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — de uwe kan de volgende zijn"
+    },
+    "pdfToAzw3": {
+      "title": "PDF naar AZW3-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — de uwe kan de volgende zijn"
+    },
+    "pdfToMobi": {
+      "title": "PDF naar MOBI-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — de uwe kan de volgende zijn"
+    },
+    "pdfToDoc": {
+      "title": "PDF naar DOC-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — de uwe kan de volgende zijn"
+    },
+    "excelToPdf": {
+      "title": "Excel naar PDF-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — de uwe kan de volgende zijn"
+    },
+    "pptxToPdf": {
+      "title": "PPTX naar PDF-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — de uwe kan de volgende zijn"
+    },
+    "mobiToPdf": {
+      "title": "MOBI naar PDF-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — de uwe kan de volgende zijn"
+    },
+    "avifToPdf": {
+      "title": "AVIF naar PDF-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — de uwe kan de volgende zijn"
+    },
+    "pngToAvif": {
+      "title": "PNG naar AVIF-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — de uwe kan de volgende zijn"
+    },
+    "jpgToAvif": {
+      "title": "JPG naar AVIF-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — de uwe kan de volgende zijn"
+    },
+    "avifToPng": {
+      "title": "AVIF naar PNG-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — de uwe kan de volgende zijn"
+    },
+    "avifToJpg": {
+      "title": "AVIF naar JPG-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — de uwe kan de volgende zijn"
+    },
+    "epubToMobi": {
+      "title": "EPUB naar MOBI-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — de uwe kan de volgende zijn"
+    },
+    "mobiToEpub": {
+      "title": "MOBI naar EPUB-converter",
+      "subtitle": "We hebben al 775.000 bestanden geconverteerd — de uwe kan de volgende zijn"
+    },
+    "pdfOcr": {
+      "title": "PDF OCR-gereedschap",
+      "subtitle": "Extraheer tekst uit PDF's met OCR-technologie. Upload een bestand om te beginnen!"
+    },
+    "pdfToImage": {
+      "title": "PDF naar afbeelding-converter",
+      "subtitle": "Converteer PDF-pagina's naar afbeeldingen. Upload een bestand om te beginnen!"
+    },
+    "imageToPdf": {
+      "title": "Afbeelding naar PDF-converter",
+      "subtitle": "Converteer afbeeldingen naar PDF. Upload uw bestanden om te beginnen!"
+    }
+  },
+  "navbar": {
+    "convertFromPdf": "Converteren van PDF",
+    "convertToPdf": "Converteren naar PDF",
+    "convertImage": "Afbeelding converteren",
+    "convertEbook": "E-book converteren",
+    "editingTools": "Bewerkingsgereedschappen",
+    "myDocuments": "Mijn documenten",
+    "myAccount": "Mijn account",
+    "help": "Help",
+    "termsConditions": "Algemene voorwaarden",
+    "settings": "Instellingen",
+    "logOut": "Uitloggen",
+    "upgradePlan": "Plan upgraden",
+    "noSubscription": "Geen abonnement",
+    "profileDetails": "Profielgegevens"
+  },
+  "footer": {
+    "editPdf": "PDF bewerken",
+    "convertFromPdf": "Converteren van PDF",
+    "convertToPdf": "Converteren naar PDF",
+    "disclaimer": "Disclaimer",
+    "privacyPolicy": "Privacybeleid",
+    "termsOfService": "Servicevoorwaarden",
+    "sitemap": "Sitemap",
+    "allRightsReserved": "© 2025 PDFEZY Alle rechten voorbehouden.",
+    "companyDescription": "Uw alles-in-één PDF-oplossing voor het converteren, bewerken en beheren van documenten met gemak en veiligheid.",
+    "stayUpdated": "Blijf op de hoogte",
+    "newsletterDescription": "Ontvang de nieuwste updates en PDF-tips direct in uw inbox.",
+    "emailPlaceholder": "Voer uw e-mailadres in",
+    "subscribe": "Abonneren",
+    "followUs": "Volg ons",
+    "language": "Taal",
+    "selectLanguage": "Selecteer uw taal",
+    "email": "E-mail",
+    "phone": "Telefoon",
+    "address": "Adres"
+  },
+  "auth": {
+    "email": "E-mail",
+    "password": "Wachtwoord",
+    "confirmPassword": "Bevestig wachtwoord",
+    "forgotPassword": "Wachtwoord vergeten?",
+    "resetPassword": "Wachtwoord resetten",
+    "signIn": "Inloggen",
+    "signUp": "Registreren",
+    "alreadyHaveAccount": "Heeft u al een account?",
+    "dontHaveAccount": "Heeft u geen account?",
+    "login": "Inloggen",
+    "loggingIn": "Inloggen...",
+    "emailAddress": "E-mailadres",
+    "enterEmailAddress": "Voer uw e-mailadres in",
+    "emailAlreadyRegistered": "Dit e-mailadres is al geregistreerd. Gelieve",
+    "logIn": "in te loggen"
+  },
+  "account": {
+    "membership": "Lidmaatschap",
+    "noSubscription": "U heeft geen abonnement.",
+    "unlockAllTools": "Ontgrendel alle PDF-gereedschappen!",
+    "fullAccess": "Krijg volledige toegang tot onze geavanceerde bewerkings- en conversiefuncties.",
+    "subscribeNow": "Abonneer u nu om uw documenttaken te stroomlijnen",
+    "subscribe": "Abonneren",
+    "account": "Account",
+    "betterExperience": "Heb een betere ervaring op PDF House door uw informatie up-to-date te houden.",
+    "importantUpdates": "U ontvangt belangrijke productupdates en essentiële accountmeldingen, inclusief betalingsbewijzen.",
+    "paymentMethod": "Betalingsmethode",
+    "saveTime": "Bespaar tijd door een actieve creditcard in het bestand te houden.",
+    "cardNumber": "Kaartnummer",
+    "notSpecified": "Niet gespecificeerd",
+    "activeSubscription": "Actief abonnement",
+    "subscriptionActive": "Uw abonnement is momenteel actief en u heeft volledige toegang tot alle functies.",
+    "plan": "Plan",
+    "expiryDate": "Vervaldatum",
+    "subscriptionType": "Abonnementstype"
+  },
+  "plan": {
+    "choosePlan": "Kies een plan om uw bestand te downloaden",
+    "continue": "Doorgaan",
+    "annualPlan": "Jaarplan",
+    "getStarted": "Aan de slag",
+    "mostPopular": "Meest populair"
+  },
+  "whyUs": {
+    "title": "Waarom TheBestPDF de beste keuze is voor uw team",
+    "openness": "Openheid",
+    "opennessDesc": "Streven naar langetermijnpartnerschappen, zorgen we voor 24/7 beschikbaarheid van klantenservice.",
+    "expertise": "Expertise",
+    "expertiseDesc": "We verenigen creatieve geesten om geïntegreerde oplossingen te leveren die uw bedrijfsuitdagingen dekken.",
+    "growth": "Groei",
+    "growthDesc": "We empoweren organisaties door op de hoogte te blijven van de nieuwste technologische ontwikkelingen, strevend naar excellentie in ons vakgebied.",
+    "diversity": "Diversiteit",
+    "diversityDesc": "Gezondheidszorg, Juridisch, Financiën, Onderwijs — wat uw branche ook is, ons gereedschap kan uw workflows stroomlijnen."
+  },
+  "securityPriority": {
+    "title": "Beveiligingsprioriteit",
+    "description": "Uw gegevensbeveiliging is onze hoogste prioriteit. We implementeren encryptie op bedrijfsniveau en beveiligingsmaatregelen om uw documenten te beschermen en volledige privacy te garanderen."
+  },
+  "coreValues": {
+    "title": "Kernwaarden achter TheBestPDF"
+  },
+  "compression": {
+    "compressFile": "Bestand comprimeren",
+    "high": "HOOG",
+    "highDesc": "Standaardkwaliteit, kleinere grootte",
+    "highReduction": "~40% kleiner",
+    "basic": "BASIS",
+    "basicDesc": "Betere kwaliteit, middelgrote grootte",
+    "basicReduction": "~20% kleiner",
+    "low": "LAAG",
+    "lowDesc": "Hoogste kwaliteit, grotere grootte",
+    "lowReduction": "~10% kleiner",
+    "compressionLevel": "Compressieniveau",
+    "selectLevel": "Selecteer uw compressieniveau en comprimeer het bestand.",
+    "compress": "Comprimeren",
+    "compressing": "Comprimeren..."
+  },
+  "email": {
+    "enterEmail": "Voer uw e-mailadres in",
+    "downloadLink": "Downloadlink wordt naar uw e-mail verzonden",
+    "getStarted": "Aan de slag"
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "multipleUsers": "Kunnen meerdere gebruikers van ons bedrijf de service gelijktijdig gebruiken?",
+    "multipleUsersAnswer": "Eenvoudig! Maak één account aan en het hele team kan ons gereedschap gebruiken. Om te beginnen met een abonnement, registreer u gewoon, maak enkele bestandsaanpassingen, klik op \"Downloaden\" en kies dan het plan dat het beste bij u past.",
+    "customerSupport": "Biedt u klantenservice voor technische problemen?",
+    "customerSupportAnswer": "Ja, ons ondersteuningsteam is 24/7 beschikbaar om te helpen bij technische problemen die u tegenkomt.",
+    "processingSpeed": "Hoe snel worden documenten op uw platform verwerkt?",
+    "processingSpeedAnswer": "Documenten worden meestal binnen seconden verwerkt, zelfs voor grote bestanden.",
+    "moneyBack": "Heeft u een geld-terug-garantie?",
+    "moneyBackAnswer": "Ja, we bieden een 14-daagse geld-terug-garantie als u niet tevreden bent met onze service.",
+    "ctaTitle": "Wilt u uw bedrijfsoperaties naar een hoger niveau tillen?",
+    "ctaDescription": "Neem contact met ons op via sales@thebestpdf.com en laten we onderzoeken hoe ons product uw bedrijfsdocumentatie kan revolutionaliseren. Sluit u aan bij de groeiende gemeenschap van succesvolle bedrijven die TheBestPDF gebruiken om voorop te blijven lopen!",
+    "ctaButton": "Aan de slag",
+    "loading": "Laden..."
+  },
+  "howItWorks": {
+    "title": "Hoe PDF comprimeren",
+    "step1": "Log in op TheBestPDF en ga naar het PDF comprimeren-gereedschap",
+    "step2": "Upload of sleep uw PDF naar de interface",
+    "step3": "Dat is alles! Uw nieuw gecomprimeerde bestand is klaar voor download en kan worden gevonden in het account van uw team"
+  },
+  "featureCTA": {
+    "title": "PDFEZY levert eersteklas bestandsbeheeroplossingen voor teams van alle groottes.",
+    "subtitle": "Welkom bij ons geavanceerde SaaS-platform voor online documentbewerking en conversie. Ontworpen om te voldoen aan de behoeften van bedrijven en ondernemers."
+  },
+  "files": {
+    "searchFiles": "Zoek bestanden",
+    "pdfConverter": "PDF-converter",
+    "editPdf": "PDF bewerken",
+    "signPdf": "PDF ondertekenen",
+    "ocrPdf": "OCR PDF",
+    "mergePdf": "PDF samenvoegen",
+    "compressPdf": "PDF comprimeren",
+    "splitPdf": "PDF splitsen",
+    "aiSummarizer": "AI-samenvatter",
+    "fillPdf": "PDF invullen",
+    "createForm": "Formulier maken",
+    "editForm": "Formulier bewerken",
+    "summarizePdf": "PDF samenvatten",
+    "extractHighlights": "Markeringen extraheren"
+  },
+  "features": {
+    "comprehensiveSuite": "Uitgebreide suite",
+    "unlimitedDocuments": "Onbeperkte documenten"
+  },
+  "payment": {
+    "paymentDetails": "Betalingsgegevens",
+    "documentPreview": "Documentvoorbeeld",
+    "termsAndService": "Gebruiksvoorwaarden & Service",
+    "privacyPolicy": "Privacybeleid",
+    "billingEmail": "billing@pdfezy.com",
+    "agreementText": "Door dit vakje aan te vinken, gaat u akkoord met de Gebruiksvoorwaarden & Service, Privacybeleid en bevestigt u dat als u niet ten minste 24 uur voor het einde van de 7-daagse proefperiode voor CAD$1,95 annuleert, u CAD$49 per 28 dagen wordt gefactureerd totdat u uw abonnement opzegt door contact op te nemen met ons klantenserviceteam via e-mail op billing@pdfezy.com. Betalingen worden afgeschreven van de kaart die u hierboven heeft opgegeven."
+  },
+  "pdfViewer": {
+    "thumbnails": "Miniaturen",
+    "outline": "Overzicht",
+    "annotations": "Aantekeningen",
+    "zoomOut": "Uitzoomen",
+    "zoomIn": "Inzoomen",
+    "pan": "Verslepen",
+    "highlight": "Markeren",
+    "draw": "Teken",
+    "line": "Lijn",
+    "arrow": "Pijl",
+    "rectangle": "Rechthoek",
+    "ellipse": "Ellips",
+    "polygon": "Veelhoek",
+    "sign": "Ondertekenen",
+    "stamp": "Stempel",
+    "text": "Tekst",
+    "note": "Notitie",
+    "comment": "Opmerking",
+    "eraser": "Gum",
+    "undo": "Ongedaan maken",
+    "redo": "Opnieuw doen",
+    "search": "Zoeken",
+    "print": "Afdrukken",
+    "export": "Exporteren",
+    "edit": "Bewerken"
+  },
+  "reset": {
+    "invalidResetLink": "Ongeldige resetlink",
+    "resetLinkInvalid": "De wachtwoordresetlink is ongeldig of is verlopen.",
+    "backToLogin": "Terug naar inloggen",
+    "resetPassword": "Wachtwoord resetten",
+    "newPassword": "Nieuw wachtwoord",
+    "confirmNewPassword": "Bevestig nieuw wachtwoord",
+    "passwordsDoNotMatch": "Wachtwoorden komen niet overeen",
+    "resetSuccessful": "Wachtwoord succesvol gereset!",
+    "resetFailed": "Wachtwoordreset mislukt. Probeer het opnieuw."
+  },
+  "mergePdf": {
+    "actionButton": "BESTANDEN SAMENVOEGEN",
+    "minFilesError": "Selecteer ten minste 2 bestanden om samen te voegen",
+    "dropText": "Sleep PDF-bestanden hierheen",
+    "uploadText": "Upload uw bestanden",
+    "processingFiles": "Bestanden verwerken...",
+    "mergingFiles": "PDF's samenvoegen..."
+  }
+}

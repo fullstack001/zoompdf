@@ -381,10 +381,10 @@ export default function PaymentForm({
               CAD$49 per 28 days until you cancel your subscription by
               contacting our customer support team via email at{" "}
               <a
-                href="mailto:billing@pdfhouse.com"
+                href="mailto:billing@pdfezy.com"
                 className="text-blue-600 underline"
               >
-                billing@pdfhouse.com
+                billing@pdfezy.com
               </a>
               . Payments will be charged from the card you specified above.
             </label>

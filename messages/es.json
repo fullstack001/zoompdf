@@ -369,7 +369,12 @@
     "paymentMethod": "Método de pago",
     "saveTime": "Ahorra tiempo manteniendo una tarjeta de crédito actual en archivo.",
     "cardNumber": "Número de tarjeta",
-    "notSpecified": "No especificado"
+    "notSpecified": "No especificado",
+    "activeSubscription": "Suscripción Activa",
+    "subscriptionActive": "Tu suscripción está actualmente activa y tienes acceso completo a todas las funciones.",
+    "plan": "Plan",
+    "expiryDate": "Fecha de Vencimiento",
+    "subscriptionType": "Tipo de Suscripción"
   },
   "plan": {
     "choosePlan": "Elige un plan para descargar tu archivo",
@@ -467,8 +472,8 @@
     "documentPreview": "Vista previa del documento",
     "termsAndService": "Términos de uso y servicio",
     "privacyPolicy": "Política de privacidad",
-    "billingEmail": "billing@pdfhouse.com",
-    "agreementText": "Al marcar esta casilla, aceptas los Términos de uso y servicio, la Política de privacidad, y confirmas que si no cancelas al menos 24 horas antes del final del período de prueba de 7 días por CAD$1.95, se te cobrará CAD$49 por 28 días hasta que canceles tu suscripción contactando a nuestro equipo de soporte al cliente por correo electrónico a billing@pdfhouse.com. Los pagos se cargarán de la tarjeta que especificaste arriba."
+    "billingEmail": "billing@pdfezy.com",
+    "agreementText": "Al marcar esta casilla, aceptas los Términos de uso y servicio, la Política de privacidad, y confirmas que si no cancelas al menos 24 horas antes del final del período de prueba de 7 días por CAD$1.95, se te cobrará CAD$49 por 28 días hasta que canceles tu suscripción contactando a nuestro equipo de soporte al cliente por correo electrónico a billing@pdfezy.com. Los pagos se cargarán de la tarjeta que especificaste arriba."
   },
   "pdfViewer": {
     "thumbnails": "Miniaturas",

@@ -1,0 +1,550 @@
+{
+  "navigation": {
+    "home": "Laman Utama",
+    "convert": "Tukar",
+    "edit": "Edit",
+    "compress": "Mampatkan",
+    "sign": "Tandatangan",
+    "merge": "Gabungkan",
+    "split": "Pisahkan",
+    "files": "Fail",
+    "account": "Akaun",
+    "login": "Log Masuk",
+    "logout": "Log Keluar",
+    "pdfConverter": "PENUKAR PDF",
+    "pdfEditor": "EDITOR PDF",
+    "language": "Bahasa"
+  },
+  "languages": {
+    "en": "English",
+    "zh": "中文",
+    "cs": "Čeština",
+    "nl": "Nederlands",
+    "fr": "Français",
+    "de": "Deutsch",
+    "el": "Ελληνικά",
+    "hu": "Magyar",
+    "id": "Bahasa Indonesia",
+    "it": "Italiano",
+    "ja": "日本語",
+    "ko": "한국어",
+    "ms": "Bahasa Melayu",
+    "pl": "Polski",
+    "pt": "Português",
+    "ro": "Română",
+    "sr": "Srpski",
+    "es": "Español",
+    "se": "Svenska",
+    "th": "แบบไทย",
+    "tr": "Türkçe",
+    "uk": "Українська",
+    "vi": "Tiếng Việt",
+    "fi": "Suomi"
+  },
+  "pages": {
+    "home": "Laman Utama",
+    "convertPdf": "Tukar PDF",
+    "editPdf": "Edit PDF",
+    "compressPdf": "Mampatkan PDF",
+    "signPdf": "Tandatangan PDF",
+    "mergePdf": "Gabungkan PDF",
+    "splitPdf": "Pisahkan PDF",
+    "files": "Fail",
+    "account": "Akaun Saya",
+    "login": "Log Masuk",
+    "payment": "Pembayaran",
+    "plan": "Pelan"
+  },
+  "common": {
+    "upload": "Muat Naik",
+    "download": "Muat Turun",
+    "convert": "Tukar",
+    "edit": "Edit",
+    "save": "Simpan",
+    "cancel": "Batal",
+    "delete": "Padam",
+    "back": "Kembali",
+    "next": "Seterusnya",
+    "previous": "Sebelumnya",
+    "loading": "Memuatkan...",
+    "error": "Ralat",
+    "success": "Berjaya",
+    "chooseFile": "Pilih Fail",
+    "dragAndDrop": "Seret dan lepas fail anda di sini",
+    "or": "atau",
+    "browse": "Semak Imbas",
+    "processing": "Memproses...",
+    "processingFile": "Kami sedang memproses fail anda",
+    "configNotFound": "Konfigurasi tidak dijumpai untuk halaman utama.",
+    "uploadFailed": "Muat naik fail gagal. Sila cuba lagi.",
+    "chooseBestTool": "Pilih alat terbaik untuk keperluan perniagaan anda",
+    "done": "Selesai",
+    "split": "Pisahkan",
+    "saving": "Menyimpan...",
+    "signing": "Menandatangani...",
+    "splitting": "Memisahkan...",
+    "convertFromPdf": "Tukar dari PDF",
+    "convertToPdf": "Tukar ke PDF",
+    "convertImage": "Tukar Imej",
+    "otherFormats": "Format Lain",
+    "editSuccess": "Edit Berjaya!",
+    "editSuccessMessage": "PDF anda telah berjaya diedit dan sedia untuk dimuat turun.",
+    "whatsNext": "Apa Seterusnya?",
+    "downloadEditedFile": "Muat turun fail yang telah diedit",
+    "editAnotherFile": "Edit fail lain",
+    "startNew": "Mula Baru",
+    "fileId": "ID Fail",
+    "toolNotFound": "Alat tidak dijumpai"
+  },
+  "errors": {
+    "oops": "Aduh!",
+    "somethingWentWrong": "Sesuatu telah berlaku",
+    "pageNotFound": "Halaman Tidak Dijumpai",
+    "pageNotExist": "Halaman yang anda cari tidak wujud.",
+    "errorLoadingPage": "Kami mengalami ralat semasa memuatkan halaman ini. Sila cuba lagi.",
+    "errorLoadingApp": "Kami mengalami ralat semasa memuatkan aplikasi. Sila cuba lagi.",
+    "tryAgain": "Cuba Lagi",
+    "goHome": "Kembali ke Laman Utama",
+    "goToHomePage": "Kembali ke halaman utama",
+    "errorDetails": "Butiran ralat (untuk pembangunan sahaja)"
+  },
+  "tools": {
+    "pdfToWord": "PDF ke Word",
+    "pdfToExcel": "PDF ke Excel",
+    "pdfToPptx": "PDF ke PowerPoint",
+    "pdfToPng": "PDF ke PNG",
+    "pdfToJpg": "PDF ke JPG",
+    "pdfToEpub": "PDF ke EPUB",
+    "pdfToMobi": "PDF ke MOBI",
+    "pdfToTxt": "PDF ke TXT",
+    "pdfToHtml": "PDF ke HTML",
+    "pdfToSvg": "PDF ke SVG",
+    "pdfToTiff": "PDF ke TIFF",
+    "pdfToWebp": "PDF ke WebP",
+    "pdfToAvif": "PDF ke AVIF",
+    "pdfToEps": "PDF ke EPS",
+    "pdfToDxf": "PDF ke DXF",
+    "pdfToAzw3": "PDF ke AZW3",
+    "wordToPdf": "Word ke PDF",
+    "excelToPdf": "Excel ke PDF",
+    "pptxToPdf": "PPTX ke PDF",
+    "pngToPdf": "PNG ke PDF",
+    "jpgToPdf": "JPG ke PDF",
+    "epubToPdf": "EPUB ke PDF",
+    "mobiToPdf": "MOBI ke PDF",
+    "avifToPdf": "AVIF ke PDF",
+    "avifToPdfJpg": "AVIF ke PDF",
+    "pngToAvif": "PNG ke AVIF",
+    "jpgToAvif": "JPG ke AVIF",
+    "avifToPng": "AVIF ke PNG",
+    "avifToJpg": "AVIF ke JPG",
+    "epubToMobi": "EPUB ke MOBI",
+    "mobiToEpub": "MOBI ke EPUB",
+    "editPdf": "Edit PDF",
+    "signPdf": "Tandatangan PDF",
+    "addWatermark": "Tambah tanda air",
+    "rotatePdf": "Putar PDF",
+    "mergePdf": "Gabungkan PDF",
+    "splitPdf": "Pisahkan PDF",
+    "deletePages": "Padam halaman",
+    "compressPdf": "Mampatkan PDF",
+    "cropPdf": "Potong PDF",
+    "fillForm": "Isi Borang",
+    "fillPdf": "Isi PDF",
+    "createForm": "Cipta Borang",
+    "imageToText": "Imej ke Teks",
+    "mergeImages": "Gabungkan Imej",
+    "pdfOcr": "PDF OCR",
+    "pdfToImage": "PDF ke Imej",
+    "imageToPdf": "Imej ke PDF",
+    "pdfToDoc": "PDF ke DOC"
+  },
+  "toolsSection": {
+    "allPdfTools": "Semua Alat PDF",
+    "subtitle": "Semua yang anda perlukan untuk bekerja dengan PDF di satu tempat",
+    "splitAndMerge": "Pisahkan dan Gabungkan",
+    "w9": "W-9",
+    "ds11": "DS-11",
+    "1099misc": "1099-MISC",
+    "viewAllForms": "Lihat Semua Borang",
+    "ctaText": "Perlu yang lain? Kami mempunyai lebih daripada 50+ alat PDF tersedia.",
+    "viewAllTools": "Lihat Semua Alat"
+  },
+  "toolPages": {
+    "home": {
+      "title": "Penukar & Editor PDF",
+      "subtitle": "Tukar, edit dan uruskan PDF anda dengan mudah. Lebih daripada 1M fail diproses setiap bulan!"
+    },
+    "signPdf": {
+      "title": "Tandatangan PDF Dalam Talian",
+      "subtitle": "Tandatangan dokumen anda dengan selamat dalam talian. Muat naik fail untuk mula!"
+    },
+    "splitPdf": {
+      "title": "Pisahkan PDF Dalam Talian",
+      "subtitle": "Pisahkan PDF anda kepada beberapa fail dengan mudah. Muat naik fail untuk mula!"
+    },
+    "compressPdf": {
+      "title": "Pemampat PDF",
+      "subtitle": "Kami telah memampatkan 775,000 fail — biarkan kami membantu dengan fail anda"
+    },
+    "mergePdf": {
+      "title": "Gabungkan Fail PDF",
+      "subtitle": "Gabungkan beberapa fail PDF menjadi satu. Muat naik fail anda untuk mula!"
+    },
+    "pdfToWord": {
+      "title": "Penukar PDF ke Word",
+      "subtitle": "Kami telah membantu menukar 775,000 fail — biarkan kami membantu dengan fail anda"
+    },
+    "pdfToPng": {
+      "title": "Penukar PDF ke PNG",
+      "subtitle": "Kami telah menukar 775,000 fail — fail anda boleh menjadi yang seterusnya"
+    },
+    "pdfToJpg": {
+      "title": "Penukar PDF ke JPG",
+      "subtitle": "Kami telah menukar 775,000 fail — fail anda boleh menjadi yang seterusnya"
+    },
+    "pdfToEpub": {
+      "title": "Penukar PDF ke EPUB",
+      "subtitle": "Kami telah membantu menukar 775,000 fail — biarkan kami membantu dengan fail anda"
+    },
+    "pdfToExcel": {
+      "title": "Penukar PDF ke Excel",
+      "subtitle": "Kami telah menukar 775K PDF — mengapa tidak menjadikan fail anda yang seterusnya?"
+    },
+    "pdfToPptx": {
+      "title": "Penukar PDF ke PPTX",
+      "subtitle": "Kami telah menukar 775,000 fail — fail anda boleh menjadi yang seterusnya"
+    },
+    "wordToPdf": {
+      "title": "Penukar Word ke PDF",
+      "subtitle": "Kami telah membantu menukar 775,000 fail — biarkan kami membantu dengan fail anda"
+    },
+    "jpgToPdf": {
+      "title": "Penukar JPG ke PDF",
+      "subtitle": "Kami telah memproses 75,000 JPG setakat ini. Mari jadikan fail anda yang seterusnya."
+    },
+    "pngToPdf": {
+      "title": "Penukar PNG ke PDF",
+      "subtitle": "Kami telah menukar 775,000 fail — fail anda boleh menjadi yang seterusnya"
+    },
+    "epubToPdf": {
+      "title": "Penukar EPUB ke PDF",
+      "subtitle": "Kami telah menukar 775,000 fail — sekarang biarkan kami membantu dengan fail anda"
+    },
+    "pdfToTxt": {
+      "title": "Penukar PDF ke TXT",
+      "subtitle": "Kami telah menukar 775,000 fail — fail anda boleh menjadi yang seterusnya"
+    },
+    "pdfToHtml": {
+      "title": "Penukar PDF ke HTML",
+      "subtitle": "Kami telah menukar 775,000 fail — fail anda boleh menjadi yang seterusnya"
+    },
+    "pdfToSvg": {
+      "title": "Penukar PDF ke SVG",
+      "subtitle": "Kami telah menukar 775,000 fail — fail anda boleh menjadi yang seterusnya"
+    },
+    "pdfToTiff": {
+      "title": "Penukar PDF ke TIFF",
+      "subtitle": "Kami telah menukar 775,000 fail — fail anda boleh menjadi yang seterusnya"
+    },
+    "pdfToWebp": {
+      "title": "Penukar PDF ke WebP",
+      "subtitle": "Kami telah menukar 775,000 fail — fail anda boleh menjadi yang seterusnya"
+    },
+    "pdfToAvif": {
+      "title": "Penukar PDF ke AVIF",
+      "subtitle": "Kami telah menukar 775,000 fail — fail anda boleh menjadi yang seterusnya"
+    },
+    "pdfToEps": {
+      "title": "Penukar PDF ke EPS",
+      "subtitle": "Kami telah menukar 775,000 fail — fail anda boleh menjadi yang seterusnya"
+    },
+    "pdfToDxf": {
+      "title": "Penukar PDF ke DXF",
+      "subtitle": "Kami telah menukar 775,000 fail — fail anda boleh menjadi yang seterusnya"
+    },
+    "pdfToAzw3": {
+      "title": "Penukar PDF ke AZW3",
+      "subtitle": "Kami telah menukar 775,000 fail — fail anda boleh menjadi yang seterusnya"
+    },
+    "pdfToMobi": {
+      "title": "Penukar PDF ke MOBI",
+      "subtitle": "Kami telah menukar 775,000 fail — fail anda boleh menjadi yang seterusnya"
+    },
+    "pdfToDoc": {
+      "title": "Penukar PDF ke DOC",
+      "subtitle": "Kami telah menukar 775,000 fail — fail anda boleh menjadi yang seterusnya"
+    },
+    "excelToPdf": {
+      "title": "Penukar Excel ke PDF",
+      "subtitle": "Kami telah menukar 775,000 fail — fail anda boleh menjadi yang seterusnya"
+    },
+    "pptxToPdf": {
+      "title": "Penukar PPTX ke PDF",
+      "subtitle": "Kami telah menukar 775,000 fail — fail anda boleh menjadi yang seterusnya"
+    },
+    "mobiToPdf": {
+      "title": "Penukar MOBI ke PDF",
+      "subtitle": "Kami telah menukar 775,000 fail — fail anda boleh menjadi yang seterusnya"
+    },
+    "avifToPdf": {
+      "title": "Penukar AVIF ke PDF",
+      "subtitle": "Kami telah menukar 775,000 fail — fail anda boleh menjadi yang seterusnya"
+    },
+    "pngToAvif": {
+      "title": "Penukar PNG ke AVIF",
+      "subtitle": "Kami telah menukar 775,000 fail — fail anda boleh menjadi yang seterusnya"
+    },
+    "jpgToAvif": {
+      "title": "Penukar JPG ke AVIF",
+      "subtitle": "Kami telah menukar 775,000 fail — fail anda boleh menjadi yang seterusnya"
+    },
+    "avifToPng": {
+      "title": "Penukar AVIF ke PNG",
+      "subtitle": "Kami telah menukar 775,000 fail — fail anda boleh menjadi yang seterusnya"
+    },
+    "avifToJpg": {
+      "title": "Penukar AVIF ke JPG",
+      "subtitle": "Kami telah menukar 775,000 fail — fail anda boleh menjadi yang seterusnya"
+    },
+    "epubToMobi": {
+      "title": "Penukar EPUB ke MOBI",
+      "subtitle": "Kami telah menukar 775,000 fail — fail anda boleh menjadi yang seterusnya"
+    },
+    "mobiToEpub": {
+      "title": "Penukar MOBI ke EPUB",
+      "subtitle": "Kami telah menukar 775,000 fail — fail anda boleh menjadi yang seterusnya"
+    },
+    "pdfOcr": {
+      "title": "Alat PDF OCR",
+      "subtitle": "Ekstrak teks daripada PDF dengan teknologi OCR. Muat naik fail untuk mula!"
+    },
+    "pdfToImage": {
+      "title": "Penukar PDF ke Imej",
+      "subtitle": "Tukar halaman PDF kepada imej. Muat naik fail untuk mula!"
+    },
+    "imageToPdf": {
+      "title": "Penukar Imej ke PDF",
+      "subtitle": "Tukar imej ke PDF. Muat naik fail anda untuk mula!"
+    }
+  },
+  "navbar": {
+    "convertFromPdf": "Tukar dari PDF",
+    "convertToPdf": "Tukar ke PDF",
+    "convertImage": "Tukar Imej",
+    "convertEbook": "Tukar E-buku",
+    "editingTools": "Alat Edit",
+    "myDocuments": "Dokumen Saya",
+    "myAccount": "Akaun Saya",
+    "help": "Bantuan",
+    "termsConditions": "Terma & Syarat",
+    "settings": "Tetapan",
+    "logOut": "Log Keluar",
+    "upgradePlan": "Naik Taraf Pelan",
+    "noSubscription": "Tiada langganan",
+    "profileDetails": "Butiran Profil"
+  },
+  "footer": {
+    "editPdf": "Edit PDF",
+    "convertFromPdf": "Tukar dari PDF",
+    "convertToPdf": "Tukar ke PDF",
+    "disclaimer": "Penafian",
+    "privacyPolicy": "Dasar Privasi",
+    "termsOfService": "Terma Perkhidmatan",
+    "sitemap": "Peta Laman",
+    "allRightsReserved": "© 2025 PDFEZY Hak cipta terpelihara.",
+    "companyDescription": "Penyelesaian PDF all-in-one anda untuk menukar, mengedit dan menguruskan dokumen dengan mudah dan selamat.",
+    "stayUpdated": "Kekal Dikemaskini",
+    "newsletterDescription": "Dapatkan kemas kini terkini dan tip PDF terus ke peti masuk anda.",
+    "emailPlaceholder": "Masukkan e-mel anda",
+    "subscribe": "Langgan",
+    "followUs": "Ikuti Kami",
+    "language": "Bahasa",
+    "selectLanguage": "Pilih bahasa anda",
+    "email": "E-mel",
+    "phone": "Telefon",
+    "address": "Alamat"
+  },
+  "auth": {
+    "email": "E-mel",
+    "password": "Kata Laluan",
+    "confirmPassword": "Sahkan Kata Laluan",
+    "forgotPassword": "Lupa Kata Laluan?",
+    "resetPassword": "Set Semula Kata Laluan",
+    "signIn": "Log Masuk",
+    "signUp": "Daftar",
+    "alreadyHaveAccount": "Sudah ada akaun?",
+    "dontHaveAccount": "Tidak ada akaun?",
+    "login": "Log Masuk",
+    "loggingIn": "Mendaftar masuk...",
+    "emailAddress": "Alamat e-mel",
+    "enterEmailAddress": "Masukkan Alamat E-mel Anda",
+    "emailAlreadyRegistered": "E-mel ini sudah didaftarkan. Sila",
+    "logIn": "log masuk"
+  },
+  "account": {
+    "membership": "Keahlian",
+    "noSubscription": "Anda tidak mempunyai langganan.",
+    "unlockAllTools": "Buka kunci semua alat PDF!",
+    "fullAccess": "Dapatkan akses penuh kepada ciri editing dan penukaran lanjutan kami.",
+    "subscribeNow": "Langgan sekarang untuk memudahkan tugas dokumen anda",
+    "subscribe": "Langgan",
+    "account": "Akaun",
+    "betterExperience": "Dapatkan pengalaman yang lebih baik di PDF House dengan mengekalkan maklumat anda terkini.",
+    "importantUpdates": "Anda akan menerima kemas kini produk penting dan notifikasi akaun penting, termasuk resit pembayaran.",
+    "paymentMethod": "Kaedah Pembayaran",
+    "saveTime": "Jimat masa dengan menyimpan kad kredit semasa dalam fail.",
+    "cardNumber": "Nombor kad",
+    "notSpecified": "Tidak Ditetapkan",
+    "activeSubscription": "Langganan Aktif",
+    "subscriptionActive": "Langganan anda kini aktif dan anda mempunyai akses penuh kepada semua ciri.",
+    "plan": "Pelan",
+    "expiryDate": "Tarikh Luput",
+    "subscriptionType": "Jenis Langganan"
+  },
+  "plan": {
+    "choosePlan": "Pilih pelan untuk memuat turun fail anda",
+    "continue": "Teruskan",
+    "annualPlan": "Pelan Tahunan",
+    "getStarted": "Mula",
+    "mostPopular": "Paling Popular"
+  },
+  "whyUs": {
+    "title": "Mengapa TheBestPDF adalah pilihan teratas untuk pasukan anda",
+    "openness": "Keterbukaan",
+    "opennessDesc": "Berusaha untuk perkongsian jangka panjang, kami memastikan ketersediaan sokongan pelanggan 24/7.",
+    "expertise": "Kepakaran",
+    "expertiseDesc": "Kami menyatukan minda kreatif untuk menyampaikan penyelesaian bersepadu yang merangkumi cabaran perniagaan anda.",
+    "growth": "Pertumbuhan",
+    "growthDesc": "Kami memperkasakan organisasi dengan mengikuti perkembangan teknologi terkini, bertujuan untuk kecemerlangan dalam bidang kami.",
+    "diversity": "Kepelbagaian",
+    "diversityDesc": "Kesihatan, Undang-undang, Kewangan, Pendidikan — apa sahaja industri anda, alat kami boleh memudahkan alur kerja anda."
+  },
+  "securityPriority": {
+    "title": "Keutamaan Keselamatan",
+    "description": "Keselamatan data anda adalah keutamaan utama kami. Kami melaksanakan penyulitan peringkat perusahaan dan langkah keselamatan untuk melindungi dokumen anda dan memastikan privasi lengkap."
+  },
+  "coreValues": {
+    "title": "Nilai teras di sebalik TheBestPDF"
+  },
+  "compression": {
+    "compressFile": "Mampatkan fail",
+    "high": "TINGGI",
+    "highDesc": "Kualiti standard, saiz lebih kecil",
+    "highReduction": "~40% lebih kecil",
+    "basic": "ASAS",
+    "basicDesc": "Kualiti lebih baik, saiz sederhana",
+    "basicReduction": "~20% lebih kecil",
+    "low": "RENDAH",
+    "lowDesc": "Kualiti tertinggi, saiz lebih besar",
+    "lowReduction": "~10% lebih kecil",
+    "compressionLevel": "Tahap mampatan",
+    "selectLevel": "Pilih tahap mampatan anda dan mampatkan fail.",
+    "compress": "Mampatkan",
+    "compressing": "Memampatkan..."
+  },
+  "email": {
+    "enterEmail": "Masukkan alamat E-mel anda",
+    "downloadLink": "Pautan muat turun akan dihantar ke e-mel anda",
+    "getStarted": "Mula"
+  },
+  "faq": {
+    "title": "Soalan Lazim",
+    "multipleUsers": "Bolehkah beberapa pengguna dari syarikat kami menggunakan perkhidmatan secara serentak?",
+    "multipleUsersAnswer": "Mudah! Buat satu akaun dan seluruh pasukan akan dapat menggunakan alat kami. Untuk memulakan langganan, hanya daftar, buat beberapa pelarasan fail, klik \"Muat Turun,\" dan kemudian pilih pelan yang paling sesuai untuk anda.",
+    "customerSupport": "Adakah anda menawarkan sokongan pelanggan untuk isu teknikal?",
+    "customerSupportAnswer": "Ya, pasukan sokongan kami tersedia 24/7 untuk membantu dengan sebarang isu teknikal yang anda hadapi.",
+    "processingSpeed": "Berapa cepat dokumen diproses di platform anda?",
+    "processingSpeedAnswer": "Dokumen biasanya diproses dalam beberapa saat, walaupun untuk fail besar.",
+    "moneyBack": "Adakah anda mempunyai jaminan wang kembali?",
+    "moneyBackAnswer": "Ya, kami menawarkan jaminan wang kembali 14 hari jika anda tidak berpuas hati dengan perkhidmatan kami.",
+    "ctaTitle": "Ingin meningkatkan operasi perniagaan anda?",
+    "ctaDescription": "Hubungi kami di sales@thebestpdf.com, dan mari kita terokai bagaimana produk kami boleh merevolusikan dokumen korporat anda. Sertai komuniti perniagaan yang berjaya yang berkembang yang memanfaatkan TheBestPDF untuk terus berada di hadapan!",
+    "ctaButton": "Mula",
+    "loading": "Memuatkan..."
+  },
+  "howItWorks": {
+    "title": "Cara memampatkan PDF",
+    "step1": "Log masuk ke TheBestPDF dan pergi ke alat Mampatkan PDF",
+    "step2": "Muat naik atau seret & lepas PDF anda ke antara muka",
+    "step3": "Itu sahaja! Fail terkompresi baru anda sedia untuk dimuat turun dan boleh didapati dalam akaun pasukan anda"
+  },
+  "featureCTA": {
+    "title": "PDFEZY menyediakan penyelesaian pengurusan fail peringkat atas untuk pasukan dari semua saiz.",
+    "subtitle": "Selamat datang ke platform SaaS canggih kami untuk editing dan penukaran dokumen dalam talian. Direka untuk memenuhi keperluan perniagaan dan usahawan."
+  },
+  "files": {
+    "searchFiles": "Cari Fail",
+    "pdfConverter": "Penukar PDF",
+    "editPdf": "Edit PDF",
+    "signPdf": "Tandatangan PDF",
+    "ocrPdf": "OCR PDF",
+    "mergePdf": "Gabungkan PDF",
+    "compressPdf": "Mampatkan PDF",
+    "splitPdf": "Pisahkan PDF",
+    "aiSummarizer": "AI Ringkasan",
+    "fillPdf": "Isi PDF",
+    "createForm": "Cipta Borang",
+    "editForm": "Edit Borang",
+    "summarizePdf": "Ringkaskan PDF",
+    "extractHighlights": "Ekstrak Sorotan"
+  },
+  "features": {
+    "comprehensiveSuite": "Suite Komprehensif",
+    "unlimitedDocuments": "Dokumen tanpa had"
+  },
+  "payment": {
+    "paymentDetails": "Butiran pembayaran",
+    "documentPreview": "Pratonton Dokumen",
+    "termsAndService": "Terma Penggunaan & Perkhidmatan",
+    "privacyPolicy": "Dasar Privasi",
+    "billingEmail": "billing@pdfezy.com",
+    "agreementText": "Dengan menandakan kotak ini, anda bersetuju dengan Terma Penggunaan & Perkhidmatan, Dasar Privasi, dan mengesahkan bahawa jika anda tidak membatalkan sekurang-kurangnya 24 jam sebelum akhir percubaan 7 hari untuk CAD$1.95, anda akan dikenakan caj CAD$49 setiap 28 hari sehingga anda membatalkan langganan dengan menghubungi pasukan sokongan pelanggan kami melalui e-mel di billing@pdfezy.com. Pembayaran akan dikenakan daripada kad yang anda nyatakan di atas."
+  },
+  "pdfViewer": {
+    "thumbnails": "Imej Kecil",
+    "outline": "Garis Besar",
+    "annotations": "Anotasi",
+    "zoomOut": "Zum Keluar",
+    "zoomIn": "Zum Masuk",
+    "pan": "Pan",
+    "highlight": "Sorot",
+    "draw": "Lukis",
+    "line": "Garis",
+    "arrow": "Anak Panah",
+    "rectangle": "Segi Empat Tepat",
+    "ellipse": "Elips",
+    "polygon": "Poligon",
+    "sign": "Tandatangan",
+    "stamp": "Setem",
+    "text": "Teks",
+    "note": "Nota",
+    "comment": "Komen",
+    "eraser": "Pemadam",
+    "undo": "Buat Asal",
+    "redo": "Buat Semula",
+    "search": "Cari",
+    "print": "Cetak",
+    "export": "Eksport",
+    "edit": "Edit"
+  },
+  "reset": {
+    "invalidResetLink": "Pautan Set Semula Tidak Sah",
+    "resetLinkInvalid": "Pautan set semula kata laluan tidak sah atau telah tamat tempoh.",
+    "backToLogin": "Kembali ke Log Masuk",
+    "resetPassword": "Set Semula Kata Laluan",
+    "newPassword": "Kata Laluan Baru",
+    "confirmNewPassword": "Sahkan Kata Laluan Baru",
+    "passwordsDoNotMatch": "Kata laluan tidak sepadan",
+    "resetSuccessful": "Set semula kata laluan berjaya!",
+    "resetFailed": "Set semula kata laluan gagal. Sila cuba lagi."
+  },
+  "mergePdf": {
+    "actionButton": "GABUNGKAN FAIL",
+    "minFilesError": "Sila pilih sekurang-kurangnya 2 fail untuk digabungkan",
+    "dropText": "Letakkan fail PDF di sini",
+    "uploadText": "Muat Naik Fail Anda",
+    "processingFiles": "Memproses Fail...",
+    "mergingFiles": "Menggabungkan PDF..."
+  }
+}

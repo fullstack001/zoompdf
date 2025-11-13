@@ -1,0 +1,550 @@
+{
+  "navigation": {
+    "home": "Acasă",
+    "convert": "Convertește",
+    "edit": "Editează",
+    "compress": "Comprimă",
+    "sign": "Semnătură",
+    "merge": "Unește",
+    "split": "Împarte",
+    "files": "Fișiere",
+    "account": "Cont",
+    "login": "Autentificare",
+    "logout": "Deconectare",
+    "pdfConverter": "CONVERTOR PDF",
+    "pdfEditor": "EDITOR PDF",
+    "language": "Limbă"
+  },
+  "languages": {
+    "en": "English",
+    "zh": "中文",
+    "cs": "Čeština",
+    "nl": "Nederlands",
+    "fr": "Français",
+    "de": "Deutsch",
+    "el": "Ελληνικά",
+    "hu": "Magyar",
+    "id": "Bahasa Indonesia",
+    "it": "Italiano",
+    "ja": "日本語",
+    "ko": "한국어",
+    "ms": "Bahasa Melayu",
+    "pl": "Polski",
+    "pt": "Português",
+    "ro": "Română",
+    "sr": "Srpski",
+    "es": "Español",
+    "se": "Svenska",
+    "th": "แบบไทย",
+    "tr": "Türkçe",
+    "uk": "Українська",
+    "vi": "Tiếng Việt",
+    "fi": "Suomi"
+  },
+  "pages": {
+    "home": "Acasă",
+    "convertPdf": "Convertește PDF",
+    "editPdf": "Editează PDF",
+    "compressPdf": "Comprimă PDF",
+    "signPdf": "Semnătură PDF",
+    "mergePdf": "Unește PDF",
+    "splitPdf": "Împarte PDF",
+    "files": "Fișiere",
+    "account": "Contul meu",
+    "login": "Autentificare",
+    "payment": "Plată",
+    "plan": "Planuri"
+  },
+  "common": {
+    "upload": "Încarcă",
+    "download": "Descarcă",
+    "convert": "Convertește",
+    "edit": "Editează",
+    "save": "Salvează",
+    "cancel": "Anulează",
+    "delete": "Șterge",
+    "back": "Înapoi",
+    "next": "Următor",
+    "previous": "Anterior",
+    "loading": "Se încarcă...",
+    "error": "Eroare",
+    "success": "Succes",
+    "chooseFile": "Alege fișier",
+    "dragAndDrop": "Trage și plasează fișierul aici",
+    "or": "sau",
+    "browse": "Răsfoiește",
+    "processing": "Se procesează...",
+    "processingFile": "Procesăm fișierul tău",
+    "configNotFound": "Configurația nu a fost găsită pentru pagina principală.",
+    "uploadFailed": "Încărcarea fișierului a eșuat. Te rugăm să încerci din nou.",
+    "chooseBestTool": "Alege cel mai bun instrument pentru nevoile tale de afaceri",
+    "done": "Gata",
+    "split": "Împarte",
+    "saving": "Se salvează...",
+    "signing": "Se semnează...",
+    "splitting": "Se împarte...",
+    "convertFromPdf": "Convertește din PDF",
+    "convertToPdf": "Convertește în PDF",
+    "convertImage": "Convertește imagine",
+    "otherFormats": "Alte formate",
+    "editSuccess": "Editare reușită!",
+    "editSuccessMessage": "PDF-ul tău a fost editat cu succes și este gata pentru descărcare.",
+    "whatsNext": "Ce urmează?",
+    "downloadEditedFile": "Descarcă fișierul editat",
+    "editAnotherFile": "Editează alt fișier",
+    "startNew": "Începe nou",
+    "fileId": "ID fișier",
+    "toolNotFound": "Instrumentul nu a fost găsit"
+  },
+  "errors": {
+    "oops": "Ups!",
+    "somethingWentWrong": "Ceva nu a mers bine",
+    "pageNotFound": "Pagină negăsită",
+    "pageNotExist": "Pagina pe care o cauți nu există.",
+    "errorLoadingPage": "Am întâmpinat o eroare la încărcarea acestei pagini. Te rugăm să încerci din nou.",
+    "errorLoadingApp": "Am întâmpinat o eroare la încărcarea aplicației. Te rugăm să încerci din nou.",
+    "tryAgain": "Încearcă din nou",
+    "goHome": "Mergi acasă",
+    "goToHomePage": "Mergi la pagina principală",
+    "errorDetails": "Detalii eroare (doar pentru dezvoltare)"
+  },
+  "tools": {
+    "pdfToWord": "PDF în Word",
+    "pdfToExcel": "PDF în Excel",
+    "pdfToPptx": "PDF în PowerPoint",
+    "pdfToPng": "PDF în PNG",
+    "pdfToJpg": "PDF în JPG",
+    "pdfToEpub": "PDF în EPUB",
+    "pdfToMobi": "PDF în MOBI",
+    "pdfToTxt": "PDF în TXT",
+    "pdfToHtml": "PDF în HTML",
+    "pdfToSvg": "PDF în SVG",
+    "pdfToTiff": "PDF în TIFF",
+    "pdfToWebp": "PDF în WebP",
+    "pdfToAvif": "PDF în AVIF",
+    "pdfToEps": "PDF în EPS",
+    "pdfToDxf": "PDF în DXF",
+    "pdfToAzw3": "PDF în AZW3",
+    "wordToPdf": "Word în PDF",
+    "excelToPdf": "Excel în PDF",
+    "pptxToPdf": "PPTX în PDF",
+    "pngToPdf": "PNG în PDF",
+    "jpgToPdf": "JPG în PDF",
+    "epubToPdf": "EPUB în PDF",
+    "mobiToPdf": "MOBI în PDF",
+    "avifToPdf": "AVIF în PDF",
+    "avifToPdfJpg": "AVIF în PDF",
+    "pngToAvif": "PNG în AVIF",
+    "jpgToAvif": "JPG în AVIF",
+    "avifToPng": "AVIF în PNG",
+    "avifToJpg": "AVIF în JPG",
+    "epubToMobi": "EPUB în MOBI",
+    "mobiToEpub": "MOBI în EPUB",
+    "editPdf": "Editează PDF",
+    "signPdf": "Semnătură PDF",
+    "addWatermark": "Adaugă filigran",
+    "rotatePdf": "Rotește PDF",
+    "mergePdf": "Unește PDF",
+    "splitPdf": "Împarte PDF",
+    "deletePages": "Șterge pagini",
+    "compressPdf": "Comprimă PDF",
+    "cropPdf": "Decupează PDF",
+    "fillForm": "Completează formular",
+    "fillPdf": "Completează PDF",
+    "createForm": "Creează formular",
+    "imageToText": "Imagine în text",
+    "mergeImages": "Unește imagini",
+    "pdfOcr": "PDF OCR",
+    "pdfToImage": "PDF în imagine",
+    "imageToPdf": "Imagine în PDF",
+    "pdfToDoc": "PDF în DOC"
+  },
+  "toolsSection": {
+    "allPdfTools": "Toate instrumentele PDF",
+    "subtitle": "Tot ce ai nevoie pentru a lucra cu PDF-uri într-un singur loc",
+    "splitAndMerge": "Împarte și unește",
+    "w9": "W-9",
+    "ds11": "DS-11",
+    "1099misc": "1099-MISC",
+    "viewAllForms": "Vezi toate formularele",
+    "ctaText": "Ai nevoie de altceva? Avem peste 50+ instrumente PDF disponibile.",
+    "viewAllTools": "Vezi toate instrumentele"
+  },
+  "toolPages": {
+    "home": {
+      "title": "Convertor și Editor PDF",
+      "subtitle": "Convertește, editează și gestionează PDF-urile tale cu ușurință. Peste 1M fișiere procesate lunar!"
+    },
+    "signPdf": {
+      "title": "Semnătură PDF online",
+      "subtitle": "Semnează documentele tale online în siguranță. Încarcă un fișier pentru a începe!"
+    },
+    "splitPdf": {
+      "title": "Împarte PDF online",
+      "subtitle": "Împarte PDF-ul tău în mai multe fișiere cu ușurință. Încarcă un fișier pentru a începe!"
+    },
+    "compressPdf": {
+      "title": "Compresor PDF",
+      "subtitle": "Am comprimat deja 775.000 de fișiere — lasă-ne să te ajutăm cu ale tale"
+    },
+    "mergePdf": {
+      "title": "Unește fișiere PDF",
+      "subtitle": "Combină mai multe fișiere PDF într-unul singur. Încarcă fișierele tale pentru a începe!"
+    },
+    "pdfToWord": {
+      "title": "Convertor PDF în Word",
+      "subtitle": "Am ajutat la conversia a 775.000 de fișiere — lasă-ne să te ajutăm cu ale tale"
+    },
+    "pdfToPng": {
+      "title": "Convertor PDF în PNG",
+      "subtitle": "Am convertit deja 775.000 de fișiere — al tău ar putea fi următorul"
+    },
+    "pdfToJpg": {
+      "title": "Convertor PDF în JPG",
+      "subtitle": "Am convertit deja 775.000 de fișiere — al tău ar putea fi următorul"
+    },
+    "pdfToEpub": {
+      "title": "Convertor PDF în EPUB",
+      "subtitle": "Am ajutat la conversia a 775.000 de fișiere — lasă-ne să te ajutăm cu ale tale"
+    },
+    "pdfToExcel": {
+      "title": "Convertor PDF în Excel",
+      "subtitle": "Am convertit 775K PDF-uri — de ce să nu faci al tău următorul?"
+    },
+    "pdfToPptx": {
+      "title": "Convertor PDF în PPTX",
+      "subtitle": "Am convertit deja 775.000 de fișiere — al tău ar putea fi următorul"
+    },
+    "wordToPdf": {
+      "title": "Convertor Word în PDF",
+      "subtitle": "Am ajutat la conversia a 775.000 de fișiere — lasă-ne să te ajutăm cu ale tale"
+    },
+    "jpgToPdf": {
+      "title": "Convertor JPG în PDF",
+      "subtitle": "Am procesat 75.000 de JPG-uri până acum. Să facem al tău următorul."
+    },
+    "pngToPdf": {
+      "title": "Convertor PNG în PDF",
+      "subtitle": "Am convertit deja 775.000 de fișiere — al tău ar putea fi următorul"
+    },
+    "epubToPdf": {
+      "title": "Convertor EPUB în PDF",
+      "subtitle": "Am convertit deja 775.000 de fișiere — acum lasă-ne să te ajutăm cu ale tale"
+    },
+    "pdfToTxt": {
+      "title": "Convertor PDF în TXT",
+      "subtitle": "Am convertit deja 775.000 de fișiere — al tău ar putea fi următorul"
+    },
+    "pdfToHtml": {
+      "title": "Convertor PDF în HTML",
+      "subtitle": "Am convertit deja 775.000 de fișiere — al tău ar putea fi următorul"
+    },
+    "pdfToSvg": {
+      "title": "Convertor PDF în SVG",
+      "subtitle": "Am convertit deja 775.000 de fișiere — al tău ar putea fi următorul"
+    },
+    "pdfToTiff": {
+      "title": "Convertor PDF în TIFF",
+      "subtitle": "Am convertit deja 775.000 de fișiere — al tău ar putea fi următorul"
+    },
+    "pdfToWebp": {
+      "title": "Convertor PDF în WebP",
+      "subtitle": "Am convertit deja 775.000 de fișiere — al tău ar putea fi următorul"
+    },
+    "pdfToAvif": {
+      "title": "Convertor PDF în AVIF",
+      "subtitle": "Am convertit deja 775.000 de fișiere — al tău ar putea fi următorul"
+    },
+    "pdfToEps": {
+      "title": "Convertor PDF în EPS",
+      "subtitle": "Am convertit deja 775.000 de fișiere — al tău ar putea fi următorul"
+    },
+    "pdfToDxf": {
+      "title": "Convertor PDF în DXF",
+      "subtitle": "Am convertit deja 775.000 de fișiere — al tău ar putea fi următorul"
+    },
+    "pdfToAzw3": {
+      "title": "Convertor PDF în AZW3",
+      "subtitle": "Am convertit deja 775.000 de fișiere — al tău ar putea fi următorul"
+    },
+    "pdfToMobi": {
+      "title": "Convertor PDF în MOBI",
+      "subtitle": "Am convertit deja 775.000 de fișiere — al tău ar putea fi următorul"
+    },
+    "pdfToDoc": {
+      "title": "Convertor PDF în DOC",
+      "subtitle": "Am convertit deja 775.000 de fișiere — al tău ar putea fi următorul"
+    },
+    "excelToPdf": {
+      "title": "Convertor Excel în PDF",
+      "subtitle": "Am convertit deja 775.000 de fișiere — al tău ar putea fi următorul"
+    },
+    "pptxToPdf": {
+      "title": "Convertor PPTX în PDF",
+      "subtitle": "Am convertit deja 775.000 de fișiere — al tău ar putea fi următorul"
+    },
+    "mobiToPdf": {
+      "title": "Convertor MOBI în PDF",
+      "subtitle": "Am convertit deja 775.000 de fișiere — al tău ar putea fi următorul"
+    },
+    "avifToPdf": {
+      "title": "Convertor AVIF în PDF",
+      "subtitle": "Am convertit deja 775.000 de fișiere — al tău ar putea fi următorul"
+    },
+    "pngToAvif": {
+      "title": "Convertor PNG în AVIF",
+      "subtitle": "Am convertit deja 775.000 de fișiere — al tău ar putea fi următorul"
+    },
+    "jpgToAvif": {
+      "title": "Convertor JPG în AVIF",
+      "subtitle": "Am convertit deja 775.000 de fișiere — al tău ar putea fi următorul"
+    },
+    "avifToPng": {
+      "title": "Convertor AVIF în PNG",
+      "subtitle": "Am convertit deja 775.000 de fișiere — al tău ar putea fi următorul"
+    },
+    "avifToJpg": {
+      "title": "Convertor AVIF în JPG",
+      "subtitle": "Am convertit deja 775.000 de fișiere — al tău ar putea fi următorul"
+    },
+    "epubToMobi": {
+      "title": "Convertor EPUB în MOBI",
+      "subtitle": "Am convertit deja 775.000 de fișiere — al tău ar putea fi următorul"
+    },
+    "mobiToEpub": {
+      "title": "Convertor MOBI în EPUB",
+      "subtitle": "Am convertit deja 775.000 de fișiere — al tău ar putea fi următorul"
+    },
+    "pdfOcr": {
+      "title": "Instrument PDF OCR",
+      "subtitle": "Extrage text din PDF-uri cu tehnologia OCR. Încarcă un fișier pentru a începe!"
+    },
+    "pdfToImage": {
+      "title": "Convertor PDF în imagine",
+      "subtitle": "Convertește paginile PDF în imagini. Încarcă un fișier pentru a începe!"
+    },
+    "imageToPdf": {
+      "title": "Convertor imagine în PDF",
+      "subtitle": "Convertește imagini în PDF. Încarcă fișierele tale pentru a începe!"
+    }
+  },
+  "navbar": {
+    "convertFromPdf": "Convertește din PDF",
+    "convertToPdf": "Convertește în PDF",
+    "convertImage": "Convertește imagine",
+    "convertEbook": "Convertește E-book",
+    "editingTools": "Instrumente de editare",
+    "myDocuments": "Documentele mele",
+    "myAccount": "Contul meu",
+    "help": "Ajutor",
+    "termsConditions": "Termeni și Condiții",
+    "settings": "Setări",
+    "logOut": "Deconectare",
+    "upgradePlan": "Actualizează planul",
+    "noSubscription": "Fără abonament",
+    "profileDetails": "Detalii profil"
+  },
+  "footer": {
+    "editPdf": "Editează PDF",
+    "convertFromPdf": "Convertește din PDF",
+    "convertToPdf": "Convertește în PDF",
+    "disclaimer": "Disclaimer",
+    "privacyPolicy": "Politica de confidențialitate",
+    "termsOfService": "Termenii serviciului",
+    "sitemap": "Hartă site",
+    "allRightsReserved": "© 2025 PDFEZY Toate drepturile rezervate.",
+    "companyDescription": "Soluția ta all-in-one PDF pentru conversia, editarea și gestionarea documentelor cu ușurință și siguranță.",
+    "stayUpdated": "Rămâi la curent",
+    "newsletterDescription": "Primește cele mai recente actualizări și sfaturi PDF direct în căsuța ta poștală.",
+    "emailPlaceholder": "Introdu adresa ta de email",
+    "subscribe": "Abonează-te",
+    "followUs": "Urmărește-ne",
+    "language": "Limbă",
+    "selectLanguage": "Selectează limba ta",
+    "email": "Email",
+    "phone": "Telefon",
+    "address": "Adresă"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Parolă",
+    "confirmPassword": "Confirmă parola",
+    "forgotPassword": "Ai uitat parola?",
+    "resetPassword": "Resetează parola",
+    "signIn": "Autentificare",
+    "signUp": "Înregistrare",
+    "alreadyHaveAccount": "Ai deja un cont?",
+    "dontHaveAccount": "Nu ai un cont?",
+    "login": "Autentificare",
+    "loggingIn": "Se autentifică...",
+    "emailAddress": "Adresă email",
+    "enterEmailAddress": "Introdu adresa ta de email",
+    "emailAlreadyRegistered": "Acest email este deja înregistrat. Te rugăm să",
+    "logIn": "te autentifici"
+  },
+  "account": {
+    "membership": "Membru",
+    "noSubscription": "Nu ai un abonament.",
+    "unlockAllTools": "Deblochează toate instrumentele PDF!",
+    "fullAccess": "Obține acces complet la funcțiile noastre avansate de editare și conversie.",
+    "subscribeNow": "Abonează-te acum pentru a-ți simplifica sarcinile cu documentele",
+    "subscribe": "Abonează-te",
+    "account": "Cont",
+    "betterExperience": "Ai o experiență mai bună pe PDF House păstrând informațiile tale actualizate.",
+    "importantUpdates": "Vei primi actualizări importante ale produsului și notificări esențiale ale contului, inclusiv chitanțe de plată.",
+    "paymentMethod": "Metodă de plată",
+    "saveTime": "Economisește timp păstrând un card de credit actual în dosar.",
+    "cardNumber": "Număr card",
+    "notSpecified": "Nespecificat",
+    "activeSubscription": "Abonament activ",
+    "subscriptionActive": "Abonamentul tău este în prezent activ și ai acces complet la toate funcțiile.",
+    "plan": "Plan",
+    "expiryDate": "Data expirării",
+    "subscriptionType": "Tip abonament"
+  },
+  "plan": {
+    "choosePlan": "Alege un plan pentru a descărca fișierul tău",
+    "continue": "Continuă",
+    "annualPlan": "Plan anual",
+    "getStarted": "Începe",
+    "mostPopular": "Cel mai popular"
+  },
+  "whyUs": {
+    "title": "De ce TheBestPDF este alegerea de top pentru echipa ta",
+    "openness": "Deschidere",
+    "opennessDesc": "Urmărind parteneriate pe termen lung, asigurăm disponibilitate 24/7 pentru suport clienți.",
+    "expertise": "Expertiză",
+    "expertiseDesc": "Unim minți creative pentru a livra soluții integrate care acoperă provocările tale de afaceri.",
+    "growth": "Creștere",
+    "growthDesc": "Putem organizațiile ținând pasul cu cele mai recente progrese tehnologice, urmărind excelența în domeniul nostru.",
+    "diversity": "Diversitate",
+    "diversityDesc": "Sănătate, Legal, Finanțe, Educație — indiferent de industria ta, instrumentul nostru poate simplifica fluxurile tale de lucru."
+  },
+  "securityPriority": {
+    "title": "Prioritate securitate",
+    "description": "Securitatea datelor tale este prioritatea noastră principală. Implementăm criptare de nivel enterprise și măsuri de securitate pentru a-ți proteja documentele și a asigura confidențialitate completă."
+  },
+  "coreValues": {
+    "title": "Valorile de bază din spatele TheBestPDF"
+  },
+  "compression": {
+    "compressFile": "Comprimă fișier",
+    "high": "RIDICAT",
+    "highDesc": "Calitate standard, dimensiune mai mică",
+    "highReduction": "~40% mai mic",
+    "basic": "BAZIC",
+    "basicDesc": "Calitate mai bună, dimensiune medie",
+    "basicReduction": "~20% mai mic",
+    "low": "SCĂZUT",
+    "lowDesc": "Cea mai înaltă calitate, dimensiune mai mare",
+    "lowReduction": "~10% mai mic",
+    "compressionLevel": "Nivel compresie",
+    "selectLevel": "Selectează nivelul tău de compresie și comprimă fișierul.",
+    "compress": "Comprimă",
+    "compressing": "Se comprimă..."
+  },
+  "email": {
+    "enterEmail": "Introdu adresa ta de email",
+    "downloadLink": "Linkul de descărcare va fi trimis la emailul tău",
+    "getStarted": "Începe"
+  },
+  "faq": {
+    "title": "Întrebări frecvente",
+    "multipleUsers": "Pot mai mulți utilizatori din compania noastră să folosească serviciul simultan?",
+    "multipleUsersAnswer": "Ușor! Creează un cont și întreaga echipă va putea folosi instrumentul nostru. Pentru a începe cu un abonament, pur și simplu înregistrează-te, fă câteva ajustări de fișiere, apasă \"Descarcă,\" și apoi alege planul care ți se potrivește cel mai bine.",
+    "customerSupport": "Oferiți suport pentru clienți pentru probleme tehnice?",
+    "customerSupportAnswer": "Da, echipa noastră de suport este disponibilă 24/7 pentru a te ajuta cu orice probleme tehnice pe care le întâmpini.",
+    "processingSpeed": "Cât de rapid sunt procesate documentele pe platforma ta?",
+    "processingSpeedAnswer": "Documentele sunt de obicei procesate în câteva secunde, chiar și pentru fișiere mari.",
+    "moneyBack": "Aveți o garanție de returnare a banilor?",
+    "moneyBackAnswer": "Da, oferim o garanție de returnare a banilor de 14 zile dacă nu ești mulțumit de serviciul nostru.",
+    "ctaTitle": "Cauți să-ți îmbunătățești operațiunile de afaceri?",
+    "ctaDescription": "Contactează-ne la sales@thebestpdf.com și hai să explorăm cum produsul nostru poate revoluționa documentația ta corporativă. Alătură-te comunității în creștere a afacerilor de succes care folosesc TheBestPDF pentru a rămâne în față!",
+    "ctaButton": "Începe",
+    "loading": "Se încarcă..."
+  },
+  "howItWorks": {
+    "title": "Cum să comprimi PDF",
+    "step1": "Autentifică-te în TheBestPDF și mergi la instrumentul Comprimă PDF",
+    "step2": "Încarcă sau trage și plasează PDF-ul tău în interfață",
+    "step3": "Gata! Fișierul tău nou comprimat este gata pentru descărcare și poate fi găsit în contul echipei tale"
+  },
+  "featureCTA": {
+    "title": "PDFEZY oferă soluții de top pentru gestionarea fișierelor pentru echipe de toate dimensiunile.",
+    "subtitle": "Bun venit pe platforma noastră SaaS de ultimă generație pentru editarea și conversia documentelor online. Proiectată pentru a satisface nevoile afacerilor și antreprenorilor."
+  },
+  "files": {
+    "searchFiles": "Caută fișiere",
+    "pdfConverter": "Convertor PDF",
+    "editPdf": "Editează PDF",
+    "signPdf": "Semnătură PDF",
+    "ocrPdf": "OCR PDF",
+    "mergePdf": "Unește PDF",
+    "compressPdf": "Comprimă PDF",
+    "splitPdf": "Împarte PDF",
+    "aiSummarizer": "Rezumat AI",
+    "fillPdf": "Completează PDF",
+    "createForm": "Creează formular",
+    "editForm": "Editează formular",
+    "summarizePdf": "Rezumă PDF",
+    "extractHighlights": "Extrage evidențieri"
+  },
+  "features": {
+    "comprehensiveSuite": "Suite cuprinzătoare",
+    "unlimitedDocuments": "Documente nelimitate"
+  },
+  "payment": {
+    "paymentDetails": "Detalii plată",
+    "documentPreview": "Previzualizare document",
+    "termsAndService": "Termenii de utilizare și serviciu",
+    "privacyPolicy": "Politica de confidențialitate",
+    "billingEmail": "billing@pdfezy.com",
+    "agreementText": "Bifând această casetă, ești de acord cu Termenii de utilizare și serviciu, Politica de confidențialitate și confirmi că dacă nu anulezi cel puțin 24 de ore înainte de sfârșitul perioadei de probă de 7 zile pentru CAD$1,95, vei fi taxat CAD$49 la fiecare 28 de zile până când anulezi abonamentul contactând echipa noastră de suport clienți prin email la billing@pdfezy.com. Plățile vor fi încărcate de pe cardul pe care l-ai specificat mai sus."
+  },
+  "pdfViewer": {
+    "thumbnails": "Miniaturi",
+    "outline": "Schiță",
+    "annotations": "Adnotări",
+    "zoomOut": "Micșorează",
+    "zoomIn": "Mărește",
+    "pan": "Panoramare",
+    "highlight": "Evidențiază",
+    "draw": "Desenează",
+    "line": "Linie",
+    "arrow": "Săgeată",
+    "rectangle": "Dreptunghi",
+    "ellipse": "Elipsă",
+    "polygon": "Poligon",
+    "sign": "Semnătură",
+    "stamp": "Ștampilă",
+    "text": "Text",
+    "note": "Notă",
+    "comment": "Comentariu",
+    "eraser": "Radieră",
+    "undo": "Anulează",
+    "redo": "Refă",
+    "search": "Caută",
+    "print": "Tipărește",
+    "export": "Exportă",
+    "edit": "Editează"
+  },
+  "reset": {
+    "invalidResetLink": "Link de resetare invalid",
+    "resetLinkInvalid": "Linkul de resetare a parolei este invalid sau a expirat.",
+    "backToLogin": "Înapoi la autentificare",
+    "resetPassword": "Resetează parola",
+    "newPassword": "Parolă nouă",
+    "confirmNewPassword": "Confirmă parola nouă",
+    "passwordsDoNotMatch": "Parolele nu se potrivesc",
+    "resetSuccessful": "Resetarea parolei a reușit!",
+    "resetFailed": "Resetarea parolei a eșuat. Te rugăm să încerci din nou."
+  },
+  "mergePdf": {
+    "actionButton": "UNEAZĂ FIȘIERE",
+    "minFilesError": "Te rugăm să selectezi cel puțin 2 fișiere pentru a uni",
+    "dropText": "Plasează fișiere PDF aici",
+    "uploadText": "Încarcă fișierele tale",
+    "processingFiles": "Se procesează fișierele...",
+    "mergingFiles": "Se unesc PDF-urile..."
+  }
+}

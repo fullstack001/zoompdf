@@ -1,0 +1,550 @@
+{
+  "navigation": {
+    "home": "首页",
+    "convert": "转换",
+    "edit": "编辑",
+    "compress": "压缩",
+    "sign": "签名",
+    "merge": "合并",
+    "split": "拆分",
+    "files": "文件",
+    "account": "账户",
+    "login": "登录",
+    "logout": "登出",
+    "pdfConverter": "PDF转换器",
+    "pdfEditor": "PDF编辑器",
+    "language": "语言"
+  },
+  "languages": {
+    "en": "English",
+    "zh": "中文",
+    "cs": "Čeština",
+    "nl": "Nederlands",
+    "fr": "Français",
+    "de": "Deutsch",
+    "el": "Ελληνικά",
+    "hu": "Magyar",
+    "id": "Bahasa Indonesia",
+    "it": "Italiano",
+    "ja": "日本語",
+    "ko": "한국어",
+    "ms": "Bahasa Melayu",
+    "pl": "Polski",
+    "pt": "Português",
+    "ro": "Română",
+    "sr": "Srpski",
+    "es": "Español",
+    "se": "Svenska",
+    "th": "แบบไทย",
+    "tr": "Türkçe",
+    "uk": "Українська",
+    "vi": "Tiếng Việt",
+    "fi": "Suomi"
+  },
+  "pages": {
+    "home": "首页",
+    "convertPdf": "转换PDF",
+    "editPdf": "编辑PDF",
+    "compressPdf": "压缩PDF",
+    "signPdf": "签名PDF",
+    "mergePdf": "合并PDF",
+    "splitPdf": "拆分PDF",
+    "files": "文件",
+    "account": "我的账户",
+    "login": "登录",
+    "payment": "支付",
+    "plan": "计划"
+  },
+  "common": {
+    "upload": "上传",
+    "download": "下载",
+    "convert": "转换",
+    "edit": "编辑",
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功",
+    "chooseFile": "选择文件",
+    "dragAndDrop": "将文件拖放到此处",
+    "or": "或",
+    "browse": "浏览",
+    "processing": "处理中...",
+    "processingFile": "我们正在处理您的文件",
+    "configNotFound": "未找到首页配置。",
+    "uploadFailed": "文件上传失败。请重试。",
+    "chooseBestTool": "选择最适合您业务需求的工具",
+    "done": "完成",
+    "split": "拆分",
+    "saving": "保存中...",
+    "signing": "签名中...",
+    "splitting": "拆分中...",
+    "convertFromPdf": "从PDF转换",
+    "convertToPdf": "转换为PDF",
+    "convertImage": "转换图片",
+    "otherFormats": "其他格式",
+    "editSuccess": "编辑成功！",
+    "editSuccessMessage": "您的PDF已成功编辑，可以下载了。",
+    "whatsNext": "接下来做什么？",
+    "downloadEditedFile": "下载您编辑的文件",
+    "editAnotherFile": "编辑另一个文件",
+    "startNew": "开始新的",
+    "fileId": "文件ID",
+    "toolNotFound": "未找到工具"
+  },
+  "errors": {
+    "oops": "糟糕！",
+    "somethingWentWrong": "出错了",
+    "pageNotFound": "页面未找到",
+    "pageNotExist": "您要查找的页面不存在。",
+    "errorLoadingPage": "加载此页面时出错。请重试。",
+    "errorLoadingApp": "加载应用程序时出错。请重试。",
+    "tryAgain": "重试",
+    "goHome": "返回首页",
+    "goToHomePage": "转到首页",
+    "errorDetails": "错误详情（仅开发环境）"
+  },
+  "tools": {
+    "pdfToWord": "PDF转Word",
+    "pdfToExcel": "PDF转Excel",
+    "pdfToPptx": "PDF转PowerPoint",
+    "pdfToPng": "PDF转PNG",
+    "pdfToJpg": "PDF转JPG",
+    "pdfToEpub": "PDF转EPUB",
+    "pdfToMobi": "PDF转MOBI",
+    "pdfToTxt": "PDF转TXT",
+    "pdfToHtml": "PDF转HTML",
+    "pdfToSvg": "PDF转SVG",
+    "pdfToTiff": "PDF转TIFF",
+    "pdfToWebp": "PDF转WebP",
+    "pdfToAvif": "PDF转AVIF",
+    "pdfToEps": "PDF转EPS",
+    "pdfToDxf": "PDF转DXF",
+    "pdfToAzw3": "PDF转AZW3",
+    "wordToPdf": "Word转PDF",
+    "excelToPdf": "Excel转PDF",
+    "pptxToPdf": "PPTX转PDF",
+    "pngToPdf": "PNG转PDF",
+    "jpgToPdf": "JPG转PDF",
+    "epubToPdf": "EPUB转PDF",
+    "mobiToPdf": "MOBI转PDF",
+    "avifToPdf": "AVIF转PDF",
+    "avifToPdfJpg": "AVIF转PDF",
+    "pngToAvif": "PNG转AVIF",
+    "jpgToAvif": "JPG转AVIF",
+    "avifToPng": "AVIF转PNG",
+    "avifToJpg": "AVIF转JPG",
+    "epubToMobi": "EPUB转MOBI",
+    "mobiToEpub": "MOBI转EPUB",
+    "editPdf": "编辑PDF",
+    "signPdf": "签名PDF",
+    "addWatermark": "添加水印",
+    "rotatePdf": "旋转PDF",
+    "mergePdf": "合并PDF",
+    "splitPdf": "拆分PDF",
+    "deletePages": "删除页面",
+    "compressPdf": "压缩PDF",
+    "cropPdf": "裁剪PDF",
+    "fillForm": "填写表单",
+    "fillPdf": "填写PDF",
+    "createForm": "创建表单",
+    "imageToText": "图片转文字",
+    "mergeImages": "合并图片",
+    "pdfOcr": "PDF OCR",
+    "pdfToImage": "PDF转图片",
+    "imageToPdf": "图片转PDF",
+    "pdfToDoc": "PDF转DOC"
+  },
+  "toolsSection": {
+    "allPdfTools": "所有PDF工具",
+    "subtitle": "在一个地方完成所有PDF操作",
+    "splitAndMerge": "拆分和合并",
+    "w9": "W-9",
+    "ds11": "DS-11",
+    "1099misc": "1099-MISC",
+    "viewAllForms": "查看所有表单",
+    "ctaText": "需要其他功能？我们提供50多种PDF工具。",
+    "viewAllTools": "查看所有工具"
+  },
+  "toolPages": {
+    "home": {
+      "title": "PDF转换器和编辑器",
+      "subtitle": "轻松转换、编辑和管理您的PDF。每月处理超过100万份文件！"
+    },
+    "signPdf": {
+      "title": "在线PDF签名",
+      "subtitle": "安全地在线签署您的文档。上传文件开始使用！"
+    },
+    "splitPdf": {
+      "title": "在线拆分PDF",
+      "subtitle": "轻松将PDF拆分为多个文件。上传文件开始使用！"
+    },
+    "compressPdf": {
+      "title": "PDF压缩器",
+      "subtitle": "我们已经压缩了775,000个文件 — 让我们帮您处理"
+    },
+    "mergePdf": {
+      "title": "合并PDF文件",
+      "subtitle": "将多个PDF文件合并为一个。上传您的文件开始使用！"
+    },
+    "pdfToWord": {
+      "title": "PDF转Word转换器",
+      "subtitle": "我们已经帮助转换了775,000个文件 — 让我们帮您处理"
+    },
+    "pdfToPng": {
+      "title": "PDF转PNG转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 您的可能是下一个"
+    },
+    "pdfToJpg": {
+      "title": "PDF转JPG转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 您的可能是下一个"
+    },
+    "pdfToEpub": {
+      "title": "PDF转EPUB转换器",
+      "subtitle": "我们已经帮助转换了775,000个文件 — 让我们帮您处理"
+    },
+    "pdfToExcel": {
+      "title": "PDF转Excel转换器",
+      "subtitle": "我们已经转换了775K个PDF — 为什么不把您的作为下一个？"
+    },
+    "pdfToPptx": {
+      "title": "PDF转PPTX转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 您的可能是下一个"
+    },
+    "wordToPdf": {
+      "title": "Word转PDF转换器",
+      "subtitle": "我们已经帮助转换了775,000个文件 — 让我们帮您处理"
+    },
+    "jpgToPdf": {
+      "title": "JPG转PDF转换器",
+      "subtitle": "我们已经处理了75,000个JPG文件。让我们处理您的。"
+    },
+    "pngToPdf": {
+      "title": "PNG转PDF转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 您的可能是下一个"
+    },
+    "epubToPdf": {
+      "title": "EPUB转PDF转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 现在让我们帮您处理"
+    },
+    "pdfToTxt": {
+      "title": "PDF转TXT转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 您的可能是下一个"
+    },
+    "pdfToHtml": {
+      "title": "PDF转HTML转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 您的可能是下一个"
+    },
+    "pdfToSvg": {
+      "title": "PDF转SVG转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 您的可能是下一个"
+    },
+    "pdfToTiff": {
+      "title": "PDF转TIFF转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 您的可能是下一个"
+    },
+    "pdfToWebp": {
+      "title": "PDF转WebP转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 您的可能是下一个"
+    },
+    "pdfToAvif": {
+      "title": "PDF转AVIF转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 您的可能是下一个"
+    },
+    "pdfToEps": {
+      "title": "PDF转EPS转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 您的可能是下一个"
+    },
+    "pdfToDxf": {
+      "title": "PDF转DXF转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 您的可能是下一个"
+    },
+    "pdfToAzw3": {
+      "title": "PDF转AZW3转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 您的可能是下一个"
+    },
+    "pdfToMobi": {
+      "title": "PDF转MOBI转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 您的可能是下一个"
+    },
+    "pdfToDoc": {
+      "title": "PDF转DOC转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 您的可能是下一个"
+    },
+    "excelToPdf": {
+      "title": "Excel转PDF转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 您的可能是下一个"
+    },
+    "pptxToPdf": {
+      "title": "PPTX转PDF转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 您的可能是下一个"
+    },
+    "mobiToPdf": {
+      "title": "MOBI转PDF转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 您的可能是下一个"
+    },
+    "avifToPdf": {
+      "title": "AVIF转PDF转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 您的可能是下一个"
+    },
+    "pngToAvif": {
+      "title": "PNG转AVIF转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 您的可能是下一个"
+    },
+    "jpgToAvif": {
+      "title": "JPG转AVIF转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 您的可能是下一个"
+    },
+    "avifToPng": {
+      "title": "AVIF转PNG转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 您的可能是下一个"
+    },
+    "avifToJpg": {
+      "title": "AVIF转JPG转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 您的可能是下一个"
+    },
+    "epubToMobi": {
+      "title": "EPUB转MOBI转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 您的可能是下一个"
+    },
+    "mobiToEpub": {
+      "title": "MOBI转EPUB转换器",
+      "subtitle": "我们已经转换了775,000个文件 — 您的可能是下一个"
+    },
+    "pdfOcr": {
+      "title": "PDF OCR工具",
+      "subtitle": "使用OCR技术从PDF中提取文本。上传文件开始使用！"
+    },
+    "pdfToImage": {
+      "title": "PDF转图片转换器",
+      "subtitle": "将PDF页面转换为图片。上传文件开始使用！"
+    },
+    "imageToPdf": {
+      "title": "图片转PDF转换器",
+      "subtitle": "将图片转换为PDF。上传您的文件开始使用！"
+    }
+  },
+  "navbar": {
+    "convertFromPdf": "从PDF转换",
+    "convertToPdf": "转换为PDF",
+    "convertImage": "转换图片",
+    "convertEbook": "转换电子书",
+    "editingTools": "编辑工具",
+    "myDocuments": "我的文档",
+    "myAccount": "我的账户",
+    "help": "帮助",
+    "termsConditions": "条款和条件",
+    "settings": "设置",
+    "logOut": "登出",
+    "upgradePlan": "升级计划",
+    "noSubscription": "无订阅",
+    "profileDetails": "个人资料详情"
+  },
+  "footer": {
+    "editPdf": "编辑PDF",
+    "convertFromPdf": "从PDF转换",
+    "convertToPdf": "转换为PDF",
+    "disclaimer": "免责声明",
+    "privacyPolicy": "隐私政策",
+    "termsOfService": "服务条款",
+    "sitemap": "网站地图",
+    "allRightsReserved": "© 2025 PDFEZY 保留所有权利。",
+    "companyDescription": "您的一站式PDF解决方案，轻松安全地转换、编辑和管理文档。",
+    "stayUpdated": "保持更新",
+    "newsletterDescription": "获取最新更新和PDF技巧，直接发送到您的收件箱。",
+    "emailPlaceholder": "输入您的邮箱",
+    "subscribe": "订阅",
+    "followUs": "关注我们",
+    "language": "语言",
+    "selectLanguage": "选择您的语言",
+    "email": "邮箱",
+    "phone": "电话",
+    "address": "地址"
+  },
+  "auth": {
+    "email": "邮箱",
+    "password": "密码",
+    "confirmPassword": "确认密码",
+    "forgotPassword": "忘记密码？",
+    "resetPassword": "重置密码",
+    "signIn": "登录",
+    "signUp": "注册",
+    "alreadyHaveAccount": "已有账户？",
+    "dontHaveAccount": "没有账户？",
+    "login": "登录",
+    "loggingIn": "登录中...",
+    "emailAddress": "邮箱地址",
+    "enterEmailAddress": "输入您的邮箱地址",
+    "emailAlreadyRegistered": "此邮箱已注册。请",
+    "logIn": "登录"
+  },
+  "account": {
+    "membership": "会员资格",
+    "noSubscription": "您没有订阅。",
+    "unlockAllTools": "解锁所有PDF工具！",
+    "fullAccess": "获得我们高级编辑和转换功能的完全访问权限。",
+    "subscribeNow": "立即订阅以简化您的文档任务",
+    "subscribe": "订阅",
+    "account": "账户",
+    "betterExperience": "通过保持信息最新，在PDF House上获得更好的体验。",
+    "importantUpdates": "您将收到重要的产品更新和必要的账户通知，包括付款收据。",
+    "paymentMethod": "支付方式",
+    "saveTime": "通过在文件中保存当前信用卡来节省时间。",
+    "cardNumber": "卡号",
+    "notSpecified": "未指定",
+    "activeSubscription": "有效订阅",
+    "subscriptionActive": "您的订阅当前有效，您可以完全访问所有功能。",
+    "plan": "计划",
+    "expiryDate": "到期日期",
+    "subscriptionType": "订阅类型"
+  },
+  "plan": {
+    "choosePlan": "选择计划以下载您的文件",
+    "continue": "继续",
+    "annualPlan": "年度计划",
+    "getStarted": "开始使用",
+    "mostPopular": "最受欢迎"
+  },
+  "whyUs": {
+    "title": "为什么TheBestPDF是您团队的首选",
+    "openness": "开放性",
+    "opennessDesc": "致力于长期合作伙伴关系，我们确保24/7的客户支持可用性。",
+    "expertise": "专业性",
+    "expertiseDesc": "我们汇聚创意人才，提供涵盖您业务挑战的综合解决方案。",
+    "growth": "成长",
+    "growthDesc": "我们通过跟上最新技术进步来赋能组织，旨在在我们的领域追求卓越。",
+    "diversity": "多样性",
+    "diversityDesc": "医疗、法律、金融、教育 — 无论您的行业是什么，我们的工具都可以简化您的工作流程。"
+  },
+  "securityPriority": {
+    "title": "安全优先",
+    "description": "您的数据安全是我们的首要任务。我们实施企业级加密和安全措施来保护您的文档并确保完全隐私。"
+  },
+  "coreValues": {
+    "title": "TheBestPDF背后的核心价值观"
+  },
+  "compression": {
+    "compressFile": "压缩文件",
+    "high": "高",
+    "highDesc": "标准质量，较小尺寸",
+    "highReduction": "约小40%",
+    "basic": "基本",
+    "basicDesc": "更好的质量，中等尺寸",
+    "basicReduction": "约小20%",
+    "low": "低",
+    "lowDesc": "最高质量，较大尺寸",
+    "lowReduction": "约小10%",
+    "compressionLevel": "压缩级别",
+    "selectLevel": "选择您的压缩级别并压缩文件。",
+    "compress": "压缩",
+    "compressing": "压缩中..."
+  },
+  "email": {
+    "enterEmail": "输入您的邮箱地址",
+    "downloadLink": "下载链接将发送到您的邮箱",
+    "getStarted": "开始使用"
+  },
+  "faq": {
+    "title": "常见问题",
+    "multipleUsers": "我们公司的多个用户可以同时使用该服务吗？",
+    "multipleUsersAnswer": "简单！创建一个账户，整个团队都可以使用我们的工具。要开始订阅，只需注册，进行一些文件调整，点击\"下载\"，然后选择最适合您的计划。",
+    "customerSupport": "您是否提供技术问题的客户支持？",
+    "customerSupportAnswer": "是的，我们的支持团队24/7可用，协助您遇到的任何技术问题。",
+    "processingSpeed": "文档在您的平台上处理速度有多快？",
+    "processingSpeedAnswer": "文档通常在几秒钟内处理完成，即使是大文件也是如此。",
+    "moneyBack": "您有退款保证吗？",
+    "moneyBackAnswer": "是的，如果您对我们的服务不满意，我们提供14天退款保证。",
+    "ctaTitle": "想要提升您的业务运营？",
+    "ctaDescription": "通过sales@thebestpdf.com联系我们，让我们探索我们的产品如何革新您的企业文书工作。加入不断壮大的成功企业社区，利用TheBestPDF保持领先！",
+    "ctaButton": "开始使用",
+    "loading": "加载中..."
+  },
+  "howItWorks": {
+    "title": "如何压缩PDF",
+    "step1": "登录TheBestPDF并转到PDF压缩工具",
+    "step2": "上传或将PDF拖放到界面中",
+    "step3": "就是这样！您新压缩的文件已准备好下载，可以在您团队的账户中找到"
+  },
+  "featureCTA": {
+    "title": "PDFEZY为各种规模的团队提供顶级文件管理解决方案。",
+    "subtitle": "欢迎使用我们尖端的SaaS平台，用于在线文档编辑和转换。专为满足企业和企业家的需求而设计。"
+  },
+  "files": {
+    "searchFiles": "搜索文件",
+    "pdfConverter": "PDF转换器",
+    "editPdf": "编辑PDF",
+    "signPdf": "签名PDF",
+    "ocrPdf": "OCR PDF",
+    "mergePdf": "合并PDF",
+    "compressPdf": "压缩PDF",
+    "splitPdf": "拆分PDF",
+    "aiSummarizer": "AI摘要器",
+    "fillPdf": "填写PDF",
+    "createForm": "创建表单",
+    "editForm": "编辑表单",
+    "summarizePdf": "PDF摘要",
+    "extractHighlights": "提取高亮"
+  },
+  "features": {
+    "comprehensiveSuite": "综合套件",
+    "unlimitedDocuments": "无限文档"
+  },
+  "payment": {
+    "paymentDetails": "支付详情",
+    "documentPreview": "文档预览",
+    "termsAndService": "使用条款和服务",
+    "privacyPolicy": "隐私政策",
+    "billingEmail": "billing@pdfezy.com",
+    "agreementText": "通过勾选此框，您同意使用条款和服务、隐私政策，并确认如果您在7天试用期结束前至少24小时不取消（费用为CAD$1.95），您将被收取CAD$49每28天，直到您通过发送电子邮件至billing@pdfezy.com联系我们的客户支持团队取消订阅。付款将从您在上面指定的卡中扣除。"
+  },
+  "pdfViewer": {
+    "thumbnails": "缩略图",
+    "outline": "大纲",
+    "annotations": "注释",
+    "zoomOut": "缩小",
+    "zoomIn": "放大",
+    "pan": "平移",
+    "highlight": "高亮",
+    "draw": "绘制",
+    "line": "线条",
+    "arrow": "箭头",
+    "rectangle": "矩形",
+    "ellipse": "椭圆",
+    "polygon": "多边形",
+    "sign": "签名",
+    "stamp": "印章",
+    "text": "文本",
+    "note": "备注",
+    "comment": "评论",
+    "eraser": "橡皮擦",
+    "undo": "撤销",
+    "redo": "重做",
+    "search": "搜索",
+    "print": "打印",
+    "export": "导出",
+    "edit": "编辑"
+  },
+  "reset": {
+    "invalidResetLink": "无效的重置链接",
+    "resetLinkInvalid": "密码重置链接无效或已过期。",
+    "backToLogin": "返回登录",
+    "resetPassword": "重置密码",
+    "newPassword": "新密码",
+    "confirmNewPassword": "确认新密码",
+    "passwordsDoNotMatch": "密码不匹配",
+    "resetSuccessful": "密码重置成功！",
+    "resetFailed": "密码重置失败。请重试。"
+  },
+  "mergePdf": {
+    "actionButton": "合并文件",
+    "minFilesError": "请至少选择2个文件进行合并",
+    "dropText": "将PDF文件拖放到此处",
+    "uploadText": "上传您的文件",
+    "processingFiles": "处理文件中...",
+    "mergingFiles": "合并PDF中..."
+  }
+}

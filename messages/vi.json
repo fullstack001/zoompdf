@@ -1,0 +1,550 @@
+{
+  "navigation": {
+    "home": "Trang chủ",
+    "convert": "Chuyển đổi",
+    "edit": "Chỉnh sửa",
+    "compress": "Nén",
+    "sign": "Ký",
+    "merge": "Gộp",
+    "split": "Chia",
+    "files": "Tệp",
+    "account": "Tài khoản",
+    "login": "Đăng nhập",
+    "logout": "Đăng xuất",
+    "pdfConverter": "BỘ CHUYỂN ĐỔI PDF",
+    "pdfEditor": "TRÌNH CHỈNH SỬA PDF",
+    "language": "Ngôn ngữ"
+  },
+  "languages": {
+    "en": "English",
+    "zh": "中文",
+    "cs": "Čeština",
+    "nl": "Nederlands",
+    "fr": "Français",
+    "de": "Deutsch",
+    "el": "Ελληνικά",
+    "hu": "Magyar",
+    "id": "Bahasa Indonesia",
+    "it": "Italiano",
+    "ja": "日本語",
+    "ko": "한국어",
+    "ms": "Bahasa Melayu",
+    "pl": "Polski",
+    "pt": "Português",
+    "ro": "Română",
+    "sr": "Srpski",
+    "es": "Español",
+    "se": "Svenska",
+    "th": "แบบไทย",
+    "tr": "Türkçe",
+    "uk": "Українська",
+    "vi": "Tiếng Việt",
+    "fi": "Suomi"
+  },
+  "pages": {
+    "home": "Trang chủ",
+    "convertPdf": "Chuyển đổi PDF",
+    "editPdf": "Chỉnh sửa PDF",
+    "compressPdf": "Nén PDF",
+    "signPdf": "Ký PDF",
+    "mergePdf": "Gộp PDF",
+    "splitPdf": "Chia PDF",
+    "files": "Tệp",
+    "account": "Tài khoản của tôi",
+    "login": "Đăng nhập",
+    "payment": "Thanh toán",
+    "plan": "Gói"
+  },
+  "common": {
+    "upload": "Tải lên",
+    "download": "Tải xuống",
+    "convert": "Chuyển đổi",
+    "edit": "Chỉnh sửa",
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "delete": "Xóa",
+    "back": "Quay lại",
+    "next": "Tiếp theo",
+    "previous": "Trước",
+    "loading": "Đang tải...",
+    "error": "Lỗi",
+    "success": "Thành công",
+    "chooseFile": "Chọn tệp",
+    "dragAndDrop": "Kéo và thả tệp của bạn vào đây",
+    "or": "hoặc",
+    "browse": "Duyệt",
+    "processing": "Đang xử lý...",
+    "processingFile": "Chúng tôi đang xử lý tệp của bạn",
+    "configNotFound": "Không tìm thấy cấu hình cho trang chủ.",
+    "uploadFailed": "Tải tệp lên thất bại. Vui lòng thử lại.",
+    "chooseBestTool": "Chọn công cụ tốt nhất cho nhu cầu kinh doanh của bạn",
+    "done": "Hoàn thành",
+    "split": "Chia",
+    "saving": "Đang lưu...",
+    "signing": "Đang ký...",
+    "splitting": "Đang chia...",
+    "convertFromPdf": "Chuyển đổi từ PDF",
+    "convertToPdf": "Chuyển đổi sang PDF",
+    "convertImage": "Chuyển đổi Hình ảnh",
+    "otherFormats": "Định dạng Khác",
+    "editSuccess": "Chỉnh sửa Thành công!",
+    "editSuccessMessage": "PDF của bạn đã được chỉnh sửa thành công và sẵn sàng để tải xuống.",
+    "whatsNext": "Tiếp theo là gì?",
+    "downloadEditedFile": "Tải xuống tệp đã chỉnh sửa của bạn",
+    "editAnotherFile": "Chỉnh sửa tệp khác",
+    "startNew": "Bắt đầu Mới",
+    "fileId": "ID Tệp",
+    "toolNotFound": "Không tìm thấy công cụ"
+  },
+  "errors": {
+    "oops": "Ối!",
+    "somethingWentWrong": "Đã xảy ra lỗi",
+    "pageNotFound": "Không Tìm Thấy Trang",
+    "pageNotExist": "Trang bạn đang tìm kiếm không tồn tại.",
+    "errorLoadingPage": "Chúng tôi gặp lỗi khi tải trang này. Vui lòng thử lại.",
+    "errorLoadingApp": "Chúng tôi gặp lỗi khi tải ứng dụng. Vui lòng thử lại.",
+    "tryAgain": "Thử lại",
+    "goHome": "Về Trang chủ",
+    "goToHomePage": "Đi đến trang chủ",
+    "errorDetails": "Chi tiết lỗi (chỉ phát triển)"
+  },
+  "tools": {
+    "pdfToWord": "PDF sang Word",
+    "pdfToExcel": "PDF sang Excel",
+    "pdfToPptx": "PDF sang PowerPoint",
+    "pdfToPng": "PDF sang PNG",
+    "pdfToJpg": "PDF sang JPG",
+    "pdfToEpub": "PDF sang EPUB",
+    "pdfToMobi": "PDF sang MOBI",
+    "pdfToTxt": "PDF sang TXT",
+    "pdfToHtml": "PDF sang HTML",
+    "pdfToSvg": "PDF sang SVG",
+    "pdfToTiff": "PDF sang TIFF",
+    "pdfToWebp": "PDF sang WebP",
+    "pdfToAvif": "PDF sang AVIF",
+    "pdfToEps": "PDF sang EPS",
+    "pdfToDxf": "PDF sang DXF",
+    "pdfToAzw3": "PDF sang AZW3",
+    "wordToPdf": "Word sang PDF",
+    "excelToPdf": "Excel sang PDF",
+    "pptxToPdf": "PPTX sang PDF",
+    "pngToPdf": "PNG sang PDF",
+    "jpgToPdf": "JPG sang PDF",
+    "epubToPdf": "EPUB sang PDF",
+    "mobiToPdf": "MOBI sang PDF",
+    "avifToPdf": "AVIF sang PDF",
+    "avifToPdfJpg": "AVIF sang PDF",
+    "pngToAvif": "PNG sang AVIF",
+    "jpgToAvif": "JPG sang AVIF",
+    "avifToPng": "AVIF sang PNG",
+    "avifToJpg": "AVIF sang JPG",
+    "epubToMobi": "EPUB sang MOBI",
+    "mobiToEpub": "MOBI sang EPUB",
+    "editPdf": "Chỉnh sửa PDF",
+    "signPdf": "Ký PDF",
+    "addWatermark": "Thêm hình mờ",
+    "rotatePdf": "Xoay PDF",
+    "mergePdf": "Gộp PDF",
+    "splitPdf": "Chia PDF",
+    "deletePages": "Xóa trang",
+    "compressPdf": "Nén PDF",
+    "cropPdf": "Cắt PDF",
+    "fillForm": "Điền Biểu mẫu",
+    "fillPdf": "Điền PDF",
+    "createForm": "Tạo Biểu mẫu",
+    "imageToText": "Hình ảnh sang Văn bản",
+    "mergeImages": "Gộp Hình ảnh",
+    "pdfOcr": "PDF OCR",
+    "pdfToImage": "PDF sang Hình ảnh",
+    "imageToPdf": "Hình ảnh sang PDF",
+    "pdfToDoc": "PDF sang DOC"
+  },
+  "toolsSection": {
+    "allPdfTools": "Tất cả Công cụ PDF",
+    "subtitle": "Mọi thứ bạn cần để làm việc với PDF ở một nơi",
+    "splitAndMerge": "Chia và Gộp",
+    "w9": "W-9",
+    "ds11": "DS-11",
+    "1099misc": "1099-MISC",
+    "viewAllForms": "Xem Tất cả Biểu mẫu",
+    "ctaText": "Cần thứ gì khác? Chúng tôi có hơn 50+ công cụ PDF có sẵn.",
+    "viewAllTools": "Xem Tất cả Công cụ"
+  },
+  "toolPages": {
+    "home": {
+      "title": "Bộ Chuyển đổi và Trình chỉnh sửa PDF",
+      "subtitle": "Chuyển đổi, chỉnh sửa và quản lý PDF của bạn một cách dễ dàng. Hơn 1M tệp được xử lý hàng tháng!"
+    },
+    "signPdf": {
+      "title": "Ký PDF Trực tuyến",
+      "subtitle": "Ký tài liệu của bạn trực tuyến một cách an toàn. Tải lên một tệp để bắt đầu!"
+    },
+    "splitPdf": {
+      "title": "Chia PDF Trực tuyến",
+      "subtitle": "Chia PDF của bạn thành nhiều tệp một cách dễ dàng. Tải lên một tệp để bắt đầu!"
+    },
+    "compressPdf": {
+      "title": "Bộ Nén PDF",
+      "subtitle": "Chúng tôi đã nén 775.000 tệp — hãy để chúng tôi giúp bạn với tệp của bạn"
+    },
+    "mergePdf": {
+      "title": "Gộp Tệp PDF",
+      "subtitle": "Kết hợp nhiều tệp PDF thành một. Tải lên tệp của bạn để bắt đầu!"
+    },
+    "pdfToWord": {
+      "title": "Bộ Chuyển đổi PDF sang Word",
+      "subtitle": "Chúng tôi đã giúp chuyển đổi 775.000 tệp — hãy để chúng tôi giúp bạn với tệp của bạn"
+    },
+    "pdfToPng": {
+      "title": "Bộ Chuyển đổi PDF sang PNG",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — tệp của bạn có thể là tiếp theo"
+    },
+    "pdfToJpg": {
+      "title": "Bộ Chuyển đổi PDF sang JPG",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — tệp của bạn có thể là tiếp theo"
+    },
+    "pdfToEpub": {
+      "title": "Bộ Chuyển đổi PDF sang EPUB",
+      "subtitle": "Chúng tôi đã giúp chuyển đổi 775.000 tệp — hãy để chúng tôi giúp bạn với tệp của bạn"
+    },
+    "pdfToExcel": {
+      "title": "Bộ Chuyển đổi PDF sang Excel",
+      "subtitle": "Chúng tôi đã chuyển đổi 775K PDF — tại sao không làm tệp của bạn là tiếp theo?"
+    },
+    "pdfToPptx": {
+      "title": "Bộ Chuyển đổi PDF sang PPTX",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — tệp của bạn có thể là tiếp theo"
+    },
+    "wordToPdf": {
+      "title": "Bộ Chuyển đổi Word sang PDF",
+      "subtitle": "Chúng tôi đã giúp chuyển đổi 775.000 tệp — hãy để chúng tôi giúp bạn với tệp của bạn"
+    },
+    "jpgToPdf": {
+      "title": "Bộ Chuyển đổi JPG sang PDF",
+      "subtitle": "Chúng tôi đã xử lý 75.000 JPG cho đến nay. Hãy làm tệp của bạn là tiếp theo."
+    },
+    "pngToPdf": {
+      "title": "Bộ Chuyển đổi PNG sang PDF",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — tệp của bạn có thể là tiếp theo"
+    },
+    "epubToPdf": {
+      "title": "Bộ Chuyển đổi EPUB sang PDF",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — bây giờ hãy để chúng tôi giúp bạn với tệp của bạn"
+    },
+    "pdfToTxt": {
+      "title": "Bộ Chuyển đổi PDF sang TXT",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — tệp của bạn có thể là tiếp theo"
+    },
+    "pdfToHtml": {
+      "title": "Bộ Chuyển đổi PDF sang HTML",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — tệp của bạn có thể là tiếp theo"
+    },
+    "pdfToSvg": {
+      "title": "Bộ Chuyển đổi PDF sang SVG",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — tệp của bạn có thể là tiếp theo"
+    },
+    "pdfToTiff": {
+      "title": "Bộ Chuyển đổi PDF sang TIFF",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — tệp của bạn có thể là tiếp theo"
+    },
+    "pdfToWebp": {
+      "title": "Bộ Chuyển đổi PDF sang WebP",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — tệp của bạn có thể là tiếp theo"
+    },
+    "pdfToAvif": {
+      "title": "Bộ Chuyển đổi PDF sang AVIF",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — tệp của bạn có thể là tiếp theo"
+    },
+    "pdfToEps": {
+      "title": "Bộ Chuyển đổi PDF sang EPS",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — tệp của bạn có thể là tiếp theo"
+    },
+    "pdfToDxf": {
+      "title": "Bộ Chuyển đổi PDF sang DXF",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — tệp của bạn có thể là tiếp theo"
+    },
+    "pdfToAzw3": {
+      "title": "Bộ Chuyển đổi PDF sang AZW3",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — tệp của bạn có thể là tiếp theo"
+    },
+    "pdfToMobi": {
+      "title": "Bộ Chuyển đổi PDF sang MOBI",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — tệp của bạn có thể là tiếp theo"
+    },
+    "pdfToDoc": {
+      "title": "Bộ Chuyển đổi PDF sang DOC",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — tệp của bạn có thể là tiếp theo"
+    },
+    "excelToPdf": {
+      "title": "Bộ Chuyển đổi Excel sang PDF",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — tệp của bạn có thể là tiếp theo"
+    },
+    "pptxToPdf": {
+      "title": "Bộ Chuyển đổi PPTX sang PDF",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — tệp của bạn có thể là tiếp theo"
+    },
+    "mobiToPdf": {
+      "title": "Bộ Chuyển đổi MOBI sang PDF",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — tệp của bạn có thể là tiếp theo"
+    },
+    "avifToPdf": {
+      "title": "Bộ Chuyển đổi AVIF sang PDF",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — tệp của bạn có thể là tiếp theo"
+    },
+    "pngToAvif": {
+      "title": "Bộ Chuyển đổi PNG sang AVIF",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — tệp của bạn có thể là tiếp theo"
+    },
+    "jpgToAvif": {
+      "title": "Bộ Chuyển đổi JPG sang AVIF",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — tệp của bạn có thể là tiếp theo"
+    },
+    "avifToPng": {
+      "title": "Bộ Chuyển đổi AVIF sang PNG",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — tệp của bạn có thể là tiếp theo"
+    },
+    "avifToJpg": {
+      "title": "Bộ Chuyển đổi AVIF sang JPG",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — tệp của bạn có thể là tiếp theo"
+    },
+    "epubToMobi": {
+      "title": "Bộ Chuyển đổi EPUB sang MOBI",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — tệp của bạn có thể là tiếp theo"
+    },
+    "mobiToEpub": {
+      "title": "Bộ Chuyển đổi MOBI sang EPUB",
+      "subtitle": "Chúng tôi đã chuyển đổi 775.000 tệp — tệp của bạn có thể là tiếp theo"
+    },
+    "pdfOcr": {
+      "title": "Công cụ PDF OCR",
+      "subtitle": "Trích xuất văn bản từ PDF bằng công nghệ OCR. Tải lên một tệp để bắt đầu!"
+    },
+    "pdfToImage": {
+      "title": "Bộ Chuyển đổi PDF sang Hình ảnh",
+      "subtitle": "Chuyển đổi trang PDF sang hình ảnh. Tải lên một tệp để bắt đầu!"
+    },
+    "imageToPdf": {
+      "title": "Bộ Chuyển đổi Hình ảnh sang PDF",
+      "subtitle": "Chuyển đổi hình ảnh sang PDF. Tải lên tệp của bạn để bắt đầu!"
+    }
+  },
+  "navbar": {
+    "convertFromPdf": "Chuyển đổi từ PDF",
+    "convertToPdf": "Chuyển đổi sang PDF",
+    "convertImage": "Chuyển đổi Hình ảnh",
+    "convertEbook": "Chuyển đổi Sách điện tử",
+    "editingTools": "Công cụ Chỉnh sửa",
+    "myDocuments": "Tài liệu của tôi",
+    "myAccount": "Tài khoản của tôi",
+    "help": "Trợ giúp",
+    "termsConditions": "Điều khoản & Điều kiện",
+    "settings": "Cài đặt",
+    "logOut": "Đăng xuất",
+    "upgradePlan": "Nâng cấp Gói",
+    "noSubscription": "Không có đăng ký",
+    "profileDetails": "Chi tiết Hồ sơ"
+  },
+  "footer": {
+    "editPdf": "Chỉnh sửa PDF",
+    "convertFromPdf": "Chuyển đổi từ PDF",
+    "convertToPdf": "Chuyển đổi sang PDF",
+    "disclaimer": "Tuyên bố từ chối trách nhiệm",
+    "privacyPolicy": "Chính sách Bảo mật",
+    "termsOfService": "Điều khoản Dịch vụ",
+    "sitemap": "Sơ đồ Trang web",
+    "allRightsReserved": "© 2025 PDFEZY Bảo lưu mọi quyền.",
+    "companyDescription": "Giải pháp PDF tất cả trong một của bạn để chuyển đổi, chỉnh sửa và quản lý tài liệu một cách dễ dàng và an toàn.",
+    "stayUpdated": "Cập nhật",
+    "newsletterDescription": "Nhận các cập nhật mới nhất và mẹo PDF được gửi đến hộp thư của bạn.",
+    "emailPlaceholder": "Nhập email của bạn",
+    "subscribe": "Đăng ký",
+    "followUs": "Theo dõi Chúng tôi",
+    "language": "Ngôn ngữ",
+    "selectLanguage": "Chọn ngôn ngữ của bạn",
+    "email": "Email",
+    "phone": "Điện thoại",
+    "address": "Địa chỉ"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Mật khẩu",
+    "confirmPassword": "Xác nhận Mật khẩu",
+    "forgotPassword": "Quên Mật khẩu?",
+    "resetPassword": "Đặt lại Mật khẩu",
+    "signIn": "Đăng nhập",
+    "signUp": "Đăng ký",
+    "alreadyHaveAccount": "Đã có tài khoản?",
+    "dontHaveAccount": "Chưa có tài khoản?",
+    "login": "Đăng nhập",
+    "loggingIn": "Đang đăng nhập...",
+    "emailAddress": "Địa chỉ email",
+    "enterEmailAddress": "Nhập Địa chỉ Email của Bạn",
+    "emailAlreadyRegistered": "Email này đã được đăng ký. Vui lòng",
+    "logIn": "đăng nhập"
+  },
+  "account": {
+    "membership": "Thành viên",
+    "noSubscription": "Bạn không có đăng ký.",
+    "unlockAllTools": "Mở khóa tất cả công cụ PDF!",
+    "fullAccess": "Nhận quyền truy cập đầy đủ vào các tính năng chỉnh sửa và chuyển đổi nâng cao của chúng tôi.",
+    "subscribeNow": "Đăng ký ngay để tối ưu hóa các tác vụ tài liệu của bạn",
+    "subscribe": "Đăng ký",
+    "account": "Tài khoản",
+    "betterExperience": "Có trải nghiệm tốt hơn trên PDF House bằng cách giữ thông tin của bạn luôn cập nhật.",
+    "importantUpdates": "Bạn sẽ nhận được các cập nhật sản phẩm quan trọng và thông báo tài khoản thiết yếu, bao gồm biên lai thanh toán.",
+    "paymentMethod": "Phương thức Thanh toán",
+    "saveTime": "Tiết kiệm thời gian bằng cách giữ thẻ tín dụng hiện tại trong tệp.",
+    "cardNumber": "Số thẻ",
+    "notSpecified": "Không được chỉ định",
+    "activeSubscription": "Đăng ký Hoạt động",
+    "subscriptionActive": "Đăng ký của bạn hiện đang hoạt động và bạn có quyền truy cập đầy đủ vào tất cả các tính năng.",
+    "plan": "Gói",
+    "expiryDate": "Ngày Hết hạn",
+    "subscriptionType": "Loại Đăng ký"
+  },
+  "plan": {
+    "choosePlan": "Chọn một gói để tải xuống tệp của bạn",
+    "continue": "Tiếp tục",
+    "annualPlan": "Gói Hàng năm",
+    "getStarted": "Bắt đầu",
+    "mostPopular": "Phổ biến Nhất"
+  },
+  "whyUs": {
+    "title": "Tại sao TheBestPDF là lựa chọn hàng đầu cho nhóm của bạn",
+    "openness": "Cởi mở",
+    "opennessDesc": "Phấn đấu cho các quan hệ đối tác dài hạn, chúng tôi đảm bảo hỗ trợ khách hàng 24/7.",
+    "expertise": "Chuyên môn",
+    "expertiseDesc": "Chúng tôi kết hợp các tâm trí sáng tạo để cung cấp các giải pháp tích hợp bao gồm các thách thức kinh doanh của bạn.",
+    "growth": "Tăng trưởng",
+    "growthDesc": "Chúng tôi trao quyền cho các tổ chức bằng cách theo kịp các tiến bộ công nghệ mới nhất, hướng tới sự xuất sắc trong lĩnh vực của chúng tôi.",
+    "diversity": "Đa dạng",
+    "diversityDesc": "Y tế, Pháp lý, Tài chính, Giáo dục — bất kể ngành của bạn là gì, công cụ của chúng tôi có thể tối ưu hóa quy trình làm việc của bạn."
+  },
+  "securityPriority": {
+    "title": "Ưu tiên Bảo mật",
+    "description": "Bảo mật dữ liệu của bạn là ưu tiên hàng đầu của chúng tôi. Chúng tôi triển khai mã hóa cấp doanh nghiệp và các biện pháp bảo mật để bảo vệ tài liệu của bạn và đảm bảo quyền riêng tư hoàn toàn."
+  },
+  "coreValues": {
+    "title": "Giá trị cốt lõi đằng sau TheBestPDF"
+  },
+  "compression": {
+    "compressFile": "Nén tệp",
+    "high": "CAO",
+    "highDesc": "Chất lượng tiêu chuẩn, kích thước nhỏ hơn",
+    "highReduction": "~40% nhỏ hơn",
+    "basic": "CƠ BẢN",
+    "basicDesc": "Chất lượng tốt hơn, kích thước trung bình",
+    "basicReduction": "~20% nhỏ hơn",
+    "low": "THẤP",
+    "lowDesc": "Chất lượng cao nhất, kích thước lớn hơn",
+    "lowReduction": "~10% nhỏ hơn",
+    "compressionLevel": "Mức độ nén",
+    "selectLevel": "Chọn mức độ nén của bạn và nén tệp.",
+    "compress": "Nén",
+    "compressing": "Đang nén..."
+  },
+  "email": {
+    "enterEmail": "Nhập địa chỉ Email của bạn",
+    "downloadLink": "Liên kết tải xuống sẽ được gửi đến email của bạn",
+    "getStarted": "Bắt đầu"
+  },
+  "faq": {
+    "title": "Câu hỏi Thường gặp",
+    "multipleUsers": "Nhiều người dùng từ công ty của chúng tôi có thể sử dụng dịch vụ đồng thời không?",
+    "multipleUsersAnswer": "Dễ dàng! Tạo một tài khoản và toàn bộ nhóm sẽ có thể sử dụng công cụ của chúng tôi. Để bắt đầu với đăng ký, chỉ cần đăng ký, thực hiện một số điều chỉnh tệp, nhấp vào \"Tải xuống,\" và sau đó chọn gói phù hợp nhất với bạn.",
+    "customerSupport": "Bạn có cung cấp hỗ trợ khách hàng cho các vấn đề kỹ thuật không?",
+    "customerSupportAnswer": "Có, nhóm hỗ trợ của chúng tôi có sẵn 24/7 để hỗ trợ với bất kỳ vấn đề kỹ thuật nào bạn gặp phải.",
+    "processingSpeed": "Tài liệu được xử lý nhanh như thế nào trên nền tảng của bạn?",
+    "processingSpeedAnswer": "Tài liệu thường được xử lý trong vài giây, ngay cả đối với các tệp lớn.",
+    "moneyBack": "Bạn có bảo đảm hoàn tiền không?",
+    "moneyBackAnswer": "Có, chúng tôi cung cấp bảo đảm hoàn tiền 14 ngày nếu bạn không hài lòng với dịch vụ của chúng tôi.",
+    "ctaTitle": "Muốn nâng cao hoạt động kinh doanh của bạn?",
+    "ctaDescription": "Liên hệ với chúng tôi tại sales@thebestpdf.com và hãy khám phá cách sản phẩm của chúng tôi có thể cách mạng hóa công việc giấy tờ doanh nghiệp của bạn. Tham gia cộng đồng ngày càng tăng của các doanh nghiệp thành công đang tận dụng TheBestPDF để luôn dẫn đầu!",
+    "ctaButton": "Bắt đầu",
+    "loading": "Đang tải..."
+  },
+  "howItWorks": {
+    "title": "Cách nén PDF",
+    "step1": "Đăng nhập vào TheBestPDF và đi đến công cụ Nén PDF",
+    "step2": "Tải lên hoặc kéo và thả PDF của bạn vào giao diện",
+    "step3": "Vậy là xong! Tệp mới được nén của bạn đã sẵn sàng để tải xuống và có thể được tìm thấy trong tài khoản nhóm của bạn"
+  },
+  "featureCTA": {
+    "title": "PDFEZY cung cấp các giải pháp quản lý tệp hàng đầu cho các nhóm mọi quy mô.",
+    "subtitle": "Chào mừng đến với nền tảng SaaS tiên tiến của chúng tôi để chỉnh sửa và chuyển đổi tài liệu trực tuyến. Được thiết kế để đáp ứng nhu cầu của các doanh nghiệp và doanh nhân."
+  },
+  "files": {
+    "searchFiles": "Tìm kiếm Tệp",
+    "pdfConverter": "Bộ Chuyển đổi PDF",
+    "editPdf": "Chỉnh sửa PDF",
+    "signPdf": "Ký PDF",
+    "ocrPdf": "OCR PDF",
+    "mergePdf": "Gộp PDF",
+    "compressPdf": "Nén PDF",
+    "splitPdf": "Chia PDF",
+    "aiSummarizer": "Công cụ Tóm tắt AI",
+    "fillPdf": "Điền PDF",
+    "createForm": "Tạo Biểu mẫu",
+    "editForm": "Chỉnh sửa Biểu mẫu",
+    "summarizePdf": "Tóm tắt PDF",
+    "extractHighlights": "Trích xuất Điểm nổi bật"
+  },
+  "features": {
+    "comprehensiveSuite": "Bộ Công cụ Toàn diện",
+    "unlimitedDocuments": "Tài liệu không giới hạn"
+  },
+  "payment": {
+    "paymentDetails": "Chi tiết thanh toán",
+    "documentPreview": "Xem trước Tài liệu",
+    "termsAndService": "Điều khoản Sử dụng & Dịch vụ",
+    "privacyPolicy": "Chính sách Bảo mật",
+    "billingEmail": "billing@pdfezy.com",
+    "agreementText": "Bằng cách đánh dấu vào hộp này, bạn đồng ý với Điều khoản Sử dụng & Dịch vụ, Chính sách Bảo mật và xác nhận rằng nếu bạn không hủy ít nhất 24 giờ trước khi kết thúc thử nghiệm 7 ngày với giá CAD$1,95, bạn sẽ bị tính phí CAD$49 mỗi 28 ngày cho đến khi bạn hủy đăng ký bằng cách liên hệ với nhóm hỗ trợ khách hàng của chúng tôi qua email tại billing@pdfezy.com. Thanh toán sẽ được tính từ thẻ bạn đã chỉ định ở trên."
+  },
+  "pdfViewer": {
+    "thumbnails": "Hình thu nhỏ",
+    "outline": "Dàn ý",
+    "annotations": "Chú thích",
+    "zoomOut": "Thu nhỏ",
+    "zoomIn": "Phóng to",
+    "pan": "Di chuyển",
+    "highlight": "Đánh dấu",
+    "draw": "Vẽ",
+    "line": "Đường thẳng",
+    "arrow": "Mũi tên",
+    "rectangle": "Hình chữ nhật",
+    "ellipse": "Hình elip",
+    "polygon": "Đa giác",
+    "sign": "Ký",
+    "stamp": "Con dấu",
+    "text": "Văn bản",
+    "note": "Ghi chú",
+    "comment": "Bình luận",
+    "eraser": "Tẩy",
+    "undo": "Hoàn tác",
+    "redo": "Làm lại",
+    "search": "Tìm kiếm",
+    "print": "In",
+    "export": "Xuất",
+    "edit": "Chỉnh sửa"
+  },
+  "reset": {
+    "invalidResetLink": "Liên kết Đặt lại Không hợp lệ",
+    "resetLinkInvalid": "Liên kết đặt lại mật khẩu không hợp lệ hoặc đã hết hạn.",
+    "backToLogin": "Quay lại Đăng nhập",
+    "resetPassword": "Đặt lại Mật khẩu",
+    "newPassword": "Mật khẩu Mới",
+    "confirmNewPassword": "Xác nhận Mật khẩu Mới",
+    "passwordsDoNotMatch": "Mật khẩu không khớp",
+    "resetSuccessful": "Đặt lại mật khẩu thành công!",
+    "resetFailed": "Đặt lại mật khẩu thất bại. Vui lòng thử lại."
+  },
+  "mergePdf": {
+    "actionButton": "GỘP TỆP",
+    "minFilesError": "Vui lòng chọn ít nhất 2 tệp để gộp",
+    "dropText": "Thả tệp PDF vào đây",
+    "uploadText": "Tải lên Tệp của Bạn",
+    "processingFiles": "Đang xử lý Tệp...",
+    "mergingFiles": "Đang gộp PDF..."
+  }
+}

@@ -1,0 +1,550 @@
+{
+  "navigation": {
+    "home": "Koti",
+    "convert": "Muunna",
+    "edit": "Muokkaa",
+    "compress": "Pakkaus",
+    "sign": "Allekirjoita",
+    "merge": "Yhdistä",
+    "split": "Jaa",
+    "files": "Tiedostot",
+    "account": "Tili",
+    "login": "Kirjaudu",
+    "logout": "Kirjaudu ulos",
+    "pdfConverter": "PDF MUUNTAJA",
+    "pdfEditor": "PDF MUOKKAJA",
+    "language": "Kieli"
+  },
+  "languages": {
+    "en": "English",
+    "zh": "中文",
+    "cs": "Čeština",
+    "nl": "Nederlands",
+    "fr": "Français",
+    "de": "Deutsch",
+    "el": "Ελληνικά",
+    "hu": "Magyar",
+    "id": "Bahasa Indonesia",
+    "it": "Italiano",
+    "ja": "日本語",
+    "ko": "한국어",
+    "ms": "Bahasa Melayu",
+    "pl": "Polski",
+    "pt": "Português",
+    "ro": "Română",
+    "sr": "Srpski",
+    "es": "Español",
+    "se": "Svenska",
+    "th": "แบบไทย",
+    "tr": "Türkçe",
+    "uk": "Українська",
+    "vi": "Tiếng Việt",
+    "fi": "Suomi"
+  },
+  "pages": {
+    "home": "Koti",
+    "convertPdf": "Muunna PDF",
+    "editPdf": "Muokkaa PDF",
+    "compressPdf": "Pakkaa PDF",
+    "signPdf": "Allekirjoita PDF",
+    "mergePdf": "Yhdistä PDF",
+    "splitPdf": "Jaa PDF",
+    "files": "Tiedostot",
+    "account": "Oma Tili",
+    "login": "Kirjaudu",
+    "payment": "Maksu",
+    "plan": "Suunnitelmat"
+  },
+  "common": {
+    "upload": "Lataa",
+    "download": "Lataa",
+    "convert": "Muunna",
+    "edit": "Muokkaa",
+    "save": "Tallenna",
+    "cancel": "Peruuta",
+    "delete": "Poista",
+    "back": "Takaisin",
+    "next": "Seuraava",
+    "previous": "Edellinen",
+    "loading": "Ladataan...",
+    "error": "Virhe",
+    "success": "Onnistui",
+    "chooseFile": "Valitse Tiedosto",
+    "dragAndDrop": "Vedä ja pudota tiedostosi tähän",
+    "or": "tai",
+    "browse": "Selaa",
+    "processing": "Käsitellään...",
+    "processingFile": "Käsittelemme tiedostoasi",
+    "configNotFound": "Konfiguraatiota ei löytynyt etusivulle.",
+    "uploadFailed": "Tiedoston lataus epäonnistui. Yritä uudelleen.",
+    "chooseBestTool": "Valitse paras työkalu liiketoimintatarpeisiisi",
+    "done": "Valmis",
+    "split": "Jaa",
+    "saving": "Tallennetaan...",
+    "signing": "Allekirjoitetaan...",
+    "splitting": "Jaetaan...",
+    "convertFromPdf": "Muunna PDF:stä",
+    "convertToPdf": "Muunna PDF:ksi",
+    "convertImage": "Muunna Kuva",
+    "otherFormats": "Muut Formaatit",
+    "editSuccess": "Muokkaus Onnistui!",
+    "editSuccessMessage": "PDF:si on muokattu onnistuneesti ja valmis lataukseen.",
+    "whatsNext": "Mitä Seuraavaksi?",
+    "downloadEditedFile": "Lataa muokattu tiedostosi",
+    "editAnotherFile": "Muokkaa toista tiedostoa",
+    "startNew": "Aloita Uusi",
+    "fileId": "Tiedoston ID",
+    "toolNotFound": "Työkalua ei löytynyt"
+  },
+  "errors": {
+    "oops": "Hups!",
+    "somethingWentWrong": "Jotain meni pieleen",
+    "pageNotFound": "Sivua Ei Löydy",
+    "pageNotExist": "Etsimäsi sivu ei ole olemassa.",
+    "errorLoadingPage": "Tapahtui virhe tätä sivua ladatessa. Yritä uudelleen.",
+    "errorLoadingApp": "Tapahtui virhe sovellusta ladatessa. Yritä uudelleen.",
+    "tryAgain": "Yritä uudelleen",
+    "goHome": "Siirry Kotiin",
+    "goToHomePage": "Siirry etusivulle",
+    "errorDetails": "Virheen yksityiskohdat (vain kehitys)"
+  },
+  "tools": {
+    "pdfToWord": "PDF Wordiksi",
+    "pdfToExcel": "PDF Exceliksi",
+    "pdfToPptx": "PDF PowerPointiksi",
+    "pdfToPng": "PDF PNG:ksi",
+    "pdfToJpg": "PDF JPG:ksi",
+    "pdfToEpub": "PDF EPUB:ksi",
+    "pdfToMobi": "PDF MOBI:ksi",
+    "pdfToTxt": "PDF TXT:ksi",
+    "pdfToHtml": "PDF HTML:ksi",
+    "pdfToSvg": "PDF SVG:ksi",
+    "pdfToTiff": "PDF TIFF:ksi",
+    "pdfToWebp": "PDF WebP:ksi",
+    "pdfToAvif": "PDF AVIF:ksi",
+    "pdfToEps": "PDF EPS:ksi",
+    "pdfToDxf": "PDF DXF:ksi",
+    "pdfToAzw3": "PDF AZW3:ksi",
+    "wordToPdf": "Word PDF:ksi",
+    "excelToPdf": "Excel PDF:ksi",
+    "pptxToPdf": "PPTX PDF:ksi",
+    "pngToPdf": "PNG PDF:ksi",
+    "jpgToPdf": "JPG PDF:ksi",
+    "epubToPdf": "EPUB PDF:ksi",
+    "mobiToPdf": "MOBI PDF:ksi",
+    "avifToPdf": "AVIF PDF:ksi",
+    "avifToPdfJpg": "AVIF PDF:ksi",
+    "pngToAvif": "PNG AVIF:ksi",
+    "jpgToAvif": "JPG AVIF:ksi",
+    "avifToPng": "AVIF PNG:ksi",
+    "avifToJpg": "AVIF JPG:ksi",
+    "epubToMobi": "EPUB MOBI:ksi",
+    "mobiToEpub": "MOBI EPUB:ksi",
+    "editPdf": "Muokkaa PDF",
+    "signPdf": "Allekirjoita PDF",
+    "addWatermark": "Lisää vesileima",
+    "rotatePdf": "Kierrä PDF",
+    "mergePdf": "Yhdistä PDF",
+    "splitPdf": "Jaa PDF",
+    "deletePages": "Poista sivut",
+    "compressPdf": "Pakkaa PDF",
+    "cropPdf": "Rajaa PDF",
+    "fillForm": "Täytä Lomake",
+    "fillPdf": "Täytä PDF",
+    "createForm": "Luo Lomake",
+    "imageToText": "Kuva Tekstiksi",
+    "mergeImages": "Yhdistä Kuvat",
+    "pdfOcr": "PDF OCR",
+    "pdfToImage": "PDF Kuvaksi",
+    "imageToPdf": "Kuva PDF:ksi",
+    "pdfToDoc": "PDF DOC:ksi"
+  },
+  "toolsSection": {
+    "allPdfTools": "Kaikki PDF Työkalut",
+    "subtitle": "Kaikki mitä tarvitset PDF:ien kanssa työskentelyyn yhdessä paikassa",
+    "splitAndMerge": "Jaa ja Yhdistä",
+    "w9": "W-9",
+    "ds11": "DS-11",
+    "1099misc": "1099-MISC",
+    "viewAllForms": "Näytä Kaikki Lomakkeet",
+    "ctaText": "Tarvitsetko jotain muuta? Meillä on yli 50+ PDF-työkalua saatavilla.",
+    "viewAllTools": "Näytä Kaikki Työkalut"
+  },
+  "toolPages": {
+    "home": {
+      "title": "PDF Muunnin ja Muokkaaja",
+      "subtitle": "Muunna, muokkaa ja hallitse PDF:ejäsi helposti. Yli 1M tiedostoa käsitellään kuukaudessa!"
+    },
+    "signPdf": {
+      "title": "Allekirjoita PDF Verkossa",
+      "subtitle": "Allekirjoita asiakirjasi turvallisesti verkossa. Lataa tiedosto aloittaaksesi!"
+    },
+    "splitPdf": {
+      "title": "Jaa PDF Verkossa",
+      "subtitle": "Jaa PDF:si helposti useiksi tiedostoiksi. Lataa tiedosto aloittaaksesi!"
+    },
+    "compressPdf": {
+      "title": "PDF Pakkausohjelma",
+      "subtitle": "Olemme jo pakanneet 775 000 tiedostoa — autetaan sinua omallasi"
+    },
+    "mergePdf": {
+      "title": "Yhdistä PDF Tiedostot",
+      "subtitle": "Yhdistä useita PDF-tiedostoja yhdeksi. Lataa tiedostosi aloittaaksesi!"
+    },
+    "pdfToWord": {
+      "title": "PDF Word Muunnin",
+      "subtitle": "Olemme auttaneet muuntamaan 775 000 tiedostoa — autetaan sinua omallasi"
+    },
+    "pdfToPng": {
+      "title": "PDF PNG Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — sinun voisi olla seuraava"
+    },
+    "pdfToJpg": {
+      "title": "PDF JPG Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — sinun voisi olla seuraava"
+    },
+    "pdfToEpub": {
+      "title": "PDF EPUB Muunnin",
+      "subtitle": "Olemme auttaneet muuntamaan 775 000 tiedostoa — autetaan sinua omallasi"
+    },
+    "pdfToExcel": {
+      "title": "PDF Excel Muunnin",
+      "subtitle": "Olemme muuntaneet 775K PDF:ää — miksi et tekisi sinun seuraavaksi?"
+    },
+    "pdfToPptx": {
+      "title": "PDF PPTX Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — sinun voisi olla seuraava"
+    },
+    "wordToPdf": {
+      "title": "Word PDF Muunnin",
+      "subtitle": "Olemme auttaneet muuntamaan 775 000 tiedostoa — autetaan sinua omallasi"
+    },
+    "jpgToPdf": {
+      "title": "JPG PDF Muunnin",
+      "subtitle": "Olemme käsitelleet tähän mennessä 75 000 JPG:tä. Tehdään sinun seuraavaksi."
+    },
+    "pngToPdf": {
+      "title": "PNG PDF Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — sinun voisi olla seuraava"
+    },
+    "epubToPdf": {
+      "title": "EPUB PDF Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — nyt autetaan sinua omallasi"
+    },
+    "pdfToTxt": {
+      "title": "PDF TXT Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — sinun voisi olla seuraava"
+    },
+    "pdfToHtml": {
+      "title": "PDF HTML Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — sinun voisi olla seuraava"
+    },
+    "pdfToSvg": {
+      "title": "PDF SVG Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — sinun voisi olla seuraava"
+    },
+    "pdfToTiff": {
+      "title": "PDF TIFF Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — sinun voisi olla seuraava"
+    },
+    "pdfToWebp": {
+      "title": "PDF WebP Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — sinun voisi olla seuraava"
+    },
+    "pdfToAvif": {
+      "title": "PDF AVIF Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — sinun voisi olla seuraava"
+    },
+    "pdfToEps": {
+      "title": "PDF EPS Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — sinun voisi olla seuraava"
+    },
+    "pdfToDxf": {
+      "title": "PDF DXF Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — sinun voisi olla seuraava"
+    },
+    "pdfToAzw3": {
+      "title": "PDF AZW3 Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — sinun voisi olla seuraava"
+    },
+    "pdfToMobi": {
+      "title": "PDF MOBI Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — sinun voisi olla seuraava"
+    },
+    "pdfToDoc": {
+      "title": "PDF DOC Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — sinun voisi olla seuraava"
+    },
+    "excelToPdf": {
+      "title": "Excel PDF Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — sinun voisi olla seuraava"
+    },
+    "pptxToPdf": {
+      "title": "PPTX PDF Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — sinun voisi olla seuraava"
+    },
+    "mobiToPdf": {
+      "title": "MOBI PDF Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — sinun voisi olla seuraava"
+    },
+    "avifToPdf": {
+      "title": "AVIF PDF Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — sinun voisi olla seuraava"
+    },
+    "pngToAvif": {
+      "title": "PNG AVIF Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — sinun voisi olla seuraava"
+    },
+    "jpgToAvif": {
+      "title": "JPG AVIF Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — sinun voisi olla seuraava"
+    },
+    "avifToPng": {
+      "title": "AVIF PNG Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — sinun voisi olla seuraava"
+    },
+    "avifToJpg": {
+      "title": "AVIF JPG Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — sinun voisi olla seuraava"
+    },
+    "epubToMobi": {
+      "title": "EPUB MOBI Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — sinun voisi olla seuraava"
+    },
+    "mobiToEpub": {
+      "title": "MOBI EPUB Muunnin",
+      "subtitle": "Olemme jo muuntaneet 775 000 tiedostoa — sinun voisi olla seuraava"
+    },
+    "pdfOcr": {
+      "title": "PDF OCR Työkalu",
+      "subtitle": "Poimi tekstiä PDF:istä OCR-teknologialla. Lataa tiedosto aloittaaksesi!"
+    },
+    "pdfToImage": {
+      "title": "PDF Kuva Muunnin",
+      "subtitle": "Muunna PDF-sivut kuviksi. Lataa tiedosto aloittaaksesi!"
+    },
+    "imageToPdf": {
+      "title": "Kuva PDF Muunnin",
+      "subtitle": "Muunna kuvat PDF:iksi. Lataa tiedostosi aloittaaksesi!"
+    }
+  },
+  "navbar": {
+    "convertFromPdf": "Muunna PDF:stä",
+    "convertToPdf": "Muunna PDF:ksi",
+    "convertImage": "Muunna Kuva",
+    "convertEbook": "Muunna E-kirja",
+    "editingTools": "Muokkaustyökalut",
+    "myDocuments": "Omat Asiakirjat",
+    "myAccount": "Oma Tili",
+    "help": "Ohje",
+    "termsConditions": "Käyttöehdot",
+    "settings": "Asetukset",
+    "logOut": "Kirjaudu ulos",
+    "upgradePlan": "Päivitä Suunnitelma",
+    "noSubscription": "Ei tilaus",
+    "profileDetails": "Profiilin Yksityiskohdat"
+  },
+  "footer": {
+    "editPdf": "Muokkaa PDF",
+    "convertFromPdf": "Muunna PDF:stä",
+    "convertToPdf": "Muunna PDF:ksi",
+    "disclaimer": "Vastuuvapauslauseke",
+    "privacyPolicy": "Tietosuojakäytäntö",
+    "termsOfService": "Palveluehdot",
+    "sitemap": "Sivukartta",
+    "allRightsReserved": "© 2025 PDFEZY Kaikki oikeudet pidätetään.",
+    "companyDescription": "Kaikki yhdessä PDF-ratkaisu muuntamiseen, muokkaamiseen ja asiakirjojen hallintaan helposti ja turvallisesti.",
+    "stayUpdated": "Pysy Ajan Tasalla",
+    "newsletterDescription": "Saa uusimmat päivitykset ja PDF-vinkit suoraan postilaatikkoosi.",
+    "emailPlaceholder": "Syötä sähköpostisi",
+    "subscribe": "Tilaa",
+    "followUs": "Seuraa Meitä",
+    "language": "Kieli",
+    "selectLanguage": "Valitse kielesi",
+    "email": "Sähköposti",
+    "phone": "Puhelin",
+    "address": "Osoite"
+  },
+  "auth": {
+    "email": "Sähköposti",
+    "password": "Salasana",
+    "confirmPassword": "Vahvista Salasana",
+    "forgotPassword": "Unohditko Salasanan?",
+    "resetPassword": "Nollaa Salasana",
+    "signIn": "Kirjaudu",
+    "signUp": "Rekisteröidy",
+    "alreadyHaveAccount": "Onko sinulla jo tili?",
+    "dontHaveAccount": "Eikö sinulla ole tiliä?",
+    "login": "Kirjaudu",
+    "loggingIn": "Kirjaudutaan...",
+    "emailAddress": "Sähköpostiosoite",
+    "enterEmailAddress": "Syötä Sähköpostiosoitteesi",
+    "emailAlreadyRegistered": "Tämä sähköposti on jo rekisteröity. Ole hyvä",
+    "logIn": "kirjaudu sisään"
+  },
+  "account": {
+    "membership": "Jäsenyys",
+    "noSubscription": "Sinulla ei ole tilaus.",
+    "unlockAllTools": "Avaa kaikki PDF-työkalut!",
+    "fullAccess": "Hanki täysi pääsy edistyneisiin muokkaus- ja muunnosominaisuuksiimme.",
+    "subscribeNow": "Tilaa nyt optimoidaksesi asiakirjatehtäväsi",
+    "subscribe": "Tilaa",
+    "account": "Tili",
+    "betterExperience": "Parempi kokemus PDF Housessa pitämällä tietosi ajan tasalla.",
+    "importantUpdates": "Saat tärkeitä tuotepäivityksiä ja olennaisia tilin ilmoituksia, mukaan lukien maksukuitit.",
+    "paymentMethod": "Maksutapa",
+    "saveTime": "Säästä aikaa pitämällä nykyinen luottokortti tiedostossa.",
+    "cardNumber": "Kortin numero",
+    "notSpecified": "Ei Määritelty",
+    "activeSubscription": "Aktiivinen Tilaus",
+    "subscriptionActive": "Tilauksesi on tällä hetkellä aktiivinen ja sinulla on täysi pääsy kaikkiin ominaisuuksiin.",
+    "plan": "Suunnitelma",
+    "expiryDate": "Päättymispäivä",
+    "subscriptionType": "Tilauksen Tyyppi"
+  },
+  "plan": {
+    "choosePlan": "Valitse suunnitelma ladataksesi tiedostosi",
+    "continue": "Jatka",
+    "annualPlan": "Vuosittainen Suunnitelma",
+    "getStarted": "Aloita",
+    "mostPopular": "Suosituin"
+  },
+  "whyUs": {
+    "title": "Miksi TheBestPDF on paras valinta tiimillesi",
+    "openness": "Avoimuus",
+    "opennessDesc": "Tavoitellen pitkäaikaisia kumppanuuksia, varmistamme 24/7 saatavuuden asiakaspalvelulle.",
+    "expertise": "Asiantuntemus",
+    "expertiseDesc": "Yhdistämme luovia mieliä tarjotaksemme integroidut ratkaisut, jotka kattavat liiketoimintahaasteesi.",
+    "growth": "Kasvu",
+    "growthDesc": "Vahvistamme organisaatioita pysymällä ajan tasalla uusimmista teknologisista edistysaskeleista, tavoitteenaan erinomaisuus alallamme.",
+    "diversity": "Monimuotoisuus",
+    "diversityDesc": "Terveydenhuolto, Oikeudellinen, Rahoitus, Koulutus — riippumatta toimialastasi, työkalumme voi optimoida työnkulkusi."
+  },
+  "securityPriority": {
+    "title": "Turvallisuus Prioriteetti",
+    "description": "Tietojesi turvallisuus on meidän tärkein prioriteettimme. Toteutamme yritystason salauksen ja turvallisuustoimenpiteet asiakirjojesi suojaamiseksi ja täydellisen yksityisyyden varmistamiseksi."
+  },
+  "coreValues": {
+    "title": "TheBestPDF:n taustalla olevat perusarvot"
+  },
+  "compression": {
+    "compressFile": "Pakkaa tiedosto",
+    "high": "KORKEA",
+    "highDesc": "Vakiokvaliteetti, pienempi koko",
+    "highReduction": "~40% pienempi",
+    "basic": "PERUS",
+    "basicDesc": "Parempi laatu, keskikoko",
+    "basicReduction": "~20% pienempi",
+    "low": "MATALA",
+    "lowDesc": "Paras laatu, suurempi koko",
+    "lowReduction": "~10% pienempi",
+    "compressionLevel": "Pakkauksen taso",
+    "selectLevel": "Valitse pakkauksesi taso ja pakkaa tiedosto.",
+    "compress": "Pakkaa",
+    "compressing": "Pakataan..."
+  },
+  "email": {
+    "enterEmail": "Syötä Sähköpostiosoitteesi",
+    "downloadLink": "Latauslinkki lähetetään sähköpostiisi",
+    "getStarted": "Aloita"
+  },
+  "faq": {
+    "title": "Usein Kysytyt Kysymykset",
+    "multipleUsers": "Voivatko useat käyttäjät yrityksestämme käyttää palvelua samanaikaisesti?",
+    "multipleUsersAnswer": "Helppoa! Luo yksi tili ja koko tiimi voi käyttää työkaluamme. Aloittaaksesi tilauksen, rekisteröidy yksinkertaisesti, tee joitain tiedostomuutoksia, klikkaa \"Lataa\" ja valitse sitten sinulle sopivin suunnitelma.",
+    "customerSupport": "Tarjoatteko asiakaspalvelua teknisistä ongelmista?",
+    "customerSupportAnswer": "Kyllä, tukitiimimme on saatavilla 24/7 auttamaan kaikissa kohtaamissasi teknisissä ongelmissa.",
+    "processingSpeed": "Kuinka nopeasti asiakirjat käsitellään alustallasi?",
+    "processingSpeedAnswer": "Asiakirjat käsitellään yleensä sekunneissa, jopa suurille tiedostoille.",
+    "moneyBack": "Onko teillä rahatakaisin takuu?",
+    "moneyBackAnswer": "Kyllä, tarjoamme 14 päivän rahatakaisin takuun, jos et ole tyytyväinen palveluumme.",
+    "ctaTitle": "Haluatko nostaa liiketoimintasi toimintaa?",
+    "ctaDescription": "Ota meihin yhteyttä osoitteessa sales@thebestpdf.com ja tutkitaan, miten tuotteemme voi mullistaa yrityksesi paperityön. Liity kasvavaan menestyvien yritysten yhteisöön, jotka hyödyntävät TheBestPDF:tä pysyäkseen edellä!",
+    "ctaButton": "Aloita",
+    "loading": "Ladataan..."
+  },
+  "howItWorks": {
+    "title": "Kuinka pakata PDF",
+    "step1": "Kirjaudu TheBestPDF:ään ja siirry PDF Pakkaus -työkaluun",
+    "step2": "Lataa tai vedä ja pudota PDF:si käyttöliittymään",
+    "step3": "Siinä se! Uusi pakattu tiedostosi on valmis lataukseen ja löytyy tiimisi tilistä"
+  },
+  "featureCTA": {
+    "title": "PDFEZY tarjoaa huippuluokan tiedostohallintaratkaisuja kaiken kokoisille tiimeille.",
+    "subtitle": "Tervetuloa huipputeknologiseen SaaS-alustaamme verkossa asiakirjojen muokkaamiseen ja muuntamiseen. Suunniteltu vastaamaan yritysten ja yrittäjien tarpeisiin."
+  },
+  "files": {
+    "searchFiles": "Etsi Tiedostoja",
+    "pdfConverter": "PDF Muunnin",
+    "editPdf": "Muokkaa PDF",
+    "signPdf": "Allekirjoita PDF",
+    "ocrPdf": "OCR PDF",
+    "mergePdf": "Yhdistä PDF",
+    "compressPdf": "Pakkaa PDF",
+    "splitPdf": "Jaa PDF",
+    "aiSummarizer": "AI Yhteenveto",
+    "fillPdf": "Täytä PDF",
+    "createForm": "Luo Lomake",
+    "editForm": "Muokkaa Lomaketta",
+    "summarizePdf": "Yhteenveto PDF",
+    "extractHighlights": "Poimi Korostukset"
+  },
+  "features": {
+    "comprehensiveSuite": "Kattava Paketti",
+    "unlimitedDocuments": "Rajoittamattomat asiakirjat"
+  },
+  "payment": {
+    "paymentDetails": "Maksun yksityiskohdat",
+    "documentPreview": "Asiakirjan Esikatselu",
+    "termsAndService": "Käyttöehdot ja Palvelu",
+    "privacyPolicy": "Tietosuojakäytäntö",
+    "billingEmail": "billing@pdfezy.com",
+    "agreementText": "Merkitsemällä tämän ruudun hyväksyt Käyttöehdot ja Palvelun, Tietosuojakäytännön ja vahvistat, että jos et peruuta vähintään 24 tuntia ennen 7 päivän kokeilun päättymistä CAD$1,95:llä, sinua veloitetaan CAD$49 joka 28. päivä, kunnes peruutat tilauksesi ottamalla yhteyttä asiakaspalvelutiimiimme sähköpostitse osoitteessa billing@pdfezy.com. Maksut veloitetaan yllä määrittämästäsi kortista."
+  },
+  "pdfViewer": {
+    "thumbnails": "Pikkukuvat",
+    "outline": "Rakenne",
+    "annotations": "Huomautukset",
+    "zoomOut": "Loitonna",
+    "zoomIn": "Lähennä",
+    "pan": "Siirrä",
+    "highlight": "Korosta",
+    "draw": "Piirrä",
+    "line": "Viiva",
+    "arrow": "Nuoli",
+    "rectangle": "Suorakulmio",
+    "ellipse": "Ellipsi",
+    "polygon": "Monikulmio",
+    "sign": "Allekirjoita",
+    "stamp": "Leima",
+    "text": "Teksti",
+    "note": "Huomautus",
+    "comment": "Kommentti",
+    "eraser": "Pyyhekumi",
+    "undo": "Kumoa",
+    "redo": "Tee uudelleen",
+    "search": "Etsi",
+    "print": "Tulosta",
+    "export": "Vie",
+    "edit": "Muokkaa"
+  },
+  "reset": {
+    "invalidResetLink": "Virheellinen Nollauslinkki",
+    "resetLinkInvalid": "Salasanan nollauslinkki on virheellinen tai vanhentunut.",
+    "backToLogin": "Takaisin Kirjautumiseen",
+    "resetPassword": "Nollaa Salasana",
+    "newPassword": "Uusi Salasana",
+    "confirmNewPassword": "Vahvista Uusi Salasana",
+    "passwordsDoNotMatch": "Salasanat eivät täsmää",
+    "resetSuccessful": "Salasana nollattu onnistuneesti!",
+    "resetFailed": "Salasanan nollaus epäonnistui. Yritä uudelleen."
+  },
+  "mergePdf": {
+    "actionButton": "YHDISTÄ TIEDOSTOT",
+    "minFilesError": "Valitse vähintään 2 tiedostoa yhdistettäväksi",
+    "dropText": "Pudota PDF-tiedostot tähän",
+    "uploadText": "Lataa Tiedostosi",
+    "processingFiles": "Käsitellään Tiedostoja...",
+    "mergingFiles": "Yhdistetään PDF:itä..."
+  }
+}

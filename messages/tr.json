@@ -1,0 +1,550 @@
+{
+  "navigation": {
+    "home": "Ana Sayfa",
+    "convert": "Dönüştür",
+    "edit": "Düzenle",
+    "compress": "Sıkıştır",
+    "sign": "İmzala",
+    "merge": "Birleştir",
+    "split": "Böl",
+    "files": "Dosyalar",
+    "account": "Hesap",
+    "login": "Giriş Yap",
+    "logout": "Çıkış Yap",
+    "pdfConverter": "PDF DÖNÜŞTÜRÜCÜ",
+    "pdfEditor": "PDF DÜZENLEYİCİ",
+    "language": "Dil"
+  },
+  "languages": {
+    "en": "English",
+    "zh": "中文",
+    "cs": "Čeština",
+    "nl": "Nederlands",
+    "fr": "Français",
+    "de": "Deutsch",
+    "el": "Ελληνικά",
+    "hu": "Magyar",
+    "id": "Bahasa Indonesia",
+    "it": "Italiano",
+    "ja": "日本語",
+    "ko": "한국어",
+    "ms": "Bahasa Melayu",
+    "pl": "Polski",
+    "pt": "Português",
+    "ro": "Română",
+    "sr": "Srpski",
+    "es": "Español",
+    "se": "Svenska",
+    "th": "แบบไทย",
+    "tr": "Türkçe",
+    "uk": "Українська",
+    "vi": "Tiếng Việt",
+    "fi": "Suomi"
+  },
+  "pages": {
+    "home": "Ana Sayfa",
+    "convertPdf": "PDF Dönüştür",
+    "editPdf": "PDF Düzenle",
+    "compressPdf": "PDF Sıkıştır",
+    "signPdf": "PDF İmzala",
+    "mergePdf": "PDF Birleştir",
+    "splitPdf": "PDF Böl",
+    "files": "Dosyalar",
+    "account": "Hesabım",
+    "login": "Giriş Yap",
+    "payment": "Ödeme",
+    "plan": "Planlar"
+  },
+  "common": {
+    "upload": "Yükle",
+    "download": "İndir",
+    "convert": "Dönüştür",
+    "edit": "Düzenle",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "delete": "Sil",
+    "back": "Geri",
+    "next": "İleri",
+    "previous": "Önceki",
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "success": "Başarılı",
+    "chooseFile": "Dosya Seç",
+    "dragAndDrop": "Dosyanızı buraya sürükleyip bırakın",
+    "or": "veya",
+    "browse": "Gözat",
+    "processing": "İşleniyor...",
+    "processingFile": "Dosyanız işleniyor",
+    "configNotFound": "Ana sayfa için yapılandırma bulunamadı.",
+    "uploadFailed": "Dosya yükleme başarısız. Lütfen tekrar deneyin.",
+    "chooseBestTool": "İş ihtiyaçlarınız için en iyi aracı seçin",
+    "done": "Tamamlandı",
+    "split": "Böl",
+    "saving": "Kaydediliyor...",
+    "signing": "İmzalanıyor...",
+    "splitting": "Bölünüyor...",
+    "convertFromPdf": "PDF'den Dönüştür",
+    "convertToPdf": "PDF'ye Dönüştür",
+    "convertImage": "Görüntü Dönüştür",
+    "otherFormats": "Diğer Formatlar",
+    "editSuccess": "Düzenleme Başarılı!",
+    "editSuccessMessage": "PDF'niz başarıyla düzenlendi ve indirmeye hazır.",
+    "whatsNext": "Sırada Ne Var?",
+    "downloadEditedFile": "Düzenlenmiş dosyanızı indirin",
+    "editAnotherFile": "Başka bir dosya düzenle",
+    "startNew": "Yeni Başla",
+    "fileId": "Dosya ID",
+    "toolNotFound": "Araç bulunamadı"
+  },
+  "errors": {
+    "oops": "Hay aksi!",
+    "somethingWentWrong": "Bir şeyler yanlış gitti",
+    "pageNotFound": "Sayfa Bulunamadı",
+    "pageNotExist": "Aradığınız sayfa mevcut değil.",
+    "errorLoadingPage": "Bu sayfayı yüklerken bir hata oluştu. Lütfen tekrar deneyin.",
+    "errorLoadingApp": "Uygulamayı yüklerken bir hata oluştu. Lütfen tekrar deneyin.",
+    "tryAgain": "Tekrar dene",
+    "goHome": "Ana Sayfaya Git",
+    "goToHomePage": "Ana sayfaya git",
+    "errorDetails": "Hata detayları (yalnızca geliştirme)"
+  },
+  "tools": {
+    "pdfToWord": "PDF'den Word'e",
+    "pdfToExcel": "PDF'den Excel'e",
+    "pdfToPptx": "PDF'den PowerPoint'e",
+    "pdfToPng": "PDF'den PNG'ye",
+    "pdfToJpg": "PDF'den JPG'ye",
+    "pdfToEpub": "PDF'den EPUB'a",
+    "pdfToMobi": "PDF'den MOBI'ye",
+    "pdfToTxt": "PDF'den TXT'ye",
+    "pdfToHtml": "PDF'den HTML'e",
+    "pdfToSvg": "PDF'den SVG'ye",
+    "pdfToTiff": "PDF'den TIFF'e",
+    "pdfToWebp": "PDF'den WebP'ye",
+    "pdfToAvif": "PDF'den AVIF'e",
+    "pdfToEps": "PDF'den EPS'e",
+    "pdfToDxf": "PDF'den DXF'e",
+    "pdfToAzw3": "PDF'den AZW3'e",
+    "wordToPdf": "Word'den PDF'e",
+    "excelToPdf": "Excel'den PDF'e",
+    "pptxToPdf": "PPTX'den PDF'e",
+    "pngToPdf": "PNG'den PDF'e",
+    "jpgToPdf": "JPG'den PDF'e",
+    "epubToPdf": "EPUB'tan PDF'e",
+    "mobiToPdf": "MOBI'den PDF'e",
+    "avifToPdf": "AVIF'den PDF'e",
+    "avifToPdfJpg": "AVIF'den PDF'e",
+    "pngToAvif": "PNG'den AVIF'e",
+    "jpgToAvif": "JPG'den AVIF'e",
+    "avifToPng": "AVIF'den PNG'ye",
+    "avifToJpg": "AVIF'den JPG'ye",
+    "epubToMobi": "EPUB'tan MOBI'ye",
+    "mobiToEpub": "MOBI'den EPUB'a",
+    "editPdf": "PDF Düzenle",
+    "signPdf": "PDF İmzala",
+    "addWatermark": "Filigran ekle",
+    "rotatePdf": "PDF Döndür",
+    "mergePdf": "PDF Birleştir",
+    "splitPdf": "PDF Böl",
+    "deletePages": "Sayfaları sil",
+    "compressPdf": "PDF Sıkıştır",
+    "cropPdf": "PDF Kırp",
+    "fillForm": "Formu Doldur",
+    "fillPdf": "PDF Doldur",
+    "createForm": "Form Oluştur",
+    "imageToText": "Görüntüden Metne",
+    "mergeImages": "Görüntüleri Birleştir",
+    "pdfOcr": "PDF OCR",
+    "pdfToImage": "PDF'den Görüntüye",
+    "imageToPdf": "Görüntüden PDF'e",
+    "pdfToDoc": "PDF'den DOC'a"
+  },
+  "toolsSection": {
+    "allPdfTools": "Tüm PDF Araçları",
+    "subtitle": "PDF'lerle çalışmak için ihtiyacınız olan her şey tek bir yerde",
+    "splitAndMerge": "Böl ve Birleştir",
+    "w9": "W-9",
+    "ds11": "DS-11",
+    "1099misc": "1099-MISC",
+    "viewAllForms": "Tüm Formları Görüntüle",
+    "ctaText": "Başka bir şeye mi ihtiyacınız var? 50'den fazla PDF aracı mevcut.",
+    "viewAllTools": "Tüm Araçları Görüntüle"
+  },
+  "toolPages": {
+    "home": {
+      "title": "PDF Dönüştürücü ve Düzenleyici",
+      "subtitle": "PDF'lerinizi kolayca dönüştürün, düzenleyin ve yönetin. Aylık 1M+ dosya işleniyor!"
+    },
+    "signPdf": {
+      "title": "PDF'i Çevrimiçi İmzala",
+      "subtitle": "Belgelerinizi güvenli bir şekilde çevrimiçi imzalayın. Başlamak için bir dosya yükleyin!"
+    },
+    "splitPdf": {
+      "title": "PDF'i Çevrimiçi Böl",
+      "subtitle": "PDF'inizi kolayca birden fazla dosyaya bölün. Başlamak için bir dosya yükleyin!"
+    },
+    "compressPdf": {
+      "title": "PDF Sıkıştırıcı",
+      "subtitle": "Zaten 775.000 dosya sıkıştırdık — sizinkine de yardımcı olalım"
+    },
+    "mergePdf": {
+      "title": "PDF Dosyalarını Birleştir",
+      "subtitle": "Birden fazla PDF dosyasını tek bir dosyada birleştirin. Başlamak için dosyalarınızı yükleyin!"
+    },
+    "pdfToWord": {
+      "title": "PDF'den Word'e Dönüştürücü",
+      "subtitle": "775.000 dosyanın dönüştürülmesine yardımcı olduk — sizinkine de yardımcı olalım"
+    },
+    "pdfToPng": {
+      "title": "PDF'den PNG'ye Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — sizinki bir sonraki olabilir"
+    },
+    "pdfToJpg": {
+      "title": "PDF'den JPG'ye Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — sizinki bir sonraki olabilir"
+    },
+    "pdfToEpub": {
+      "title": "PDF'den EPUB'a Dönüştürücü",
+      "subtitle": "775.000 dosyanın dönüştürülmesine yardımcı olduk — sizinkine de yardımcı olalım"
+    },
+    "pdfToExcel": {
+      "title": "PDF'den Excel'e Dönüştürücü",
+      "subtitle": "775K PDF dönüştürdük — sizinkini bir sonraki yapmaya ne dersiniz?"
+    },
+    "pdfToPptx": {
+      "title": "PDF'den PPTX'e Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — sizinki bir sonraki olabilir"
+    },
+    "wordToPdf": {
+      "title": "Word'den PDF'e Dönüştürücü",
+      "subtitle": "775.000 dosyanın dönüştürülmesine yardımcı olduk — sizinkine de yardımcı olalım"
+    },
+    "jpgToPdf": {
+      "title": "JPG'den PDF'e Dönüştürücü",
+      "subtitle": "Şimdiye kadar 75.000 JPG işledik. Sizinkini bir sonraki yapalım."
+    },
+    "pngToPdf": {
+      "title": "PNG'den PDF'e Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — sizinki bir sonraki olabilir"
+    },
+    "epubToPdf": {
+      "title": "EPUB'tan PDF'e Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — şimdi sizinkine yardımcı olalım"
+    },
+    "pdfToTxt": {
+      "title": "PDF'den TXT'ye Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — sizinki bir sonraki olabilir"
+    },
+    "pdfToHtml": {
+      "title": "PDF'den HTML'e Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — sizinki bir sonraki olabilir"
+    },
+    "pdfToSvg": {
+      "title": "PDF'den SVG'ye Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — sizinki bir sonraki olabilir"
+    },
+    "pdfToTiff": {
+      "title": "PDF'den TIFF'e Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — sizinki bir sonraki olabilir"
+    },
+    "pdfToWebp": {
+      "title": "PDF'den WebP'ye Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — sizinki bir sonraki olabilir"
+    },
+    "pdfToAvif": {
+      "title": "PDF'den AVIF'e Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — sizinki bir sonraki olabilir"
+    },
+    "pdfToEps": {
+      "title": "PDF'den EPS'e Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — sizinki bir sonraki olabilir"
+    },
+    "pdfToDxf": {
+      "title": "PDF'den DXF'e Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — sizinki bir sonraki olabilir"
+    },
+    "pdfToAzw3": {
+      "title": "PDF'den AZW3'e Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — sizinki bir sonraki olabilir"
+    },
+    "pdfToMobi": {
+      "title": "PDF'den MOBI'ye Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — sizinki bir sonraki olabilir"
+    },
+    "pdfToDoc": {
+      "title": "PDF'den DOC'a Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — sizinki bir sonraki olabilir"
+    },
+    "excelToPdf": {
+      "title": "Excel'den PDF'e Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — sizinki bir sonraki olabilir"
+    },
+    "pptxToPdf": {
+      "title": "PPTX'den PDF'e Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — sizinki bir sonraki olabilir"
+    },
+    "mobiToPdf": {
+      "title": "MOBI'den PDF'e Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — sizinki bir sonraki olabilir"
+    },
+    "avifToPdf": {
+      "title": "AVIF'den PDF'e Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — sizinki bir sonraki olabilir"
+    },
+    "pngToAvif": {
+      "title": "PNG'den AVIF'e Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — sizinki bir sonraki olabilir"
+    },
+    "jpgToAvif": {
+      "title": "JPG'den AVIF'e Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — sizinki bir sonraki olabilir"
+    },
+    "avifToPng": {
+      "title": "AVIF'den PNG'ye Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — sizinki bir sonraki olabilir"
+    },
+    "avifToJpg": {
+      "title": "AVIF'den JPG'ye Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — sizinki bir sonraki olabilir"
+    },
+    "epubToMobi": {
+      "title": "EPUB'tan MOBI'ye Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — sizinki bir sonraki olabilir"
+    },
+    "mobiToEpub": {
+      "title": "MOBI'den EPUB'a Dönüştürücü",
+      "subtitle": "Zaten 775.000 dosya dönüştürdük — sizinki bir sonraki olabilir"
+    },
+    "pdfOcr": {
+      "title": "PDF OCR Aracı",
+      "subtitle": "OCR teknolojisi ile PDF'lerden metin çıkarın. Başlamak için bir dosya yükleyin!"
+    },
+    "pdfToImage": {
+      "title": "PDF'den Görüntüye Dönüştürücü",
+      "subtitle": "PDF sayfalarını görüntülere dönüştürün. Başlamak için bir dosya yükleyin!"
+    },
+    "imageToPdf": {
+      "title": "Görüntüden PDF'e Dönüştürücü",
+      "subtitle": "Görüntüleri PDF'e dönüştürün. Başlamak için dosyalarınızı yükleyin!"
+    }
+  },
+  "navbar": {
+    "convertFromPdf": "PDF'den Dönüştür",
+    "convertToPdf": "PDF'ye Dönüştür",
+    "convertImage": "Görüntü Dönüştür",
+    "convertEbook": "E-kitap Dönüştür",
+    "editingTools": "Düzenleme Araçları",
+    "myDocuments": "Belgelerim",
+    "myAccount": "Hesabım",
+    "help": "Yardım",
+    "termsConditions": "Şartlar ve Koşullar",
+    "settings": "Ayarlar",
+    "logOut": "Çıkış Yap",
+    "upgradePlan": "Planı Yükselt",
+    "noSubscription": "Abonelik yok",
+    "profileDetails": "Profil Detayları"
+  },
+  "footer": {
+    "editPdf": "PDF Düzenle",
+    "convertFromPdf": "PDF'den Dönüştür",
+    "convertToPdf": "PDF'ye Dönüştür",
+    "disclaimer": "Feragatname",
+    "privacyPolicy": "Gizlilik Politikası",
+    "termsOfService": "Hizmet Şartları",
+    "sitemap": "Site Haritası",
+    "allRightsReserved": "© 2025 PDFEZY Tüm hakları saklıdır.",
+    "companyDescription": "Dönüştürme, düzenleme ve belge yönetimi için kolaylık ve güvenlikle tek bir PDF çözümü.",
+    "stayUpdated": "Güncel Kalın",
+    "newsletterDescription": "En son güncellemeleri ve PDF ipuçlarını gelen kutunuza alın.",
+    "emailPlaceholder": "E-postanızı girin",
+    "subscribe": "Abone Ol",
+    "followUs": "Bizi Takip Edin",
+    "language": "Dil",
+    "selectLanguage": "Dilinizi seçin",
+    "email": "E-posta",
+    "phone": "Telefon",
+    "address": "Adres"
+  },
+  "auth": {
+    "email": "E-posta",
+    "password": "Şifre",
+    "confirmPassword": "Şifreyi Onayla",
+    "forgotPassword": "Şifrenizi mi Unuttunuz?",
+    "resetPassword": "Şifreyi Sıfırla",
+    "signIn": "Giriş Yap",
+    "signUp": "Kayıt Ol",
+    "alreadyHaveAccount": "Zaten bir hesabınız var mı?",
+    "dontHaveAccount": "Hesabınız yok mu?",
+    "login": "Giriş Yap",
+    "loggingIn": "Giriş yapılıyor...",
+    "emailAddress": "E-posta adresi",
+    "enterEmailAddress": "E-posta Adresinizi Girin",
+    "emailAlreadyRegistered": "Bu e-posta zaten kayıtlı. Lütfen",
+    "logIn": "giriş yapın"
+  },
+  "account": {
+    "membership": "Üyelik",
+    "noSubscription": "Aboneliğiniz yok.",
+    "unlockAllTools": "Tüm PDF araçlarının kilidini açın!",
+    "fullAccess": "Gelişmiş düzenleme ve dönüştürme özelliklerimize tam erişim elde edin.",
+    "subscribeNow": "Belge görevlerinizi kolaylaştırmak için şimdi abone olun",
+    "subscribe": "Abone Ol",
+    "account": "Hesap",
+    "betterExperience": "Bilgilerinizi güncel tutarak PDF House'da daha iyi bir deneyim yaşayın.",
+    "importantUpdates": "Ödeme makbuzları dahil önemli ürün güncellemeleri ve temel hesap bildirimleri alacaksınız.",
+    "paymentMethod": "Ödeme Yöntemi",
+    "saveTime": "Dosyada güncel bir kredi kartı tutarak zaman kazanın.",
+    "cardNumber": "Kart numarası",
+    "notSpecified": "Belirtilmemiş",
+    "activeSubscription": "Aktif Abonelik",
+    "subscriptionActive": "Aboneliğiniz şu anda aktif ve tüm özelliklere tam erişiminiz var.",
+    "plan": "Plan",
+    "expiryDate": "Son Kullanma Tarihi",
+    "subscriptionType": "Abonelik Türü"
+  },
+  "plan": {
+    "choosePlan": "Dosyanızı indirmek için bir plan seçin",
+    "continue": "Devam Et",
+    "annualPlan": "Yıllık Plan",
+    "getStarted": "Başlayın",
+    "mostPopular": "En Popüler"
+  },
+  "whyUs": {
+    "title": "TheBestPDF'nin ekibiniz için en iyi seçim olmasının nedenleri",
+    "openness": "Açıklık",
+    "opennessDesc": "Uzun vadeli ortaklıklar için çalışarak, müşteri desteği için 7/24 kullanılabilirlik sağlıyoruz.",
+    "expertise": "Uzmanlık",
+    "expertiseDesc": "İş zorluklarınızı kapsayan entegre çözümler sunmak için yaratıcı zihinleri birleştiriyoruz.",
+    "growth": "Büyüme",
+    "growthDesc": "Alanımızda mükemmellik hedefleyerek, en son teknoloji gelişmelerine ayak uydurarak kuruluşları güçlendiriyoruz.",
+    "diversity": "Çeşitlilik",
+    "diversityDesc": "Sağlık, Hukuk, Finans, Eğitim — hangi sektörde olursanız olun, aracımız iş akışlarınızı optimize edebilir."
+  },
+  "securityPriority": {
+    "title": "Güvenlik Önceliği",
+    "description": "Veri güvenliğiniz bizim en yüksek önceliğimizdir. Belgelerinizi korumak ve tam gizlilik sağlamak için kurumsal düzeyde şifreleme ve güvenlik önlemleri uyguluyoruz."
+  },
+  "coreValues": {
+    "title": "TheBestPDF'nin arkasındaki temel değerler"
+  },
+  "compression": {
+    "compressFile": "Dosyayı sıkıştır",
+    "high": "YÜKSEK",
+    "highDesc": "Standart kalite, daha küçük boyut",
+    "highReduction": "~%40 daha küçük",
+    "basic": "TEMEL",
+    "basicDesc": "Daha iyi kalite, orta boyut",
+    "basicReduction": "~%20 daha küçük",
+    "low": "DÜŞÜK",
+    "lowDesc": "En yüksek kalite, daha büyük boyut",
+    "lowReduction": "~%10 daha küçük",
+    "compressionLevel": "Sıkıştırma seviyesi",
+    "selectLevel": "Sıkıştırma seviyenizi seçin ve dosyayı sıkıştırın.",
+    "compress": "Sıkıştır",
+    "compressing": "Sıkıştırılıyor..."
+  },
+  "email": {
+    "enterEmail": "E-posta adresinizi girin",
+    "downloadLink": "İndirme bağlantısı e-postanıza gönderilecek",
+    "getStarted": "Başlayın"
+  },
+  "faq": {
+    "title": "Sık Sorulan Sorular",
+    "multipleUsers": "Şirketimizden birden fazla kullanıcı aynı anda hizmeti kullanabilir mi?",
+    "multipleUsersAnswer": "Kolay! Bir hesap oluşturun ve tüm ekip aracımızı kullanabilecek. Bir abonelikle başlamak için, sadece kayıt olun, bazı dosya ayarlamaları yapın, \"İndir\"e tıklayın ve ardından size en uygun planı seçin.",
+    "customerSupport": "Teknik sorunlar için müşteri desteği sunuyor musunuz?",
+    "customerSupportAnswer": "Evet, destek ekibimiz karşılaştığınız teknik sorunlarda yardımcı olmak için 7/24 kullanılabilir.",
+    "processingSpeed": "Belgeler platformunuzda ne kadar hızlı işlenir?",
+    "processingSpeedAnswer": "Belgeler genellikle büyük dosyalar için bile saniyeler içinde işlenir.",
+    "moneyBack": "Para iade garantiniz var mı?",
+    "moneyBackAnswer": "Evet, hizmetimizden memnun kalmazsanız 14 günlük para iade garantisi sunuyoruz.",
+    "ctaTitle": "İş operasyonlarınızı yükseltmek mi istiyorsunuz?",
+    "ctaDescription": "sales@thebestpdf.com adresinden bize ulaşın ve ürünümüzün kurumsal evrak işlerinizi nasıl devrim niteliğinde değiştirebileceğini keşfedelim. TheBestPDF'yi kullanarak başarılı işletmelerin büyüyen topluluğuna katılın ve önde kalmak için avantaj sağlayın!",
+    "ctaButton": "Başlayın",
+    "loading": "Yükleniyor..."
+  },
+  "howItWorks": {
+    "title": "PDF nasıl sıkıştırılır",
+    "step1": "TheBestPDF'ye giriş yapın ve PDF Sıkıştırma aracına gidin",
+    "step2": "PDF'nizi yükleyin veya arayüze sürükleyip bırakın",
+    "step3": "İşte bu kadar! Yeni sıkıştırılmış dosyanız indirmeye hazır ve ekibinizin hesabında bulunabilir"
+  },
+  "featureCTA": {
+    "title": "PDFEZY, her boyuttaki ekipler için birinci sınıf dosya yönetimi çözümleri sunar.",
+    "subtitle": "Çevrimiçi belge düzenleme ve dönüştürme için en son teknoloji SaaS platformumuza hoş geldiniz. İşletmelerin ve girişimcilerin ihtiyaçlarını karşılamak için tasarlandı."
+  },
+  "files": {
+    "searchFiles": "Dosya Ara",
+    "pdfConverter": "PDF Dönüştürücü",
+    "editPdf": "PDF Düzenle",
+    "signPdf": "PDF İmzala",
+    "ocrPdf": "OCR PDF",
+    "mergePdf": "PDF Birleştir",
+    "compressPdf": "PDF Sıkıştır",
+    "splitPdf": "PDF Böl",
+    "aiSummarizer": "AI Özetleyici",
+    "fillPdf": "PDF Doldur",
+    "createForm": "Form Oluştur",
+    "editForm": "Formu Düzenle",
+    "summarizePdf": "PDF Özetle",
+    "extractHighlights": "Vurguları Çıkar"
+  },
+  "features": {
+    "comprehensiveSuite": "Kapsamlı Paket",
+    "unlimitedDocuments": "Sınırsız belgeler"
+  },
+  "payment": {
+    "paymentDetails": "Ödeme detayları",
+    "documentPreview": "Belge Önizleme",
+    "termsAndService": "Kullanım Şartları ve Hizmet",
+    "privacyPolicy": "Gizlilik Politikası",
+    "billingEmail": "billing@pdfezy.com",
+    "agreementText": "Bu kutuyu işaretleyerek, Kullanım Şartları ve Hizmet, Gizlilik Politikası'nı kabul edersiniz ve CAD$1,95 için 7 günlük deneme süresinin sonundan en az 24 saat önce iptal etmezseniz, billing@pdfezy.com adresine e-posta göndererek müşteri destek ekibimizle iletişime geçerek aboneliğinizi iptal edene kadar her 28 günde bir CAD$49 ücretlendirileceğinizi onaylarsınız. Ödemeler yukarıda belirttiğiniz karttan tahsil edilecektir."
+  },
+  "pdfViewer": {
+    "thumbnails": "Küçük Resimler",
+    "outline": "Anahat",
+    "annotations": "Açıklamalar",
+    "zoomOut": "Uzaklaştır",
+    "zoomIn": "Yakınlaştır",
+    "pan": "Kaydır",
+    "highlight": "Vurgula",
+    "draw": "Çiz",
+    "line": "Çizgi",
+    "arrow": "Ok",
+    "rectangle": "Dikdörtgen",
+    "ellipse": "Elips",
+    "polygon": "Çokgen",
+    "sign": "İmzala",
+    "stamp": "Damga",
+    "text": "Metin",
+    "note": "Not",
+    "comment": "Yorum",
+    "eraser": "Silgi",
+    "undo": "Geri Al",
+    "redo": "Yinele",
+    "search": "Ara",
+    "print": "Yazdır",
+    "export": "Dışa Aktar",
+    "edit": "Düzenle"
+  },
+  "reset": {
+    "invalidResetLink": "Geçersiz Sıfırlama Bağlantısı",
+    "resetLinkInvalid": "Şifre sıfırlama bağlantısı geçersiz veya süresi dolmuş.",
+    "backToLogin": "Girişe Dön",
+    "resetPassword": "Şifreyi Sıfırla",
+    "newPassword": "Yeni Şifre",
+    "confirmNewPassword": "Yeni Şifreyi Onayla",
+    "passwordsDoNotMatch": "Şifreler eşleşmiyor",
+    "resetSuccessful": "Şifre başarıyla sıfırlandı!",
+    "resetFailed": "Şifre sıfırlama başarısız oldu. Lütfen tekrar deneyin."
+  },
+  "mergePdf": {
+    "actionButton": "DOSYALARI BİRLEŞTİR",
+    "minFilesError": "Birleştirmek için en az 2 dosya seçin",
+    "dropText": "PDF dosyalarını buraya bırakın",
+    "uploadText": "Dosyalarınızı Yükleyin",
+    "processingFiles": "Dosyalar İşleniyor...",
+    "mergingFiles": "PDF'ler Birleştiriliyor..."
+  }
+}

@@ -365,7 +365,12 @@
     "paymentMethod": "Betalningsmetod",
     "saveTime": "Spara tid genom att ha ett aktuellt kreditkort i filen.",
     "cardNumber": "Kortnummer",
-    "notSpecified": "Inte specificerat"
+    "notSpecified": "Inte specificerat",
+    "activeSubscription": "Aktiv Prenumeration",
+    "subscriptionActive": "Din prenumeration är för närvarande aktiv och du har full tillgång till alla funktioner.",
+    "plan": "Plan",
+    "expiryDate": "Utgångsdatum",
+    "subscriptionType": "Prenumerationstyp"
   },
   "plan": {
     "choosePlan": "Välj en plan för att ladda ner din fil",
@@ -463,8 +468,8 @@
     "documentPreview": "Dokumentförhandsvisning",
     "termsAndService": "Användarvillkor och service",
     "privacyPolicy": "Integritetspolicy",
-    "billingEmail": "billing@pdfhouse.com",
-    "agreementText": "Genom att markera denna ruta godkänner du användarvillkoren och servicen, integritetspolicyn, och bekräftar att om du inte avbryter minst 24 timmar före slutet av den 7-dagars testperioden för 1,95 CAD, kommer du att debiteras 49 CAD per 28 dagar tills du avbryter din prenumeration genom att kontakta vårt kundsupportteam via e-post på billing@pdfhouse.com. Betalningar kommer att debiteras från kortet du angav ovan."
+    "billingEmail": "billing@pdfezy.com",
+    "agreementText": "Genom att markera denna ruta godkänner du användarvillkoren och servicen, integritetspolicyn, och bekräftar att om du inte avbryter minst 24 timmar före slutet av den 7-dagars testperioden för 1,95 CAD, kommer du att debiteras 49 CAD per 28 dagar tills du avbryter din prenumeration genom att kontakta vårt kundsupportteam via e-post på billing@pdfezy.com. Betalningar kommer att debiteras från kortet du angav ovan."
   },
   "pdfViewer": {
     "thumbnails": "Miniatyrer",
