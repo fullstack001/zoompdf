@@ -89,7 +89,7 @@ export default function FAQ() {
           <button
             onClick={handleCTAClick}
             disabled={isLoading}
-            className="bg-[#4B68FF] px-4 py-3 rounded-2xl text-[16px] sm:text-[18px] md:text-[24px] font-bold shadow-md flex items-center disabled:opacity-60 disabled:cursor-not-allowed"
+            className="bg-[#4B68FF] text-white px-4 py-3 rounded-2xl text-[16px] sm:text-[18px] md:text-[24px] font-bold shadow-md flex items-center disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {isLoading ? (
               <>

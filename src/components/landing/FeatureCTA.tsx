@@ -40,7 +40,7 @@ export default function FeatureCTA() {
           <button
             onClick={handleGetStarted}
             disabled={isLoading}
-            className="bg-primary-50 text-primary-900 px-4 md:px-6 py-3 md:py-5 text-lg md:text-xl lg:text-[24px] rounded-xl md:rounded-2xl font-bold disabled:opacity-60 disabled:cursor-not-allowed flex items-center"
+            className="bg-white text-primary-900 px-4 md:px-6 py-3 md:py-5 text-lg md:text-xl lg:text-[24px] rounded-xl md:rounded-2xl font-bold disabled:opacity-60 disabled:cursor-not-allowed flex items-center"
           >
             {isLoading ? (
               <>

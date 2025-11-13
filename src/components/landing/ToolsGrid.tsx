@@ -9,7 +9,7 @@ export default function ToolsGrid() {
   const { navigate } = useLocalizedNavigation();
   const t = useTranslations();
   const [isMobile, setIsMobile] = useState(false);
-  
+
   // Define categories
   const categories = [
     { key: "convertFromPdf", labelKey: "common.convertFromPdf", active: true },
@@ -25,25 +25,26 @@ export default function ToolsGrid() {
     const checkIsMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     checkIsMobile();
-    window.addEventListener('resize', checkIsMobile);
-    
-    return () => window.removeEventListener('resize', checkIsMobile);
+    window.addEventListener("resize", checkIsMobile);
+
+    return () => window.removeEventListener("resize", checkIsMobile);
   }, []);
 
   // Filter tools based on active category and device type
-  const filteredTools = tools.filter(tool => {
+  const filteredTools = tools.filter((tool) => {
     const categoryMatch = tool.category === activeCategory;
-    
+
     // If tool has device-specific properties, filter by device
     if (tool.mobileOnly !== undefined || tool.desktopOnly !== undefined) {
       if (isMobile && tool.mobileOnly) return categoryMatch;
       if (!isMobile && tool.desktopOnly) return categoryMatch;
-      if (tool.mobileOnly === false && tool.desktopOnly === false) return categoryMatch;
+      if (tool.mobileOnly === false && tool.desktopOnly === false)
+        return categoryMatch;
       return false;
     }
-    
+
     // Default behavior: show all tools if no device-specific properties
     return categoryMatch;
   });
@@ -53,7 +54,7 @@ export default function ToolsGrid() {
       <h2 className="text-[28px] md:text-[40px] text-[#212121] font-medium text-center mb-8 md:mb-12">
         {t("common.chooseBestTool")}
       </h2>
-      
+
       {/* Category Tabs */}
       <div className="bg-gray-100 rounded-2xl p-2 mb-8 md:mb-12 inline-flex flex-wrap gap-2 md:gap-0">
         {categories.map((category) => (
@@ -63,7 +64,7 @@ export default function ToolsGrid() {
             className={`px-4 py-3 md:px-6 md:py-4 rounded-xl text-sm md:text-base font-medium transition-all ${
               activeCategory === category.key
                 ? "bg-blue-500 text-white shadow-lg"
-                : "text-gray-600 hover:text-gray-800"
+                : "text-gray-700 hover:text-gray-900"
             }`}
           >
             <div className="flex items-center gap-2">

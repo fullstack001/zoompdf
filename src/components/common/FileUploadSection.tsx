@@ -16,11 +16,16 @@ export default function FileUploadSection({
     <div className="bg-white shadow-lg rounded-2xl p-4 sm:p-6 md:p-6 w-full max-w-[90%] sm:max-w-[1142px] aspect-[1142/348] mx-auto hover:shadow-2xl transition-shadow duration-300">
       <div className="bg-white border-dashed border-2 border-gray-300 rounded-lg p-8 sm:p-8 md:p-8 w-full h-auto mx-auto group hover:border-gray-400 ">
         <div className="w-[154px] h-[105px] mx-auto cursor-pointer relative">
+          <label htmlFor="file-upload" className="sr-only">
+            Upload PDF file
+          </label>
           <input
+            id="file-upload"
             type="file"
             accept={acceptType ? acceptType : "application/pdf"}
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
             onChange={handleFileChange}
+            aria-label="Upload PDF file"
           />
           <UploadAnimationSVG />
         </div>
@@ -55,7 +60,7 @@ export default function FileUploadSection({
         <p className="text-sm sm:text-sm md:text-base text-gray-500 mt-4 sm:mt-4 md:mt-4">
           or drop your file here
         </p>
-        <p className="text-[16px] sm:text-sm md:text-[12px] text-gray-400 ">
+        <p className="text-[16px] sm:text-sm md:text-[12px] text-gray-600 ">
           Size up to 100MB
         </p>
       </div>
