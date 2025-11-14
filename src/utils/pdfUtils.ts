@@ -63,3 +63,50 @@ export const getPdfInfo = async (file: File) => {
   }
 };
 
+/**
+ * Generate a thumbnail image of the first page of a PDF
+ * @param file - The PDF file
+ * @param scale - Scale factor for rendering (default: 1.5)
+ * @returns Promise<string> - Data URL of the thumbnail image
+ */
+export const getPdfThumbnail = async (
+  file: File,
+  scale: number = 1.5
+): Promise<string> => {
+  try {
+    const fileUrl = URL.createObjectURL(file);
+    const loadingTask = pdfjsLib.getDocument(fileUrl);
+    const pdf = await loadingTask.promise;
+
+    // Get the first page
+    const page = await pdf.getPage(1);
+    const viewport = page.getViewport({ scale });
+
+    // Create a canvas to render the page
+    const canvas = document.createElement("canvas");
+    const context = canvas.getContext("2d");
+    if (!context) {
+      throw new Error("Failed to get canvas context");
+    }
+
+    canvas.height = viewport.height;
+    canvas.width = viewport.width;
+
+    // Render the page to the canvas
+    await page.render({
+      canvasContext: context,
+      viewport: viewport,
+    }).promise;
+
+    // Convert canvas to data URL
+    const dataUrl = canvas.toDataURL("image/png");
+
+    // Clean up
+    URL.revokeObjectURL(fileUrl);
+
+    return dataUrl;
+  } catch (error) {
+    console.error("Error generating PDF thumbnail:", error);
+    throw new Error("Failed to generate PDF thumbnail");
+  }
+};
