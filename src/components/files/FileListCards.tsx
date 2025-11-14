@@ -93,7 +93,7 @@ export default function FileListCards({
           </div>
         ))}
       </div>
-      <div className="bg-white rounded-xl p-6 shadow mt-6">
+      {/* <div className="bg-white rounded-xl p-6 shadow mt-6">
         <div className="border-[#757575] border-[1px] border-dashed flex justify-between items-center p-6 rounded-xl">
           <div>
             <h3 className="text-lg font-semibold mb-2">
@@ -112,7 +112,7 @@ export default function FileListCards({
             alt="Upgrade"
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

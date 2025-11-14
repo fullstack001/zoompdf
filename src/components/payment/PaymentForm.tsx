@@ -5,13 +5,13 @@ import { useRouter } from "next/navigation";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import { useDispatch, useSelector } from "react-redux";
-import { setUser } from "../../store/slices/userSlice";
-import { login } from "../../store/slices/authSlice";
-import { RootState } from "../../store/store";
-import { downloadFile } from "../../utils/apiUtils";
-import { useLocalizedNavigation } from "../../utils/navigation";
-import { processPendingFile } from "../../utils/processPendingFile";
-import { clearPendingFile } from "../../store/slices/flowSlice";
+import { setUser } from "@/store/slices/userSlice";
+import { login } from "@/store/slices/authSlice";
+import { RootState } from "@/store/store";
+import { downloadFile } from "@/utils/apiUtils";
+import { useLocalizedNavigation } from "@/utils/navigation";
+import { processPendingFile } from "@/utils/processPendingFile";
+import { clearPendingFile } from "@/store/slices/flowSlice";
 import ProgressModal from "../common/ProgressModal";
 import LoadingModal from "../common/LoadingModal";
 import DownloadModal from "../common/DownloadModal";
@@ -56,11 +56,17 @@ export default function PaymentForm({
   const [isConverting, setIsConverting] = useState(false);
   const [isDownloading, setIsDownloading] = useState(false);
   const [downloadProgress, setDownloadProgress] = useState(0);
+  const [agreed, setAgreed] = useState(false); // State for checkbox
 
   const handlePurchaseSubscription = (
     subscriptionType: string,
     subscriptionId: string
   ): void => {
+    if (!agreed) {
+      alert("You must agree to the terms before proceeding.");
+      return;
+    }
+
     const subscriptionData: SubscriptionData = {
       email: email,
       plan: plan.id,
@@ -83,10 +89,10 @@ export default function PaymentForm({
         const { token, user, subscription } = data;
         dispatch(
           setUser({
-            name: user.name as string,
-            email: user.email as string,
+            email: (user.email as string) || "",
+            name: (user.name as string) || "", // Ensure name is set, default to empty string if not provided
             cardnumber: (user.cardnumber as string) || "", // Add cardnumber property
-            id: user.id as string,
+            id: (user._id as string) || "", // Add id property
             avatar: (user.avatar as string) || "", // Add avatar property
             isAdmin: (user.isAdmin as boolean) || false, // Add isAdmin property
             subscription: subscription
@@ -116,26 +122,15 @@ export default function PaymentForm({
                 null,
                 flow.action,
                 token as string,
-                user.id as string,
+                user._id as string,
                 null,
                 flow.pendingFiles,
                 null,
                 {
                   onUploadProgress: (progress) => {
                     setUploadProgress(progress);
-                    if (progress >= 90) {
-                      setUploadStatus([
-                        "Uploading files...",
-                        "Merging PDFs...",
-                      ]);
-                    }
-                    if (progress >= 100) {
-                      setUploadStatus([
-                        "Uploading files...",
-                        "Merging PDFs...",
-                        "File processing...",
-                      ]);
-                    }
+
+                    setUploadStatus(["Uploading files..."]);
                   },
                   onConverting: () => {
                     setIsUploading(false);
@@ -279,6 +274,7 @@ export default function PaymentForm({
             priceId={plan.priceId}
             callBack={handlePurchaseSubscription}
             couponCode={couponCode}
+            agreed={agreed}
           />
         </Elements>
 
@@ -294,8 +290,7 @@ export default function PaymentForm({
         )}
         <DownloadModal isVisible={isDownloading} progress={downloadProgress} />
 
-        {/* Secure Notice + Terms Agreement */}
-        {/* <div className="mt-6">
+        <div className="mt-6">
           <div className="flex justify-between items-center text-green-600 text-sm gap-2 my-3">
             <span>🔒 This is a secure 128-bit encrypted payment</span>
             <svg className="w-16 h-auto" viewBox="0 0 70 27">
@@ -389,7 +384,7 @@ export default function PaymentForm({
               . Payments will be charged from the card you specified above.
             </label>
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );

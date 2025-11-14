@@ -6,7 +6,7 @@ import {
   setPendingFile,
 } from "../store/slices/flowSlice";
 import { RootState } from "../store/store";
-import { downloadFile, convertFile } from "./apiUtils";
+import { processPendingFile } from "./processPendingFile";
 import { useLocalizedNavigation } from "./navigation";
 
 interface ConversionConfig {
@@ -14,44 +14,6 @@ interface ConversionConfig {
   action: string;
   acceptType?: string;
 }
-
-// Map action to endpoint (same as in processPendingFile)
-const actionToEndpoint: Record<string, string> = {
-  pdf_to_word: "/pdf/pdf_to_word",
-  pdf_to_png: "/pdf/pdf_to_png",
-  pdf_to_jpg: "/pdf/pdf_to_jpg",
-  pdf_to_epub: "/pdf/pdf_to_epub",
-  pdf_to_excel: "/pdf/pdf_to_excel",
-  pdf_to_pptx: "/pdf/pdf_to_pptx",
-  word_to_pdf: "/pdf/word_to_pdf",
-  jpg_to_pdf: "/pdf/jpg_to_pdf",
-  png_to_pdf: "/pdf/png_to_pdf",
-  epub_to_pdf: "/pdf/epub_to_pdf",
-  pdf_to_txt: "/pdf/pdf_to_txt",
-  pdf_to_html: "/pdf/pdf_to_html",
-  pdf_to_svg: "/pdf/pdf_to_svg",
-  pdf_to_tiff: "/pdf/pdf_to_tiff",
-  pdf_to_webp: "/pdf/pdf_to_webp",
-  pdf_to_avif: "/pdf/pdf_to_avif",
-  pdf_to_eps: "/pdf/pdf_to_eps",
-  pdf_to_dxf: "/pdf/pdf_to_dxf",
-  pdf_to_azw3: "/pdf/pdf_to_azw3",
-  pdf_to_mobi: "/pdf/pdf_to_mobi",
-  pdf_to_doc: "/pdf/pdf_to_doc",
-  excel_to_pdf: "/pdf/excel_to_pdf",
-  pptx_to_pdf: "/pdf/pptx_to_pdf",
-  mobi_to_pdf: "/pdf/mobi_to_pdf",
-  avif_to_pdf: "/pdf/avif_to_pdf",
-  png_to_avif: "/pdf/png_to_avif",
-  jpg_to_avif: "/pdf/jpg_to_avif",
-  avif_to_png: "/pdf/avif_to_png",
-  avif_to_jpg: "/pdf/avif_to_jpg",
-  epub_to_mobi: "/pdf/epub_to_mobi",
-  mobi_to_epub: "/pdf/mobi_to_epub",
-  pdf_ocr: "/pdf/pdf_ocr",
-  pdf_to_image: "/pdf/pdf_to_image",
-  image_to_pdf: "/pdf/image_to_pdf",
-};
 
 export const useFileConversion = (config: ConversionConfig) => {
   const dispatch = useDispatch();
@@ -79,60 +41,52 @@ export const useFileConversion = (config: ConversionConfig) => {
       setStatus(["Uploading file..."]);
       setEmailModalVisible(false);
 
+      const token = localStorage.getItem("authToken");
+      if (!token) {
+        setUploading(false);
+        alert("Authentication token not found. Please log in again.");
+        return;
+      }
+
       try {
-        let fileName = "";
-        let convertingTriggered = false;
-
-        // Get endpoint from action
-        const endpoint = actionToEndpoint[config.action];
-        if (!endpoint) {
-          throw new Error(`No endpoint found for action: ${config.action}`);
-        }
-
-        // Use actual API upload progress
-        fileName = await convertFile(endpoint, file, (uploadProgress) => {
-          setProgress(uploadProgress);
-
-          setStatus(["Uploading file..."]);
-        });
-
-        // Ensure converting state is shown if it wasn't triggered during upload
-        if (!convertingTriggered) {
-          setUploading(false);
-          setIsConverting(true);
-        }
-
-        dispatch(setFileName(fileName));
-        dispatch(setAction(config.action));
-
-        // Simulate download progress
-        setIsConverting(false);
-        setIsDownloading(true);
-        for (let i = 0; i <= 100; i += 20) {
-          setDownloadProgress(i);
-          await new Promise((resolve) => setTimeout(resolve, 150));
-        }
-
-        const token = localStorage.getItem("authToken");
-        if (token) {
-          try {
-            await downloadFile(fileName, config.action, token, user.id);
-            setIsDownloading(false);
-            navigate("/files");
-          } catch (err) {
-            console.error("Error downloading file:", err);
-            setIsDownloading(false);
-            window.alert("Failed to download file.");
+        const fileName = await processPendingFile(
+          file,
+          config.action,
+          token,
+          user.id,
+          null, // compressionLevel
+          null, // files (for merge)
+          null, // splitPageRanges
+          {
+            onUploadProgress: (uploadProgress) => {
+              setProgress(uploadProgress);
+              setStatus(["Uploading file..."]);
+            },
+            onConverting: () => {
+              setUploading(false);
+              setIsConverting(true);
+            },
+            onDownloadProgress: (downloadProgress) => {
+              setIsConverting(false);
+              setIsDownloading(true);
+              setDownloadProgress(downloadProgress);
+            },
           }
-        } else {
-          setIsDownloading(false);
+        );
+
+        if (fileName) {
+          dispatch(setFileName(fileName));
+          dispatch(setAction(config.action));
         }
+
+        setIsDownloading(false);
+        navigate("/files");
       } catch (error) {
-        console.error("Error during file upload:", error);
+        console.error("Error during file conversion:", error);
         setUploading(false);
         setIsConverting(false);
         setIsDownloading(false);
-        alert("File upload failed. Please try again.");
+        alert("File conversion failed. Please try again.");
       } finally {
         setPendingFileLocal(null);
         hasProcessedPendingFile.current = false;

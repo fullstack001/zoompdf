@@ -378,39 +378,39 @@ export default function FileListTable({
       </div>
 
       {/* Pagination */}
-      {totalPages > 1 && (
-        <div className="flex items-center justify-center gap-2 p-4">
+      {/* {totalPages > 1 && ( */}
+      <div className="flex items-center justify-center gap-2 p-4">
+        <button
+          onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+          disabled={currentPage === 1}
+          className="px-3 py-1 rounded border text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          Prev
+        </button>
+        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
           <button
-            onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
-            disabled={currentPage === 1}
-            className="px-3 py-1 rounded border text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+            key={page}
+            onClick={() => setCurrentPage(page)}
+            className={`w-8 h-8 text-sm rounded border ${
+              currentPage === page
+                ? "bg-blue-600 text-white border-blue-600"
+                : "bg-white text-black border-gray-300"
+            }`}
           >
-            Prev
+            {page}
           </button>
-          {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-            <button
-              key={page}
-              onClick={() => setCurrentPage(page)}
-              className={`w-8 h-8 text-sm rounded border ${
-                currentPage === page
-                  ? "bg-blue-600 text-white border-blue-600"
-                  : "bg-white text-black border-gray-300"
-              }`}
-            >
-              {page}
-            </button>
-          ))}
-          <button
-            onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
-            disabled={currentPage === totalPages}
-            className="px-3 py-1 rounded border text-sm disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            Next
-          </button>
-        </div>
-      )}
+        ))}
+        <button
+          onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+          disabled={currentPage === totalPages}
+          className="px-3 py-1 rounded border text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          Next
+        </button>
+      </div>
+      {/* )} */}
 
-      <div className="bg-white rounded-xl p-6  shadow mt-6">
+      {/* <div className="bg-white rounded-xl p-6  shadow mt-6">
         <div className="border-[#757575] border-[1px] border-dashed flex justify-between items-center p-6 rounded-xl ">
           <div>
             <h3 className="text-lg font-semibold mb-2">
@@ -439,7 +439,7 @@ export default function FileListTable({
             alt="Upgrade"
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

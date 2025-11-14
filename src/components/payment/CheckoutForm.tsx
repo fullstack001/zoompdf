@@ -30,10 +30,12 @@ function CheckoutForm({
   priceId,
   callBack,
   couponCode,
+  agreed,
 }: {
   priceId: string;
   callBack: (method: string, subscriptionId: string) => void;
   couponCode: string | null;
+  agreed: boolean;
 }) {
   const user = useSelector((state: RootState) => state.user); // Use RootState for type safety
   const subscription = user?.subscription;
@@ -42,16 +44,14 @@ function CheckoutForm({
 
   const [cardError, setCardError] = useState("");
   const [isProcessing, setIsProcessing] = useState(false);
-  const [agreed, setAgreed] = useState(false); // State for checkbox
 
   const [name, setName] = useState("");
 
   const createSubscription = useCallback(async () => {
-    console.log(agreed);
-    // if (!agreed) {
-    //   alert("You must agree to the terms before proceeding.");
-    //   return;
-    // }
+    if (!agreed) {
+      alert("You must agree to the terms before proceeding.");
+      return;
+    }
 
     if (!stripe || !elements) {
       alert("Stripe is not loaded correctly.");
@@ -139,7 +139,16 @@ function CheckoutForm({
     } finally {
       setIsProcessing(false);
     }
-  }, [stripe, elements, name, user.email, subscription, priceId, callBack]);
+  }, [
+    stripe,
+    elements,
+    name,
+    user.email,
+    subscription,
+    priceId,
+    callBack,
+    agreed,
+  ]);
 
   React.useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
@@ -201,10 +210,9 @@ function CheckoutForm({
       </div>
       <button
         onClick={() => {
-          console.log("Button clicked, agreed state:", agreed);
           createSubscription();
         }}
-        disabled={!stripe || isProcessing}
+        disabled={!stripe || isProcessing || !agreed}
         className="bg-[#4B68FF] text-white w-full py-2 rounded-lg font-semibold mt-6 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center"
       >
         {isProcessing ? (
@@ -216,7 +224,7 @@ function CheckoutForm({
           "Pay and Download The File"
         )}
       </button>
-      {/* Secure Notice + Terms Agreement */}
+      {/* Secure Notice + Terms Agreement
       <div className="mt-6">
         <div className="flex justify-between items-center text-green-600 text-sm gap-2 my-3">
           <span>🔒 This is a secure 128-bit encrypted payment</span>
@@ -275,7 +283,6 @@ function CheckoutForm({
             className="mt-1"
             checked={agreed}
             onChange={(e) => {
-              console.log("Checkbox changed:", e.target.checked);
               setAgreed(e.target.checked);
             }}
           />
@@ -311,7 +318,7 @@ function CheckoutForm({
             . Payments will be charged from the card you specified above.
           </label>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

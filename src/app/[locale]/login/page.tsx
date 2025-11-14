@@ -2,15 +2,15 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocalizedNavigation } from "@/utils/navigation";
-import { login } from "../../../store/slices/authSlice";
-import { setUser } from "../../../store/slices/userSlice";
-import { loginUser, downloadFile } from "../../../utils/apiUtils";
-import { RootState } from "../../../store/store";
-import { processPendingFile } from "../../../utils/processPendingFile";
-import { clearPendingFile } from "../../../store/slices/flowSlice";
-import ProgressModal from "../../../components/common/ProgressModal";
-import LoadingModal from "../../../components/common/LoadingModal";
-import DownloadModal from "../../../components/common/DownloadModal";
+import { login } from "@/store/slices/authSlice";
+import { setUser } from "@/store/slices/userSlice";
+import { loginUser, downloadFile } from "@/utils/apiUtils";
+import { RootState } from "@/store/store";
+import { processPendingFile } from "@/utils/processPendingFile";
+import { clearPendingFile } from "@/store/slices/flowSlice";
+import ProgressModal from "@/components/common/ProgressModal";
+import LoadingModal from "@/components/common/LoadingModal";
+import DownloadModal from "@/components/common/DownloadModal";
 
 export default function Login() {
   const [email, setEmail] = useState("");
