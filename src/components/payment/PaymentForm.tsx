@@ -166,7 +166,7 @@ export default function PaymentForm({
                 flow.pendingFile,
                 flow.action,
                 token as string,
-                user.id as string,
+                user._id as string,
                 flow.compressionLevel,
                 null,
                 flow.splitPageRanges,
