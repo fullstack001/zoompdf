@@ -8,6 +8,23 @@ interface PaymentMethodProps {
 export default function PaymentMethod({ cardnumber }: PaymentMethodProps) {
   const t = useTranslations();
 
+  // Format card number for display (e.g., "1234" -> "**** **** **** 1234")
+  const formatCardNumber = (cardNumber: string | undefined): string => {
+    if (!cardNumber) {
+      return t("account.notSpecified");
+    }
+    // If it's already formatted, return as is
+    if (cardNumber.includes("*")) {
+      return cardNumber;
+    }
+    // If it's just the last 4 digits, format it
+    if (cardNumber.length === 4) {
+      return `**** **** **** ${cardNumber}`;
+    }
+    // Otherwise return as is
+    return cardNumber;
+  };
+
   return (
     <div className="bg-white rounded-xl p-4 sm:p-6 lg:p-8 shadow-lg border border-gray-200">
       <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-700 mb-3 sm:mb-4 lg:mb-6">
@@ -25,7 +42,7 @@ export default function PaymentMethod({ cardnumber }: PaymentMethodProps) {
           <input
             type="text"
             disabled
-            defaultValue={cardnumber || t("account.notSpecified")}
+            value={formatCardNumber(cardnumber)}
             className="w-full p-3 sm:p-4 rounded-lg bg-gray-50 border border-gray-300 text-sm sm:text-base text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
           />
         </div>

@@ -33,7 +33,7 @@ function CheckoutForm({
   agreed,
 }: {
   priceId: string;
-  callBack: (method: string, subscriptionId: string) => void;
+  callBack: (method: string, subscriptionId: string, cardNumber?: string) => void;
   couponCode: string | null;
   agreed: boolean;
 }) {
@@ -97,6 +97,9 @@ function CheckoutForm({
         return;
       }
 
+      // Extract card number (last 4 digits) from payment method
+      const cardNumber = paymentMethod.card?.last4 || "";
+
       if (subscription && subscription.subscriptionId) {
         await cancelSubscription(subscription.subscriptionId, user.email);
       }
@@ -115,6 +118,7 @@ function CheckoutForm({
             email: user.email,
             priceId,
             couponCode: couponCode || undefined,
+            cardNumber: cardNumber, // Send card number to backend
           }),
         }
       );
@@ -132,7 +136,7 @@ function CheckoutForm({
         setIsProcessing(false);
         return;
       }
-      callBack("stripe", subscriptionId);
+      callBack("stripe", subscriptionId, cardNumber);
     } catch (error) {
       console.error("Unexpected error:", error);
       alert("An unexpected error occurred. Please try again later.");

@@ -23,6 +23,7 @@ interface SubscriptionData {
   plan: string;
   subscriptionId: string;
   subscriptionType: string;
+  cardNumber?: string;
 }
 
 interface ApiResponse {
@@ -60,7 +61,8 @@ export default function PaymentForm({
 
   const handlePurchaseSubscription = (
     subscriptionType: string,
-    subscriptionId: string
+    subscriptionId: string,
+    cardNumber?: string
   ): void => {
     if (!agreed) {
       alert("You must agree to the terms before proceeding.");
@@ -72,6 +74,7 @@ export default function PaymentForm({
       plan: plan.id,
       subscriptionId,
       subscriptionType,
+      cardNumber: cardNumber || "", // Include card number
     };
 
     fetch(`https://api.pdfezy.com/api/subscription/add-subscription`, {

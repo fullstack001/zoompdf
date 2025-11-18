@@ -34,6 +34,7 @@ export interface SubscriptionData {
   plan: string;
   subscriptionId: string;
   subscriptionType: string;
+  cardNumber?: string;
 }
 
 // Base API configuration
