@@ -13,6 +13,7 @@ import {
   getMobiThumbnail,
   getAvifThumbnail,
 } from "@/utils/documentPreviewUtils";
+import LoadingSpinner from "@/components/common/LoadingSpinner";
 
 // Helper function to extract target format from action
 const getTargetFormat = (action: string | null): string => {
@@ -119,9 +120,10 @@ export default function PaymentPreview() {
   const action = useSelector((state: RootState) => state.flow.action);
   const pendingFile = useSelector((state: RootState) => state.flow.pendingFile);
   const targetFormat = getTargetFormat(action);
-  const [previewSrc, setPreviewSrc] = useState<string>(
-    "/assets/images/sample-pdf.png"
+  const [previewSrc, setPreviewSrc] = useState<string | null>(
+    pendingFile ? null : "/assets/images/sample-pdf.png"
   );
+  const [isLoading, setIsLoading] = useState<boolean>(!!pendingFile);
   const objectUrlRef = useRef<string | null>(null);
 
   useEffect(() => {
@@ -133,9 +135,24 @@ export default function PaymentPreview() {
 
     const generatePreview = async () => {
       if (!pendingFile) {
+        setIsLoading(false);
         setPreviewSrc("/assets/images/sample-pdf.png");
         return;
       }
+
+      // For image files, set preview immediately (synchronous)
+      if (isImageFile(pendingFile)) {
+        setIsLoading(false);
+        const url = URL.createObjectURL(pendingFile);
+        objectUrlRef.current = url;
+        setPreviewSrc(url);
+        return;
+      }
+
+      // For other file types, generate preview asynchronously
+      // Show loading spinner while generating preview
+      setIsLoading(true);
+      setPreviewSrc(null);
 
       try {
         if (isPdfFile(pendingFile)) {
@@ -166,11 +183,6 @@ export default function PaymentPreview() {
           // Generate AVIF thumbnail
           const thumbnail = await getAvifThumbnail(pendingFile);
           setPreviewSrc(thumbnail);
-        } else if (isImageFile(pendingFile)) {
-          // Use object URL for other image files
-          const url = URL.createObjectURL(pendingFile);
-          objectUrlRef.current = url;
-          setPreviewSrc(url);
         } else {
           // For other formats, use default image
           setPreviewSrc("/assets/images/sample-pdf.png");
@@ -178,6 +190,8 @@ export default function PaymentPreview() {
       } catch (error) {
         console.error("Error generating preview:", error);
         setPreviewSrc("/assets/images/sample-pdf.png");
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -206,7 +220,10 @@ export default function PaymentPreview() {
         <div className="absolute top-8 left-8 z-10 bg-red-600 text-white text-lg px-5 py-1 rounded font-bold shadow">
           {targetFormat}
         </div>
-        {previewSrc.startsWith("data:") || previewSrc.startsWith("blob:") ? (
+        {isLoading ? (
+          // Show loading spinner while generating preview
+          <LoadingSpinner size="lg" text="Loading preview..." />
+        ) : previewSrc && (previewSrc.startsWith("data:") || previewSrc.startsWith("blob:")) ? (
           // Use regular img tag for data URLs and blob URLs (from object URLs)
           <img
             src={previewSrc}
@@ -214,7 +231,7 @@ export default function PaymentPreview() {
             className="mx-auto rounded-lg shadow-sm max-w-full max-h-full w-auto h-auto object-contain"
             style={{ maxHeight: "100%", maxWidth: "40%" }}
           />
-        ) : (
+        ) : previewSrc ? (
           // Use Next.js Image component for static assets
           <Image
             src={previewSrc}
@@ -224,7 +241,7 @@ export default function PaymentPreview() {
             style={{ height: "auto" }}
             className="mx-auto w-[40%] rounded-lg shadow-sm max-h-full object-contain"
           />
-        )}
+        ) : null}
       </div>
     </div>
   );
