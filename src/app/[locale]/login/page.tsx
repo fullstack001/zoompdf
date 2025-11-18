@@ -15,6 +15,10 @@ import DownloadModal from "@/components/common/DownloadModal";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState<string>("");
+  const [emailError, setEmailError] = useState<string>("");
+  const [passwordError, setPasswordError] = useState<string>("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const dispatch = useDispatch();
   const { navigate } = useLocalizedNavigation();
   const flow = useSelector((state: RootState) => state.flow);
@@ -25,8 +29,77 @@ export default function Login() {
   const [isDownloading, setIsDownloading] = useState(false);
   const [downloadProgress, setDownloadProgress] = useState(0);
 
+  // Validation functions
+  const validateEmail = (emailValue: string): string => {
+    if (!emailValue.trim()) {
+      return "Email is required";
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(emailValue)) {
+      return "Please enter a valid email address";
+    }
+    return "";
+  };
+
+  const validatePassword = (passwordValue: string): string => {
+    if (!passwordValue) {
+      return "Password is required";
+    }
+    if (passwordValue.length < 6) {
+      return "Password must be at least 6 characters";
+    }
+    return "";
+  };
+
+  const clearErrors = () => {
+    setError("");
+    setEmailError("");
+    setPasswordError("");
+  };
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setEmail(value);
+    if (emailError) {
+      setEmailError("");
+    }
+    if (error) {
+      setError("");
+    }
+  };
+
+  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setPassword(value);
+    if (passwordError) {
+      setPasswordError("");
+    }
+    if (error) {
+      setError("");
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    clearErrors();
+    setIsSubmitting(true);
+
+    // Validate email
+    const emailValidationError = validateEmail(email);
+    if (emailValidationError) {
+      setEmailError(emailValidationError);
+      setIsSubmitting(false);
+      return;
+    }
+
+    // Validate password
+    const passwordValidationError = validatePassword(password);
+    if (passwordValidationError) {
+      setPasswordError(passwordValidationError);
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
       const { token, user, subscription } = await loginUser(email, password);
 
@@ -56,6 +129,8 @@ export default function Login() {
       // Optionally, store the token in localStorage or cookies
       localStorage.setItem("authToken", token);
       localStorage.setItem("token", token); // Also store as 'token' for admin panel compatibility
+
+      setIsSubmitting(false);
 
       // Check if user is admin and redirect to admin panel
       if (user.isAdmin) {
@@ -184,7 +259,157 @@ export default function Login() {
         navigate("/plan"); // Redirect to register page if subscription is not valid
       }
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Login error:", error);
+      setIsSubmitting(false);
+
+      // Handle different types of errors
+      if (error instanceof Error) {
+        const statusCode = (error as any).statusCode;
+        const responseData = (error as any).responseData;
+
+        // Get the actual error message from response data (msg, message, error) or fallback to error.message
+        const apiErrorMessage =
+          responseData?.msg ||
+          responseData?.message ||
+          responseData?.error ||
+          error.message;
+        const errorMessage = apiErrorMessage.toLowerCase();
+
+        // Log detailed error info for debugging
+        console.log("Error details:", {
+          message: error.message,
+          apiErrorMessage,
+          statusCode,
+          responseData,
+        });
+
+        // Check status code first for more accurate error detection
+        if (statusCode === 401 || statusCode === 403) {
+          // Unauthorized - usually means invalid credentials
+          // Try to determine if it's email or password specific
+          if (
+            errorMessage.includes("password") ||
+            errorMessage.includes("wrong password") ||
+            errorMessage.includes("incorrect password") ||
+            errorMessage.includes("invalid password")
+          ) {
+            setPasswordError(
+              apiErrorMessage || "Invalid password. Please try again."
+            );
+          } else if (
+            errorMessage.includes("email") ||
+            errorMessage.includes("user") ||
+            errorMessage.includes("account") ||
+            errorMessage.includes("not found") ||
+            errorMessage.includes("does not exist")
+          ) {
+            setEmailError(
+              apiErrorMessage || "No account found with this email address."
+            );
+          } else {
+            // Generic unauthorized - could be either
+            setError(
+              apiErrorMessage ||
+                "Invalid email or password. Please check your credentials and try again."
+            );
+          }
+        } else if (statusCode === 404) {
+          setEmailError(
+            apiErrorMessage || "No account found with this email address."
+          );
+        } else if (statusCode === 400) {
+          // Bad request - might be validation error
+          if (
+            errorMessage.includes("password") ||
+            errorMessage.includes("invalid password")
+          ) {
+            setPasswordError(
+              apiErrorMessage || "Invalid password. Please try again."
+            );
+          } else if (errorMessage.includes("email")) {
+            setEmailError(apiErrorMessage || "Invalid email address.");
+          } else {
+            setError(
+              apiErrorMessage || "Invalid request. Please check your input."
+            );
+          }
+        } else if (
+          statusCode === 500 ||
+          statusCode === 502 ||
+          statusCode === 503
+        ) {
+          setError("Server error. Please try again later.");
+        } else if (
+          errorMessage.includes("network") ||
+          errorMessage.includes("fetch") ||
+          errorMessage.includes("timeout") ||
+          errorMessage.includes("connection")
+        ) {
+          setError(
+            "Network error. Please check your connection and try again."
+          );
+        } else {
+          // Parse error message for specific keywords
+          if (
+            errorMessage.includes("invalid") ||
+            errorMessage.includes("incorrect") ||
+            errorMessage.includes("wrong")
+          ) {
+            if (errorMessage.includes("password")) {
+              setPasswordError(
+                apiErrorMessage || "Invalid password. Please try again."
+              );
+            } else if (
+              errorMessage.includes("email") ||
+              errorMessage.includes("user")
+            ) {
+              setEmailError(apiErrorMessage || "Invalid email address.");
+            } else {
+              setError(
+                apiErrorMessage ||
+                  "Invalid email or password. Please try again."
+              );
+            }
+          } else if (
+            errorMessage.includes("not found") ||
+            errorMessage.includes("does not exist") ||
+            errorMessage.includes("user not found")
+          ) {
+            setEmailError(
+              apiErrorMessage || "No account found with this email address."
+            );
+          } else if (
+            errorMessage.includes("login failed") ||
+            errorMessage.includes("request failed")
+          ) {
+            // Generic login failed - use API message if available
+            if (
+              apiErrorMessage &&
+              !apiErrorMessage.toLowerCase().includes("request failed")
+            ) {
+              setError(apiErrorMessage);
+            } else {
+              setError(
+                "Invalid email or password. Please check your credentials and try again."
+              );
+            }
+          } else {
+            // Use the error message from the API if it's meaningful
+            if (
+              apiErrorMessage &&
+              !apiErrorMessage.toLowerCase().includes("request failed")
+            ) {
+              setError(apiErrorMessage);
+            } else {
+              setError(
+                "Login failed. Please check your credentials and try again."
+              );
+            }
+          }
+        }
+      } else {
+        setError("An unexpected error occurred. Please try again.");
+      }
     }
   };
 
@@ -193,6 +418,13 @@ export default function Login() {
       <div className="max-w-md w-full bg-white rounded-lg shadow-md p-8">
         <h1 className="text-2xl font-bold text-center mb-8">Login</h1>
         <form onSubmit={handleSubmit} className="space-y-6">
+          {/* General error message */}
+          {error && (
+            <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
+              <p className="text-sm font-medium">{error}</p>
+            </div>
+          )}
+
           <div>
             <label
               htmlFor="email"
@@ -204,11 +436,17 @@ export default function Login() {
               type="email"
               id="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              onChange={handleEmailChange}
+              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
+                emailError
+                  ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                  : "border-gray-300"
+              }`}
               placeholder="Enter your email"
             />
+            {emailError && (
+              <p className="mt-1 text-sm text-red-600">{emailError}</p>
+            )}
           </div>
           <div>
             <label
@@ -221,17 +459,28 @@ export default function Login() {
               type="password"
               id="password"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              onChange={handlePasswordChange}
+              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
+                passwordError
+                  ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                  : "border-gray-300"
+              }`}
               placeholder="Enter your password"
             />
+            {passwordError && (
+              <p className="mt-1 text-sm text-red-600">{passwordError}</p>
+            )}
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            disabled={isSubmitting}
+            className={`w-full py-3 px-4 rounded-lg font-semibold transition-colors ${
+              isSubmitting
+                ? "bg-blue-400 cursor-not-allowed"
+                : "bg-blue-600 hover:bg-blue-700"
+            } text-white`}
           >
-            Login
+            {isSubmitting ? "Logging in..." : "Login"}
           </button>
         </form>
         <div className="mt-6 text-center">

@@ -82,9 +82,27 @@ export const loginUser = async (
     );
     return response.data;
   } catch (error) {
-    const axiosError = error as AxiosError<{ message?: string }>;
-    const errorMessage = axiosError.response?.data?.message || "Login failed";
-    throw new Error(errorMessage);
+    const axiosError = error as AxiosError<{
+      message?: string;
+      error?: string;
+      msg?: string;
+    }>;
+    const responseData = axiosError.response?.data;
+    const statusCode = axiosError.response?.status;
+
+    // Try to get error message from different possible fields (msg, message, error)
+    let errorMessage =
+      responseData?.msg ||
+      responseData?.message ||
+      responseData?.error ||
+      axiosError.message ||
+      "Login failed";
+
+    // Add status code info to help with error parsing
+    const errorWithStatus = new Error(errorMessage);
+    (errorWithStatus as any).statusCode = statusCode;
+    (errorWithStatus as any).responseData = responseData;
+    throw errorWithStatus;
   }
 };
 
@@ -190,6 +208,11 @@ export const downloadFile = async (
   user: string
 ) => {
   try {
+    // Validate fileName is a non-empty string
+    if (!fileName || typeof fileName !== "string" || fileName.trim() === "") {
+      throw new Error(`Invalid fileName provided: ${JSON.stringify(fileName)}`);
+    }
+
     const response = await fetch(`https://api.pdfezy.com/api/pdf/download`, {
       method: "POST",
       headers: {
@@ -200,7 +223,14 @@ export const downloadFile = async (
     });
 
     if (!response.ok) {
-      throw new Error("Failed to download file");
+      const errorText = await response.text().catch(() => "Unknown error");
+      console.error(
+        `Download failed with status ${response.status}:`,
+        errorText
+      );
+      throw new Error(
+        `Failed to download file: ${response.status} ${response.statusText}`
+      );
     }
 
     const blob = await response.blob();
@@ -217,7 +247,10 @@ export const downloadFile = async (
     a.remove();
   } catch (err) {
     console.error("Error downloading file:", err);
-    window.alert("Failed to download file.");
+    const errorMessage =
+      err instanceof Error ? err.message : "Failed to download file.";
+    window.alert(errorMessage);
+    throw err; // Re-throw to allow caller to handle
   }
 };
 
@@ -708,7 +741,17 @@ export const compressPdf = async (
 
 // Merge PDFs (multi-file) via backend
 export const mergePdfFiles = async (files: File[]): Promise<string> => {
-  return convertMultipleFiles("/pdf/merge_pdf", files);
+  const response = await convertMultipleFiles("/pdf/merge_pdf", files);
+  // Extract just the filename from the response object (similar to compressPdf)
+  if (typeof response === "string") {
+    return response;
+  }
+  // Handle object response with file property
+  if (response && typeof response === "object" && (response as any).file) {
+    return (response as any).file;
+  }
+  // Fallback: try to stringify if it's an object, otherwise return as-is
+  throw new Error("Failed to extract filename from merge response");
 };
 
 // Split PDF via backend with page ranges

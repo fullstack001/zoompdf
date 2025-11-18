@@ -87,11 +87,23 @@ export const processPendingFile = async (
 
     // Handle merge_pdf with multiple files - use actual upload progress
     if (action === "merge_pdf" && files && files.length > 0) {
-      fileName = await convertMultipleFiles(
+      const response = await convertMultipleFiles(
         "/pdf/merge_pdf",
         files,
         handleUploadProgress
       );
+      // Extract filename from response (similar to compress_pdf)
+      if (typeof response === "string") {
+        fileName = response;
+      } else if (
+        response &&
+        typeof response === "object" &&
+        (response as any).file
+      ) {
+        fileName = (response as any).file;
+      } else {
+        throw new Error("Failed to extract filename from merge response");
+      }
     }
     // Handle split_pdf with page ranges - use actual upload progress
     else if (action === "split_pdf" && file && splitPageRanges) {
