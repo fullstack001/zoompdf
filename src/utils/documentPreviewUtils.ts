@@ -14,7 +14,6 @@ export const getWordThumbnail = async (file: File): Promise<string> => {
 
     // Try to use mammoth.js to convert Word to HTML, then render to canvas
     try {
-      // @ts-expect-error - mammoth is an optional dependency
       const mammoth = await import("mammoth");
 
       // Convert Word document to HTML
@@ -46,7 +45,7 @@ export const getWordThumbnail = async (file: File): Promise<string> => {
 
       // Use html2canvas to convert HTML to canvas
       try {
-        // @ts-expect-error - html2canvas is an optional dependency
+        
         const html2canvas = (await import("html2canvas")).default;
 
         const canvas = await html2canvas(container, {
@@ -72,7 +71,7 @@ export const getWordThumbnail = async (file: File): Promise<string> => {
 
       // Try to parse docx as ZIP and extract document.xml
       try {
-        // @ts-expect-error - jszip is an optional dependency
+        
         const JSZip = (await import("jszip")).default;
         const zip = new JSZip();
         const docx = await zip.loadAsync(arrayBuffer);
@@ -317,7 +316,7 @@ export const getEpubThumbnail = async (file: File): Promise<string> => {
     // Note: This requires jszip library. If not available, falls back to default preview
     try {
       // Dynamic import with type assertion for optional dependency
-      // @ts-expect-error - jszip is an optional dependency
+    
       const jszipModule = await import("jszip").catch(() => null);
       if (!jszipModule) {
         throw new Error("jszip not available");
