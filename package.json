@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3065",
-    "build": "next build",
-    "start": "next start -p 3065",
+    "dev": "TMPDIR=/tmp next dev -p 3065",
+    "build": "TMPDIR=/tmp next build",
+    "start": "TMPDIR=/tmp next start -p 3065",
     "lint": "next lint"
   },
   "dependencies": {
