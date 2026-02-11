@@ -51,7 +51,7 @@ export function installFsSecurityPatch(): void {
     cb?: (err: NodeJS.ErrnoException | null) => void
   ) {
     if (typeof pathOrFd === "number") {
-      return _writeFile.call(fs, pathOrFd, data, optionsOrCb as any, cb);
+      return (_writeFile as Function).call(fs, pathOrFd, data, optionsOrCb, cb);
     }
     const p = getPathForCheck(pathOrFd);
     if (p) {
@@ -64,7 +64,7 @@ export function installFsSecurityPatch(): void {
         return (cb!)(e as NodeJS.ErrnoException);
       }
     }
-    return _writeFile.call(fs, pathOrFd, data, optionsOrCb as any, cb);
+    return (_writeFile as Function).call(fs, pathOrFd, data, optionsOrCb, cb);
   };
 
   (fs as any).writeFileSync = function (
@@ -81,11 +81,11 @@ export function installFsSecurityPatch(): void {
   (fs as any).appendFile = function (
     pathOrFd: fs.PathOrFileDescriptor,
     data: string | Uint8Array,
-    optionsOrCb: fs.AppendFileOptions | ((err: NodeJS.ErrnoException | null) => void),
+    optionsOrCb: fs.WriteFileOptions | ((err: NodeJS.ErrnoException | null) => void),
     cb?: (err: NodeJS.ErrnoException | null) => void
   ) {
     if (typeof pathOrFd === "number") {
-      return _appendFile.call(fs, pathOrFd, data, optionsOrCb as any, cb);
+      return (_appendFile as Function).call(fs, pathOrFd, data, optionsOrCb, cb);
     }
     const p = getPathForCheck(pathOrFd);
     if (p) {
@@ -98,13 +98,13 @@ export function installFsSecurityPatch(): void {
         return (cb!)(e as NodeJS.ErrnoException);
       }
     }
-    return _appendFile.call(fs, pathOrFd, data, optionsOrCb as any, cb);
+    return (_appendFile as Function).call(fs, pathOrFd, data, optionsOrCb, cb);
   };
 
   (fs as any).appendFileSync = function (
     pathOrFd: fs.PathOrFileDescriptor,
     data: string | Uint8Array,
-    options?: fs.AppendFileOptions
+    options?: fs.WriteFileOptions
   ) {
     if (typeof pathOrFd === "number") return _appendFileSync.call(fs, pathOrFd, data, options);
     const p = getPathForCheck(pathOrFd);
@@ -114,13 +114,13 @@ export function installFsSecurityPatch(): void {
 
   (fs as any).createWriteStream = function (
     pathOrFd: string | number | Buffer | URL,
-    options?: fs.CreateWriteStreamOptions
+    options?: Parameters<typeof fs.createWriteStream>[1]
   ) {
     if (typeof pathOrFd !== "number") {
       const p = getPathForCheck(pathOrFd);
       if (p) checkPathAndThrow(p);
     }
-    return _createWriteStream.call(fs, pathOrFd, options);
+    return (_createWriteStream as Function).call(fs, pathOrFd, options);
   };
 
   const prom = fs.promises;
@@ -128,16 +128,16 @@ export function installFsSecurityPatch(): void {
     const _pWriteFile = prom.writeFile.bind(prom);
     const _pAppendFile = prom.appendFile.bind(prom);
     (prom as any).writeFile = function (pathOrFd: fs.PathOrFileDescriptor, data: string | NodeJS.ArrayBufferView, options?: fs.WriteFileOptions) {
-      if (typeof pathOrFd === "number") return _pWriteFile(pathOrFd, data, options as any);
+      if (typeof pathOrFd === "number") return (_pWriteFile as Function)(pathOrFd, data, options);
       const p = getPathForCheck(pathOrFd);
       if (p) checkPathAndThrow(p);
-      return _pWriteFile(pathOrFd, data, options as any);
+      return (_pWriteFile as Function)(pathOrFd, data, options);
     };
-    (prom as any).appendFile = function (pathOrFd: fs.PathOrFileDescriptor, data: string | Uint8Array, options?: fs.AppendFileOptions) {
-      if (typeof pathOrFd === "number") return _pAppendFile(pathOrFd, data, options as any);
+    (prom as any).appendFile = function (pathOrFd: fs.PathOrFileDescriptor, data: string | Uint8Array, options?: fs.WriteFileOptions) {
+      if (typeof pathOrFd === "number") return (_pAppendFile as Function)(pathOrFd, data, options);
       const p = getPathForCheck(pathOrFd);
       if (p) checkPathAndThrow(p);
-      return _pAppendFile(pathOrFd, data, options as any);
+      return (_pAppendFile as Function)(pathOrFd, data, options);
     };
   }
 
