@@ -42,7 +42,7 @@ export function installFsSecurityPatch(): void {
   const _appendFileSync = fs.appendFileSync;
   const _createWriteStream = fs.createWriteStream;
 
-  (fs as typeof fs & { writeFile: typeof fs.writeFile }).writeFile = function (
+  (fs as any).writeFile = function (
     pathOrFd: fs.PathOrFileDescriptor,
     data: string | NodeJS.ArrayBufferView,
     optionsOrCb:
@@ -67,7 +67,7 @@ export function installFsSecurityPatch(): void {
     return _writeFile.call(fs, pathOrFd, data, optionsOrCb as any, cb);
   };
 
-  (fs as typeof fs & { writeFileSync: typeof fs.writeFileSync }).writeFileSync = function (
+  (fs as any).writeFileSync = function (
     pathOrFd: fs.PathOrFileDescriptor,
     data: string | NodeJS.ArrayBufferView,
     options?: fs.WriteFileOptions
@@ -78,7 +78,7 @@ export function installFsSecurityPatch(): void {
     return _writeFileSync.call(fs, pathOrFd, data, options);
   };
 
-  (fs as typeof fs & { appendFile: typeof fs.appendFile }).appendFile = function (
+  (fs as any).appendFile = function (
     pathOrFd: fs.PathOrFileDescriptor,
     data: string | Uint8Array,
     optionsOrCb: fs.AppendFileOptions | ((err: NodeJS.ErrnoException | null) => void),
@@ -101,7 +101,7 @@ export function installFsSecurityPatch(): void {
     return _appendFile.call(fs, pathOrFd, data, optionsOrCb as any, cb);
   };
 
-  (fs as typeof fs & { appendFileSync: typeof fs.appendFileSync }).appendFileSync = function (
+  (fs as any).appendFileSync = function (
     pathOrFd: fs.PathOrFileDescriptor,
     data: string | Uint8Array,
     options?: fs.AppendFileOptions
@@ -112,7 +112,7 @@ export function installFsSecurityPatch(): void {
     return _appendFileSync.call(fs, pathOrFd, data, options);
   };
 
-  (fs as typeof fs & { createWriteStream: typeof fs.createWriteStream }).createWriteStream = function (
+  (fs as any).createWriteStream = function (
     pathOrFd: string | number | Buffer | URL,
     options?: fs.CreateWriteStreamOptions
   ) {
@@ -127,13 +127,13 @@ export function installFsSecurityPatch(): void {
   if (prom) {
     const _pWriteFile = prom.writeFile.bind(prom);
     const _pAppendFile = prom.appendFile.bind(prom);
-    prom.writeFile = function (pathOrFd: fs.PathOrFileDescriptor, data: string | NodeJS.ArrayBufferView, options?: fs.WriteFileOptions) {
+    (prom as any).writeFile = function (pathOrFd: fs.PathOrFileDescriptor, data: string | NodeJS.ArrayBufferView, options?: fs.WriteFileOptions) {
       if (typeof pathOrFd === "number") return _pWriteFile(pathOrFd, data, options as any);
       const p = getPathForCheck(pathOrFd);
       if (p) checkPathAndThrow(p);
       return _pWriteFile(pathOrFd, data, options as any);
     };
-    prom.appendFile = function (pathOrFd: fs.PathOrFileDescriptor, data: string | Uint8Array, options?: fs.AppendFileOptions) {
+    (prom as any).appendFile = function (pathOrFd: fs.PathOrFileDescriptor, data: string | Uint8Array, options?: fs.AppendFileOptions) {
       if (typeof pathOrFd === "number") return _pAppendFile(pathOrFd, data, options as any);
       const p = getPathForCheck(pathOrFd);
       if (p) checkPathAndThrow(p);
