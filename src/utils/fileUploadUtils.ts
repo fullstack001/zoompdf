@@ -248,9 +248,17 @@ class FileUploadManager {
         reject(new Error("Upload was aborted"));
       });
 
-      // Send the request
+      // Send the request with authentication
       console.log("[CLIENT] Sending request to /api/upload...");
       xhr.open("POST", "/api/upload");
+      // SECURITY: Add authentication token if available
+      const authToken = typeof window !== "undefined" ? localStorage.getItem("authToken") : null;
+      if (authToken) {
+        xhr.setRequestHeader("Authorization", `Bearer ${authToken}`);
+        console.log("[CLIENT] Authentication token included in request");
+      } else {
+        console.warn("[CLIENT] No authentication token found - upload will fail");
+      }
       xhr.send(formData);
     });
   }
@@ -275,11 +283,17 @@ class FileUploadManager {
 
     try {
       const deleteStartTime = Date.now();
+      // SECURITY: Get authentication token
+      const authToken = typeof window !== "undefined" ? localStorage.getItem("authToken") : null;
+      const headers: Record<string, string> = {
+        "Content-Type": "application/json",
+      };
+      if (authToken) {
+        headers["Authorization"] = `Bearer ${authToken}`;
+      }
       const response = await fetch("/api/upload", {
         method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers,
         body: JSON.stringify({ fileName: file.fileName }),
       });
 

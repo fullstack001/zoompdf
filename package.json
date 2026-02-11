@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "TMPDIR=/tmp next dev -p 3065",
     "build": "TMPDIR=/tmp next build",
-    "start": "TMPDIR=/tmp next start -p 3065",
+    "start": "TMPDIR=/tmp next start -p 3065 -H 127.0.0.1",
+    "check-deps": "node scripts/check-dependencies.js",
     "lint": "next lint"
   },
   "dependencies": {

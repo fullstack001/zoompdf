@@ -1,6 +1,9 @@
 const withNextIntl = require("next-intl/plugin")("./src/i18n/request.ts");
 
 module.exports = withNextIntl({
+  experimental: {
+    instrumentationHook: true,
+  },
   eslint: {
     // Warning: This allows production builds to successfully complete even if
     // your project has ESLint errors.
