@@ -6,7 +6,8 @@
     "dev": " next dev -p 3065",
     "build": "next build",
     "start": "next start -p 3065 -H 127.0.0.1",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check:deps": "node scripts/check-dependencies.js"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
