@@ -2,15 +2,20 @@
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { Loader2, CheckCircle2, Calendar, CreditCard } from "lucide-react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store/store";
+import { cancelSubscription } from "@/utils/apiUtils";
+import { setUser } from "@/store/slices/userSlice";
 
 export default function MembershipCard() {
   const t = useTranslations();
+  const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
+  const [cancelMessage, setCancelMessage] = useState("");
   const subscription = useSelector(
     (state: RootState) => state.user.subscription
   );
+  const user = useSelector((state: RootState) => state.user);
   const isSubscriptionValid =
     subscription && new Date(subscription.expiryDate) > new Date();
 
@@ -30,6 +35,28 @@ export default function MembershipCard() {
       month: "long",
       day: "numeric",
     });
+  };
+
+  const handleCancelPlan = async () => {
+    if (!subscription?.subscriptionId) return;
+    setIsLoading(true);
+    setCancelMessage("");
+    try {
+      await cancelSubscription(subscription.subscriptionId);
+      dispatch(
+        setUser({
+          ...user,
+          subscription: null,
+        })
+      );
+      setCancelMessage("Your plan has been canceled.");
+    } catch (error) {
+      setCancelMessage(
+        error instanceof Error ? error.message : "Failed to cancel plan."
+      );
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -93,6 +120,19 @@ export default function MembershipCard() {
                     </p>
                   </div>
                 </div>
+              )}
+            </div>
+
+            <div className="pt-2">
+              <button
+                onClick={handleCancelPlan}
+                disabled={isLoading}
+                className="px-4 py-2 rounded-lg bg-red-600 text-white text-sm font-semibold disabled:opacity-60"
+              >
+                {isLoading ? "Cancelling..." : "Cancel Plan"}
+              </button>
+              {cancelMessage && (
+                <p className="text-sm text-gray-700 mt-2">{cancelMessage}</p>
               )}
             </div>
           </div>

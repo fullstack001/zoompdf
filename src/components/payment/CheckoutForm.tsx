@@ -101,7 +101,7 @@ function CheckoutForm({
       const cardNumber = paymentMethod.card?.last4 || "";
 
       if (subscription && subscription.subscriptionId) {
-        await cancelSubscription(subscription.subscriptionId, user.email);
+        await cancelSubscription(subscription.subscriptionId);
       }
 
       // Call backend to create subscription

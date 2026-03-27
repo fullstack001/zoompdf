@@ -16,6 +16,18 @@ export interface Subscription {
   subscriptionType: string;
   subscribedDate: string;
   expiryDate: string;
+  status?: string;
+}
+
+export interface PaymentHistoryItem {
+  id: string;
+  date: number;
+  amount: number;
+  currency: string;
+  status: string;
+  hostedInvoiceUrl?: string | null;
+  invoicePdf?: string | null;
+  description: string;
 }
 
 export interface AuthResponse {
@@ -57,6 +69,18 @@ const getAuthToken = (): string | null => {
     return localStorage.getItem("authToken");
   }
   return null;
+};
+
+const getAuthorizedConfig = () => {
+  const token = getAuthToken();
+  if (!token) {
+    throw new Error("Authentication token not found");
+  }
+  return {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
 };
 
 // Helper function to get auth headers
@@ -814,16 +838,70 @@ export const createCheckoutSession = async (
 };
 
 export const cancelSubscription = async (
-  subscriptionId: string,
-  email: string
+  subscriptionId: string
 ): Promise<void> => {
   try {
-    await api.post("/subscription/cancel-subscription", {
-      subscriptionId,
-      email,
-    });
+    await api.post(
+      "/subscription/cancel-subscription",
+      {
+        subscriptionId,
+      },
+      getAuthorizedConfig()
+    );
   } catch (error) {
     throw new Error("Failed to cancel subscription", { cause: error });
+  }
+};
+
+export const changeEmail = async (
+  newEmail: string,
+  password: string
+): Promise<AuthResponse> => {
+  try {
+    const response: AxiosResponse<AuthResponse> = await api.post(
+      "/auth/change-email",
+      { newEmail, password },
+      getAuthorizedConfig()
+    );
+    return response.data;
+  } catch (error) {
+    const axiosError = error as AxiosError<{ msg?: string; message?: string }>;
+    throw new Error(
+      axiosError.response?.data?.msg ||
+        axiosError.response?.data?.message ||
+        "Failed to change email"
+    );
+  }
+};
+
+export const changePassword = async (
+  oldPassword: string,
+  newPassword: string
+): Promise<{ token: string }> => {
+  try {
+    const response: AxiosResponse<{ token: string }> = await api.post(
+      "/auth/changePassword",
+      { oldPassword, newPassword },
+      getAuthorizedConfig()
+    );
+    return response.data;
+  } catch (error) {
+    const axiosError = error as AxiosError<{ msg?: string; message?: string }>;
+    throw new Error(
+      axiosError.response?.data?.msg ||
+        axiosError.response?.data?.message ||
+        "Failed to change password"
+    );
+  }
+};
+
+export const getPaymentHistory = async (): Promise<PaymentHistoryItem[]> => {
+  try {
+    const response: AxiosResponse<{ payments: PaymentHistoryItem[] }> =
+      await api.get("/subscription/payment-history", getAuthorizedConfig());
+    return response.data.payments || [];
+  } catch (error) {
+    throw new Error("Failed to get payment history", { cause: error });
   }
 };
 
