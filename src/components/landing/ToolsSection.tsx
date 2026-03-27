@@ -10,8 +10,8 @@ export default function ToolsSection() {
     {
       titleKey: "tools.editPdf",
       tools: [
-        { nameKey: "tools.editPdf", href: "/edit-pdf" },
-        { nameKey: "tools.addWatermark", href: "/add-watermark" },
+        { nameKey: "tools.editPdf", href: "/" },
+        { nameKey: "tools.compressPdf", href: "/compress-pdf" },
       ],
     },
     {

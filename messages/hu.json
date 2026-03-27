@@ -1,14 +1,14 @@
 {
   "navigation": {
-    "home": "Kezdőlap",
-    "convert": "Konvertálás",
+    "home": "Otthon",
+    "convert": "Konvertálni",
     "edit": "Szerkesztés",
     "compress": "Tömörítés",
-    "sign": "Aláírás",
-    "merge": "Összevonás",
-    "split": "Felosztás",
+    "sign": "Jel",
+    "merge": "Egyesítés",
+    "split": "Split",
     "files": "Fájlok",
-    "account": "Fiók",
+    "account": "fiók",
     "login": "Bejelentkezés",
     "logout": "Kijelentkezés",
     "pdfConverter": "PDF KONVERTER",
@@ -16,7 +16,7 @@
     "language": "Nyelv"
   },
   "languages": {
-    "en": "English",
+    "en": "angolul",
     "zh": "中文",
     "cs": "Čeština",
     "nl": "Nederlands",
@@ -42,44 +42,44 @@
     "fi": "Suomi"
   },
   "pages": {
-    "home": "Kezdőlap",
+    "home": "Otthon",
     "convertPdf": "PDF konvertálása",
     "editPdf": "PDF szerkesztése",
     "compressPdf": "PDF tömörítése",
     "signPdf": "PDF aláírása",
-    "mergePdf": "PDF összevonása",
+    "mergePdf": "PDF egyesítése",
     "splitPdf": "PDF felosztása",
     "files": "Fájlok",
     "account": "Saját fiók",
     "login": "Bejelentkezés",
     "payment": "Fizetés",
-    "plan": "Csomagok"
+    "plan": "Tervek"
   },
   "common": {
     "upload": "Feltöltés",
     "download": "Letöltés",
-    "convert": "Konvertálás",
+    "convert": "Konvertálni",
     "edit": "Szerkesztés",
     "save": "Mentés",
     "cancel": "Mégse",
-    "delete": "Törlés",
+    "delete": "Törölje",
     "back": "Vissza",
     "next": "Következő",
     "previous": "Előző",
     "loading": "Betöltés...",
     "error": "Hiba",
     "success": "Siker",
-    "chooseFile": "Fájl kiválasztása",
+    "chooseFile": "Válassza a Fájl lehetőséget",
     "dragAndDrop": "Húzza ide a fájlt",
     "or": "vagy",
     "browse": "Tallózás",
     "processing": "Feldolgozás...",
-    "processingFile": "Feldolgozzuk a fájlt",
-    "configNotFound": "Nem található konfiguráció a kezdőlaphoz.",
-    "uploadFailed": "A fájl feltöltése sikertelen. Kérjük, próbálja újra.",
-    "chooseBestTool": "Válassza ki a legjobb eszközt az üzleti igényeihez",
+    "processingFile": "Folyamatban van a fájl feldolgozása",
+    "configNotFound": "A kezdőlap konfigurációja nem található.",
+    "uploadFailed": "Nem sikerült feltölteni a fájlt. Kérjük, próbálja újra.",
+    "chooseBestTool": "Válassza ki a használni kívánt eszközt",
     "done": "Kész",
-    "split": "Felosztás",
+    "split": "Split",
     "saving": "Mentés...",
     "signing": "Aláírás...",
     "splitting": "Felosztás...",
@@ -87,64 +87,64 @@
     "convertToPdf": "Konvertálás PDF-be",
     "convertImage": "Kép konvertálása",
     "otherFormats": "Egyéb formátumok",
-    "editSuccess": "Szerkesztés sikeres!",
-    "editSuccessMessage": "A PDF sikeresen szerkesztve lett és letöltésre kész.",
-    "whatsNext": "Mi a következő?",
-    "downloadEditedFile": "Szerkesztett fájl letöltése",
-    "editAnotherFile": "Másik fájl szerkesztése",
-    "startNew": "Új kezdés",
-    "fileId": "Fájl azonosító",
-    "toolNotFound": "Eszköz nem található"
+    "editSuccess": "A szerkesztés sikeres!",
+    "editSuccessMessage": "A PDF-fájl szerkesztése sikeresen megtörtént, és készen áll a letöltésre.",
+    "whatsNext": "Mi következik?",
+    "downloadEditedFile": "Töltse le a szerkesztett fájlt",
+    "editAnotherFile": "Szerkesszen másik fájlt",
+    "startNew": "Új indítása",
+    "fileId": "Fájlazonosító",
+    "toolNotFound": "Az eszköz nem található"
   },
   "errors": {
     "oops": "Hoppá!",
-    "somethingWentWrong": "Valami hiba történt",
+    "somethingWentWrong": "Valami elromlott",
     "pageNotFound": "Az oldal nem található",
     "pageNotExist": "A keresett oldal nem létezik.",
-    "errorLoadingPage": "Hiba történt az oldal betöltése során. Kérjük, próbálja újra.",
-    "errorLoadingApp": "Hiba történt az alkalmazás betöltése során. Kérjük, próbálja újra.",
-    "tryAgain": "Próbálja újra",
-    "goHome": "Vissza a kezdőlapra",
+    "errorLoadingPage": "Hiba történt az oldal betöltése közben. Kérjük, próbálja újra.",
+    "errorLoadingApp": "Hiba történt az alkalmazás betöltése közben. Kérjük, próbálja újra.",
+    "tryAgain": "Próbáld újra",
+    "goHome": "Menj haza",
     "goToHomePage": "Ugrás a kezdőlapra",
-    "errorDetails": "Hiba részletei (csak fejlesztéshez)"
+    "errorDetails": "Hiba részletei (csak fejlesztés)"
   },
   "tools": {
-    "pdfToWord": "PDF Word-ba",
-    "pdfToExcel": "PDF Excel-be",
-    "pdfToPptx": "PDF PowerPoint-ba",
-    "pdfToPng": "PDF PNG-be",
-    "pdfToJpg": "PDF JPG-be",
-    "pdfToEpub": "PDF EPUB-ba",
-    "pdfToMobi": "PDF MOBI-ba",
+    "pdfToWord": "PDF-ből Word-be",
+    "pdfToExcel": "PDF-ből Excelbe",
+    "pdfToPptx": "PDF a PowerPointba",
+    "pdfToPng": "PDF-ből PNG-be",
+    "pdfToJpg": "PDF-ből JPG-be",
+    "pdfToEpub": "PDF-ből EPUB-ba",
+    "pdfToMobi": "PDF a MOBI-ba",
     "pdfToTxt": "PDF TXT-be",
-    "pdfToHtml": "PDF HTML-be",
+    "pdfToHtml": "PDF-ből HTML-be",
     "pdfToSvg": "PDF SVG-be",
-    "pdfToTiff": "PDF TIFF-be",
-    "pdfToWebp": "PDF WebP-be",
-    "pdfToAvif": "PDF AVIF-be",
-    "pdfToEps": "PDF EPS-be",
-    "pdfToDxf": "PDF DXF-be",
-    "pdfToAzw3": "PDF AZW3-ba",
+    "pdfToTiff": "PDF-ből TIFF-be",
+    "pdfToWebp": "PDF a WebP-re",
+    "pdfToAvif": "PDF AVIF-re",
+    "pdfToEps": "PDF-ből EPS-be",
+    "pdfToDxf": "PDF-ből DXF-be",
+    "pdfToAzw3": "PDF az AZW3-ba",
     "wordToPdf": "Word PDF-be",
-    "excelToPdf": "Excel PDF-be",
+    "excelToPdf": "Excelből PDF-be",
     "pptxToPdf": "PPTX PDF-be",
-    "pngToPdf": "PNG PDF-be",
-    "jpgToPdf": "JPG PDF-be",
-    "epubToPdf": "EPUB PDF-be",
-    "mobiToPdf": "MOBI PDF-be",
-    "avifToPdf": "AVIF PDF-be",
-    "avifToPdfJpg": "AVIF PDF-be",
-    "pngToAvif": "PNG AVIF-be",
-    "jpgToAvif": "JPG AVIF-be",
-    "avifToPng": "AVIF PNG-be",
-    "avifToJpg": "AVIF JPG-be",
-    "epubToMobi": "EPUB MOBI-ba",
-    "mobiToEpub": "MOBI EPUB-ba",
+    "pngToPdf": "PNG-ből PDF-be",
+    "jpgToPdf": "JPG-ből PDF-be",
+    "epubToPdf": "EPUB-ból PDF-be",
+    "mobiToPdf": "MOBI-ból PDF-be",
+    "avifToPdf": "AVIF-ből PDF-be",
+    "avifToPdfJpg": "AVIF-ből PDF-be",
+    "pngToAvif": "PNG-ből AVIF-re",
+    "jpgToAvif": "JPG-ből AVIF-re",
+    "avifToPng": "AVIF-ből PNG-be",
+    "avifToJpg": "AVIF-ből JPG-be",
+    "epubToMobi": "EPUB a MOBI-ra",
+    "mobiToEpub": "MOBI-ról EPUB-ra",
     "editPdf": "PDF szerkesztése",
     "signPdf": "PDF aláírása",
     "addWatermark": "Vízjel hozzáadása",
     "rotatePdf": "PDF forgatása",
-    "mergePdf": "PDF összevonása",
+    "mergePdf": "PDF egyesítése",
     "splitPdf": "PDF felosztása",
     "deletePages": "Oldalak törlése",
     "compressPdf": "PDF tömörítése",
@@ -153,179 +153,179 @@
     "fillPdf": "PDF kitöltése",
     "createForm": "Űrlap létrehozása",
     "imageToText": "Kép szöveggé",
-    "mergeImages": "Képek összevonása",
+    "mergeImages": "Képek egyesítése",
     "pdfOcr": "PDF OCR",
-    "pdfToImage": "PDF képé",
+    "pdfToImage": "PDF-ből képre",
     "imageToPdf": "Kép PDF-be",
-    "pdfToDoc": "PDF DOC-ba"
+    "pdfToDoc": "PDF a DOC-ba"
   },
   "toolsSection": {
-    "allPdfTools": "Összes PDF eszköz",
-    "subtitle": "Minden, amire szüksége van a PDF-ekkel való munkához egy helyen",
+    "allPdfTools": "Minden PDF-eszköz",
+    "subtitle": "Minden egy helyen, ami a PDF-ekkel való munkához szükséges",
     "splitAndMerge": "Felosztás és összevonás",
     "w9": "W-9",
     "ds11": "DS-11",
     "1099misc": "1099-MISC",
     "viewAllForms": "Összes űrlap megtekintése",
-    "ctaText": "Szüksége van valami másra? Több mint 50+ PDF eszköz áll rendelkezésre.",
+    "ctaText": "Kell még valami? Több mint 50 PDF-eszköz áll rendelkezésünkre.",
     "viewAllTools": "Összes eszköz megtekintése"
   },
   "toolPages": {
     "home": {
-      "title": "PDF Konverter és Szerkesztő",
-      "subtitle": "Konvertálja, szerkessze és kezelje PDF-jeit könnyedén. Havonta több mint 1M fájl feldolgozva!"
+      "title": "PDF konverter és szerkesztő",
+      "subtitle": "Könnyedén konvertálhatja, szerkesztheti és kezelheti PDF-fájljait. Több mint 1 millió fájl feldolgozása havonta!"
     },
     "signPdf": {
-      "title": "PDF online aláírása",
-      "subtitle": "Írja alá dokumentumait biztonságosan online. Töltse fel a fájlt a kezdéshez!"
+      "title": "PDF aláírása online",
+      "subtitle": "Biztonságosan írja alá dokumentumait online. A kezdéshez töltsön fel egy fájlt!"
     },
     "splitPdf": {
-      "title": "PDF online felosztása",
-      "subtitle": "Ossza fel PDF-jét több fájlba könnyedén. Töltse fel a fájlt a kezdéshez!"
+      "title": "Split PDF Online",
+      "subtitle": "Egyszerűen oszthatja fel PDF-fájlját több fájlra. A kezdéshez töltsön fel egy fájlt!"
     },
     "compressPdf": {
       "title": "PDF tömörítő",
-      "subtitle": "Már tömörítettünk 775 000 fájlt — segítsünk az Önével is"
+      "subtitle": "Már 775 000 fájlt tömörítettünk – engedje meg, hogy segítsünk a tiédben"
     },
     "mergePdf": {
-      "title": "PDF fájlok összevonása",
-      "subtitle": "Kombináljon több PDF fájlt egybe. Töltse fel fájljait a kezdéshez!"
+      "title": "PDF fájlok egyesítése",
+      "subtitle": "Több PDF-fájl egyesítése egybe. A kezdéshez töltse fel fájljait!"
     },
     "pdfToWord": {
-      "title": "PDF Word konverter",
-      "subtitle": "Segítettünk 775 000 fájl konvertálásában — segítsünk az Önével is"
+      "title": "PDF-ből Word konvertáló",
+      "subtitle": "775 000 fájl konvertálásában segítettünk – hadd segítsünk a tiédben"
     },
     "pdfToPng": {
-      "title": "PDF PNG konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — az Öné lehet a következő"
+      "title": "PDF-ből PNG-be konvertáló",
+      "subtitle": "Már több mint egymillió fájlt feldolgoztunk – az Öné lehet a következő"
     },
     "pdfToJpg": {
-      "title": "PDF JPG konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — az Öné lehet a következő"
+      "title": "PDF-ből JPG konvertáló",
+      "subtitle": "Már több mint egymillió fájlt feldolgoztunk – az Öné lehet a következő"
     },
     "pdfToEpub": {
-      "title": "PDF EPUB konverter",
-      "subtitle": "Segítettünk 775 000 fájl konvertálásában — segítsünk az Önével is"
+      "title": "PDF-ből EPUB konvertáló",
+      "subtitle": "775 000 fájl konvertálásában segítettünk – hadd segítsünk a tiédben"
     },
     "pdfToExcel": {
-      "title": "PDF Excel konverter",
-      "subtitle": "Konvertáltunk 775K PDF-t — miért ne lenne az Öné a következő?"
+      "title": "PDF-ből Excel konvertáló",
+      "subtitle": "775 000 PDF-et konvertáltunk – miért ne készíthetné el a tiéd a következőt?"
     },
     "pdfToPptx": {
-      "title": "PDF PPTX konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — az Öné lehet a következő"
+      "title": "PDF–PPTX konverter",
+      "subtitle": "Már több mint egymillió fájlt feldolgoztunk – az Öné lehet a következő"
     },
     "wordToPdf": {
-      "title": "Word PDF konverter",
-      "subtitle": "Segítettünk 775 000 fájl konvertálásában — segítsünk az Önével is"
+      "title": "Word to PDF konverter",
+      "subtitle": "775 000 fájl konvertálásában segítettünk – hadd segítsünk a tiédben"
     },
     "jpgToPdf": {
-      "title": "JPG PDF konverter",
-      "subtitle": "Eddig 75 000 JPG-t dolgoztunk fel. Legyen az Öné a következő."
+      "title": "JPG-ből PDF konvertáló",
+      "subtitle": "Eddig 75 000 JPG-t dolgoztunk fel. Következő készítsük el a tiédet."
     },
     "pngToPdf": {
-      "title": "PNG PDF konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — az Öné lehet a következő"
+      "title": "PNG-ből PDF konvertáló",
+      "subtitle": "Már több mint egymillió fájlt feldolgoztunk – az Öné lehet a következő"
     },
     "epubToPdf": {
-      "title": "EPUB PDF konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — most segítsünk az Önével"
+      "title": "EPUB PDF konvertáló",
+      "subtitle": "Már 775 000 fájlt konvertáltunk – most engedje meg, hogy segítsünk a tiédben"
     },
     "pdfToTxt": {
-      "title": "PDF TXT konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — az Öné lehet a következő"
+      "title": "PDF to TXT konverter",
+      "subtitle": "Már több mint egymillió fájlt feldolgoztunk – az Öné lehet a következő"
     },
     "pdfToHtml": {
-      "title": "PDF HTML konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — az Öné lehet a következő"
+      "title": "PDF-HTML konvertáló",
+      "subtitle": "Már több mint egymillió fájlt feldolgoztunk – az Öné lehet a következő"
     },
     "pdfToSvg": {
-      "title": "PDF SVG konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — az Öné lehet a következő"
+      "title": "PDF-SVG konverter",
+      "subtitle": "Már több mint egymillió fájlt feldolgoztunk – az Öné lehet a következő"
     },
     "pdfToTiff": {
-      "title": "PDF TIFF konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — az Öné lehet a következő"
+      "title": "PDF-TIFF konverter",
+      "subtitle": "Már több mint egymillió fájlt feldolgoztunk – az Öné lehet a következő"
     },
     "pdfToWebp": {
-      "title": "PDF WebP konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — az Öné lehet a következő"
+      "title": "PDF to WebP Converter",
+      "subtitle": "Már több mint egymillió fájlt feldolgoztunk – az Öné lehet a következő"
     },
     "pdfToAvif": {
-      "title": "PDF AVIF konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — az Öné lehet a következő"
+      "title": "PDF to AVIF konverter",
+      "subtitle": "Már több mint egymillió fájlt feldolgoztunk – az Öné lehet a következő"
     },
     "pdfToEps": {
-      "title": "PDF EPS konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — az Öné lehet a következő"
+      "title": "PDF-ből EPS konvertáló",
+      "subtitle": "Már több mint egymillió fájlt feldolgoztunk – az Öné lehet a következő"
     },
     "pdfToDxf": {
-      "title": "PDF DXF konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — az Öné lehet a következő"
+      "title": "PDF-ből DXF konvertáló",
+      "subtitle": "Már több mint egymillió fájlt feldolgoztunk – az Öné lehet a következő"
     },
     "pdfToAzw3": {
-      "title": "PDF AZW3 konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — az Öné lehet a következő"
+      "title": "PDF-ből AZW3 konvertáló",
+      "subtitle": "Már több mint egymillió fájlt feldolgoztunk – az Öné lehet a következő"
     },
     "pdfToMobi": {
-      "title": "PDF MOBI konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — az Öné lehet a következő"
+      "title": "PDF to MOBI konverter",
+      "subtitle": "Már több mint egymillió fájlt feldolgoztunk – az Öné lehet a következő"
     },
     "pdfToDoc": {
-      "title": "PDF DOC konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — az Öné lehet a következő"
+      "title": "PDF to DOC konverter",
+      "subtitle": "Már több mint egymillió fájlt feldolgoztunk – az Öné lehet a következő"
     },
     "excelToPdf": {
       "title": "Excel PDF konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — az Öné lehet a következő"
+      "subtitle": "Már több mint egymillió fájlt feldolgoztunk – az Öné lehet a következő"
     },
     "pptxToPdf": {
-      "title": "PPTX PDF konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — az Öné lehet a következő"
+      "title": "PPTX PDF konvertáló",
+      "subtitle": "Már több mint egymillió fájlt feldolgoztunk – az Öné lehet a következő"
     },
     "mobiToPdf": {
-      "title": "MOBI PDF konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — az Öné lehet a következő"
+      "title": "MOBI to PDF konverter",
+      "subtitle": "Már több mint egymillió fájlt feldolgoztunk – az Öné lehet a következő"
     },
     "avifToPdf": {
       "title": "AVIF PDF konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — az Öné lehet a következő"
+      "subtitle": "Már több mint egymillió fájlt feldolgoztunk – az Öné lehet a következő"
     },
     "pngToAvif": {
-      "title": "PNG AVIF konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — az Öné lehet a következő"
+      "title": "PNG to AVIF konverter",
+      "subtitle": "Már több mint egymillió fájlt feldolgoztunk – az Öné lehet a következő"
     },
     "jpgToAvif": {
-      "title": "JPG AVIF konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — az Öné lehet a következő"
+      "title": "JPG–AVIF konverter",
+      "subtitle": "Már több mint egymillió fájlt feldolgoztunk – az Öné lehet a következő"
     },
     "avifToPng": {
-      "title": "AVIF PNG konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — az Öné lehet a következő"
+      "title": "AVIF - PNG konverter",
+      "subtitle": "Már több mint egymillió fájlt feldolgoztunk – az Öné lehet a következő"
     },
     "avifToJpg": {
-      "title": "AVIF JPG konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — az Öné lehet a következő"
+      "title": "AVIF - JPG konverter",
+      "subtitle": "Már több mint egymillió fájlt feldolgoztunk – az Öné lehet a következő"
     },
     "epubToMobi": {
-      "title": "EPUB MOBI konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — az Öné lehet a következő"
+      "title": "EPUB–MOBI konverter",
+      "subtitle": "Már több mint egymillió fájlt feldolgoztunk – az Öné lehet a következő"
     },
     "mobiToEpub": {
-      "title": "MOBI EPUB konverter",
-      "subtitle": "Már konvertáltunk 775 000 fájlt — az Öné lehet a következő"
+      "title": "MOBI–EPUB konverter",
+      "subtitle": "Már több mint egymillió fájlt feldolgoztunk – az Öné lehet a következő"
     },
     "pdfOcr": {
       "title": "PDF OCR eszköz",
-      "subtitle": "Szöveg kinyerése PDF-ből OCR technológiával. Töltse fel a fájlt a kezdéshez!"
+      "subtitle": "Szöveg kinyerése PDF-ekből OCR technológiával. A kezdéshez töltsön fel egy fájlt!"
     },
     "pdfToImage": {
-      "title": "PDF kép konverter",
-      "subtitle": "PDF oldalak konvertálása képekké. Töltse fel a fájlt a kezdéshez!"
+      "title": "PDF-ből kép konvertáló",
+      "subtitle": "PDF-oldalak konvertálása képekké. A kezdéshez töltsön fel egy fájlt!"
     },
     "imageToPdf": {
-      "title": "Kép PDF konverter",
-      "subtitle": "Képek konvertálása PDF-be. Töltse fel fájljait a kezdéshez!"
+      "title": "Kép PDF-be konvertáló",
+      "subtitle": "Konvertálja a képeket PDF-be. A kezdéshez töltse fel fájljait!"
     }
   },
   "navbar": {
@@ -333,145 +333,153 @@
     "convertToPdf": "Konvertálás PDF-be",
     "convertImage": "Kép konvertálása",
     "convertEbook": "E-könyv konvertálása",
-    "editingTools": "Szerkesztő eszközök",
-    "myDocuments": "Dokumentumaim",
+    "editingTools": "Szerkesztőeszközök",
+    "myDocuments": "Saját dokumentumaim",
     "myAccount": "Saját fiók",
-    "help": "Súgó",
-    "termsConditions": "Felhasználási feltételek",
-    "settings": "Beállítások",
-    "logOut": "Kijelentkezés",
-    "upgradePlan": "Csomag frissítése",
+    "help": "Segítség",
+    "termsConditions": "Általános Szerződési Feltételek",
+    "settings": "Beállítások elemre",
+    "logOut": "Jelentkezzen ki",
+    "upgradePlan": "Frissítési terv",
     "noSubscription": "Nincs előfizetés",
-    "profileDetails": "Profil részletek"
+    "profileDetails": "Profil részletei"
   },
   "footer": {
     "editPdf": "PDF szerkesztése",
     "convertFromPdf": "Konvertálás PDF-ből",
     "convertToPdf": "Konvertálás PDF-be",
-    "disclaimer": "Felelősségkizárás",
-    "privacyPolicy": "Adatvédelmi irányelvek",
+    "disclaimer": "Jogi nyilatkozat",
+    "privacyPolicy": "Adatvédelmi szabályzat",
     "termsOfService": "Szolgáltatási feltételek",
-    "sitemap": "Honlaptérkép",
+    "sitemap": "Webhelytérkép",
     "allRightsReserved": "© 2025 PDFEZY Minden jog fenntartva.",
-    "companyDescription": "Az Ön mindent egyben PDF megoldása dokumentumok konvertálásához, szerkesztéséhez és kezeléséhez könnyedén és biztonságosan.",
-    "stayUpdated": "Maradjon naprakész",
-    "newsletterDescription": "Kapja meg a legfrissebb frissítéseket és PDF tippeket közvetlenül az inbox-ba.",
-    "emailPlaceholder": "Adja meg az email címét",
-    "subscribe": "Feliratkozás",
-    "followUs": "Kövessen minket",
+    "companyDescription": "Az Ön minden az egyben PDF-megoldása a dokumentumok egyszerű és biztonságos konvertálásához, szerkesztéséhez és kezeléséhez.",
+    "stayUpdated": "Legyen naprakész",
+    "newsletterDescription": "A legfrissebb frissítések és PDF-tippek a postaládájába kerülnek.",
+    "emailPlaceholder": "Adja meg e-mail címét",
+    "subscribe": "Iratkozz fel",
+    "followUs": "Kövess minket",
     "language": "Nyelv",
-    "selectLanguage": "Válassza ki a nyelvét",
-    "email": "Email",
+    "selectLanguage": "Válassza ki a nyelvet",
+    "email": "E-mail",
     "phone": "Telefon",
     "address": "Cím"
   },
   "auth": {
-    "email": "Email",
+    "email": "E-mail",
     "password": "Jelszó",
     "confirmPassword": "Jelszó megerősítése",
-    "forgotPassword": "Elfelejtette a jelszót?",
+    "forgotPassword": "Elfelejtett jelszó?",
     "resetPassword": "Jelszó visszaállítása",
-    "signIn": "Bejelentkezés",
-    "signUp": "Regisztráció",
+    "signIn": "Jelentkezzen be",
+    "signUp": "Regisztráljon",
     "alreadyHaveAccount": "Már van fiókja?",
-    "dontHaveAccount": "Nincs fiókja?",
+    "dontHaveAccount": "Nincs fiókod?",
     "login": "Bejelentkezés",
     "loggingIn": "Bejelentkezés...",
-    "emailAddress": "Email cím",
-    "enterEmailAddress": "Adja meg az Email címét",
-    "emailAlreadyRegistered": "Ez az email már regisztrálva van. Kérjük",
-    "logIn": "jelentkezzen be"
+    "emailAddress": "E-mail cím",
+    "enterEmailAddress": "Adja meg e-mail címét",
+    "emailAlreadyRegistered": "Ez az e-mail már regisztrálva van. Kérem",
+    "logIn": "jelentkezz be"
   },
   "account": {
     "membership": "Tagság",
-    "noSubscription": "Nincs előfizetése.",
-    "unlockAllTools": "Nyissa ki az összes PDF eszközt!",
-    "fullAccess": "Szerezzen teljes hozzáférést a fejlett szerkesztési és konverziós funkcióinkhoz.",
-    "subscribeNow": "Iratkozzon fel most, hogy egyszerűsítse dokumentum feladatait",
-    "subscribe": "Feliratkozás",
-    "account": "Fiók",
-    "betterExperience": "Jobb élményt nyújthatunk a PDF House-ban, ha információit naprakészen tartja.",
-    "importantUpdates": "Fontos termékfrissítéseket és lényeges fiók értesítéseket fog kapni, beleértve a fizetési nyugtákat.",
+    "noSubscription": "Önnek nincs előfizetése.",
+    "unlockAllTools": "Oldja fel az összes PDF-eszközt!",
+    "fullAccess": "Teljes hozzáférést kap a fejlett szerkesztési és konvertálási szolgáltatásainkhoz.",
+    "subscribeNow": "Iratkozzon fel most, hogy egyszerűsítse dokumentumfeladatait",
+    "subscribe": "Iratkozz fel",
+    "account": "fiók",
+    "betterExperience": "Élvezze a PDFezy-vel kapcsolatos jobb élményt azáltal, hogy naprakészen tartja adatait.",
+    "importantUpdates": "Fontos termékfrissítéseket és lényeges fiókértesítéseket fog kapni, beleértve a fizetési nyugtákat is.",
     "paymentMethod": "Fizetési mód",
-    "saveTime": "Takaron meg időt egy aktuális hitelkártya fájlban tartásával.",
+    "saveTime": "Időt takaríthat meg, ha aktuális hitelkártyáját nyilvántartja.",
     "cardNumber": "Kártyaszám",
     "notSpecified": "Nincs megadva",
     "activeSubscription": "Aktív előfizetés",
-    "subscriptionActive": "Előfizetése jelenleg aktív és teljes hozzáférése van az összes funkcióhoz.",
-    "plan": "Csomag",
+    "subscriptionActive": "Előfizetése jelenleg aktív, és teljes hozzáférése van az összes funkcióhoz.",
+    "plan": "Terv",
     "expiryDate": "Lejárati dátum",
     "subscriptionType": "Előfizetés típusa"
   },
   "plan": {
-    "choosePlan": "Válasszon egy csomagot a fájl letöltéséhez",
+    "choosePlan": "Válasszon tervet a fájl letöltéséhez",
     "continue": "Folytatás",
-    "annualPlan": "Éves csomag",
-    "getStarted": "Kezdés",
+    "annualPlan": "Éves terv",
+    "getStarted": "Kezdje el",
     "mostPopular": "Legnépszerűbb"
   },
   "whyUs": {
-    "title": "Miért a TheBestPDF a legjobb választás csapatának",
-    "openness": "Nyitottság",
-    "opennessDesc": "Hosszú távú partnerségek érdekében biztosítjuk az ügyfélszolgálat 24/7 elérhetőségét.",
-    "expertise": "Szakértelem",
-    "expertiseDesc": "Kreatív elméket egyesítünk, hogy integrált megoldásokat nyújtsunk, amelyek lefedik az üzleti kihívásait.",
-    "growth": "Növekedés",
-    "growthDesc": "Megerősítjük a szervezeteket azzal, hogy lépést tartunk a legújabb technológiai fejlesztésekkel, törekedve a kiválóságra területünkön.",
-    "diversity": "Sokszínűség",
-    "diversityDesc": "Egészségügy, Jog, Pénzügy, Oktatás — bármi legyen is az iparága, eszközünk egyszerűsítheti munkafolyamatait."
+    "title": "Okok, amiért a PDFezy a legjobb platform a csapata számára",
+    "openness": "Biztonságos",
+    "opennessDesc": "Minden létrehozott fájl HTTPS-titkosítással védett, így üzleti adatai minden lépésnél biztonságban maradnak.",
+    "expertise": "Vállalkozásoknak készült ",
+    "expertiseDesc": "Könnyedén törölheti az érzékeny információkat, szúrhat be objektumokat és írhat alá PDF-eket – mindent, amire csapatának szüksége van a gördülékeny, professzionális dokumentumkezeléshez.",
+    "growth": "Gyors konvertálás",
+    "growthDesc": "Dokumentumok másodpercek alatt a PDF konverterünkkel, amelyet úgy terveztünk, hogy lépést tartson a legforgalmasabb csapatokkal is.",
+    "diversity": "Egyszerűen használható ",
+    "diversityDesc": "Intuitív szerkesztővel gyorsan beindíthatja a dokumentum-munkafolyamatokat, amelyet a csapat bármely tagja elsajátíthat."
   },
   "securityPriority": {
     "title": "Biztonsági prioritás",
-    "description": "Adatai biztonsága a legfőbb prioritásunk. Vállalati szintű titkosítást és biztonsági intézkedéseket alkalmazunk dokumentumai védelmére és teljes magánélet biztosítására."
+    "description": "Az Ön adatainak biztonsága a legfontosabb számunkra. Vállalati szintű titkosítási és biztonsági intézkedéseket vezetünk be dokumentumai védelme és a teljes adatvédelem biztosítása érdekében."
   },
   "coreValues": {
-    "title": "A TheBestPDF mögötti alapértékek"
+    "title": "A TheBestPDF mögötti alapvető értékek",
+    "openness": "Nyitottság",
+    "opennessDesc": "Hiszünk a tartós kapcsolatok kiépítésében. Ezért ügyfélszolgálati csapatunk éjjel-nappal rendelkezésre áll, amikor csak szüksége van ránk.",
+    "expertise": "Szakértelem",
+    "expertiseDesc": "Csapatunk éles, kreatív elméket egyesít, hogy intelligens, integrált megoldásokat kínáljanak az Ön egyedi üzleti kihívásaira.",
+    "growth": "Növekedés",
+    "growthDesc": "Lépést tartunk a legújabb technológiával, így Önnek nem kell tennie – folyamatosan emeljük a lécet, és minden tevékenységünkben a kiválóságra törekszünk.",
+    "diversity": "Sokszínűség",
+    "diversityDesc": "Eszközünk az egészségügytől és a jogi területektől a pénzügyekig és az oktatásig az Ön iparágához igazodik, és segít leegyszerűsíteni az Ön számára legfontosabb munkafolyamatokat."
   },
   "compression": {
     "compressFile": "Fájl tömörítése",
     "high": "MAGAS",
-    "highDesc": "Szabványos minőség, kisebb méret",
-    "highReduction": "~40% kisebb",
-    "basic": "ALAP",
-    "basicDesc": "Jobb minőség, közepes méret",
-    "basicReduction": "~20% kisebb",
+    "highDesc": "Normál minőség, kisebb méret",
+    "highReduction": "~40%-kal kisebb",
+    "basic": "BASIC",
+    "basicDesc": "Jobb minőségű, közepes méretű",
+    "basicReduction": "~20%-kal kisebb",
     "low": "ALACSONY",
     "lowDesc": "Legjobb minőség, nagyobb méret",
-    "lowReduction": "~10% kisebb",
+    "lowReduction": "~10%-kal kisebb",
     "compressionLevel": "Tömörítési szint",
-    "selectLevel": "Válassza ki a tömörítési szintet és tömörítse a fájlt.",
+    "selectLevel": "Válassza ki a tömörítési szintet, és tömörítse a fájlt.",
     "compress": "Tömörítés",
     "compressing": "Tömörítés..."
   },
   "email": {
-    "enterEmail": "Adja meg az Email címét",
-    "downloadLink": "A letöltési linket emailben küldjük",
-    "getStarted": "Kezdés"
+    "enterEmail": "Adja meg e-mail címét",
+    "downloadLink": "A letöltési linket elküldjük az e-mail címedre",
+    "getStarted": "Kezdje el"
   },
   "faq": {
-    "title": "Gyakran ismételt kérdések",
-    "multipleUsers": "Használhatják a cég több felhasználója egyszerre a szolgáltatást?",
-    "multipleUsersAnswer": "Egyszerű! Hozzon létre egy fiókot és az egész csapat használhatja eszközünket. Előfizetéshez egyszerűen regisztráljon, végezzen néhány fájl módosítást, kattintson a \"Letöltés\" gombra, majd válassza ki a legmegfelelőbb csomagot.",
-    "customerSupport": "Kínálnak ügyfélszolgálatot technikai problémákhoz?",
-    "customerSupportAnswer": "Igen, támogatási csapatunk 24/7 elérhető bármilyen technikai probléma megoldásához.",
-    "processingSpeed": "Milyen gyorsan dolgozzák fel a dokumentumokat a platformon?",
-    "processingSpeedAnswer": "A dokumentumokat általában másodperceken belül feldolgozzuk, még nagy fájlok esetén is.",
+    "title": "Gyakran Ismételt Kérdések",
+    "multipleUsers": "Cégünk több felhasználója is használhatja a szolgáltatást egyszerre?",
+    "multipleUsersAnswer": "Könnyen! Hozzon létre egy fiókot, és az egész csapat használhatja eszközünket. Az előfizetés megkezdéséhez egyszerűen regisztráljon, módosítsa a fájlokat, kattintson a \"Letöltés\" gombra, majd válassza ki az Önnek legmegfelelőbb csomagot.",
+    "customerSupport": "Kínál-e ügyfélszolgálatot technikai problémák esetén?",
+    "customerSupportAnswer": "Igen, ügyfélszolgálati csapatunk a hét minden napján, a hét minden napján rendelkezésre áll, hogy segítsen bármilyen technikai probléma megoldásában.",
+    "processingSpeed": "Milyen gyorsan dolgozzák fel a dokumentumokat az Ön platformján?",
+    "processingSpeedAnswer": "A dokumentumok feldolgozása általában másodperceken belül megtörténik, még nagy fájlok esetén is.",
     "moneyBack": "Van pénzvisszafizetési garancia?",
-    "moneyBackAnswer": "Igen, 14 napos pénzvisszafizetési garanciát kínálunk, ha nem elégedett szolgáltatásunkkal.",
-    "ctaTitle": "Szeretné fejleszteni üzleti műveleteit?",
-    "ctaDescription": "Lépjen kapcsolatba velünk a sales@thebestpdf.com címen, és nézzük meg, hogyan forradalmasíthatja termékünk a vállalati papírmunkáját. Csatlakozzon a növekvő közösséghez sikeres vállalkozások, amelyek a TheBestPDF-t használják, hogy előrébb maradjanak!",
-    "ctaButton": "Kezdés",
+    "moneyBackAnswer": "Igen, 14 napos pénz-visszafizetési garanciát vállalunk, ha nem elégedett szolgáltatásunkkal.",
+    "ctaTitle": "Vállalkozási tevékenységét szeretné növelni?",
+    "ctaDescription": "Forduljon hozzánk a support@pdfezy.com e-mail címen, és fedezze fel, hogyan tudja termékünk forradalmasítani vállalati papírmunkáját. Csatlakozzon a sikeres vállalkozások növekvő közösségéhez, és használja ki a TheBestPDF-et, hogy előrébb maradjon!",
+    "ctaButton": "Kezdje el",
     "loading": "Betöltés..."
   },
   "howItWorks": {
-    "title": "Hogyan tömörítsünk PDF-t",
-    "step1": "Jelentkezzen be a TheBestPDF-be és lépjen a PDF tömörítő eszközre",
-    "step2": "Töltse fel vagy húzza be PDF-jét a felületre",
-    "step3": "Ennyi! Az új tömörített fájlja letöltésre kész és megtalálható csapata fiókjában"
+    "title": "Platformunk működése",
+    "step1": "Válassza ki a kívánt PDF-eszközt.",
+    "step2": "Töltse fel a választott fájlt.",
+    "step3": "Ennyi! A fájl letöltésre kész."
   },
   "featureCTA": {
-    "title": "A PDFEZY első osztályú fájlkezelési megoldásokat nyújt minden méretű csapatnak.",
-    "subtitle": "Üdvözöljük fejlett SaaS platformunkon az online dokumentumszerkesztéshez és konverzióhoz. Üzleti és vállalkozói igényekhez tervezve."
+    "title": "A PDFEZY csúcsminőségű fájlkezelési megoldásokat kínál bármilyen méretű csapat számára.",
+    "subtitle": "Üdvözöljük az online dokumentumszerkesztéshez és -konvertáláshoz használható, élvonalbeli SaaS platformunkon. Úgy tervezték, hogy megfeleljen a vállalkozások és vállalkozók igényeinek."
   },
   "files": {
     "searchFiles": "Fájlok keresése",
@@ -479,7 +487,7 @@
     "editPdf": "PDF szerkesztése",
     "signPdf": "PDF aláírása",
     "ocrPdf": "OCR PDF",
-    "mergePdf": "PDF összevonása",
+    "mergePdf": "PDF egyesítése",
     "compressPdf": "PDF tömörítése",
     "splitPdf": "PDF felosztása",
     "aiSummarizer": "AI Összefoglaló",
@@ -487,64 +495,64 @@
     "createForm": "Űrlap létrehozása",
     "editForm": "Űrlap szerkesztése",
     "summarizePdf": "PDF összefoglalása",
-    "extractHighlights": "Kiemelések kinyerése"
+    "extractHighlights": "Kivonat kiemeli"
   },
   "features": {
-    "comprehensiveSuite": "Átfogó csomag",
-    "unlimitedDocuments": "Korlátlan dokumentumok"
+    "comprehensiveSuite": "Átfogó lakosztály",
+    "unlimitedDocuments": "Korlátlan számú dokumentum"
   },
   "payment": {
     "paymentDetails": "Fizetési részletek",
-    "documentPreview": "Dokumentum előnézet",
-    "termsAndService": "Használati feltételek és szolgáltatás",
-    "privacyPolicy": "Adatvédelmi irányelvek",
+    "documentPreview": "Dokumentum előnézete",
+    "termsAndService": "Felhasználási és szolgáltatási feltételek",
+    "privacyPolicy": "Adatvédelmi szabályzat",
     "billingEmail": "billing@pdfezy.com",
-    "agreementText": "A jelölőnégyzet bejelölésével elfogadja a Használati feltételeket és szolgáltatást, az Adatvédelmi irányelveket, és megerősíti, hogy ha nem mondja le legalább 24 órával a 7 napos próbaidőszak vége előtt CAD$1,95-ért, akkor CAD$49-tel számolunk fel 28 naponként, amíg le nem mondja előfizetését az ügyfélszolgálati csapatunkkal való kapcsolatfelvétellel emailben a billing@pdfezy.com címen. A fizetések a fent megadott kártyáról kerülnek levonásra."
+    "agreementText": "A négyzet bejelölésével elfogadja a használati és szolgáltatási feltételeket, az adatvédelmi szabályzatot, és megerősíti, hogy ha nem mondja le legalább 24 órával a 7 napos próbaidőszak lejárta előtt 1,95 CAD-ért, akkor 28 naponként 49 CAD dollárt kell fizetnie, amíg le nem mondja az előfizetést az ügyfélszolgálati csapatunkkal a billing@pdfezy e-mail címen keresztül. A fizetés a fent megadott kártyáról kerül felszámításra."
   },
   "pdfViewer": {
     "thumbnails": "Miniatűrök",
     "outline": "Vázlat",
-    "annotations": "Jegyzetek",
+    "annotations": "Annotációk",
     "zoomOut": "Kicsinyítés",
     "zoomIn": "Nagyítás",
-    "pan": "Mozgatás",
-    "highlight": "Kiemelés",
-    "draw": "Rajzolás",
+    "pan": "Pan",
+    "highlight": "Jelölje ki",
+    "draw": "Rajzolj",
     "line": "Vonal",
     "arrow": "Nyíl",
     "rectangle": "Téglalap",
     "ellipse": "Ellipszis",
     "polygon": "Sokszög",
-    "sign": "Aláírás",
+    "sign": "Jel",
     "stamp": "Bélyegző",
     "text": "Szöveg",
-    "note": "Jegyzet",
+    "note": "Megjegyzés",
     "comment": "Megjegyzés",
     "eraser": "Radír",
     "undo": "Visszavonás",
     "redo": "Újra",
     "search": "Keresés",
     "print": "Nyomtatás",
-    "export": "Exportálás",
+    "export": "Export",
     "edit": "Szerkesztés"
   },
   "reset": {
-    "invalidResetLink": "Érvénytelen visszaállítási link",
-    "resetLinkInvalid": "A jelszó visszaállítási link érvénytelen vagy lejárt.",
-    "backToLogin": "Vissza a bejelentkezéshez",
+    "invalidResetLink": "Érvénytelen visszaállítási hivatkozás",
+    "resetLinkInvalid": "A jelszó-visszaállítási hivatkozás érvénytelen vagy lejárt.",
+    "backToLogin": "Vissza a Bejelentkezéshez",
     "resetPassword": "Jelszó visszaállítása",
     "newPassword": "Új jelszó",
     "confirmNewPassword": "Új jelszó megerősítése",
     "passwordsDoNotMatch": "A jelszavak nem egyeznek",
-    "resetSuccessful": "A jelszó visszaállítása sikeres!",
-    "resetFailed": "A jelszó visszaállítása sikertelen. Kérjük, próbálja újra."
+    "resetSuccessful": "Sikeres jelszó-visszaállítás!",
+    "resetFailed": "A jelszó visszaállítása nem sikerült. Kérjük, próbálja újra."
   },
   "mergePdf": {
-    "actionButton": "FÁJLOK ÖSSZEVONÁSA",
-    "minFilesError": "Kérjük, válasszon ki legalább 2 fájlt az összevonáshoz",
-    "dropText": "Húzza ide a PDF fájlokat",
+    "actionButton": "FÁJLOK ÖVESÍTÉSE",
+    "minFilesError": "Kérjük, válasszon legalább 2 fájlt egyesítéshez",
+    "dropText": "Dobja ide a PDF fájlokat",
     "uploadText": "Töltse fel fájljait",
     "processingFiles": "Fájlok feldolgozása...",
-    "mergingFiles": "PDF-ek összevonása..."
+    "mergingFiles": "PDF-ek egyesítése..."
   }
 }

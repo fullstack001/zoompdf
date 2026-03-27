@@ -8,7 +8,7 @@ const footerLinksData = [
   {
     titleKey: "footer.editPdf",
     links: [
-      { labelKey: "tools.editPdf", route: "/edit-pdf" },
+      { labelKey: "tools.editPdf", route: "/" },
       { labelKey: "tools.signPdf", route: "/sign-pdf" },
       { labelKey: "tools.splitPdf", route: "/split-pdf" },
       { labelKey: "tools.imageToText", route: "/image-to-text" },
@@ -50,7 +50,7 @@ export default function FooterLinks() {
         defaultState[index] = false;
       });
       return defaultState;
-    }
+    },
   );
 
   const toggleSection = (index: number) => {

@@ -10,7 +10,7 @@ const testimonials = [
     name: "Camille D.",
     initials: "CD",
     review:
-      "I had to merge pdf files for a project. PDF House made it simple with their drag and drop feature. All my documents combined perfectly and the order was exactly how I wanted it.",
+      "I had to merge pdf files for a project. PDFezy made it simple with their drag and drop feature. All my documents combined perfectly and the order was exactly how I wanted it.",
     rating: 5,
   },
   {
@@ -18,7 +18,7 @@ const testimonials = [
     name: "Patrick C.",
     initials: "PC",
     review:
-      "PDF House pdf conversion tools are reliable and fast. I converted a large image file to PDF and the quality remained perfect. The website never crashed even with big files.",
+      "PDFezy pdf conversion tools are reliable and fast. I converted a large image file to PDF and the quality remained perfect. The website never crashed even with big files.",
     rating: 5,
   },
   {
@@ -26,7 +26,7 @@ const testimonials = [
     name: "Emma C.",
     initials: "EC",
     review:
-      "I needed to convert PDF to Word for a report. PDF House made it super easy. Now I use it all the time.",
+      "I needed to convert PDF to Word for a report. PDFezy made it super easy. Now I use it all the time.",
     rating: 5,
   },
   {
@@ -65,7 +65,7 @@ export default function CustomerTestimonials() {
 
   const prevTestimonials = () => {
     setCurrentIndex(
-      (prev) => (prev - 3 + testimonials.length) % testimonials.length
+      (prev) => (prev - 3 + testimonials.length) % testimonials.length,
     );
   };
 

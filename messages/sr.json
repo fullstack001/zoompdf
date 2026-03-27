@@ -1,19 +1,19 @@
 {
   "navigation": {
-    "home": "Почетна",
-    "convert": "Конвертуј",
-    "edit": "Уреди",
-    "compress": "Компресуј",
-    "sign": "Потпиши",
-    "merge": "Споји",
-    "split": "Подели",
-    "files": "Фајлови",
-    "account": "Налог",
-    "login": "Пријава",
-    "logout": "Одјава",
-    "pdfConverter": "PDF КОНВЕРТЕР",
-    "pdfEditor": "PDF УРЕЂИВАЧ",
-    "language": "Језик"
+    "home": "Home",
+    "convert": "Convert",
+    "edit": "Edit",
+    "compress": "Compress",
+    "sign": "Sign",
+    "merge": "Merge",
+    "split": "Split",
+    "files": "Files",
+    "account": "Account",
+    "login": "Login",
+    "logout": "Logout",
+    "pdfConverter": "PDF CONVERTER",
+    "pdfEditor": "PDF EDITOR",
+    "language": "Language"
   },
   "languages": {
     "en": "English",
@@ -42,509 +42,517 @@
     "fi": "Suomi"
   },
   "pages": {
-    "home": "Почетна",
-    "convertPdf": "Конвертуј PDF",
-    "editPdf": "Уреди PDF",
-    "compressPdf": "Компресуј PDF",
-    "signPdf": "Потпиши PDF",
-    "mergePdf": "Споји PDF",
-    "splitPdf": "Подели PDF",
-    "files": "Фајлови",
-    "account": "Мој налог",
-    "login": "Пријава",
-    "payment": "Плаћање",
-    "plan": "Планови"
+    "home": "Home",
+    "convertPdf": "Convert PDF",
+    "editPdf": "Edit PDF",
+    "compressPdf": "Compress PDF",
+    "signPdf": "Sign PDF",
+    "mergePdf": "Merge PDF",
+    "splitPdf": "Split PDF",
+    "files": "Files",
+    "account": "My Account",
+    "login": "Login",
+    "payment": "Payment",
+    "plan": "Plans"
   },
   "common": {
-    "upload": "Отпреми",
-    "download": "Преузми",
-    "convert": "Конвертуј",
-    "edit": "Уреди",
-    "save": "Сачувај",
-    "cancel": "Откажи",
-    "delete": "Обриши",
-    "back": "Назад",
-    "next": "Следеће",
-    "previous": "Претходно",
-    "loading": "Учитавање...",
-    "error": "Грешка",
-    "success": "Успех",
-    "chooseFile": "Изабери фајл",
-    "dragAndDrop": "Превуци и отпусти фајл овде",
-    "or": "или",
-    "browse": "Прегледај",
-    "processing": "Обрада...",
-    "processingFile": "Обрађујемо ваш фајл",
-    "configNotFound": "Конфигурација није пронађена за почетну страницу.",
-    "uploadFailed": "Отпремање фајла није успело. Молимо покушајте поново.",
-    "chooseBestTool": "Изаберите најбољи алат за ваше пословне потребе",
-    "done": "Готово",
-    "split": "Подели",
-    "saving": "Чување...",
-    "signing": "Потписивање...",
-    "splitting": "Подела...",
-    "convertFromPdf": "Конвертуј из PDF",
-    "convertToPdf": "Конвертуј у PDF",
-    "convertImage": "Конвертуј слику",
-    "otherFormats": "Остали формати",
-    "editSuccess": "Успешно уређивање!",
-    "editSuccessMessage": "Ваш PDF је успешно уређен и спреман за преузимање.",
-    "whatsNext": "Шта следи?",
-    "downloadEditedFile": "Преузми уређени фајл",
-    "editAnotherFile": "Уреди други фајл",
-    "startNew": "Почни ново",
-    "fileId": "ID фајла",
-    "toolNotFound": "Алат није пронађен"
+    "upload": "Upload",
+    "download": "Download",
+    "convert": "Convert",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "chooseFile": "Choose File",
+    "dragAndDrop": "Drag and drop your file here",
+    "or": "or",
+    "browse": "Browse",
+    "processing": "Processing...",
+    "processingFile": "We are processing your file",
+    "configNotFound": "Configuration not found for home page.",
+    "uploadFailed": "Failed to upload file. Please try again.",
+    "chooseBestTool": "Choose the tool you prefer to use",
+    "done": "Done",
+    "split": "Split",
+    "saving": "Saving...",
+    "signing": "Signing...",
+    "splitting": "Splitting...",
+    "convertFromPdf": "Convert from PDF",
+    "convertToPdf": "Convert to PDF",
+    "convertImage": "Convert Image",
+    "otherFormats": "Other Formats",
+    "editSuccess": "Edit Successful!",
+    "editSuccessMessage": "Your PDF has been successfully edited and is ready for download.",
+    "whatsNext": "What's Next?",
+    "downloadEditedFile": "Download your edited file",
+    "editAnotherFile": "Edit another file",
+    "startNew": "Start New",
+    "fileId": "File ID",
+    "toolNotFound": "Tool not found"
   },
   "errors": {
-    "oops": "Упс!",
-    "somethingWentWrong": "Нешто је пошло по злу",
-    "pageNotFound": "Страница није пронађена",
-    "pageNotExist": "Страница коју тражите не постоји.",
-    "errorLoadingPage": "Дошло је до грешке приликом учитавања ове странице. Молимо покушајте поново.",
-    "errorLoadingApp": "Дошло је до грешке приликом учитавања апликације. Молимо покушајте поново.",
-    "tryAgain": "Покушај поново",
-    "goHome": "Иди на почетну",
-    "goToHomePage": "Иди на почетну страницу",
-    "errorDetails": "Детаљи грешке (само за развој)"
+    "oops": "Oops!",
+    "somethingWentWrong": "Something went wrong",
+    "pageNotFound": "Page Not Found",
+    "pageNotExist": "The page you are looking for does not exist.",
+    "errorLoadingPage": "We encountered an error while loading this page. Please try again.",
+    "errorLoadingApp": "We encountered an error while loading the application. Please try again.",
+    "tryAgain": "Try again",
+    "goHome": "Go Home",
+    "goToHomePage": "Go to home page",
+    "errorDetails": "Error details (development only)"
   },
   "tools": {
-    "pdfToWord": "PDF у Word",
-    "pdfToExcel": "PDF у Excel",
-    "pdfToPptx": "PDF у PowerPoint",
-    "pdfToPng": "PDF у PNG",
-    "pdfToJpg": "PDF у JPG",
-    "pdfToEpub": "PDF у EPUB",
-    "pdfToMobi": "PDF у MOBI",
-    "pdfToTxt": "PDF у TXT",
-    "pdfToHtml": "PDF у HTML",
-    "pdfToSvg": "PDF у SVG",
-    "pdfToTiff": "PDF у TIFF",
-    "pdfToWebp": "PDF у WebP",
-    "pdfToAvif": "PDF у AVIF",
-    "pdfToEps": "PDF у EPS",
-    "pdfToDxf": "PDF у DXF",
-    "pdfToAzw3": "PDF у AZW3",
-    "wordToPdf": "Word у PDF",
-    "excelToPdf": "Excel у PDF",
-    "pptxToPdf": "PPTX у PDF",
-    "pngToPdf": "PNG у PDF",
-    "jpgToPdf": "JPG у PDF",
-    "epubToPdf": "EPUB у PDF",
-    "mobiToPdf": "MOBI у PDF",
-    "avifToPdf": "AVIF у PDF",
-    "avifToPdfJpg": "AVIF у PDF",
-    "pngToAvif": "PNG у AVIF",
-    "jpgToAvif": "JPG у AVIF",
-    "avifToPng": "AVIF у PNG",
-    "avifToJpg": "AVIF у JPG",
-    "epubToMobi": "EPUB у MOBI",
-    "mobiToEpub": "MOBI у EPUB",
-    "editPdf": "Уреди PDF",
-    "signPdf": "Потпиши PDF",
-    "addWatermark": "Додај водени жиг",
-    "rotatePdf": "Ротирај PDF",
-    "mergePdf": "Споји PDF",
-    "splitPdf": "Подели PDF",
-    "deletePages": "Обриши странице",
-    "compressPdf": "Компресуј PDF",
-    "cropPdf": "Исеци PDF",
-    "fillForm": "Попуни формулар",
-    "fillPdf": "Попуни PDF",
-    "createForm": "Креирај формулар",
-    "imageToText": "Слика у текст",
-    "mergeImages": "Споји слике",
+    "pdfToWord": "PDF to Word",
+    "pdfToExcel": "PDF to Excel",
+    "pdfToPptx": "PDF to PowerPoint",
+    "pdfToPng": "PDF to PNG",
+    "pdfToJpg": "PDF to JPG",
+    "pdfToEpub": "PDF to EPUB",
+    "pdfToMobi": "PDF to MOBI",
+    "pdfToTxt": "PDF to TXT",
+    "pdfToHtml": "PDF to HTML",
+    "pdfToSvg": "PDF to SVG",
+    "pdfToTiff": "PDF to TIFF",
+    "pdfToWebp": "PDF to WebP",
+    "pdfToAvif": "PDF to AVIF",
+    "pdfToEps": "PDF to EPS",
+    "pdfToDxf": "PDF to DXF",
+    "pdfToAzw3": "PDF to AZW3",
+    "wordToPdf": "Word to PDF",
+    "excelToPdf": "Excel to PDF",
+    "pptxToPdf": "PPTX to PDF",
+    "pngToPdf": "PNG to PDF",
+    "jpgToPdf": "JPG to PDF",
+    "epubToPdf": "EPUB to PDF",
+    "mobiToPdf": "MOBI to PDF",
+    "avifToPdf": "AVIF to PDF",
+    "avifToPdfJpg": "AVIF to PDF",
+    "pngToAvif": "PNG to AVIF",
+    "jpgToAvif": "JPG to AVIF",
+    "avifToPng": "AVIF to PNG",
+    "avifToJpg": "AVIF to JPG",
+    "epubToMobi": "EPUB to MOBI",
+    "mobiToEpub": "MOBI to EPUB",
+    "editPdf": "Edit PDF",
+    "signPdf": "Sign PDF",
+    "addWatermark": "Add watermark",
+    "rotatePdf": "Rotate PDF",
+    "mergePdf": "Merge PDF",
+    "splitPdf": "Split PDF",
+    "deletePages": "Delete pages",
+    "compressPdf": "Compress PDF",
+    "cropPdf": "Crop PDF",
+    "fillForm": "Fill Form",
+    "fillPdf": "Fill PDF",
+    "createForm": "Create Form",
+    "imageToText": "Image to Text",
+    "mergeImages": "Merge Images",
     "pdfOcr": "PDF OCR",
-    "pdfToImage": "PDF у слику",
-    "imageToPdf": "Слика у PDF",
-    "pdfToDoc": "PDF у DOC"
+    "pdfToImage": "PDF to Image",
+    "imageToPdf": "Image to PDF",
+    "pdfToDoc": "PDF to DOC"
   },
   "toolsSection": {
-    "allPdfTools": "Сви PDF алати",
-    "subtitle": "Све што вам треба за рад са PDF-овима на једном месту",
-    "splitAndMerge": "Подели и споји",
+    "allPdfTools": "All PDF Tools",
+    "subtitle": "Everything you need to work with PDFs in one place",
+    "splitAndMerge": "Split and Merge",
     "w9": "W-9",
     "ds11": "DS-11",
     "1099misc": "1099-MISC",
-    "viewAllForms": "Погледај све формуларе",
-    "ctaText": "Треба вам нешто друго? Имамо преко 50+ PDF алата доступних.",
-    "viewAllTools": "Погледај све алате"
+    "viewAllForms": "View All Forms",
+    "ctaText": "Need something else? We have over 50+ PDF tools available.",
+    "viewAllTools": "View All Tools"
   },
   "toolPages": {
     "home": {
-      "title": "PDF Конвертер и Уређивач",
-      "subtitle": "Конвертуј, уреди и управљај својим PDF-овима лако. Преко 1M фајлова обрађено месечно!"
+      "title": "PDF Converter & Editor",
+      "subtitle": "Convert, edit, and manage your PDFs with ease. 1M+ files processed monthly!"
     },
     "signPdf": {
-      "title": "Потпиши PDF онлајн",
-      "subtitle": "Потпишите своје документе онлајн безбедно. Отпремите фајл да бисте почели!"
+      "title": "Sign PDF Online",
+      "subtitle": "Sign your documents online securely. Upload a file to get started!"
     },
     "splitPdf": {
-      "title": "Подели PDF онлајн",
-      "subtitle": "Поделите свој PDF на више фајлова лако. Отпремите фајл да бисте почели!"
+      "title": "Split PDF Online",
+      "subtitle": "Split your PDF into multiple files easily. Upload a file to get started!"
     },
     "compressPdf": {
-      "title": "PDF Компресор",
-      "subtitle": "Већ смо компресовали 775.000 фајлова — дозволите нам да вам помогнемо са вашим"
+      "title": "PDF Compressor",
+      "subtitle": "We've already compressed 775,000 files — let us help with yours"
     },
     "mergePdf": {
-      "title": "Споји PDF фајлове",
-      "subtitle": "Комбинујте више PDF фајлова у један. Отпремите своје фајлове да бисте почели!"
+      "title": "Merge PDF Files",
+      "subtitle": "Combine multiple PDF files into one. Upload your files to get started!"
     },
     "pdfToWord": {
-      "title": "PDF у Word Конвертер",
-      "subtitle": "Помогли смо да се конвертује 775.000 фајлова — дозволите нам да вам помогнемо са вашим"
+      "title": "PDF to Word Converter",
+      "subtitle": "We've helped convert 775,000 files — let us help with yours"
     },
     "pdfToPng": {
-      "title": "PDF у PNG Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — ваш би могао бити следећи"
+      "title": "PDF to PNG Converter",
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToJpg": {
-      "title": "PDF у JPG Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — ваш би могао бити следећи"
+      "title": "PDF to JPG Converter",
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToEpub": {
-      "title": "PDF у EPUB Конвертер",
-      "subtitle": "Помогли смо да се конвертује 775.000 фајлова — дозволите нам да вам помогнемо са вашим"
+      "title": "PDF to EPUB Converter",
+      "subtitle": "We've helped convert 775,000 files — let us help with yours"
     },
     "pdfToExcel": {
-      "title": "PDF у Excel Конвертер",
-      "subtitle": "Конвертовали смо 775K PDF-ова — зашто не бисте учинили ваш следећи?"
+      "title": "PDF to Excel Converter",
+      "subtitle": "We've converted 775K PDFs — why not make yours the next one?"
     },
     "pdfToPptx": {
-      "title": "PDF у PPTX Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — ваш би могао бити следећи"
+      "title": "PDF to PPTX Converter",
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "wordToPdf": {
-      "title": "Word у PDF Конвертер",
-      "subtitle": "Помогли смо да се конвертује 775.000 фајлова — дозволите нам да вам помогнемо са вашим"
+      "title": "Word to PDF Converter",
+      "subtitle": "We've helped convert 775,000 files — let us help with yours"
     },
     "jpgToPdf": {
-      "title": "JPG у PDF Конвертер",
-      "subtitle": "До сада смо обрадили 75.000 JPG-ова. Хајде да учинимо ваш следећи."
+      "title": "JPG to PDF Converter",
+      "subtitle": "We've processed 75,000 JPGs so far. Let's make yours next."
     },
     "pngToPdf": {
-      "title": "PNG у PDF Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — ваш би могао бити следећи"
+      "title": "PNG to PDF Converter",
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "epubToPdf": {
-      "title": "EPUB у PDF Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — сада дозволите нам да вам помогнемо са вашим"
+      "title": "EPUB to PDF Converter",
+      "subtitle": "We've already converted 775,000 files — now let us help with yours"
     },
     "pdfToTxt": {
-      "title": "PDF у TXT Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — ваш би могао бити следећи"
+      "title": "PDF to TXT Converter",
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToHtml": {
-      "title": "PDF у HTML Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — ваш би могао бити следећи"
+      "title": "PDF to HTML Converter",
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToSvg": {
-      "title": "PDF у SVG Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — ваш би могао бити следећи"
+      "title": "PDF to SVG Converter",
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToTiff": {
-      "title": "PDF у TIFF Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — ваш би могао бити следећи"
+      "title": "PDF to TIFF Converter",
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToWebp": {
-      "title": "PDF у WebP Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — ваш би могао бити следећи"
+      "title": "PDF to WebP Converter",
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToAvif": {
-      "title": "PDF у AVIF Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — ваш би могао бити следећи"
+      "title": "PDF to AVIF Converter",
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToEps": {
-      "title": "PDF у EPS Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — ваш би могао бити следећи"
+      "title": "PDF to EPS Converter",
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToDxf": {
-      "title": "PDF у DXF Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — ваш би могао бити следећи"
+      "title": "PDF to DXF Converter",
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToAzw3": {
-      "title": "PDF у AZW3 Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — ваш би могао бити следећи"
+      "title": "PDF to AZW3 Converter",
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToMobi": {
-      "title": "PDF у MOBI Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — ваш би могао бити следећи"
+      "title": "PDF to MOBI Converter",
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToDoc": {
-      "title": "PDF у DOC Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — ваш би могао бити следећи"
+      "title": "PDF to DOC Converter",
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "excelToPdf": {
-      "title": "Excel у PDF Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — ваш би могао бити следећи"
+      "title": "Excel to PDF Converter",
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pptxToPdf": {
-      "title": "PPTX у PDF Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — ваш би могао бити следећи"
+      "title": "PPTX to PDF Converter",
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "mobiToPdf": {
-      "title": "MOBI у PDF Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — ваш би могао бити следећи"
+      "title": "MOBI to PDF Converter",
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "avifToPdf": {
-      "title": "AVIF у PDF Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — ваш би могао бити следећи"
+      "title": "AVIF to PDF Converter",
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pngToAvif": {
-      "title": "PNG у AVIF Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — ваш би могао бити следећи"
+      "title": "PNG to AVIF Converter",
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "jpgToAvif": {
-      "title": "JPG у AVIF Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — ваш би могао бити следећи"
+      "title": "JPG to AVIF Converter",
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "avifToPng": {
-      "title": "AVIF у PNG Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — ваш би могао бити следећи"
+      "title": "AVIF to PNG Converter",
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "avifToJpg": {
-      "title": "AVIF у JPG Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — ваш би могао бити следећи"
+      "title": "AVIF to JPG Converter",
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "epubToMobi": {
-      "title": "EPUB у MOBI Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — ваш би могао бити следећи"
+      "title": "EPUB to MOBI Converter",
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "mobiToEpub": {
-      "title": "MOBI у EPUB Конвертер",
-      "subtitle": "Већ смо конвертовали 775.000 фајлова — ваш би могао бити следећи"
+      "title": "MOBI to EPUB Converter",
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfOcr": {
-      "title": "PDF OCR Алат",
-      "subtitle": "Извуците текст из PDF-ова помоћу OCR технологије. Отпремите фајл да бисте почели!"
+      "title": "PDF OCR Tool",
+      "subtitle": "Extract text from PDFs with OCR technology. Upload a file to get started!"
     },
     "pdfToImage": {
-      "title": "PDF у Слику Конвертер",
-      "subtitle": "Конвертујте PDF странице у слике. Отпремите фајл да бисте почели!"
+      "title": "PDF to Image Converter",
+      "subtitle": "Convert PDF pages to images. Upload a file to get started!"
     },
     "imageToPdf": {
-      "title": "Слика у PDF Конвертер",
-      "subtitle": "Конвертујте слике у PDF. Отпремите своје фајлове да бисте почели!"
+      "title": "Image to PDF Converter",
+      "subtitle": "Convert images to PDF. Upload your files to get started!"
     }
   },
   "navbar": {
-    "convertFromPdf": "Конвертуј из PDF",
-    "convertToPdf": "Конвертуј у PDF",
-    "convertImage": "Конвертуј слику",
-    "convertEbook": "Конвертуј E-књигу",
-    "editingTools": "Алати за уређивање",
-    "myDocuments": "Моји документи",
-    "myAccount": "Мој налог",
-    "help": "Помоћ",
-    "termsConditions": "Услови и одредбе",
-    "settings": "Подешавања",
-    "logOut": "Одјава",
-    "upgradePlan": "Надогради план",
-    "noSubscription": "Нема претплате",
-    "profileDetails": "Детаљи профила"
+    "convertFromPdf": "Convert from PDF",
+    "convertToPdf": "Convert to PDF",
+    "convertImage": "Convert Image",
+    "convertEbook": "Convert E-book",
+    "editingTools": "Editing Tools",
+    "myDocuments": "My Documents",
+    "myAccount": "My Account",
+    "help": "Help",
+    "termsConditions": "Terms & Conditions",
+    "settings": "Settings",
+    "logOut": "Log Out",
+    "upgradePlan": "Upgrade Plan",
+    "noSubscription": "No subscription",
+    "profileDetails": "Profile Details"
   },
   "footer": {
-    "editPdf": "Уреди PDF",
-    "convertFromPdf": "Конвертуј из PDF",
-    "convertToPdf": "Конвертуј у PDF",
-    "disclaimer": "Одрицање од одговорности",
-    "privacyPolicy": "Политика приватности",
-    "termsOfService": "Услови коришћења",
-    "sitemap": "Мапа сајта",
-    "allRightsReserved": "© 2025 PDFEZY Сва права задржана.",
-    "companyDescription": "Ваше all-in-one PDF решење за конвертовање, уређивање и управљање документима лако и безбедно.",
-    "stayUpdated": "Остани ажуран",
-    "newsletterDescription": "Добијте најновије ажурирања и PDF савете директно у ваш инбокс.",
-    "emailPlaceholder": "Унесите вашу е-пошту",
-    "subscribe": "Претплати се",
-    "followUs": "Пратите нас",
-    "language": "Језик",
-    "selectLanguage": "Изаберите ваш језик",
-    "email": "Е-пошта",
-    "phone": "Телефон",
-    "address": "Адреса"
+    "editPdf": "Edit PDF",
+    "convertFromPdf": "Convert from PDF",
+    "convertToPdf": "Convert to PDF",
+    "disclaimer": "Disclaimer",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "sitemap": "Sitemap",
+    "allRightsReserved": "© 2025 PDFEZY All rights reserved.",
+    "companyDescription": "Your all-in-one PDF solution for converting, editing, and managing documents with ease and security.",
+    "stayUpdated": "Stay Updated",
+    "newsletterDescription": "Get the latest updates and PDF tips delivered to your inbox.",
+    "emailPlaceholder": "Enter your email",
+    "subscribe": "Subscribe",
+    "followUs": "Follow Us",
+    "language": "Language",
+    "selectLanguage": "Select your language",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address"
   },
   "auth": {
-    "email": "Е-пошта",
-    "password": "Лозинка",
-    "confirmPassword": "Потврди лозинку",
-    "forgotPassword": "Заборавили сте лозинку?",
-    "resetPassword": "Ресетуј лозинку",
-    "signIn": "Пријава",
-    "signUp": "Регистрација",
-    "alreadyHaveAccount": "Већ имате налог?",
-    "dontHaveAccount": "Немате налог?",
-    "login": "Пријава",
-    "loggingIn": "Пријављивање...",
-    "emailAddress": "Адреса е-поште",
-    "enterEmailAddress": "Унесите вашу адресу е-поште",
-    "emailAlreadyRegistered": "Ова е-пошта је већ регистрована. Молимо",
-    "logIn": "пријавите се"
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "forgotPassword": "Forgot Password?",
+    "resetPassword": "Reset Password",
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "alreadyHaveAccount": "Already have an account?",
+    "dontHaveAccount": "Don't have an account?",
+    "login": "Login",
+    "loggingIn": "Logging in...",
+    "emailAddress": "Email address",
+    "enterEmailAddress": "Enter Your Email Address",
+    "emailAlreadyRegistered": "This email is already registered. Please",
+    "logIn": "log in"
   },
   "account": {
-    "membership": "Чланство",
-    "noSubscription": "Немате претплату.",
-    "unlockAllTools": "Откључајте све PDF алате!",
-    "fullAccess": "Добијте пуни приступ нашим напредним функцијама за уређивање и конвертовање.",
-    "subscribeNow": "Претплатите се сада да бисте поједноставили ваше задатке са документима",
-    "subscribe": "Претплати се",
-    "account": "Налог",
-    "betterExperience": "Имајте боље искуство на PDF House тако што ћете држати ваше информације ажуриране.",
-    "importantUpdates": "Добићете важна ажурирања производа и основна обавештења о налогу, укључујући потврде о плаћању.",
-    "paymentMethod": "Начин плаћања",
-    "saveTime": "Уштедите време тако што ћете држати тренутну кредитну картицу у фајлу.",
-    "cardNumber": "Број картице",
-    "notSpecified": "Није наведено",
-    "activeSubscription": "Активна претплата",
-    "subscriptionActive": "Ваша претплата је тренутно активна и имате пуни приступ свим функцијама.",
-    "plan": "План",
-    "expiryDate": "Датум истека",
-    "subscriptionType": "Тип претплате"
+    "membership": "Membership",
+    "noSubscription": "You do not have a subscription.",
+    "unlockAllTools": "Unlock all PDF tools!",
+    "fullAccess": "Get full access to our advanced editing and converting features.",
+    "subscribeNow": "Subscribe now to streamline your document tasks",
+    "subscribe": "Subscribe",
+    "account": "Account",
+    "betterExperience": "Have a better experience on PDFezy by keeping your information up-to-date.",
+    "importantUpdates": "You will receive important product updates and essential account notifications, including payment receipts.",
+    "paymentMethod": "Payment Method",
+    "saveTime": "Save time by keeping a current credit card on file.",
+    "cardNumber": "Card number",
+    "notSpecified": "Not Specified",
+    "activeSubscription": "Active Subscription",
+    "subscriptionActive": "Your subscription is currently active and you have full access to all features.",
+    "plan": "Plan",
+    "expiryDate": "Expiry Date",
+    "subscriptionType": "Subscription Type"
   },
   "plan": {
-    "choosePlan": "Изаберите план да бисте преузели ваш фајл",
-    "continue": "Настави",
-    "annualPlan": "Годишњи план",
-    "getStarted": "Почни",
-    "mostPopular": "Најпопуларнији"
+    "choosePlan": "Choose a plan to download your file",
+    "continue": "Continue",
+    "annualPlan": "Annual Plan",
+    "getStarted": "Get Started",
+    "mostPopular": "Most Popular"
   },
   "whyUs": {
-    "title": "Зашто је TheBestPDF најбољи избор за ваш тим",
-    "openness": "Отвореност",
-    "opennessDesc": "Тежећи дугорочним партнерствима, обезбеђујемо доступност подршке за клијенте 24/7.",
-    "expertise": "Стручност",
-    "expertiseDesc": "Уједињујемо креативне умове да бисмо доставили интегрисана решења која покривају ваше пословне изазове.",
-    "growth": "Раст",
-    "growthDesc": "Оснажујемо организације пратећи најновије технолошке напретке, циљајући изврсност у нашој области.",
-    "diversity": "Разноликост",
-    "diversityDesc": "Здравство, Правни, Финансије, Образовање — каква год да је ваша индустрија, наш алат може поједноставити ваше радне токове."
+    "title": "Reasons why PDFezy is the best platform for your team",
+    "openness": "Secure",
+    "opennessDesc": "Every file you create is protected with HTTPS encryption, so your business data stays safe at every step.",
+    "expertise": "Built for Business ",
+    "expertiseDesc": "Redact sensitive information, insert objects, and sign PDFs with ease — everything your team needs for smooth, professional document management.",
+    "growth": "Fast Convert ",
+    "growthDesc": "Documents in seconds with our PDF converter, designed to keep up with even the busiest teams.",
+    "diversity": "Simple to Use ",
+    "diversityDesc": "Get your document workflows up and running quickly with an intuitive editor that anyone on your team can master."
   },
   "securityPriority": {
-    "title": "Приоритет безбедности",
-    "description": "Безбедност ваших података је наш главни приоритет. Примењујемо шифровање на нивоу предузећа и безбедносне мере за заштиту ваших докумената и обезбеђивање потпуне приватности."
+    "title": "Security Priority",
+    "description": "Your data security is our top priority. We implement enterprise-grade encryption and security measures to protect your documents and ensure complete privacy."
   },
   "coreValues": {
-    "title": "Основне вредности иза TheBestPDF"
+    "title": "Core values behind TheBestPDF",
+    "openness": "Openness",
+    "opennessDesc": "We believe in building lasting relationships. That's why our customer support team is available around the clock, whenever you need us.",
+    "expertise": "Expertise",
+    "expertiseDesc": "Our team brings together bright, creative minds to deliver smart, integrated solutions tailored to your unique business challenges.",
+    "growth": "Growth",
+    "growthDesc": "We keep pace with the latest technology so you don't have to — continuously raising the bar and pushing for excellence in everything we do.",
+    "diversity": "Diversity",
+    "diversityDesc": "From Healthcare and Legal to Finance and Education, our tool adapts to your industry and helps streamline the workflows that matter most to you."
   },
   "compression": {
-    "compressFile": "Компресуј фајл",
-    "high": "ВИСОКО",
-    "highDesc": "Стандардни квалитет, мања величина",
-    "highReduction": "~40% мање",
-    "basic": "ОСНОВНО",
-    "basicDesc": "Бољи квалитет, средња величина",
-    "basicReduction": "~20% мање",
-    "low": "НИСКО",
-    "lowDesc": "Највиши квалитет, већа величина",
-    "lowReduction": "~10% мање",
-    "compressionLevel": "Ниво компресије",
-    "selectLevel": "Изаберите ваш ниво компресије и компресујте фајл.",
-    "compress": "Компресуј",
-    "compressing": "Компресовање..."
+    "compressFile": "Compress file",
+    "high": "HIGH",
+    "highDesc": "Standard quality, smaller size",
+    "highReduction": "~40% smaller",
+    "basic": "BASIC",
+    "basicDesc": "Better quality, medium size",
+    "basicReduction": "~20% smaller",
+    "low": "LOW",
+    "lowDesc": "Highest quality, larger size",
+    "lowReduction": "~10% smaller",
+    "compressionLevel": "Compression level",
+    "selectLevel": "Select your compression level and compress the file.",
+    "compress": "Compress",
+    "compressing": "Compressing..."
   },
   "email": {
-    "enterEmail": "Унесите вашу адресу е-поште",
-    "downloadLink": "Линк за преузимање ће бити послат на вашу е-пошту",
-    "getStarted": "Почни"
+    "enterEmail": "Enter your Email address",
+    "downloadLink": "Download link will be sent to your email",
+    "getStarted": "Get Started"
   },
   "faq": {
-    "title": "Често постављана питања",
-    "multipleUsers": "Могу ли више корисника из наше компаније користити услугу истовремено?",
-    "multipleUsersAnswer": "Лако! Направите један налог и цео тим ће моћи да користи наш алат. Да бисте почели са претплатом, једноставно се региструјте, направите неке прилагођавања фајлова, кликните \"Преузми,\" а затим изаберите план који вам најбоље одговара.",
-    "customerSupport": "Да ли нудите подршку за клијенте за техничке проблеме?",
-    "customerSupportAnswer": "Да, наш тим за подршку је доступан 24/7 да вам помогне са било којим техничким проблемима са којима се суочавате.",
-    "processingSpeed": "Колико брзо се документи обрађују на вашој платформи?",
-    "processingSpeedAnswer": "Документи се обично обрађују у року од неколико секунди, чак и за велике фајлове.",
-    "moneyBack": "Да ли имате гаранцију поврата новца?",
-    "moneyBackAnswer": "Да, нудимо гаранцију поврата новца од 14 дана ако нисте задовољни нашом услугом.",
-    "ctaTitle": "Желите ли да подигнете ваше пословне операције?",
-    "ctaDescription": "Контактирајте нас на sales@thebestpdf.com, и хајде да истражимо како наш производ може револуционисати вашу корпоративну документацију. Придружите се растућој заједници успешних предузећа која користе TheBestPDF да остану напред!",
-    "ctaButton": "Почни",
-    "loading": "Учитавање..."
+    "title": "Frequently Asked Questions",
+    "multipleUsers": "Can multiple users from our company use the service simultaneously?",
+    "multipleUsersAnswer": "Easy! Create one account and the whole team will be able to use our tool. To get started with a subscription, simply register, make some file adjustments, click \"Download,\" and then pick the plan that suits you best.",
+    "customerSupport": "Do you offer customer support for technical issues?",
+    "customerSupportAnswer": "Yes, our support team is available 24/7 to assist with any technical issues you encounter.",
+    "processingSpeed": "How quickly are documents processed on your platform?",
+    "processingSpeedAnswer": "Documents are typically processed within seconds, even for large files.",
+    "moneyBack": "Do you have a money-back guarantee?",
+    "moneyBackAnswer": "Yes, we offer a 14-day money-back guarantee if you are not satisfied with our service.",
+    "ctaTitle": "Looking to elevate your business operations?",
+    "ctaDescription": "Reach out to us at support@pdfezy.com, and let's explore how our product can revolutionize your corporate paperwork. Join the growing community of successful businesses leveraging TheBestPDF to stay ahead!",
+    "ctaButton": "Get Started",
+    "loading": "Loading..."
   },
   "howItWorks": {
-    "title": "Како да компресујете PDF",
-    "step1": "Пријавите се на TheBestPDF и идите на алат Компресуј PDF",
-    "step2": "Отпремите или превуците и отпустите ваш PDF у интерфејс",
-    "step3": "То је то! Ваш ново компресовани фајл је спреман за преузимање и може се наћи на налогу вашег тима"
+    "title": "How Our Platform Works",
+    "step1": "Choose the PDF tool of your choice.",
+    "step2": "Upload the file of your choice.",
+    "step3": "That’s it! Your file is ready to download."
   },
   "featureCTA": {
-    "title": "PDFEZY пружа решења за управљање фајловима највишег нивоа за тимове свих величина.",
-    "subtitle": "Добродошли на нашу најсавременију SaaS платформу за онлајн уређивање и конвертовање докумената. Дизајнирана да задовољи потребе предузећа и предузетника."
+    "title": "PDFEZY delivers top‑tier file management solutions for teams of all sizes.",
+    "subtitle": "Welcome to our cutting-edge SaaS platform for online document editing and conversion. Designed to meet the needs of businesses and entrepreneurs."
   },
   "files": {
-    "searchFiles": "Претражи фајлове",
-    "pdfConverter": "PDF Конвертер",
-    "editPdf": "Уреди PDF",
-    "signPdf": "Потпиши PDF",
+    "searchFiles": "Search Files",
+    "pdfConverter": "PDF Converter",
+    "editPdf": "Edit PDF",
+    "signPdf": "Sign PDF",
     "ocrPdf": "OCR PDF",
-    "mergePdf": "Споји PDF",
-    "compressPdf": "Компресуј PDF",
-    "splitPdf": "Подели PDF",
-    "aiSummarizer": "AI Резиме",
-    "fillPdf": "Попуни PDF",
-    "createForm": "Креирај формулар",
-    "editForm": "Уреди формулар",
-    "summarizePdf": "Резимирај PDF",
-    "extractHighlights": "Извуци истакнуте делове"
+    "mergePdf": "Merge PDF",
+    "compressPdf": "Compress PDF",
+    "splitPdf": "Split PDF",
+    "aiSummarizer": "AI Summarizer",
+    "fillPdf": "Fill PDF",
+    "createForm": "Create Form",
+    "editForm": "Edit Form",
+    "summarizePdf": "Summarize PDF",
+    "extractHighlights": "Extract Highlights"
   },
   "features": {
-    "comprehensiveSuite": "Свеобухватни пакет",
-    "unlimitedDocuments": "Неограничени документи"
+    "comprehensiveSuite": "Comprehensive Suite",
+    "unlimitedDocuments": "Unlimited documents"
   },
   "payment": {
-    "paymentDetails": "Детаљи плаћања",
-    "documentPreview": "Преглед документа",
-    "termsAndService": "Услови коришћења и услуге",
-    "privacyPolicy": "Политика приватности",
+    "paymentDetails": "Payment details",
+    "documentPreview": "Document Preview",
+    "termsAndService": "Terms of Use & Service",
+    "privacyPolicy": "Privacy Policy",
     "billingEmail": "billing@pdfezy.com",
-    "agreementText": "Означавањем овог поља, слажете се са Условима коришћења и услуге, Политиком приватности и потврђујете да ако не откажете најмање 24 сата пре краја 7-дневног пробног периода за CAD$1,95, бићете наплаћени CAD$49 сваких 28 дана док не откажете претплату контактирањем нашег тима за подршку клијентима путем е-поште на billing@pdfezy.com. Плаћања ће бити наплаћена са картице коју сте навели горе."
+    "agreementText": "By checking this box, you agree to the Terms of Use & Service, Privacy Policy, and confirm that if you do not cancel at least 24 hours before the end of the 7-day trial for CAD$1.95, you will be charged CAD$49 per 28 days until you cancel your subscription by contacting our customer support team via email at billing@pdfezy.com. Payments will be charged from the card you specified above."
   },
   "pdfViewer": {
-    "thumbnails": "Минијатуре",
-    "outline": "Преглед",
-    "annotations": "Анотације",
-    "zoomOut": "Умањи",
-    "zoomIn": "Увеличај",
-    "pan": "Помери",
-    "highlight": "Истакни",
-    "draw": "Цртај",
-    "line": "Линија",
-    "arrow": "Стрелица",
-    "rectangle": "Правоугаоник",
-    "ellipse": "Елипса",
-    "polygon": "Полигон",
-    "sign": "Потпиши",
-    "stamp": "Печат",
-    "text": "Текст",
-    "note": "Белешка",
-    "comment": "Коментар",
-    "eraser": "Гума",
-    "undo": "Поништи",
-    "redo": "Поново",
-    "search": "Претражи",
-    "print": "Штампај",
-    "export": "Извези",
-    "edit": "Уреди"
+    "thumbnails": "Thumbnails",
+    "outline": "Outline",
+    "annotations": "Annotations",
+    "zoomOut": "Zoom Out",
+    "zoomIn": "Zoom In",
+    "pan": "Pan",
+    "highlight": "Highlight",
+    "draw": "Draw",
+    "line": "Line",
+    "arrow": "Arrow",
+    "rectangle": "Rectangle",
+    "ellipse": "Ellipse",
+    "polygon": "Polygon",
+    "sign": "Sign",
+    "stamp": "Stamp",
+    "text": "Text",
+    "note": "Note",
+    "comment": "Comment",
+    "eraser": "Eraser",
+    "undo": "Undo",
+    "redo": "Redo",
+    "search": "Search",
+    "print": "Print",
+    "export": "Export",
+    "edit": "Edit"
   },
   "reset": {
-    "invalidResetLink": "Неважећи линк за ресетовање",
-    "resetLinkInvalid": "Линк за ресетовање лозинке је неважећи или је истекао.",
-    "backToLogin": "Назад на пријаву",
-    "resetPassword": "Ресетуј лозинку",
-    "newPassword": "Нова лозинка",
-    "confirmNewPassword": "Потврди нову лозинку",
-    "passwordsDoNotMatch": "Лозинке се не поклапају",
-    "resetSuccessful": "Ресетовање лозинке успешно!",
-    "resetFailed": "Ресетовање лозинке није успело. Молимо покушајте поново."
+    "invalidResetLink": "Invalid Reset Link",
+    "resetLinkInvalid": "The password reset link is invalid or has expired.",
+    "backToLogin": "Back to Login",
+    "resetPassword": "Reset Password",
+    "newPassword": "New Password",
+    "confirmNewPassword": "Confirm New Password",
+    "passwordsDoNotMatch": "Passwords do not match",
+    "resetSuccessful": "Password reset successfully!",
+    "resetFailed": "Password reset failed. Please try again."
   },
   "mergePdf": {
-    "actionButton": "СПОЈИ ФАЈЛОВЕ",
-    "minFilesError": "Молимо изаберите најмање 2 фајла за спајање",
-    "dropText": "Превуците PDF фајлове овде",
-    "uploadText": "Отпремите ваше фајлове",
-    "processingFiles": "Обрада фајлова...",
-    "mergingFiles": "Спајање PDF-ова..."
+    "actionButton": "MERGE FILES",
+    "minFilesError": "Please select at least 2 files to merge",
+    "dropText": "Drop PDF files here",
+    "uploadText": "Upload Your Files",
+    "processingFiles": "Processing Files...",
+    "mergingFiles": "Merging PDFs..."
   }
 }

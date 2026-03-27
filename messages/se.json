@@ -4,23 +4,42 @@
     "convert": "Konvertera",
     "edit": "Redigera",
     "compress": "Komprimera",
-    "sign": "Signera",
+    "sign": "Sign",
     "merge": "Slå samman",
-    "split": "Dela",
+    "split": "Split",
     "files": "Filer",
-    "account": "Konto",
+    "account": "konto",
     "login": "Logga in",
     "logout": "Logga ut",
-    "pdfConverter": "PDF KONVERTERARE",
-    "pdfEditor": "PDF REDIGERARE",
+    "pdfConverter": "PDF-OMVÄNDARE",
+    "pdfEditor": "PDF-REDAKTÖR",
     "language": "Språk"
   },
   "languages": {
-    "en": "English",
-    "es": "Español",
+    "en": "engelska",
+    "zh": "中文",
+    "cs": "Čeština",
+    "nl": "nederländska",
     "fr": "Français",
+    "de": "Deutsch",
+    "el": "Ελληνικά",
+    "hu": "Magyar",
+    "id": "Bahasa Indonesien",
+    "it": "Italiano",
+    "ja": "日本語",
     "ko": "한국어",
-    "se": "Svenska"
+    "ms": "Bahasa Melayu",
+    "pl": "Polski",
+    "pt": "Português",
+    "ro": "Română",
+    "sr": "Srpski",
+    "es": "Español",
+    "se": "Svenska",
+    "th": "แบบไทย",
+    "tr": "Türkçe",
+    "uk": "Українська",
+    "vi": "Tiếng Việt",
+    "fi": "Suomi"
   },
   "pages": {
     "home": "Hem",
@@ -29,10 +48,10 @@
     "compressPdf": "Komprimera PDF",
     "signPdf": "Signera PDF",
     "mergePdf": "Slå samman PDF",
-    "splitPdf": "Dela PDF",
+    "splitPdf": "Dela upp PDF",
     "files": "Filer",
-    "account": "Mitt Konto",
-    "login": "Logga in",
+    "account": "Mitt konto",
+    "login": "Inloggning",
     "payment": "Betalning",
     "plan": "Planer"
   },
@@ -43,38 +62,49 @@
     "edit": "Redigera",
     "save": "Spara",
     "cancel": "Avbryt",
-    "delete": "Radera",
+    "delete": "Ta bort",
     "back": "Tillbaka",
     "next": "Nästa",
-    "previous": "Föregående",
+    "previous": "Tidigare",
     "loading": "Laddar...",
     "error": "Fel",
     "success": "Framgång",
-    "chooseFile": "Välj fil",
+    "chooseFile": "Välj Arkiv",
     "dragAndDrop": "Dra och släpp din fil här",
     "or": "eller",
     "browse": "Bläddra",
     "processing": "Bearbetar...",
     "processingFile": "Vi bearbetar din fil",
-    "configNotFound": "Konfiguration hittades inte för startsidan.",
-    "uploadFailed": "Misslyckades med att ladda upp filen. Försök igen.",
-    "chooseBestTool": "Välj det bästa verktyget för dina affärsbehov",
-    "done": "Klar",
-    "split": "Dela",
+    "configNotFound": "Konfigurationen hittades inte för startsidan.",
+    "uploadFailed": "Det gick inte att ladda upp filen. Försök igen.",
+    "chooseBestTool": "Välj det verktyg du föredrar att använda",
+    "done": "Klart",
+    "split": "Split",
     "saving": "Sparar...",
     "signing": "Signerar...",
-    "splitting": "Delar...",
-    "toolNotFound": "Verktyg hittades inte"
+    "splitting": "Dela...",
+    "convertFromPdf": "Konvertera från PDF",
+    "convertToPdf": "Konvertera till PDF",
+    "convertImage": "Konvertera bild",
+    "otherFormats": "Andra format",
+    "editSuccess": "Redigera lyckades!",
+    "editSuccessMessage": "Din PDF har redigerats och är klar för nedladdning.",
+    "whatsNext": "Vad är nästa?",
+    "downloadEditedFile": "Ladda ner din redigerade fil",
+    "editAnotherFile": "Redigera en annan fil",
+    "startNew": "Börja ny",
+    "fileId": "Fil-ID",
+    "toolNotFound": "Verktyget hittades inte"
   },
   "errors": {
-    "oops": "Hoppsan!",
+    "oops": "hoppsan!",
     "somethingWentWrong": "Något gick fel",
     "pageNotFound": "Sidan hittades inte",
     "pageNotExist": "Sidan du letar efter finns inte.",
-    "errorLoadingPage": "Vi stötte på ett fel när vi laddade den här sidan. Försök igen.",
-    "errorLoadingApp": "Vi stötte på ett fel när vi laddade applikationen. Försök igen.",
+    "errorLoadingPage": "Vi stötte på ett fel när den här sidan laddades. Försök igen.",
+    "errorLoadingApp": "Vi stötte på ett fel när applikationen laddades. Försök igen.",
     "tryAgain": "Försök igen",
-    "goHome": "Hem",
+    "goHome": "Gå hem",
     "goToHomePage": "Gå till startsidan",
     "errorDetails": "Feldetaljer (endast utveckling)"
   },
@@ -115,203 +145,203 @@
     "addWatermark": "Lägg till vattenstämpel",
     "rotatePdf": "Rotera PDF",
     "mergePdf": "Slå samman PDF",
-    "splitPdf": "Dela PDF",
-    "deletePages": "Radera sidor",
+    "splitPdf": "Dela upp PDF",
+    "deletePages": "Ta bort sidor",
     "compressPdf": "Komprimera PDF",
     "cropPdf": "Beskär PDF",
-    "fillForm": "Fyll i formulär",
+    "fillForm": "Fyll i formuläret",
     "fillPdf": "Fyll i PDF",
     "createForm": "Skapa formulär",
     "imageToText": "Bild till text",
     "mergeImages": "Slå samman bilder",
     "pdfOcr": "PDF OCR",
-    "pdfToImage": "PDF till Bild",
+    "pdfToImage": "PDF till bild",
     "imageToPdf": "Bild till PDF",
     "pdfToDoc": "PDF till DOC"
   },
   "toolsSection": {
     "allPdfTools": "Alla PDF-verktyg",
     "subtitle": "Allt du behöver för att arbeta med PDF-filer på ett ställe",
-    "splitAndMerge": "Dela och Sammanfoga",
+    "splitAndMerge": "Dela och slå samman",
     "w9": "W-9",
     "ds11": "DS-11",
     "1099misc": "1099-MISC",
-    "viewAllForms": "Visa Alla Formulär",
+    "viewAllForms": "Visa alla formulär",
     "ctaText": "Behöver du något annat? Vi har över 50+ PDF-verktyg tillgängliga.",
-    "viewAllTools": "Visa Alla Verktyg"
+    "viewAllTools": "Visa alla verktyg"
   },
   "toolPages": {
     "home": {
-      "title": "PDF Konverterare och Redigerare",
-      "subtitle": "Konvertera, redigera och hantera dina PDFs med lätthet. 1M+ filer bearbetade månadsvis!"
+      "title": "PDF Converter & Editor",
+      "subtitle": "Konvertera, redigera och hantera dina PDF-filer med lätthet. Över 1 miljon filer behandlas varje månad!"
     },
     "signPdf": {
-      "title": "Signera PDF Online",
-      "subtitle": "Signera dina dokument online säkert. Ladda upp en fil för att komma igång!"
+      "title": "Signera PDF online",
+      "subtitle": "Signera dina dokument säkert online. Ladda upp en fil för att komma igång!"
     },
     "splitPdf": {
-      "title": "Dela PDF Online",
-      "subtitle": "Dela din PDF i flera filer enkelt. Ladda upp en fil för att komma igång!"
+      "title": "Dela PDF online",
+      "subtitle": "Dela upp din PDF i flera filer enkelt. Ladda upp en fil för att komma igång!"
     },
     "compressPdf": {
-      "title": "PDF Komprimerare",
-      "subtitle": "Vi har redan komprimerat 775 000 filer — låt oss hjälpa dig med din"
+      "title": "PDF-kompressor",
+      "subtitle": "Vi har redan komprimerat 775 000 filer — låt oss hjälpa till med dina"
     },
     "mergePdf": {
-      "title": "Slå samman PDF-filer",
+      "title": "Slå ihop PDF-filer",
       "subtitle": "Kombinera flera PDF-filer till en. Ladda upp dina filer för att komma igång!"
     },
     "pdfToWord": {
-      "title": "PDF till Word Konverterare",
-      "subtitle": "Vi har hjälpt till att konvertera 775 000 filer — låt oss hjälpa dig med din"
+      "title": "PDF till Word Converter",
+      "subtitle": "Vi har hjälpt till att konvertera 775 000 filer — låt oss hjälpa till med dina"
     },
     "pdfToPng": {
-      "title": "PDF till PNG Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — din kan bli nästa"
+      "title": "PDF till PNG-konverterare",
+      "subtitle": "Vi har redan bearbetat över en miljon filer – din kan bli nästa"
     },
     "pdfToJpg": {
-      "title": "PDF till JPG Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — din kan bli nästa"
+      "title": "PDF till JPG-konverterare",
+      "subtitle": "Vi har redan bearbetat över en miljon filer – din kan bli nästa"
     },
     "pdfToEpub": {
-      "title": "PDF till EPUB Konverterare",
-      "subtitle": "Vi har hjälpt till att konvertera 775 000 filer — låt oss hjälpa dig med din"
+      "title": "PDF till EPUB-konverterare",
+      "subtitle": "Vi har hjälpt till att konvertera 775 000 filer — låt oss hjälpa till med dina"
     },
     "pdfToExcel": {
-      "title": "PDF till Excel Konverterare",
-      "subtitle": "Vi har konverterat 775K PDFer — varför inte göra din till nästa?"
+      "title": "PDF till Excel-konverterare",
+      "subtitle": "Vi har konverterat 775 000 PDF-filer — varför inte göra din nästa?"
     },
     "pdfToPptx": {
-      "title": "PDF till PPTX Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — din kan bli nästa"
+      "title": "PDF till PPTX-konverterare",
+      "subtitle": "Vi har redan bearbetat över en miljon filer – din kan bli nästa"
     },
     "wordToPdf": {
-      "title": "Word till PDF Konverterare",
-      "subtitle": "Vi har hjälpt till att konvertera 775 000 filer — låt oss hjälpa dig med din"
+      "title": "Word till PDF-konverterare",
+      "subtitle": "Vi har hjälpt till att konvertera 775 000 filer — låt oss hjälpa till med dina"
     },
     "jpgToPdf": {
-      "title": "JPG till PDF Konverterare",
-      "subtitle": "Vi har bearbetat 75 000 JPGer hittills. Låt oss göra din nästa."
+      "title": "JPG till PDF-konverterare",
+      "subtitle": "Vi har bearbetat 75 000 JPG-filer hittills. Låt oss göra din nästa."
     },
     "pngToPdf": {
-      "title": "PNG till PDF Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — din kan bli nästa"
+      "title": "PNG till PDF-konverterare",
+      "subtitle": "Vi har redan bearbetat över en miljon filer – din kan bli nästa"
     },
     "epubToPdf": {
-      "title": "EPUB till PDF Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — nu låt oss hjälpa dig med din"
+      "title": "EPUB till PDF-konverterare",
+      "subtitle": "Vi har redan konverterat 775 000 filer — låt oss nu hjälpa till med dina"
     },
     "pdfToTxt": {
-      "title": "PDF till TXT Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+      "title": "PDF till TXT-konverterare",
+      "subtitle": "Vi har redan bearbetat över en miljon filer – din kan bli nästa"
     },
     "pdfToHtml": {
-      "title": "PDF till HTML Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+      "title": "PDF till HTML-konverterare",
+      "subtitle": "Vi har redan bearbetat över en miljon filer – din kan bli nästa"
     },
     "pdfToSvg": {
-      "title": "PDF till SVG Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+      "title": "PDF till SVG Converter",
+      "subtitle": "Vi har redan bearbetat över en miljon filer – din kan bli nästa"
     },
     "pdfToTiff": {
-      "title": "PDF till TIFF Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+      "title": "PDF till TIFF-konverterare",
+      "subtitle": "Vi har redan bearbetat över en miljon filer – din kan bli nästa"
     },
     "pdfToWebp": {
-      "title": "PDF till WebP Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+      "title": "PDF till WebP Converter",
+      "subtitle": "Vi har redan bearbetat över en miljon filer – din kan bli nästa"
     },
     "pdfToAvif": {
-      "title": "PDF till AVIF Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+      "title": "PDF till AVIF Converter",
+      "subtitle": "Vi har redan bearbetat över en miljon filer – din kan bli nästa"
     },
     "pdfToEps": {
-      "title": "PDF till EPS Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+      "title": "PDF till EPS-konverterare",
+      "subtitle": "Vi har redan bearbetat över en miljon filer – din kan bli nästa"
     },
     "pdfToDxf": {
-      "title": "PDF till DXF Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+      "title": "PDF till DXF-konverterare",
+      "subtitle": "Vi har redan bearbetat över en miljon filer – din kan bli nästa"
     },
     "pdfToAzw3": {
-      "title": "PDF till AZW3 Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+      "title": "PDF till AZW3 Converter",
+      "subtitle": "Vi har redan bearbetat över en miljon filer – din kan bli nästa"
     },
     "pdfToMobi": {
-      "title": "PDF till MOBI Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+      "title": "PDF till MOBI Converter",
+      "subtitle": "Vi har redan bearbetat över en miljon filer – din kan bli nästa"
     },
     "pdfToDoc": {
-      "title": "PDF till DOC Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+      "title": "PDF till DOC-konverterare",
+      "subtitle": "Vi har redan bearbetat över en miljon filer – din kan bli nästa"
     },
     "excelToPdf": {
-      "title": "Excel till PDF Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+      "title": "Excel till PDF-konverterare",
+      "subtitle": "Vi har redan bearbetat över en miljon filer – din kan bli nästa"
     },
     "pptxToPdf": {
-      "title": "PPTX till PDF Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+      "title": "PPTX till PDF-konverterare",
+      "subtitle": "Vi har redan bearbetat över en miljon filer – din kan bli nästa"
     },
     "mobiToPdf": {
-      "title": "MOBI till PDF Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+      "title": "MOBI till PDF-konverterare",
+      "subtitle": "Vi har redan bearbetat över en miljon filer – din kan bli nästa"
     },
     "avifToPdf": {
-      "title": "AVIF till PDF Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+      "title": "AVIF till PDF-konverterare",
+      "subtitle": "Vi har redan bearbetat över en miljon filer – din kan bli nästa"
     },
     "pngToAvif": {
-      "title": "PNG till AVIF Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+      "title": "PNG till AVIF-konverterare",
+      "subtitle": "Vi har redan bearbetat över en miljon filer – din kan bli nästa"
     },
     "jpgToAvif": {
-      "title": "JPG till AVIF Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+      "title": "JPG till AVIF-konverterare",
+      "subtitle": "Vi har redan bearbetat över en miljon filer – din kan bli nästa"
     },
     "avifToPng": {
-      "title": "AVIF till PNG Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+      "title": "AVIF till PNG-konverterare",
+      "subtitle": "Vi har redan bearbetat över en miljon filer – din kan bli nästa"
     },
     "avifToJpg": {
-      "title": "AVIF till JPG Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+      "title": "AVIF till JPG-konverterare",
+      "subtitle": "Vi har redan bearbetat över en miljon filer – din kan bli nästa"
     },
     "epubToMobi": {
-      "title": "EPUB till MOBI Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+      "title": "EPUB till MOBI Converter",
+      "subtitle": "Vi har redan bearbetat över en miljon filer – din kan bli nästa"
     },
     "mobiToEpub": {
-      "title": "MOBI till EPUB Konverterare",
-      "subtitle": "Vi har redan konverterat 775 000 filer — din kan vara nästa"
+      "title": "MOBI till EPUB-konverterare",
+      "subtitle": "Vi har redan bearbetat över en miljon filer – din kan bli nästa"
     },
     "pdfOcr": {
-      "title": "PDF OCR Verktyg",
-      "subtitle": "Extrahera text från PDFs med OCR-teknik. Ladda upp en fil för att komma igång!"
+      "title": "PDF OCR-verktyg",
+      "subtitle": "Extrahera text från PDF-filer med OCR-teknik. Ladda upp en fil för att komma igång!"
     },
     "pdfToImage": {
-      "title": "PDF till Bild Konverterare",
+      "title": "PDF till bildkonverterare",
       "subtitle": "Konvertera PDF-sidor till bilder. Ladda upp en fil för att komma igång!"
     },
     "imageToPdf": {
-      "title": "Bild till PDF Konverterare",
+      "title": "Bild till PDF-konverterare",
       "subtitle": "Konvertera bilder till PDF. Ladda upp dina filer för att komma igång!"
     }
   },
   "navbar": {
     "convertFromPdf": "Konvertera från PDF",
     "convertToPdf": "Konvertera till PDF",
-    "convertImage": "Konvertera Bild",
-    "convertEbook": "Konvertera E-bok",
+    "convertImage": "Konvertera bild",
+    "convertEbook": "Konvertera e-bok",
     "editingTools": "Redigeringsverktyg",
     "myDocuments": "Mina dokument",
     "myAccount": "Mitt konto",
     "help": "Hjälp",
-    "termsConditions": "Villkor",
+    "termsConditions": "Allmänna villkor",
     "settings": "Inställningar",
     "logOut": "Logga ut",
-    "upgradePlan": "Uppgradera plan",
-    "noSubscription": "Ingen prenumeration",
+    "upgradePlan": "Uppgraderingsplan",
+    "noSubscription": "Inget abonnemang",
     "profileDetails": "Profildetaljer"
   },
   "footer": {
@@ -319,14 +349,14 @@
     "convertFromPdf": "Konvertera från PDF",
     "convertToPdf": "Konvertera till PDF",
     "disclaimer": "Ansvarsfriskrivning",
-    "privacyPolicy": "Integritetspolicy",
+    "privacyPolicy": "Sekretesspolicy",
     "termsOfService": "Användarvillkor",
     "sitemap": "Webbplatskarta",
-    "allRightsReserved": "© 2025 PDFEZY Alla rättigheter förbehållna.",
+    "allRightsReserved": "© 2025 PDFEZY Alla rättigheter reserverade.",
     "companyDescription": "Din allt-i-ett PDF-lösning för att konvertera, redigera och hantera dokument med lätthet och säkerhet.",
-    "stayUpdated": "Håll dig Uppdaterad",
+    "stayUpdated": "Håll dig uppdaterad",
     "newsletterDescription": "Få de senaste uppdateringarna och PDF-tipsen levererade till din inkorg.",
-    "emailPlaceholder": "Ange din e-post",
+    "emailPlaceholder": "Ange din e-postadress",
     "subscribe": "Prenumerera",
     "followUs": "Följ oss",
     "language": "Språk",
@@ -339,7 +369,7 @@
     "email": "E-post",
     "password": "Lösenord",
     "confirmPassword": "Bekräfta lösenord",
-    "forgotPassword": "Glömt lösenord?",
+    "forgotPassword": "Glömt lösenordet?",
     "resetPassword": "Återställ lösenord",
     "signIn": "Logga in",
     "signUp": "Registrera dig",
@@ -349,66 +379,74 @@
     "loggingIn": "Loggar in...",
     "emailAddress": "E-postadress",
     "enterEmailAddress": "Ange din e-postadress",
-    "emailAlreadyRegistered": "Denna e-post är redan registrerad. Vänligen",
+    "emailAlreadyRegistered": "Detta e-postmeddelande är redan registrerat. Snälla",
     "logIn": "logga in"
   },
   "account": {
     "membership": "Medlemskap",
-    "noSubscription": "Du har ingen prenumeration.",
+    "noSubscription": "Du har inget abonnemang.",
     "unlockAllTools": "Lås upp alla PDF-verktyg!",
     "fullAccess": "Få full tillgång till våra avancerade redigerings- och konverteringsfunktioner.",
     "subscribeNow": "Prenumerera nu för att effektivisera dina dokumentuppgifter",
     "subscribe": "Prenumerera",
-    "account": "Konto",
-    "betterExperience": "Ha en bättre upplevelse på PDF House genom att hålla din information uppdaterad.",
-    "importantUpdates": "Du kommer att få viktiga produktuppdateringar och viktiga kontomeddelanden, inklusive betalningskvitton.",
+    "account": "konto",
+    "betterExperience": "Få en bättre upplevelse av PDFezy genom att hålla din information uppdaterad.",
+    "importantUpdates": "Du kommer att få viktiga produktuppdateringar och viktiga kontoaviseringar, inklusive betalningskvitton.",
     "paymentMethod": "Betalningsmetod",
-    "saveTime": "Spara tid genom att ha ett aktuellt kreditkort i filen.",
+    "saveTime": "Spara tid genom att spara ett aktuellt kreditkort.",
     "cardNumber": "Kortnummer",
-    "notSpecified": "Inte specificerat",
-    "activeSubscription": "Aktiv Prenumeration",
-    "subscriptionActive": "Din prenumeration är för närvarande aktiv och du har full tillgång till alla funktioner.",
-    "plan": "Plan",
+    "notSpecified": "Ej specificerat",
+    "activeSubscription": "Aktivt abonnemang",
+    "subscriptionActive": "Ditt abonnemang är för närvarande aktivt och du har full tillgång till alla funktioner.",
+    "plan": "Planera",
     "expiryDate": "Utgångsdatum",
-    "subscriptionType": "Prenumerationstyp"
+    "subscriptionType": "Typ av prenumeration"
   },
   "plan": {
     "choosePlan": "Välj en plan för att ladda ner din fil",
     "continue": "Fortsätt",
     "annualPlan": "Årsplan",
     "getStarted": "Kom igång",
-    "mostPopular": "Mest populär"
+    "mostPopular": "Mest populära"
   },
   "whyUs": {
-    "title": "Varför TheBestPDF är det bästa valet för ditt team",
-    "openness": "Öppenhet",
-    "opennessDesc": "Vi strävar efter långsiktiga partnerskap och säkerställer 24/7 tillgänglighet för kundsupport.",
-    "expertise": "Expertis",
-    "expertiseDesc": "Vi förenar kreativa sinnen för att leverera integrerade lösningar som täcker dina affärsutmaningar.",
-    "growth": "Tillväxt",
-    "growthDesc": "Vi stärker organisationer genom att hålla oss uppdaterade med de senaste tekniska framstegen, strävar efter excellens inom vårt område.",
-    "diversity": "Mångfald",
-    "diversityDesc": "Hälsovård, Juridik, Finans, Utbildning — oavsett vilken bransch du är i, vårt verktyg kan effektivisera dina arbetsflöden."
+    "title": "Anledningar till varför PDFezy är den bästa plattformen för ditt team",
+    "openness": "Säker",
+    "opennessDesc": "Varje fil du skapar är skyddad med HTTPS-kryptering, så att din affärsdata förblir säker vid varje steg.",
+    "expertise": "Byggd för företag ",
+    "expertiseDesc": "Redigera känslig information, infoga objekt och signera PDF-filer med lätthet – allt ditt team behöver för smidig, professionell dokumenthantering.",
+    "growth": "Snabb konvertera",
+    "growthDesc": "Dokument på några sekunder med vår PDF-konverterare, designad för att hålla jämna steg med även de mest upptagna teamen.",
+    "diversity": "Enkel att använda ",
+    "diversityDesc": "Få dina dokumentarbetsflöden igång snabbt med en intuitiv redigerare som alla i ditt team kan bemästra."
   },
   "securityPriority": {
     "title": "Säkerhetsprioritet",
-    "description": "Din datasäkerhet är vår högsta prioritet. Vi implementerar företagsgrad kryptering och säkerhetsåtgärder för att skydda dina dokument och säkerställa fullständig sekretess."
+    "description": "Din datasäkerhet är vår högsta prioritet. Vi implementerar kryptering och säkerhetsåtgärder i företagsklass för att skydda dina dokument och säkerställa fullständig integritet."
   },
   "coreValues": {
-    "title": "Grundvärden bakom TheBestPDF"
+    "title": "Kärnvärden bakom TheBestPDF",
+    "openness": "Öppenhet",
+    "opennessDesc": "Vi tror på att bygga varaktiga relationer. Det är därför vårt kundsupportteam är tillgängligt dygnet runt, närhelst du behöver oss.",
+    "expertise": "Expertis",
+    "expertiseDesc": "Vårt team samlar ljusa, kreativa hjärnor för att leverera smarta, integrerade lösningar som är skräddarsydda för dina unika affärsutmaningar.",
+    "growth": "Tillväxt",
+    "growthDesc": "Vi håller jämna steg med den senaste tekniken så att du inte behöver – höjer ribban hela tiden och strävar efter excellens i allt vi gör.",
+    "diversity": "Mångfald",
+    "diversityDesc": "Från hälsovård och juridik till ekonomi och utbildning, vårt verktyg anpassar sig till din bransch och hjälper till att effektivisera de arbetsflöden som betyder mest för dig."
   },
   "compression": {
-    "compressFile": "Komprimera fil",
+    "compressFile": "Komprimera filen",
     "high": "HÖG",
     "highDesc": "Standardkvalitet, mindre storlek",
     "highReduction": "~40% mindre",
     "basic": "GRUNDLÄGGANDE",
-    "basicDesc": "Bättre kvalitet, mediumstorlek",
+    "basicDesc": "Bättre kvalitet, medium storlek",
     "basicReduction": "~20% mindre",
     "low": "LÅG",
     "lowDesc": "Högsta kvalitet, större storlek",
     "lowReduction": "~10% mindre",
-    "compressionLevel": "Komprimeringsnivå",
+    "compressionLevel": "Kompressionsnivå",
     "selectLevel": "Välj din komprimeringsnivå och komprimera filen.",
     "compress": "Komprimera",
     "compressing": "Komprimerar..."
@@ -421,39 +459,39 @@
   "faq": {
     "title": "Vanliga frågor",
     "multipleUsers": "Kan flera användare från vårt företag använda tjänsten samtidigt?",
-    "multipleUsersAnswer": "Enkelt! Skapa ett konto så kommer hela teamet att kunna använda vårt verktyg. För att komma igång med en prenumeration, registrera dig helt enkelt, gör några filjusteringar, klicka på \"Ladda ner\" och välj sedan den plan som passar dig bäst.",
+    "multipleUsersAnswer": "Lätt! Skapa ett konto så kommer hela teamet att kunna använda vårt verktyg. För att komma igång med en prenumeration, registrera dig, gör några filjusteringar, klicka på \"Ladda ner\" och välj sedan den plan som passar dig bäst.",
     "customerSupport": "Erbjuder ni kundsupport för tekniska problem?",
-    "customerSupportAnswer": "Ja, vårt supportteam är tillgängligt 24/7 för att hjälpa till med alla tekniska problem du stöter på.",
-    "processingSpeed": "Hur snabbt bearbetas dokument på er plattform?",
-    "processingSpeedAnswer": "Dokument bearbetas vanligtvis inom sekunder, även för stora filer.",
-    "moneyBack": "Har ni pengarna-tillbaka-garanti?",
+    "customerSupportAnswer": "Ja, vårt supportteam är tillgängligt 24/7 för att hjälpa dig med eventuella tekniska problem du stöter på.",
+    "processingSpeed": "Hur snabbt behandlas dokument på din plattform?",
+    "processingSpeedAnswer": "Dokument bearbetas vanligtvis inom några sekunder, även för stora filer.",
+    "moneyBack": "Har du en pengarna-tillbaka-garanti?",
     "moneyBackAnswer": "Ja, vi erbjuder en 14-dagars pengarna-tillbaka-garanti om du inte är nöjd med vår tjänst.",
-    "ctaTitle": "Vill du höja dina affärsoperationer?",
-    "ctaDescription": "Kontakta oss på sales@thebestpdf.com så utforskar vi hur vår produkt kan revolutionera ditt företagspappersarbete. Gå med i den växande gemenskapen av framgångsrika företag som utnyttjar TheBestPDF för att ligga steget före!",
+    "ctaTitle": "Vill du lyfta din verksamhet?",
+    "ctaDescription": "Kontakta oss på support@pdfezy.com och låt oss utforska hur vår produkt kan revolutionera ditt företags pappersarbete. Gå med i den växande gemenskapen av framgångsrika företag som utnyttjar TheBestPDF för att ligga steget före!",
     "ctaButton": "Kom igång",
     "loading": "Laddar..."
   },
   "howItWorks": {
-    "title": "Hur man komprimerar PDF",
-    "step1": "Logga in på TheBestPDF och gå till verktyget Komprimera PDF",
-    "step2": "Ladda upp eller dra och släpp din PDF i gränssnittet",
-    "step3": "Det var allt! Din nyligen komprimerade fil är redo för nedladdning och kan hittas i ditt teams konto"
+    "title": "Hur vår plattform fungerar",
+    "step1": "Välj det PDF-verktyg du väljer.",
+    "step2": "Ladda upp önskad fil.",
+    "step3": "Det är det! Din fil är redo att laddas ned."
   },
   "featureCTA": {
     "title": "PDFEZY levererar förstklassiga filhanteringslösningar för team av alla storlekar.",
-    "subtitle": "Välkommen till vår banbrytande SaaS-plattform för online dokumentredigering och konvertering. Utformad för att möta behoven hos företag och entreprenörer."
+    "subtitle": "Välkommen till vår banbrytande SaaS-plattform för onlineredigering och konvertering av dokument. Designad för att möta behoven hos företag och entreprenörer."
   },
   "files": {
-    "searchFiles": "Sök filer",
+    "searchFiles": "Sök efter filer",
     "pdfConverter": "PDF-konverterare",
     "editPdf": "Redigera PDF",
     "signPdf": "Signera PDF",
     "ocrPdf": "OCR PDF",
     "mergePdf": "Slå samman PDF",
     "compressPdf": "Komprimera PDF",
-    "splitPdf": "Dela PDF",
-    "aiSummarizer": "AI-sammanfattare",
-    "fillPdf": "Fyll PDF",
+    "splitPdf": "Dela upp PDF",
+    "aiSummarizer": "AI Summarizer",
+    "fillPdf": "Fyll i PDF",
     "createForm": "Skapa formulär",
     "editForm": "Redigera formulär",
     "summarizePdf": "Sammanfatta PDF",
@@ -461,19 +499,19 @@
   },
   "features": {
     "comprehensiveSuite": "Omfattande svit",
-    "unlimitedDocuments": "Obegränsade dokument"
+    "unlimitedDocuments": "Obegränsat antal dokument"
   },
   "payment": {
-    "paymentDetails": "Betalningsdetaljer",
-    "documentPreview": "Dokumentförhandsvisning",
+    "paymentDetails": "Betalningsinformation",
+    "documentPreview": "Förhandsgranskning av dokument",
     "termsAndService": "Användarvillkor och service",
-    "privacyPolicy": "Integritetspolicy",
+    "privacyPolicy": "Sekretesspolicy",
     "billingEmail": "billing@pdfezy.com",
-    "agreementText": "Genom att markera denna ruta godkänner du användarvillkoren och servicen, integritetspolicyn, och bekräftar att om du inte avbryter minst 24 timmar före slutet av den 7-dagars testperioden för 1,95 CAD, kommer du att debiteras 49 CAD per 28 dagar tills du avbryter din prenumeration genom att kontakta vårt kundsupportteam via e-post på billing@pdfezy.com. Betalningar kommer att debiteras från kortet du angav ovan."
+    "agreementText": "Genom att markera den här rutan godkänner du användarvillkoren och tjänsten, sekretesspolicyn och bekräftar att om du inte avbryter minst 24 timmar före slutet av 7-dagars provperioden för 1,95 CAD kommer du att debiteras 49 CAD per 28 dagar tills du avbryter din prenumeration genom att kontakta vårt kundsupportteam via e-post på billing@pdfezy.com. Betalningar kommer att debiteras från det kort du angav ovan."
   },
   "pdfViewer": {
     "thumbnails": "Miniatyrer",
-    "outline": "Översikt",
+    "outline": "Disposition",
     "annotations": "Anteckningar",
     "zoomOut": "Zooma ut",
     "zoomIn": "Zooma in",
@@ -485,11 +523,11 @@
     "rectangle": "Rektangel",
     "ellipse": "Ellips",
     "polygon": "Polygon",
-    "sign": "Signera",
+    "sign": "Sign",
     "stamp": "Stämpel",
     "text": "Text",
-    "note": "Anteckning",
-    "comment": "Kommentar",
+    "note": "Obs",
+    "comment": "Kommentera",
     "eraser": "Suddgummi",
     "undo": "Ångra",
     "redo": "Gör om",
@@ -500,21 +538,21 @@
   },
   "reset": {
     "invalidResetLink": "Ogiltig återställningslänk",
-    "resetLinkInvalid": "Länken för lösenordsåterställning är ogiltig eller har upphört att gälla.",
+    "resetLinkInvalid": "Länken för återställning av lösenord är ogiltig eller har löpt ut.",
     "backToLogin": "Tillbaka till inloggning",
     "resetPassword": "Återställ lösenord",
     "newPassword": "Nytt lösenord",
     "confirmNewPassword": "Bekräfta nytt lösenord",
-    "passwordsDoNotMatch": "Lösenorden matchar inte",
-    "resetSuccessful": "Lösenord återställt framgångsrikt!",
-    "resetFailed": "Lösenordsåterställning misslyckades. Vänligen försök igen."
+    "passwordsDoNotMatch": "Lösenord stämmer inte överens",
+    "resetSuccessful": "Lösenordsåterställning lyckades!",
+    "resetFailed": "Lösenordsåterställning misslyckades. Försök igen."
   },
   "mergePdf": {
-    "actionButton": "SLÅS SAMMAN FILER",
-    "minFilesError": "Välj minst 2 filer att slås samman",
+    "actionButton": "SLUT FILER",
+    "minFilesError": "Välj minst 2 filer att slå samman",
     "dropText": "Släpp PDF-filer här",
     "uploadText": "Ladda upp dina filer",
     "processingFiles": "Bearbetar filer...",
-    "mergingFiles": "Slår samman PDFs..."
+    "mergingFiles": "Sammanfogar PDF-filer..."
   }
 }

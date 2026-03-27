@@ -4,39 +4,39 @@
     "convert": "Převést",
     "edit": "Upravit",
     "compress": "Komprimovat",
-    "sign": "Podepsat",
+    "sign": "Znamení",
     "merge": "Sloučit",
     "split": "Rozdělit",
     "files": "Soubory",
-    "account": "Účet",
-    "login": "Přihlásit se",
-    "logout": "Odhlásit se",
-    "pdfConverter": "PŘEVODNÍK PDF",
+    "account": "účet",
+    "login": "Přihlášení",
+    "logout": "Odhlášení",
+    "pdfConverter": "PDF KONVERTOR",
     "pdfEditor": "EDITOR PDF",
     "language": "Jazyk"
   },
   "languages": {
-    "en": "English",
+    "en": "anglicky",
     "zh": "中文",
     "cs": "Čeština",
-    "nl": "Nederlands",
+    "nl": "Nizozemsko",
     "fr": "Français",
-    "de": "Deutsch",
+    "de": "německy",
     "el": "Ελληνικά",
-    "hu": "Magyar",
-    "id": "Bahasa Indonesia",
-    "it": "Italiano",
+    "hu": "maďarština",
+    "id": "Bahasa Indonésie",
+    "it": "italština",
     "ja": "日本語",
     "ko": "한국어",
     "ms": "Bahasa Melayu",
     "pl": "Polski",
-    "pt": "Português",
+    "pt": "português",
     "ro": "Română",
     "sr": "Srpski",
-    "es": "Español",
+    "es": "španělsky",
     "se": "Svenska",
     "th": "แบบไทย",
-    "tr": "Türkçe",
+    "tr": "Turecko",
     "uk": "Українська",
     "vi": "Tiếng Việt",
     "fi": "Suomi"
@@ -51,7 +51,7 @@
     "splitPdf": "Rozdělit PDF",
     "files": "Soubory",
     "account": "Můj účet",
-    "login": "Přihlásit se",
+    "login": "Přihlášení",
     "payment": "Platba",
     "plan": "Plány"
   },
@@ -69,49 +69,49 @@
     "loading": "Načítání...",
     "error": "Chyba",
     "success": "Úspěch",
-    "chooseFile": "Vybrat soubor",
+    "chooseFile": "Vyberte Soubor",
     "dragAndDrop": "Přetáhněte sem svůj soubor",
     "or": "nebo",
     "browse": "Procházet",
-    "processing": "Zpracování...",
-    "processingFile": "Zpracováváme váš soubor",
+    "processing": "Zpracovává se...",
+    "processingFile": "Váš soubor zpracováváme",
     "configNotFound": "Konfigurace pro domovskou stránku nebyla nalezena.",
     "uploadFailed": "Nahrání souboru se nezdařilo. Zkuste to prosím znovu.",
-    "chooseBestTool": "Vyberte nejlepší nástroj pro potřeby vašeho podnikání",
+    "chooseBestTool": "Vyberte nástroj, který chcete používat",
     "done": "Hotovo",
     "split": "Rozdělit",
     "saving": "Ukládání...",
     "signing": "Podepisování...",
-    "splitting": "Rozdělování...",
+    "splitting": "Rozdělení...",
     "convertFromPdf": "Převést z PDF",
-    "convertToPdf": "Převést na PDF",
+    "convertToPdf": "Převést do PDF",
     "convertImage": "Převést obrázek",
-    "otherFormats": "Další formáty",
-    "editSuccess": "Úprava úspěšná!",
-    "editSuccessMessage": "Vaše PDF bylo úspěšně upraveno a je připraveno ke stažení.",
-    "whatsNext": "Co dál?",
-    "downloadEditedFile": "Stáhnout upravený soubor",
+    "otherFormats": "Jiné formáty",
+    "editSuccess": "Úpravy byly úspěšné!",
+    "editSuccessMessage": "Váš PDF byl úspěšně upraven a je připraven ke stažení.",
+    "whatsNext": "Co bude dál?",
+    "downloadEditedFile": "Stáhněte si upravený soubor",
     "editAnotherFile": "Upravit jiný soubor",
-    "startNew": "Začít nový",
+    "startNew": "Start New",
     "fileId": "ID souboru",
     "toolNotFound": "Nástroj nenalezen"
   },
   "errors": {
-    "oops": "Ups!",
+    "oops": "Jejda!",
     "somethingWentWrong": "Něco se pokazilo",
     "pageNotFound": "Stránka nenalezena",
     "pageNotExist": "Stránka, kterou hledáte, neexistuje.",
     "errorLoadingPage": "Při načítání této stránky došlo k chybě. Zkuste to prosím znovu.",
     "errorLoadingApp": "Při načítání aplikace došlo k chybě. Zkuste to prosím znovu.",
-    "tryAgain": "Zkusit znovu",
-    "goHome": "Přejít na domovskou stránku",
+    "tryAgain": "Zkuste to znovu",
+    "goHome": "Jdi domů",
     "goToHomePage": "Přejít na domovskou stránku",
-    "errorDetails": "Detaily chyby (pouze pro vývoj)"
+    "errorDetails": "Podrobnosti o chybě (pouze pro vývoj)"
   },
   "tools": {
-    "pdfToWord": "PDF do Word",
-    "pdfToExcel": "PDF do Excel",
-    "pdfToPptx": "PDF do PowerPoint",
+    "pdfToWord": "PDF do Wordu",
+    "pdfToExcel": "PDF do Excelu",
+    "pdfToPptx": "PDF do PowerPointu",
     "pdfToPng": "PDF do PNG",
     "pdfToJpg": "PDF do JPG",
     "pdfToEpub": "PDF do EPUB",
@@ -120,7 +120,7 @@
     "pdfToHtml": "PDF do HTML",
     "pdfToSvg": "PDF do SVG",
     "pdfToTiff": "PDF do TIFF",
-    "pdfToWebp": "PDF do WebP",
+    "pdfToWebp": "PDF na WebP",
     "pdfToAvif": "PDF do AVIF",
     "pdfToEps": "PDF do EPS",
     "pdfToDxf": "PDF do DXF",
@@ -146,13 +146,13 @@
     "rotatePdf": "Otočit PDF",
     "mergePdf": "Sloučit PDF",
     "splitPdf": "Rozdělit PDF",
-    "deletePages": "Smazat stránky",
+    "deletePages": "Odstraňte stránky",
     "compressPdf": "Komprimovat PDF",
     "cropPdf": "Oříznout PDF",
-    "fillForm": "Vyplnit formulář",
-    "fillPdf": "Vyplnit PDF",
+    "fillForm": "Vyplňte formulář",
+    "fillPdf": "Vyplňte PDF",
     "createForm": "Vytvořit formulář",
-    "imageToText": "Obrázek do textu",
+    "imageToText": "Obrázek na text",
     "mergeImages": "Sloučit obrázky",
     "pdfOcr": "PDF OCR",
     "pdfToImage": "PDF do obrázku",
@@ -161,201 +161,201 @@
   },
   "toolsSection": {
     "allPdfTools": "Všechny nástroje PDF",
-    "subtitle": "Vše, co potřebujete pro práci s PDF na jednom místě",
+    "subtitle": "Vše, co potřebujete k práci s PDF, na jednom místě",
     "splitAndMerge": "Rozdělit a sloučit",
     "w9": "W-9",
     "ds11": "DS-11",
     "1099misc": "1099-MISC",
     "viewAllForms": "Zobrazit všechny formuláře",
-    "ctaText": "Potřebujete něco jiného? Máme k dispozici více než 50+ nástrojů PDF.",
+    "ctaText": "Potřebujete něco jiného? Máme k dispozici více než 50 nástrojů PDF.",
     "viewAllTools": "Zobrazit všechny nástroje"
   },
   "toolPages": {
     "home": {
-      "title": "Převodník a editor PDF",
-      "subtitle": "Převádějte, upravujte a spravujte své PDF snadno. Měsíčně zpracováno více než 1M souborů!"
+      "title": "PDF Converter & Editor",
+      "subtitle": "Snadno převádějte, upravujte a spravujte své soubory PDF. 1M+ souborů zpracovaných měsíčně!"
     },
     "signPdf": {
-      "title": "Podepsat PDF online",
-      "subtitle": "Podepište své dokumenty bezpečně online. Nahrajte soubor a začněte!"
+      "title": "Podepište PDF online",
+      "subtitle": "Podepište své dokumenty bezpečně online. Začněte nahráním souboru!"
     },
     "splitPdf": {
       "title": "Rozdělit PDF online",
-      "subtitle": "Rozdělte své PDF na více souborů snadno. Nahrajte soubor a začněte!"
+      "subtitle": "Rozdělte svůj PDF do více souborů snadno. Začněte nahráním souboru!"
     },
     "compressPdf": {
-      "title": "Kompresor PDF",
-      "subtitle": "Již jsme zkomprimovali 775 000 souborů — pomozte nám s vašimi"
+      "title": "PDF kompresor",
+      "subtitle": "Zkomprimovali jsme již 775 000 souborů – pomozte nám s tím vaším"
     },
     "mergePdf": {
       "title": "Sloučit soubory PDF",
-      "subtitle": "Spojte více souborů PDF do jednoho. Nahrajte své soubory a začněte!"
+      "subtitle": "Spojte více souborů PDF do jednoho. Začněte nahráním souborů!"
     },
     "pdfToWord": {
-      "title": "Převodník PDF do Word",
-      "subtitle": "Pomohli jsme převést 775 000 souborů — pomozte nám s vašimi"
+      "title": "Konvertor PDF do Wordu",
+      "subtitle": "Pomohli jsme převést 775 000 souborů – pomozte nám s tím vaším"
     },
     "pdfToPng": {
       "title": "Převodník PDF do PNG",
-      "subtitle": "Již jsme převedli 775 000 souborů — váš může být další"
+      "subtitle": "Již jsme zpracovali více než milion souborů – váš může být další"
     },
     "pdfToJpg": {
       "title": "Převodník PDF do JPG",
-      "subtitle": "Již jsme převedli 775 000 souborů — váš může být další"
+      "subtitle": "Již jsme zpracovali více než milion souborů – váš může být další"
     },
     "pdfToEpub": {
-      "title": "Převodník PDF do EPUB",
-      "subtitle": "Pomohli jsme převést 775 000 souborů — pomozte nám s vašimi"
+      "title": "Převaděč PDF do EPUB",
+      "subtitle": "Pomohli jsme převést 775 000 souborů – pomozte nám s tím vaším"
     },
     "pdfToExcel": {
-      "title": "Převodník PDF do Excel",
-      "subtitle": "Převedli jsme 775K PDF — proč neudělat váš další?"
+      "title": "Převaděč PDF do Excelu",
+      "subtitle": "Převedli jsme 775 tisíc PDF – proč neudělat ten váš jako další?"
     },
     "pdfToPptx": {
-      "title": "Převodník PDF do PPTX",
-      "subtitle": "Již jsme převedli 775 000 souborů — váš může být další"
+      "title": "Převodník PDF na PPTX",
+      "subtitle": "Již jsme zpracovali více než milion souborů – váš může být další"
     },
     "wordToPdf": {
-      "title": "Převodník Word do PDF",
-      "subtitle": "Pomohli jsme převést 775 000 souborů — pomozte nám s vašimi"
+      "title": "Převaděč Word do PDF",
+      "subtitle": "Pomohli jsme převést 775 000 souborů – pomozte nám s tím vaším"
     },
     "jpgToPdf": {
-      "title": "Převodník JPG do PDF",
-      "subtitle": "Doposud jsme zpracovali 75 000 JPG. Udělejme váš další."
+      "title": "Konvertor JPG do PDF",
+      "subtitle": "Dosud jsme zpracovali 75 000 JPG. Udělejme další."
     },
     "pngToPdf": {
-      "title": "Převodník PNG do PDF",
-      "subtitle": "Již jsme převedli 775 000 souborů — váš může být další"
+      "title": "Převaděč PNG do PDF",
+      "subtitle": "Již jsme zpracovali více než milion souborů – váš může být další"
     },
     "epubToPdf": {
-      "title": "Převodník EPUB do PDF",
-      "subtitle": "Již jsme převedli 775 000 souborů — nyní nám pomozte s vašimi"
+      "title": "Převaděč EPUB do PDF",
+      "subtitle": "Převedli jsme již 775 000 souborů – nyní nám dovolte pomoci s tím vaším"
     },
     "pdfToTxt": {
       "title": "Převodník PDF do TXT",
-      "subtitle": "Již jsme převedli 775 000 souborů — váš může být další"
+      "subtitle": "Již jsme zpracovali více než milion souborů – váš může být další"
     },
     "pdfToHtml": {
-      "title": "Převodník PDF do HTML",
-      "subtitle": "Již jsme převedli 775 000 souborů — váš může být další"
+      "title": "Převaděč PDF do HTML",
+      "subtitle": "Již jsme zpracovali více než milion souborů – váš může být další"
     },
     "pdfToSvg": {
       "title": "Převodník PDF do SVG",
-      "subtitle": "Již jsme převedli 775 000 souborů — váš může být další"
+      "subtitle": "Již jsme zpracovali více než milion souborů – váš může být další"
     },
     "pdfToTiff": {
-      "title": "Převodník PDF do TIFF",
-      "subtitle": "Již jsme převedli 775 000 souborů — váš může být další"
+      "title": "Převodník PDF na TIFF",
+      "subtitle": "Již jsme zpracovali více než milion souborů – váš může být další"
     },
     "pdfToWebp": {
-      "title": "Převodník PDF do WebP",
-      "subtitle": "Již jsme převedli 775 000 souborů — váš může být další"
+      "title": "Převaděč PDF na WebP",
+      "subtitle": "Již jsme zpracovali více než milion souborů – váš může být další"
     },
     "pdfToAvif": {
-      "title": "Převodník PDF do AVIF",
-      "subtitle": "Již jsme převedli 775 000 souborů — váš může být další"
+      "title": "Konvertor PDF do AVIF",
+      "subtitle": "Již jsme zpracovali více než milion souborů – váš může být další"
     },
     "pdfToEps": {
       "title": "Převodník PDF do EPS",
-      "subtitle": "Již jsme převedli 775 000 souborů — váš může být další"
+      "subtitle": "Již jsme zpracovali více než milion souborů – váš může být další"
     },
     "pdfToDxf": {
       "title": "Převodník PDF do DXF",
-      "subtitle": "Již jsme převedli 775 000 souborů — váš může být další"
+      "subtitle": "Již jsme zpracovali více než milion souborů – váš může být další"
     },
     "pdfToAzw3": {
       "title": "Převodník PDF do AZW3",
-      "subtitle": "Již jsme převedli 775 000 souborů — váš může být další"
+      "subtitle": "Již jsme zpracovali více než milion souborů – váš může být další"
     },
     "pdfToMobi": {
       "title": "Převodník PDF do MOBI",
-      "subtitle": "Již jsme převedli 775 000 souborů — váš může být další"
+      "subtitle": "Již jsme zpracovali více než milion souborů – váš může být další"
     },
     "pdfToDoc": {
       "title": "Převodník PDF do DOC",
-      "subtitle": "Již jsme převedli 775 000 souborů — váš může být další"
+      "subtitle": "Již jsme zpracovali více než milion souborů – váš může být další"
     },
     "excelToPdf": {
-      "title": "Převodník Excel do PDF",
-      "subtitle": "Již jsme převedli 775 000 souborů — váš může být další"
+      "title": "Převaděč Excel do PDF",
+      "subtitle": "Již jsme zpracovali více než milion souborů – váš může být další"
     },
     "pptxToPdf": {
       "title": "Převodník PPTX do PDF",
-      "subtitle": "Již jsme převedli 775 000 souborů — váš může být další"
+      "subtitle": "Již jsme zpracovali více než milion souborů – váš může být další"
     },
     "mobiToPdf": {
-      "title": "Převodník MOBI do PDF",
-      "subtitle": "Již jsme převedli 775 000 souborů — váš může být další"
+      "title": "Konvertor MOBI do PDF",
+      "subtitle": "Již jsme zpracovali více než milion souborů – váš může být další"
     },
     "avifToPdf": {
-      "title": "Převodník AVIF do PDF",
-      "subtitle": "Již jsme převedli 775 000 souborů — váš může být další"
+      "title": "Konvertor AVIF do PDF",
+      "subtitle": "Již jsme zpracovali více než milion souborů – váš může být další"
     },
     "pngToAvif": {
       "title": "Převodník PNG do AVIF",
-      "subtitle": "Již jsme převedli 775 000 souborů — váš může být další"
+      "subtitle": "Již jsme zpracovali více než milion souborů – váš může být další"
     },
     "jpgToAvif": {
-      "title": "Převodník JPG do AVIF",
-      "subtitle": "Již jsme převedli 775 000 souborů — váš může být další"
+      "title": "Konvertor JPG do AVIF",
+      "subtitle": "Již jsme zpracovali více než milion souborů – váš může být další"
     },
     "avifToPng": {
       "title": "Převodník AVIF do PNG",
-      "subtitle": "Již jsme převedli 775 000 souborů — váš může být další"
+      "subtitle": "Již jsme zpracovali více než milion souborů – váš může být další"
     },
     "avifToJpg": {
-      "title": "Převodník AVIF do JPG",
-      "subtitle": "Již jsme převedli 775 000 souborů — váš může být další"
+      "title": "Převodník AVIF na JPG",
+      "subtitle": "Již jsme zpracovali více než milion souborů – váš může být další"
     },
     "epubToMobi": {
       "title": "Převodník EPUB do MOBI",
-      "subtitle": "Již jsme převedli 775 000 souborů — váš může být další"
+      "subtitle": "Již jsme zpracovali více než milion souborů – váš může být další"
     },
     "mobiToEpub": {
-      "title": "Převodník MOBI do EPUB",
-      "subtitle": "Již jsme převedli 775 000 souborů — váš může být další"
+      "title": "Konvertor MOBI do EPUB",
+      "subtitle": "Již jsme zpracovali více než milion souborů – váš může být další"
     },
     "pdfOcr": {
       "title": "Nástroj PDF OCR",
-      "subtitle": "Extrahujte text z PDF pomocí technologie OCR. Nahrajte soubor a začněte!"
+      "subtitle": "Extrahujte text z PDF pomocí technologie OCR. Začněte nahráním souboru!"
     },
     "pdfToImage": {
-      "title": "Převodník PDF do obrázku",
-      "subtitle": "Převeďte stránky PDF na obrázky. Nahrajte soubor a začněte!"
+      "title": "PDF to Image Converter",
+      "subtitle": "Převeďte stránky PDF na obrázky. Začněte nahráním souboru!"
     },
     "imageToPdf": {
-      "title": "Převodník obrázku do PDF",
-      "subtitle": "Převeďte obrázky na PDF. Nahrajte své soubory a začněte!"
+      "title": "Převaděč obrázku do PDF",
+      "subtitle": "Převést obrázky do PDF. Začněte nahráním souborů!"
     }
   },
   "navbar": {
     "convertFromPdf": "Převést z PDF",
-    "convertToPdf": "Převést na PDF",
+    "convertToPdf": "Převést do PDF",
     "convertImage": "Převést obrázek",
-    "convertEbook": "Převést e-knihu",
-    "editingTools": "Nástroje pro úpravu",
+    "convertEbook": "Převést elektronickou knihu",
+    "editingTools": "Nástroje pro úpravy",
     "myDocuments": "Moje dokumenty",
     "myAccount": "Můj účet",
-    "help": "Nápověda",
-    "termsConditions": "Obchodní podmínky",
+    "help": "Pomoc",
+    "termsConditions": "Smluvní podmínky",
     "settings": "Nastavení",
     "logOut": "Odhlásit se",
-    "upgradePlan": "Upgradovat plán",
+    "upgradePlan": "Plán upgradu",
     "noSubscription": "Žádné předplatné",
-    "profileDetails": "Detaily profilu"
+    "profileDetails": "Podrobnosti profilu"
   },
   "footer": {
     "editPdf": "Upravit PDF",
     "convertFromPdf": "Převést z PDF",
-    "convertToPdf": "Převést na PDF",
-    "disclaimer": "Vyloučení odpovědnosti",
+    "convertToPdf": "Převést do PDF",
+    "disclaimer": "Zřeknutí se odpovědnosti",
     "privacyPolicy": "Zásady ochrany osobních údajů",
     "termsOfService": "Podmínky služby",
-    "sitemap": "Mapa webu",
+    "sitemap": "Sitemap",
     "allRightsReserved": "© 2025 PDFEZY Všechna práva vyhrazena.",
-    "companyDescription": "Vaše komplexní řešení PDF pro převod, úpravu a správu dokumentů snadno a bezpečně.",
-    "stayUpdated": "Zůstaňte informováni",
-    "newsletterDescription": "Získejte nejnovější aktualizace a tipy pro PDF přímo do vaší schránky.",
+    "companyDescription": "Vaše komplexní řešení PDF pro snadnou a bezpečnou konverzi, úpravy a správu dokumentů.",
+    "stayUpdated": "Zůstaňte aktualizováni",
+    "newsletterDescription": "Získejte nejnovější aktualizace a tipy ve formátu PDF do vaší schránky.",
     "emailPlaceholder": "Zadejte svůj email",
     "subscribe": "Přihlásit se k odběru",
     "followUs": "Sledujte nás",
@@ -368,72 +368,80 @@
   "auth": {
     "email": "Email",
     "password": "Heslo",
-    "confirmPassword": "Potvrdit heslo",
+    "confirmPassword": "Potvrďte heslo",
     "forgotPassword": "Zapomněli jste heslo?",
     "resetPassword": "Obnovit heslo",
-    "signIn": "Přihlásit se",
-    "signUp": "Registrovat se",
-    "alreadyHaveAccount": "Již máte účet?",
+    "signIn": "Přihlaste se",
+    "signUp": "Zaregistrujte se",
+    "alreadyHaveAccount": "Už máte účet?",
     "dontHaveAccount": "Nemáte účet?",
-    "login": "Přihlásit se",
+    "login": "Přihlášení",
     "loggingIn": "Přihlašování...",
     "emailAddress": "Emailová adresa",
-    "enterEmailAddress": "Zadejte svou emailovou adresu",
-    "emailAlreadyRegistered": "Tento email je již registrován. Prosím",
-    "logIn": "přihlaste se"
+    "enterEmailAddress": "Zadejte svou e-mailovou adresu",
+    "emailAlreadyRegistered": "Tento e-mail je již zaregistrován. Prosím",
+    "logIn": "přihlásit se"
   },
   "account": {
     "membership": "Členství",
     "noSubscription": "Nemáte předplatné.",
     "unlockAllTools": "Odemkněte všechny nástroje PDF!",
     "fullAccess": "Získejte plný přístup k našim pokročilým funkcím úprav a převodu.",
-    "subscribeNow": "Přihlaste se k odběru nyní a zefektivněte své úkoly s dokumenty",
+    "subscribeNow": "Přihlaste se k odběru a zjednodušte si úkoly s dokumenty",
     "subscribe": "Přihlásit se k odběru",
-    "account": "Účet",
-    "betterExperience": "Mějte lepší zážitek na PDF House tím, že budete mít své informace aktuální.",
-    "importantUpdates": "Budete dostávat důležité aktualizace produktu a základní oznámení účtu, včetně účtenek za platby.",
+    "account": "účet",
+    "betterExperience": "Získejte lepší zkušenost s PDFezy tím, že budete své informace udržovat aktuální.",
+    "importantUpdates": "Budete dostávat důležité aktualizace produktů a důležitá oznámení o účtu, včetně potvrzení o platbách.",
     "paymentMethod": "Způsob platby",
-    "saveTime": "Šetřete čas tím, že budete mít aktuální kreditní kartu v souboru.",
+    "saveTime": "Ušetřete čas tím, že budete mít v evidenci aktuální kreditní kartu.",
     "cardNumber": "Číslo karty",
     "notSpecified": "Nespecifikováno",
     "activeSubscription": "Aktivní předplatné",
     "subscriptionActive": "Vaše předplatné je aktuálně aktivní a máte plný přístup ke všem funkcím.",
     "plan": "Plán",
-    "expiryDate": "Datum vypršení",
+    "expiryDate": "Datum vypršení platnosti",
     "subscriptionType": "Typ předplatného"
   },
   "plan": {
-    "choosePlan": "Vyberte plán pro stažení vašeho souboru",
+    "choosePlan": "Vyberte plán stahování souboru",
     "continue": "Pokračovat",
     "annualPlan": "Roční plán",
-    "getStarted": "Začít",
-    "mostPopular": "Nejpopulárnější"
+    "getStarted": "Začněte",
+    "mostPopular": "Nejoblíbenější"
   },
   "whyUs": {
-    "title": "Proč je TheBestPDF nejlepší volbou pro váš tým",
-    "openness": "Otevřenost",
-    "opennessDesc": "Usilujeme o dlouhodobá partnerství, zajišťujeme dostupnost zákaznické podpory 24/7.",
-    "expertise": "Odbornost",
-    "expertiseDesc": "Spojujeme kreativní mysli, abychom poskytovali integrovaná řešení pokrývající vaše obchodní výzvy.",
-    "growth": "Růst",
-    "growthDesc": "Posilujeme organizace tím, že jsme v obraze s nejnovějšími technologickými pokroky, usilujeme o dokonalost v našem oboru.",
-    "diversity": "Rozmanitost",
-    "diversityDesc": "Zdravotnictví, Právo, Finance, Vzdělávání — bez ohledu na vaše odvětví, náš nástroj může zefektivnit vaše pracovní postupy."
+    "title": "Důvody, proč je PDFezy tou nejlepší platformou pro váš tým",
+    "openness": "Zabezpečte",
+    "opennessDesc": "Každý soubor, který vytvoříte, je chráněn šifrováním HTTPS, takže vaše firemní data zůstanou v bezpečí na každém kroku.",
+    "expertise": "Postaveno pro podnikání ",
+    "expertiseDesc": "Snadno upravujte citlivé informace, vkládejte objekty a podepisujte soubory PDF – vše, co váš tým potřebuje pro plynulou a profesionální správu dokumentů.",
+    "growth": "Rychlý převod",
+    "growthDesc": "Dokumenty během několika sekund s naším převodníkem PDF, který je navržen tak, aby držel krok i s těmi nejrušnějšími týmy.",
+    "diversity": "Jednoduché použití ",
+    "diversityDesc": "Rychle zprovozněte pracovní postupy s dokumenty pomocí intuitivního editoru, který zvládne každý ve vašem týmu."
   },
   "securityPriority": {
-    "title": "Priorita bezpečnosti",
-    "description": "Bezpečnost vašich dat je naší nejvyšší prioritou. Implementujeme šifrování na úrovni podniku a bezpečnostní opatření k ochraně vašich dokumentů a zajištění úplného soukromí."
+    "title": "Priorita zabezpečení",
+    "description": "Bezpečnost vašich dat je naší nejvyšší prioritou. Implementujeme podnikové šifrování a bezpečnostní opatření k ochraně vašich dokumentů a zajištění naprostého soukromí."
   },
   "coreValues": {
-    "title": "Základní hodnoty za TheBestPDF"
+    "title": "Základní hodnoty za TheBestPDF",
+    "openness": "Otevřenost",
+    "opennessDesc": "Věříme v budování trvalých vztahů. Proto je náš tým zákaznické podpory k dispozici 24 hodin denně, kdykoli nás budete potřebovat.",
+    "expertise": "Odbornost",
+    "expertiseDesc": "Náš tým spojuje bystré, kreativní mysli, aby dodávali chytrá, integrovaná řešení šitá na míru vašim jedinečným obchodním výzvám.",
+    "growth": "Růst",
+    "growthDesc": "Držíme krok s nejnovější technologií, takže vy nemusíte – neustále zvyšujeme laťku a usilujeme o dokonalost ve všem, co děláme.",
+    "diversity": "Rozmanitost",
+    "diversityDesc": "Náš nástroj se přizpůsobí vašemu odvětví, od zdravotnictví a práva až po finance a vzdělávání, a pomáhá zefektivnit pracovní postupy, které jsou pro vás nejdůležitější."
   },
   "compression": {
     "compressFile": "Komprimovat soubor",
-    "high": "VYSOKÁ",
+    "high": "VYSOKÝ",
     "highDesc": "Standardní kvalita, menší velikost",
     "highReduction": "~40% menší",
     "basic": "ZÁKLADNÍ",
-    "basicDesc": "Lepší kvalita, střední velikost",
+    "basicDesc": "Kvalitnější, střední velikost",
     "basicReduction": "~20% menší",
     "low": "NÍZKÁ",
     "lowDesc": "Nejvyšší kvalita, větší velikost",
@@ -441,110 +449,110 @@
     "compressionLevel": "Úroveň komprese",
     "selectLevel": "Vyberte úroveň komprese a komprimujte soubor.",
     "compress": "Komprimovat",
-    "compressing": "Komprimování..."
+    "compressing": "Komprese..."
   },
   "email": {
-    "enterEmail": "Zadejte svou emailovou adresu",
-    "downloadLink": "Odkaz ke stažení bude zaslán na váš email",
-    "getStarted": "Začít"
+    "enterEmail": "Zadejte svou e-mailovou adresu",
+    "downloadLink": "Odkaz ke stažení bude zaslán na váš e-mail",
+    "getStarted": "Začněte"
   },
   "faq": {
     "title": "Často kladené otázky",
-    "multipleUsers": "Mohou více uživatelů z naší společnosti používat službu současně?",
-    "multipleUsersAnswer": "Snadné! Vytvořte jeden účet a celý tým bude moci používat náš nástroj. Chcete-li začít s předplatným, jednoduše se zaregistrujte, proveďte některé úpravy souborů, klikněte na \"Stáhnout\" a pak vyberte plán, který vám nejlépe vyhovuje.",
+    "multipleUsers": "Může službu využívat více uživatelů z naší společnosti současně?",
+    "multipleUsersAnswer": "Snadný! Vytvořte si jeden účet a celý tým bude moci náš nástroj používat. Chcete-li začít s předplatným, jednoduše se zaregistrujte, proveďte úpravy souboru, klikněte na „Stáhnout“ a poté vyberte plán, který vám nejlépe vyhovuje.",
     "customerSupport": "Nabízíte zákaznickou podporu pro technické problémy?",
-    "customerSupportAnswer": "Ano, náš tým podpory je k dispozici 24/7, aby pomohl s jakýmikoli technickými problémy, se kterými se setkáte.",
-    "processingSpeed": "Jak rychle jsou dokumenty zpracovávány na vaší platformě?",
-    "processingSpeedAnswer": "Dokumenty jsou obvykle zpracovány během sekund, dokonce i pro velké soubory.",
+    "customerSupportAnswer": "Ano, náš tým podpory je k dispozici 24 hodin denně, 7 dní v týdnu, aby vám pomohl s technickými problémy, se kterými se setkáte.",
+    "processingSpeed": "Jak rychle jsou zpracovávány dokumenty na vaší platformě?",
+    "processingSpeedAnswer": "Dokumenty jsou obvykle zpracovány během několika sekund, a to i u velkých souborů.",
     "moneyBack": "Máte záruku vrácení peněz?",
-    "moneyBackAnswer": "Ano, nabízíme 14denní záruku vrácení peněz, pokud nejste spokojeni s naší službou.",
-    "ctaTitle": "Chcete zvýšit úroveň svých obchodních operací?",
-    "ctaDescription": "Kontaktujte nás na sales@thebestpdf.com a pojďme prozkoumat, jak náš produkt může zrevolutionizovat vaši korporátní dokumentaci. Připojte se k rostoucí komunitě úspěšných podniků využívajících TheBestPDF, abyste zůstali vpředu!",
-    "ctaButton": "Začít",
+    "moneyBackAnswer": "Ano, nabízíme 14denní záruku vrácení peněz, pokud nejste spokojeni s našimi službami.",
+    "ctaTitle": "Chcete pozvednout své obchodní aktivity?",
+    "ctaDescription": "Obraťte se na nás na adrese support@pdfezy.com a pojďme prozkoumat, jak může náš produkt způsobit revoluci ve vaší firemní papírování. Připojte se k rostoucí komunitě úspěšných podniků využívajících TheBestPDF, abyste zůstali na špici!",
+    "ctaButton": "Začněte",
     "loading": "Načítání..."
   },
   "howItWorks": {
-    "title": "Jak komprimovat PDF",
-    "step1": "Přihlaste se do TheBestPDF a přejděte na nástroj Komprimovat PDF",
-    "step2": "Nahrajte nebo přetáhněte své PDF do rozhraní",
-    "step3": "To je vše! Váš nově zkomprimovaný soubor je připraven ke stažení a lze jej najít na účtu vašeho týmu"
+    "title": "Jak naše platforma funguje",
+    "step1": "Vyberte požadovaný nástroj PDF.",
+    "step2": "Nahrajte soubor podle svého výběru.",
+    "step3": "To je vše! Váš soubor je připraven ke stažení."
   },
   "featureCTA": {
-    "title": "PDFEZY poskytuje řešení pro správu souborů nejvyšší úrovně pro týmy všech velikostí.",
-    "subtitle": "Vítejte na naší pokročilé SaaS platformě pro online úpravu a převod dokumentů. Navrženo tak, aby splňovalo potřeby podniků a podnikatelů."
+    "title": "PDFEZY poskytuje špičková řešení správy souborů pro týmy všech velikostí.",
+    "subtitle": "Vítejte v naší špičkové platformě SaaS pro online úpravy a konverzi dokumentů. Navrženo tak, aby vyhovovalo potřebám podniků a podnikatelů."
   },
   "files": {
     "searchFiles": "Hledat soubory",
-    "pdfConverter": "Převodník PDF",
+    "pdfConverter": "Převaděč PDF",
     "editPdf": "Upravit PDF",
     "signPdf": "Podepsat PDF",
     "ocrPdf": "OCR PDF",
     "mergePdf": "Sloučit PDF",
     "compressPdf": "Komprimovat PDF",
     "splitPdf": "Rozdělit PDF",
-    "aiSummarizer": "AI Sumarizátor",
-    "fillPdf": "Vyplnit PDF",
+    "aiSummarizer": "Sumarizátor AI",
+    "fillPdf": "Vyplňte PDF",
     "createForm": "Vytvořit formulář",
     "editForm": "Upravit formulář",
-    "summarizePdf": "Sumarizovat PDF",
-    "extractHighlights": "Extrahovat zvýraznění"
+    "summarizePdf": "Shrnout PDF",
+    "extractHighlights": "Extrahujte zvýraznění"
   },
   "features": {
-    "comprehensiveSuite": "Komplexní sada",
-    "unlimitedDocuments": "Neomezené dokumenty"
+    "comprehensiveSuite": "Komplexní apartmá",
+    "unlimitedDocuments": "Neomezené množství dokumentů"
   },
   "payment": {
-    "paymentDetails": "Detaily platby",
+    "paymentDetails": "Platební údaje",
     "documentPreview": "Náhled dokumentu",
     "termsAndService": "Podmínky použití a služby",
     "privacyPolicy": "Zásady ochrany osobních údajů",
     "billingEmail": "billing@pdfezy.com",
-    "agreementText": "Zaškrtnutím tohoto pole souhlasíte s Podmínkami použití a služby, Zásadami ochrany osobních údajů a potvrzujete, že pokud nezrušíte alespoň 24 hodin před koncem 7denní zkušební doby za CAD$1,95, budete účtováni CAD$49 každých 28 dní, dokud nezrušíte své předplatné kontaktováním našeho týmu zákaznické podpory e-mailem na billing@pdfezy.com. Platby budou účtovány z karty, kterou jste uvedli výše."
+    "agreementText": "Zaškrtnutím tohoto políčka souhlasíte s Podmínkami použití a služby, Zásadami ochrany osobních údajů a potvrzujete, že pokud nezrušíte alespoň 24 hodin před koncem 7denní zkušební verze za 1,95 CAD, bude vám účtováno 49 CAD $ za 28 dní, dokud nezrušíte své předplatné tím, že kontaktujete náš tým zákaznické podpory e-mailem na billing@pdfezy.com. Platby budou účtovány z karty, kterou jste uvedli výše."
   },
   "pdfViewer": {
-    "thumbnails": "Náhledy",
-    "outline": "Osnova",
+    "thumbnails": "Miniatury",
+    "outline": "Obrys",
     "annotations": "Anotace",
     "zoomOut": "Oddálit",
     "zoomIn": "Přiblížit",
-    "pan": "Posunout",
-    "highlight": "Zvýraznit",
+    "pan": "Pan",
+    "highlight": "Zvýrazněte",
     "draw": "Kreslit",
-    "line": "Čára",
+    "line": "Linka",
     "arrow": "Šipka",
     "rectangle": "Obdélník",
     "ellipse": "Elipsa",
     "polygon": "Mnohoúhelník",
-    "sign": "Podepsat",
+    "sign": "Znamení",
     "stamp": "Razítko",
     "text": "Text",
     "note": "Poznámka",
     "comment": "Komentář",
     "eraser": "Guma",
-    "undo": "Zpět",
+    "undo": "Vrátit zpět",
     "redo": "Znovu",
     "search": "Hledat",
-    "print": "Tisknout",
-    "export": "Exportovat",
+    "print": "Tisk",
+    "export": "Vývozní",
     "edit": "Upravit"
   },
   "reset": {
-    "invalidResetLink": "Neplatný odkaz pro obnovení",
-    "resetLinkInvalid": "Odkaz pro obnovení hesla je neplatný nebo vypršel.",
-    "backToLogin": "Zpět na přihlášení",
+    "invalidResetLink": "Neplatný odkaz na resetování",
+    "resetLinkInvalid": "Odkaz na resetování hesla je neplatný nebo jeho platnost vypršela.",
+    "backToLogin": "Zpět k přihlášení",
     "resetPassword": "Obnovit heslo",
     "newPassword": "Nové heslo",
-    "confirmNewPassword": "Potvrdit nové heslo",
+    "confirmNewPassword": "Potvrďte nové heslo",
     "passwordsDoNotMatch": "Hesla se neshodují",
-    "resetSuccessful": "Heslo bylo úspěšně obnoveno!",
+    "resetSuccessful": "Heslo bylo úspěšně resetováno!",
     "resetFailed": "Obnovení hesla se nezdařilo. Zkuste to prosím znovu."
   },
   "mergePdf": {
-    "actionButton": "SLOUČIT SOUBORY",
+    "actionButton": "SLUČIT SOUBORY",
     "minFilesError": "Vyberte prosím alespoň 2 soubory ke sloučení",
-    "dropText": "Přetáhněte sem soubory PDF",
+    "dropText": "Sem přetáhněte soubory PDF",
     "uploadText": "Nahrajte své soubory",
-    "processingFiles": "Zpracování souborů...",
-    "mergingFiles": "Sloučení PDF..."
+    "processingFiles": "Zpracovávání souborů...",
+    "mergingFiles": "Sloučení souborů PDF..."
   }
 }

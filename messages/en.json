@@ -77,7 +77,7 @@
     "processingFile": "We are processing your file",
     "configNotFound": "Configuration not found for home page.",
     "uploadFailed": "Failed to upload file. Please try again.",
-    "chooseBestTool": "Choose the best tool for your business needs",
+    "chooseBestTool": "Choose the tool you prefer to use",
     "done": "Done",
     "split": "Split",
     "saving": "Saving...",
@@ -197,11 +197,11 @@
     },
     "pdfToPng": {
       "title": "PDF to PNG Converter",
-      "subtitle": "We've already converted 775,000 files — yours could be next"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToJpg": {
       "title": "PDF to JPG Converter",
-      "subtitle": "We've already converted 775,000 files — yours could be next"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToEpub": {
       "title": "PDF to EPUB Converter",
@@ -213,7 +213,7 @@
     },
     "pdfToPptx": {
       "title": "PDF to PPTX Converter",
-      "subtitle": "We've already converted 775,000 files — yours could be next"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "wordToPdf": {
       "title": "Word to PDF Converter",
@@ -225,7 +225,7 @@
     },
     "pngToPdf": {
       "title": "PNG to PDF Converter",
-      "subtitle": "We've already converted 775,000 files — yours could be next"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "epubToPdf": {
       "title": "EPUB to PDF Converter",
@@ -233,87 +233,87 @@
     },
     "pdfToTxt": {
       "title": "PDF to TXT Converter",
-      "subtitle": "We've already converted 775,000 files — yours could be next"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToHtml": {
       "title": "PDF to HTML Converter",
-      "subtitle": "We've already converted 775,000 files — yours could be next"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToSvg": {
       "title": "PDF to SVG Converter",
-      "subtitle": "We've already converted 775,000 files — yours could be next"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToTiff": {
       "title": "PDF to TIFF Converter",
-      "subtitle": "We've already converted 775,000 files — yours could be next"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToWebp": {
       "title": "PDF to WebP Converter",
-      "subtitle": "We've already converted 775,000 files — yours could be next"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToAvif": {
       "title": "PDF to AVIF Converter",
-      "subtitle": "We've already converted 775,000 files — yours could be next"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToEps": {
       "title": "PDF to EPS Converter",
-      "subtitle": "We've already converted 775,000 files — yours could be next"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToDxf": {
       "title": "PDF to DXF Converter",
-      "subtitle": "We've already converted 775,000 files — yours could be next"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToAzw3": {
       "title": "PDF to AZW3 Converter",
-      "subtitle": "We've already converted 775,000 files — yours could be next"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToMobi": {
       "title": "PDF to MOBI Converter",
-      "subtitle": "We've already converted 775,000 files — yours could be next"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToDoc": {
       "title": "PDF to DOC Converter",
-      "subtitle": "We've already converted 775,000 files — yours could be next"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "excelToPdf": {
       "title": "Excel to PDF Converter",
-      "subtitle": "We've already converted 775,000 files — yours could be next"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pptxToPdf": {
       "title": "PPTX to PDF Converter",
-      "subtitle": "We've already converted 775,000 files — yours could be next"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "mobiToPdf": {
       "title": "MOBI to PDF Converter",
-      "subtitle": "We've already converted 775,000 files — yours could be next"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "avifToPdf": {
       "title": "AVIF to PDF Converter",
-      "subtitle": "We've already converted 775,000 files — yours could be next"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pngToAvif": {
       "title": "PNG to AVIF Converter",
-      "subtitle": "We've already converted 775,000 files — yours could be next"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "jpgToAvif": {
       "title": "JPG to AVIF Converter",
-      "subtitle": "We've already converted 775,000 files — yours could be next"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "avifToPng": {
       "title": "AVIF to PNG Converter",
-      "subtitle": "We've already converted 775,000 files — yours could be next"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "avifToJpg": {
       "title": "AVIF to JPG Converter",
-      "subtitle": "We've already converted 775,000 files — yours could be next"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "epubToMobi": {
       "title": "EPUB to MOBI Converter",
-      "subtitle": "We've already converted 775,000 files — yours could be next"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "mobiToEpub": {
       "title": "MOBI to EPUB Converter",
-      "subtitle": "We've already converted 775,000 files — yours could be next"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfOcr": {
       "title": "PDF OCR Tool",
@@ -390,7 +390,7 @@
     "subscribeNow": "Subscribe now to streamline your document tasks",
     "subscribe": "Subscribe",
     "account": "Account",
-    "betterExperience": "Have a better experience on PDF House by keeping your information up-to-date.",
+    "betterExperience": "Have a better experience on PDFezy by keeping your information up-to-date.",
     "importantUpdates": "You will receive important product updates and essential account notifications, including payment receipts.",
     "paymentMethod": "Payment Method",
     "saveTime": "Save time by keeping a current credit card on file.",
@@ -410,22 +410,30 @@
     "mostPopular": "Most Popular"
   },
   "whyUs": {
-    "title": "Why TheBestPDF is the top choice for your team",
-    "openness": "Openness",
-    "opennessDesc": "Striving for long-term partnerships, we ensure 24/7 availability for customer support.",
-    "expertise": "Expertise",
-    "expertiseDesc": "We unite creative minds to deliver integrated solutions that cover your business challenges.",
-    "growth": "Growth",
-    "growthDesc": "We empower organizations by keeping abreast of the latest tech advancements, aiming for excellence in our field.",
-    "diversity": "Diversity",
-    "diversityDesc": "Healthcare, Legal, Finance, Education — whatever your industry is, our tool can streamline your workflows."
+    "title": "Reasons why PDFezy is the best platform for your team",
+    "openness": "Secure",
+    "opennessDesc": "Every file you create is protected with HTTPS encryption, so your business data stays safe at every step.",
+    "expertise": "Built for Business ",
+    "expertiseDesc": "Redact sensitive information, insert objects, and sign PDFs with ease — everything your team needs for smooth, professional document management.",
+    "growth": "Fast Convert ",
+    "growthDesc": "Documents in seconds with our PDF converter, designed to keep up with even the busiest teams.",
+    "diversity": "Simple to Use ",
+    "diversityDesc": "Get your document workflows up and running quickly with an intuitive editor that anyone on your team can master."
   },
   "securityPriority": {
     "title": "Security Priority",
     "description": "Your data security is our top priority. We implement enterprise-grade encryption and security measures to protect your documents and ensure complete privacy."
   },
   "coreValues": {
-    "title": "Core values behind TheBestPDF"
+    "title": "Core values behind TheBestPDF",
+    "openness": "Openness",
+    "opennessDesc": "We believe in building lasting relationships. That's why our customer support team is available around the clock, whenever you need us.",
+    "expertise": "Expertise",
+    "expertiseDesc": "Our team brings together bright, creative minds to deliver smart, integrated solutions tailored to your unique business challenges.",
+    "growth": "Growth",
+    "growthDesc": "We keep pace with the latest technology so you don't have to — continuously raising the bar and pushing for excellence in everything we do.",
+    "diversity": "Diversity",
+    "diversityDesc": "From Healthcare and Legal to Finance and Education, our tool adapts to your industry and helps streamline the workflows that matter most to you."
   },
   "compression": {
     "compressFile": "Compress file",
@@ -459,15 +467,15 @@
     "moneyBack": "Do you have a money-back guarantee?",
     "moneyBackAnswer": "Yes, we offer a 14-day money-back guarantee if you are not satisfied with our service.",
     "ctaTitle": "Looking to elevate your business operations?",
-    "ctaDescription": "Reach out to us at sales@thebestpdf.com, and let's explore how our product can revolutionize your corporate paperwork. Join the growing community of successful businesses leveraging TheBestPDF to stay ahead!",
+    "ctaDescription": "Reach out to us at support@pdfezy.com, and let's explore how our product can revolutionize your corporate paperwork. Join the growing community of successful businesses leveraging TheBestPDF to stay ahead!",
     "ctaButton": "Get Started",
     "loading": "Loading..."
   },
   "howItWorks": {
-    "title": "How to compress PDF",
-    "step1": "Log into TheBestPDF and go to the Compress PDF tool",
-    "step2": "Upload or drag & drop your PDF into the interface",
-    "step3": "That's it! Your newly compressed file is ready for download and can be found in your team's account"
+    "title": "How Our Platform Works",
+    "step1": "Choose the PDF tool of your choice.",
+    "step2": "Upload the file of your choice.",
+    "step3": "That’s it! Your file is ready to download."
   },
   "featureCTA": {
     "title": "PDFEZY delivers top‑tier file management solutions for teams of all sizes.",

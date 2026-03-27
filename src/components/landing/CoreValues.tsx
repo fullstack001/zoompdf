@@ -3,25 +3,30 @@ import { useTranslations } from "next-intl";
 
 const values = [
   {
-    titleKey: "whyUs.openness",
-    descKey: "whyUs.opennessDesc",
+    titleKey: "coreValues.openness",
+    descKey: "coreValues.opennessDesc",
   },
   {
-    titleKey: "whyUs.expertise",
-    descKey: "whyUs.expertiseDesc",
+    titleKey: "coreValues.expertise",
+    descKey: "coreValues.expertiseDesc",
   },
   {
-    titleKey: "whyUs.growth",
-    descKey: "whyUs.growthDesc",
+    titleKey: "coreValues.growth",
+    descKey: "coreValues.growthDesc",
   },
   {
-    titleKey: "whyUs.diversity",
-    descKey: "whyUs.diversityDesc",
+    titleKey: "coreValues.diversity",
+    descKey: "coreValues.diversityDesc",
   },
 ];
 
 export default function CoreValues() {
   const t = useTranslations();
+  const scrollToToolsGrid = () => {
+    document
+      .getElementById("tools-grid-section")
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
     <section className="bg-gray-100 py-12 md:py-16 lg:py-24 px-6 md:px-12 lg:px-36 text-center">
@@ -37,9 +42,13 @@ export default function CoreValues() {
             <p className="font-semibold text-[20px] md:text-[24px] mb-4">
               {t(val.titleKey)}
             </p>
-            <p className="text-[14px] md:text-[16px] text-gray-600">
+            <button
+              type="button"
+              onClick={scrollToToolsGrid}
+              className="text-[14px] md:text-[16px] text-gray-900 text-left hover:text-blue-600 transition-colors"
+            >
               {t(val.descKey)}
-            </p>
+            </button>
           </div>
         ))}
       </div>

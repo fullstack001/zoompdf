@@ -12,8 +12,10 @@ export default function FeatureCTA() {
   const handleGetStarted = async () => {
     setIsLoading(true);
     try {
-      // Add your navigation or action logic here
       await new Promise((resolve) => setTimeout(resolve, 500));
+      document
+        .getElementById("tools-grid-section")
+        ?.scrollIntoView({ behavior: "smooth", block: "start" });
     } finally {
       setIsLoading(false);
     }
@@ -40,7 +42,7 @@ export default function FeatureCTA() {
           <button
             onClick={handleGetStarted}
             disabled={isLoading}
-            className="bg-white text-primary-900 px-4 md:px-6 py-3 md:py-5 text-lg md:text-xl lg:text-[24px] rounded-xl md:rounded-2xl font-bold disabled:opacity-60 disabled:cursor-not-allowed flex items-center"
+            className="bg-primary-900 text-white px-4 py-3 md:px-6 md:py-4 rounded-xl text-[18px] md:text-[24px] font-bold disabled:opacity-60 disabled:cursor-not-allowed flex items-center"
           >
             {isLoading ? (
               <>

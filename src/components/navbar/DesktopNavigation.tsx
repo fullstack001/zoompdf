@@ -45,7 +45,7 @@ export const DesktopNavigation: React.FC<NavbarProps> = ({ t, navigate }) => {
         <MenuCategory
           title={t("navbar.editingTools")}
           items={[
-            { label: t("tools.editPdf"), route: "/edit-pdf" },
+            { label: t("tools.editPdf"), route: "/" },
             { label: t("tools.mergePdf"), route: "/merge-pdf" },
             { label: t("tools.splitPdf"), route: "/split-pdf" },
             { label: t("tools.compressPdf"), route: "/compress-pdf" },

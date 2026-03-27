@@ -1,112 +1,112 @@
 {
   "navigation": {
     "home": "ホーム",
-    "convert": "変換",
+    "convert": "変換する",
     "edit": "編集",
-    "compress": "圧縮",
-    "sign": "署名",
-    "merge": "結合",
-    "split": "分割",
+    "compress": "圧縮する",
+    "sign": "サイン",
+    "merge": "マージ",
+    "split": "スプリット",
     "files": "ファイル",
     "account": "アカウント",
     "login": "ログイン",
     "logout": "ログアウト",
-    "pdfConverter": "PDF変換器",
+    "pdfConverter": "PDFコンバータ",
     "pdfEditor": "PDFエディター",
     "language": "言語"
   },
   "languages": {
-    "en": "English",
-    "zh": "中文",
-    "cs": "Čeština",
-    "nl": "Nederlands",
-    "fr": "Français",
-    "de": "Deutsch",
+    "en": "英語",
+    "zh": "中国語",
+    "cs": "チェシュティナ",
+    "nl": "オランダ",
+    "fr": "フランセ",
+    "de": "ドイツ語",
     "el": "Ελληνικά",
-    "hu": "Magyar",
-    "id": "Bahasa Indonesia",
-    "it": "Italiano",
+    "hu": "マジャール語",
+    "id": "インドネシア語",
+    "it": "イタリアーノ",
     "ja": "日本語",
     "ko": "한국어",
-    "ms": "Bahasa Melayu",
-    "pl": "Polski",
-    "pt": "Português",
-    "ro": "Română",
-    "sr": "Srpski",
-    "es": "Español",
-    "se": "Svenska",
+    "ms": "バハサ・メラユ",
+    "pl": "ポルスキー",
+    "pt": "ポルトガル語",
+    "ro": "ロマナ",
+    "sr": "スルプスキー",
+    "es": "スペイン語",
+    "se": "スヴェンスカ",
     "th": "แบบไทย",
-    "tr": "Türkçe",
+    "tr": "テュルクチェ語",
     "uk": "Українська",
-    "vi": "Tiếng Việt",
-    "fi": "Suomi"
+    "vi": "ティエン・ヴィエット",
+    "fi": "スオミ"
   },
   "pages": {
     "home": "ホーム",
-    "convertPdf": "PDF変換",
-    "editPdf": "PDF編集",
-    "compressPdf": "PDF圧縮",
-    "signPdf": "PDF署名",
-    "mergePdf": "PDF結合",
-    "splitPdf": "PDF分割",
+    "convertPdf": "PDFを変換",
+    "editPdf": "PDFの編集",
+    "compressPdf": "PDFを圧縮する",
+    "signPdf": "PDFに署名",
+    "mergePdf": "PDFを結合",
+    "splitPdf": "PDFの分割",
     "files": "ファイル",
-    "account": "マイアカウント",
+    "account": "私のアカウント",
     "login": "ログイン",
-    "payment": "支払い",
-    "plan": "プラン"
+    "payment": "お支払い",
+    "plan": "計画"
   },
   "common": {
     "upload": "アップロード",
     "download": "ダウンロード",
-    "convert": "変換",
+    "convert": "変換する",
     "edit": "編集",
     "save": "保存",
     "cancel": "キャンセル",
     "delete": "削除",
     "back": "戻る",
     "next": "次へ",
-    "previous": "前へ",
+    "previous": "前の",
     "loading": "読み込み中...",
     "error": "エラー",
     "success": "成功",
     "chooseFile": "ファイルを選択",
-    "dragAndDrop": "ファイルをここにドラッグ＆ドロップ",
+    "dragAndDrop": "ここにファイルをドラッグ アンド ドロップします",
     "or": "または",
-    "browse": "参照",
+    "browse": "閲覧する",
     "processing": "処理中...",
     "processingFile": "ファイルを処理しています",
-    "configNotFound": "ホームページの設定が見つかりません。",
-    "uploadFailed": "ファイルのアップロードに失敗しました。もう一度お試しください。",
-    "chooseBestTool": "ビジネスニーズに最適なツールを選択してください",
+    "configNotFound": "ホームページの構成が見つかりません。",
+    "uploadFailed": "ファイルのアップロードに失敗しました。もう一度試してください。",
+    "chooseBestTool": "使いたいツールを選択してください",
     "done": "完了",
-    "split": "分割",
+    "split": "スプリット",
     "saving": "保存中...",
     "signing": "署名中...",
     "splitting": "分割中...",
     "convertFromPdf": "PDFから変換",
     "convertToPdf": "PDFに変換",
-    "convertImage": "画像変換",
+    "convertImage": "画像の変換",
     "otherFormats": "その他の形式",
-    "editSuccess": "編集成功！",
-    "editSuccessMessage": "PDFの編集が完了し、ダウンロードの準備ができました。",
-    "whatsNext": "次は何をしますか？",
-    "downloadEditedFile": "編集したファイルをダウンロード",
-    "editAnotherFile": "別のファイルを編集",
-    "startNew": "新規開始",
+    "editSuccess": "編集が成功しました!",
+    "editSuccessMessage": "PDF は正常に編集され、ダウンロードできる状態になりました。",
+    "whatsNext": "次は何ですか？",
+    "downloadEditedFile": "編集したファイルをダウンロードする",
+    "editAnotherFile": "別のファイルを編集する",
+    "startNew": "新しく始める",
     "fileId": "ファイルID",
     "toolNotFound": "ツールが見つかりません"
   },
   "errors": {
     "oops": "おっと！",
-    "somethingWentWrong": "問題が発生しました",
+    "somethingWentWrong": "何か問題が発生しました",
     "pageNotFound": "ページが見つかりません",
     "pageNotExist": "お探しのページは存在しません。",
-    "errorLoadingPage": "このページの読み込み中にエラーが発生しました。もう一度お試しください。",
-    "errorLoadingApp": "アプリケーションの読み込み中にエラーが発生しました。もう一度お試しください。",
-    "tryAgain": "再試行",
-    "goHome": "ホームに戻る",
-    "goToHomePage": "ホームページに移動",
-    "errorDetails": "エラー詳細（開発環境のみ）"
+    "errorLoadingPage": "このページの読み込み中にエラーが発生しました。もう一度試してください。",
+    "errorLoadingApp": "アプリケーションのロード中にエラーが発生しました。もう一度試してください。",
+    "tryAgain": "もう一度やり直してください",
+    "goHome": "家に帰る",
+    "goToHomePage": "ホームページへ行く",
+    "errorDetails": "エラーの詳細 (開発のみ)"
   },
   "tools": {
     "pdfToWord": "PDFからWordへ",
@@ -116,14 +116,14 @@
     "pdfToJpg": "PDFからJPGへ",
     "pdfToEpub": "PDFからEPUBへ",
     "pdfToMobi": "PDFからMOBIへ",
-    "pdfToTxt": "PDFからTXTへ",
+    "pdfToTxt": "PDFからTXTへの変換",
     "pdfToHtml": "PDFからHTMLへ",
-    "pdfToSvg": "PDFからSVGへ",
+    "pdfToSvg": "PDFからSVGへの変換",
     "pdfToTiff": "PDFからTIFFへ",
-    "pdfToWebp": "PDFからWebPへ",
-    "pdfToAvif": "PDFからAVIFへ",
-    "pdfToEps": "PDFからEPSへ",
-    "pdfToDxf": "PDFからDXFへ",
+    "pdfToWebp": "PDF から WebP へ",
+    "pdfToAvif": "PDFからAVIFへの変換",
+    "pdfToEps": "PDFからEPSへの変換",
+    "pdfToDxf": "PDFからDXFへの変換",
     "pdfToAzw3": "PDFからAZW3へ",
     "wordToPdf": "WordからPDFへ",
     "excelToPdf": "ExcelからPDFへ",
@@ -131,221 +131,221 @@
     "pngToPdf": "PNGからPDFへ",
     "jpgToPdf": "JPGからPDFへ",
     "epubToPdf": "EPUBからPDFへ",
-    "mobiToPdf": "MOBIからPDFへ",
-    "avifToPdf": "AVIFからPDFへ",
-    "avifToPdfJpg": "AVIFからPDFへ",
-    "pngToAvif": "PNGからAVIFへ",
-    "jpgToAvif": "JPGからAVIFへ",
-    "avifToPng": "AVIFからPNGへ",
-    "avifToJpg": "AVIFからJPGへ",
-    "epubToMobi": "EPUBからMOBIへ",
-    "mobiToEpub": "MOBIからEPUBへ",
-    "editPdf": "PDF編集",
-    "signPdf": "PDF署名",
-    "addWatermark": "透かしを追加",
-    "rotatePdf": "PDF回転",
-    "mergePdf": "PDF結合",
-    "splitPdf": "PDF分割",
-    "deletePages": "ページ削除",
-    "compressPdf": "PDF圧縮",
-    "cropPdf": "PDFトリミング",
-    "fillForm": "フォーム入力",
-    "fillPdf": "PDF入力",
-    "createForm": "フォーム作成",
+    "mobiToPdf": "MOBIからPDFへの変換",
+    "avifToPdf": "AVIFからPDFへの変換",
+    "avifToPdfJpg": "AVIFからPDFへの変換",
+    "pngToAvif": "PNGからAVIFへのファイル変換",
+    "jpgToAvif": "JPGからAVIFへのファイル変換",
+    "avifToPng": "AVIFからPNGへの変換",
+    "avifToJpg": "AVIFからJPGへの変換",
+    "epubToMobi": "EPUBからMOBIへの変換",
+    "mobiToEpub": "MOBIからEPUBへの変換",
+    "editPdf": "PDFの編集",
+    "signPdf": "PDFに署名",
+    "addWatermark": "透かしを追加する",
+    "rotatePdf": "PDFを回転する",
+    "mergePdf": "PDFを結合",
+    "splitPdf": "PDFの分割",
+    "deletePages": "ページの削除",
+    "compressPdf": "PDFを圧縮する",
+    "cropPdf": "PDFのトリミング",
+    "fillForm": "フォームに記入する",
+    "fillPdf": "PDF に記入",
+    "createForm": "フォームの作成",
     "imageToText": "画像からテキストへ",
-    "mergeImages": "画像結合",
+    "mergeImages": "画像を結合",
     "pdfOcr": "PDF OCR",
     "pdfToImage": "PDFから画像へ",
-    "imageToPdf": "画像からPDFへ",
+    "imageToPdf": "画像をPDFに変換",
     "pdfToDoc": "PDFからDOCへ"
   },
   "toolsSection": {
-    "allPdfTools": "すべてのPDFツール",
-    "subtitle": "PDF作業に必要なすべてが1つの場所に",
+    "allPdfTools": "すべての PDF ツール",
+    "subtitle": "PDF を操作するために必要なものがすべて 1 か所にまとめられています",
     "splitAndMerge": "分割と結合",
     "w9": "W-9",
     "ds11": "DS-11",
-    "1099misc": "1099-MISC",
+    "1099misc": "1099-その他",
     "viewAllForms": "すべてのフォームを表示",
-    "ctaText": "他に必要なものはありますか？50以上のPDFツールをご用意しています。",
+    "ctaText": "他に何か必要ですか? 50 以上の PDF ツールが利用可能です。",
     "viewAllTools": "すべてのツールを表示"
   },
   "toolPages": {
     "home": {
-      "title": "PDF変換器＆エディター",
-      "subtitle": "PDFを簡単に変換、編集、管理。月間100万件以上のファイルを処理！"
+      "title": "PDFコンバーターとエディター",
+      "subtitle": "PDF を簡単に変換、編集、管理します。毎月 100 万以上のファイルが処理されます。"
     },
     "signPdf": {
-      "title": "オンラインPDF署名",
-      "subtitle": "文書を安全にオンラインで署名。ファイルをアップロードして開始！"
+      "title": "オンラインで PDF に署名",
+      "subtitle": "オンラインで安全に書類に署名します。ファイルをアップロードして始めましょう。"
     },
     "splitPdf": {
-      "title": "オンラインPDF分割",
-      "subtitle": "PDFを簡単に複数のファイルに分割。ファイルをアップロードして開始！"
+      "title": "オンラインで PDF を分割",
+      "subtitle": "PDF を複数のファイルに簡単に分割します。ファイルをアップロードして始めましょう。"
     },
     "compressPdf": {
-      "title": "PDF圧縮器",
-      "subtitle": "すでに775,000ファイルを圧縮済み — あなたのファイルもお手伝いします"
+      "title": "PDF コンプレッサー",
+      "subtitle": "すでに 775,000 個のファイルを圧縮しました - あなたの圧縮をお手伝いします"
     },
     "mergePdf": {
-      "title": "PDFファイル結合",
-      "subtitle": "複数のPDFファイルを1つに結合。ファイルをアップロードして開始！"
+      "title": "PDF ファイルを結合する",
+      "subtitle": "複数の PDF ファイルを 1 つに結合します。ファイルをアップロードして始めましょう!"
     },
     "pdfToWord": {
-      "title": "PDFからWord変換器",
-      "subtitle": "すでに775,000ファイルの変換をサポート — あなたのファイルもお手伝いします"
+      "title": "PDF から Word へのコンバーター",
+      "subtitle": "私たちは 775,000 個のファイルの変換を支援してきました - あなたのファイルの変換もお手伝いします"
     },
     "pdfToPng": {
-      "title": "PDFからPNG変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルが次かもしれません"
+      "title": "PDFからPNGへのコンバーター",
+      "subtitle": "私たちはすでに 100 万を超えるファイルを処理しました – 次はあなたのファイルになるかもしれません"
     },
     "pdfToJpg": {
-      "title": "PDFからJPG変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルが次かもしれません"
+      "title": "PDFからJPGへのコンバーター",
+      "subtitle": "私たちはすでに 100 万を超えるファイルを処理しました – 次はあなたのファイルになるかもしれません"
     },
     "pdfToEpub": {
-      "title": "PDFからEPUB変換器",
-      "subtitle": "すでに775,000ファイルの変換をサポート — あなたのファイルもお手伝いします"
+      "title": "PDFからEPUBへのコンバーター",
+      "subtitle": "私たちは 775,000 個のファイルの変換を支援してきました - あなたのファイルの変換もお手伝いします"
     },
     "pdfToExcel": {
-      "title": "PDFからExcel変換器",
-      "subtitle": "すでに775KのPDFを変換済み — あなたのファイルを次にしませんか？"
+      "title": "PDFからExcelへのコンバーター",
+      "subtitle": "私たちは 775,000 個の PDF を変換しました。次はあなたのものにしてみませんか?"
     },
     "pdfToPptx": {
-      "title": "PDFからPPTX変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルが次かもしれません"
+      "title": "PDFからPPTXへのコンバーター",
+      "subtitle": "私たちはすでに 100 万を超えるファイルを処理しました – 次はあなたのファイルになるかもしれません"
     },
     "wordToPdf": {
-      "title": "WordからPDF変換器",
-      "subtitle": "すでに775,000ファイルの変換をサポート — あなたのファイルもお手伝いします"
+      "title": "WordからPDFへのコンバーター",
+      "subtitle": "私たちは 775,000 個のファイルの変換を支援してきました - あなたのファイルの変換もお手伝いします"
     },
     "jpgToPdf": {
-      "title": "JPGからPDF変換器",
-      "subtitle": "これまでに75,000のJPGを処理しました。あなたのファイルを次にしましょう。"
+      "title": "JPGからPDFへのコンバーター",
+      "subtitle": "これまでに 75,000 枚の JPG を処理しました。次はあなたのものを作りましょう。"
     },
     "pngToPdf": {
-      "title": "PNGからPDF変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルが次かもしれません"
+      "title": "PNGからPDFへのコンバーター",
+      "subtitle": "私たちはすでに 100 万を超えるファイルを処理しました – 次はあなたのファイルになるかもしれません"
     },
     "epubToPdf": {
-      "title": "EPUBからPDF変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルもお手伝いします"
+      "title": "EPUBからPDFへのコンバーター",
+      "subtitle": "すでに 775,000 個のファイルを変換しました - 今度は私たちがあなたのファイルの変換をお手伝いします"
     },
     "pdfToTxt": {
-      "title": "PDFからTXT変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルが次かもしれません"
+      "title": "PDFからTXTへのコンバーター",
+      "subtitle": "私たちはすでに 100 万を超えるファイルを処理しました – 次はあなたのファイルになるかもしれません"
     },
     "pdfToHtml": {
-      "title": "PDFからHTML変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルが次かもしれません"
+      "title": "PDF から HTML へのコンバーター",
+      "subtitle": "私たちはすでに 100 万を超えるファイルを処理しました – 次はあなたのファイルになるかもしれません"
     },
     "pdfToSvg": {
-      "title": "PDFからSVG変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルが次かもしれません"
+      "title": "PDFからSVGへのコンバーター",
+      "subtitle": "私たちはすでに 100 万を超えるファイルを処理しました – 次はあなたのファイルになるかもしれません"
     },
     "pdfToTiff": {
-      "title": "PDFからTIFF変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルが次かもしれません"
+      "title": "PDFからTIFFへのコンバーター",
+      "subtitle": "私たちはすでに 100 万を超えるファイルを処理しました – 次はあなたのファイルになるかもしれません"
     },
     "pdfToWebp": {
-      "title": "PDFからWebP変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルが次かもしれません"
+      "title": "PDFからWebPへのコンバーター",
+      "subtitle": "私たちはすでに 100 万を超えるファイルを処理しました – 次はあなたのファイルになるかもしれません"
     },
     "pdfToAvif": {
-      "title": "PDFからAVIF変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルが次かもしれません"
+      "title": "PDFからAVIFへのコンバーター",
+      "subtitle": "私たちはすでに 100 万を超えるファイルを処理しました – 次はあなたのファイルになるかもしれません"
     },
     "pdfToEps": {
-      "title": "PDFからEPS変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルが次かもしれません"
+      "title": "PDFからEPSへのコンバーター",
+      "subtitle": "私たちはすでに 100 万を超えるファイルを処理しました – 次はあなたのファイルになるかもしれません"
     },
     "pdfToDxf": {
-      "title": "PDFからDXF変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルが次かもしれません"
+      "title": "PDFからDXFへのコンバーター",
+      "subtitle": "私たちはすでに 100 万を超えるファイルを処理しました – 次はあなたのファイルになるかもしれません"
     },
     "pdfToAzw3": {
-      "title": "PDFからAZW3変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルが次かもしれません"
+      "title": "PDFからAZW3へのコンバーター",
+      "subtitle": "私たちはすでに 100 万を超えるファイルを処理しました – 次はあなたのファイルになるかもしれません"
     },
     "pdfToMobi": {
-      "title": "PDFからMOBI変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルが次かもしれません"
+      "title": "PDFからMOBIへのコンバーター",
+      "subtitle": "私たちはすでに 100 万を超えるファイルを処理しました – 次はあなたのファイルになるかもしれません"
     },
     "pdfToDoc": {
-      "title": "PDFからDOC変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルが次かもしれません"
+      "title": "PDFからDOCへのコンバーター",
+      "subtitle": "私たちはすでに 100 万を超えるファイルを処理しました – 次はあなたのファイルになるかもしれません"
     },
     "excelToPdf": {
-      "title": "ExcelからPDF変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルが次かもしれません"
+      "title": "ExcelからPDFへのコンバーター",
+      "subtitle": "私たちはすでに 100 万を超えるファイルを処理しました – 次はあなたのファイルになるかもしれません"
     },
     "pptxToPdf": {
-      "title": "PPTXからPDF変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルが次かもしれません"
+      "title": "PPTXからPDFへのコンバーター",
+      "subtitle": "私たちはすでに 100 万を超えるファイルを処理しました – 次はあなたのファイルになるかもしれません"
     },
     "mobiToPdf": {
-      "title": "MOBIからPDF変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルが次かもしれません"
+      "title": "MOBIからPDFへのコンバーター",
+      "subtitle": "私たちはすでに 100 万を超えるファイルを処理しました – 次はあなたのファイルになるかもしれません"
     },
     "avifToPdf": {
-      "title": "AVIFからPDF変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルが次かもしれません"
+      "title": "AVIFからPDFへのコンバーター",
+      "subtitle": "私たちはすでに 100 万を超えるファイルを処理しました – 次はあなたのファイルになるかもしれません"
     },
     "pngToAvif": {
-      "title": "PNGからAVIF変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルが次かもしれません"
+      "title": "PNGからAVIFへのコンバーター",
+      "subtitle": "私たちはすでに 100 万を超えるファイルを処理しました – 次はあなたのファイルになるかもしれません"
     },
     "jpgToAvif": {
-      "title": "JPGからAVIF変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルが次かもしれません"
+      "title": "JPGからAVIFへのコンバーター",
+      "subtitle": "私たちはすでに 100 万を超えるファイルを処理しました – 次はあなたのファイルになるかもしれません"
     },
     "avifToPng": {
-      "title": "AVIFからPNG変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルが次かもしれません"
+      "title": "AVIFからPNGへのコンバーター",
+      "subtitle": "私たちはすでに 100 万を超えるファイルを処理しました – 次はあなたのファイルになるかもしれません"
     },
     "avifToJpg": {
-      "title": "AVIFからJPG変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルが次かもしれません"
+      "title": "AVIFからJPGへのコンバーター",
+      "subtitle": "私たちはすでに 100 万を超えるファイルを処理しました – 次はあなたのファイルになるかもしれません"
     },
     "epubToMobi": {
-      "title": "EPUBからMOBI変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルが次かもしれません"
+      "title": "EPUBからMOBIへのコンバーター",
+      "subtitle": "私たちはすでに 100 万を超えるファイルを処理しました – 次はあなたのファイルになるかもしれません"
     },
     "mobiToEpub": {
-      "title": "MOBIからEPUB変換器",
-      "subtitle": "すでに775,000ファイルを変換済み — あなたのファイルが次かもしれません"
+      "title": "MOBIからEPUBへのコンバーター",
+      "subtitle": "私たちはすでに 100 万を超えるファイルを処理しました – 次はあなたのファイルになるかもしれません"
     },
     "pdfOcr": {
       "title": "PDF OCRツール",
-      "subtitle": "OCR技術でPDFからテキストを抽出。ファイルをアップロードして開始！"
+      "subtitle": "OCR テクノロジーを使用して PDF からテキストを抽出します。ファイルをアップロードして始めましょう。"
     },
     "pdfToImage": {
-      "title": "PDFから画像変換器",
-      "subtitle": "PDFページを画像に変換。ファイルをアップロードして開始！"
+      "title": "PDFから画像へのコンバーター",
+      "subtitle": "PDF ページを画像に変換します。ファイルをアップロードして始めましょう。"
     },
     "imageToPdf": {
-      "title": "画像からPDF変換器",
-      "subtitle": "画像をPDFに変換。ファイルをアップロードして開始！"
+      "title": "画像から PDF へのコンバーター",
+      "subtitle": "画像を PDF に変換します。ファイルをアップロードして始めましょう!"
     }
   },
   "navbar": {
     "convertFromPdf": "PDFから変換",
     "convertToPdf": "PDFに変換",
-    "convertImage": "画像変換",
-    "convertEbook": "電子書籍変換",
+    "convertImage": "画像の変換",
+    "convertEbook": "電子書籍の変換",
     "editingTools": "編集ツール",
-    "myDocuments": "マイドキュメント",
-    "myAccount": "マイアカウント",
+    "myDocuments": "私のドキュメント",
+    "myAccount": "私のアカウント",
     "help": "ヘルプ",
     "termsConditions": "利用規約",
     "settings": "設定",
     "logOut": "ログアウト",
-    "upgradePlan": "プランアップグレード",
-    "noSubscription": "サブスクリプションなし",
-    "profileDetails": "プロフィール詳細"
+    "upgradePlan": "アップグレードプラン",
+    "noSubscription": "購読なし",
+    "profileDetails": "プロフィールの詳細"
   },
   "footer": {
-    "editPdf": "PDF編集",
+    "editPdf": "PDFの編集",
     "convertFromPdf": "PDFから変換",
     "convertToPdf": "PDFに変換",
     "disclaimer": "免責事項",
@@ -353,198 +353,206 @@
     "termsOfService": "利用規約",
     "sitemap": "サイトマップ",
     "allRightsReserved": "© 2025 PDFEZY 全著作権所有。",
-    "companyDescription": "変換、編集、管理を簡単かつ安全に行うオールインワンPDFソリューション。",
-    "stayUpdated": "最新情報を取得",
-    "newsletterDescription": "最新の更新とPDFのヒントをメールボックスに配信。",
-    "emailPlaceholder": "メールアドレスを入力",
-    "subscribe": "購読",
-    "followUs": "フォローする",
+    "companyDescription": "ドキュメントを簡単かつ安全に変換、編集、管理するためのオールインワン PDF ソリューション。",
+    "stayUpdated": "最新情報を入手",
+    "newsletterDescription": "最新のアップデートと PDF のヒントが受信箱に配信されます。",
+    "emailPlaceholder": "メールアドレスを入力してください",
+    "subscribe": "購読する",
+    "followUs": "フォローしてください",
     "language": "言語",
-    "selectLanguage": "言語を選択",
-    "email": "メール",
+    "selectLanguage": "言語を選択してください",
+    "email": "電子メール",
     "phone": "電話",
     "address": "住所"
   },
   "auth": {
-    "email": "メール",
+    "email": "電子メール",
     "password": "パスワード",
-    "confirmPassword": "パスワード確認",
+    "confirmPassword": "パスワードの確認",
     "forgotPassword": "パスワードをお忘れですか？",
-    "resetPassword": "パスワードリセット",
+    "resetPassword": "パスワードのリセット",
     "signIn": "サインイン",
     "signUp": "サインアップ",
-    "alreadyHaveAccount": "すでにアカウントをお持ちですか？",
-    "dontHaveAccount": "アカウントをお持ちでないですか？",
+    "alreadyHaveAccount": "すでにアカウントをお持ちですか?",
+    "dontHaveAccount": "アカウントをお持ちでない場合は、",
     "login": "ログイン",
     "loggingIn": "ログイン中...",
     "emailAddress": "メールアドレス",
-    "enterEmailAddress": "メールアドレスを入力",
-    "emailAlreadyRegistered": "このメールアドレスは既に登録されています。",
-    "logIn": "ログイン"
+    "enterEmailAddress": "メールアドレスを入力してください",
+    "emailAlreadyRegistered": "このEメールはすでに登録されています。お願いします",
+    "logIn": "ログインする"
   },
   "account": {
     "membership": "メンバーシップ",
-    "noSubscription": "サブスクリプションがありません。",
-    "unlockAllTools": "すべてのPDFツールのロックを解除！",
-    "fullAccess": "高度な編集および変換機能へのフルアクセスを取得。",
-    "subscribeNow": "今すぐ購読して、ドキュメントタスクを効率化",
-    "subscribe": "購読",
+    "noSubscription": "サブスクリプションをお持ちではありません。",
+    "unlockAllTools": "すべての PDF ツールのロックを解除してください!",
+    "fullAccess": "高度な編集機能と変換機能に完全にアクセスできます。",
+    "subscribeNow": "今すぐ購読してドキュメントタスクを効率化しましょう",
+    "subscribe": "購読する",
     "account": "アカウント",
-    "betterExperience": "情報を最新の状態に保つことで、PDF Houseでの体験を向上させましょう。",
-    "importantUpdates": "重要な製品更新と必須のアカウント通知（支払い領収書を含む）を受信します。",
-    "paymentMethod": "支払い方法",
-    "saveTime": "現在のクレジットカードをファイルに保存して時間を節約。",
+    "betterExperience": "情報を最新の状態に保つことで、PDFezy をより快適にご利用いただけます。",
+    "importantUpdates": "重要な製品の更新情報や、支払い領収書などの重要なアカウント通知が届きます。",
+    "paymentMethod": "お支払い方法",
+    "saveTime": "現在のクレジット カードをファイルに保存しておくと時間を節約できます。",
     "cardNumber": "カード番号",
-    "notSpecified": "未指定",
+    "notSpecified": "指定なし",
     "activeSubscription": "アクティブなサブスクリプション",
-    "subscriptionActive": "サブスクリプションは現在アクティブで、すべての機能にフルアクセスできます。",
-    "plan": "プラン",
+    "subscriptionActive": "あなたのサブスクリプションは現在有効であり、すべての機能に完全にアクセスできます。",
+    "plan": "計画",
     "expiryDate": "有効期限",
-    "subscriptionType": "サブスクリプションタイプ"
+    "subscriptionType": "サブスクリプションの種類"
   },
   "plan": {
-    "choosePlan": "ファイルをダウンロードするプランを選択",
+    "choosePlan": "ファイルをダウンロードするプランを選択してください",
     "continue": "続ける",
-    "annualPlan": "年間プラン",
-    "getStarted": "始める",
-    "mostPopular": "最も人気"
+    "annualPlan": "年間計画",
+    "getStarted": "始めましょう",
+    "mostPopular": "最も人気のある"
   },
   "whyUs": {
-    "title": "TheBestPDFがあなたのチームの最良の選択である理由",
-    "openness": "開放性",
-    "opennessDesc": "長期的なパートナーシップを目指し、カスタマーサポートの24/7可用性を確保しています。",
-    "expertise": "専門知識",
-    "expertiseDesc": "創造的な人材を結集し、ビジネスの課題をカバーする統合ソリューションを提供します。",
-    "growth": "成長",
-    "growthDesc": "最新の技術進歩に遅れずについていくことで組織を強化し、私たちの分野での卓越性を目指しています。",
-    "diversity": "多様性",
-    "diversityDesc": "医療、法律、金融、教育 — あなたの業界が何であれ、私たちのツールはワークフローを効率化できます。"
+    "title": "PDFezy がチームにとって最適なプラットフォームである理由",
+    "openness": "安全",
+    "opennessDesc": "作成するすべてのファイルは HTTPS 暗号化で保護されるため、ビジネス データはあらゆる段階で安全に保たれます。",
+    "expertise": "ビジネス向けに構築 ",
+    "expertiseDesc": "機密情報の編集、オブジェクトの挿入、PDF への署名など​​、チームがスムーズでプロフェッショナルな文書管理に必要なすべてを実行できます。",
+    "growth": "高速変換",
+    "growthDesc": "最も忙しいチームでも対応できるように設計された PDF コンバーターを使用すると、数秒で文書を作成できます。",
+    "diversity": "使い方が簡単 ",
+    "diversityDesc": "チームの誰もが使いこなすことができる直感的なエディターを使用して、ドキュメントのワークフローを迅速に起動して実行できます。"
   },
   "securityPriority": {
-    "title": "セキュリティ優先",
-    "description": "データセキュリティは私たちの最優先事項です。エンタープライズグレードの暗号化とセキュリティ対策を実装し、文書を保護し、完全なプライバシーを確保します。"
+    "title": "セキュリティの優先度",
+    "description": "お客様のデータのセキュリティは当社の最優先事項です。当社は、エンタープライズ グレードの暗号化とセキュリティ対策を実装して、ドキュメントを保護し、完全なプライバシーを確​​保します。"
   },
   "coreValues": {
-    "title": "TheBestPDFの背後にある核心的価値"
+    "title": "TheBestPDF の背後にある核となる価値観",
+    "openness": "開放性",
+    "opennessDesc": "私たちは永続的な関係を築くことを信じています。そのため、当社のカスタマー サポート チームは、必要なときにいつでも 24 時間対応しています。",
+    "expertise": "専門知識",
+    "expertiseDesc": "当社のチームは、聡明で創造的な心を結集して、お客様固有のビジネス課題に合わせたスマートな統合ソリューションを提供します。",
+    "growth": "成長",
+    "growthDesc": "当社は常に最新のテクノロジーに対応しており、お客様がそうする必要はありません。継続的に基準を引き上げ、当社のあらゆる活動において卓越性を追求しています。",
+    "diversity": "多様性",
+    "diversityDesc": "医療、法律から財務、教育に至るまで、当社のツールはお客様の業界に適応し、お客様にとって最も重要なワークフローの合理化に役立ちます。"
   },
   "compression": {
-    "compressFile": "ファイル圧縮",
+    "compressFile": "ファイルを圧縮する",
     "high": "高",
-    "highDesc": "標準品質、小さなサイズ",
-    "highReduction": "約40%小さく",
-    "basic": "基本",
-    "basicDesc": "より良い品質、中サイズ",
-    "basicReduction": "約20%小さく",
-    "low": "低",
-    "lowDesc": "最高品質、大きなサイズ",
-    "lowReduction": "約10%小さく",
+    "highDesc": "標準品質、小さいサイズ",
+    "highReduction": "~40% 小型化",
+    "basic": "ベーシック",
+    "basicDesc": "より高品質、中程度のサイズ",
+    "basicReduction": "~20% 小型化",
+    "low": "低い",
+    "lowDesc": "最高品質、より大きなサイズ",
+    "lowReduction": "~10% 小型化",
     "compressionLevel": "圧縮レベル",
-    "selectLevel": "圧縮レベルを選択してファイルを圧縮してください。",
-    "compress": "圧縮",
+    "selectLevel": "圧縮レベルを選択してファイルを圧縮します。",
+    "compress": "圧縮する",
     "compressing": "圧縮中..."
   },
   "email": {
-    "enterEmail": "メールアドレスを入力",
+    "enterEmail": "メールアドレスを入力してください",
     "downloadLink": "ダウンロードリンクがメールに送信されます",
-    "getStarted": "始める"
+    "getStarted": "始めましょう"
   },
   "faq": {
     "title": "よくある質問",
-    "multipleUsers": "当社の複数のユーザーが同時にサービスを利用できますか？",
-    "multipleUsersAnswer": "簡単です！1つのアカウントを作成すれば、チーム全体がツールを使用できます。サブスクリプションを開始するには、登録して、いくつかのファイル調整を行い、「ダウンロード」をクリックしてから、最適なプランを選択するだけです。",
-    "customerSupport": "技術的な問題に対するカスタマーサポートを提供していますか？",
-    "customerSupportAnswer": "はい、サポートチームは24/7利用可能で、発生する技術的な問題をサポートします。",
-    "processingSpeed": "プラットフォームでの文書処理はどのくらい速いですか？",
-    "processingSpeedAnswer": "文書は通常、大きなファイルでも数秒以内に処理されます。",
+    "multipleUsers": "弊社の複数のユーザーが同時にサービスを利用することはできますか？",
+    "multipleUsersAnswer": "簡単！アカウントを 1 つ作成すると、チーム全体がツールを使用できるようになります。サブスクリプションを開始するには、登録してファイルを調整し、[ダウンロード] をクリックして、最適なプランを選択するだけです。",
+    "customerSupport": "技術的な問題についてカスタマーサポートを提供していますか?",
+    "customerSupportAnswer": "はい、当社のサポート チームは年中無休 24 時間対応しており、発生した技術的な問題に対応します。",
+    "processingSpeed": "プラットフォーム上で文書はどのくらいの速さで処理されますか?",
+    "processingSpeedAnswer": "ドキュメントは通常、大きなファイルであっても数秒以内に処理されます。",
     "moneyBack": "返金保証はありますか？",
-    "moneyBackAnswer": "はい、サービスにご満足いただけない場合、14日間の返金保証を提供しています。",
-    "ctaTitle": "ビジネス運営を向上させたいですか？",
-    "ctaDescription": "sales@thebestpdf.comまでお問い合わせください。私たちの製品が企業文書業務をどのように革新できるか探ってみましょう。TheBestPDFを活用して成功している企業の成長するコミュニティに参加し、先を行きましょう！",
-    "ctaButton": "始める",
+    "moneyBackAnswer": "はい、サービスにご満足いただけない場合は、14 日間の返金保証を提供しています。",
+    "ctaTitle": "ビジネス運営の向上を目指していますか?",
+    "ctaDescription": "support@pdfezy.com までご連絡ください。当社の製品が企業の事務処理にどのような変革をもたらすかを探ってみましょう。 TheBestPDF を活用して成功を収めているビジネスの成長するコミュニティに参加して、先を行きましょう!",
+    "ctaButton": "始めましょう",
     "loading": "読み込み中..."
   },
   "howItWorks": {
-    "title": "PDFを圧縮する方法",
-    "step1": "TheBestPDFにログインしてPDF圧縮ツールに移動",
-    "step2": "PDFをアップロードするか、インターフェースにドラッグ＆ドロップ",
-    "step3": "それだけです！新しく圧縮されたファイルはダウンロードの準備ができており、チームのアカウントで見つけることができます"
+    "title": "私たちのプラットフォームの仕組み",
+    "step1": "好みの PDF ツールを選択してください。",
+    "step2": "選択したファイルをアップロードします。",
+    "step3": "それでおしまい！ファイルをダウンロードする準備ができました。"
   },
   "featureCTA": {
-    "title": "PDFEZYは、あらゆる規模のチームにトップレベルのファイル管理ソリューションを提供します。",
-    "subtitle": "オンラインドキュメント編集と変換のための最先端SaaSプラットフォームへようこそ。企業と起業家のニーズを満たすように設計されています。"
+    "title": "PDFEZY は、あらゆる規模のチームに最高レベルのファイル管理ソリューションを提供します。",
+    "subtitle": "オンラインドキュメントの編集と変換のための最先端の SaaS プラットフォームへようこそ。ビジネスや起業家のニーズを満たすように設計されています。"
   },
   "files": {
-    "searchFiles": "ファイル検索",
-    "pdfConverter": "PDF変換器",
-    "editPdf": "PDF編集",
-    "signPdf": "PDF署名",
+    "searchFiles": "ファイルの検索",
+    "pdfConverter": "PDFコンバータ",
+    "editPdf": "PDFの編集",
+    "signPdf": "PDFに署名",
     "ocrPdf": "OCR PDF",
-    "mergePdf": "PDF結合",
-    "compressPdf": "PDF圧縮",
-    "splitPdf": "PDF分割",
-    "aiSummarizer": "AI要約ツール",
-    "fillPdf": "PDF入力",
-    "createForm": "フォーム作成",
-    "editForm": "フォーム編集",
-    "summarizePdf": "PDF要約",
-    "extractHighlights": "ハイライト抽出"
+    "mergePdf": "PDFを結合",
+    "compressPdf": "PDFを圧縮する",
+    "splitPdf": "PDFの分割",
+    "aiSummarizer": "AIサマライザー",
+    "fillPdf": "PDF に記入",
+    "createForm": "フォームの作成",
+    "editForm": "フォームの編集",
+    "summarizePdf": "要約PDF",
+    "extractHighlights": "ハイライトの抽出"
   },
   "features": {
-    "comprehensiveSuite": "包括的スイート",
+    "comprehensiveSuite": "包括的なスイート",
     "unlimitedDocuments": "無制限のドキュメント"
   },
   "payment": {
-    "paymentDetails": "支払い詳細",
-    "documentPreview": "ドキュメントプレビュー",
+    "paymentDetails": "お支払い詳細",
+    "documentPreview": "ドキュメントのプレビュー",
     "termsAndService": "利用規約とサービス",
     "privacyPolicy": "プライバシーポリシー",
     "billingEmail": "billing@pdfezy.com",
-    "agreementText": "このボックスにチェックを入れることで、利用規約とサービス、プライバシーポリシーに同意し、CAD$1.95の7日間トライアル終了の少なくとも24時間前にキャンセルしない場合、billing@pdfezy.comのメールでカスタマーサポートチームに連絡してサブスクリプションをキャンセルするまで、28日ごとにCAD$49が課金されることを確認します。支払いは上記で指定したカードから請求されます。"
+    "agreementText": "このボックスをチェックすると、利用規約とサービス、プライバシー ポリシーに同意し、1.95 カナダドルの 7 日間トライアルが終了する少なくとも 24 時間前にキャンセルしない場合、電子メールで当社のカスタマー サポート チーム (billing@pdfezy.com) に連絡してサブスクリプションをキャンセルするまで、28 日ごとに 49 カナダドルが請求されることを確認したことになります。お支払いは上記で指定したカードから請求されます。"
   },
   "pdfViewer": {
     "thumbnails": "サムネイル",
-    "outline": "アウトライン",
+    "outline": "概要",
     "annotations": "注釈",
-    "zoomOut": "縮小",
-    "zoomIn": "拡大",
+    "zoomOut": "ズームアウト",
+    "zoomIn": "ズームイン",
     "pan": "パン",
     "highlight": "ハイライト",
-    "draw": "描画",
-    "line": "線",
+    "draw": "描く",
+    "line": "ライン",
     "arrow": "矢印",
     "rectangle": "長方形",
     "ellipse": "楕円",
-    "polygon": "多角形",
-    "sign": "署名",
+    "polygon": "ポリゴン",
+    "sign": "サイン",
     "stamp": "スタンプ",
     "text": "テキスト",
-    "note": "ノート",
+    "note": "注記",
     "comment": "コメント",
     "eraser": "消しゴム",
     "undo": "元に戻す",
-    "redo": "やり直す",
+    "redo": "やり直し",
     "search": "検索",
-    "print": "印刷",
-    "export": "エクスポート",
+    "print": "印刷する",
+    "export": "輸出",
     "edit": "編集"
   },
   "reset": {
     "invalidResetLink": "無効なリセットリンク",
-    "resetLinkInvalid": "パスワードリセットリンクが無効であるか、期限切れです。",
+    "resetLinkInvalid": "パスワード リセット リンクが無効であるか、有効期限が切れています。",
     "backToLogin": "ログインに戻る",
-    "resetPassword": "パスワードリセット",
+    "resetPassword": "パスワードのリセット",
     "newPassword": "新しいパスワード",
-    "confirmNewPassword": "新しいパスワードを確認",
+    "confirmNewPassword": "新しいパスワードを確認する",
     "passwordsDoNotMatch": "パスワードが一致しません",
-    "resetSuccessful": "パスワードリセットが成功しました！",
-    "resetFailed": "パスワードリセットに失敗しました。もう一度お試しください。"
+    "resetSuccessful": "パスワードのリセットが成功しました。",
+    "resetFailed": "パスワードのリセットに失敗しました。もう一度試してください。"
   },
   "mergePdf": {
-    "actionButton": "ファイル結合",
-    "minFilesError": "結合するには少なくとも2つのファイルを選択してください",
-    "dropText": "PDFファイルをここにドロップ",
-    "uploadText": "ファイルをアップロード",
-    "processingFiles": "ファイル処理中...",
-    "mergingFiles": "PDF結合中..."
+    "actionButton": "ファイルを結合する",
+    "minFilesError": "結合するファイルを少なくとも 2 つ選択してください",
+    "dropText": "PDF ファイルをここにドロップします",
+    "uploadText": "ファイルをアップロードする",
+    "processingFiles": "ファイルを処理中...",
+    "mergingFiles": "PDF を結合しています..."
   }
 }

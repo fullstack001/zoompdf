@@ -35,8 +35,10 @@ export default function FAQ() {
   const handleCTAClick = async () => {
     setIsLoading(true);
     try {
-      // Add your navigation or action logic here
       await new Promise((resolve) => setTimeout(resolve, 500));
+      document
+        .getElementById("tools-grid-section")
+        ?.scrollIntoView({ behavior: "smooth", block: "start" });
     } finally {
       setIsLoading(false);
     }

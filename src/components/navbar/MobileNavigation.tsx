@@ -37,7 +37,7 @@ export const MobileNavigation: React.FC<NavbarProps> = ({
       onCloseMobileMenu();
       setOpenDropdown(null);
     },
-    [navigate, onCloseMobileMenu]
+    [navigate, onCloseMobileMenu],
   );
 
   const handleLogout = useCallback(() => {
@@ -62,7 +62,7 @@ export const MobileNavigation: React.FC<NavbarProps> = ({
           <MobileMenuItem
             label={t("navigation.pdfEditor")}
             items={[
-              { label: t("tools.editPdf"), route: "/edit-pdf" },
+              { label: t("tools.editPdf"), route: "/" },
               { label: t("tools.signPdf"), route: "/sign-pdf" },
               { label: t("tools.addWatermark"), route: "/add-watermark" },
               { label: t("tools.rotatePdf"), route: "/rotate-pdf" },

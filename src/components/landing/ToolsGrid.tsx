@@ -50,7 +50,7 @@ export default function ToolsGrid() {
   });
 
   return (
-    <section className="p-8 md:p-24 text-center">
+    <section id="tools-grid-section" className="p-8 md:p-24 text-center">
       <h2 className="text-[28px] md:text-[40px] text-[#212121] font-medium text-center mb-8 md:mb-12">
         {t("common.chooseBestTool")}
       </h2>
