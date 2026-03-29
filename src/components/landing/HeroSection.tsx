@@ -68,13 +68,15 @@ export default function HeroSection({
   };
 
   return (
-    <section className="bg-[#edf0ff] text-center py-8 px-6 sm:py-12 sm:px-12 lg:px-24">
-      <h1 className="text-4xl lg:text-5xl font-medium mb-6 pt-4 sm:pt-4 ">
-        {title ? title : "Online PDF to Word Converter"}
-      </h1>
-      <p className="mb-8 text-2xl lg:text-3xl font-light">
-        {content ? content : "Change file formats in seconds"}
-      </p>
+    <section className="bg-[#edf0ff] text-center py-6 px-4 sm:py-10 sm:px-8 md:px-12 lg:px-24">
+      <div className="max-w-5xl mx-auto">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium mb-4 sm:mb-6 pt-2 sm:pt-4 px-1 sm:px-0 break-words">
+          {title ? title : "Online PDF to Word Converter"}
+        </h1>
+        <p className="mb-6 sm:mb-8 text-base sm:text-xl md:text-2xl lg:text-3xl font-light px-1 sm:px-0">
+          {content ? content : "Change file formats in seconds"}
+        </p>
+      </div>
       <FileUploadSection handleFileChange={handleFileChange} />
 
       <FeatureItems />

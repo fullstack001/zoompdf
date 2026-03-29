@@ -45,19 +45,20 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-6 md:py-8 lg:py-12 px-6 sm:px-10 md:px-16 lg:px-24 bg-blue-50 mx-auto flex flex-col lg:flex-row gap-6 md:gap-10 items-center justify-between">
+    <section className="py-6 md:py-8 lg:py-12 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 bg-blue-50 mx-auto flex flex-col lg:flex-row gap-6 md:gap-8 lg:gap-10 items-stretch lg:items-center justify-between w-full max-w-[100vw] overflow-x-hidden">
       {/* Accordion */}
-      <div className="flex-1 p-6 sm:p-8 md:p-12 gap-6 md:gap-8">
-        <h2 className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[40px] font-medium text-gray-900 mb-4 sm:mb-6 md:mb-8">
+      <div className="flex-1 min-w-0 w-full p-4 sm:p-6 md:p-8 lg:p-12">
+        <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-[40px] font-medium text-gray-900 mb-4 sm:mb-6 md:mb-8 break-words">
           {t("title")}
         </h2>
         {faqData.map((faq, index) => (
           <div
             key={index}
-            className="bg-white rounded-xl p-4 sm:p-6 shadow mb-2"
+            className="bg-white rounded-xl p-3 sm:p-4 md:p-6 shadow mb-2"
           >
             <button
-              className="w-full text-left text-[16px] sm:text-[18px] py-2 sm:py-4 font-semibold text-gray-800 flex justify-between items-center"
+              type="button"
+              className="w-full text-left text-sm sm:text-base md:text-[18px] py-3 sm:py-4 font-semibold text-gray-800 flex justify-between items-start gap-3 min-h-[44px] sm:min-h-0"
               onClick={() => toggle(index)}
             >
               {faq.question}
@@ -69,7 +70,7 @@ export default function FAQ() {
               />
             </button>
             {activeIndex === index && (
-              <div className="py-4 text-sm text-[14px] sm:text-[16px] border-t text-gray-600">
+              <div className="py-3 sm:py-4 text-sm sm:text-base border-t text-gray-600">
                 {faq.answer}
               </div>
             )}
@@ -78,20 +79,21 @@ export default function FAQ() {
       </div>
 
       {/* CTA Box */}
-      <div className="flex-1 bg-primary-900 text-white rounded-2xl p-6 sm:p-8 md:p-12 flex flex-col justify-between">
+      <div className="flex-1 min-w-0 w-full lg:max-w-xl bg-primary-900 text-white rounded-2xl p-5 sm:p-8 md:p-12 flex flex-col justify-between">
         <div>
-          <h3 className="text-[24px] sm:text-[30px] md:text-[40px] font-medium mb-6 sm:mb-8">
+          <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[40px] font-medium mb-4 sm:mb-6 md:mb-8 break-words">
             {t("ctaTitle")}
           </h3>
-          <p className="text-[16px] sm:text-[18px] md:text-[20px] font-medium leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-medium leading-relaxed">
             {t("ctaDescription")}
           </p>
         </div>
-        <div className="mt-4 sm:mt-6">
+        <div className="mt-6 sm:mt-8">
           <button
+            type="button"
             onClick={handleCTAClick}
             disabled={isLoading}
-            className="bg-[#4B68FF] text-white px-4 py-3 rounded-2xl text-[16px] sm:text-[18px] md:text-[24px] font-bold shadow-md flex items-center disabled:opacity-60 disabled:cursor-not-allowed"
+            className="bg-[#4B68FF] text-white px-4 py-3 rounded-2xl text-sm sm:text-base md:text-xl lg:text-2xl font-bold shadow-md inline-flex items-center justify-center w-full sm:w-auto min-h-[44px] disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {isLoading ? (
               <>

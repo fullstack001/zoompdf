@@ -29,17 +29,17 @@ export default function CoreValues() {
   };
 
   return (
-    <section className="bg-gray-100 py-12 md:py-16 lg:py-24 px-6 md:px-12 lg:px-36 text-center">
-      <h2 className="text-[24px] md:text-[28px] lg:text-[40px] font-medium text-gray-900 mb-6 md:mb-8">
+    <section className="bg-gray-100 py-8 sm:py-12 md:py-16 lg:py-24 px-4 sm:px-6 md:px-12 lg:px-16 xl:px-36 text-center">
+      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[40px] font-medium text-gray-900 mb-6 md:mb-8 px-1 break-words">
         {t("coreValues.title")}
       </h2>
-      <div className="flex flex-wrap justify-center xl:justify-between gap-4 md:gap-6 xl:gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-6 xl:gap-8 max-w-7xl mx-auto w-full">
         {values.map((val) => (
           <div
             key={val.titleKey}
-            className="bg-white shadow-md rounded-2xl p-6 md:p-8 gap-4 md:gap-6 w-full sm:w-[300px] md:w-[348px] text-left"
+            className="bg-white shadow-md rounded-2xl p-5 sm:p-6 md:p-8 gap-4 md:gap-6 w-full min-w-0 text-left"
           >
-            <p className="font-semibold text-[20px] md:text-[24px] mb-4">
+            <p className="font-semibold text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4 break-words">
               {t(val.titleKey)}
             </p>
             <button

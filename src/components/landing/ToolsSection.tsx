@@ -44,24 +44,24 @@ export default function ToolsSection() {
   ];
 
   return (
-    <section className="py-12 px-6 md:px-12 lg:px-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-8 sm:py-12 px-4 sm:px-6 md:px-12 lg:px-24 bg-gray-50">
+      <div className="max-w-7xl mx-auto w-full min-w-0">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-8 sm:mb-12 px-1">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 break-words">
             {t("toolsSection.allPdfTools")}
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
             {t("toolsSection.subtitle")}
           </p>
         </div>
 
         {/* Tools Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6">
           {toolsData.map((category, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-sm  p-6 hover:shadow-md transition-shadow duration-200"
+              className="bg-white rounded-lg shadow-sm p-4 sm:p-6 hover:shadow-md transition-shadow duration-200 min-w-0 w-full"
             >
               {/* Category Title */}
               <h3 className="text-lg font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">
@@ -86,11 +86,11 @@ export default function ToolsSection() {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-12">
-          <p className="text-gray-600 mb-4">{t("toolsSection.ctaText")}</p>
+        <div className="text-center mt-8 sm:mt-12 px-1">
+          <p className="text-gray-600 mb-4 text-sm sm:text-base">{t("toolsSection.ctaText")}</p>
           <button
             onClick={() => navigate("/tools")}
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200"
+            className="inline-flex items-center justify-center w-full max-w-xs sm:max-w-none sm:w-auto px-6 py-3 bg-blue-600 text-white text-sm sm:text-base font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200"
           >
             {t("toolsSection.viewAllTools")}
           </button>

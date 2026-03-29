@@ -34,6 +34,11 @@ export interface AuthResponse {
   token: string;
   user: User;
   subscription?: Subscription;
+  welcomeEmailStatus?: {
+    sent: boolean;
+    skipped: boolean;
+    reason: string | null;
+  };
 }
 
 export interface FileData {
@@ -116,7 +121,7 @@ export const loginUser = async (
     const statusCode = axiosError.response?.status;
 
     // Try to get error message from different possible fields (msg, message, error)
-    let errorMessage =
+    const errorMessage =
       responseData?.msg ||
       responseData?.message ||
       responseData?.error ||
@@ -922,6 +927,15 @@ export const createStripeSubscription = async (
     return response.data;
   } catch (error) {
     throw new Error("Failed to create stripe subscription", { cause: error });
+  }
+};
+
+export const trackPricingVisit = async (email: string): Promise<void> => {
+  if (!email) return;
+  try {
+    await api.post("/email-flow/track-pricing-visit", { email });
+  } catch (error) {
+    console.error("Failed to track pricing visit:", error);
   }
 };
 

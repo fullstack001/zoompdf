@@ -173,27 +173,27 @@
   "toolPages": {
     "home": {
       "title": "PDF Converter & Editor",
-      "subtitle": "Convert, edit, and manage your PDFs with ease. 1M+ files processed monthly!"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "signPdf": {
       "title": "Sign PDF Online",
-      "subtitle": "Sign your documents online securely. Upload a file to get started!"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "splitPdf": {
       "title": "Split PDF Online",
-      "subtitle": "Split your PDF into multiple files easily. Upload a file to get started!"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "compressPdf": {
       "title": "PDF Compressor",
-      "subtitle": "We've already compressed 775,000 files — let us help with yours"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "mergePdf": {
       "title": "Merge PDF Files",
-      "subtitle": "Combine multiple PDF files into one. Upload your files to get started!"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToWord": {
       "title": "PDF to Word Converter",
-      "subtitle": "We've helped convert 775,000 files — let us help with yours"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToPng": {
       "title": "PDF to PNG Converter",
@@ -205,11 +205,11 @@
     },
     "pdfToEpub": {
       "title": "PDF to EPUB Converter",
-      "subtitle": "We've helped convert 775,000 files — let us help with yours"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToExcel": {
       "title": "PDF to Excel Converter",
-      "subtitle": "We've converted 775K PDFs — why not make yours the next one?"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToPptx": {
       "title": "PDF to PPTX Converter",
@@ -217,11 +217,11 @@
     },
     "wordToPdf": {
       "title": "Word to PDF Converter",
-      "subtitle": "We've helped convert 775,000 files — let us help with yours"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "jpgToPdf": {
       "title": "JPG to PDF Converter",
-      "subtitle": "We've processed 75,000 JPGs so far. Let's make yours next."
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pngToPdf": {
       "title": "PNG to PDF Converter",
@@ -229,7 +229,7 @@
     },
     "epubToPdf": {
       "title": "EPUB to PDF Converter",
-      "subtitle": "We've already converted 775,000 files — now let us help with yours"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToTxt": {
       "title": "PDF to TXT Converter",
@@ -317,15 +317,15 @@
     },
     "pdfOcr": {
       "title": "PDF OCR Tool",
-      "subtitle": "Extract text from PDFs with OCR technology. Upload a file to get started!"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "pdfToImage": {
       "title": "PDF to Image Converter",
-      "subtitle": "Convert PDF pages to images. Upload a file to get started!"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     },
     "imageToPdf": {
       "title": "Image to PDF Converter",
-      "subtitle": "Convert images to PDF. Upload your files to get started!"
+      "subtitle": "We’ve already processed over a million file – yours could be next"
     }
   },
   "navbar": {

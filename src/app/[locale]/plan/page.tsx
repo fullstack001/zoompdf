@@ -10,11 +10,22 @@ import PlanPreview from "@/components/plan/PlanPreview";
 import PlanOptions from "@/components/plan/PlanOptions";
 import PlanFeatures from "@/components/plan/PlanFeatures";
 import "@/app/globals.css"; // Ensure global styles are imported
+import { useSelector } from "react-redux";
+import { RootState } from "@/store/store";
+import { useEffect } from "react";
+import { trackPricingVisit } from "@/utils/apiUtils";
 
 export default function PlanPage() {
   const dispatch = useDispatch();
   const { navigate } = useLocalizedNavigation(); // Use localized navigation
   const [selectedOption, setSelectedOption] = useState<string | null>("7_full");
+  const user = useSelector((state: RootState) => state.user);
+
+  useEffect(() => {
+    if (user?.email) {
+      trackPricingVisit(user.email);
+    }
+  }, [user?.email]);
 
   const confirmPlan = () => {
     if (selectedOption) {

@@ -82,30 +82,30 @@ export default function CustomerTestimonials() {
   };
 
   return (
-    <section className="py-12 px-6 md:px-12 lg:px-24 bg-white border-t border-b border-blue-100">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-8 sm:py-12 px-4 sm:px-6 md:px-12 lg:px-24 bg-white border-t border-b border-blue-100">
+      <div className="max-w-7xl mx-auto w-full min-w-0">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-8 sm:mb-12 px-1">
+          <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 break-words">
             Trusted by 400,000+ users worldwide!
           </h2>
-          <div className="flex items-center justify-center gap-2 mb-2">
-            <span className="text-lg font-semibold text-gray-900">
+          <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-2 mb-2 text-sm sm:text-base">
+            <span className="font-semibold text-gray-900">
               Excellent
             </span>
-            <div className="flex gap-1">{renderStars(5)}</div>
-            <span className="text-sm text-gray-600">
+            <div className="flex gap-0.5 shrink-0">{renderStars(5)}</div>
+            <span className="text-gray-600 text-xs sm:text-sm max-w-[min(100%,280px)] sm:max-w-none">
               5 on 5 based on 3112 reviews
             </span>
           </div>
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-8">
           {currentTestimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="bg-white rounded-lg shadow-lg p-6 border border-gray-100"
+              className="bg-white rounded-lg shadow-lg p-4 sm:p-6 border border-gray-100 min-w-0"
             >
               {/* Avatar */}
               <div className="flex justify-center mb-4">
@@ -117,7 +117,7 @@ export default function CustomerTestimonials() {
               </div>
 
               {/* Review Text */}
-              <p className="text-gray-700 text-center mb-4 leading-relaxed">
+              <p className="text-gray-700 text-center mb-4 leading-relaxed text-sm sm:text-base break-words">
                 "{testimonial.review}"
               </p>
 

@@ -50,25 +50,27 @@ export default function ToolsGrid() {
   });
 
   return (
-    <section id="tools-grid-section" className="p-8 md:p-24 text-center">
-      <h2 className="text-[28px] md:text-[40px] text-[#212121] font-medium text-center mb-8 md:mb-12">
+    <section
+      id="tools-grid-section"
+      className="px-4 py-8 sm:px-6 sm:py-10 md:p-12 lg:p-24 text-center w-full max-w-[100vw] overflow-x-hidden">
+      <h2 className="text-2xl sm:text-3xl md:text-[40px] text-[#212121] font-medium text-center mb-6 sm:mb-8 md:mb-12 px-1 break-words">
         {t("common.chooseBestTool")}
       </h2>
 
       {/* Category Tabs */}
-      <div className="bg-gray-100 rounded-2xl p-2 mb-8 md:mb-12 inline-flex flex-wrap gap-2 md:gap-0">
+      <div className="bg-gray-100 rounded-2xl p-2 mb-6 sm:mb-8 md:mb-12 inline-flex flex-wrap justify-center gap-1.5 sm:gap-2 max-w-full">
         {categories.map((category) => (
           <button
             key={category.key}
             onClick={() => setActiveCategory(category.key)}
-            className={`px-4 py-3 md:px-6 md:py-4 rounded-xl text-sm md:text-base font-medium transition-all ${
+            className={`px-3 py-2.5 sm:px-4 sm:py-3 md:px-6 md:py-4 rounded-xl text-xs sm:text-sm md:text-base font-medium transition-all min-h-[44px] sm:min-h-0 flex items-center ${
               activeCategory === category.key
                 ? "bg-blue-500 text-white shadow-lg"
                 : "text-gray-700 hover:text-gray-900"
             }`}
           >
-            <div className="flex items-center gap-2">
-              <span className="text-xl">
+            <div className="flex items-center gap-1.5 sm:gap-2">
+              <span className="text-lg sm:text-xl shrink-0" aria-hidden>
                 {category.key === "convertFromPdf" && "📄"}
                 {category.key === "convertToPdf" && "📝"}
                 {category.key === "convertImage" && "🖼️"}
@@ -81,21 +83,31 @@ export default function ToolsGrid() {
       </div>
 
       {/* Tools Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4 md:gap-6 max-w-4xl mx-auto w-full min-w-0">
         {filteredTools.map((tool) => (
           <div
             key={tool.labelKey}
             onClick={() => navigate(tool.href)}
-            className=" md:p-6  bg-white rounded-2xl shadow-md hover:shadow-lg px-auto lg:flex items-center cursor-pointer transition-all border border-gray-100"
+            role="button"
+            tabIndex={0}
+            aria-label={t(tool.labelKey)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                navigate(tool.href);
+              }
+            }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 p-2.5 sm:p-4 md:p-6 bg-white rounded-xl sm:rounded-2xl shadow-md hover:shadow-lg cursor-pointer transition-all border border-gray-100 min-h-[88px] sm:min-h-0 min-w-0"
           >
             <Image
               src={tool.icon}
-              alt={t(tool.labelKey)}
+              alt=""
+              aria-hidden
               width={48}
               height={48}
-              className="mx-auto "
+              className="shrink-0 w-9 h-9 sm:w-12 sm:h-12"
             />
-            <p className="text-sm md:text-base text-center font-medium text-[#212121]">
+            <p className="text-[11px] leading-tight sm:text-sm md:text-base text-center font-medium text-[#212121] line-clamp-3 sm:line-clamp-none break-words w-full min-w-0">
               {t(tool.labelKey)}
             </p>
           </div>
