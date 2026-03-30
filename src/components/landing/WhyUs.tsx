@@ -48,7 +48,7 @@ export default function WhyUs() {
     <section className="py-8 sm:py-12 px-4 sm:px-6 md:px-12 lg:px-24 bg-primary-50">
       <div className="mx-auto max-w-9xl flex flex-col lg:flex-row lg:items-start items-center justify-between gap-8 lg:gap-12 xl:gap-16 w-full min-w-0">
         <div className="flex-1 min-w-0 w-full lg:max-w-[55%] p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 gap-8 text-center lg:text-left">
-          <h2 className="text-2xl sm:text-3xl md:text-[32px] lg:text-[40px] font-medium text-gray-900 mb-6 md:mb-8 break-words">
+          <h2 className=" text-2xl sm:text-3xl md:text-[40px]  font-medium text-gray-900 mb-6 md:mb-8 break-words">
             {t("whyUs.title")}
           </h2>
           {features.map((f) => (

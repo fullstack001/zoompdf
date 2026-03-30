@@ -37,7 +37,7 @@ export default function FeatureCTA() {
           />
         </div>
         <div className="text-center lg:text-left text-white flex-1 min-w-0 px-2 sm:px-4 md:px-8 lg:px-12 py-2 w-full">
-          <h2 className="font-sans font-medium text-2xl sm:text-3xl md:text-[40px]  mb-4 sm:mb-6 md:mb-8 ">
+          <h2 className="font-medium text-2xl sm:text-3xl md:text-[40px]  mb-4 sm:mb-6 md:mb-8 ">
             {t("featureCTA.title")}
           </h2>
           <p className="mb-6 md:mb-8 text-base sm:text-lg md:text-xl lg:text-2xl font-medium">
