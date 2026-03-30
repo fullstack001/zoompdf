@@ -39,7 +39,9 @@ export default function RegisterPage() {
       } else {
         const mailStatus = result.welcomeEmailStatus;
         if (mailStatus?.sent) {
-          setSuccessMessage("Account created. Welcome email sent successfully.");
+          setSuccessMessage(
+            "Account created. Check your email for your default password and sign-in link."
+          );
         } else if (mailStatus?.skipped) {
           setSuccessMessage(
             `Account created. Welcome email skipped (${mailStatus.reason || "mail service not configured"}).`
@@ -97,7 +99,7 @@ export default function RegisterPage() {
           </button>
 
           <div className="rounded-lg bg-blue-50 border border-blue-100 px-4 py-3 text-center text-sm text-blue-900">
-            We will send your welcome email from noreply@pdfezy.com. Please check your spam folder too.
+            We will email your default password and a link to sign in. Check spam if you do not see it.
           </div>
 
           {error && (
