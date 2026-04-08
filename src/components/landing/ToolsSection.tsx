@@ -5,6 +5,15 @@ import { useLocalizedNavigation } from "@/utils/navigation";
 export default function ToolsSection() {
   const t = useTranslations();
   const { navigate } = useLocalizedNavigation();
+  const goToToolsArea = () => {
+    const toolsSection = document.getElementById("tools-grid-section");
+    if (toolsSection) {
+      toolsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+
+    navigate("/#tools-grid-section");
+  };
 
   const toolsData = [
     {
@@ -89,7 +98,7 @@ export default function ToolsSection() {
         <div className="text-center mt-8 sm:mt-12 px-1">
           <p className="text-gray-600 mb-4 text-sm sm:text-base">{t("toolsSection.ctaText")}</p>
           <button
-            onClick={() => navigate("/tools")}
+            onClick={goToToolsArea}
             className="inline-flex items-center justify-center w-full max-w-xs sm:max-w-none sm:w-auto px-6 py-3 bg-blue-600 text-white text-sm sm:text-base font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200"
           >
             {t("toolsSection.viewAllTools")}

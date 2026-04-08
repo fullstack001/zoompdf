@@ -358,7 +358,7 @@ export default function PaymentForm({
             <label htmlFor="agree">
               By checking this box, you agree to the{" "}
               <a
-                href="/terms"
+                href="/terms-of-service"
                 className="text-blue-600 underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -367,7 +367,7 @@ export default function PaymentForm({
               </a>
               ,{" "}
               <a
-                href="/privacy"
+                href="/privacy-policy"
                 className="text-blue-600 underline"
                 target="_blank"
                 rel="noopener noreferrer"

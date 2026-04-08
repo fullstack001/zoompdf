@@ -125,19 +125,19 @@ export default function RegisterPage() {
           <p className="text-center text-xs text-gray-600 leading-5">
             By clicking <strong>Create account</strong> or <strong>Sign in</strong>, you
             agree to the{" "}
-            <a href="/terms" className="text-blue-600 hover:underline">
+            <a href="/terms-of-service" className="text-blue-600 hover:underline">
               Terms of Service
             </a>
             ,{" "}
-            <a href="/terms" className="text-blue-600 hover:underline">
+            <a href="/subscription-policy" className="text-blue-600 hover:underline">
               Subscription Terms
             </a>
             ,{" "}
-            <a href="/privacy" className="text-blue-600 hover:underline">
+            <a href="/privacy-policy" className="text-blue-600 hover:underline">
               Privacy Policy
             </a>
             , and{" "}
-            <a href="/cookie" className="text-blue-600 hover:underline">
+            <a href="/cookie-policy" className="text-blue-600 hover:underline">
               Cookie Policy
             </a>
             .

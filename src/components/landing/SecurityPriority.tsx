@@ -15,21 +15,32 @@ export default function SecurityPriority() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Background overlay for better text readability */}
       <div className="absolute inset-0 bg-[#3758F9] bg-opacity-80" />
 
-      {/* Content container */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6 w-full max-w-6xl mx-auto">
-        <div className="w-full max-w-full">
-          <Image
-            src="/assets/images/security_priority.svg"
-            alt={t("securityPriority.title")}
-            width={1426}
-            height={320}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
-            style={{ height: "auto", width: "100%" }}
-            className="w-full max-w-full h-auto object-contain"
-          />
+      <div className="relative z-10 mx-auto w-full max-w-[1426px] px-4 sm:px-6">
+        <div className="flex min-h-[320px] w-full flex-col items-start gap-8 rounded-[32px] border-2 border-[#CCD4FF] bg-[#0019A1] p-8 lg:flex-row lg:items-center lg:justify-between">
+          <div className="flex w-full max-w-[883px] flex-col items-start justify-center gap-4 lg:gap-8">
+            <h2 className="text-3xl font-medium leading-[1.4] text-white sm:text-4xl lg:text-[40px] lg:leading-[1.6]">
+              Your security is our #1 priority
+            </h2>
+            <p className="text-lg font-medium leading-[1.6] text-white/95 sm:text-xl lg:text-2xl">
+              PDFezy adheres to top industry standards and regulations,
+              guaranteeing safety of your files and data.
+            </p>
+          </div>
+
+          <div className="flex w-full flex-1 items-center justify-start lg:justify-end">
+            <div className=" px-2 py-3 lg:px-6">
+              <Image
+                src="/assets/images/security-icon-group.png"
+                alt={t("securityPriority.title")}
+                width={326}
+                height={90}
+                className="h-auto w-[220px] object-contain sm:w-[280px] lg:w-[326px]"
+                priority={false}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

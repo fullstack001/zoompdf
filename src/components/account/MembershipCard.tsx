@@ -6,10 +6,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store/store";
 import { cancelSubscription } from "@/utils/apiUtils";
 import { setUser } from "@/store/slices/userSlice";
+import { useLocalizedNavigation } from "@/utils/navigation";
 
 export default function MembershipCard() {
   const t = useTranslations();
   const dispatch = useDispatch();
+  const { navigate } = useLocalizedNavigation();
   const [isLoading, setIsLoading] = useState(false);
   const [cancelMessage, setCancelMessage] = useState("");
   const subscription = useSelector(
@@ -19,14 +21,8 @@ export default function MembershipCard() {
   const isSubscriptionValid =
     subscription && new Date(subscription.expiryDate) > new Date();
 
-  const handleSubscribe = async () => {
-    setIsLoading(true);
-    try {
-      // Add your subscription logic here
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-    } finally {
-      setIsLoading(false);
-    }
+  const handleSubscribe = () => {
+    navigate("/payment");
   };
 
   const formatDate = (dateString: string) => {

@@ -46,7 +46,7 @@ export default function FeatureCTA() {
           <button
             onClick={handleGetStarted}
             disabled={isLoading}
-            className="bg-primary-900 text-white px-4 py-3 md:px-6 md:py-4 rounded-xl text-base sm:text-lg md:text-[24px] font-bold disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center justify-center mx-auto lg:mx-0 w-full max-w-sm sm:max-w-none sm:w-auto"
+            className="bg-[#4B68FF] text-white px-4 py-3 md:px-6 md:py-4 rounded-xl text-base sm:text-lg md:text-[24px] font-bold disabled:opacity-60 disabled:cursor-not-allowed inline-flex items-center justify-center mx-auto lg:mx-0 w-full max-w-sm sm:max-w-none sm:w-auto"
           >
             {isLoading ? (
               <>
