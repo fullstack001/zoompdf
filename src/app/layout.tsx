@@ -1,6 +1,7 @@
 import { Poppins } from "next/font/google";
 import { Metadata } from "next";
 import "./globals.css";
+import GoogleTracking from "@/components/analytics/GoogleTracking";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -9,8 +10,31 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "PDFEzy - PDF Tools",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://pdfezy.com"),
+  title: {
+    default: "PDFEzy - PDF Tools",
+    template: "%s | PDFEzy",
+  },
   description: "Convert, edit, compress, and manage your PDF files online",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "PDFEzy - PDF Tools",
+    description: "Convert, edit, compress, and manage your PDF files online",
+    url: "/",
+    siteName: "PDFEzy",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PDFEzy - PDF Tools",
+    description: "Convert, edit, compress, and manage your PDF files online",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -20,7 +44,10 @@ export default function RootLayout({
 }) {
   return (
     <html className={poppins.variable} suppressHydrationWarning>
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        <GoogleTracking />
+        {children}
+      </body>
     </html>
   );
 }
