@@ -11,6 +11,7 @@ import { clearPendingFile } from "@/store/slices/flowSlice";
 import ProgressModal from "@/components/common/ProgressModal";
 import LoadingModal from "@/components/common/LoadingModal";
 import DownloadModal from "@/components/common/DownloadModal";
+import Image from "next/image";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -416,6 +417,15 @@ export default function Login() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="max-w-md w-full bg-white rounded-lg shadow-md p-8">
+        <div className="flex justify-center mb-6">
+          <Image
+            src="/assets/images/logo.svg"
+            alt="ZoomPDF logo"
+            width={140}
+            height={40}
+            priority
+          />
+        </div>
         <h1 className="text-2xl font-bold text-center mb-8">Login</h1>
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* General error message */}

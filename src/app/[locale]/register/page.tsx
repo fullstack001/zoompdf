@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import { registerEmail } from "@/utils/apiUtils";
 import { useLocalizedNavigation } from "@/utils/navigation";
+import Image from "next/image";
 
 export default function RegisterPage() {
   const { navigate } = useLocalizedNavigation();
@@ -33,22 +34,24 @@ export default function RegisterPage() {
     try {
       const result = await registerEmail(email.trim());
       if ((result as any).statusCode === 409) {
-        setError("This email already has an active subscription. Please sign in.");
+        setError(
+          "This email already has an active subscription. Please sign in.",
+        );
       } else if ((result as any).statusCode === 400) {
         setError("This email is already registered. Please sign in.");
       } else {
         const mailStatus = result.welcomeEmailStatus;
         if (mailStatus?.sent) {
           setSuccessMessage(
-            "Account created. Check your email for your default password and sign-in link."
+            "Account created. Check your email for your default password and sign-in link.",
           );
         } else if (mailStatus?.skipped) {
           setSuccessMessage(
-            `Account created. Welcome email skipped (${mailStatus.reason || "mail service not configured"}).`
+            `Account created. Welcome email skipped (${mailStatus.reason || "mail service not configured"}).`,
           );
         } else if (mailStatus && !mailStatus.sent) {
           setSuccessMessage(
-            `Account created. Email delivery failed (${mailStatus.reason || "unknown error"}).`
+            `Account created. Email delivery failed (${mailStatus.reason || "unknown error"}).`,
           );
         } else {
           setSuccessMessage("Account created successfully.");
@@ -69,6 +72,15 @@ export default function RegisterPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="max-w-md w-full bg-white rounded-lg shadow-md p-8">
+        <div className="flex justify-center mb-6">
+          <Image
+            src="/assets/images/logo.svg"
+            alt="ZoomPDF logo"
+            width={140}
+            height={40}
+            priority
+          />
+        </div>
         <h1 className="text-2xl font-bold text-center mb-8">Register</h1>
         <form onSubmit={handleSubmit} className="space-y-6">
           <label
@@ -99,11 +111,14 @@ export default function RegisterPage() {
           </button>
 
           <div className="rounded-lg bg-blue-50 border border-blue-100 px-4 py-3 text-center text-sm text-blue-900">
-            We will email your default password and a link to sign in. Check spam if you do not see it.
+            We will email your default password and a link to sign in. Check
+            spam if you do not see it.
           </div>
 
           {error && (
-            <p className="mt-4 text-center text-sm text-red-600 font-medium">{error}</p>
+            <p className="mt-4 text-center text-sm text-red-600 font-medium">
+              {error}
+            </p>
           )}
           {successMessage && (
             <p className="mt-4 text-center text-sm text-green-600 font-medium">
@@ -123,21 +138,33 @@ export default function RegisterPage() {
           </p>
 
           <p className="text-center text-xs text-gray-600 leading-5">
-            By clicking <strong>Create account</strong> or <strong>Sign in</strong>, you
-            agree to the{" "}
-            <a href="/terms-of-service" className="text-blue-600 hover:underline">
+            By clicking <strong>Create account</strong> or{" "}
+            <strong>Sign in</strong>, you agree to the{" "}
+            <a
+              href="/en/terms-of-service"
+              className="text-blue-600 hover:underline"
+            >
               Terms of Service
             </a>
             ,{" "}
-            <a href="/subscription-policy" className="text-blue-600 hover:underline">
+            <a
+              href="/en/subscription-policy"
+              className="text-blue-600 hover:underline"
+            >
               Subscription Terms
             </a>
             ,{" "}
-            <a href="/privacy-policy" className="text-blue-600 hover:underline">
+            <a
+              href="/en/privacy-policy"
+              className="text-blue-600 hover:underline"
+            >
               Privacy Policy
             </a>
             , and{" "}
-            <a href="/cookie-policy" className="text-blue-600 hover:underline">
+            <a
+              href="/en/cookie-policy"
+              className="text-blue-600 hover:underline"
+            >
               Cookie Policy
             </a>
             .
