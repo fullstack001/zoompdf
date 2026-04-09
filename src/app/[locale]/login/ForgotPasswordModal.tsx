@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { useLocale } from "next-intl";
 import { forgotPassword } from "@/utils/apiUtils";
+import { useLocalizedNavigation } from "@/utils/navigation";
 
 interface ForgotPasswordModalProps {
   show: boolean;
@@ -10,29 +12,44 @@ const ForgotPasswordModal = ({
   show,
   handleClose,
 }: ForgotPasswordModalProps) => {
+  const { navigate } = useLocalizedNavigation();
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState("");
   const [messageType, setMessageType] = useState<"success" | "error" | "">("");
 
   const handleSubmit = async () => {
-    if (!email) {
+    if (!email.trim()) {
       setMessage("Please enter your email");
       setMessageType("error");
       return;
     }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.trim())) {
+      setMessage("Please enter a valid email address");
+      setMessageType("error");
+      return;
+    }
     setIsLoading(true);
+    setMessage("");
     try {
-      await forgotPassword(email);
+      await forgotPassword(email.trim(), locale);
       setMessage(
-        "Reset password request sent successfully. Please check your email."
+        "If an account exists for that email, we sent password reset instructions. Check your inbox and spam folder."
       );
       setMessageType("success");
       setTimeout(() => {
         handleClose();
-      }, 3000);
+        setEmail("");
+        setMessage("");
+        setMessageType("");
+      }, 4000);
     } catch (error) {
-      setMessage("An error occurred. Please try again later.");
+      const text =
+        error instanceof Error
+          ? error.message
+          : "Something went wrong. Please try again.";
+      setMessage(text);
       setMessageType("error");
       console.error(error);
     } finally {
@@ -108,6 +125,19 @@ const ForgotPasswordModal = ({
                 Cancel
               </button>
             </div>
+            <p className="px-4 pb-4 text-center text-xs text-gray-500">
+              Prefer a full page?{" "}
+              <button
+                type="button"
+                className="text-indigo-600 hover:underline font-medium"
+                onClick={() => {
+                  handleClose();
+                  navigate("/forgot-password");
+                }}
+              >
+                Open forgot password
+              </button>
+            </p>
           </div>
         </div>
       )}

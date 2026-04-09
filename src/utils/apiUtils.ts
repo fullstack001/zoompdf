@@ -191,27 +191,46 @@ export const registerEmail = async (
   }
 };
 
-export const forgotPassword = async (email: string): Promise<void> => {
+export const forgotPassword = async (
+  email: string,
+  locale?: string
+): Promise<void> => {
   try {
-    await api.post("/auth/forgot-password", { email });
+    await api.post("/auth/forgot-password", {
+      email: email.trim(),
+      ...(locale && /^[a-z]{2}$/i.test(locale) ? { locale } : {}),
+    });
   } catch (error) {
-    const axiosError = error as AxiosError<{ message?: string }>;
+    const axiosError = error as AxiosError<{
+      message?: string;
+      msg?: string;
+    }>;
     const errorMessage =
-      axiosError.response?.data?.message || "Failed to send reset email";
+      axiosError.response?.data?.msg ||
+      axiosError.response?.data?.message ||
+      "Failed to send reset email";
     throw new Error(errorMessage);
   }
 };
 
 export const resetPassword = async (
   token: string,
-  password: string
+  newPassword: string
 ): Promise<void> => {
   try {
-    await api.post("/auth/reset-password", { token, password });
+    await api.post("/auth/reset-password", {
+      token,
+      newPassword,
+    });
   } catch (error) {
-    const axiosError = error as AxiosError<{ message?: string }>;
+    const axiosError = error as AxiosError<{
+      message?: string;
+      msg?: string;
+    }>;
     const errorMessage =
-      axiosError.response?.data?.message || "Failed to reset password";
+      axiosError.response?.data?.msg ||
+      axiosError.response?.data?.message ||
+      "Failed to reset password";
     throw new Error(errorMessage);
   }
 };

@@ -1,54 +1,73 @@
 "use client";
-import { useLocalizedNavigation } from "@/utils/navigation";
-import { useSearchParams } from "next/navigation";
 
-export default function ResetPassword() {
+import { Suspense, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { useLocalizedNavigation } from "@/utils/navigation";
+import { resetPassword } from "@/utils/apiUtils";
+import Image from "next/image";
+
+function ResetPasswordForm() {
   const { navigate } = useLocalizedNavigation();
   const searchParams = useSearchParams();
   const token = searchParams.get("token");
 
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const validatePassword = (value: string): string => {
+    if (!value) return "Password is required";
+    if (value.length < 6) return "Password must be at least 6 characters";
+    return "";
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const formData = new FormData(e.target as HTMLFormElement);
-    const password = formData.get("password") as string;
-    const confirmPassword = formData.get("confirmPassword") as string;
+    setError("");
 
+    if (!token) return;
+
+    const pErr = validatePassword(password);
+    if (pErr) {
+      setError(pErr);
+      return;
+    }
     if (password !== confirmPassword) {
-      alert("Passwords do not match");
+      setError("Passwords do not match");
       return;
     }
 
+    setIsSubmitting(true);
     try {
-      // Here you would typically make an API call to reset the password
-      console.log("Password reset with token:", token);
-      console.log("New password:", password);
-
-      // Simulate success
-      alert("Password reset successfully!");
-
-      // Redirect to login after success
-      setTimeout(() => navigate("/login"), 3000);
-    } catch (error) {
-      console.error("Password reset failed:", error);
-      alert("Password reset failed. Please try again.");
+      await resetPassword(token, password);
+      navigate("/login");
+    } catch (err) {
+      const message =
+        err instanceof Error ? err.message : "Password reset failed.";
+      setError(message);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   if (!token) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="text-center">
-          <h1 className="text-2xl font-semibold text-gray-700 mb-4">
-            Invalid Reset Link
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+        <div className="max-w-md w-full bg-white rounded-lg shadow-md p-8 text-center">
+          <h1 className="text-2xl font-semibold text-gray-800 mb-4">
+            Invalid reset link
           </h1>
           <p className="text-gray-600 mb-8">
-            The password reset link is invalid or has expired.
+            This password reset link is missing a token or has expired. Request
+            a new link from the sign-in page.
           </p>
           <button
+            type="button"
             onClick={() => navigate("/login")}
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
           >
-            Back to Login
+            Back to sign in
           </button>
         </div>
       </div>
@@ -56,9 +75,24 @@ export default function ResetPassword() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="max-w-md w-full bg-white rounded-lg shadow-md p-8">
-        <h1 className="text-2xl font-bold text-center mb-8">Reset Password</h1>
+        <div className="flex justify-center mb-6">
+          <Image
+            src="/assets/images/logo.svg"
+            alt="ZoomPDF logo"
+            width={140}
+            height={40}
+            priority
+          />
+        </div>
+        <h1 className="text-2xl font-bold text-center mb-8">Reset password</h1>
+
+        {error && (
+          <div className="mb-4 bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
+            {error}
+          </div>
+        )}
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
@@ -66,13 +100,17 @@ export default function ResetPassword() {
               htmlFor="password"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              New Password
+              New password
             </label>
             <input
               type="password"
               id="password"
               name="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               required
+              minLength={6}
+              autoComplete="new-password"
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               placeholder="Enter new password"
             />
@@ -83,13 +121,17 @@ export default function ResetPassword() {
               htmlFor="confirmPassword"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              Confirm Password
+              Confirm password
             </label>
             <input
               type="password"
               id="confirmPassword"
               name="confirmPassword"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
               required
+              minLength={6}
+              autoComplete="new-password"
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               placeholder="Confirm new password"
             />
@@ -97,12 +139,43 @@ export default function ResetPassword() {
 
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            disabled={isSubmitting}
+            className={`w-full py-3 px-4 rounded-lg font-semibold transition-colors text-white ${
+              isSubmitting
+                ? "bg-blue-400 cursor-not-allowed"
+                : "bg-blue-600 hover:bg-blue-700"
+            }`}
           >
-            Reset Password
+            {isSubmitting ? "Updating…" : "Update password"}
           </button>
         </form>
+
+        <p className="mt-6 text-center text-sm text-gray-600">
+          <button
+            type="button"
+            onClick={() => navigate("/login")}
+            className="text-blue-600 hover:text-blue-700 font-medium"
+          >
+            Back to sign in
+          </button>
+        </p>
       </div>
     </div>
+  );
+}
+
+function ResetPasswordFallback() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <p className="text-gray-600">Loading…</p>
+    </div>
+  );
+}
+
+export default function ResetPasswordPage() {
+  return (
+    <Suspense fallback={<ResetPasswordFallback />}>
+      <ResetPasswordForm />
+    </Suspense>
   );
 }

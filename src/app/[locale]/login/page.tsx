@@ -12,6 +12,7 @@ import ProgressModal from "@/components/common/ProgressModal";
 import LoadingModal from "@/components/common/LoadingModal";
 import DownloadModal from "@/components/common/DownloadModal";
 import Image from "next/image";
+import ForgotPasswordModal from "./ForgotPasswordModal";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -29,6 +30,7 @@ export default function Login() {
   const [isConverting, setIsConverting] = useState(false);
   const [isDownloading, setIsDownloading] = useState(false);
   const [downloadProgress, setDownloadProgress] = useState(0);
+  const [showForgotPassword, setShowForgotPassword] = useState(false);
 
   // Validation functions
   const validateEmail = (emailValue: string): string => {
@@ -481,6 +483,15 @@ export default function Login() {
               <p className="mt-1 text-sm text-red-600">{passwordError}</p>
             )}
           </div>
+          <div className="flex justify-end -mt-2">
+            <button
+              type="button"
+              onClick={() => setShowForgotPassword(true)}
+              className="text-sm text-blue-600 hover:text-blue-700 font-medium"
+            >
+              Forgot password?
+            </button>
+          </div>
           <button
             type="submit"
             disabled={isSubmitting}
@@ -517,6 +528,11 @@ export default function Login() {
         />
       )}
       <DownloadModal isVisible={isDownloading} progress={downloadProgress} />
+
+      <ForgotPasswordModal
+        show={showForgotPassword}
+        handleClose={() => setShowForgotPassword(false)}
+      />
     </div>
   );
 }

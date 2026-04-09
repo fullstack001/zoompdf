@@ -8,10 +8,11 @@ export default async function Head({
   const { locale } = await params;
 
   return renderSeoTags({
-    title: "Reset password | ZoomPDF",
-    description: "Set a new password for your ZoomPDF account.",
+    title: "Forgot password | ZoomPDF",
+    description:
+      "Request a secure link to reset your ZoomPDF account password.",
     locale,
-    path: "/reset-password",
+    path: "/forgot-password",
     noIndex: true,
   });
 }
