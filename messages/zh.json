@@ -400,7 +400,13 @@
     "subscriptionActive": "您的订阅当前处于活动状态，并且您可以完全访问所有功能。",
     "plan": "计划",
     "expiryDate": "到期日",
-    "subscriptionType": "订阅类型"
+    "subscriptionType": "订阅类型",
+    "cancelConfirmMessage": "Are you sure you want to cancel?",
+    "confirmYes": "Yes",
+    "confirmNo": "No",
+    "planCanceled": "Your plan has been canceled.",
+    "cancelPlan": "Cancel Plan",
+    "cancelling": "Cancelling..."
   },
   "plan": {
     "choosePlan": "选择一个计划来下载您的文件",

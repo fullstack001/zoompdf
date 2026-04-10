@@ -400,7 +400,13 @@
     "subscriptionActive": "Abonamentul dvs. este activ în prezent și aveți acces deplin la toate funcțiile.",
     "plan": "Planifică",
     "expiryDate": "Data de expirare",
-    "subscriptionType": "Tip de abonament"
+    "subscriptionType": "Tip de abonament",
+    "cancelConfirmMessage": "Are you sure you want to cancel?",
+    "confirmYes": "Yes",
+    "confirmNo": "No",
+    "planCanceled": "Your plan has been canceled.",
+    "cancelPlan": "Cancel Plan",
+    "cancelling": "Cancelling..."
   },
   "plan": {
     "choosePlan": "Alegeți un plan pentru a vă descărca fișierul",

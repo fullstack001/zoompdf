@@ -400,7 +400,13 @@
     "subscriptionActive": "Aboneliğiniz şu anda etkin ve tüm özelliklere tam erişiminiz var.",
     "plan": "Planı",
     "expiryDate": "Son kullanma tarihi",
-    "subscriptionType": "Abonelik Türü"
+    "subscriptionType": "Abonelik Türü",
+    "cancelConfirmMessage": "Are you sure you want to cancel?",
+    "confirmYes": "Yes",
+    "confirmNo": "No",
+    "planCanceled": "Your plan has been canceled.",
+    "cancelPlan": "Cancel Plan",
+    "cancelling": "Cancelling..."
   },
   "plan": {
     "choosePlan": "Dosyanızı indirmek için bir plan seçin",

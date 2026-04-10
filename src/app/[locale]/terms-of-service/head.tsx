@@ -1,3 +1,4 @@
+import { termsOfUseSeo } from "@/data/seoMetadata";
 import { renderSeoTags } from "@/utils/seo";
 
 export default async function Head({
@@ -8,9 +9,10 @@ export default async function Head({
   const { locale } = await params;
 
   return renderSeoTags({
-    title: "Terms of Service | PDFEzy",
-    description: "Read PDFEzy terms for using the platform and services.",
+    title: termsOfUseSeo.title,
+    description: termsOfUseSeo.description,
     locale,
     path: "/terms-of-service",
+    noIndexFollow: true,
   });
 }

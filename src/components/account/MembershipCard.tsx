@@ -1,6 +1,6 @@
 "use client";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Loader2, CheckCircle2, Calendar, CreditCard } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store/store";
@@ -14,6 +14,7 @@ export default function MembershipCard() {
   const { navigate } = useLocalizedNavigation();
   const [isLoading, setIsLoading] = useState(false);
   const [cancelMessage, setCancelMessage] = useState("");
+  const [showCancelConfirm, setShowCancelConfirm] = useState(false);
   const subscription = useSelector(
     (state: RootState) => state.user.subscription
   );
@@ -35,6 +36,7 @@ export default function MembershipCard() {
 
   const handleCancelPlan = async () => {
     if (!subscription?.subscriptionId) return;
+    setShowCancelConfirm(false);
     setIsLoading(true);
     setCancelMessage("");
     try {
@@ -45,7 +47,7 @@ export default function MembershipCard() {
           subscription: null,
         })
       );
-      setCancelMessage("Your plan has been canceled.");
+      setCancelMessage(t("account.planCanceled"));
     } catch (error) {
       setCancelMessage(
         error instanceof Error ? error.message : "Failed to cancel plan."
@@ -54,6 +56,15 @@ export default function MembershipCard() {
       setIsLoading(false);
     }
   };
+
+  useEffect(() => {
+    if (!showCancelConfirm) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setShowCancelConfirm(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [showCancelConfirm]);
 
   return (
     <div className="bg-white rounded-xl p-4 sm:p-6 lg:p-8 shadow-lg border border-gray-200">
@@ -121,11 +132,12 @@ export default function MembershipCard() {
 
             <div className="pt-2">
               <button
-                onClick={handleCancelPlan}
+                type="button"
+                onClick={() => setShowCancelConfirm(true)}
                 disabled={isLoading}
                 className="px-4 py-2 rounded-lg bg-red-600 text-white text-sm font-semibold disabled:opacity-60"
               >
-                {isLoading ? "Cancelling..." : "Cancel Plan"}
+                {isLoading ? t("account.cancelling") : t("account.cancelPlan")}
               </button>
               {cancelMessage && (
                 <p className="text-sm text-gray-700 mt-2">{cancelMessage}</p>
@@ -165,6 +177,44 @@ export default function MembershipCard() {
             </button>
           </div>
         </>
+      )}
+
+      {showCancelConfirm && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="cancel-confirm-title"
+          onClick={() => setShowCancelConfirm(false)}
+        >
+          <div
+            className="bg-white rounded-xl w-full max-w-md p-6 sm:p-8 shadow-xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3
+              id="cancel-confirm-title"
+              className="text-lg font-semibold text-gray-800 mb-6 text-center"
+            >
+              {t("account.cancelConfirmMessage")}
+            </h3>
+            <div className="flex flex-col sm:flex-row gap-3 sm:justify-center sm:gap-4">
+              <button
+                type="button"
+                className="w-full sm:w-auto px-6 py-2.5 rounded-lg bg-red-600 text-white font-semibold text-sm hover:bg-red-700"
+                onClick={handleCancelPlan}
+              >
+                {t("account.confirmYes")}
+              </button>
+              <button
+                type="button"
+                className="w-full sm:w-auto px-6 py-2.5 rounded-lg border border-gray-300 text-gray-800 font-semibold text-sm hover:bg-gray-50"
+                onClick={() => setShowCancelConfirm(false)}
+              >
+                {t("account.confirmNo")}
+              </button>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );

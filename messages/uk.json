@@ -400,7 +400,13 @@
     "subscriptionActive": "Ваша підписка зараз активна, і ви маєте повний доступ до всіх функцій.",
     "plan": "План",
     "expiryDate": "Термін придатності",
-    "subscriptionType": "Тип підписки"
+    "subscriptionType": "Тип підписки",
+    "cancelConfirmMessage": "Are you sure you want to cancel?",
+    "confirmYes": "Yes",
+    "confirmNo": "No",
+    "planCanceled": "Your plan has been canceled.",
+    "cancelPlan": "Cancel Plan",
+    "cancelling": "Cancelling..."
   },
   "plan": {
     "choosePlan": "Виберіть план завантаження файлу",

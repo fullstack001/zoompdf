@@ -26,7 +26,6 @@ const tools: Tool[] = [
     labelKey: "tools.pdfToPptx",
     href: "/pdf-to-pptx",
     category: "convertFromPdf",
-    mobileOnly: true // PDF to PPT for mobile
   },
   {
     icon: "/assets/icnos/pdf_png.svg",

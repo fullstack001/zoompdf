@@ -1,7 +1,6 @@
-import { homeSeo } from "@/data/seoMetadata";
+import { planSeo } from "@/data/seoMetadata";
 import { buildPageMetadata } from "@/utils/seo";
 import type { Metadata } from "next";
-import HomePageClient from "./HomePageClient";
 
 export async function generateMetadata({
   params,
@@ -9,9 +8,13 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  return buildPageMetadata(locale, "", homeSeo);
+  return buildPageMetadata(locale, "/plan", planSeo);
 }
 
-export default function HomePage() {
-  return <HomePageClient />;
+export default function PlanLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return children;
 }

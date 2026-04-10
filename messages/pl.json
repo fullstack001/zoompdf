@@ -400,7 +400,13 @@
     "subscriptionActive": "Twoja subskrypcja jest obecnie aktywna i masz pełny dostęp do wszystkich funkcji.",
     "plan": "Planuj",
     "expiryDate": "Data ważności",
-    "subscriptionType": "Typ subskrypcji"
+    "subscriptionType": "Typ subskrypcji",
+    "cancelConfirmMessage": "Are you sure you want to cancel?",
+    "confirmYes": "Yes",
+    "confirmNo": "No",
+    "planCanceled": "Your plan has been canceled.",
+    "cancelPlan": "Cancel Plan",
+    "cancelling": "Cancelling..."
   },
   "plan": {
     "choosePlan": "Wybierz plan pobrania pliku",

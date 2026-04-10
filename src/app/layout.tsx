@@ -1,5 +1,6 @@
 import { Poppins } from "next/font/google";
-import { Metadata } from "next";
+import { homeSeo } from "@/data/seoMetadata";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import GoogleTracking from "@/components/analytics/GoogleTracking";
 
@@ -11,30 +12,35 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://pdfezy.com"),
-  title: {
-    default: "PDFEzy - PDF Tools",
-    template: "%s | PDFEzy",
-  },
-  description: "Convert, edit, compress, and manage your PDF files online",
+  title: homeSeo.title,
+  description: homeSeo.description,
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "PDFEzy - PDF Tools",
-    description: "Convert, edit, compress, and manage your PDF files online",
+    title: homeSeo.title,
+    description: homeSeo.ogDescription ?? homeSeo.description,
     url: "/",
-    siteName: "PDFEzy",
+    siteName: "PDFezy",
     type: "website",
+    images: [{ url: "/assets/images/logo.svg" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "PDFEzy - PDF Tools",
-    description: "Convert, edit, compress, and manage your PDF files online",
+    title: homeSeo.title,
+    description: homeSeo.twitterDescription ?? homeSeo.description,
+    images: ["/assets/images/logo.svg"],
   },
   robots: {
     index: true,
     follow: true,
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#1A56DB",
 };
 
 export default function RootLayout({

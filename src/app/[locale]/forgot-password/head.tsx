@@ -8,9 +8,8 @@ export default async function Head({
   const { locale } = await params;
 
   return renderSeoTags({
-    title: "Forgot password | ZoomPDF",
-    description:
-      "Request a secure link to reset your ZoomPDF account password.",
+    title: "Forgot password | Pdfezy",
+    description: "Request a secure link to reset your Pdfezy account password.",
     locale,
     path: "/forgot-password",
     noIndex: true,

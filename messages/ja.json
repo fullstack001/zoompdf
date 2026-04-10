@@ -400,7 +400,13 @@
     "subscriptionActive": "あなたのサブスクリプションは現在有効であり、すべての機能に完全にアクセスできます。",
     "plan": "計画",
     "expiryDate": "有効期限",
-    "subscriptionType": "サブスクリプションの種類"
+    "subscriptionType": "サブスクリプションの種類",
+    "cancelConfirmMessage": "Are you sure you want to cancel?",
+    "confirmYes": "Yes",
+    "confirmNo": "No",
+    "planCanceled": "Your plan has been canceled.",
+    "cancelPlan": "Cancel Plan",
+    "cancelling": "Cancelling..."
   },
   "plan": {
     "choosePlan": "ファイルをダウンロードするプランを選択してください",

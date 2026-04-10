@@ -400,7 +400,13 @@
     "subscriptionActive": "Ditt abonnemang är för närvarande aktivt och du har full tillgång till alla funktioner.",
     "plan": "Planera",
     "expiryDate": "Utgångsdatum",
-    "subscriptionType": "Typ av prenumeration"
+    "subscriptionType": "Typ av prenumeration",
+    "cancelConfirmMessage": "Are you sure you want to cancel?",
+    "confirmYes": "Yes",
+    "confirmNo": "No",
+    "planCanceled": "Your plan has been canceled.",
+    "cancelPlan": "Cancel Plan",
+    "cancelling": "Cancelling..."
   },
   "plan": {
     "choosePlan": "Välj en plan för att ladda ner din fil",

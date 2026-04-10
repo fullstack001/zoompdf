@@ -400,7 +400,13 @@
     "subscriptionActive": "Sua assinatura está ativa e você tem acesso total a todos os recursos.",
     "plan": "Plano",
     "expiryDate": "Data de validade",
-    "subscriptionType": "Tipo de assinatura"
+    "subscriptionType": "Tipo de assinatura",
+    "cancelConfirmMessage": "Are you sure you want to cancel?",
+    "confirmYes": "Yes",
+    "confirmNo": "No",
+    "planCanceled": "Your plan has been canceled.",
+    "cancelPlan": "Cancel Plan",
+    "cancelling": "Cancelling..."
   },
   "plan": {
     "choosePlan": "Escolha um plano para baixar seu arquivo",

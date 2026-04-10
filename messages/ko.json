@@ -400,7 +400,13 @@
     "subscriptionActive": "귀하의 구독은 현재 활성 상태이며 모든 기능에 대한 전체 액세스 권한을 갖습니다.",
     "plan": "계획",
     "expiryDate": "만료일",
-    "subscriptionType": "구독 유형"
+    "subscriptionType": "구독 유형",
+    "cancelConfirmMessage": "Are you sure you want to cancel?",
+    "confirmYes": "Yes",
+    "confirmNo": "No",
+    "planCanceled": "Your plan has been canceled.",
+    "cancelPlan": "Cancel Plan",
+    "cancelling": "Cancelling..."
   },
   "plan": {
     "choosePlan": "파일을 다운로드할 계획을 선택하세요",

@@ -80,6 +80,13 @@ export const conversionTools: Record<string, ConversionToolConfig> = {
     convertFunction: convertPdfToPptx,
     action: "pdf_to_pptx",
   },
+  // Alias for "PDF to PPT" searches; same API as pdf-to-pptx (outputs .pptx)
+  "pdf-to-ppt": {
+    titleKey: "toolPages.pdfToPptx.title",
+    subtitleKey: "toolPages.pdfToPptx.subtitle",
+    convertFunction: convertPdfToPptx,
+    action: "pdf_to_pptx",
+  },
   "word-to-pdf": {
     titleKey: "toolPages.wordToPdf.title",
     subtitleKey: "toolPages.wordToPdf.subtitle",

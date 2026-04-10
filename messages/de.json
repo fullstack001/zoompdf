@@ -400,7 +400,13 @@
     "subscriptionActive": "Ihr Abonnement ist derzeit aktiv und Sie haben vollen Zugriff auf alle Funktionen.",
     "plan": "Planen",
     "expiryDate": "Verfallsdatum",
-    "subscriptionType": "Abonnementtyp"
+    "subscriptionType": "Abonnementtyp",
+    "cancelConfirmMessage": "Are you sure you want to cancel?",
+    "confirmYes": "Yes",
+    "confirmNo": "No",
+    "planCanceled": "Your plan has been canceled.",
+    "cancelPlan": "Cancel Plan",
+    "cancelling": "Cancelling..."
   },
   "plan": {
     "choosePlan": "Wählen Sie einen Plan zum Herunterladen Ihrer Datei",

@@ -124,7 +124,7 @@ export default function Login() {
                 expiryDate: subscription.expiryDate,
               }
             : null,
-        })
+        }),
       );
       dispatch(login());
       console.log(user);
@@ -185,7 +185,7 @@ export default function Login() {
                     setIsDownloading(true);
                     setDownloadProgress(progress);
                   },
-                }
+                },
               );
               setIsDownloading(false);
               dispatch(clearPendingFile());
@@ -229,7 +229,7 @@ export default function Login() {
                     setIsDownloading(true);
                     setDownloadProgress(progress);
                   },
-                }
+                },
               );
               setIsDownloading(false);
               dispatch(clearPendingFile());
@@ -297,7 +297,7 @@ export default function Login() {
             errorMessage.includes("invalid password")
           ) {
             setPasswordError(
-              apiErrorMessage || "Invalid password. Please try again."
+              apiErrorMessage || "Invalid password. Please try again.",
             );
           } else if (
             errorMessage.includes("email") ||
@@ -307,18 +307,18 @@ export default function Login() {
             errorMessage.includes("does not exist")
           ) {
             setEmailError(
-              apiErrorMessage || "No account found with this email address."
+              apiErrorMessage || "No account found with this email address.",
             );
           } else {
             // Generic unauthorized - could be either
             setError(
               apiErrorMessage ||
-                "Invalid email or password. Please check your credentials and try again."
+                "Invalid email or password. Please check your credentials and try again.",
             );
           }
         } else if (statusCode === 404) {
           setEmailError(
-            apiErrorMessage || "No account found with this email address."
+            apiErrorMessage || "No account found with this email address.",
           );
         } else if (statusCode === 400) {
           // Bad request - might be validation error
@@ -327,13 +327,13 @@ export default function Login() {
             errorMessage.includes("invalid password")
           ) {
             setPasswordError(
-              apiErrorMessage || "Invalid password. Please try again."
+              apiErrorMessage || "Invalid password. Please try again.",
             );
           } else if (errorMessage.includes("email")) {
             setEmailError(apiErrorMessage || "Invalid email address.");
           } else {
             setError(
-              apiErrorMessage || "Invalid request. Please check your input."
+              apiErrorMessage || "Invalid request. Please check your input.",
             );
           }
         } else if (
@@ -349,7 +349,7 @@ export default function Login() {
           errorMessage.includes("connection")
         ) {
           setError(
-            "Network error. Please check your connection and try again."
+            "Network error. Please check your connection and try again.",
           );
         } else {
           // Parse error message for specific keywords
@@ -360,7 +360,7 @@ export default function Login() {
           ) {
             if (errorMessage.includes("password")) {
               setPasswordError(
-                apiErrorMessage || "Invalid password. Please try again."
+                apiErrorMessage || "Invalid password. Please try again.",
               );
             } else if (
               errorMessage.includes("email") ||
@@ -370,7 +370,7 @@ export default function Login() {
             } else {
               setError(
                 apiErrorMessage ||
-                  "Invalid email or password. Please try again."
+                  "Invalid email or password. Please try again.",
               );
             }
           } else if (
@@ -379,7 +379,7 @@ export default function Login() {
             errorMessage.includes("user not found")
           ) {
             setEmailError(
-              apiErrorMessage || "No account found with this email address."
+              apiErrorMessage || "No account found with this email address.",
             );
           } else if (
             errorMessage.includes("login failed") ||
@@ -393,7 +393,7 @@ export default function Login() {
               setError(apiErrorMessage);
             } else {
               setError(
-                "Invalid email or password. Please check your credentials and try again."
+                "Invalid email or password. Please check your credentials and try again.",
               );
             }
           } else {
@@ -405,7 +405,7 @@ export default function Login() {
               setError(apiErrorMessage);
             } else {
               setError(
-                "Login failed. Please check your credentials and try again."
+                "Login failed. Please check your credentials and try again.",
               );
             }
           }
@@ -422,7 +422,7 @@ export default function Login() {
         <div className="flex justify-center mb-6">
           <Image
             src="/assets/images/logo.svg"
-            alt="ZoomPDF logo"
+            alt="Pdfezy logo"
             width={140}
             height={40}
             priority

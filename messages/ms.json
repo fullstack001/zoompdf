@@ -400,7 +400,13 @@
     "subscriptionActive": "Langganan anda sedang aktif dan anda mempunyai akses penuh kepada semua ciri.",
     "plan": "Rancang",
     "expiryDate": "Tarikh Luput",
-    "subscriptionType": "Jenis Langganan"
+    "subscriptionType": "Jenis Langganan",
+    "cancelConfirmMessage": "Are you sure you want to cancel?",
+    "confirmYes": "Yes",
+    "confirmNo": "No",
+    "planCanceled": "Your plan has been canceled.",
+    "cancelPlan": "Cancel Plan",
+    "cancelling": "Cancelling..."
   },
   "plan": {
     "choosePlan": "Pilih rancangan untuk memuat turun fail anda",

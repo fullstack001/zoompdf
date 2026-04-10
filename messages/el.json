@@ -400,7 +400,13 @@
     "subscriptionActive": "Η συνδρομή σας είναι ενεργή αυτήν τη στιγμή και έχετε πλήρη πρόσβαση σε όλες τις λειτουργίες.",
     "plan": "Σχέδιο",
     "expiryDate": "Ημερομηνία λήξης",
-    "subscriptionType": "Τύπος συνδρομής"
+    "subscriptionType": "Τύπος συνδρομής",
+    "cancelConfirmMessage": "Are you sure you want to cancel?",
+    "confirmYes": "Yes",
+    "confirmNo": "No",
+    "planCanceled": "Your plan has been canceled.",
+    "cancelPlan": "Cancel Plan",
+    "cancelling": "Cancelling..."
   },
   "plan": {
     "choosePlan": "Επιλέξτε ένα σχέδιο για τη λήψη του αρχείου σας",

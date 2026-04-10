@@ -12,6 +12,7 @@ const ForgotPasswordModal = ({
   show,
   handleClose,
 }: ForgotPasswordModalProps) => {
+  const locale = useLocale();
   const { navigate } = useLocalizedNavigation();
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);

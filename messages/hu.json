@@ -400,7 +400,13 @@
     "subscriptionActive": "Előfizetése jelenleg aktív, és teljes hozzáférése van az összes funkcióhoz.",
     "plan": "Terv",
     "expiryDate": "Lejárati dátum",
-    "subscriptionType": "Előfizetés típusa"
+    "subscriptionType": "Előfizetés típusa",
+    "cancelConfirmMessage": "Are you sure you want to cancel?",
+    "confirmYes": "Yes",
+    "confirmNo": "No",
+    "planCanceled": "Your plan has been canceled.",
+    "cancelPlan": "Cancel Plan",
+    "cancelling": "Cancelling..."
   },
   "plan": {
     "choosePlan": "Válasszon tervet a fájl letöltéséhez",

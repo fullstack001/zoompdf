@@ -80,7 +80,7 @@ function ResetPasswordForm() {
         <div className="flex justify-center mb-6">
           <Image
             src="/assets/images/logo.svg"
-            alt="ZoomPDF logo"
+            alt="Pdfezy logo"
             width={140}
             height={40}
             priority

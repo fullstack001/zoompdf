@@ -1,11 +1,5 @@
+import { getToolSeoMetadata } from "@/data/seoMetadata";
 import { renderSeoTags } from "@/utils/seo";
-
-function prettifyToolName(toolName: string) {
-  return toolName
-    .split("-")
-    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-    .join(" ");
-}
 
 export default async function Head({
   params,
@@ -13,11 +7,11 @@ export default async function Head({
   params: Promise<{ locale: string; "tool-name": string }>;
 }) {
   const { locale, "tool-name": toolName } = await params;
-  const prettyToolName = prettifyToolName(toolName);
+  const seo = getToolSeoMetadata(toolName);
 
   return renderSeoTags({
-    title: `${prettyToolName} | PDFEzy`,
-    description: `Use PDFEzy to ${prettyToolName.toLowerCase()} quickly and securely online.`,
+    title: seo.title,
+    description: seo.description,
     locale,
     path: `/${toolName}`,
   });

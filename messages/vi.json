@@ -400,7 +400,13 @@
     "subscriptionActive": "Đăng ký của bạn hiện đang hoạt động và bạn có toàn quyền truy cập vào tất cả các tính năng.",
     "plan": "Kế hoạch",
     "expiryDate": "Ngày hết hạn",
-    "subscriptionType": "Loại đăng ký"
+    "subscriptionType": "Loại đăng ký",
+    "cancelConfirmMessage": "Are you sure you want to cancel?",
+    "confirmYes": "Yes",
+    "confirmNo": "No",
+    "planCanceled": "Your plan has been canceled.",
+    "cancelPlan": "Cancel Plan",
+    "cancelling": "Cancelling..."
   },
   "plan": {
     "choosePlan": "Chọn gói để tải xuống tệp của bạn",

@@ -400,7 +400,13 @@
     "subscriptionActive": "Your subscription is currently active and you have full access to all features.",
     "plan": "Plan",
     "expiryDate": "Expiry Date",
-    "subscriptionType": "Subscription Type"
+    "subscriptionType": "Subscription Type",
+    "cancelConfirmMessage": "Are you sure you want to cancel?",
+    "confirmYes": "Yes",
+    "confirmNo": "No",
+    "planCanceled": "Your plan has been canceled.",
+    "cancelPlan": "Cancel Plan",
+    "cancelling": "Cancelling..."
   },
   "plan": {
     "choosePlan": "Choose a plan to download your file",

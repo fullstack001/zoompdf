@@ -1,3 +1,4 @@
+import { privacyPolicySeo } from "@/data/seoMetadata";
 import { renderSeoTags } from "@/utils/seo";
 
 export default async function Head({
@@ -8,9 +9,10 @@ export default async function Head({
   const { locale } = await params;
 
   return renderSeoTags({
-    title: "Privacy Policy | PDFEzy",
-    description: "Read how PDFEzy collects, uses, and protects your data.",
+    title: privacyPolicySeo.title,
+    description: privacyPolicySeo.description,
     locale,
     path: "/privacy-policy",
+    noIndexFollow: true,
   });
 }

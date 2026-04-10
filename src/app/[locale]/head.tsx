@@ -1,3 +1,4 @@
+import { homeSeo } from "@/data/seoMetadata";
 import { renderSeoTags } from "@/utils/seo";
 
 export default async function Head({
@@ -8,8 +9,8 @@ export default async function Head({
   const { locale } = await params;
 
   return renderSeoTags({
-    title: "PDFEzy - PDF Tools",
-    description: "Convert, edit, compress, merge, split, and sign PDFs online.",
+    title: homeSeo.title,
+    description: homeSeo.description,
     locale,
     path: "",
   });

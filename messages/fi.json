@@ -400,7 +400,13 @@
     "subscriptionActive": "Tilauksesi on tällä hetkellä aktiivinen ja sinulla on täysi pääsy kaikkiin ominaisuuksiin.",
     "plan": "Suunnittele",
     "expiryDate": "Viimeinen voimassaolopäivä",
-    "subscriptionType": "Tilaustyyppi"
+    "subscriptionType": "Tilaustyyppi",
+    "cancelConfirmMessage": "Are you sure you want to cancel?",
+    "confirmYes": "Yes",
+    "confirmNo": "No",
+    "planCanceled": "Your plan has been canceled.",
+    "cancelPlan": "Cancel Plan",
+    "cancelling": "Cancelling..."
   },
   "plan": {
     "choosePlan": "Valitse tiedostosi lataussuunnitelma",

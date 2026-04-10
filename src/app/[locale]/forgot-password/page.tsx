@@ -36,7 +36,7 @@ export default function ForgotPasswordPage() {
     try {
       await forgotPassword(email.trim(), locale);
       setSuccessMessage(
-        "If an account exists for that email, we sent password reset instructions. Check your inbox and spam folder."
+        "If an account exists for that email, we sent password reset instructions. Check your inbox and spam folder.",
       );
       setEmail("");
     } catch (submitError) {
@@ -56,7 +56,7 @@ export default function ForgotPasswordPage() {
         <div className="flex justify-center mb-6">
           <Image
             src="/assets/images/logo.svg"
-            alt="ZoomPDF logo"
+            alt="Pdfezy logo"
             width={140}
             height={40}
             priority
@@ -64,7 +64,8 @@ export default function ForgotPasswordPage() {
         </div>
         <h1 className="text-2xl font-bold text-center mb-2">Forgot password</h1>
         <p className="text-sm text-gray-600 text-center mb-8">
-          Enter your email and we&apos;ll send you a link to reset your password.
+          Enter your email and we&apos;ll send you a link to reset your
+          password.
         </p>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>

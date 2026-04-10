@@ -400,7 +400,13 @@
     "subscriptionActive": "Uw abonnement is momenteel actief en u heeft volledige toegang tot alle functies.",
     "plan": "Plannen",
     "expiryDate": "Vervaldatum",
-    "subscriptionType": "Abonnementstype"
+    "subscriptionType": "Abonnementstype",
+    "cancelConfirmMessage": "Are you sure you want to cancel?",
+    "confirmYes": "Yes",
+    "confirmNo": "No",
+    "planCanceled": "Your plan has been canceled.",
+    "cancelPlan": "Cancel Plan",
+    "cancelling": "Cancelling..."
   },
   "plan": {
     "choosePlan": "Kies een abonnement om uw bestand te downloaden",

@@ -400,7 +400,13 @@
     "subscriptionActive": "Vaše předplatné je aktuálně aktivní a máte plný přístup ke všem funkcím.",
     "plan": "Plán",
     "expiryDate": "Datum vypršení platnosti",
-    "subscriptionType": "Typ předplatného"
+    "subscriptionType": "Typ předplatného",
+    "cancelConfirmMessage": "Are you sure you want to cancel?",
+    "confirmYes": "Yes",
+    "confirmNo": "No",
+    "planCanceled": "Your plan has been canceled.",
+    "cancelPlan": "Cancel Plan",
+    "cancelling": "Cancelling..."
   },
   "plan": {
     "choosePlan": "Vyberte plán stahování souboru",

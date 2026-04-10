@@ -62,7 +62,7 @@ export default function PaymentForm({
   const handlePurchaseSubscription = (
     subscriptionType: string,
     subscriptionId: string,
-    cardNumber?: string
+    cardNumber?: string,
   ): void => {
     if (!agreed) {
       alert("You must agree to the terms before proceeding.");
@@ -107,7 +107,7 @@ export default function PaymentForm({
                   expiryDate: subscription.expiryDate as string,
                 }
               : null,
-          })
+          }),
         );
         dispatch(login());
         localStorage.setItem("authToken", token as string);
@@ -144,7 +144,7 @@ export default function PaymentForm({
                     setIsDownloading(true);
                     setDownloadProgress(progress);
                   },
-                }
+                },
               );
               setIsDownloading(false);
               dispatch(clearPendingFile());
@@ -191,7 +191,7 @@ export default function PaymentForm({
                     setIsDownloading(true);
                     setDownloadProgress(progress);
                   },
-                }
+                },
               );
               setIsDownloading(false);
               dispatch(clearPendingFile());
@@ -215,7 +215,7 @@ export default function PaymentForm({
               fileName,
               action as string,
               token as string,
-              user._id as string
+              user._id as string,
             );
             navigate("/files");
           } catch (err) {
@@ -358,7 +358,7 @@ export default function PaymentForm({
             <label htmlFor="agree">
               By checking this box, you agree to the{" "}
               <a
-                href="/terms-of-service"
+                href="/en/terms-of-service"
                 className="text-blue-600 underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -367,7 +367,7 @@ export default function PaymentForm({
               </a>
               ,{" "}
               <a
-                href="/privacy-policy"
+                href="/en/privacy-policy"
                 className="text-blue-600 underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -375,9 +375,9 @@ export default function PaymentForm({
                 Privacy Policy
               </a>
               , and confirm that if you do not cancel at least 24 hours before
-              the end of the 7-day trial for CAD$1.95, you will be charged
-              CAD$49 per 28 days until you cancel your subscription by
-              contacting our customer support team via email at{" "}
+              the end of the 7-day trial for $1.95, you will be charged $49 per
+              28 days until you cancel your subscription by contacting our
+              customer support team via email at{" "}
               <a
                 href="mailto:billing@pdfezy.com"
                 className="text-blue-600 underline"

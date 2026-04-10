@@ -400,7 +400,13 @@
     "subscriptionActive": "การสมัครของคุณเปิดใช้งานอยู่และคุณสามารถเข้าถึงคุณสมบัติทั้งหมดได้อย่างเต็มที่",
     "plan": "แผน",
     "expiryDate": "วันหมดอายุ",
-    "subscriptionType": "ประเภทการสมัครสมาชิก"
+    "subscriptionType": "ประเภทการสมัครสมาชิก",
+    "cancelConfirmMessage": "Are you sure you want to cancel?",
+    "confirmYes": "Yes",
+    "confirmNo": "No",
+    "planCanceled": "Your plan has been canceled.",
+    "cancelPlan": "Cancel Plan",
+    "cancelling": "Cancelling..."
   },
   "plan": {
     "choosePlan": "เลือกแผนการดาวน์โหลดไฟล์ของคุณ",

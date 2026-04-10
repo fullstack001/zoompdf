@@ -1,3 +1,4 @@
+import { planSeo } from "@/data/seoMetadata";
 import { renderSeoTags } from "@/utils/seo";
 
 export default async function Head({
@@ -8,8 +9,8 @@ export default async function Head({
   const { locale } = await params;
 
   return renderSeoTags({
-    title: "Pricing Plans | PDFEzy",
-    description: "Choose the best PDFEzy plan for PDF conversions and tools.",
+    title: planSeo.title,
+    description: planSeo.description,
     locale,
     path: "/plan",
   });
