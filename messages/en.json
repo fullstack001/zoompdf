@@ -504,16 +504,10 @@
     "extractHighlights": "Extract Highlights"
   },
   "features": {
-    "comprehensiveSuite": "Secure and trusted",
-    "unlimitedDocuments": "Fast processing times"
-  },
-  "payment": {
-    "paymentDetails": "Payment details",
-    "documentPreview": "Document Preview",
-    "termsAndService": "Terms of Use & Service",
-    "privacyPolicy": "Privacy Policy",
-    "billingEmail": "billing@pdfezy.com",
-    "agreementText": "By checking this box, you agree to the Terms of Use & Service, Privacy Policy, and confirm that if you do not cancel at least 24 hours before the end of the 7-day trial for CAD$1.95, you will be charged CAD$49 per 28 days until you cancel your subscription by contacting our customer support team via email at billing@pdfezy.com. Payments will be charged from the card you specified above."
+    "comprehensiveSuite": "Comprehensive Suite",
+    "unlimitedDocuments": "Unlimited Documents",
+    "secureAndTrusted": "Secure and Trusted",
+    "fastProcessingTimes": "Fast Processing Times"
   },
   "pdfViewer": {
     "thumbnails": "Thumbnails",

@@ -504,6 +504,8 @@
     "extractHighlights": "하이라이트 추출"
   },
   "features": {
+    "secureAndTrusted": "보안 및 신뢰할 수 있음",
+    "fastProcessingTimes": "빠른 처리 시간",
     "comprehensiveSuite": "종합 스위트",
     "unlimitedDocuments": "무제한 문서"
   },

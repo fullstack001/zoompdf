@@ -504,8 +504,10 @@
     "extractHighlights": "Extrahujte zvýraznění"
   },
   "features": {
-    "comprehensiveSuite": "Komplexní apartmá",
-    "unlimitedDocuments": "Neomezené množství dokumentů"
+    "comprehensiveSuite": "Komplexní Suite",
+    "unlimitedDocuments": "Neomezené množství dokumentů",
+    "secureAndTrusted": "Bezpečné a důvěryhodné",
+    "fastProcessingTimes": "Rychlé zpracování času"
   },
   "payment": {
     "paymentDetails": "Platební údaje",

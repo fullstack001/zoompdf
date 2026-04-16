@@ -504,6 +504,8 @@
     "extractHighlights": "ハイライトの抽出"
   },
   "features": {
+    "secureAndTrusted": "安全かつ信頼性が高い",
+    "fastProcessingTimes": "高速処理時間",
     "comprehensiveSuite": "包括的なスイート",
     "unlimitedDocuments": "無制限のドキュメント"
   },

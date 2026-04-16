@@ -112,7 +112,8 @@ export default function PlanFeatures({ selectedPlan }: PlanFeaturesProps) {
       ) : (
         <p className="text-[13px] font-light text-center text-gray-700 mt-8">
           After 7 days, the price is $39 with auto-renewal. Billed every 4
-          weeks. All prices in USD.
+          weeks.
+          <br /> All prices in USD.
           <br />
           7-day money-back guarantee. You may cancel by contacting our customer
           support team via email at{" "}

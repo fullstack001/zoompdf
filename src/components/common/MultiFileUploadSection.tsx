@@ -137,7 +137,7 @@ export default function MultiFileUploadSection({
             or drop your file here
           </p>
           <p className="text-[16px] sm:text-sm md:text-[12px] text-gray-600">
-            Limet the file upload to{maxFileSize}MB
+            Limit the file upload to {maxFileSize}MB
           </p>
         </div>
       </div>

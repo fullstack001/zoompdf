@@ -504,6 +504,8 @@
     "extractHighlights": "Poimi kohokohdat"
   },
   "features": {
+    "secureAndTrusted": "Turvallinen ja luotettu",
+    "fastProcessingTimes": "Nopea käsittelyaika",
     "comprehensiveSuite": "Kattava sviitti",
     "unlimitedDocuments": "Rajoittamaton määrä asiakirjoja"
   },

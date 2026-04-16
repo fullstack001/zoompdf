@@ -13,11 +13,11 @@ const features = [
   },
   {
     icon: "/assets/images/shield-done.png",
-    textKey: "features.comprehensiveSuite",
+    textKey: "features.secureAndTrusted",
   },
   {
     icon: "/assets/images/time-circle.png",
-    textKey: "features.unlimitedDocuments",
+    textKey: "features.fastProcessingTimes",
   },
 ];
 
