@@ -8,8 +8,8 @@ export default function LanguageSetter({ locale }: { locale: string }) {
 
     // Set the document title with locale
     const currentTitle = document.title;
-    if (!currentTitle.includes("Pdfezy")) {
-      document.title = `Pdfezy - ${locale.toUpperCase()}`;
+    if (!currentTitle.includes("PDFezy")) {
+      document.title = `PDFezy - ${locale.toUpperCase()}`;
     }
   }, [locale]);
 

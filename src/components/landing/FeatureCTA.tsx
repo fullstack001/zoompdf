@@ -28,7 +28,7 @@ export default function FeatureCTA() {
         <div className="w-full min-w-0 max-w-[min(100%,260px)] sm:max-w-[min(100%,320px)] md:max-w-[min(100%,380px)] lg:max-w-[min(100%,440px)] xl:max-w-[min(100%,508px)] mx-auto lg:mx-0 p-3 sm:p-4 md:p-6 lg:p-8 xl:p-10">
           <Image
             src="/assets/images/feature-cta.png"
-            alt="PDFEZY illustration"
+            alt="PDFezy illustration"
             width={508}
             height={476}
             className="w-full h-auto object-contain"

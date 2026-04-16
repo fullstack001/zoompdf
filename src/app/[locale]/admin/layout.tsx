@@ -1,46 +1,47 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import { useLocalizedNavigation } from '@/utils/navigation';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { useEffect, useState } from "react";
+import { useLocalizedNavigation } from "@/utils/navigation";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function AdminLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const { navigate, getLocalizedPath, currentLocale } = useLocalizedNavigation();
+  const { navigate, getLocalizedPath, currentLocale } =
+    useLocalizedNavigation();
   const pathname = usePathname();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
     if (!token) {
-      navigate('/login');
+      navigate("/login");
       return;
     }
 
     // Decode JWT to check if user is admin
     try {
-      const payload = JSON.parse(atob(token.split('.')[1]));
+      const payload = JSON.parse(atob(token.split(".")[1]));
       if (!payload.user?.isAdmin) {
-        navigate('/');
+        navigate("/");
         return;
       }
       setIsAuthenticated(true);
     } catch (error) {
-      navigate('/');
+      navigate("/");
     } finally {
       setIsLoading(false);
     }
   }, [navigate]);
 
   const handleLogout = () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('authToken'); // Also remove authToken for consistency
-    navigate('/');
+    localStorage.removeItem("token");
+    localStorage.removeItem("authToken"); // Also remove authToken for consistency
+    navigate("/");
   };
 
   if (isLoading) {
@@ -51,21 +52,25 @@ export default function AdminLayout({
     );
   }
 
-  if (!isAuthenticated && !pathname?.includes('/')) {
+  if (!isAuthenticated && !pathname?.includes("/")) {
     return null;
   }
 
   // Don't show layout on login page
-  if (pathname?.includes('/admin/login')) {
+  if (pathname?.includes("/admin/login")) {
     return <>{children}</>;
   }
 
   const navLinks = [
-    { href: getLocalizedPath('/admin'), label: 'Dashboard', icon: '📊' },
-    { href: getLocalizedPath('/admin/users'), label: 'Users', icon: '👥' },
-    { href: getLocalizedPath('/admin/payments'), label: 'Payments', icon: '💳' },
-    { href: getLocalizedPath('/admin/files'), label: 'Files', icon: '📁' },
-    { href: getLocalizedPath('/admin/coupons'), label: 'Coupons', icon: '🎫' },
+    { href: getLocalizedPath("/admin"), label: "Dashboard", icon: "📊" },
+    { href: getLocalizedPath("/admin/users"), label: "Users", icon: "👥" },
+    {
+      href: getLocalizedPath("/admin/payments"),
+      label: "Payments",
+      icon: "💳",
+    },
+    { href: getLocalizedPath("/admin/files"), label: "Files", icon: "📁" },
+    { href: getLocalizedPath("/admin/coupons"), label: "Coupons", icon: "🎫" },
   ];
 
   return (
@@ -75,7 +80,9 @@ export default function AdminLayout({
           <div className="flex justify-between h-16">
             <div className="flex">
               <div className="flex-shrink-0 flex items-center">
-                <h1 className="text-xl font-bold text-gray-900">PDFEZY Admin</h1>
+                <h1 className="text-xl font-bold text-gray-900">
+                  PDFezy Admin
+                </h1>
               </div>
               <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                 {navLinks.map((link) => (
@@ -84,8 +91,8 @@ export default function AdminLayout({
                     href={link.href}
                     className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
                       pathname === link.href
-                        ? 'border-blue-500 text-gray-900'
-                        : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
+                        ? "border-blue-500 text-gray-900"
+                        : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700"
                     }`}
                   >
                     <span className="mr-2">{link.icon}</span>
@@ -106,10 +113,7 @@ export default function AdminLayout({
         </div>
       </nav>
 
-      <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        {children}
-      </main>
+      <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">{children}</main>
     </div>
   );
 }
-

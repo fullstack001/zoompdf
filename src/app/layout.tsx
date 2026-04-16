@@ -23,13 +23,13 @@ export const metadata: Metadata = {
     url: "/",
     siteName: "PDFezy",
     type: "website",
-    images: [{ url: "/assets/images/logo.svg" }],
+    images: [{ url: "/PDFezy_Social.png" }],
   },
   twitter: {
     card: "summary_large_image",
     title: homeSeo.title,
     description: homeSeo.twitterDescription ?? homeSeo.description,
-    images: ["/assets/images/logo.svg"],
+    images: ["/PDFezy_Social.png"],
   },
   robots: {
     index: true,

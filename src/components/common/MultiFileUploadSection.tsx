@@ -29,7 +29,7 @@ export default function MultiFileUploadSection({
     const validFiles = newFiles.filter((file) => {
       if (file.size > maxFileSize * 1024 * 1024) {
         alert(
-          `File ${file.name} is too large. Maximum size is ${maxFileSize}MB.`
+          `File ${file.name} is too large. Maximum size is ${maxFileSize}MB.`,
         );
         return false;
       }
@@ -137,7 +137,7 @@ export default function MultiFileUploadSection({
             or drop your file here
           </p>
           <p className="text-[16px] sm:text-sm md:text-[12px] text-gray-600">
-            Size up to {maxFileSize}MB
+            Limet the file upload to{maxFileSize}MB
           </p>
         </div>
       </div>

@@ -352,7 +352,7 @@
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
     "sitemap": "Sitemap",
-    "allRightsReserved": "© 2025 PDFEZY All rights reserved.",
+    "allRightsReserved": "© 2025 PDFezy All rights reserved.",
     "companyDescription": "Your all-in-one PDF solution for converting, editing, and managing documents with ease and security.",
     "stayUpdated": "Stay Updated",
     "newsletterDescription": "Get the latest updates and PDF tips delivered to your inbox.",
@@ -473,7 +473,7 @@
     "moneyBack": "Do you have a money-back guarantee?",
     "moneyBackAnswer": "Yes, we offer a 14-day money-back guarantee if you are not satisfied with our service.",
     "ctaTitle": "Looking to elevate your business operations?",
-    "ctaDescription": "Reach out to us at support@pdfezy.com, and let's explore how our product can revolutionize your corporate paperwork. Join the growing community of successful businesses leveraging ThePDFezy to stay ahead!",
+    "ctaDescription": "Reach out to us at support@pdfezy.com, and let's explore how our product can revolutionize your corporate paperwork. Join the growing community of successful businesses leveraging PDFezy to stay ahead!",
     "ctaButton": "Get Started",
     "loading": "Loading..."
   },
@@ -484,7 +484,7 @@
     "step3": "That’s it! Your file is ready to download."
   },
   "featureCTA": {
-    "title": "PDFEZY delivers top‑tier file management solutions for teams of all sizes.",
+    "title": "PDFezy delivers top‑tier file management solutions for teams of all sizes.",
     "subtitle": "Welcome to our cutting-edge SaaS platform for online document editing and conversion. Designed to meet the needs of businesses and entrepreneurs."
   },
   "files": {
@@ -504,8 +504,8 @@
     "extractHighlights": "Extract Highlights"
   },
   "features": {
-    "comprehensiveSuite": "Comprehensive Suite",
-    "unlimitedDocuments": "Unlimited documents"
+    "comprehensiveSuite": "Secure and trusted",
+    "unlimitedDocuments": "Fast processing times"
   },
   "payment": {
     "paymentDetails": "Payment details",

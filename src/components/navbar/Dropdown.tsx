@@ -10,6 +10,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
   icon,
   children,
   className = "",
+  onLabelClick,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -86,20 +87,28 @@ export const Dropdown: React.FC<DropdownProps> = ({
       onMouseLeave={handleMouseLeave}
       onKeyDown={handleKeyDown}
     >
-      <button
-        className="flex items-center text-2xl font-semibold gap-1 hover:text-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
-        onClick={handleToggle}
-        aria-expanded={isOpen}
-        aria-haspopup="true"
-        aria-label={`${label} menu`}
-      >
-        {icon}
-        {label}
-        <ChevronDownIcon
-          size={14}
-          className={`transition-transform ${isOpen ? "rotate-180" : ""}`}
-        />
-      </button>
+      <div className="flex items-center gap-1">
+        <button
+          className="flex items-center text-2xl font-semibold hover:text-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
+          onClick={onLabelClick ?? handleToggle}
+          aria-label={`${label} menu`}
+        >
+          {icon}
+          {label}
+        </button>
+        <button
+          className="flex items-center hover:text-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded"
+          onClick={handleToggle}
+          aria-expanded={isOpen}
+          aria-haspopup="true"
+          aria-label={`Toggle ${label} dropdown`}
+        >
+          <ChevronDownIcon
+            size={14}
+            className={`transition-transform ${isOpen ? "rotate-180" : ""}`}
+          />
+        </button>
+      </div>
 
       {isOpen && <div className={dropdownClasses}>{children}</div>}
     </div>

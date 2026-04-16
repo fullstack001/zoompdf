@@ -352,7 +352,7 @@
     "privacyPolicy": "Tietosuojakäytäntö",
     "termsOfService": "Palveluehdot",
     "sitemap": "Sivustokartta",
-    "allRightsReserved": "© 2025 PDFEZY Kaikki oikeudet pidätetään.",
+    "allRightsReserved": "© 2025 PDFezy Kaikki oikeudet pidätetään.",
     "companyDescription": "All-in-one PDF-ratkaisusi asiakirjojen muuntamiseen, muokkaamiseen ja hallintaan helposti ja turvallisesti.",
     "stayUpdated": "Pysy ajan tasalla",
     "newsletterDescription": "Saat viimeisimmät päivitykset ja PDF-vinkit postilaatikkoosi.",
@@ -431,7 +431,7 @@
     "description": "Tietoturvasi on meille tärkein prioriteetti. Toteutamme yritystason salaus- ja suojaustoimenpiteitä asiakirjojen suojaamiseksi ja täydellisen yksityisyyden varmistamiseksi."
   },
   "coreValues": {
-    "title": "ThePDFezy:n takana olevat perusarvot",
+    "title": "PDFezy:n takana olevat perusarvot",
     "openness": "Avoimuus",
     "opennessDesc": "Uskomme kestävien suhteiden rakentamiseen. Siksi asiakastukitiimimme on käytettävissä ympäri vuorokauden, aina kun tarvitset meitä.",
     "expertise": "Asiantuntemus",
@@ -473,7 +473,7 @@
     "moneyBack": "Onko sinulla rahat takaisin -takuu?",
     "moneyBackAnswer": "Kyllä, tarjoamme 14 päivän rahat takaisin -takuun, jos et ole tyytyväinen palveluumme.",
     "ctaTitle": "Haluatko tehostaa liiketoimintaasi?",
-    "ctaDescription": "Ota yhteyttä osoitteeseen support@pdfezy.com, niin katsotaan kuinka tuotteemme voi mullistaa yrityksesi paperityöt. Liity menestyvien yritysten kasvavaan yhteisöön hyödyntämällä ThePDFezy:ää pysyäksesi edellä!",
+    "ctaDescription": "Ota yhteyttä osoitteeseen support@pdfezy.com, niin katsotaan kuinka tuotteemme voi mullistaa yrityksesi paperityöt. Liity menestyvien yritysten kasvavaan yhteisöön hyödyntämällä PDFezy:ää pysyäksesi edellä!",
     "ctaButton": "Aloita",
     "loading": "Ladataan..."
   },
@@ -484,7 +484,7 @@
     "step3": "Siinä se! Tiedostosi on valmis ladattavaksi."
   },
   "featureCTA": {
-    "title": "PDFEZY tarjoaa huippuluokan tiedostonhallintaratkaisuja kaikenkokoisille tiimeille.",
+    "title": "PDFezy tarjoaa huippuluokan tiedostonhallintaratkaisuja kaikenkokoisille tiimeille.",
     "subtitle": "Tervetuloa huippuluokan SaaS-alustallemme asiakirjojen online-muokkausta ja muuntamista varten. Suunniteltu vastaamaan yritysten ja yrittäjien tarpeisiin."
   },
   "files": {

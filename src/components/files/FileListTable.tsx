@@ -137,9 +137,15 @@ export default function FileListTable({
   };
 
   const handleView = async (file: any) => {
-    // Open file in new tab for viewing
+    // Open PDF file in browser tab for online preview
     if (!token || !user.id) {
       alert("Please log in to view files");
+      setOpenDropdown(null);
+      return;
+    }
+
+    const isPdfFile = file?.name?.toLowerCase().endsWith(".pdf");
+    if (!isPdfFile) {
       setOpenDropdown(null);
       return;
     }
@@ -167,6 +173,8 @@ export default function FileListTable({
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
       window.open(url, "_blank");
+      // Revoke URL later to avoid memory leaks after tab opens
+      setTimeout(() => window.URL.revokeObjectURL(url), 60000);
     } catch (error) {
       console.error("Error viewing file:", error);
       alert("Failed to view file. Please try again.");
@@ -221,7 +229,7 @@ export default function FileListTable({
   }, [searchTerm]);
 
   return (
-    <div className="bg-white rounded-xl shadow overflow-hidden mb-8">
+    <div className="bg-white rounded-xl shadow overflow-visible mb-8">
       <div className="flex items-center justify-between p-4 ">
         <h2 className="text-lg font-semibold md:text-[32px]">My Files</h2>
         <div className="relative">
@@ -309,20 +317,22 @@ export default function FileListTable({
 
                 {openDropdown === idx && (
                   <div className="absolute right-0 mt-1 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-50 py-1">
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleView(file);
-                      }}
-                      disabled={
-                        downloadingFile === file.name ||
-                        deletingFile === file.name
-                      }
-                      className="flex items-center gap-3 w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      <Eye size={16} />
-                      View
-                    </button>
+                    {file.name.toLowerCase().endsWith(".pdf") && (
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleView(file);
+                        }}
+                        disabled={
+                          downloadingFile === file.name ||
+                          deletingFile === file.name
+                        }
+                        className="flex items-center gap-3 w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        <Eye size={16} />
+                        View
+                      </button>
+                    )}
                     <button
                       onClick={(e) => {
                         e.stopPropagation();

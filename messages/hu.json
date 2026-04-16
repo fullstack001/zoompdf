@@ -352,7 +352,7 @@
     "privacyPolicy": "Adatvédelmi szabályzat",
     "termsOfService": "Szolgáltatási feltételek",
     "sitemap": "Webhelytérkép",
-    "allRightsReserved": "© 2025 PDFEZY Minden jog fenntartva.",
+    "allRightsReserved": "© 2025 PDFezy Minden jog fenntartva.",
     "companyDescription": "Az Ön minden az egyben PDF-megoldása a dokumentumok egyszerű és biztonságos konvertálásához, szerkesztéséhez és kezeléséhez.",
     "stayUpdated": "Legyen naprakész",
     "newsletterDescription": "A legfrissebb frissítések és PDF-tippek a postaládájába kerülnek.",
@@ -431,7 +431,7 @@
     "description": "Az Ön adatainak biztonsága a legfontosabb számunkra. Vállalati szintű titkosítási és biztonsági intézkedéseket vezetünk be dokumentumai védelme és a teljes adatvédelem biztosítása érdekében."
   },
   "coreValues": {
-    "title": "A ThePDFezy mögötti alapvető értékek",
+    "title": "A PDFezy mögötti alapvető értékek",
     "openness": "Nyitottság",
     "opennessDesc": "Hiszünk a tartós kapcsolatok kiépítésében. Ezért ügyfélszolgálati csapatunk éjjel-nappal rendelkezésre áll, amikor csak szüksége van ránk.",
     "expertise": "Szakértelem",
@@ -473,7 +473,7 @@
     "moneyBack": "Van pénzvisszafizetési garancia?",
     "moneyBackAnswer": "Igen, 14 napos pénz-visszafizetési garanciát vállalunk, ha nem elégedett szolgáltatásunkkal.",
     "ctaTitle": "Vállalkozási tevékenységét szeretné növelni?",
-    "ctaDescription": "Forduljon hozzánk a support@pdfezy.com e-mail címen, és fedezze fel, hogyan tudja termékünk forradalmasítani vállalati papírmunkáját. Csatlakozzon a sikeres vállalkozások növekvő közösségéhez, és használja ki a ThePDFezy-et, hogy előrébb maradjon!",
+    "ctaDescription": "Forduljon hozzánk a support@pdfezy.com e-mail címen, és fedezze fel, hogyan tudja termékünk forradalmasítani vállalati papírmunkáját. Csatlakozzon a sikeres vállalkozások növekvő közösségéhez, és használja ki a PDFezy-et, hogy előrébb maradjon!",
     "ctaButton": "Kezdje el",
     "loading": "Betöltés..."
   },
@@ -484,7 +484,7 @@
     "step3": "Ennyi! A fájl letöltésre kész."
   },
   "featureCTA": {
-    "title": "A PDFEZY csúcsminőségű fájlkezelési megoldásokat kínál bármilyen méretű csapat számára.",
+    "title": "A PDFezy csúcsminőségű fájlkezelési megoldásokat kínál bármilyen méretű csapat számára.",
     "subtitle": "Üdvözöljük az online dokumentumszerkesztéshez és -konvertáláshoz használható, élvonalbeli SaaS platformunkon. Úgy tervezték, hogy megfeleljen a vállalkozások és vállalkozók igényeinek."
   },
   "files": {

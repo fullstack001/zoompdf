@@ -352,7 +352,7 @@
     "privacyPolicy": "Datenschutzrichtlinie",
     "termsOfService": "Nutzungsbedingungen",
     "sitemap": "Sitemap",
-    "allRightsReserved": "© 2025 PDFEZY Alle Rechte vorbehalten.",
+    "allRightsReserved": "© 2025 PDFezy Alle Rechte vorbehalten.",
     "companyDescription": "Ihre umfassende PDF-Lösung zum einfachen und sicheren Konvertieren, Bearbeiten und Verwalten von Dokumenten.",
     "stayUpdated": "Bleiben Sie auf dem Laufenden",
     "newsletterDescription": "Erhalten Sie die neuesten Updates und PDF-Tipps direkt in Ihren Posteingang.",
@@ -431,7 +431,7 @@
     "description": "Die Sicherheit Ihrer Daten hat für uns oberste Priorität. Wir implementieren Verschlüsselungs- und Sicherheitsmaßnahmen auf Unternehmensniveau, um Ihre Dokumente zu schützen und vollständige Privatsphäre zu gewährleisten."
   },
   "coreValues": {
-    "title": "Grundwerte hinter ThePDFezy",
+    "title": "Grundwerte hinter PDFezy",
     "openness": "Offenheit",
     "opennessDesc": "Wir glauben an den Aufbau dauerhafter Beziehungen. Deshalb steht Ihnen unser Kundensupport-Team rund um die Uhr zur Verfügung, wann immer Sie uns brauchen.",
     "expertise": "Fachwissen",
@@ -473,7 +473,7 @@
     "moneyBack": "Gibt es eine Geld-zurück-Garantie?",
     "moneyBackAnswer": "Ja, wir bieten eine 14-tägige Geld-zurück-Garantie, wenn Sie mit unserem Service nicht zufrieden sind.",
     "ctaTitle": "Möchten Sie Ihren Geschäftsbetrieb verbessern?",
-    "ctaDescription": "Kontaktieren Sie uns unter support@pdfezy.com und lassen Sie uns herausfinden, wie unser Produkt Ihre Unternehmensdokumente revolutionieren kann. Treten Sie der wachsenden Gemeinschaft erfolgreicher Unternehmen bei, die ThePDFezy nutzen, um an der Spitze zu bleiben!",
+    "ctaDescription": "Kontaktieren Sie uns unter support@pdfezy.com und lassen Sie uns herausfinden, wie unser Produkt Ihre Unternehmensdokumente revolutionieren kann. Treten Sie der wachsenden Gemeinschaft erfolgreicher Unternehmen bei, die PDFezy nutzen, um an der Spitze zu bleiben!",
     "ctaButton": "Legen Sie los",
     "loading": "Laden..."
   },
@@ -484,7 +484,7 @@
     "step3": "Das ist es! Ihre Datei steht zum Download bereit."
   },
   "featureCTA": {
-    "title": "PDFEZY bietet erstklassige Dateiverwaltungslösungen für Teams jeder Größe.",
+    "title": "PDFezy bietet erstklassige Dateiverwaltungslösungen für Teams jeder Größe.",
     "subtitle": "Willkommen auf unserer hochmodernen SaaS-Plattform für die Online-Bearbeitung und Konvertierung von Dokumenten. Entwickelt, um den Bedürfnissen von Unternehmen und Unternehmern gerecht zu werden."
   },
   "files": {

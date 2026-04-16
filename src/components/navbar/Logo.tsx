@@ -21,7 +21,7 @@ export const Logo: React.FC<LogoProps> = ({ onNavigateHome }) => {
     >
       <Image
         src="/assets/images/logo.svg"
-        alt="Pdfezy"
+        alt="PDFezy"
         width={100}
         height={0}
         style={{ height: "auto" }}

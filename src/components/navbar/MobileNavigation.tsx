@@ -74,6 +74,7 @@ export const MobileNavigation: React.FC<NavbarProps> = ({
             ]}
             open={openDropdown === t("navigation.pdfEditor")}
             onToggle={() => toggleDropdown(t("navigation.pdfEditor"))}
+            onLabelClick={() => handleNavigate("/#tools-grid-section")}
             onNavigate={handleNavigate}
           />
 
@@ -85,6 +86,7 @@ export const MobileNavigation: React.FC<NavbarProps> = ({
             ]}
             open={openDropdown === t("navigation.pdfConverter")}
             onToggle={() => toggleDropdown(t("navigation.pdfConverter"))}
+            onLabelClick={() => handleNavigate("/#tools-grid-section")}
             onNavigate={handleNavigate}
           />
 
@@ -119,6 +121,7 @@ interface MobileMenuItemProps {
   items: MenuItem[];
   open: boolean;
   onToggle: () => void;
+  onLabelClick: () => void;
   onNavigate: (route: string) => void;
 }
 
@@ -127,20 +130,29 @@ const MobileMenuItem: React.FC<MobileMenuItemProps> = ({
   items,
   open,
   onToggle,
+  onLabelClick,
   onNavigate,
 }) => (
   <div className="mb-3">
-    <button
-      onClick={onToggle}
-      className="flex justify-between items-center w-full text-left text-sm font-semibold text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded p-1"
-      aria-expanded={open}
-    >
-      {label}
-      <ChevronDownIcon
-        className={`transform transition-transform ${open ? "rotate-180" : ""}`}
-        size={16}
-      />
-    </button>
+    <div className="flex justify-between items-center">
+      <button
+        onClick={onLabelClick}
+        className="text-left text-sm font-semibold text-gray-800 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded p-1"
+      >
+        {label}
+      </button>
+      <button
+        onClick={onToggle}
+        className="text-gray-800 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded p-1"
+        aria-expanded={open}
+        aria-label={`Toggle ${label} submenu`}
+      >
+        <ChevronDownIcon
+          className={`transform transition-transform ${open ? "rotate-180" : ""}`}
+          size={16}
+        />
+      </button>
+    </div>
     {open && (
       <ul className="mt-2 pl-4 space-y-1">
         {items.map((item) => (

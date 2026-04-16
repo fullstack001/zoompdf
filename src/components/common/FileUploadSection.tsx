@@ -62,7 +62,7 @@ export default function FileUploadSection({
           or drop your file here
         </p>
         <p className="text-[16px] sm:text-sm md:text-[12px] text-gray-600 ">
-          Size up to 100MB
+          Limet the file upload to100MB
         </p>
       </div>
     </div>

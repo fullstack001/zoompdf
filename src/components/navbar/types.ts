@@ -38,6 +38,7 @@ export interface DropdownProps {
   icon?: React.ReactNode;
   children: React.ReactNode;
   className?: string;
+  onLabelClick?: () => void;
 }
 
 export interface AuthButtonProps {

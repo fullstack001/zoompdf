@@ -352,7 +352,7 @@
     "privacyPolicy": "Sekretesspolicy",
     "termsOfService": "Användarvillkor",
     "sitemap": "Webbplatskarta",
-    "allRightsReserved": "© 2025 PDFEZY Alla rättigheter reserverade.",
+    "allRightsReserved": "© 2025 PDFezy Alla rättigheter reserverade.",
     "companyDescription": "Din allt-i-ett PDF-lösning för att konvertera, redigera och hantera dokument med lätthet och säkerhet.",
     "stayUpdated": "Håll dig uppdaterad",
     "newsletterDescription": "Få de senaste uppdateringarna och PDF-tipsen levererade till din inkorg.",
@@ -431,7 +431,7 @@
     "description": "Din datasäkerhet är vår högsta prioritet. Vi implementerar kryptering och säkerhetsåtgärder i företagsklass för att skydda dina dokument och säkerställa fullständig integritet."
   },
   "coreValues": {
-    "title": "Kärnvärden bakom ThePDFezy",
+    "title": "Kärnvärden bakom PDFezy",
     "openness": "Öppenhet",
     "opennessDesc": "Vi tror på att bygga varaktiga relationer. Det är därför vårt kundsupportteam är tillgängligt dygnet runt, närhelst du behöver oss.",
     "expertise": "Expertis",
@@ -473,7 +473,7 @@
     "moneyBack": "Har du en pengarna-tillbaka-garanti?",
     "moneyBackAnswer": "Ja, vi erbjuder en 14-dagars pengarna-tillbaka-garanti om du inte är nöjd med vår tjänst.",
     "ctaTitle": "Vill du lyfta din verksamhet?",
-    "ctaDescription": "Kontakta oss på support@pdfezy.com och låt oss utforska hur vår produkt kan revolutionera ditt företags pappersarbete. Gå med i den växande gemenskapen av framgångsrika företag som utnyttjar ThePDFezy för att ligga steget före!",
+    "ctaDescription": "Kontakta oss på support@pdfezy.com och låt oss utforska hur vår produkt kan revolutionera ditt företags pappersarbete. Gå med i den växande gemenskapen av framgångsrika företag som utnyttjar PDFezy för att ligga steget före!",
     "ctaButton": "Kom igång",
     "loading": "Laddar..."
   },
@@ -484,7 +484,7 @@
     "step3": "Det är det! Din fil är redo att laddas ned."
   },
   "featureCTA": {
-    "title": "PDFEZY levererar förstklassiga filhanteringslösningar för team av alla storlekar.",
+    "title": "PDFezy levererar förstklassiga filhanteringslösningar för team av alla storlekar.",
     "subtitle": "Välkommen till vår banbrytande SaaS-plattform för onlineredigering och konvertering av dokument. Designad för att möta behoven hos företag och entreprenörer."
   },
   "files": {

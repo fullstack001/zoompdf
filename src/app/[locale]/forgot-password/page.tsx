@@ -54,13 +54,20 @@ export default function ForgotPasswordPage() {
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="max-w-md w-full bg-white rounded-lg shadow-md p-8">
         <div className="flex justify-center mb-6">
-          <Image
-            src="/assets/images/logo.svg"
-            alt="Pdfezy logo"
-            width={140}
-            height={40}
-            priority
-          />
+          <button
+            type="button"
+            onClick={() => navigate("/")}
+            className="focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
+            aria-label="Go to home page"
+          >
+            <Image
+              src="/assets/images/logo.svg"
+              alt="PDFezy logo"
+              width={140}
+              height={40}
+              priority
+            />
+          </button>
         </div>
         <h1 className="text-2xl font-bold text-center mb-2">Forgot password</h1>
         <p className="text-sm text-gray-600 text-center mb-8">

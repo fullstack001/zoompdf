@@ -352,7 +352,7 @@
     "privacyPolicy": "Gizlilik Politikası",
     "termsOfService": "Hizmet Şartları",
     "sitemap": "Site haritası",
-    "allRightsReserved": "© 2025 PDFEZY Tüm hakları saklıdır.",
+    "allRightsReserved": "© 2025 PDFezy Tüm hakları saklıdır.",
     "companyDescription": "Belgeleri kolaylıkla ve güvenli bir şekilde dönüştürmek, düzenlemek ve yönetmek için hepsi bir arada PDF çözümünüz.",
     "stayUpdated": "Güncel Kalın",
     "newsletterDescription": "En son güncellemeleri ve PDF ipuçlarını gelen kutunuza alın.",
@@ -431,7 +431,7 @@
     "description": "Veri güvenliğiniz bizim önceliğimizdir. Belgelerinizi korumak ve tam gizlilik sağlamak için kurumsal düzeyde şifreleme ve güvenlik önlemleri uyguluyoruz."
   },
   "coreValues": {
-    "title": "ThePDFezy'in arkasındaki temel değerler",
+    "title": "PDFezy'in arkasındaki temel değerler",
     "openness": "Açıklık",
     "opennessDesc": "Kalıcı ilişkiler kurmaya inanıyoruz. Bu nedenle müşteri destek ekibimiz bize ihtiyaç duyduğunuz her an günün her saatinde hizmetinizdedir.",
     "expertise": "Uzmanlık",
@@ -473,7 +473,7 @@
     "moneyBack": "Para iade garantiniz var mı?",
     "moneyBackAnswer": "Evet, hizmetimizden memnun kalmadığınız takdirde 14 günlük para iade garantisi sunuyoruz.",
     "ctaTitle": "İş operasyonlarınızı geliştirmek mi istiyorsunuz?",
-    "ctaDescription": "support@pdfezy.com adresinden bize ulaşın ve ürünümüzün kurumsal evrak işlerinizde nasıl devrim yaratabileceğini keşfedelim. Önde kalmak için ThePDFezy'den yararlanan başarılı işletmelerden oluşan büyüyen topluluğa katılın!",
+    "ctaDescription": "support@pdfezy.com adresinden bize ulaşın ve ürünümüzün kurumsal evrak işlerinizde nasıl devrim yaratabileceğini keşfedelim. Önde kalmak için PDFezy'den yararlanan başarılı işletmelerden oluşan büyüyen topluluğa katılın!",
     "ctaButton": "Başlayın",
     "loading": "Yükleniyor..."
   },
@@ -484,7 +484,7 @@
     "step3": "İşte bu! Dosyanız indirilmeye hazır."
   },
   "featureCTA": {
-    "title": "PDFEZY, her boyuttaki ekip için üst düzey dosya yönetimi çözümleri sunar.",
+    "title": "PDFezy, her boyuttaki ekip için üst düzey dosya yönetimi çözümleri sunar.",
     "subtitle": "Çevrimiçi belge düzenleme ve dönüştürmeye yönelik son teknoloji SaaS platformumuza hoş geldiniz. İşletmelerin ve girişimcilerin ihtiyaçlarını karşılamak üzere tasarlanmıştır."
   },
   "files": {

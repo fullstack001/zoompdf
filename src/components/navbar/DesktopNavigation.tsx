@@ -13,6 +13,7 @@ export const DesktopNavigation: React.FC<NavbarProps> = ({ t, navigate }) => {
       <Dropdown
         label={t("navigation.pdfConverter")}
         icon={<ArrowRightSquare size={24} className="mr-2" />}
+        onLabelClick={() => navigate("/#tools-grid-section")}
       >
         <MenuCategory
           title={t("navbar.convertFromPdf")}
@@ -41,6 +42,7 @@ export const DesktopNavigation: React.FC<NavbarProps> = ({ t, navigate }) => {
       <Dropdown
         label={t("navigation.pdfEditor")}
         icon={<SquarePen size={24} className="mr-2" />}
+        onLabelClick={() => navigate("/#tools-grid-section")}
       >
         <MenuCategory
           title={t("navbar.editingTools")}

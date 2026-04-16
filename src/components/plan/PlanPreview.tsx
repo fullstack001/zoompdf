@@ -120,8 +120,9 @@ export default function PlanPreview() {
   const action = useSelector((state: RootState) => state.flow.action);
   const pendingFile = useSelector((state: RootState) => state.flow.pendingFile);
   const targetFormat = getTargetFormat(action);
+  const defaultPreviewImage = "/pdf_default_icon.svg";
   const [previewSrc, setPreviewSrc] = useState<string | null>(
-    pendingFile ? null : "/assets/images/sample-pdf.png"
+    pendingFile ? null : defaultPreviewImage
   );
   const [isLoading, setIsLoading] = useState<boolean>(!!pendingFile);
   const objectUrlRef = useRef<string | null>(null);
@@ -136,7 +137,7 @@ export default function PlanPreview() {
     const generatePreview = async () => {
       if (!pendingFile) {
         setIsLoading(false);
-        setPreviewSrc("/assets/images/sample-pdf.png");
+        setPreviewSrc(defaultPreviewImage);
         return;
       }
 
@@ -185,11 +186,11 @@ export default function PlanPreview() {
           setPreviewSrc(thumbnail);
         } else {
           // For other formats, use default image
-          setPreviewSrc("/assets/images/sample-pdf.png");
+          setPreviewSrc(defaultPreviewImage);
         }
       } catch (error) {
         console.error("Error generating preview:", error);
-        setPreviewSrc("/assets/images/sample-pdf.png");
+        setPreviewSrc(defaultPreviewImage);
       } finally {
         setIsLoading(false);
       }

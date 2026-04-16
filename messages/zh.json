@@ -352,7 +352,7 @@
     "privacyPolicy": "隐私政策",
     "termsOfService": "服务条款",
     "sitemap": "网站地图",
-    "allRightsReserved": "© 2025 PDFEZY 版权所有。",
+    "allRightsReserved": "© 2025 PDFezy 版权所有。",
     "companyDescription": "您的一体化 PDF 解决方案，可轻松、安全地转换、编辑和管理文档。",
     "stayUpdated": "保持更新",
     "newsletterDescription": "将最新更新和 PDF 提示发送到您的收件箱。",
@@ -431,7 +431,7 @@
     "description": "您的数据安全是我们的首要任务。我们实施企业级加密和安全措施来保护您的文档并确保完全的隐私。"
   },
   "coreValues": {
-    "title": "ThePDFezy 背后的核心价值观",
+    "title": "PDFezy 背后的核心价值观",
     "openness": "开放性",
     "opennessDesc": "我们相信建立持久的关系。这就是为什么我们的客户支持团队全天候为您服务，只要您需要我们。",
     "expertise": "专业知识",
@@ -473,7 +473,7 @@
     "moneyBack": "你们有退款保证吗？",
     "moneyBackAnswer": "是的，如果您对我们的服务不满意，我们提供 14 天退款保证。",
     "ctaTitle": "希望提升您的业务运营？",
-    "ctaDescription": "请通过 support@pdfezy.com 联系我们，让我们探索我们的产品如何彻底改变您的公司文书工作。加入不断壮大的成功企业社区，利用 ThePDFezy 保持领先地位！",
+    "ctaDescription": "请通过 support@pdfezy.com 联系我们，让我们探索我们的产品如何彻底改变您的公司文书工作。加入不断壮大的成功企业社区，利用 PDFezy 保持领先地位！",
     "ctaButton": "开始使用",
     "loading": "正在加载..."
   },
@@ -484,7 +484,7 @@
     "step3": "就是这样！您的文件已准备好下载。"
   },
   "featureCTA": {
-    "title": "PDFEZY 为各种规模的团队提供顶级文件管理解决方案。",
+    "title": "PDFezy 为各种规模的团队提供顶级文件管理解决方案。",
     "subtitle": "欢迎使用我们先进的在线文档编辑和转换 SaaS 平台。旨在满足企业和企业家的需求。"
   },
   "files": {

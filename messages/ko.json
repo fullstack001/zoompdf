@@ -352,7 +352,7 @@
     "privacyPolicy": "개인 정보 보호 정책",
     "termsOfService": "서비스 약관",
     "sitemap": "사이트맵",
-    "allRightsReserved": "© 2025 PDFEZY 모든 권리 보유.",
+    "allRightsReserved": "© 2025 PDFezy 모든 권리 보유.",
     "companyDescription": "쉽고 안전하게 문서를 변환, 편집, 관리할 수 있는 올인원 PDF 솔루션입니다.",
     "stayUpdated": "최신 정보 유지",
     "newsletterDescription": "받은 편지함으로 최신 업데이트와 PDF 팁을 받아보세요.",
@@ -431,7 +431,7 @@
     "description": "귀하의 데이터 보안은 우리의 최우선 사항입니다. 우리는 귀하의 문서를 보호하고 완전한 개인정보 보호를 보장하기 위해 엔터프라이즈급 암호화 및 보안 조치를 구현합니다."
   },
   "coreValues": {
-    "title": "ThePDFezy의 핵심 가치",
+    "title": "PDFezy의 핵심 가치",
     "openness": "개방성",
     "opennessDesc": "우리는 지속적인 관계 구축을 믿습니다. 이것이 바로 고객 지원팀이 필요할 때마다 24시간 내내 이용 가능한 이유입니다.",
     "expertise": "전문성",
@@ -473,7 +473,7 @@
     "moneyBack": "환불 보장이 있나요?",
     "moneyBackAnswer": "네, 저희 서비스에 만족하지 않으시면 14일 환불 보장을 제공해 드립니다.",
     "ctaTitle": "귀하의 비즈니스 운영을 향상시키고 싶으십니까?",
-    "ctaDescription": "support@pdfezy.com으로 연락하셔서 우리 제품이 기업 서류 작업에 어떻게 혁신을 가져올 수 있는지 알아보세요. ThePDFezy를 활용하여 성장하는 성공적인 비즈니스 커뮤니티에 참여하여 앞서 나가십시오!",
+    "ctaDescription": "support@pdfezy.com으로 연락하셔서 우리 제품이 기업 서류 작업에 어떻게 혁신을 가져올 수 있는지 알아보세요. PDFezy를 활용하여 성장하는 성공적인 비즈니스 커뮤니티에 참여하여 앞서 나가십시오!",
     "ctaButton": "시작하기",
     "loading": "로드 중..."
   },
@@ -484,7 +484,7 @@
     "step3": "그게 다야! 파일을 다운로드할 준비가 되었습니다."
   },
   "featureCTA": {
-    "title": "PDFEZY는 모든 규모의 팀을 위한 최고 수준의 파일 관리 솔루션을 제공합니다.",
+    "title": "PDFezy는 모든 규모의 팀을 위한 최고 수준의 파일 관리 솔루션을 제공합니다.",
     "subtitle": "온라인 문서 편집 및 변환을 위한 최첨단 SaaS 플랫폼에 오신 것을 환영합니다. 기업과 기업가의 요구를 충족하도록 설계되었습니다."
   },
   "files": {

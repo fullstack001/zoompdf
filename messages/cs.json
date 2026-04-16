@@ -352,7 +352,7 @@
     "privacyPolicy": "Zásady ochrany osobních údajů",
     "termsOfService": "Podmínky služby",
     "sitemap": "Sitemap",
-    "allRightsReserved": "© 2025 PDFEZY Všechna práva vyhrazena.",
+    "allRightsReserved": "© 2025 PDFezy Všechna práva vyhrazena.",
     "companyDescription": "Vaše komplexní řešení PDF pro snadnou a bezpečnou konverzi, úpravy a správu dokumentů.",
     "stayUpdated": "Zůstaňte aktualizováni",
     "newsletterDescription": "Získejte nejnovější aktualizace a tipy ve formátu PDF do vaší schránky.",
@@ -431,7 +431,7 @@
     "description": "Bezpečnost vašich dat je naší nejvyšší prioritou. Implementujeme podnikové šifrování a bezpečnostní opatření k ochraně vašich dokumentů a zajištění naprostého soukromí."
   },
   "coreValues": {
-    "title": "Základní hodnoty za ThePDFezy",
+    "title": "Základní hodnoty za PDFezy",
     "openness": "Otevřenost",
     "opennessDesc": "Věříme v budování trvalých vztahů. Proto je náš tým zákaznické podpory k dispozici 24 hodin denně, kdykoli nás budete potřebovat.",
     "expertise": "Odbornost",
@@ -473,7 +473,7 @@
     "moneyBack": "Máte záruku vrácení peněz?",
     "moneyBackAnswer": "Ano, nabízíme 14denní záruku vrácení peněz, pokud nejste spokojeni s našimi službami.",
     "ctaTitle": "Chcete pozvednout své obchodní aktivity?",
-    "ctaDescription": "Obraťte se na nás na adrese support@pdfezy.com a pojďme prozkoumat, jak může náš produkt způsobit revoluci ve vaší firemní papírování. Připojte se k rostoucí komunitě úspěšných podniků využívajících ThePDFezy, abyste zůstali na špici!",
+    "ctaDescription": "Obraťte se na nás na adrese support@pdfezy.com a pojďme prozkoumat, jak může náš produkt způsobit revoluci ve vaší firemní papírování. Připojte se k rostoucí komunitě úspěšných podniků využívajících PDFezy, abyste zůstali na špici!",
     "ctaButton": "Začněte",
     "loading": "Načítání..."
   },
@@ -484,7 +484,7 @@
     "step3": "To je vše! Váš soubor je připraven ke stažení."
   },
   "featureCTA": {
-    "title": "PDFEZY poskytuje špičková řešení správy souborů pro týmy všech velikostí.",
+    "title": "PDFezy poskytuje špičková řešení správy souborů pro týmy všech velikostí.",
     "subtitle": "Vítejte v naší špičkové platformě SaaS pro online úpravy a konverzi dokumentů. Navrženo tak, aby vyhovovalo potřebám podniků a podnikatelů."
   },
   "files": {

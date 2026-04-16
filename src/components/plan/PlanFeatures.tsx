@@ -94,12 +94,37 @@ export default function PlanFeatures({ selectedPlan }: PlanFeaturesProps) {
         </div>
       </div>
 
-      <p className="text-[16px] font-light text-center text-gray-700 mt-8">
-        After 7 days, the price is $39 with auto-renewal. Billed every 4 weeks.
-        <br />
-        Cancel anytime.{" "}
-        <span className="font-semibold"> 30-day money-back guarantee. </span>
-      </p>
+      {selectedPlan === "annual" ? (
+        <p className="text-[13px] font-light text-center text-gray-700 mt-8">
+          The initial charge is $199 with auto-renewal. Billed every year. All
+          prices in USD.
+          <br />
+          7-day money-back guarantee. You may cancel by contacting our customer
+          support team via email at{" "}
+          <a
+            className="text-blue-600 hover:underline"
+            href="mailto:hello@pdfezy.com"
+          >
+            hello@pdfezy.com
+          </a>
+          .
+        </p>
+      ) : (
+        <p className="text-[13px] font-light text-center text-gray-700 mt-8">
+          After 7 days, the price is $39 with auto-renewal. Billed every 4
+          weeks. All prices in USD.
+          <br />
+          7-day money-back guarantee. You may cancel by contacting our customer
+          support team via email at{" "}
+          <a
+            className="text-blue-600 hover:underline"
+            href="mailto:hello@pdfezy.com"
+          >
+            hello@pdfezy.com
+          </a>
+          .
+        </p>
+      )}
     </div>
   );
 }

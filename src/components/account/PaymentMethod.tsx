@@ -22,7 +22,7 @@ export default function PaymentMethod({ cardnumber }: PaymentMethodProps) {
         setPayments(paymentHistory);
       } catch (error) {
         setHistoryError(
-          error instanceof Error ? error.message : "Failed to load history."
+          error instanceof Error ? error.message : "Failed to load history.",
         );
       } finally {
         setIsLoadingHistory(false);
@@ -76,13 +76,17 @@ export default function PaymentMethod({ cardnumber }: PaymentMethodProps) {
             Payment History
           </h3>
           {isLoadingHistory && (
-            <p className="text-sm text-gray-600 mb-3">Loading payment history...</p>
+            <p className="text-sm text-gray-600 mb-3">
+              Loading payment history...
+            </p>
           )}
           {historyError && (
             <p className="text-sm text-red-600 mb-3">{historyError}</p>
           )}
           {!isLoadingHistory && !historyError && payments.length === 0 && (
-            <p className="text-sm text-gray-600 mb-3">No payment history yet.</p>
+            <p className="text-sm text-gray-600 mb-3">
+              No payment history yet.
+            </p>
           )}
           {!isLoadingHistory && !historyError && payments.length > 0 && (
             <div className="space-y-2 mb-4">
@@ -97,7 +101,9 @@ export default function PaymentMethod({ cardnumber }: PaymentMethodProps) {
                     {payment.currency.toUpperCase()}
                   </p>
                   <p className="text-xs text-gray-600">{payment.description}</p>
-                  <p className="text-xs text-gray-600">Status: {payment.status}</p>
+                  <p className="text-xs text-gray-600">
+                    Status: {payment.status}
+                  </p>
                   {payment.hostedInvoiceUrl && (
                     <a
                       href={payment.hostedInvoiceUrl}

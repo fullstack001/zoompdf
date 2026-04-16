@@ -13,6 +13,7 @@ import { MobileNavigation } from "./navbar/MobileNavigation";
 import { UserDropdown } from "./navbar/UserDropdown";
 import { AuthButton } from "./navbar/AuthButton";
 import { Logo } from "./navbar/Logo";
+import Breadcrumbs from "./navbar/Breadcrumbs";
 
 import type { NavbarProps } from "./navbar/types";
 
@@ -76,27 +77,30 @@ export default function Navbar() {
 
   return (
     <header className="bg-[#edf0ff] sticky rounded-xl top-0 z-50 p-4">
-      <div className="mx-auto flex bg-gray-50 sticky rounded-xl items-center justify-between px-8 py-3">
-        {/* Logo */}
-        <Logo onNavigateHome={() => navigate("/")} />
+      <div className="mx-auto bg-gray-50 sticky rounded-xl">
+        <div className="flex items-center justify-between px-8 py-3">
+          {/* Logo */}
+          <Logo onNavigateHome={() => navigate("/")} />
 
-        {/* Desktop Navigation */}
-        <DesktopNavigation {...navbarProps} />
+          {/* Desktop Navigation */}
+          <DesktopNavigation {...navbarProps} />
 
-        {/* Desktop Authentication */}
-        <div className="relative hidden xl:flex items-center gap-4">
-          {isLoggedIn ? (
-            <UserDropdown {...navbarProps} />
-          ) : (
-            <AuthButton
-              onClick={() => navigate("/login")}
-              label={t("auth.signIn")}
-            />
-          )}
+          {/* Desktop Authentication */}
+          <div className="relative hidden xl:flex items-center gap-4">
+            {isLoggedIn ? (
+              <UserDropdown {...navbarProps} />
+            ) : (
+              <AuthButton
+                onClick={() => navigate("/login")}
+                label={t("auth.signIn")}
+              />
+            )}
+          </div>
+
+          {/* Mobile Navigation */}
+          <MobileNavigation {...navbarProps} />
         </div>
-
-        {/* Mobile Navigation */}
-        <MobileNavigation {...navbarProps} />
+        <Breadcrumbs navigate={navigate} />
       </div>
     </header>
   );

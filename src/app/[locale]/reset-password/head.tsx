@@ -8,8 +8,8 @@ export default async function Head({
   const { locale } = await params;
 
   return renderSeoTags({
-    title: "Reset password | Pdfezy",
-    description: "Set a new password for your Pdfezy account.",
+    title: "Reset password | PDFezy",
+    description: "Set a new password for your PDFezy account.",
     locale,
     path: "/reset-password",
     noIndex: true,

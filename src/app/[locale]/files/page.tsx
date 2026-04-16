@@ -9,15 +9,12 @@ import { getFiles } from "@/utils/apiUtils";
 // import FileListCards from "@/components/FileListCards"; // Updated path to match the correct location
 
 export default function FileListPage() {
-  const [originalFiles, setOriginalFiles] = useState<any[]>([]);
   const [files, setFiles] = useState<any[]>([]);
-  const [selectedTool, setSelectedTool] = useState<string[] | null>([]);
 
   const fetchFiles = async () => {
     try {
       const fetchedFiles = await getFiles();
       console.log("Fetched files:", fetchedFiles);
-      setOriginalFiles(fetchedFiles);
       setFiles(fetchedFiles);
     } catch (error) {
       console.error("Error fetching files:", error);
@@ -28,25 +25,11 @@ export default function FileListPage() {
     fetchFiles();
   }, []);
 
-  useEffect(() => {
-    if (selectedTool && selectedTool.length > 0) {
-      console.log(selectedTool);
-      const filteredFiles = originalFiles.filter((file) =>
-        selectedTool.includes(file.action)
-      );
-      setFiles(filteredFiles);
-    } else {
-      setFiles(originalFiles);
-    }
-  }, [selectedTool]);
-
-  console.log(originalFiles);
-
   return (
     <div className="bg-gray-50 min-h-screen">
       <Navbar />
       <div className="flex flex-col lg:flex-row mx-auto  gap-6 px-4">
-        <FileSidebar setSelectedTool={setSelectedTool} />
+        <FileSidebar />
         <main className="flex-1">
           <FileListTable files={files} onFileDeleted={fetchFiles} />
         </main>

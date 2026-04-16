@@ -12,7 +12,7 @@ type SeoConfig = {
   noIndexFollow?: boolean;
 };
 
-const DEFAULT_OG_IMAGE_PATH = "/assets/images/logo.svg";
+const DEFAULT_OG_IMAGE_PATH = "/PDFezy_Social.png";
 
 function normalizePath(path: string): string {
   if (!path || path === "/") return "";

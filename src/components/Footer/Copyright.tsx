@@ -3,7 +3,7 @@ export default function Copyright() {
 
   return (
     <div className="text-sm text-gray-300">
-      © {currentYear} PDFEZY All rights reserved.
+      © {currentYear} PDFezy All rights reserved.
     </div>
   );
 }
