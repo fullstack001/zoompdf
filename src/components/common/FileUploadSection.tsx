@@ -1,7 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { CirclePlus, Loader2 } from "lucide-react";
 import UploadAnimationSVG from "./UploadAnimationSVG";
+
+const MAX_FILE_SIZE_MB = 100;
+const MAX_FILE_SIZE_BYTES = MAX_FILE_SIZE_MB * 1024 * 1024;
 
 export default function FileUploadSection({
   acceptType,
@@ -12,6 +15,19 @@ export default function FileUploadSection({
   handleFileChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   isLoading?: boolean;
 }) {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+
+    if (file && file.size > MAX_FILE_SIZE_BYTES) {
+      alert(`File is too large. Maximum file size is ${MAX_FILE_SIZE_MB}MB.`);
+      // Reset the input so the same file can be selected again after user action.
+      e.target.value = "";
+      return;
+    }
+
+    handleFileChange(e);
+  };
+
   return (
     <div className="bg-white shadow-lg rounded-2xl p-4 sm:p-6 md:p-6 w-full max-w-[90%] sm:max-w-[1142px] aspect-[1142/348] mx-auto hover:shadow-2xl transition-shadow duration-300">
       <div className="bg-white border-dashed border-2 border-gray-300 rounded-lg p-8 sm:p-8 md:p-8 w-full h-auto mx-auto group hover:border-gray-400 ">
@@ -25,7 +41,7 @@ export default function FileUploadSection({
             type="file"
             accept={acceptType ? acceptType : "application/pdf"}
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-            onChange={handleFileChange}
+            onChange={handleInputChange}
             aria-label="Upload PDF file"
           />
           <UploadAnimationSVG />
@@ -62,7 +78,7 @@ export default function FileUploadSection({
           or drop your file here
         </p>
         <p className="text-[16px] sm:text-sm md:text-[12px] text-gray-600 ">
-          Limtt the file upload to 100MB
+          Limit the file upload to 100MB
         </p>
       </div>
     </div>

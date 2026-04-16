@@ -13,7 +13,6 @@ import { MobileNavigation } from "./navbar/MobileNavigation";
 import { UserDropdown } from "./navbar/UserDropdown";
 import { AuthButton } from "./navbar/AuthButton";
 import { Logo } from "./navbar/Logo";
-import Breadcrumbs from "./navbar/Breadcrumbs";
 
 import type { NavbarProps } from "./navbar/types";
 
@@ -100,7 +99,6 @@ export default function Navbar() {
           {/* Mobile Navigation */}
           <MobileNavigation {...navbarProps} />
         </div>
-        <Breadcrumbs navigate={navigate} />
       </div>
     </header>
   );
