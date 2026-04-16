@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { CreditCard, LogOut, Star, User } from "lucide-react";
@@ -46,7 +46,7 @@ export default function SettingsSidebar({ onItemClick }: SettingsSidebarProps) {
         root: null,
         rootMargin: "-100px 0px -60% 0px", // Adjusted for fixed sidebar
         threshold: 0.3,
-      }
+      },
     );
 
     sections.forEach((section) => {
@@ -82,7 +82,7 @@ export default function SettingsSidebar({ onItemClick }: SettingsSidebarProps) {
   };
 
   return (
-    <aside className="w-full lg:w-64 bg-white rounded-lg shadow-lg lg:shadow p-4 sm:p-6">
+    <aside className="w-full lg:w-64 bg-white rounded-lg shadow-lg lg:shadow p-4 sm:p-6 mt-28">
       <h2 className="text-xl sm:text-2xl font-semibold text-gray-700 mb-4 lg:mb-6">
         Settings
       </h2>
