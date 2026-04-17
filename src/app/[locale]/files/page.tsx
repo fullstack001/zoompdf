@@ -30,7 +30,7 @@ export default function FileListPage() {
       <Navbar />
       <div className="flex flex-col lg:flex-row mx-auto  gap-6 px-4">
         <FileSidebar />
-        <main className="flex-1">
+        <main className="flex-1 min-h-screen">
           <FileListTable files={files} onFileDeleted={fetchFiles} />
         </main>
       </div>
