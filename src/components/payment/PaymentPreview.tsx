@@ -15,6 +15,9 @@ import {
 } from "@/utils/documentPreviewUtils";
 import LoadingSpinner from "@/components/common/LoadingSpinner";
 
+/** Same placeholder as plan (select plan) step — `PlanPreview` */
+const DEFAULT_PREVIEW_IMAGE = "/pdf_default_icon.svg";
+
 // Helper function to extract target format from action
 const getTargetFormat = (action: string | null): string => {
   if (!action) return "PDF";
@@ -121,7 +124,7 @@ export default function PaymentPreview() {
   const pendingFile = useSelector((state: RootState) => state.flow.pendingFile);
   const targetFormat = getTargetFormat(action);
   const [previewSrc, setPreviewSrc] = useState<string | null>(
-    pendingFile ? null : "/assets/images/sample-pdf.png"
+    pendingFile ? null : DEFAULT_PREVIEW_IMAGE
   );
   const [isLoading, setIsLoading] = useState<boolean>(!!pendingFile);
   const objectUrlRef = useRef<string | null>(null);
@@ -136,7 +139,7 @@ export default function PaymentPreview() {
     const generatePreview = async () => {
       if (!pendingFile) {
         setIsLoading(false);
-        setPreviewSrc("/assets/images/sample-pdf.png");
+        setPreviewSrc(DEFAULT_PREVIEW_IMAGE);
         return;
       }
 
@@ -184,12 +187,12 @@ export default function PaymentPreview() {
           const thumbnail = await getAvifThumbnail(pendingFile);
           setPreviewSrc(thumbnail);
         } else {
-          // For other formats, use default image
-          setPreviewSrc("/assets/images/sample-pdf.png");
+          // For other formats, use default image (same as plan / select-plan step)
+          setPreviewSrc(DEFAULT_PREVIEW_IMAGE);
         }
       } catch (error) {
         console.error("Error generating preview:", error);
-        setPreviewSrc("/assets/images/sample-pdf.png");
+        setPreviewSrc(DEFAULT_PREVIEW_IMAGE);
       } finally {
         setIsLoading(false);
       }
