@@ -554,7 +554,23 @@ export const convertFile = async (
     console.log(`  - Response data:`, response.data);
     console.log("==========================================");
 
-    return response.data;
+    // Some conversion endpoints (notably file->PDF) return an object
+    // like { file: "<name>", reSize: <number> } while others return a string.
+    // Normalize here so downstream download logic always receives a filename.
+    if (typeof response.data === "string") {
+      return response.data;
+    }
+
+    if (
+      response.data &&
+      typeof response.data === "object" &&
+      "file" in response.data &&
+      typeof (response.data as any).file === "string"
+    ) {
+      return (response.data as any).file;
+    }
+
+    throw new Error("Invalid conversion response format");
   } catch (error) {
     const totalTime = Date.now() - uploadStartTime;
     console.error("FILE CONVERSION UPLOAD FAILED");
