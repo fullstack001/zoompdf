@@ -375,7 +375,7 @@ export default function PaymentForm({
                 Privacy Policy
               </a>
               , and confirm that if you do not cancel at least 24 hours before
-              the end of the 7-day trial for $1.95, you will be charged $49 per
+              the end of the 7-day trial for ${plan.price}, you will be charged ${plan.price===0.95 ? "39" : "49"} per
               28 days until you cancel your subscription by contacting our
               customer support team via email at{" "}
               <a

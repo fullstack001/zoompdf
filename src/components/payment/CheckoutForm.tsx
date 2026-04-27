@@ -310,7 +310,7 @@ function CheckoutForm({
               Privacy Policy
             </a>
             , and confirm that if you do not cancel at least 24 hours before the
-            end of the 7-day trial for CAD$1.95, you will be charged CAD$49 per
+            end of the 7-day trial for $1.95, you will be charged $39 per
             28 days until you cancel your subscription by contacting our
             customer support team via email at{" "}
             <a

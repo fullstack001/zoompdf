@@ -259,7 +259,7 @@ export default function Login() {
           navigate("/files"); // Redirect to files page if no flow data
         }
       } else {
-        navigate("/plan"); // Redirect to register page if subscription is not valid
+        navigate("/my-account#membership"); // Redirect to account plan panel if subscription is not valid
       }
     } catch (error) {
       console.error("Login error:", error);

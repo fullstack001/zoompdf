@@ -23,7 +23,7 @@ export default function MembershipCard() {
     subscription && new Date(subscription.expiryDate) > new Date();
 
   const handleSubscribe = () => {
-    navigate("/payment");
+    navigate("/plan");
   };
 
   const formatDate = (dateString: string) => {
