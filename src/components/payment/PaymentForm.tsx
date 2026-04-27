@@ -375,9 +375,9 @@ export default function PaymentForm({
                 Privacy Policy
               </a>
               , and confirm that if you do not cancel at least 24 hours before
-              the end of the 7-day trial for ${plan.price}, you will be charged ${plan.price===0.95 ? "39" : "49"} per
-              28 days until you cancel your subscription by contacting our
-              customer support team via email at{" "}
+              the end of the 7-day trial for ${plan.price}, you will be charged
+              $39 per 28 days until you cancel your subscription by contacting
+              our customer support team via email at{" "}
               <a
                 href="mailto:billing@pdfezy.com"
                 className="text-blue-600 underline"
