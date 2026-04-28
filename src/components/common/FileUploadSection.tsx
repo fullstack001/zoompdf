@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { CirclePlus, Loader2, X } from "lucide-react";
 import UploadAnimationSVG from "./UploadAnimationSVG";
+import { trackEvent } from "@/components/analytics/GoogleTracking";
 
 const MAX_FILE_SIZE_MB = 100;
 const MAX_FILE_SIZE_BYTES = MAX_FILE_SIZE_MB * 1024 * 1024;
@@ -97,6 +98,9 @@ export default function FileUploadSection({
             }`}
             onClick={() => {
               if (!isLoading) {
+                trackEvent("upload_button_click", {
+                  component: "FileUploadSection",
+                });
                 (
                   document.querySelector(
                     'input[type="file"]',

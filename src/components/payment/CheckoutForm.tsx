@@ -8,6 +8,7 @@ import {
 import React, { useState, useCallback } from "react";
 import { useSelector } from "react-redux";
 import { cancelSubscription } from "@/utils/apiUtils";
+import { trackEvent } from "@/components/analytics/GoogleTracking";
 import { RootState } from "../../store/store"; // Import RootState type
 
 const cardElementOptions = {
@@ -214,6 +215,11 @@ function CheckoutForm({
       </div>
       <button
         onClick={() => {
+          trackEvent("payment_button_click", {
+            component: "CheckoutForm",
+            price_id: priceId,
+            has_coupon: Boolean(couponCode),
+          });
           createSubscription();
         }}
         disabled={!stripe || isProcessing || !agreed}
