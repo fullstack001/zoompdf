@@ -15,6 +15,7 @@ import { clearPendingFile } from "@/store/slices/flowSlice";
 import ProgressModal from "../common/ProgressModal";
 import LoadingModal from "../common/LoadingModal";
 import DownloadModal from "../common/DownloadModal";
+import { trackEvent } from "@/components/analytics/GoogleTracking";
 
 import CheckoutForm from "./CheckoutForm";
 
@@ -90,6 +91,15 @@ export default function PaymentForm({
         }
         const data: ApiResponse = await response.json();
         const { token, user, subscription } = data;
+        trackEvent("payment_confirmed", {
+          subscription_type: subscriptionType,
+          plan_id: plan.id,
+          price: plan.price,
+          currency: "USD",
+          has_coupon: Boolean(couponCode),
+          coupon_code: couponCode || "",
+          subscription_id: subscriptionId,
+        });
         dispatch(
           setUser({
             email: (user.email as string) || "",
@@ -148,7 +158,7 @@ export default function PaymentForm({
               );
               setIsDownloading(false);
               dispatch(clearPendingFile());
-              navigate("/files");
+              navigate("/success");
               return;
             } catch (err) {
               console.error("Error processing pending files:", err);
@@ -195,7 +205,7 @@ export default function PaymentForm({
               );
               setIsDownloading(false);
               dispatch(clearPendingFile());
-              navigate("/files");
+              navigate("/success");
               return;
             } catch (err) {
               console.error("Error processing pending file:", err);
@@ -217,13 +227,13 @@ export default function PaymentForm({
               token as string,
               user._id as string,
             );
-            navigate("/files");
+            navigate("/success");
           } catch (err) {
             console.error("Error downloading file:", err);
             window.alert("Failed to download file.");
           }
         } else {
-          navigate(`/files`); // Redirect to files page if no flow data
+          navigate(`/success`); // Redirect via success page for conversion tracking
         }
       })
       .catch(() => {
